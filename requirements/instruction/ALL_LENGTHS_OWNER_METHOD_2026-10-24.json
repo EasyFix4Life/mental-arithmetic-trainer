@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-24",
+  "owner_requests_verbatim": [
+    "ALL VERSIONS SHOULD HAVE INSTRUCTIONS ON ALL DIGIT-LENGTH MENTAL ARITHMETIC",
+    "it's the same algorithmic methodology. Start first digit, first digit, then first and second digit plus second and first digit plus first and last digit plus last and first digit plus middle and middle digit plus two and six digit plus three and five digit plus three and six digit",
+    "For addition, do above and below digit arrangement. Do not do side-by-side"
+  ],
+  "implemented_scope": "All six combinations of addition/multiplication and one/two/three digits in every platform",
+  "multiplication_interpretation": {
+    "three_digit_operands": "abc times def",
+    "groups_in_owner_order": [
+      "a*d",
+      "a*e + b*d",
+      "a*f + c*d + b*e",
+      "b*f + c*e",
+      "c*f"
+    ],
+    "carry_direction": "Resolve groups from right to left, retaining the units digit and passing the remaining value to the group on its left, following the confirmed 18 times 18 explanation",
+    "one_digit": "One product; full result",
+    "two_digit": "Preserve First, Inside, Outside, Last and the confirmed 12 times 12 and 18 times 18 examples",
+    "derived_example": "123 times 456 gives group values 4,13,28,27,18 and final answer 56088; this is calculated from the described method, not an independently owner-authored example"
+  },
+  "addition": {
+    "layout": "Vertically stacked and place-aligned in Learn, Practice and final answers; supersedes previous side-by-side addition layout",
+    "procedure": "Corresponding digit sums calculated from first/leftmost place to last/rightmost place, then carry resolution from right to left. This is the proposed positional sequence to which the owner supplied the explicit vertical-layout correction.",
+    "single_digit": "One sum; full result"
+  },
+  "supersedes": [
+    "Instruction limited to four categories",
+    "Three-digit instruction deferred",
+    "Pending first-three instructional scripts",
+    "Horizontal addition operands"
+  ],
+  "unmodified_sources": "Original requirements and original confirmation record remain preserved; this later request is recorded separately."
+}

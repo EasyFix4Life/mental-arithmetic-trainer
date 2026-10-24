@@ -1,0 +1,37 @@
+{
+  "verifiedAt": "2026-10-24T13:32:25.704Z",
+  "version": "1.1.0",
+  "archive": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Resources/app.asar",
+  "files": [
+    {
+      "file": "dist/assets/index-BRBQRPxf.css",
+      "bytes": 7598,
+      "sha256": "5ec84f1a44071281ba42a81e0a0bfed617f0110541f0cf4eeef61877cda01171",
+      "matches": true
+    },
+    {
+      "file": "dist/assets/index-RSn6g_ak.js",
+      "bytes": 33728,
+      "sha256": "193a7336a232e887d7cde408db0e90f44b800dd5fd253530780caefbeffb14a7",
+      "matches": true
+    },
+    {
+      "file": "dist/index.html",
+      "bytes": 594,
+      "sha256": "21d8698308cf03a24b5433dc355b6d239c6dea5f4514be2e9a41d06c2adff5e2",
+      "matches": true
+    },
+    {
+      "file": "desktop/main.cjs",
+      "bytes": 6088,
+      "sha256": "70ef65772f8f6390212190299348873b24b7b390a559049dd3a129c78ba301cb",
+      "matches": true
+    },
+    {
+      "file": "desktop/security.cjs",
+      "bytes": 1839,
+      "sha256": "df896d0e2c572d4d1a3b5f0a46df5c910d9f6c2183cf67bddb7f5c2c5abf06a0",
+      "matches": true
+    }
+  ]
+}

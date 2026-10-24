@@ -1,0 +1,387 @@
+{
+  "cases": [
+    {
+      "checks": [
+        "Partial input does not submit",
+        "Non-ASCII-decimal transaction rejected",
+        "Correct answer immediately advances without Enter",
+        "Correct previous time is black",
+        "Incorrect answer immediately advances",
+        "Incorrect previous time is red",
+        "Final score includes all ten answers",
+        "Minimum \u2264 mean \u2264 maximum",
+        "Displayed round timing contains the real elapsed intervals",
+        "New round waits for manual start",
+        "Completed round survives a Learn visit",
+        "Starting another round hides completed score",
+        "Starting another round clears previous time"
+      ],
+      "durationMs": 3874.150458344957,
+      "name": "01 automatic submission, input rejection, score and timing",
+      "status": "passed"
+    },
+    {
+      "checks": [
+        "Practice range 0:1",
+        "Selected operation 0:1",
+        "Configuration accepts correct answer 0:1",
+        "Practice range 0:2",
+        "Selected operation 0:2",
+        "Configuration accepts correct answer 0:2",
+        "Practice range 0:3",
+        "Selected operation 0:3",
+        "Configuration accepts correct answer 0:3",
+        "Practice range 1:1",
+        "Selected operation 1:1",
+        "Configuration accepts correct answer 1:1",
+        "Practice range 1:2",
+        "Selected operation 1:2",
+        "Configuration accepts correct answer 1:2",
+        "Practice range 1:3",
+        "Selected operation 1:3",
+        "Configuration accepts correct answer 1:3"
+      ],
+      "durationMs": 387.1588333277032,
+      "name": "02 all six practice configurations",
+      "status": "passed"
+    },
+    {
+      "checks": [
+        "Last: 8 \u00d7 8 = 64",
+        "Carry six from Last",
+        "Middle: 16 + 6 = 22",
+        "Carry two to First",
+        "First: 1 + 2 = 3",
+        "Final answer follows Last",
+        "No screen after final answer"
+      ],
+      "durationMs": 42.99933335278183,
+      "name": "03 confirmed 18 \u00d7 18 carry sequence",
+      "status": "passed"
+    },
+    {
+      "checks": [
+        "Learn range addition-1",
+        "New random example addition-1",
+        "Learn range multiplication-1",
+        "New random example multiplication-1",
+        "Learn range addition-2",
+        "New random example addition-2",
+        "Learn range multiplication-2",
+        "New random example multiplication-2",
+        "Learn range addition-3",
+        "New random example addition-3",
+        "Learn range multiplication-3",
+        "New random example multiplication-3"
+      ],
+      "durationMs": 75.29529166640714,
+      "name": "04 all six random lesson examples",
+      "status": "passed"
+    },
+    {
+      "checks": [
+        "Window scene rotates to landscape",
+        "Rotation preserves active problem",
+        "Rotation preserves partial answer",
+        "Answer retains numeric keyboard focus",
+        "Live timer remains beside answer",
+        "Answer and timer stay inside landscape window",
+        "Rotated input still submits correctly"
+      ],
+      "durationMs": 1725.1898749964312,
+      "name": "05 rotation, partial entry, keyboard and timer layout",
+      "status": "passed"
+    },
+    {
+      "checks": [
+        "Local privacy policy opens without an account or network"
+      ],
+      "durationMs": 366.0481249971781,
+      "name": "06 local privacy policy",
+      "status": "passed"
+    },
+    {
+      "checks": [
+        "123 \u00d7 456 screen 1: 4",
+        "123 \u00d7 456 screen 2: 13",
+        "123 \u00d7 456 screen 3: 28",
+        "123 \u00d7 456 screen 4: 27",
+        "123 \u00d7 456 screen 5: 18",
+        "123 \u00d7 456 screen 6: 28",
+        "123 \u00d7 456 screen 7: 30",
+        "123 \u00d7 456 screen 8: 16",
+        "123 \u00d7 456 screen 9: 5",
+        "Three-digit final answer is 56088"
+      ],
+      "durationMs": 71.48079166654497,
+      "name": "07 three-digit multiplication groups and carries",
+      "status": "passed"
+    },
+    {
+      "checks": [
+        "Instructional calculation present addition-1",
+        "Walkthrough keeps the available readable width addition-1",
+        "Vertical addition right edges align addition-1",
+        "Final answer correct addition-1",
+        "Instructional calculation present multiplication-1",
+        "Walkthrough keeps the available readable width multiplication-1",
+        "Final answer correct multiplication-1",
+        "Instructional calculation present addition-2",
+        "Walkthrough keeps the available readable width addition-2",
+        "Vertical addition right edges align addition-2",
+        "Final answer correct addition-2",
+        "Instructional calculation present multiplication-2",
+        "Walkthrough keeps the available readable width multiplication-2",
+        "Final answer correct multiplication-2",
+        "Instructional calculation present addition-3",
+        "Walkthrough keeps the available readable width addition-3",
+        "Vertical addition right edges align addition-3",
+        "Final answer correct addition-3",
+        "Instructional calculation present multiplication-3",
+        "Walkthrough keeps the available readable width multiplication-3",
+        "Final answer correct multiplication-3"
+      ],
+      "durationMs": 98.77599999890663,
+      "name": "08 all six instructional walkthroughs",
+      "status": "passed"
+    }
+  ],
+  "deviceModel": "iPhone",
+  "error": null,
+  "kind": "debug-native-uikit-integration-and-review",
+  "limitations": [
+    "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+    "DEBUG-only fixture selection for individually specified worked examples",
+    "No App Store distribution signature or physical-device test implied"
+  ],
+  "passed": 8,
+  "scenario": "suite",
+  "skipped": 0,
+  "status": "passed",
+  "systemVersion": "27.0",
+  "timestamp": "2026-10-24T13:34:14Z",
+  "total": 8,
+  "version": "1.1.0",
+  "window": {
+    "height": 874,
+    "width": 402
+  },
+  "device": {
+    "dataPath": "/Users/pussieromatic/Library/Developer/CoreSimulator/Devices/35D20D1C-73F0-4F9F-A579-8FE27083201A/data",
+    "dataPathSize": 1697230848,
+    "logPath": "/Users/pussieromatic/Library/Logs/CoreSimulator/35D20D1C-73F0-4F9F-A579-8FE27083201A",
+    "udid": "35D20D1C-73F0-4F9F-A579-8FE27083201A",
+    "lastUsedAt": "2026-10-24T13:24:26Z",
+    "isAvailable": true,
+    "logPathSize": 237568,
+    "deviceTypeIdentifier": "com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro",
+    "state": "Shutdown",
+    "name": "MentalArithmetic-iPhone-27"
+  },
+  "screenshots": [
+    {
+      "file": "01-practice-setup.png",
+      "scenario": "review-setup",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "d730f5b6120f885712fa3906e2a4ff08a6858fdad617e093a1611835c93adbb7",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-setup",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "27.0",
+        "timestamp": "2026-10-24T13:34:15Z",
+        "total": 0,
+        "version": "1.1.0",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      }
+    },
+    {
+      "file": "02-practice-live-keyboard.png",
+      "scenario": "review-practice",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "bc35d73649b64759d5933e6f5c90caf1fc7bc27ea0714fba6740244ae4e6a601",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-practice",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "27.0",
+        "timestamp": "2026-10-24T13:34:18Z",
+        "total": 0,
+        "version": "1.1.0",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      }
+    },
+    {
+      "file": "03-score-and-round-times.png",
+      "scenario": "review-score",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "ea0a8e9b3cf5e31290f2cf222d29bb5d9b7a7be8a8e4b2bd3e2bbf88699811d6",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-score",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "27.0",
+        "timestamp": "2026-10-24T13:34:21Z",
+        "total": 0,
+        "version": "1.1.0",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      }
+    },
+    {
+      "file": "04-confirmed-two-digit-carry.png",
+      "scenario": "review-learn18",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "7acb503527ab67d4110f96f253429da221fee09d4e757566da9001087cd53ae9",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-learn18",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "27.0",
+        "timestamp": "2026-10-24T13:34:24Z",
+        "total": 0,
+        "version": "1.1.0",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      }
+    },
+    {
+      "file": "05-three-digit-multiplication.png",
+      "scenario": "review-learn3",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "b52bd53ac3edc7ad54c52520f4d41d2c511c4e59922ef64d0db341cf86e057d5",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-learn3",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "27.0",
+        "timestamp": "2026-10-24T13:34:27Z",
+        "total": 0,
+        "version": "1.1.0",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      }
+    },
+    {
+      "file": "06-three-digit-addition.png",
+      "scenario": "review-addition3",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "1094f700dee3c5044ff00298175756fa42560d5b1a456908e71d192a8a096b4d",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-addition3",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "27.0",
+        "timestamp": "2026-10-24T13:34:29Z",
+        "total": 0,
+        "version": "1.1.0",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      }
+    }
+  ]
+}

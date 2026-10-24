@@ -1,0 +1,7 @@
+Native UIKit integration: 8/8 passed, 0 skipped on MentalArithmetic-iPhone-27
+Captured 01-practice-setup.png (1206 × 2622)
+Captured 02-practice-live-keyboard.png (1206 × 2622)
+Captured 03-score-and-round-times.png (1206 × 2622)
+Captured 04-confirmed-two-digit-carry.png (1206 × 2622)
+Captured 05-three-digit-multiplication.png (1206 × 2622)
+Captured 06-three-digit-addition.png (1206 × 2622)

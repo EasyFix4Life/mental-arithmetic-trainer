@@ -1,0 +1,11 @@
+PASS offline release shell, presentation and browser security
+PASS all six random lesson categories with complete instructions and vertical addition
+PASS vertical addition instructions, carries and final answers
+PASS random two-digit trace, confirmed carries and final answer
+PASS three-digit multiplication groups and whole-value carries
+PASS native numeric keyboard, visible answer and rotation preservation
+PASS ten accepted answers, wrong feedback and exact timing summary
+PASS all six operation and operand-length practice configurations
+
+Android release acceptance: 8 passed, 0 failed.
+

@@ -1,0 +1,66 @@
+[
+  {
+    "file": "src/answerPolicy.ts",
+    "sha256": "9a98d597b0f7baa7264b387f52ef8a1f5e80892e5c69446d2dda602f77dd89c1"
+  },
+  {
+    "file": "src/generateRound.ts",
+    "sha256": "7b8b13e15b58e870f27468e538181423c1fa38f73bd5cceb66eb17a3ca8a52cf"
+  },
+  {
+    "file": "src/inputPolicy.ts",
+    "sha256": "1c46093bcaf0345926a460bcf7663bc985d1f77ba1b0b0049cd5046428dda8e8"
+  },
+  {
+    "file": "src/learn/carryVisualizer.ts",
+    "sha256": "ef4dae7d7ba7256dba78e5be43f3d6fd9d12d303b1b8034e7692ed90af361fbd"
+  },
+  {
+    "file": "src/learn/confirmedMultiplicationExamples.ts",
+    "sha256": "6a12ecbe7580f493cb236d3cbb0eed98c1aa62f96d463777489a6ce79a5f60ba"
+  },
+  {
+    "file": "src/learn/instructionStepRenderer.ts",
+    "sha256": "e789b756e904a59f7c27fe99057b95dd9c1f4415850c36e3b8e202555c4a92a4"
+  },
+  {
+    "file": "src/learn/learnView.ts",
+    "sha256": "919ef81f94252c3ca6bf2103cceecab2ca137eb4225ed68f112cd661b961a875"
+  },
+  {
+    "file": "src/learn/lessonCatalog.ts",
+    "sha256": "d0c84998e28babd7fb97a6948d3b4a15ccb338c87c87aea267731ca0a61c2d50"
+  },
+  {
+    "file": "src/learn/lessonTypes.ts",
+    "sha256": "78ff5ac3246a175f47cac2b4249f8500e3d58cf39e14f4f1bb927fe76775a58e"
+  },
+  {
+    "file": "src/main.ts",
+    "sha256": "eb250b194549d99b38a784f342f313edbab1ea8ed14a2f1436354d1c8dd03a24"
+  },
+  {
+    "file": "src/practiceView.ts",
+    "sha256": "2d383cce9779b222966ebe908be14e56a58c06fe3718a7c41e1708eaae088864"
+  },
+  {
+    "file": "src/roundController.ts",
+    "sha256": "e397db80445c3fcda1ef6ec364b80dbe8aed99c496bd17a1ebc98f1e7682cd54"
+  },
+  {
+    "file": "src/style.css",
+    "sha256": "c3a8483c55ea6a0d4bcc3da57104ef2a779501fcf71d64774796d3a2e7e7c94f"
+  },
+  {
+    "file": "src/timer.ts",
+    "sha256": "bfaeaa1c0497565f6d3ceeba0064d903f4559d5b70cb192f86556bb79e0d4b04"
+  },
+  {
+    "file": "src/types.ts",
+    "sha256": "688edd3fc26490ee9e35a2cd0bfa4156fc9dfa14d845276fc526bc80da9522d0"
+  },
+  {
+    "file": "src/view.ts",
+    "sha256": "8642a039fae10bb7a352d46d90af8b008af793d4bd6f5da349acfcd636976bb5"
+  }
+]

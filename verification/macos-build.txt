@@ -1,0 +1,53 @@
+
+> mental-arithmetic-trainer@1.1.0 build:mac
+> npm run build && node scripts/build-mac.mjs
+
+
+> mental-arithmetic-trainer@1.1.0 build
+> npm run typecheck && vite build
+
+
+> mental-arithmetic-trainer@1.1.0 typecheck
+> tsc --noEmit
+
+vite v8.3.5 building client environment for production...
+transforming...
+✓ 21 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                  0.59 kB │ gzip:  0.35 kB
+dist/assets/index-BRBQRPxf.css   7.59 kB │ gzip:  2.29 kB
+dist/assets/index-RSn6g_ak.js   33.72 kB │ gzip: 10.32 kB
+
+✓ built in 39ms
+  • electron-builder  version=26.18.0 os=27.2.0
+  • loaded configuration  file=/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/electron-builder.json
+  • skipped dependencies rebuild  reason=npmRebuild is set to false
+  • packaging       platform=darwin arch=arm64 electron=45.0.0 appOutDir=/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-mac-2JH9YG/mac-arm64
+  • downloaded      label=electron progress=100%
+  • downloaded electron zip extracted successfully  output=/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-mac-2JH9YG/mac-arm64
+  • searching for node modules  pm=npm searchDir=/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer
+  • no node modules found in collection, trying next search directory  pm=npm searchDir=/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer
+  • searching for node modules  pm=traversal searchDir=/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer
+  • using manual traversal of node_modules to build dependency tree
+  • no node modules found in collection, trying next search directory  pm=traversal searchDir=/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer
+  • no node modules returned while searching directories  searchDirectories=[""]
+  • default Electron icon is used  reason=application icon is not set
+  • ad-hoc signing with hardenedRuntime enabled requires the com.apple.security.cs.disable-library-validation entitlement to prevent app launch failures due to library validation. See https://electron.build/code-signing for details.
+  • signing         file=/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-mac-2JH9YG/mac-arm64/Mental Arithmetic.app platform=darwin type=distribution identityName=- identityHash=none provisioningProfile=none
+  • skipped macOS notarization  reason=`notarize` options were set explicitly `false`
+  • building        target=macOS zip arch=arm64 file=/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-mac-2JH9YG/Mental-Arithmetic-1.1.0-macOS-arm64.zip
+  • building        target=DMG arch=arm64 file=/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-mac-2JH9YG/Mental-Arithmetic-1.1.0-macOS-arm64.dmg
+  • building block map  blockMapFile=/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-mac-2JH9YG/Mental-Arithmetic-1.1.0-macOS-arm64.dmg.blockmap
+  • building block map  blockMapFile=/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-mac-2JH9YG/Mental-Arithmetic-1.1.0-macOS-arm64.zip.blockmap
+{
+  "platform": "darwin",
+  "architecture": "arm64",
+  "appPath": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-mac-2JH9YG/mac-arm64/Mental Arithmetic.app",
+  "artifacts": [
+    "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/Mental-Arithmetic-1.1.0-macOS-arm64.dmg",
+    "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/Mental-Arithmetic-1.1.0-macOS-arm64.dmg.blockmap",
+    "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/Mental-Arithmetic-1.1.0-macOS-arm64.zip",
+    "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/Mental-Arithmetic-1.1.0-macOS-arm64.zip.blockmap"
+  ]
+}

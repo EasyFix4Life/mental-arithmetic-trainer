@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-24",
+  "source": "Direct owner request in this conversation after the timing-summary update",
+  "owner_request_verbatim": "Not giving a random example for the learn option.",
+  "implemented_behavior": {
+    "all_four_lessons": "Show a random problem for the selected operation and digit count on entry, with a New random example button. Exclude the immediately displayed unordered operand pair when generating another example.",
+    "two_digit_multiplication": "Generate a full walkthrough using the digit mapping and carry destinations established by the owner-confirmed 12 times 12 and 18 times 18 examples. Retain both exact confirmed examples as selectable alternatives.",
+    "stage_order": ["First", "Inside", "Outside", "Last"],
+    "result": "A separate Final answer item follows Last, including any carry-resolution screens within Last.",
+    "unrecovered_scripts": "Single-digit addition, single-digit multiplication and two-digit addition receive random operands only; their owner-authored instructional scripts remain explicitly pending. No new teaching procedure is attributed to the owner.",
+    "practice": "No practice arithmetic, input handling, immediate advancement, timing summary or scoring behavior changes."
+  },
+  "implementation_decisions": {
+    "randomness": "Draw two operands independently from the selected inclusive range. If the unordered pair equals the currently displayed pair, increment and wrap the right operand within its range. This bounded fallback avoids repetition without an unbounded retry loop.",
+    "generated_traces": "Generated arithmetic follows the confirmed method; each random trace is not individually owner-authored or individually owner-confirmed.",
+    "answer_digits": "Keep potentially affected leading digits unresolved until carries have been accounted for. Three- and four-digit products are supported.",
+    "progression": "Changing the example resets to First and preserves whether the walkthrough is open; navigation remains learner-controlled."
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "verifiedAt": "2026-10-24T13:30:53.438Z",
+  "version": "1.1.0",
+  "verificationHost": {
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "sdkBuildTools": "37.0.0",
+  "apk": {
+    "path": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.0-Android.apk",
+    "bytes": 664576,
+    "sha256": "216e3fc745c76a3a575389f1ae66de5d4b584d0d7cf47c29ac3fccb5fbaadd31",
+    "entryCount": 18,
+    "crcPassed": true,
+    "zipAlignmentPassed": true
+  },
+  "manifest": {
+    "applicationId": "local.jeff.mentalarithmetic",
+    "versionName": "1.1.0",
+    "versionCode": 10100,
+    "label": "Mental Arithmetic",
+    "minSdk": 26,
+    "targetSdk": 37,
+    "launcher": "local.jeff.mentalarithmetic.MainActivity",
+    "permissions": [],
+    "debuggable": false
+  },
+  "signature": {
+    "verified": true,
+    "schemes": {
+      "v1": false,
+      "v2": true,
+      "v3": false,
+      "v3.1": false,
+      "v3.2": false,
+      "v4": false
+    },
+    "signerSha256": "5bee5bb4046742472cc391fae0f29b4589bdf42fdd27a4a041c0a241347139dc"
+  },
+  "nativeLibraries": [],
+  "architecture": "Universal APK; uses the installed Android System WebView; no bundled native libraries",
+  "frontend": [
+    {
+      "file": "assets/index-BRBQRPxf.css",
+      "bytes": 7598,
+      "sha256": "5ec84f1a44071281ba42a81e0a0bfed617f0110541f0cf4eeef61877cda01171",
+      "matches": true
+    },
+    {
+      "file": "assets/index-RSn6g_ak.js",
+      "bytes": 33728,
+      "sha256": "193a7336a232e887d7cde408db0e90f44b800dd5fd253530780caefbeffb14a7",
+      "matches": true
+    },
+    {
+      "file": "index.html",
+      "bytes": 594,
+      "sha256": "21d8698308cf03a24b5433dc355b6d239c6dea5f4514be2e9a41d06c2adff5e2",
+      "matches": true
+    }
+  ],
+  "runtimeExecution": {
+    "performed": false,
+    "reason": "This verifier inspects package bytes only. Separate emulator/device evidence is required for runtime claims."
+  }
+}

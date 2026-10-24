@@ -1,0 +1,11 @@
+{
+  "platform": "darwin",
+  "architecture": "arm64",
+  "appPath": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-mac-2JH9YG/mac-arm64/Mental Arithmetic.app",
+  "artifacts": [
+    "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/Mental-Arithmetic-1.1.0-macOS-arm64.dmg",
+    "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/Mental-Arithmetic-1.1.0-macOS-arm64.dmg.blockmap",
+    "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/Mental-Arithmetic-1.1.0-macOS-arm64.zip",
+    "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/Mental-Arithmetic-1.1.0-macOS-arm64.zip.blockmap"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "verifiedAt": "2026-10-24T13:09:42.234Z",
+  "serial": "emulator-5556",
+  "disposableEmulator": true,
+  "device": "sdk_gphone64_arm64",
+  "androidRelease": "17",
+  "sdkInt": 37,
+  "buildFingerprint": "google/sdk_gphone64_arm64/emu64a:17/CE2A.260420.051.A3/16571990:userdebug/dev-keys",
+  "screen": "1080x2400 at 420 dpi",
+  "releaseApk": {
+    "path": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/Mental-Arithmetic-1.0.2-Android.apk",
+    "sha256": "07862394de295252377affcbbfb8a15bd6e294367f690aacb4c769f706b640fc",
+    "signerSha256": "5bee5bb4046742472cc391fae0f29b4589bdf42fdd27a4a041c0a241347139dc"
+  },
+  "testApk": {
+    "path": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/android/app/build/outputs/apk/androidTest/release/app-release-androidTest.apk",
+    "sha256": "d28a181ac016048806413d3ca8d66f58867b0bd4ed86063d321be2b9e1eb60de",
+    "signerSha256": "5bee5bb4046742472cc391fae0f29b4589bdf42fdd27a4a041c0a241347139dc"
+  },
+  "sameSigningCertificate": true,
+  "command": "adb -s emulator-5556 shell am instrument -w local.jeff.mentalarithmetic.test/local.jeff.mentalarithmetic.AndroidTestRunner",
+  "results": "android-runtime/android-runtime-results.json",
+  "physicalDevicesModified": false
+}

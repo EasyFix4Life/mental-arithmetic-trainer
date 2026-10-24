@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	"archiveVersion" = "1";
+	"classes" = {
+	};
+	"objectVersion" = "77";
+	"objects" = {
+		"E397B83953EA76B3BB73A98F" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"9246014900A24CFBC198E1AD" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"717D781E8C7AAF1100A7997D" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"A0D8E877D61E90990222B33B" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.application";
+			"includeInIndex" = "0";
+			"path" = "MentalArithmetic.app";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"3D15529B90AF68F0B103A8BB" = {
+			"isa" = "PBXFileSystemSynchronizedBuildFileExceptionSet";
+			"membershipExceptions" = (
+				"Info.plist",
+			);
+			"target" = "BAD032DA9E642A4635E0E221";
+		};
+		"FF37DD4C86835ED3AFFB1361" = {
+			"isa" = "PBXFileSystemSynchronizedRootGroup";
+			"path" = "MentalArithmetic";
+			"sourceTree" = "<group>";
+			"exceptions" = (
+				"3D15529B90AF68F0B103A8BB",
+			);
+		};
+		"A4D0107C13A6F6C86490A68F" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Debug";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "17.0";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"ENABLE_USER_SCRIPT_SANDBOXING" = "YES";
+				"SWIFT_STRICT_CONCURRENCY" = "minimal";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"ENABLE_TESTABILITY" = "YES";
+				"ONLY_ACTIVE_ARCH" = "YES";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "local.jeff.mentalarithmetic";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"PRODUCT_MODULE_NAME" = "MentalArithmetic";
+				"TARGETED_DEVICE_FAMILY" = "1,2";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"MARKETING_VERSION" = "1.1.0";
+				"CURRENT_PROJECT_VERSION" = "1";
+				"GENERATE_INFOPLIST_FILE" = "NO";
+				"INFOPLIST_FILE" = "MentalArithmetic/Info.plist";
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
+				"ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME" = "AccentColor";
+				"LD_RUNPATH_SEARCH_PATHS" = "$(inherited) @executable_path/Frameworks";
+				"SUPPORTS_MACCATALYST" = "NO";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG";
+			};
+		};
+		"9C4BBABD7B589F197B56BF24" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Release";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "17.0";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"ENABLE_USER_SCRIPT_SANDBOXING" = "YES";
+				"SWIFT_STRICT_CONCURRENCY" = "minimal";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+				"ENABLE_TESTABILITY" = "NO";
+				"ONLY_ACTIVE_ARCH" = "NO";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "local.jeff.mentalarithmetic";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"PRODUCT_MODULE_NAME" = "MentalArithmetic";
+				"TARGETED_DEVICE_FAMILY" = "1,2";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"MARKETING_VERSION" = "1.1.0";
+				"CURRENT_PROJECT_VERSION" = "1";
+				"GENERATE_INFOPLIST_FILE" = "NO";
+				"INFOPLIST_FILE" = "MentalArithmetic/Info.plist";
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
+				"ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME" = "AccentColor";
+				"LD_RUNPATH_SEARCH_PATHS" = "$(inherited) @executable_path/Frameworks";
+				"SUPPORTS_MACCATALYST" = "NO";
+			};
+		};
+		"E3F36B2F07BE35116801FB2B" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"A4D0107C13A6F6C86490A68F",
+				"9C4BBABD7B589F197B56BF24",
+			);
+			"defaultConfigurationIsVisible" = "0";
+			"defaultConfigurationName" = "Release";
+		};
+		"BAD032DA9E642A4635E0E221" = {
+			"isa" = "PBXNativeTarget";
+			"name" = "MentalArithmetic";
+			"buildConfigurationList" = "E3F36B2F07BE35116801FB2B";
+			"buildPhases" = (
+				"E397B83953EA76B3BB73A98F",
+				"9246014900A24CFBC198E1AD",
+				"717D781E8C7AAF1100A7997D",
+			);
+			"buildRules" = (
+			);
+			"dependencies" = (
+			);
+			"fileSystemSynchronizedGroups" = (
+				"FF37DD4C86835ED3AFFB1361",
+			);
+			"productName" = "MentalArithmetic";
+			"productReference" = "A0D8E877D61E90990222B33B";
+			"productType" = "com.apple.product-type.application";
+		};
+		"F0F8384B601C73106AEABE2F" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"2B7B2A3DDF2503522B2811A5" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"C2FE2054963D008D14C839C8" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"FCCC07D580B6B796065D1C5B" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.cfbundle";
+			"includeInIndex" = "0";
+			"path" = "MentalArithmeticTests.xctest";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"45990520DBB36602A45EBB50" = {
+			"isa" = "PBXFileSystemSynchronizedRootGroup";
+			"path" = "MentalArithmeticTests";
+			"sourceTree" = "<group>";
+		};
+		"BA83531C8CCE7E73D8355366" = {
+			"isa" = "PBXContainerItemProxy";
+			"containerPortal" = "EA47FDFE9CD70D678ECEE6A6";
+			"proxyType" = "1";
+			"remoteGlobalIDString" = "BAD032DA9E642A4635E0E221";
+			"remoteInfo" = "MentalArithmetic";
+		};
+		"9FCCFC7C4608572E2D5FE378" = {
+			"isa" = "PBXTargetDependency";
+			"target" = "BAD032DA9E642A4635E0E221";
+			"targetProxy" = "BA83531C8CCE7E73D8355366";
+		};
+		"ED1EC29D800F454F131F851D" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Debug";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "17.0";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"ENABLE_USER_SCRIPT_SANDBOXING" = "YES";
+				"SWIFT_STRICT_CONCURRENCY" = "minimal";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"ENABLE_TESTABILITY" = "YES";
+				"ONLY_ACTIVE_ARCH" = "YES";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "local.jeff.mentalarithmetic.mentalarithmetictests";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"PRODUCT_MODULE_NAME" = "MentalArithmeticTests";
+				"TARGETED_DEVICE_FAMILY" = "1,2";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"MARKETING_VERSION" = "1.1.0";
+				"CURRENT_PROJECT_VERSION" = "1";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"BUNDLE_LOADER" = "$(TEST_HOST)";
+				"TEST_HOST" = "$(BUILT_PRODUCTS_DIR)/MentalArithmetic.app/MentalArithmetic";
+				"LD_RUNPATH_SEARCH_PATHS" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG";
+			};
+		};
+		"9C8D557C28345A193B9B1CFC" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Release";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "17.0";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"ENABLE_USER_SCRIPT_SANDBOXING" = "YES";
+				"SWIFT_STRICT_CONCURRENCY" = "minimal";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+				"ENABLE_TESTABILITY" = "NO";
+				"ONLY_ACTIVE_ARCH" = "NO";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "local.jeff.mentalarithmetic.mentalarithmetictests";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"PRODUCT_MODULE_NAME" = "MentalArithmeticTests";
+				"TARGETED_DEVICE_FAMILY" = "1,2";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"MARKETING_VERSION" = "1.1.0";
+				"CURRENT_PROJECT_VERSION" = "1";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"BUNDLE_LOADER" = "$(TEST_HOST)";
+				"TEST_HOST" = "$(BUILT_PRODUCTS_DIR)/MentalArithmetic.app/MentalArithmetic";
+				"LD_RUNPATH_SEARCH_PATHS" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+			};
+		};
+		"5592DFC39C560623A074CDE9" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"ED1EC29D800F454F131F851D",
+				"9C8D557C28345A193B9B1CFC",
+			);
+			"defaultConfigurationIsVisible" = "0";
+			"defaultConfigurationName" = "Release";
+		};
+		"375FA090961D369C0BBA99E7" = {
+			"isa" = "PBXNativeTarget";
+			"name" = "MentalArithmeticTests";
+			"buildConfigurationList" = "5592DFC39C560623A074CDE9";
+			"buildPhases" = (
+				"F0F8384B601C73106AEABE2F",
+				"2B7B2A3DDF2503522B2811A5",
+				"C2FE2054963D008D14C839C8",
+			);
+			"buildRules" = (
+			);
+			"dependencies" = (
+				"9FCCFC7C4608572E2D5FE378",
+			);
+			"fileSystemSynchronizedGroups" = (
+				"45990520DBB36602A45EBB50",
+			);
+			"productName" = "MentalArithmeticTests";
+			"productReference" = "FCCC07D580B6B796065D1C5B";
+			"productType" = "com.apple.product-type.bundle.unit-test";
+		};
+		"E2DC5C3C42C35B526FBE8EF5" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"43E84E634CCF6C1036FA1773" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"9B644ABE852AE78757BC76C9" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"833BF4E5FF86F1028AE22921" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.cfbundle";
+			"includeInIndex" = "0";
+			"path" = "MentalArithmeticUITests.xctest";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"A7422757088318CDDC0C182F" = {
+			"isa" = "PBXFileSystemSynchronizedRootGroup";
+			"path" = "MentalArithmeticUITests";
+			"sourceTree" = "<group>";
+		};
+		"E9BF2F643CA041AFC3EF2717" = {
+			"isa" = "PBXContainerItemProxy";
+			"containerPortal" = "EA47FDFE9CD70D678ECEE6A6";
+			"proxyType" = "1";
+			"remoteGlobalIDString" = "BAD032DA9E642A4635E0E221";
+			"remoteInfo" = "MentalArithmetic";
+		};
+		"D9B4C7B70100AD63C430CA76" = {
+			"isa" = "PBXTargetDependency";
+			"target" = "BAD032DA9E642A4635E0E221";
+			"targetProxy" = "E9BF2F643CA041AFC3EF2717";
+		};
+		"84B63AD59E4D8CF372FAABF9" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Debug";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "17.0";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"ENABLE_USER_SCRIPT_SANDBOXING" = "YES";
+				"SWIFT_STRICT_CONCURRENCY" = "minimal";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"ENABLE_TESTABILITY" = "YES";
+				"ONLY_ACTIVE_ARCH" = "YES";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "local.jeff.mentalarithmetic.mentalarithmeticuitests";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"PRODUCT_MODULE_NAME" = "MentalArithmeticUITests";
+				"TARGETED_DEVICE_FAMILY" = "1,2";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"MARKETING_VERSION" = "1.1.0";
+				"CURRENT_PROJECT_VERSION" = "1";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"TEST_TARGET_NAME" = "MentalArithmetic";
+				"LD_RUNPATH_SEARCH_PATHS" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG";
+			};
+		};
+		"D756D388B2C66D67DE767FB1" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Release";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "17.0";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"ENABLE_USER_SCRIPT_SANDBOXING" = "YES";
+				"SWIFT_STRICT_CONCURRENCY" = "minimal";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+				"ENABLE_TESTABILITY" = "NO";
+				"ONLY_ACTIVE_ARCH" = "NO";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "local.jeff.mentalarithmetic.mentalarithmeticuitests";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"PRODUCT_MODULE_NAME" = "MentalArithmeticUITests";
+				"TARGETED_DEVICE_FAMILY" = "1,2";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"MARKETING_VERSION" = "1.1.0";
+				"CURRENT_PROJECT_VERSION" = "1";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"TEST_TARGET_NAME" = "MentalArithmetic";
+				"LD_RUNPATH_SEARCH_PATHS" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+			};
+		};
+		"AB37BE97E9291E94254ACD9E" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"84B63AD59E4D8CF372FAABF9",
+				"D756D388B2C66D67DE767FB1",
+			);
+			"defaultConfigurationIsVisible" = "0";
+			"defaultConfigurationName" = "Release";
+		};
+		"ECDBF9DAA4E72FBDEB04D0AA" = {
+			"isa" = "PBXNativeTarget";
+			"name" = "MentalArithmeticUITests";
+			"buildConfigurationList" = "AB37BE97E9291E94254ACD9E";
+			"buildPhases" = (
+				"E2DC5C3C42C35B526FBE8EF5",
+				"43E84E634CCF6C1036FA1773",
+				"9B644ABE852AE78757BC76C9",
+			);
+			"buildRules" = (
+			);
+			"dependencies" = (
+				"D9B4C7B70100AD63C430CA76",
+			);
+			"fileSystemSynchronizedGroups" = (
+				"A7422757088318CDDC0C182F",
+			);
+			"productName" = "MentalArithmeticUITests";
+			"productReference" = "833BF4E5FF86F1028AE22921";
+			"productType" = "com.apple.product-type.bundle.ui-testing";
+		};
+		"E3F953ABF2734A412283C153" = {
+			"isa" = "PBXGroup";
+			"children" = (
+				"A0D8E877D61E90990222B33B",
+				"FCCC07D580B6B796065D1C5B",
+				"833BF4E5FF86F1028AE22921",
+			);
+			"name" = "Products";
+			"sourceTree" = "<group>";
+		};
+		"A8A4C6A04614A2D4F759F65E" = {
+			"isa" = "PBXGroup";
+			"children" = (
+				"FF37DD4C86835ED3AFFB1361",
+				"45990520DBB36602A45EBB50",
+				"A7422757088318CDDC0C182F",
+				"E3F953ABF2734A412283C153",
+			);
+			"sourceTree" = "<group>";
+		};
+		"990AF3311EEA466F4AD780D9" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Debug";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "17.0";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"ENABLE_USER_SCRIPT_SANDBOXING" = "YES";
+				"SWIFT_STRICT_CONCURRENCY" = "minimal";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"ENABLE_TESTABILITY" = "YES";
+				"ONLY_ACTIVE_ARCH" = "YES";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG";
+			};
+		};
+		"2E170859C68DEB75C8FED3D1" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Release";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "17.0";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"ENABLE_USER_SCRIPT_SANDBOXING" = "YES";
+				"SWIFT_STRICT_CONCURRENCY" = "minimal";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+				"ENABLE_TESTABILITY" = "NO";
+				"ONLY_ACTIVE_ARCH" = "NO";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+			};
+		};
+		"CC056E8AE67E192E964C8D6E" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"990AF3311EEA466F4AD780D9",
+				"2E170859C68DEB75C8FED3D1",
+			);
+			"defaultConfigurationIsVisible" = "0";
+			"defaultConfigurationName" = "Release";
+		};
+		"EA47FDFE9CD70D678ECEE6A6" = {
+			"isa" = "PBXProject";
+			"attributes" = {
+				"BuildIndependentTargetsInParallel" = "YES";
+				"LastUpgradeCheck" = "2700";
+				"TargetAttributes" = {
+					"BAD032DA9E642A4635E0E221" = {
+						"CreatedOnToolsVersion" = "27.0";
+					};
+					"375FA090961D369C0BBA99E7" = {
+						"CreatedOnToolsVersion" = "27.0";
+					};
+					"ECDBF9DAA4E72FBDEB04D0AA" = {
+						"CreatedOnToolsVersion" = "27.0";
+					};
+				};
+			};
+			"buildConfigurationList" = "CC056E8AE67E192E964C8D6E";
+			"compatibilityVersion" = "Xcode 16.0";
+			"developmentRegion" = "en";
+			"hasScannedForEncodings" = "0";
+			"knownRegions" = (
+				"en",
+				"Base",
+			);
+			"mainGroup" = "A8A4C6A04614A2D4F759F65E";
+			"productRefGroup" = "E3F953ABF2734A412283C153";
+			"projectDirPath" = "";
+			"projectRoot" = "";
+			"targets" = (
+				"BAD032DA9E642A4635E0E221",
+				"375FA090961D369C0BBA99E7",
+				"ECDBF9DAA4E72FBDEB04D0AA",
+			);
+		};
+	};
+	"rootObject" = "EA47FDFE9CD70D678ECEE6A6";
+}

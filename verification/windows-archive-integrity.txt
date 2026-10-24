@@ -1,0 +1,70 @@
+ZIP integrity
+
+7-Zip (z) 24.09 (arm64) : Copyright (c) 1999-2024 Igor Pavlov : 2024-11-28
+ 64-bit arm_v:8.5-A locale=C.UTF-8 Threads:15 OPEN_MAX:1048575, ASM
+
+Scanning the drive for archives:
+1 file, 153161130 bytes (147 MiB)
+
+Testing archive: /Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.0-Windows-x64.zip
+--
+Path = /Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.0-Windows-x64.zip
+Type = zip
+Physical Size = 153161130
+
+Everything is Ok
+
+Folders: 2
+Files: 72
+Size:       374038451
+Compressed: 153161130
+
+NSIS integrity
+
+7-Zip (z) 24.09 (arm64) : Copyright (c) 1999-2024 Igor Pavlov : 2024-11-28
+ 64-bit arm_v:8.5-A locale=C.UTF-8 Threads:15 OPEN_MAX:1048575, ASM
+
+Scanning the drive for archives:
+1 file, 121273441 bytes (116 MiB)
+
+Testing archive: /Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.0-Windows-x64-Setup.exe
+--
+Path = /Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.0-Windows-x64-Setup.exe
+Type = Nsis
+Physical Size = 121273441
+Method = Deflate
+Solid = -
+Headers Size = 215178
+Embedded Stub Size = 59904
+SubType = NSIS-3 Unicode
+
+Everything is Ok
+
+Files: 10
+Size:       120705046
+Compressed: 121273441
+
+Embedded x64 payload integrity
+
+7-Zip (z) 24.09 (arm64) : Copyright (c) 1999-2024 Igor Pavlov : 2024-11-28
+ 64-bit arm_v:8.5-A locale=C.UTF-8 Threads:15 OPEN_MAX:1048575, ASM
+
+Scanning the drive for archives:
+1 file, 120705046 bytes (116 MiB)
+
+Testing archive: /var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-verify-McvS5N/installer/$PLUGINSDIR/app-64.7z
+--
+Path = /var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-verify-McvS5N/installer/$PLUGINSDIR/app-64.7z
+Type = 7z
+Physical Size = 120705046
+Headers Size = 1378
+Method = LZMA2:20 BCJ
+Solid = -
+Blocks = 73
+
+Everything is Ok
+
+Folders: 2
+Files: 73
+Size:       374145971
+Compressed: 120705046

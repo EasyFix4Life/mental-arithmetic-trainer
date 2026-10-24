@@ -1,0 +1,44 @@
+{
+  "verifiedAt": "2026-10-24T13:33:51.951Z",
+  "version": "1.1.0",
+  "macArchive": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Resources/app.asar",
+  "windowsArchive": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-uzntWH/win-unpacked/resources/app.asar",
+  "files": [
+    {
+      "file": "dist/assets/index-BRBQRPxf.css",
+      "sha256": "5ec84f1a44071281ba42a81e0a0bfed617f0110541f0cf4eeef61877cda01171",
+      "bytes": 7598,
+      "macMatchesWindows": true,
+      "bothMatchCurrentSource": true
+    },
+    {
+      "file": "dist/assets/index-RSn6g_ak.js",
+      "sha256": "193a7336a232e887d7cde408db0e90f44b800dd5fd253530780caefbeffb14a7",
+      "bytes": 33728,
+      "macMatchesWindows": true,
+      "bothMatchCurrentSource": true
+    },
+    {
+      "file": "dist/index.html",
+      "sha256": "21d8698308cf03a24b5433dc355b6d239c6dea5f4514be2e9a41d06c2adff5e2",
+      "bytes": 594,
+      "macMatchesWindows": true,
+      "bothMatchCurrentSource": true
+    },
+    {
+      "file": "desktop/main.cjs",
+      "sha256": "70ef65772f8f6390212190299348873b24b7b390a559049dd3a129c78ba301cb",
+      "bytes": 6088,
+      "macMatchesWindows": true,
+      "bothMatchCurrentSource": true
+    },
+    {
+      "file": "desktop/security.cjs",
+      "sha256": "df896d0e2c572d4d1a3b5f0a46df5c910d9f6c2183cf67bddb7f5c2c5abf06a0",
+      "bytes": 1839,
+      "macMatchesWindows": true,
+      "bothMatchCurrentSource": true
+    }
+  ],
+  "sourceFileCount": 18
+}

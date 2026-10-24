@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-24",
+  "user_request": "Not demostrating max time min time and average time of each set of practice.\nx",
+  "supersedes": "Original score-only performance feedback after a completed Practice round",
+  "implementation": {
+    "placement": "Alongside the final score after the tenth accepted submission",
+    "fields": ["Maximum time", "Minimum time", "Average time"],
+    "unit": "Seconds, displayed in completed tenths",
+    "sample_default_stated_to_user": "All ten accepted answers, including incorrect answers",
+    "calculation": "Use original high-resolution durations; calculate average before display formatting",
+    "lifecycle": "Hidden while solving; preserved when visiting Learn between rounds; reset at manual new-round start",
+    "platforms": ["Browser", "macOS app"],
+    "history": "No persistent or cross-round history added"
+  }
+}

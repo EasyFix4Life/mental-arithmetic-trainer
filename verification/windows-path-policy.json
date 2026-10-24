@@ -1,0 +1,57 @@
+{
+  "version": "1.1.0",
+  "verifiedAt": "2026-10-24T13:34:25.463Z",
+  "runtime": "Node VM evaluating the actual shared policy with node:path.win32",
+  "passed": 7,
+  "results": [
+    {
+      "name": "document",
+      "url": "app://trainer/index.html",
+      "expected": "C:\\Program Files\\Mental Arithmetic\\resources\\app.asar\\dist\\index.html",
+      "actual": "C:\\Program Files\\Mental Arithmetic\\resources\\app.asar\\dist\\index.html",
+      "passed": true
+    },
+    {
+      "name": "asset",
+      "url": "app://trainer/assets/index-abc.js",
+      "expected": "C:\\Program Files\\Mental Arithmetic\\resources\\app.asar\\dist\\assets\\index-abc.js",
+      "actual": "C:\\Program Files\\Mental Arithmetic\\resources\\app.asar\\dist\\assets\\index-abc.js",
+      "passed": true
+    },
+    {
+      "name": "file URL",
+      "url": "file:///C:/private.txt",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "traversal",
+      "url": "app://trainer/assets/%2e%2e/private.txt",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "encoded backslash",
+      "url": "app://trainer/assets/bad%5cprivate.js",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "drive colon",
+      "url": "app://trainer/assets/C:/private.js",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "query string",
+      "url": "app://trainer/index.html?next=file",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    }
+  ]
+}

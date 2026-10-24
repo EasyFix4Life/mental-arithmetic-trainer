@@ -1,0 +1,20 @@
+{
+  "appId": "local.jeff.mentalarithmetic",
+  "productName": "Mental Arithmetic",
+  "artifactName": "Mental-Arithmetic-${version}-macOS-${arch}.${ext}",
+  "directories": { "output": "release" },
+  "files": ["dist/**/*", "desktop/**/*", "package.json"],
+  "asar": true,
+  "npmRebuild": false,
+  "mac": {
+    "category": "public.app-category.education",
+    "identity": "-",
+    "hardenedRuntime": true,
+    "notarize": false,
+    "target": [
+      { "target": "dmg", "arch": ["arm64"] },
+      { "target": "zip", "arch": ["arm64"] }
+    ]
+  },
+  "dmg": { "title": "Mental Arithmetic" }
+}

@@ -1,0 +1,24 @@
+{
+  "extends": "./electron-builder.json",
+  "artifactName": "Mental-Arithmetic-${version}-Windows-${arch}.${ext}",
+  "win": {
+    "target": [
+      { "target": "nsis", "arch": ["x64"] },
+      { "target": "zip", "arch": ["x64"] }
+    ],
+    "signExecutable": false,
+    "requestedExecutionLevel": "asInvoker"
+  },
+  "nsis": {
+    "artifactName": "Mental-Arithmetic-${version}-Windows-${arch}-Setup.exe",
+    "oneClick": false,
+    "perMachine": false,
+    "allowElevation": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "Mental Arithmetic",
+    "runAfterFinish": true,
+    "deleteAppDataOnUninstall": false
+  }
+}

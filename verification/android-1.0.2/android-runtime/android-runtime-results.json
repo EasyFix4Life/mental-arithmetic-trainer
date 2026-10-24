@@ -1,0 +1,103 @@
+{
+  "androidRelease": "17",
+  "sdkInt": 37,
+  "supportedAbis": [
+    "arm64-v8a"
+  ],
+  "model": "sdk_gphone64_arm64",
+  "package": "local.jeff.mentalarithmetic",
+  "webViewPackage": "com.google.android.webview",
+  "webViewVersion": "145.0.7632.218",
+  "passed": 6,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "offline release shell, presentation and browser security",
+      "status": "passed",
+      "durationMs": 282,
+      "details": {
+        "url": "https:\/\/appassets.androidplatform.net\/index.html",
+        "blockNetworkLoads": true,
+        "allowFileAccess": false,
+        "allowContentAccess": false,
+        "javascript": true
+      }
+    },
+    {
+      "name": "all four random lesson categories and pending original scripts",
+      "status": "passed",
+      "durationMs": 5,
+      "details": {
+        "lessonCategories": 4,
+        "randomRequestsPerCategory": 4
+      }
+    },
+    {
+      "name": "random two-digit trace, confirmed carries and final answer",
+      "status": "passed",
+      "durationMs": 258,
+      "details": {
+        "randomProduct": 8526,
+        "confirmedProduct": 324,
+        "stages": [
+          "First",
+          "Inside",
+          "Outside",
+          "Last",
+          "Final answer"
+        ]
+      }
+    },
+    {
+      "name": "native numeric keyboard, visible answer and rotation preservation",
+      "status": "passed",
+      "durationMs": 1949,
+      "details": {
+        "answerBottom": 510.09524154663086,
+        "liveBottom": 497.44642639160156,
+        "viewportBottom": 526.09521484375,
+        "viewportHeight": 526.09521484375,
+        "problemId": "1:0",
+        "nativeInputType": 2,
+        "softwareKeyboardVisible": true,
+        "rotationPreservedState": true,
+        "nativeKeyEventRoundScore": "10 \/ 10"
+      }
+    },
+    {
+      "name": "ten accepted answers, wrong feedback and exact timing summary",
+      "status": "passed",
+      "durationMs": 267,
+      "details": {
+        "score": "9 \/ 10",
+        "minimum": "0.2 s",
+        "maximum": "1.4 s",
+        "average": "1.2 s",
+        "durations": [
+          220,
+          530,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499
+        ]
+      }
+    },
+    {
+      "name": "all six operation and operand-length practice configurations",
+      "status": "passed",
+      "durationMs": 43,
+      "details": {
+        "configurations": 6,
+        "acceptedAnswers": 60,
+        "allScores": "10 \/ 10"
+      }
+    }
+  ],
+  "finishedAtEpochMs": 1792847361602,
+  "runtimeExecution": true
+}

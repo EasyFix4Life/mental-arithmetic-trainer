@@ -1,0 +1,32 @@
+[
+  {
+    "file": "src/answerPolicy.ts",
+    "sha256": "9a98d597b0f7baa7264b387f52ef8a1f5e80892e5c69446d2dda602f77dd89c1",
+    "unchanged_from_practice_v1": true
+  },
+  {
+    "file": "src/generateRound.ts",
+    "sha256": "7b8b13e15b58e870f27468e538181423c1fa38f73bd5cceb66eb17a3ca8a52cf",
+    "unchanged_from_practice_v1": true
+  },
+  {
+    "file": "src/inputPolicy.ts",
+    "sha256": "1c46093bcaf0345926a460bcf7663bc985d1f77ba1b0b0049cd5046428dda8e8",
+    "unchanged_from_practice_v1": true
+  },
+  {
+    "file": "src/roundController.ts",
+    "sha256": "e397db80445c3fcda1ef6ec364b80dbe8aed99c496bd17a1ebc98f1e7682cd54",
+    "unchanged_from_practice_v1": true
+  },
+  {
+    "file": "src/timer.ts",
+    "sha256": "bfaeaa1c0497565f6d3ceeba0064d903f4559d5b70cb192f86556bb79e0d4b04",
+    "unchanged_from_practice_v1": true
+  },
+  {
+    "file": "src/types.ts",
+    "sha256": "688edd3fc26490ee9e35a2cd0bfa4156fc9dfa14d845276fc526bc80da9522d0",
+    "unchanged_from_practice_v1": true
+  }
+]

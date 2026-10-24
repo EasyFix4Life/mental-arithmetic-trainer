@@ -1,0 +1,13 @@
+{
+  "version": "1.1.0",
+  "buildHost": "darwin",
+  "targetPlatform": "win32",
+  "architecture": "x64",
+  "appDirectory": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-uzntWH/win-unpacked",
+  "executablePath": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-uzntWH/win-unpacked/Mental Arithmetic.exe",
+  "artifacts": [
+    "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/Mental-Arithmetic-1.1.0-Windows-x64-Setup.exe",
+    "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/Mental-Arithmetic-1.1.0-Windows-x64-Setup.exe.blockmap",
+    "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/Mental-Arithmetic-1.1.0-Windows-x64.zip"
+  ]
+}

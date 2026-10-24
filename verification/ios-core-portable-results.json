@@ -1,0 +1,54 @@
+{
+  "performed": true,
+  "hostPlatform": "macOS 27.2 arm64",
+  "implementationLanguage": "Swift 5 mode, Apple Swift 6.4 / Xcode 27 beta",
+  "tests": 34,
+  "failures": 0,
+  "durationSeconds": 0.534,
+  "scope": "Exact Foundation core and XCTest sources, executed natively on macOS with a temporary SwiftPM package; this is not iOS simulator UI execution.",
+  "log": "ios-core-portable-tests.txt",
+  "sourceFiles": [
+    {
+      "source": "outputs/mental-arithmetic-trainer/ios/MentalArithmetic/Core/ConfirmedExamples.swift",
+      "portableCopy": "work/ios/CoreVerification/Sources/MentalArithmetic/ConfirmedExamples.swift",
+      "sha256": "288068099d757f1f935ad482c04cc498d0c64c8960fa919da80d140456f84673",
+      "byteIdentical": true
+    },
+    {
+      "source": "outputs/mental-arithmetic-trainer/ios/MentalArithmetic/Core/Lessons.swift",
+      "portableCopy": "work/ios/CoreVerification/Sources/MentalArithmetic/Lessons.swift",
+      "sha256": "6fa338e5047f42136598f657afbdbc69ac6aa510db531679ba0542d5254ab7ad",
+      "byteIdentical": true
+    },
+    {
+      "source": "outputs/mental-arithmetic-trainer/ios/MentalArithmetic/Core/PositionalInstructions.swift",
+      "portableCopy": "work/ios/CoreVerification/Sources/MentalArithmetic/PositionalInstructions.swift",
+      "sha256": "67407f4519d0c0d5bdc566a3ba246d83cf50d5657974d969c75ca922a343f5c0",
+      "byteIdentical": true
+    },
+    {
+      "source": "outputs/mental-arithmetic-trainer/ios/MentalArithmetic/Core/PracticeEngine.swift",
+      "portableCopy": "work/ios/CoreVerification/Sources/MentalArithmetic/PracticeEngine.swift",
+      "sha256": "7ae6efdf8aecc6e588abace0292d173aad9044f98e0e7e05c424babbbbdc571e",
+      "byteIdentical": true
+    },
+    {
+      "source": "outputs/mental-arithmetic-trainer/ios/MentalArithmeticTests/LessonTests.swift",
+      "portableCopy": "work/ios/CoreVerification/Tests/MentalArithmeticTests/LessonTests.swift",
+      "sha256": "bb62282e3631233b8c402d4eb8dc2a3ab2cc5c94026ac59063cda32a14c131b0",
+      "byteIdentical": true
+    },
+    {
+      "source": "outputs/mental-arithmetic-trainer/ios/MentalArithmeticTests/PracticeEngineTests.swift",
+      "portableCopy": "work/ios/CoreVerification/Tests/MentalArithmeticTests/PracticeEngineTests.swift",
+      "sha256": "6e908181233d485abf00a27d7bf8f9ae26e3538c965bf936d256bdf0c21f1626",
+      "byteIdentical": true
+    },
+    {
+      "source": "outputs/mental-arithmetic-trainer/ios/MentalArithmeticTests/SuppliedAcceptanceData.swift",
+      "portableCopy": "work/ios/CoreVerification/Tests/MentalArithmeticTests/SuppliedAcceptanceData.swift",
+      "sha256": "a5173c6082fc8335eb0a87263a30f0cea70cc8ab99b55e80f49867008f5eb2df",
+      "byteIdentical": true
+    }
+  ]
+}

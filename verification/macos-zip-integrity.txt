@@ -1,0 +1,603 @@
+Archive:  /Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.0-macOS-arm64.zip
+    testing: Mental Arithmetic.app/   OK
+    testing: Mental Arithmetic.app/Contents/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Electron Framework   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Helpers   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Libraries   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Resources   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Helpers/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Helpers/app_shim_loader   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Helpers/chrome_crashpad_handler   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libffmpeg.dylib   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libvk_swiftshader.dylib   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/vk_swiftshader_icd.json   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/af.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/af.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/af_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/af_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/af_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/af_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/af_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/af_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/am.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/am.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/am_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/am_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/am_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/am_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/am_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/am_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ar.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ar.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ar_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ar_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ar_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ar_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ar_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ar_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bg.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bg.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bg_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bg_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bg_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bg_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bg_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bg_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bn.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bn.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bn_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bn_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bn_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bn_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bn_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bn_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ca.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ca.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ca_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ca_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ca_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ca_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ca_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ca_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/chrome_100_percent.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/chrome_200_percent.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/cs.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/cs.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/cs_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/cs_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/cs_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/cs_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/cs_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/cs_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/da.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/da.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/da_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/da_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/da_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/da_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/da_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/da_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/de.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/de.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/de_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/de_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/de_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/de_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/de_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/de_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/el.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/el.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/el_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/el_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/el_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/el_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/el_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/el_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_GB.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_GB.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_GB_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_GB_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_GB_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_GB_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_GB_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_GB_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_419.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_419.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_419_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_419_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_419_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_419_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_419_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_419_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/et.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/et.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/et_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/et_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/et_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/et_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/et_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/et_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fa.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fa.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fa_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fa_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fa_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fa_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fa_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fa_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fi.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fi.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fil.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fil.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fil_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fil_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fil_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fil_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fil_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fil_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fi_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fi_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fi_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fi_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fi_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fi_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fr.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fr.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fr_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fr_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fr_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fr_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fr_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fr_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/gu.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/gu.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/gu_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/gu_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/gu_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/gu_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/gu_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/gu_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/he.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/he.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/he_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/he_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/he_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/he_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/he_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/he_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hi.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hi.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hi_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hi_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hi_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hi_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hi_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hi_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hr.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hr.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hr_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hr_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hr_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hr_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hr_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hr_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hu.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hu.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hu_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hu_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hu_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hu_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hu_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hu_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/icudtl.dat   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/id.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/id.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/id_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/id_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/id_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/id_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/id_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/id_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/Info.plist   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/it.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/it.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/it_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/it_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/it_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/it_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/it_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/it_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ja.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ja.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ja_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ja_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ja_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ja_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ja_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ja_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/kn.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/kn.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/kn_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/kn_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/kn_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/kn_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/kn_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/kn_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ko.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ko.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ko_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ko_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ko_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ko_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ko_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ko_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lt.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lt.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lt_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lt_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lt_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lt_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lt_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lt_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lv.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lv.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lv_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lv_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lv_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lv_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lv_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lv_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/MainMenu.nib   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ml.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ml.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ml_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ml_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ml_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ml_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ml_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ml_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/mr.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/mr.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/mr_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/mr_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/mr_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/mr_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/mr_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/mr_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ms.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ms.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ms_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ms_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ms_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ms_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ms_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ms_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nb.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nb.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nb_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nb_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nb_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nb_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nb_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nb_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nl.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nl.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nl_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nl_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nl_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nl_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nl_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nl_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pl.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pl.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pl_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pl_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pl_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pl_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pl_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pl_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_BR.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_BR.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_BR_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_BR_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_BR_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_BR_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_BR_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_BR_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_PT.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_PT.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_PT_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_PT_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_PT_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_PT_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_PT_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_PT_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/resources.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ro.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ro.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ro_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ro_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ro_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ro_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ro_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ro_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ru.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ru.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ru_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ru_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ru_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ru_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ru_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ru_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sk.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sk.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sk_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sk_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sk_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sk_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sk_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sk_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sl.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sl.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sl_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sl_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sl_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sl_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sl_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sl_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sr.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sr.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sr_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sr_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sr_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sr_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sr_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sr_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sv.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sv.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sv_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sv_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sv_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sv_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sv_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sv_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sw.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sw.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sw_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sw_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sw_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sw_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sw_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sw_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ta.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ta.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ta_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ta_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ta_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ta_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ta_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ta_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/te.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/te.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/te_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/te_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/te_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/te_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/te_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/te_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/th.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/th.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/th_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/th_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/th_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/th_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/th_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/th_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/tr.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/tr.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/tr_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/tr_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/tr_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/tr_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/tr_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/tr_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/uk.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/uk.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/uk_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/uk_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/uk_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/uk_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/uk_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/uk_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ur.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ur.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ur_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ur_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ur_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ur_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ur_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ur_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/v8_context_snapshot.arm64.bin   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/vi.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/vi.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/vi_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/vi_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/vi_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/vi_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/vi_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/vi_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_CN.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_CN.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_CN_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_CN_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_CN_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_CN_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_CN_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_CN_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_TW.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_TW.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_TW_FEMININE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_TW_FEMININE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_TW_MASCULINE.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_TW_MASCULINE.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_TW_NEUTER.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_TW_NEUTER.lproj/locale.pak   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/_CodeSignature/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/_CodeSignature/CodeResources   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/Current   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mantle.framework/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mantle.framework/Mantle   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mantle.framework/Resources   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mantle.framework/Versions/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mantle.framework/Versions/A/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mantle.framework/Versions/A/Mantle   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mantle.framework/Versions/A/Resources/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mantle.framework/Versions/A/Resources/Info.plist   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mantle.framework/Versions/A/_CodeSignature/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mantle.framework/Versions/A/_CodeSignature/CodeResources   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mantle.framework/Versions/Current   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (GPU).app/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (GPU).app/Contents/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (GPU).app/Contents/Info.plist   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (GPU).app/Contents/MacOS/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (GPU).app/Contents/MacOS/Mental Arithmetic Helper (GPU)   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (GPU).app/Contents/PkgInfo   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (GPU).app/Contents/_CodeSignature/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (GPU).app/Contents/_CodeSignature/CodeResources   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Plugin).app/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Plugin).app/Contents/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Plugin).app/Contents/Info.plist   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Plugin).app/Contents/MacOS/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Plugin).app/Contents/MacOS/Mental Arithmetic Helper (Plugin)   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Plugin).app/Contents/PkgInfo   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Plugin).app/Contents/_CodeSignature/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Plugin).app/Contents/_CodeSignature/CodeResources   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Renderer).app/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Renderer).app/Contents/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Renderer).app/Contents/Info.plist   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Renderer).app/Contents/MacOS/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Renderer).app/Contents/MacOS/Mental Arithmetic Helper (Renderer)   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Renderer).app/Contents/PkgInfo   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Renderer).app/Contents/_CodeSignature/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Renderer).app/Contents/_CodeSignature/CodeResources   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper.app/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper.app/Contents/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper.app/Contents/Info.plist   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper.app/Contents/MacOS/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper.app/Contents/MacOS/Mental Arithmetic Helper   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper.app/Contents/PkgInfo   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper.app/Contents/_CodeSignature/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper.app/Contents/_CodeSignature/CodeResources   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/ReactiveObjC.framework/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/ReactiveObjC.framework/ReactiveObjC   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/ReactiveObjC.framework/Resources   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/ReactiveObjC.framework/Versions/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/ReactiveObjC.framework/Versions/A/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/ReactiveObjC.framework/Versions/A/ReactiveObjC   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/ReactiveObjC.framework/Versions/A/Resources/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/ReactiveObjC.framework/Versions/A/Resources/Info.plist   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/ReactiveObjC.framework/Versions/A/_CodeSignature/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/ReactiveObjC.framework/Versions/A/_CodeSignature/CodeResources   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/ReactiveObjC.framework/Versions/Current   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Squirrel.framework/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Squirrel.framework/Resources   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Squirrel.framework/Squirrel   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Squirrel.framework/Versions/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Squirrel.framework/Versions/A/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Squirrel.framework/Versions/A/Resources/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Squirrel.framework/Versions/A/Resources/Info.plist   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Squirrel.framework/Versions/A/Resources/ShipIt   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Squirrel.framework/Versions/A/Squirrel   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Squirrel.framework/Versions/A/_CodeSignature/   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Squirrel.framework/Versions/A/_CodeSignature/CodeResources   OK
+    testing: Mental Arithmetic.app/Contents/Frameworks/Squirrel.framework/Versions/Current   OK
+    testing: Mental Arithmetic.app/Contents/Info.plist   OK
+    testing: Mental Arithmetic.app/Contents/MacOS/   OK
+    testing: Mental Arithmetic.app/Contents/MacOS/Mental Arithmetic   OK
+    testing: Mental Arithmetic.app/Contents/PkgInfo   OK
+    testing: Mental Arithmetic.app/Contents/Resources/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/af.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/am.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/app.asar   OK
+    testing: Mental Arithmetic.app/Contents/Resources/ar.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/bg.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/bn.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/ca.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/cs.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/da.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/de.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/el.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/electron.icns   OK
+    testing: Mental Arithmetic.app/Contents/Resources/en.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/en_GB.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/es.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/es_419.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/et.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/fa.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/fi.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/fil.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/fr.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/gu.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/he.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/hi.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/hr.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/hu.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/id.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/it.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/ja.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/kn.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/ko.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/LICENSE.electron.txt   OK
+    testing: Mental Arithmetic.app/Contents/Resources/LICENSES.chromium.html   OK
+    testing: Mental Arithmetic.app/Contents/Resources/lt.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/lv.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/ml.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/mr.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/ms.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/nb.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/nl.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/pl.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/pt_BR.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/pt_PT.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/ro.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/ru.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/sk.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/sl.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/sr.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/sv.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/sw.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/ta.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/te.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/th.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/tr.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/uk.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/ur.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/vi.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/zh_CN.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/Resources/zh_TW.lproj/   OK
+    testing: Mental Arithmetic.app/Contents/_CodeSignature/   OK
+    testing: Mental Arithmetic.app/Contents/_CodeSignature/CodeResources   OK
+No errors detected in compressed data of /Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.0-macOS-arm64.zip.

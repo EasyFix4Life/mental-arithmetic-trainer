@@ -1,0 +1,8 @@
+
+> mental-arithmetic-trainer@1.1.0 verify:windows
+> node scripts/verify-windows.mjs ../Mental-Arithmetic-1.1.0-Windows-x64.zip ../Mental-Arithmetic-1.1.0-Windows-x64-Setup.exe
+
+Windows 1.1.0: ZIP CRC, NSIS embedded payload, 7 x64 executable/DLL headers, 3 production frontend files and 2 shell files verified.
+All 72 ZIP files match the installer payload; 1 installer-only elevation helper(s) separately inspected.
+Windows 10/11 runtime execution was not performed by this verification.
+/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/verification/windows-artifacts.json

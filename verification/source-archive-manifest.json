@@ -1,0 +1,743 @@
+{
+  "version": "1.0.2",
+  "archive": "Mental-Arithmetic-1.0.2-all-platforms-source.zip",
+  "platforms": [
+    "browser",
+    "macOS arm64",
+    "Windows x64",
+    "Android universal API37"
+  ],
+  "privateSigningMaterialExcluded": true,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 199,
+      "sha256": "a1573fe70b7e4dafc5d124c67bed5f2047a43c8cef3db940cc5ddc41d3a95f98"
+    },
+    {
+      "path": "ANDROID_APP.md",
+      "bytes": 10124,
+      "sha256": "6afdde32d5f783600d5d9a71504aab9adf2e57b54586ec160859769faed9480c"
+    },
+    {
+      "path": "INSTRUCTIONAL_HANDOFF.md",
+      "bytes": 9437,
+      "sha256": "1ec9f69ee9f5c8170008d50057b4d3c9bd772e42e7684735ce54fab196bf9b86"
+    },
+    {
+      "path": "MACOS_APP.md",
+      "bytes": 4790,
+      "sha256": "e2c5016a0cd05d7596e12b076eeeb6440a1a73a1f3ed1975ece2b6dc1f2e5835"
+    },
+    {
+      "path": "README.md",
+      "bytes": 15588,
+      "sha256": "c50ab110bce440ecf955392cef78547a73fcc5cf05b74fc6a0f428f9d65c0d70"
+    },
+    {
+      "path": "WINDOWS_APP.md",
+      "bytes": 8821,
+      "sha256": "1f6525c82f96cb895e9633f781c3410641e72ffb4416af67cd5a358416a225cb"
+    },
+    {
+      "path": "desktop.playwright.config.ts",
+      "bytes": 451,
+      "sha256": "981e5f411811b7987a62f904b4b9b7cc4131050911d5b38f54d0ad51e493ec5e"
+    },
+    {
+      "path": "electron-builder.json",
+      "bytes": 587,
+      "sha256": "c4b9a664a9db84c2324e688f7d302ec58903e5b5d485e1e1f7a83b41baf153d3"
+    },
+    {
+      "path": "electron-builder.windows.json",
+      "bytes": 714,
+      "sha256": "0baf54b98051ca4e5d94299168181d7dd17e8950cd2e64eecffb3b9d11a66ac3"
+    },
+    {
+      "path": "index.html",
+      "bytes": 493,
+      "sha256": "608f1e0c589b129d056bbe36d2f44a34ad88432bec0383f6fb50a950de7a0355"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 174907,
+      "sha256": "2faef9bb67e1c9d108fe438433e830a9dbbb5e6c6b9aa256e94d3204575573a7"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1268,
+      "sha256": "e73a207501f337542c1d07aca016c692d8d5c6f67d6581e4f9b825d3fc4971ac"
+    },
+    {
+      "path": "playwright.config.ts",
+      "bytes": 797,
+      "sha256": "cb400f38e4dff29720154f245cccf59b9265501344286f6801f30e5c93385d0b"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 507,
+      "sha256": "aef3b6e43c6af198a7d72a56cfa1d83a1e3e4bb8944aa7879a81826b156d4064"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 255,
+      "sha256": "c5ad3d11e79d6d1852c5033d6f61412a99c6dde987b63f155199f273790916f1"
+    },
+    {
+      "path": "android/.gitignore",
+      "bytes": 67,
+      "sha256": "4b71a2f5b107646ffd932f62b9a9d2b29b2b1b2961141d46acbcf5e0f0bb825a"
+    },
+    {
+      "path": "android/build.gradle.kts",
+      "bytes": 74,
+      "sha256": "10ad2226ce187796b3ac67efe18af47d623a140f3ad1554134424a8365c4bd5a"
+    },
+    {
+      "path": "android/gradle.properties",
+      "bytes": 76,
+      "sha256": "f25cd99d5ffec7ec41afdc5f03ee0c4afa060457ecabfb9504a93b1bf7e19e14"
+    },
+    {
+      "path": "android/gradlew",
+      "bytes": 8654,
+      "sha256": "aed171fb114f82e6eaea4970a245a200e0582a7dcc8ec0891ca41b6e4a62b754"
+    },
+    {
+      "path": "android/gradlew.bat",
+      "bytes": 2896,
+      "sha256": "fedad02c18e266ec094995a5751b7fe1eb6e74f66bf75db64fae2e50eb22c234"
+    },
+    {
+      "path": "android/settings.gradle.kts",
+      "bytes": 336,
+      "sha256": "b7c72111d943383ed0e438bf6e3308372cc38a82b16c0eba8428cde7e6e3b253"
+    },
+    {
+      "path": "android/app/build.gradle.kts",
+      "bytes": 2438,
+      "sha256": "f5a8b19de7983351234263fa61ff7c1ee4dfc712f7750fd645eeb4d85a25299b"
+    },
+    {
+      "path": "android/app/src/androidTest/java/local/jeff/mentalarithmetic/AndroidTestRunner.java",
+      "bytes": 22924,
+      "sha256": "eabd76d151ed5aae3b5bd0051438e8d43dc008568658151e5c2c65a6909b15b5"
+    },
+    {
+      "path": "android/app/src/main/AndroidManifest.xml",
+      "bytes": 1119,
+      "sha256": "25b51c635b44f3b1b34187866e32a65731ad4c7727faad67bd579a56d6067216"
+    },
+    {
+      "path": "android/app/src/main/java/local/jeff/mentalarithmetic/AssetPathPolicy.java",
+      "bytes": 2764,
+      "sha256": "0575aaf0786f9e540a34b1a1eff4690eaa92db2f0cf1ea1575bcd1f925fc4fb7"
+    },
+    {
+      "path": "android/app/src/main/java/local/jeff/mentalarithmetic/MainActivity.java",
+      "bytes": 9647,
+      "sha256": "59f710b8a304af313f4ebbbee94180b306477573e26e3dedc36da6905df6cfbe"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/ic_arithmetic.xml",
+      "bytes": 463,
+      "sha256": "00b01b2bcb414c7208db0707c57a7b130d7eb4e7332f6196a2dcc8a4d2542abc"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "bytes": 244,
+      "sha256": "62d2336b909ff38c65209d90361cebec5247bdd5766b7e45e4ba88741672441a"
+    },
+    {
+      "path": "android/app/src/main/res/values/colors.xml",
+      "bytes": 142,
+      "sha256": "5c8d27ced47918c50c5af4165aea1b5100941422cf15ba28d97f768c465d47d6"
+    },
+    {
+      "path": "android/app/src/main/res/values/strings.xml",
+      "bytes": 258,
+      "sha256": "5062752393818f42a5288673355154479589b4e18ef7f76f0b4747a5833cdf23"
+    },
+    {
+      "path": "android/app/src/main/res/values/styles.xml",
+      "bytes": 625,
+      "sha256": "9fe519bf75e9dd37b20d439e684f55cb65f3bf02c30c5e0590b5e116688befb4"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.jar",
+      "bytes": 48966,
+      "sha256": "55243ef57851f12b070ad14f7f5bb8302daceeebc5bce5ece5fa6edb23e1145c"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.properties",
+      "bytes": 339,
+      "sha256": "13287ffad6cf3064056ddad80d95b855132348930b2dc6c91490588c55b3ac7d"
+    },
+    {
+      "path": "android/tests/AssetPathPolicyTest.java",
+      "bytes": 3528,
+      "sha256": "9337f1acd09bf673e1eb9a2a577f07e1f1fc0fa20d27d895113281caa14a2dde"
+    },
+    {
+      "path": "desktop/main.cjs",
+      "bytes": 6088,
+      "sha256": "70ef65772f8f6390212190299348873b24b7b390a559049dd3a129c78ba301cb"
+    },
+    {
+      "path": "desktop/security.cjs",
+      "bytes": 1839,
+      "sha256": "df896d0e2c572d4d1a3b5f0a46df5c910d9f6c2183cf67bddb7f5c2c5abf06a0"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 594,
+      "sha256": "59b82b40b6a1e783c5845f37c16ca57500c948004ab1400c934224c72bac1064"
+    },
+    {
+      "path": "dist/assets/index-ChcLWFDu.js",
+      "bytes": 29814,
+      "sha256": "e5ffefe70ca6d5b2dc45b0dd7c7f7d271936a604552b9cfcf6efb2ce10c207a2"
+    },
+    {
+      "path": "dist/assets/index-wX7fx-YQ.css",
+      "bytes": 6450,
+      "sha256": "cc6cc3411422cf2c0c0c8fd3a9b0658b9b5b5013c0443b77e564642b4dbdfc57"
+    },
+    {
+      "path": "requirements/CODEX_START_HERE.md",
+      "bytes": 5431,
+      "sha256": "579d70b0de8e1af2096d273df29d295c839bccf5319a6c50d39298b453bdf3b9"
+    },
+    {
+      "path": "requirements/EXAMPLES_AND_EDGE_CASES.json",
+      "bytes": 9626,
+      "sha256": "859f00b3d1b50c2771fd33ff75989e16a294c087ee82e87ab7edef1d80b04a15"
+    },
+    {
+      "path": "requirements/PRACTICE_TIMING_UPDATE_2026-10-24.json",
+      "bytes": 871,
+      "sha256": "e8580148f461dc8ccd41f0b88690c0173d4e64a2900132701aa27a971af84eb6"
+    },
+    {
+      "path": "requirements/PRODUCT_SPEC.md",
+      "bytes": 10984,
+      "sha256": "44b308a200101be30fc2adaa77d468a3e6430749a7536f29814a683ea83337fd"
+    },
+    {
+      "path": "requirements/QA_CHECKLIST.md",
+      "bytes": 4290,
+      "sha256": "fa0df05581610e973c3013315faab5206717ca28fa7343d668baa9d8a5c2f861"
+    },
+    {
+      "path": "requirements/instruction/CODEX_INSTRUCTIONAL_HANDOFF.md",
+      "bytes": 10605,
+      "sha256": "2abb2e3ccb2a36555b2914fd612054d81aefd158e90ae8bb55842d6f280aba10"
+    },
+    {
+      "path": "requirements/instruction/EXAMPLES_AND_EDGE_CASES.json",
+      "bytes": 9626,
+      "sha256": "859f00b3d1b50c2771fd33ff75989e16a294c087ee82e87ab7edef1d80b04a15"
+    },
+    {
+      "path": "requirements/instruction/INSTRUCTIONAL_LESSON_DATA_as_text.txt",
+      "bytes": 2560,
+      "sha256": "986c9bbbe488a83db37da16bb6d536c39cf3c88d4e6b635b1eccae69fde8e120"
+    },
+    {
+      "path": "requirements/instruction/LEARN_RANDOM_EXAMPLES_2026-10-24.json",
+      "bytes": 2039,
+      "sha256": "15f912cf5aabecd4bf3e7b91210340958027ce0ae5b409e59a089e7e6a698f0e"
+    },
+    {
+      "path": "requirements/instruction/Mental_Arithmetic_Instructional_Lessons_Codex_2026-10-24.json",
+      "bytes": 3021,
+      "sha256": "7766b177e3c046cdf7ebf507a67674e94c53896833afb5dfaa46555c8500edd3"
+    },
+    {
+      "path": "requirements/instruction/OWNER_CONFIRMED_MULTIPLICATION_2026-10-24.json",
+      "bytes": 5434,
+      "sha256": "929811c266726924a77efb6831d9abfb37006d8dc4b7eca9abef0fdf4efa578b"
+    },
+    {
+      "path": "scripts/build-android.mjs",
+      "bytes": 7306,
+      "sha256": "5e679cbb45df676e0d56396e2301278e785e762ee29789f90b1f7230405bcf5b"
+    },
+    {
+      "path": "scripts/build-mac.mjs",
+      "bytes": 2060,
+      "sha256": "f018c19376e547c14187b7caf6f338cea355eed21c5015984c4a5cd39c2574e7"
+    },
+    {
+      "path": "scripts/build-windows.mjs",
+      "bytes": 1959,
+      "sha256": "5bfee966006c5a2494fd6dbdb043d8048ca115073f66e975362d86864011daee"
+    },
+    {
+      "path": "scripts/verify-android.mjs",
+      "bytes": 10339,
+      "sha256": "c1a271c86c765ff0b4b5ba99da526343ff3238f3699e6f9627910118b89a0c97"
+    },
+    {
+      "path": "scripts/verify-windows.mjs",
+      "bytes": 11863,
+      "sha256": "5a9491f8f713168dac2ffff55958ef9219483c974f1c8eb62ef9e10f12bb0a35"
+    },
+    {
+      "path": "src/answerPolicy.ts",
+      "bytes": 894,
+      "sha256": "9a98d597b0f7baa7264b387f52ef8a1f5e80892e5c69446d2dda602f77dd89c1"
+    },
+    {
+      "path": "src/generateRound.ts",
+      "bytes": 2719,
+      "sha256": "7b8b13e15b58e870f27468e538181423c1fa38f73bd5cceb66eb17a3ca8a52cf"
+    },
+    {
+      "path": "src/inputPolicy.ts",
+      "bytes": 943,
+      "sha256": "1c46093bcaf0345926a460bcf7663bc985d1f77ba1b0b0049cd5046428dda8e8"
+    },
+    {
+      "path": "src/main.ts",
+      "bytes": 270,
+      "sha256": "eb250b194549d99b38a784f342f313edbab1ea8ed14a2f1436354d1c8dd03a24"
+    },
+    {
+      "path": "src/practiceView.ts",
+      "bytes": 9277,
+      "sha256": "9e660e34f4816dfb07813409cc9148162f30f1fe7c59ddc16019697a5597f387"
+    },
+    {
+      "path": "src/roundController.ts",
+      "bytes": 5079,
+      "sha256": "41fd72137b7797dc0e444c5f6ecc8fd2c025a590bca3669d824cd07fdb594dfe"
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 7618,
+      "sha256": "401c12715659a15ca531d7a9d7328cd65787172fc40fc53a05cb5d6f9d76cdc3"
+    },
+    {
+      "path": "src/timer.ts",
+      "bytes": 606,
+      "sha256": "bfaeaa1c0497565f6d3ceeba0064d903f4559d5b70cb192f86556bb79e0d4b04"
+    },
+    {
+      "path": "src/types.ts",
+      "bytes": 1089,
+      "sha256": "f458432070b282817ece06654683477a9dfefee0201f64fd6f53cd14f2976b21"
+    },
+    {
+      "path": "src/view.ts",
+      "bytes": 2240,
+      "sha256": "8642a039fae10bb7a352d46d90af8b008af793d4bd6f5da349acfcd636976bb5"
+    },
+    {
+      "path": "src/learn/carryVisualizer.ts",
+      "bytes": 1128,
+      "sha256": "0458b1ec0abb951e02dfeb75a45c0270734666b0d3cef5734f7d9c89a857a90e"
+    },
+    {
+      "path": "src/learn/confirmedMultiplicationExamples.ts",
+      "bytes": 3978,
+      "sha256": "6a12ecbe7580f493cb236d3cbb0eed98c1aa62f96d463777489a6ce79a5f60ba"
+    },
+    {
+      "path": "src/learn/instructionStepRenderer.ts",
+      "bytes": 5499,
+      "sha256": "e789b756e904a59f7c27fe99057b95dd9c1f4415850c36e3b8e202555c4a92a4"
+    },
+    {
+      "path": "src/learn/learnView.ts",
+      "bytes": 12408,
+      "sha256": "27c7cb514727800602b5d93c5547739ae3a588d39310380ac9281a6f9e80551d"
+    },
+    {
+      "path": "src/learn/lessonCatalog.ts",
+      "bytes": 2617,
+      "sha256": "d0c84998e28babd7fb97a6948d3b4a15ccb338c87c87aea267731ca0a61c2d50"
+    },
+    {
+      "path": "src/learn/lessonTypes.ts",
+      "bytes": 2125,
+      "sha256": "5b4201da7fe5f1ffa91f457c53c86b488179ae03d44f0d74d5181adda369eefc"
+    },
+    {
+      "path": "src/learn/randomExample.ts",
+      "bytes": 6890,
+      "sha256": "789e5e18a2a0e60cdd3bf7ca287880864135967584937e5acd81ae82a2e83f5d"
+    },
+    {
+      "path": "tests/browser/learn.spec.ts",
+      "bytes": 35727,
+      "sha256": "154f4b8dcb919994db450fb281293bd79651c7b15f6ef9c4c392e5da84bdbef1"
+    },
+    {
+      "path": "tests/browser/trainer.spec.ts",
+      "bytes": 17832,
+      "sha256": "fb67c1e208a8524018c96429a307c990fa9a16723ab6a5bc7a7518d57ce17e16"
+    },
+    {
+      "path": "tests/desktop/app.spec.ts",
+      "bytes": 21239,
+      "sha256": "a1352d872f3e3bbbb40210015dfcd854ebb29d182928f5a46eb25daa3d317013"
+    },
+    {
+      "path": "tests/unit/answerPolicy.test.ts",
+      "bytes": 2601,
+      "sha256": "801639d8fc6a372e4ccbfa5b79711b5b355bdf5547f19adcae23816b440a96d7"
+    },
+    {
+      "path": "tests/unit/generateRound.test.ts",
+      "bytes": 3374,
+      "sha256": "259a7249b786af942bbb6dad7e704a532b83c32f2c4e7656bfb24f7017697164"
+    },
+    {
+      "path": "tests/unit/lessons.test.ts",
+      "bytes": 5803,
+      "sha256": "7cb0004b6234fef9b9815fb059638b24d5b3c4a6d04b1df35b0a0e856cc7263b"
+    },
+    {
+      "path": "tests/unit/randomExample.test.ts",
+      "bytes": 7692,
+      "sha256": "20a941f1a2be8cf5b60914ae2a0e2649337cc57420a2f3678747e3dbc99d3b68"
+    },
+    {
+      "path": "tests/unit/requirements.ts",
+      "bytes": 1330,
+      "sha256": "228ca3c0e2297f72e6ba974463c3a2e33ee005d2f1040b6e81a633dacf998da9"
+    },
+    {
+      "path": "tests/unit/roundController.test.ts",
+      "bytes": 7348,
+      "sha256": "868363cc4696ac4182ff678e36b524ade46fa3e07a6eea8153a4b764a4920444"
+    },
+    {
+      "path": "tests/unit/roundTiming.test.ts",
+      "bytes": 5597,
+      "sha256": "30470d873bc7d4ac85167358b39f0de725bcf79f5b4d067bad993560da7f1df4"
+    },
+    {
+      "path": "tests/unit/timer.test.ts",
+      "bytes": 1655,
+      "sha256": "3d5098d8f768b5ca649cef00f657fbbfd939f6a4be1e1f2d095c1204c0df6f7f"
+    },
+    {
+      "path": "verification/ANDROID_TEST_RESULTS.md",
+      "bytes": 10814,
+      "sha256": "f053ee1102714f17446e7b1db9b853d0a212fe8bf30e8821e8de25323cda8252"
+    },
+    {
+      "path": "verification/MACOS_TEST_RESULTS.md",
+      "bytes": 10736,
+      "sha256": "dac9b169db106fef13329424007e102f1c73e6294daf2a749807f85a0c4f761b"
+    },
+    {
+      "path": "verification/PRACTICE_V1_TEST_RESULTS.md",
+      "bytes": 5651,
+      "sha256": "5ef0a3a8dd59df24b47ee3dc4107997cd91a39d51760ce7104df6501961afa64"
+    },
+    {
+      "path": "verification/TEST_RESULTS.md",
+      "bytes": 12497,
+      "sha256": "ba4d64ac51a65662ab2ec23ca1d999c19a5443fc5c638141cb9fc32f0f7b494a"
+    },
+    {
+      "path": "verification/WINDOWS_TEST_RESULTS.md",
+      "bytes": 5935,
+      "sha256": "00021ba0a44f1cceb7bcb20683cf725140d8f9d610af979a4d72561b205cd36e"
+    },
+    {
+      "path": "verification/android-artifacts.json",
+      "bytes": 1968,
+      "sha256": "0d1dd12f069636f5a8a0de92c482eeef46fa675bce5a260363edca0b96694cee"
+    },
+    {
+      "path": "verification/android-build-location.json",
+      "bytes": 1447,
+      "sha256": "38af3c1dda03fc31a0da8f7e7629666201043d23a03824fa09666dc656ad4647"
+    },
+    {
+      "path": "verification/android-build.txt",
+      "bytes": 6042,
+      "sha256": "cfc62e033f99c59834fbbdf5d6a558f86ecd33cf8e0d9c69937f8a97723eec8b"
+    },
+    {
+      "path": "verification/android-cross-platform-integrity.json",
+      "bytes": 637,
+      "sha256": "11c23915e253e840f4e9201450d8756fa0e109ca6c4d7a289a746b96eadc9fea"
+    },
+    {
+      "path": "verification/android-instrumentation.txt",
+      "bytes": 448,
+      "sha256": "e9f6c01927dd8eec0404387db8114ac13e21b7df840e931ac66a5a166b28626b"
+    },
+    {
+      "path": "verification/android-lint-results.html",
+      "bytes": 61533,
+      "sha256": "0589c9c8de167ff86cecd2a3a455239ff4f832cf85f81ca5f9f4d5b68c424ef5"
+    },
+    {
+      "path": "verification/android-lint-results.txt",
+      "bytes": 5265,
+      "sha256": "627a0b287f70375b5824bb8d6d931d5a7790aaf5213a969eb4c6abd089429039"
+    },
+    {
+      "path": "verification/android-lint-results.xml",
+      "bytes": 6650,
+      "sha256": "900c3f90ab9c4a8627f89b8f3f0a3a6db7eedd24ce4fc5474d8ddcce4347b601"
+    },
+    {
+      "path": "verification/android-package-verification.txt",
+      "bytes": 3755,
+      "sha256": "e1b0b193c572e68102e8f5e13f3ba693208299596e8c8efe0bbf98d878b25722"
+    },
+    {
+      "path": "verification/android-rebuild-tests.txt",
+      "bytes": 5724,
+      "sha256": "9c3b8d3d652c0104fd3450d9d12b3e64269a1b43d2b3ca72c96a762dc2c6bb53"
+    },
+    {
+      "path": "verification/android-runtime-environment.json",
+      "bytes": 1381,
+      "sha256": "191ac6e814baec3f47135ec91c98e54be093447464f473006c59de157c1ed4c2"
+    },
+    {
+      "path": "verification/browser-results.json",
+      "bytes": 60660,
+      "sha256": "2db3217c5418d70d7d2c45552e94e8d9c973870768dc7df74bcb82ebe3a84c9e"
+    },
+    {
+      "path": "verification/build.txt",
+      "bytes": 478,
+      "sha256": "54ad67519014064075f63c7006d6e50ca9ade72153bdb6a8b731a5cf1b23661a"
+    },
+    {
+      "path": "verification/cross-platform-frontend-integrity.json",
+      "bytes": 1035,
+      "sha256": "ef8af361123e84d8ce3adf165107ae577306e18afa6289909097994bba51c164"
+    },
+    {
+      "path": "verification/desktop-active.png",
+      "bytes": 15598,
+      "sha256": "2f3cf1fe86b8b29396028ef6a9b60c2f2b19c75e5f802d628f4b89404536e36a"
+    },
+    {
+      "path": "verification/desktop-app-learn-random.png",
+      "bytes": 141632,
+      "sha256": "7d000cc3a15a75802411732a8b90aecdd08294cb0d321b7a550dd5598bf468fe"
+    },
+    {
+      "path": "verification/desktop-app-round-timing.png",
+      "bytes": 69440,
+      "sha256": "d57f1ec2f491f759ce69f3ef756b0771a60c3c478d8cd21f7a1cfedfe615bf97"
+    },
+    {
+      "path": "verification/desktop-app.png",
+      "bytes": 137767,
+      "sha256": "fee2b4286314c8c7b57791ccf1389dfbfac1164c86612d169f8960d1d5f26860"
+    },
+    {
+      "path": "verification/desktop-build-location.json",
+      "bytes": 943,
+      "sha256": "681521e9d22e7ee7d2e83e117b9c181d178e24037b9a5f3bcab6b26cdf53ba79"
+    },
+    {
+      "path": "verification/desktop-learn-confirmed.png",
+      "bytes": 63250,
+      "sha256": "f9c67318afa9a9f280fea3cbb66dfa0afbb3c40d769c88c9384b991f04bf34fb"
+    },
+    {
+      "path": "verification/desktop-learn-random-carry.png",
+      "bytes": 95398,
+      "sha256": "dc5ed2136cefbbe4a4ab97c53ae5d08f26bfb281e5bb0c53fada3d0b17ab0064"
+    },
+    {
+      "path": "verification/desktop-learn-random.png",
+      "bytes": 66065,
+      "sha256": "10a99d4573f0658894272e4dc9478a24b778362ac68fc361dd5573eb1c2e2ec5"
+    },
+    {
+      "path": "verification/desktop-learn.png",
+      "bytes": 86023,
+      "sha256": "e78e7c1c05cb9f03a91097c6fbbc6efc0aedfa43ee575c824ef2065f8ffbb639"
+    },
+    {
+      "path": "verification/desktop-practice-app.png",
+      "bytes": 40497,
+      "sha256": "bf362fcb538c025265372df68c2aafd9ceecdcd56eb65fcdb2a8b336cf5f3739"
+    },
+    {
+      "path": "verification/desktop-results.json",
+      "bytes": 8783,
+      "sha256": "c1a13d6fb2c230e989916e660ded42456d79d0ff80e861faf3e185645acfd212"
+    },
+    {
+      "path": "verification/desktop-round-timing.png",
+      "bytes": 27707,
+      "sha256": "13d12dc0d14642e3f7b8530495a49f74d78ee9e5583242883e7df6c1a210393d"
+    },
+    {
+      "path": "verification/desktop-web-source-before-timing.json",
+      "bytes": 2036,
+      "sha256": "b7641d677f9b70b09d3026b3abafaa109fcb7d2235c345596e912c2615de0874"
+    },
+    {
+      "path": "verification/desktop-web-source-integrity.json",
+      "bytes": 2576,
+      "sha256": "627d34032fda923b23f4e92bd3bb7958c1caf81ab9fd2740145723c15a97a22b"
+    },
+    {
+      "path": "verification/instruction-source-integrity.json",
+      "bytes": 823,
+      "sha256": "950b9ae9b0c782a38bc3571c80c223bc30b0864966e7542deb15e6a155f8c0c9"
+    },
+    {
+      "path": "verification/macos-artifacts.json",
+      "bytes": 802,
+      "sha256": "03a7ade302d26f3737b9363aa910180d0619dc3379ce0e8a67f57c0ed53705f4"
+    },
+    {
+      "path": "verification/macos-build-dir.txt",
+      "bytes": 6595,
+      "sha256": "16fd91dd918aa695fd89a88f2865891ee3a014ccc2e8b8211e259a5b286bb94a"
+    },
+    {
+      "path": "verification/macos-build.txt",
+      "bytes": 4424,
+      "sha256": "ddb877212d80e7391c0dda8374d5d8fa209f14cc890db22f51cf5e9cfa8a4499"
+    },
+    {
+      "path": "verification/macos-dmg-integrity.txt",
+      "bytes": 1022,
+      "sha256": "c79a7047be28734ec120bfcbefd0028f559e88799d3c953ed9f418fee16f6de4"
+    },
+    {
+      "path": "verification/macos-frontend-integrity.json",
+      "bytes": 624,
+      "sha256": "f5173d595dda61098068fcfec973445f675e6897b91b952efc52be4db0e4a9bc"
+    },
+    {
+      "path": "verification/macos-ready-random.png",
+      "bytes": 182107,
+      "sha256": "89442895aa0abcfdbc9d29bdfb601d6508d52846352d177e9be8fc2ee15f3d2c"
+    },
+    {
+      "path": "verification/macos-ready-window.png",
+      "bytes": 115018,
+      "sha256": "cc701111c1f07271930b92f92414189538a54646675ea73f8b0e103a77383496"
+    },
+    {
+      "path": "verification/macos-review-location.json",
+      "bytes": 421,
+      "sha256": "0b1bc7a4c3d49f1952da7a9676312e4c438bd426e01dd94cc0824766a44bf072"
+    },
+    {
+      "path": "verification/macos-signature.txt",
+      "bytes": 4149,
+      "sha256": "a7e0fb603d051d88339fd335d34a3fe1aa5431443418701927106eed4bd90f80"
+    },
+    {
+      "path": "verification/macos-zip-integrity.txt",
+      "bytes": 73016,
+      "sha256": "595a54300d42e7334eb7f742daa5c7f48f567234beda65601dc3097725951e19"
+    },
+    {
+      "path": "verification/mobile-active.png",
+      "bytes": 30248,
+      "sha256": "2a131e2d45dc6056dd7faa91268fd686a5c7549689f9ea288e9da6e7b94738df"
+    },
+    {
+      "path": "verification/mobile-learn-confirmed.png",
+      "bytes": 178804,
+      "sha256": "dece8db45368d48ebce8e00a25a86e24d57b691bf9a8aac64147e8038bb7aa58"
+    },
+    {
+      "path": "verification/mobile-learn-random-carry.png",
+      "bytes": 265913,
+      "sha256": "33ae80beea3122447d3bd26c1f70b8ebb1f8f34ce81a95adc2f22dccd1b329fd"
+    },
+    {
+      "path": "verification/mobile-learn-random.png",
+      "bytes": 187308,
+      "sha256": "731960221b623ac9c00f7adfc0c0f0b4c8363b784ef52c7e93e81d55391ea007"
+    },
+    {
+      "path": "verification/mobile-learn.png",
+      "bytes": 269470,
+      "sha256": "d9f1f99c28f9b273d39ff6cdd3beb9570b00ca2fd0ffdc6e7356f640b031c9ed"
+    },
+    {
+      "path": "verification/mobile-round-timing.png",
+      "bytes": 72443,
+      "sha256": "ed5e5cf637042bed0f63084492689058abccd51bb528c2af4e72fe0376bcb721"
+    },
+    {
+      "path": "verification/practice-preservation-before-timing.json",
+      "bytes": 982,
+      "sha256": "d54f094d86a1bb8cffb3e628c0a9b5cce10720d4b86c925ae7195c5fffc67d60"
+    },
+    {
+      "path": "verification/practice-preservation.json",
+      "bytes": 1678,
+      "sha256": "f84fafeb5c6bfff7f0023b12cf160d846cabbba548beac218dab23cf27a22e07"
+    },
+    {
+      "path": "verification/requirements-integrity.json",
+      "bytes": 708,
+      "sha256": "1af5a54aa168b8a8d61f0f325d996cc30faaea453926cb95631d95c1a21b2d60"
+    },
+    {
+      "path": "verification/unit-results.json",
+      "bytes": 67799,
+      "sha256": "a9c58b1442ba9fabba04f5396a66d3fe9cebec4d7934911601b441543f96373c"
+    },
+    {
+      "path": "verification/windows-archive-integrity.txt",
+      "bytes": 2113,
+      "sha256": "4b1d6fbaeed1d4735ea6de35d4ca14e56816947dae1ccdc07de088a4c8bde6ab"
+    },
+    {
+      "path": "verification/windows-artifacts.json",
+      "bytes": 17757,
+      "sha256": "f58485f720ad96c80a945043242918dd6c46a9faad16a92d10a920791007557f"
+    },
+    {
+      "path": "verification/windows-build-location.json",
+      "bytes": 945,
+      "sha256": "4bda950465f6bd728babfdf5d69fb76fa5b1bae295771190e546e4220222c5a2"
+    },
+    {
+      "path": "verification/windows-build.txt",
+      "bytes": 4863,
+      "sha256": "8d7173334c654c21b9cb2ac5a43c7fd2aa29b8485f30b0010007dacd0260bdbe"
+    },
+    {
+      "path": "verification/android-runtime/android-learn-confirmed.png",
+      "bytes": 138859,
+      "sha256": "81b01966e7d02db7bb623835e78a76e33974a287b79f2324917b27a95ec69bdc"
+    },
+    {
+      "path": "verification/android-runtime/android-practice-keyboard.png",
+      "bytes": 84188,
+      "sha256": "f8dab396fe78b4d78edc07710bf345fbb0a4328c033d2502b9db727baa66c357"
+    },
+    {
+      "path": "verification/android-runtime/android-round-timing.png",
+      "bytes": 76875,
+      "sha256": "2caf0e14ee98e79dfc8a8c59e62071daa19719e7da7898b3f7e90b2fcfb68348"
+    },
+    {
+      "path": "verification/android-runtime/android-runtime-results.json",
+      "bytes": 2601,
+      "sha256": "7a337ae0662aedbaabcda3fc6a097099328e64dad33694100d4cef9e005b0042"
+    },
+    {
+      "path": "verification/android-runtime/android-setup.png",
+      "bytes": 55733,
+      "sha256": "eb7263e35b1e969398e2a04fbe5f6030dccfa378c8b322bd56b3872d2e6c71e9"
+    }
+  ]
+}

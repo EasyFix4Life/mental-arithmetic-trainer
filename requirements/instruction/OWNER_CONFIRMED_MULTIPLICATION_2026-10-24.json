@@ -1,0 +1,148 @@
+{
+  "record_type": "owner_confirmed_instructional_examples",
+  "recorded_date": "2026-10-24",
+  "scope": "Two explicitly supplied two-digit multiplication worked examples. This record does not authorize inferring a general lesson script for every operand pair.",
+  "source_utterances": [
+    {
+      "id": "owner-12-original",
+      "speaker": "user",
+      "text": "12x12\n1x1=1\n1x2 + 2x1=2\n2x2=4\nProduct=144",
+      "status": "Original preserved verbatim; the middle sum is corrected by the subsequent explicit confirmation."
+    },
+    {
+      "id": "assistant-12-clarification",
+      "speaker": "assistant",
+      "text": "**12 × 12 = 144** gives us a worked example without carrying.\n\nThere’s one arithmetic correction in the middle line: **1 × 2 + 2 × 1 = 4**. Each individual product is **2**.\n\nI’m reading your intended sequence as:\n\n| Stage | Digits used | Calculation |\n|---|---|---|\n| **First** | First digit of each number | 1 × 1 = **1** |\n| **Inside** | Left number’s first digit × right number’s last digit | 1 × 2 = **2** |\n| **Outside** | Left number’s last digit × right number’s first digit | 2 × 1 = **2**; combine the two products: 2 + 2 = **4** |\n| **Last** | Last digit of each number | 2 × 2 = **4** |\n\nThe three answer portions, read left to right, are **1 → 4 → 4**.\n\n**Is that your intended reading—including which digit pair you call Inside and which you call Outside?** Once that is confirmed, the next example can establish how carrying works.",
+      "status": "Clarification explicitly confirmed by the next user utterance."
+    },
+    {
+      "id": "owner-12-confirmation",
+      "speaker": "user",
+      "text": "YES",
+      "confirms": "assistant-12-clarification"
+    },
+    {
+      "id": "owner-18-carrying",
+      "speaker": "user",
+      "text": "18x18: First 1x1=1. Inside 1x8=8. Outside 8x1=8; 8+8=16. Last 8x8=64. Write 4, carry 6 to 16, making 22. Write 2, carry 2 to the first 1, making 3. Product=324.",
+      "status": "Owner-supplied complete worked example, including both carry destinations."
+    }
+  ],
+  "confirmed_digit_mapping": {
+    "digit_indexing": "Zero-based character positions from left to right in each horizontal operand.",
+    "First": [
+      "left:0",
+      "right:0"
+    ],
+    "Inside": [
+      "left:0",
+      "right:1"
+    ],
+    "Outside": [
+      "left:1",
+      "right:0"
+    ],
+    "Last": [
+      "left:1",
+      "right:1"
+    ],
+    "middle_combination": "Add the Inside and Outside products after calculating Outside."
+  },
+  "examples": [
+    {
+      "id": "12-times-12",
+      "operands": [
+        "12",
+        "12"
+      ],
+      "product": "144",
+      "source_ids": [
+        "owner-12-original",
+        "assistant-12-clarification",
+        "owner-12-confirmation"
+      ],
+      "confirmed_trace": [
+        {
+          "stage": "First",
+          "calculation": "1 × 1 = 1"
+        },
+        {
+          "stage": "Inside",
+          "calculation": "1 × 2 = 2"
+        },
+        {
+          "stage": "Outside",
+          "calculation": "2 × 1 = 2; 2 + 2 = 4"
+        },
+        {
+          "stage": "Last",
+          "calculation": "2 × 2 = 4"
+        }
+      ],
+      "correction_record": {
+        "original_claim": "1x2 + 2x1=2",
+        "confirmed_correction": "1 × 2 + 2 × 1 = 4; each individual product is 2.",
+        "confirmation_source_id": "owner-12-confirmation"
+      }
+    },
+    {
+      "id": "18-times-18",
+      "operands": [
+        "18",
+        "18"
+      ],
+      "product": "324",
+      "source_ids": [
+        "owner-18-carrying"
+      ],
+      "confirmed_trace": [
+        {
+          "stage": "First",
+          "calculation": "1 × 1 = 1"
+        },
+        {
+          "stage": "Inside",
+          "calculation": "1 × 8 = 8"
+        },
+        {
+          "stage": "Outside",
+          "calculation": "8 × 1 = 8; 8 + 8 = 16"
+        },
+        {
+          "stage": "Last",
+          "calculation": "8 × 8 = 64",
+          "write": "4",
+          "carry": "6",
+          "carry_destination": "Inside + Outside result 16"
+        },
+        {
+          "stage": "Last",
+          "step_label": "Carry to the middle",
+          "calculation": "16 + 6 = 22",
+          "write": "2",
+          "carry": "2",
+          "carry_destination": "First result 1"
+        },
+        {
+          "stage": "Last",
+          "step_label": "Complete the answer",
+          "calculation": "1 + 2 = 3",
+          "product": "324"
+        }
+      ],
+      "presentation_note": "The two carry-resolution screens remain within Last. They introduce no additional named multiplication stage. No answer digit is marked final until the user reaches the write-4 step."
+    }
+  ],
+  "remaining_boundaries": [
+    "The owner has supplied these two examples; no four-digit product worked example has been supplied in this exchange.",
+    "The first three lessons retain their own unresolved authored content.",
+    "Original supplied instructional files remain unchanged."
+  ],
+  "presentation_updates": [
+    {
+      "speaker": "user",
+      "request": "Include the final answer in the list of instructinos following the [LAST] instruction.",
+      "implementation": "A separate Final answer item displaying the product follows Last. It opens the full equation and follows the calculation/carry screens in Next/Back navigation. The four multiplication stage names are unchanged."
+    }
+  ]
+}

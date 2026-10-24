@@ -1,0 +1,43 @@
+{
+  "status": "draft-verify-before-submission",
+  "appPrivacy": {
+    "developerOrThirdPartyCollectsAppData": false,
+    "proposedAnswer": "No, we do not collect data from this app",
+    "tracking": false,
+    "advertising": false,
+    "analyticsSDKs": [],
+    "accounts": false,
+    "localProcessing": ["entered arithmetic answers", "correctness", "per-answer elapsed durations", "current lesson and example"],
+    "persistence": "In-memory current-process state only; no persistent practice history",
+    "publicPrivacyPolicyURL": null,
+    "recheckFinalBinaryRequired": true
+  },
+  "ageRating": {
+    "finalAppleRating": null,
+    "questionnaireMustBeCompletedInAppStoreConnect": true,
+    "contentObserved": "Arithmetic expressions, numerals, instructional text, and elapsed times",
+    "violence": false,
+    "sexualContent": false,
+    "profanity": false,
+    "gambling": false,
+    "medicalTreatment": false,
+    "userGeneratedContent": false,
+    "messagingOrChat": false,
+    "unrestrictedWebAccess": false,
+    "purchases": false,
+    "kidsCategory": "Not selected; requires an explicit owner decision and category-specific review"
+  },
+  "accessibility": {
+    "publicClaims": [],
+    "reason": "Do not claim Apple Accessibility Nutrition Labels without completing the relevant evaluation on final content and devices"
+  },
+  "encryption": {
+    "customCryptography": false,
+    "appNetworkConnections": false,
+    "exportQuestionnaireFinalization": "Recheck against the final signed binary in App Store Connect"
+  },
+  "sourcesChecked": [
+    "https://developer.apple.com/help/app-store-connect/manage-app-information/manage-app-privacy/",
+    "https://developer.apple.com/app-store/review/guidelines/"
+  ]
+}

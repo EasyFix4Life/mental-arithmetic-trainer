@@ -1,0 +1,37 @@
+{
+  "name": "mental-arithmetic-trainer",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "main": "desktop/main.cjs",
+  "description": "Mental arithmetic lessons and ten-problem practice for desktop and browser.",
+  "author": "Jeff",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:browser": "playwright test",
+    "build": "npm run typecheck && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "desktop": "npm run build && electron .",
+    "test:desktop": "playwright test --config desktop.playwright.config.ts",
+    "build:mac:dir": "npm run build && node scripts/build-mac.mjs --dir",
+    "build:mac": "npm run build && node scripts/build-mac.mjs",
+    "build:windows": "npm run build && node scripts/build-windows.mjs",
+    "verify:windows": "node scripts/verify-windows.mjs",
+    "build:android": "npm run build && node scripts/build-android.mjs",
+    "verify:android": "node scripts/verify-android.mjs",
+    "build:ios": "node scripts/build-ios.mjs",
+    "build:ios:simulator": "node scripts/build-ios.mjs --simulator"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@types/node": "^26.0.0",
+    "electron": "45.0.0",
+    "electron-builder": "26.18.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
+  }
+}

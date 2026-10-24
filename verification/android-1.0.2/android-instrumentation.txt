@@ -1,0 +1,9 @@
+PASS offline release shell, presentation and browser security
+PASS all four random lesson categories and pending original scripts
+PASS random two-digit trace, confirmed carries and final answer
+PASS native numeric keyboard, visible answer and rotation preservation
+PASS ten accepted answers, wrong feedback and exact timing summary
+PASS all six operation and operand-length practice configurations
+
+Android release acceptance: 6 passed, 0 failed.
+

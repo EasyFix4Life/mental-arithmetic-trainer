@@ -1,0 +1,49 @@
+
+> mental-arithmetic-trainer@1.0.0 build:mac:dir
+> npm run build && electron-builder --config electron-builder.json --mac dir --arm64
+
+
+> mental-arithmetic-trainer@1.0.0 build
+> npm run typecheck && vite build
+
+
+> mental-arithmetic-trainer@1.0.0 typecheck
+> tsc --noEmit
+
+vite v8.3.5 building client environment for production...
+transforming...
+✓ 19 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                  0.59 kB │ gzip: 0.35 kB
+dist/assets/index-D2MhKcB1.css   6.06 kB │ gzip: 1.93 kB
+dist/assets/index-7lywILj6.js   25.08 kB │ gzip: 8.06 kB
+
+✓ built in 34ms
+  • electron-builder  version=26.18.0 os=27.2.0
+  • loaded configuration  file=/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/electron-builder.json
+  • skipped dependencies rebuild  reason=npmRebuild is set to false
+  • packaging       platform=darwin arch=arm64 electron=45.0.0 appOutDir=release/mac-arm64
+  • downloaded      label=electron progress=100%
+  • downloaded electron zip extracted successfully  output=/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/mac-arm64
+  • searching for node modules  pm=npm searchDir=/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer
+  • no node modules found in collection, trying next search directory  pm=npm searchDir=/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer
+  • searching for node modules  pm=traversal searchDir=/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer
+  • using manual traversal of node_modules to build dependency tree
+  • no node modules found in collection, trying next search directory  pm=traversal searchDir=/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer
+  • no node modules returned while searching directories  searchDirectories=[""]
+  • default Electron icon is used  reason=application icon is not set
+  • ad-hoc signing with hardenedRuntime enabled requires the com.apple.security.cs.disable-library-validation entitlement to prevent app launch failures due to library validation. See https://electron.build/code-signing for details.
+  • signing         file=release/mac-arm64/Mental Arithmetic.app platform=darwin type=distribution identityName=- identityHash=none provisioningProfile=none
+  ⨯ Command failed: codesign --sign - --force --timestamp --options runtime --entitlements /Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/node_modules/app-builder-lib/templates/entitlements.mac.plist /Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/mac-arm64/Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (GPU).app/Contents/MacOS/Mental Arithmetic Helper (GPU)
+/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/mac-arm64/Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (GPU).app/Contents/MacOS/Mental Arithmetic Helper (GPU): replacing existing signature
+/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/mac-arm64/Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (GPU).app/Contents/MacOS/Mental Arithmetic Helper (GPU): resource fork, Finder information, or similar detritus not allowed
+  failedTask=build stackTrace=Error: Command failed: codesign --sign - --force --timestamp --options runtime --entitlements /Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/node_modules/app-builder-lib/templates/entitlements.mac.plist /Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/mac-arm64/Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (GPU).app/Contents/MacOS/Mental Arithmetic Helper (GPU)
+/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/mac-arm64/Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (GPU).app/Contents/MacOS/Mental Arithmetic Helper (GPU): replacing existing signature
+/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/mac-arm64/Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (GPU).app/Contents/MacOS/Mental Arithmetic Helper (GPU): resource fork, Finder information, or similar detritus not allowed
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  at genericNodeError (node:internal/errors:999:15)
+    at wrappedFn (node:internal/errors:544:14)
+    at ChildProcess.exithandler (node:child_process:420:12)
+    at ChildProcess.emit (node:events:514:20)
+    at maybeClose (node:internal/child_process:1156:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:334:5)

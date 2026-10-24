@@ -1,0 +1,21 @@
+{
+  "version": "1.0.2",
+  "sharedFrontendUnchanged": true,
+  "files": [
+    {
+      "file": "assets/index-ChcLWFDu.js",
+      "sha256": "e5ffefe70ca6d5b2dc45b0dd7c7f7d271936a604552b9cfcf6efb2ce10c207a2",
+      "androidMacWindowsAndCurrentBuildMatch": true
+    },
+    {
+      "file": "assets/index-wX7fx-YQ.css",
+      "sha256": "cc6cc3411422cf2c0c0c8fd3a9b0658b9b5b5013c0443b77e564642b4dbdfc57",
+      "androidMacWindowsAndCurrentBuildMatch": true
+    },
+    {
+      "file": "index.html",
+      "sha256": "59b82b40b6a1e783c5845f37c16ca57500c948004ab1400c934224c72bac1064",
+      "androidMacWindowsAndCurrentBuildMatch": true
+    }
+  ]
+}

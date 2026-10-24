@@ -1,0 +1,92 @@
+[
+  {
+    "file": "src/answerPolicy.ts",
+    "sha256": "9a98d597b0f7baa7264b387f52ef8a1f5e80892e5c69446d2dda602f77dd89c1",
+    "version": "1.1.0"
+  },
+  {
+    "file": "src/generateRound.ts",
+    "sha256": "7b8b13e15b58e870f27468e538181423c1fa38f73bd5cceb66eb17a3ca8a52cf",
+    "version": "1.1.0"
+  },
+  {
+    "file": "src/inputPolicy.ts",
+    "sha256": "1c46093bcaf0345926a460bcf7663bc985d1f77ba1b0b0049cd5046428dda8e8",
+    "version": "1.1.0"
+  },
+  {
+    "file": "src/learn/carryVisualizer.ts",
+    "sha256": "0458b1ec0abb951e02dfeb75a45c0270734666b0d3cef5734f7d9c89a857a90e",
+    "version": "1.1.0"
+  },
+  {
+    "file": "src/learn/confirmedMultiplicationExamples.ts",
+    "sha256": "6a12ecbe7580f493cb236d3cbb0eed98c1aa62f96d463777489a6ce79a5f60ba",
+    "version": "1.1.0"
+  },
+  {
+    "file": "src/learn/instructionStepRenderer.ts",
+    "sha256": "5ca78729f4de35997670b927546985a7969e1c3aa5918759628f764c65107ca1",
+    "version": "1.1.0"
+  },
+  {
+    "file": "src/learn/learnView.ts",
+    "sha256": "8d59c063a294ff3f35b5b2b29d3ea064ca5cf0a91567df6dded80f6000af38c4",
+    "version": "1.1.0"
+  },
+  {
+    "file": "src/learn/lessonCatalog.ts",
+    "sha256": "cced559d476fe40a816d932c25d9624657892ce28742d6c1ec7eeb00d6c830ae",
+    "version": "1.1.0"
+  },
+  {
+    "file": "src/learn/lessonTypes.ts",
+    "sha256": "4a473acf63bc53140d517547db4f27821f26bc16ad6d054015806571018a1f99",
+    "version": "1.1.0"
+  },
+  {
+    "file": "src/learn/positionalInstructions.ts",
+    "sha256": "f1392466307d8f0aed130cbc9abf6146a90ce973f6184057881c58901d3a848f",
+    "version": "1.1.0"
+  },
+  {
+    "file": "src/learn/randomExample.ts",
+    "sha256": "368bee7f7bf9c40729d4988c18f92f4f119e1cba199419ba0b82b2656b345b82",
+    "version": "1.1.0"
+  },
+  {
+    "file": "src/main.ts",
+    "sha256": "eb250b194549d99b38a784f342f313edbab1ea8ed14a2f1436354d1c8dd03a24",
+    "version": "1.1.0"
+  },
+  {
+    "file": "src/practiceView.ts",
+    "sha256": "2259fc96f56042d6558b47abf277843d6c72508cc4864beaff6073a76bb5664c",
+    "version": "1.1.0"
+  },
+  {
+    "file": "src/roundController.ts",
+    "sha256": "41fd72137b7797dc0e444c5f6ecc8fd2c025a590bca3669d824cd07fdb594dfe",
+    "version": "1.1.0"
+  },
+  {
+    "file": "src/style.css",
+    "sha256": "1a45140988eb08935b2eb37b619b72988c9f65b30366580d56d23d6950123af1",
+    "version": "1.1.0"
+  },
+  {
+    "file": "src/timer.ts",
+    "sha256": "bfaeaa1c0497565f6d3ceeba0064d903f4559d5b70cb192f86556bb79e0d4b04",
+    "version": "1.1.0"
+  },
+  {
+    "file": "src/types.ts",
+    "sha256": "f458432070b282817ece06654683477a9dfefee0201f64fd6f53cd14f2976b21",
+    "version": "1.1.0"
+  },
+  {
+    "file": "src/view.ts",
+    "sha256": "8642a039fae10bb7a352d46d90af8b008af793d4bd6f5da349acfcd636976bb5",
+    "version": "1.1.0"
+  }
+]

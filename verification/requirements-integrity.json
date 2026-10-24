@@ -1,0 +1,22 @@
+[
+  {
+    "file": "requirements/CODEX_START_HERE.md",
+    "sha256": "579d70b0de8e1af2096d273df29d295c839bccf5319a6c50d39298b453bdf3b9",
+    "matches_original_archive": true
+  },
+  {
+    "file": "requirements/EXAMPLES_AND_EDGE_CASES.json",
+    "sha256": "859f00b3d1b50c2771fd33ff75989e16a294c087ee82e87ab7edef1d80b04a15",
+    "matches_original_archive": true
+  },
+  {
+    "file": "requirements/PRODUCT_SPEC.md",
+    "sha256": "44b308a200101be30fc2adaa77d468a3e6430749a7536f29814a683ea83337fd",
+    "matches_original_archive": true
+  },
+  {
+    "file": "requirements/QA_CHECKLIST.md",
+    "sha256": "fa0df05581610e973c3013315faab5206717ca28fa7343d668baa9d8a5c2f861",
+    "matches_original_archive": true
+  }
+]

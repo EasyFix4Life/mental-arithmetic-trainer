@@ -1,0 +1,153 @@
+{
+  "androidRelease": "17",
+  "sdkInt": 37,
+  "supportedAbis": [
+    "arm64-v8a"
+  ],
+  "model": "sdk_gphone64_arm64",
+  "package": "local.jeff.mentalarithmetic",
+  "version": "1.1.0",
+  "webViewPackage": "com.google.android.webview",
+  "webViewVersion": "145.0.7632.218",
+  "passed": 8,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "offline release shell, presentation and browser security",
+      "status": "passed",
+      "durationMs": 306,
+      "details": {
+        "url": "https:\/\/appassets.androidplatform.net\/index.html",
+        "blockNetworkLoads": true,
+        "allowFileAccess": false,
+        "allowContentAccess": false,
+        "javascript": true
+      }
+    },
+    {
+      "name": "all six random lesson categories with complete instructions and vertical addition",
+      "status": "passed",
+      "durationMs": 18,
+      "details": {
+        "lessonCategories": 6,
+        "randomRequestsPerCategory": 4,
+        "completeWalkthroughs": 6,
+        "verticalAdditionCategories": 3
+      }
+    },
+    {
+      "name": "vertical addition instructions, carries and final answers",
+      "status": "passed",
+      "durationMs": 275,
+      "details": {
+        "twoDigit": {
+          "operands": [
+            58,
+            67
+          ],
+          "sum": 125
+        },
+        "threeDigit": {
+          "operands": [
+            587,
+            678
+          ],
+          "sum": 1265
+        },
+        "allAdditionVertical": true
+      }
+    },
+    {
+      "name": "random two-digit trace, confirmed carries and final answer",
+      "status": "passed",
+      "durationMs": 273,
+      "details": {
+        "randomProduct": 8526,
+        "confirmedProduct": 324,
+        "stages": [
+          "First",
+          "Inside",
+          "Outside",
+          "Last",
+          "Final answer"
+        ]
+      }
+    },
+    {
+      "name": "three-digit multiplication groups and whole-value carries",
+      "status": "passed",
+      "durationMs": 265,
+      "details": {
+        "operands": [
+          123,
+          456
+        ],
+        "groupResults": [
+          4,
+          13,
+          28,
+          27,
+          18
+        ],
+        "resolved": [
+          28,
+          30,
+          16,
+          5
+        ],
+        "product": 56088
+      }
+    },
+    {
+      "name": "native numeric keyboard, visible answer and rotation preservation",
+      "status": "passed",
+      "durationMs": 2278,
+      "details": {
+        "answerBottom": 510.09524154663086,
+        "liveBottom": 497.44642639160156,
+        "viewportBottom": 526.09521484375,
+        "viewportHeight": 526.09521484375,
+        "problemId": "1:0",
+        "nativeInputType": 2,
+        "softwareKeyboardVisible": true,
+        "rotationPreservedState": true,
+        "nativeKeyEventRoundScore": "10 \/ 10"
+      }
+    },
+    {
+      "name": "ten accepted answers, wrong feedback and exact timing summary",
+      "status": "passed",
+      "durationMs": 336,
+      "details": {
+        "score": "9 \/ 10",
+        "minimum": "0.2 s",
+        "maximum": "1.4 s",
+        "average": "1.2 s",
+        "durations": [
+          220,
+          530,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499
+        ]
+      }
+    },
+    {
+      "name": "all six operation and operand-length practice configurations",
+      "status": "passed",
+      "durationMs": 103,
+      "details": {
+        "configurations": 6,
+        "acceptedAnswers": 60,
+        "allScores": "10 \/ 10"
+      }
+    }
+  ],
+  "finishedAtEpochMs": 1792848658998,
+  "runtimeExecution": true
+}

@@ -1,0 +1,16 @@
+{
+  "createdAt": "2026-10-24T13:30:42.909Z",
+  "applicationId": "local.jeff.mentalarithmetic",
+  "version": "1.1.0",
+  "minSdk": 26,
+  "targetSdk": 37,
+  "compileSdk": 37,
+  "signingMode": "persistent-local-release-keystore",
+  "keystorePath": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/work/android-signing/mental-arithmetic.p12",
+  "javaHome": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/work/android-toolchain/jdk/jdk-21.0.13+9/Contents/Home",
+  "androidHome": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/work/android-toolchain/sdk",
+  "gradleBin": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/work/android-toolchain/gradle-9.4.1/bin/gradle",
+  "artifact": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/release/Mental-Arithmetic-1.1.0-Android.apk",
+  "builtApk": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/android/app/build/outputs/apk/release/app-release.apk",
+  "testApk": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/android/app/build/outputs/apk/androidTest/release/app-release-androidTest.apk"
+}

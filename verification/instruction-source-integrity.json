@@ -1,0 +1,22 @@
+[
+  {
+    "file": "requirements/instruction/CODEX_INSTRUCTIONAL_HANDOFF.md",
+    "sha256": "2abb2e3ccb2a36555b2914fd612054d81aefd158e90ae8bb55842d6f280aba10",
+    "matches_supplied_file": true
+  },
+  {
+    "file": "requirements/instruction/EXAMPLES_AND_EDGE_CASES.json",
+    "sha256": "859f00b3d1b50c2771fd33ff75989e16a294c087ee82e87ab7edef1d80b04a15",
+    "matches_supplied_file": true
+  },
+  {
+    "file": "requirements/instruction/INSTRUCTIONAL_LESSON_DATA_as_text.txt",
+    "sha256": "986c9bbbe488a83db37da16bb6d536c39cf3c88d4e6b635b1eccae69fde8e120",
+    "matches_supplied_file": true
+  },
+  {
+    "file": "requirements/instruction/Mental_Arithmetic_Instructional_Lessons_Codex_2026-10-24.json",
+    "sha256": "7766b177e3c046cdf7ebf507a67674e94c53896833afb5dfaa46555c8500edd3",
+    "matches_supplied_file": true
+  }
+]

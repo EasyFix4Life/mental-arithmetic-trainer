@@ -1,0 +1,22 @@
+--prepared:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/Current/.
+--prepared:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/Current/Helpers/app_shim_loader
+--validated:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/Current/Helpers/app_shim_loader
+--prepared:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/Current/Helpers/chrome_crashpad_handler
+--validated:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/Current/Helpers/chrome_crashpad_handler
+--validated:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/Electron Framework.framework/Versions/Current/.
+--prepared:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/Mantle.framework/Versions/Current/.
+--validated:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/Mantle.framework/Versions/Current/.
+--prepared:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (GPU).app
+--validated:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (GPU).app
+--prepared:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Plugin).app
+--validated:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Plugin).app
+--prepared:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Renderer).app
+--validated:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper (Renderer).app
+--prepared:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper.app
+--validated:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/Mental Arithmetic Helper.app
+--prepared:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/ReactiveObjC.framework/Versions/Current/.
+--validated:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/ReactiveObjC.framework/Versions/Current/.
+--prepared:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/Squirrel.framework/Versions/Current/.
+--validated:/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app/Contents/Frameworks/Squirrel.framework/Versions/Current/.
+/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app: valid on disk
+/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-110-final-x89xx9br/Mental Arithmetic.app: satisfies its Designated Requirement

@@ -1,0 +1,94 @@
+{
+  "version": "1.0",
+  "purpose": "Initial confirmed lesson registry and interaction stages; not a complete arithmetic algorithm",
+  "audience": "All ages; levels determined by skill",
+  "modes": [
+    "Learn",
+    "Practice"
+  ],
+  "presentation": {
+    "operand_layout": "horizontal",
+    "font_family": "Arial, Helvetica, sans-serif",
+    "background": "sepia",
+    "help_affordance": "circled question mark",
+    "walkthrough": "interactive, highlights operand digits, learner-directed"
+  },
+  "lessons": [
+    {
+      "id": "addition-1",
+      "order": 1,
+      "title": "Single-digit addition",
+      "operation": "addition",
+      "digits_per_operand": 1,
+      "owner_authored_steps_status": "not yet recovered"
+    },
+    {
+      "id": "multiplication-1",
+      "order": 2,
+      "title": "Single-digit multiplication",
+      "operation": "multiplication",
+      "digits_per_operand": 1,
+      "owner_authored_steps_status": "not yet recovered"
+    },
+    {
+      "id": "addition-2",
+      "order": 3,
+      "title": "Two-digit addition",
+      "operation": "addition",
+      "digits_per_operand": 2,
+      "owner_authored_steps_status": "not yet recovered"
+    },
+    {
+      "id": "multiplication-2",
+      "order": 4,
+      "title": "Two-digit multiplication",
+      "operation": "multiplication",
+      "digits_per_operand": 2,
+      "owner_authored_steps_status": "named stages and interactive behavior recovered; complete indexed worked trace not yet recovered",
+      "stage_sequence": [
+        {
+          "name": "First",
+          "ordinal": 1,
+          "behavior": "highlight first relevant digit pair and multiply",
+          "digit_refs": null
+        },
+        {
+          "name": "Inside",
+          "ordinal": 2,
+          "behavior": "highlight inside digit pair and multiply",
+          "digit_refs": null
+        },
+        {
+          "name": "Outside",
+          "ordinal": 3,
+          "behavior": "highlight outside digit pair, multiply, and add to inside product",
+          "digit_refs": null
+        },
+        {
+          "name": "Last",
+          "ordinal": 4,
+          "behavior": "highlight last digit pair and multiply",
+          "digit_refs": null
+        }
+      ],
+      "carry_visualization_required": true,
+      "progressively_show_answer_digits": true,
+      "illustrative_carry_fact": {
+        "intermediate_product": 64,
+        "record_digit": 4,
+        "carry": 6,
+        "status": "partial verbal example only; operands and full trace unavailable"
+      },
+      "method_acronym": null,
+      "do_not_substitute": "FOIL/FEAL or invented positional carry algorithm"
+    }
+  ],
+  "instructional_max_digits_per_operand": 2,
+  "practice_max_digits_per_operand": 3,
+  "unknown_owner_specific_details": [
+    "Exact operand digit-to-stage reference mapping",
+    "Full verified worked problem for the intermediate product 64 carry example",
+    "Exact positional weighting and carry destinations",
+    "Owner-authored step scripts for the three other lessons"
+  ]
+}
