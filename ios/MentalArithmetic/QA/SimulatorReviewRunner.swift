@@ -63,6 +63,22 @@ final class SimulatorReviewRunner {
                 case "review-addition3":
                     try chooseMode(0)
                     try chooseFixedExample(lessonID: "addition-3", index: 0)
+                case "review-help":
+                    try chooseMode(0)
+                    try press("lesson-multiplication-2")
+                    try checkLearnHelp()
+                    let help = try control("lesson-help", as: UIButton.self)
+                    var ancestor = help.superview
+                    while let view = ancestor {
+                        if let scroll = view as? UIScrollView {
+                            let expression = try control("lesson-expression", as: ArithmeticExpressionView.self)
+                            let reviewFrame = help.convert(help.bounds, to: scroll)
+                                .union(expression.convert(expression.bounds, to: scroll)).insetBy(dx: 0, dy: -16)
+                            scroll.scrollRectToVisible(reviewFrame, animated: false)
+                            break
+                        }
+                        ancestor = view.superview
+                    }
                 default: throw Failure("Unknown QA scenario \(scenario)")
                 }
                 await settle()
@@ -172,12 +188,28 @@ final class SimulatorReviewRunner {
         try chooseMode(0)
         for lesson in LessonCatalog.lessons {
             try press("lesson-\(lesson.id)")
+            try checkLearnHelp()
             let original = try text("lesson-expression")
             let operands = numbers(original)
             try require(operands.count == 2 && operands.allSatisfy { String($0).count == lesson.digitCount.rawValue }, "Learn range \(lesson.id)")
             try press("random-example")
             try require(try text("lesson-expression") != original, "New random example \(lesson.id)")
         }
+    }
+
+    private func checkLearnHelp() throws {
+        let help = try control("lesson-help", as: UIButton.self)
+        try require(help.configuration?.title == "Click Here to Learn How!", "Learn button displays the requested wording")
+        try require(help.accessibilityLabel == "Click Here to Learn How!", "Learn button's accessible name includes its visible wording")
+        try require(help.configuration?.image != nil, "Learn button retains a prominent question mark")
+        try require(help.bounds.height >= 64, "Learn button has a large touch target")
+        try require(help.bounds.width >= min(window.bounds.width - 40, 860) - 2, "Learn button uses the available readable width")
+        let frame = help.convert(help.bounds, to: window)
+        try require(frame.minX >= 0 && frame.maxX <= window.bounds.width + 1, "Learn button stays within horizontal screen bounds")
+        guard let label = help.titleLabel else { throw Failure("Missing Learn button title") }
+        let needed = label.sizeThatFits(CGSize(width: label.bounds.width, height: .greatestFiniteMagnitude))
+        try require(label.bounds.width > 100 && label.bounds.height >= needed.height - 1,
+                    "Learn button title wraps without clipping")
     }
 
     private func rotation() async throws {

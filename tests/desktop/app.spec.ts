@@ -237,6 +237,17 @@ test('native Learn provides full random instruction in all six lessons and prese
     expect(secondOperands.map(Number).sort((left, right) => left - right).join(':')).not.toBe(firstKey);
     const [left, right] = secondOperands.map(Number) as [number, number];
     const answer = String(operation === 'addition' ? left + right : left * right);
+    await expect(window.locator('#lesson-help')).toContainText('Click Here to Learn How!');
+    await expect(window.locator('#lesson-help')).toHaveAccessibleName(/Click Here to Learn How!/);
+    const helpBounds = await window.locator('#lesson-help').evaluate(element => {
+      const r = element.getBoundingClientRect();
+      return { left: r.left, right: r.right, width: r.width, height: r.height, viewportWidth: innerWidth };
+    });
+    expect(helpBounds.width).toBeGreaterThanOrEqual(180);
+    expect(helpBounds.height).toBeGreaterThanOrEqual(44);
+    expect(helpBounds.left).toBeGreaterThanOrEqual(0);
+    expect(helpBounds.right).toBeLessThanOrEqual(helpBounds.viewportWidth);
+    if (lesson === 'multiplication-3') await window.screenshot({ path: 'verification/help-button-macos-cta.png', fullPage: true });
     await window.locator('#lesson-help').click();
     await expect(window.locator('#walkthrough-status')).toBeHidden();
     await expect(window.locator('#walkthrough .step-operation')).toBeVisible();

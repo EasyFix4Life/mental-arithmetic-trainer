@@ -16,8 +16,8 @@ android {
         applicationId = "local.jeff.mentalarithmetic"
         minSdk = 26
         targetSdk = 37
-        versionCode = 10100
-        versionName = "1.1.0"
+        versionCode = 10101
+        versionName = "1.1.1"
         testApplicationId = "local.jeff.mentalarithmetic.test"
         testInstrumentationRunner = "local.jeff.mentalarithmetic.AndroidTestRunner"
     }

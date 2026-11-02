@@ -68,6 +68,7 @@ public final class AndroidTestRunner extends Instrumentation {
             report.put("webViewVersion", WebView.getCurrentWebViewPackage().versionName);
 
             runCase("offline release shell, presentation and browser security", this::offlineShell);
+            runCase("prominent learn button label, bounds and native tap", this::prominentHelp);
             runCase("all six random lesson categories with complete instructions and vertical addition", this::randomLessons);
             runCase("vertical addition instructions, carries and final answers", this::additionTrace);
             runCase("random two-digit trace, confirmed carries and final answer", this::multiplicationTrace);
@@ -129,6 +130,28 @@ public final class AndroidTestRunner extends Instrumentation {
         return value;
     }
 
+    private JSONObject prominentHelp() throws Exception {
+        JSONObject result = js("""
+            q('#mode-learn').click();
+            q('[data-lesson-id="multiplication-3"]').click();
+            const help=q('#lesson-help');
+            help.scrollIntoView({block:'center'});
+            assert(help.textContent.includes('?') && help.textContent.includes('Click Here to Learn How!'),'visible question icon and exact instruction label');
+            assert(help.getAttribute('aria-label').includes('Click Here to Learn How!'),'accessible label includes visible words');
+            const b=help.getBoundingClientRect();
+            assert(b.width>=180 && b.height>=44,'prominent native touch target');
+            assert(b.left>=0 && b.right<=innerWidth+1 && b.top>=0 && b.bottom<=innerHeight+1,'CTA entirely in viewport');
+            const range=document.createRange();range.selectNodeContents(help);
+            assert([...range.getClientRects()].filter(r=>r.width&&r.height).every(r=>r.left>=b.left-1&&r.right<=b.right+1&&r.top>=b.top-1&&r.bottom<=b.bottom+1),'visible CTA content fits inside button');
+            return {label:help.textContent.trim(),accessibleLabel:help.getAttribute('aria-label'),width:b.width,height:b.height,viewportWidth:innerWidth};
+            """);
+        screenshot("android-learn-help-button.png");
+        tapElement("#lesson-help");
+        waitForJs("!document.querySelector('#walkthrough').hidden", 5_000);
+        js("q('#close-walkthrough').click();return {};");
+        return result;
+    }
+
     private JSONObject randomLessons() throws Exception {
         return js("""
             q('#mode-learn').click();
@@ -145,6 +168,7 @@ public final class AndroidTestRunner extends Instrumentation {
                 const key=values.sort((a,b)=>a-b).join(':'); assert(key!==previous,'new unordered pair'); previous=key;
                 q('#random-example').click();
               }
+              assert(q('#lesson-help').textContent.includes('Click Here to Learn How!'),'learn label in every lesson');
               q('#lesson-help').click();
               assert(!/pending|not yet recovered/i.test(q('#walkthrough-status').textContent),'all scripts available');
               assert(q('#walkthrough .step-intermediate-result'),'calculation instruction');

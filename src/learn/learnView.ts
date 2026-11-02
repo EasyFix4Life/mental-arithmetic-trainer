@@ -23,8 +23,10 @@ export function mountLearnView(root: HTMLElement): () => void {
         <div class="lesson-problem-row">
           <div id="lesson-expression"></div>
           <button id="lesson-help" class="lesson-help" type="button"
-            aria-label="Open instructional walkthrough" aria-expanded="false"
-            aria-controls="walkthrough">?</button>
+            aria-expanded="false" aria-controls="walkthrough">
+            <span class="lesson-help-icon" aria-hidden="true">?</span>
+            <span class="lesson-help-label">Click Here to Learn How!</span>
+          </button>
         </div>
         <p id="example-status" class="example-status">Worked example pending.</p>
         <section id="walkthrough" class="walkthrough" aria-labelledby="walkthrough-heading" hidden>

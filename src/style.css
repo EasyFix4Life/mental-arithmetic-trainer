@@ -50,7 +50,7 @@ button:hover { background: #decca7; }
 .example-choice select { min-width: 0; max-width: 100%; width: auto; }
 .lesson-detail p { line-height: 1.55; }
 .lesson-status, .example-status, .walkthrough-status, .digit-selection-pending { font-size: 0.95rem; }
-.lesson-problem-row { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; margin-top: 2rem; }
+.lesson-problem-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.25rem; margin-top: 2rem; }
 #lesson-expression { min-width: 0; }
 .learn-expression {
   display: flex;
@@ -69,14 +69,34 @@ button:hover { background: #decca7; }
 .digit-highlight { border-bottom-color: currentColor; background: #d9c29a; font-weight: 700; }
 .digit-placeholder { opacity: 0.7; }
 .lesson-help {
-  flex: 0 0 auto;
-  min-height: 2.5rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: 0;
-  border-radius: 50%;
-  font-size: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex: 0 1 auto;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 4rem;
+  padding: 0.75rem 1rem;
+  border-width: 2px;
+  border-radius: 0.5rem;
+  background: #decca7;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
 }
+.lesson-help-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 2.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+.lesson-help-label { min-width: 0; text-align: left; }
 .walkthrough { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #8b7655; }
 .walkthrough-header { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
 .text-button { min-height: 2.75rem; padding: 0.5rem 0.8rem; font-size: 0.95rem; }
@@ -102,6 +122,7 @@ button:disabled { cursor: default; opacity: 0.5; }
   .learn-view > h1 { margin-bottom: 1.25rem; }
   .learn-expression { font-size: clamp(2.75rem, 9vw, 4rem); }
   .lesson-problem-row { margin-top: 1.25rem; }
+  .lesson-help { width: 100%; }
 }
 h1 { margin: 0; font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 400; }
 .settings { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }

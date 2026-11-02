@@ -84,19 +84,28 @@ test('addition is stacked and multiplication is horizontal, with large Arial ope
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
 
-test('circled question mark supports keyboard activation, named walkthrough and focus return', async ({ page }) => {
+test('prominent Learn How button supports keyboard activation, named walkthrough and focus return', async ({ page }) => {
   await openLearn(page, 'multiplication-2');
   const help = page.locator('#lesson-help');
-  await expect(help).toHaveText('?');
-  await expect(help).toHaveAccessibleName('Open instructional walkthrough');
+  await expect(help.locator('.lesson-help-icon')).toHaveText('?');
+  await expect(help.locator('.lesson-help-label')).toHaveText('Click Here to Learn How!');
+  await expect(help).toHaveAccessibleName('Click Here to Learn How!');
   await expect(help).toHaveAttribute('aria-controls', 'walkthrough');
   await expect(help).toHaveAttribute('aria-expanded', 'false');
-  const circle = await help.evaluate((element) => {
+  const button = await help.evaluate((element) => {
     const style = getComputedStyle(element);
     const box = element.getBoundingClientRect();
-    return { border: Number.parseFloat(style.borderTopWidth), radius: style.borderRadius, width: box.width, height: box.height };
+    return { border: Number.parseFloat(style.borderTopWidth), weight: style.fontWeight, width: box.width, height: box.height };
   });
-  expect(circle.border).toBeGreaterThan(0);
+  expect(button.border).toBeGreaterThanOrEqual(2);
+  expect(Number.parseInt(button.weight, 10)).toBeGreaterThanOrEqual(700);
+  expect(button.width).toBeGreaterThan(200);
+  expect(button.height).toBeGreaterThanOrEqual(64);
+  const circle = await help.locator('.lesson-help-icon').evaluate((element) => {
+    const style = getComputedStyle(element);
+    const box = element.getBoundingClientRect();
+    return { radius: style.borderRadius, width: box.width, height: box.height };
+  });
   expect(circle.radius).not.toBe('0px');
   expect(Math.abs(circle.width - circle.height)).toBeLessThan(2);
   await help.focus();
@@ -108,6 +117,41 @@ test('circled question mark supports keyboard activation, named walkthrough and 
   await expect(page.locator('#walkthrough')).toBeHidden();
   await expect(help).toHaveAttribute('aria-expanded', 'false');
   await expect(help).toBeFocused();
+});
+
+test('Learn How button and operands stay separate and readable at narrow widths in all six lessons', async ({ page }, testInfo) => {
+  await openLearn(page);
+  for (const width of [280, 320, 390]) {
+    await page.setViewportSize({ width, height: 844 });
+    for (const id of lessonIds) {
+      await page.locator(`[data-lesson-id="${id}"]`).click();
+      const help = page.locator('#lesson-help');
+      await expect(help).toHaveAccessibleName('Click Here to Learn How!');
+      const layout = await page.evaluate(() => {
+        const rect = (selector: string) => {
+          const b = document.querySelector(selector)!.getBoundingClientRect();
+          return { left: b.left, right: b.right, top: b.top, bottom: b.bottom, height: b.height };
+        };
+        return {
+          button: rect('#lesson-help'), icon: rect('.lesson-help-icon'),
+          label: rect('.lesson-help-label'), expression: rect('#lesson-expression'),
+          scrollWidth: document.documentElement.scrollWidth, viewport: innerWidth,
+        };
+      });
+      expect(layout.scrollWidth).toBeLessThanOrEqual(width);
+      expect(layout.button.left).toBeGreaterThanOrEqual(0);
+      expect(layout.button.right).toBeLessThanOrEqual(width);
+      expect(layout.button.height).toBeGreaterThanOrEqual(64);
+      expect(layout.label.left).toBeGreaterThan(layout.icon.right);
+      expect(layout.label.right).toBeLessThan(layout.button.right);
+      expect(layout.button.top).toBeGreaterThanOrEqual(layout.expression.bottom);
+      expect(layout.expression.right).toBeLessThanOrEqual(width);
+    }
+    if (width === 390) {
+      await page.locator('#lesson-help').scrollIntoViewIfNeeded();
+      await page.screenshot({ path: `verification/help-button-${testInfo.project.name}-390.png`, fullPage: true });
+    }
+  }
 });
 
 test('all six lessons have complete instructions and a correct final answer', async ({ page }) => {

@@ -16,9 +16,9 @@ final class LearnViewController: UIViewController {
     private lazy var random = AppTheme.button("New random example", identifier: "random-example") { [weak self] in
         self?.newRandomExample()
     }
-    private let problemRow = AppTheme.stack(axis: .horizontal, spacing: 12, alignment: .center)
+    private let problemRow = AppTheme.stack(spacing: 16)
     private let expression = ArithmeticExpressionView(fontSize: 60, identifier: "lesson-expression")
-    private lazy var help = AppTheme.button("?", identifier: "lesson-help") { [weak self] in
+    private lazy var help = AppTheme.button("Click Here to Learn How!", identifier: "lesson-help") { [weak self] in
         guard let self else { return }
         self.isOpen.toggle()
         self.render()
@@ -104,11 +104,26 @@ final class LearnViewController: UIViewController {
         content.addArrangedSubview(exampleMenu)
         content.addArrangedSubview(random)
         expression.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-        problemRow.addArrangedSubview(expression)
         problemRow.addArrangedSubview(help)
-        help.widthAnchor.constraint(equalToConstant: 48).isActive = true
-        help.layer.cornerRadius = 24
-        help.accessibilityLabel = "Open instructional walkthrough"
+        problemRow.addArrangedSubview(expression)
+        help.configuration?.image = UIImage(systemName: "questionmark.circle", withConfiguration:
+            UIImage.SymbolConfiguration(pointSize: 30, weight: .bold))
+        help.configuration?.imagePadding = 12
+        help.configuration?.imagePlacement = .leading
+        help.configuration?.titleAlignment = .center
+        help.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16)
+        help.configuration?.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
+            var attributes = incoming
+            attributes.font = AppTheme.font(20, bold: true)
+            return attributes
+        }
+        help.titleLabel?.lineBreakMode = .byWordWrapping
+        help.heightAnchor.constraint(greaterThanOrEqualToConstant: 64).isActive = true
+        help.layer.cornerRadius = 8
+        help.layer.borderWidth = 2
+        help.backgroundColor = AppTheme.highlight
+        help.accessibilityLabel = "Click Here to Learn How!"
+        help.accessibilityHint = "Opens the instructional walkthrough for this lesson."
         content.addArrangedSubview(problemRow)
         let header = AppTheme.stack(axis: .horizontal, spacing: 16, alignment: .center)
         let walkthroughHeading = AppTheme.label("Instructional walkthrough", size: 21, bold: true)
@@ -191,12 +206,11 @@ final class LearnViewController: UIViewController {
             exampleMenu.configuration?.title = selectedExample?.title ?? "Random: \(randomProblem.left) × \(randomProblem.right)"
         }
         configureExpression(expression, problem: currentProblem, selected: [])
-        // Keep the horizontal row's flexible expression in its own layout.
-        // Hiding only that expression leaves a sole required-width help button,
-        // which can collapse the enclosing scroll content to that button's width.
+        // Keep the complete example/help group together when the walkthrough
+        // replaces it, without imposing a fixed button width on scroll content.
         expression.isHidden = false
         problemRow.isHidden = isOpen && !currentSteps.isEmpty
-        help.accessibilityLabel = isOpen ? "Close instructional walkthrough" : "Open instructional walkthrough"
+        help.accessibilityLabel = "Click Here to Learn How!"
         help.accessibilityValue = isOpen ? "Expanded" : "Collapsed"
         walkthrough.isHidden = !isOpen
         renderStep()

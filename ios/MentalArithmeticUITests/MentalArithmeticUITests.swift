@@ -216,8 +216,13 @@ final class MentalArithmeticUITests: XCTestCase {
                 lesson.tap()
                 let expression = app.staticTexts["lesson-expression"]
                 let expected = try answer(for: expression.label)
-                reveal(app.buttons["lesson-help"])
-                app.buttons["lesson-help"].tap()
+                let help = app.buttons["lesson-help"]
+                reveal(help)
+                XCTAssertEqual(help.label, "Click Here to Learn How!")
+                XCTAssertGreaterThanOrEqual(help.frame.height, 64)
+                XCTAssertLessThanOrEqual(help.frame.maxX, app.frame.maxX + 1)
+                if operation == "multiplication" && digits == 2 { capture("09-prominent-learn-help") }
+                help.tap()
                 XCTAssertFalse(app.staticTexts["walkthrough-status"].exists, "Required instructions must be present.")
                 XCTAssertTrue(app.staticTexts["step-operation"].exists)
                 let finalButton = app.buttons["final-answer"]
