@@ -1,0 +1,264 @@
+{
+  "status": "local-native-simulator-review-assets-not-uploaded",
+  "device": {
+    "dataPath": "/Users/pussieromatic/Library/Developer/CoreSimulator/Devices/31028F10-C640-48B9-B06A-7149FD7103EE/data",
+    "dataPathSize": 1929465856,
+    "logPath": "/Users/pussieromatic/Library/Logs/CoreSimulator/31028F10-C640-48B9-B06A-7149FD7103EE",
+    "udid": "31028F10-C640-48B9-B06A-7149FD7103EE",
+    "lastUsedAt": "2026-11-02T15:41:07Z",
+    "isAvailable": true,
+    "logPathSize": 360448,
+    "deviceTypeIdentifier": "com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro",
+    "state": "Shutdown",
+    "name": "MentalArithmetic-iPhone-26"
+  },
+  "screenshots": [
+    {
+      "file": "01-practice-setup.png",
+      "scenario": "review-setup",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "6edb77e217606aeca0771d02cf6b65695ba74a0a244ef70caf033e08a7b7666d",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-setup",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "26.5",
+        "timestamp": "2026-11-02T15:41:26Z",
+        "total": 0,
+        "version": "1.1.1",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      }
+    },
+    {
+      "file": "07-prominent-learn-help.png",
+      "scenario": "review-help",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "b22058e8e4e9c4b142563c35da756d97b2e5102866d17682e48f933d80ef15bd",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-help",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "26.5",
+        "timestamp": "2026-11-02T15:41:28Z",
+        "total": 0,
+        "version": "1.1.1",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      }
+    },
+    {
+      "file": "02-practice-live-keyboard.png",
+      "scenario": "review-practice",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "f5cca66b781c013a56a26e8993a1d2631c34f85e0ec1f14f3181ae4f3565f830",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-practice",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "26.5",
+        "timestamp": "2026-11-02T15:41:30Z",
+        "total": 0,
+        "version": "1.1.1",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      }
+    },
+    {
+      "file": "03-score-and-round-times.png",
+      "scenario": "review-score",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "66a52fce2c92a18e393be9d7cfa1428c713d9814cea153405545dcdf5670adf4",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-score",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "26.5",
+        "timestamp": "2026-11-02T15:41:34Z",
+        "total": 0,
+        "version": "1.1.1",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      }
+    },
+    {
+      "file": "04-confirmed-two-digit-carry.png",
+      "scenario": "review-learn18",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "edc4d822ca2eae0c70abb3692f94a909ade67ce138a04866725ba9c727db1f35",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-learn18",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "26.5",
+        "timestamp": "2026-11-02T15:41:36Z",
+        "total": 0,
+        "version": "1.1.1",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      }
+    },
+    {
+      "file": "05-three-digit-multiplication.png",
+      "scenario": "review-learn3",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "598dcba8a5745680384a4900ef8ad45975cca45a647d32de5062e81bb7b03bed",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-learn3",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "26.5",
+        "timestamp": "2026-11-02T15:41:38Z",
+        "total": 0,
+        "version": "1.1.1",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      }
+    },
+    {
+      "file": "06-three-digit-addition.png",
+      "scenario": "review-addition3",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "fc3b64f5072d514d75aa160ed22ffa52cb506428efb132022266c13fcd1d1c93",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-addition3",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "26.5",
+        "timestamp": "2026-11-02T15:41:40Z",
+        "total": 0,
+        "version": "1.1.1",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      }
+    }
+  ],
+  "source": "Actual native app running on the specified Simulator; simctl io screenshot",
+  "fixtureSetup": "DEBUG-only native review harness; Release excludes this code",
+  "officialSpecifications": "https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications/",
+  "publicationChecks": [
+    "Review final content and metadata",
+    "Verify required device sizes",
+    "Ensure no alpha channel",
+    "Sign and submit through the owner's developer account"
+  ]
+}

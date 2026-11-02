@@ -1,0 +1,8 @@
+Native UIKit integration: 7/8 passed, 1 skipped on MentalArithmetic-iPad-26
+Captured 01-practice-setup.png (2064 × 2752)
+Captured 07-prominent-learn-help.png (2064 × 2752)
+Captured 02-practice-live-keyboard.png (2064 × 2752)
+Captured 03-score-and-round-times.png (2064 × 2752)
+Captured 04-confirmed-two-digit-carry.png (2064 × 2752)
+Captured 05-three-digit-multiplication.png (2064 × 2752)
+Captured 06-three-digit-addition.png (2064 × 2752)

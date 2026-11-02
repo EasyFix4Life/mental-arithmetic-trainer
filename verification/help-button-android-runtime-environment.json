@@ -1,0 +1,18 @@
+{
+  "version": "1.1.1",
+  "versionCode": 10101,
+  "serial": "emulator-5556",
+  "disposableEmulator": true,
+  "runtimeExecution": true,
+  "passed": 9,
+  "failed": 0,
+  "androidRelease": "17",
+  "sdkInt": 37,
+  "webViewVersion": "145.0.7632.218",
+  "releaseApkSHA256": "3149d9b271f80f11ddc2f87081e4250323a6abefe865568726a5dae9884842a9",
+  "testApkSHA256": "d022dce4b93a4f258f0646d72438fc4aa941baf8ccca8fa0e00374aec71234a3",
+  "sourceStagingMatches": true,
+  "privateReleaseKeyReused": true,
+  "results": "help-button-android-runtime/android-runtime-results.json",
+  "physicalDevicesModified": false
+}

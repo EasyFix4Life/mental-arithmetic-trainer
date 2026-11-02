@@ -1,6 +1,8 @@
 # Mental Arithmetic for Android
 
-Version **1.1.0** packages the same lessons, random examples and Practice timing as the macOS and Windows apps in a signed Android APK. It targets **Android 17 / API 37**, the current stable major Android release as of **24 October 2026**. Google announced Android 17 on 16 June 2026; its SDK setup guide specifies `compileSdk = 37` and `targetSdk = 37`. [Android 17 release announcement](https://android-developers.googleblog.com/2026/06/Android-17.html) · [Android 17 SDK setup](https://developer.android.com/about/versions/17/setup-sdk)
+**1.1.1 interface update:** the lesson-help button now reads **? Click Here to Learn How!**. See [the update report](verification/HELP_BUTTON_UPDATE.md) for current checks and screenshots. Prior detailed verification reports remain as the 1.1.0 baseline.
+
+Version **1.1.1** packages the same lessons, random examples and Practice timing as the macOS and Windows apps in a signed Android APK. It targets **Android 17 / API 37**, the current stable major Android release as of **24 October 2026**. Google announced Android 17 on 16 June 2026; its SDK setup guide specifies `compileSdk = 37` and `targetSdk = 37`. [Android 17 release announcement](https://android-developers.googleblog.com/2026/06/Android-17.html) · [Android 17 SDK setup](https://developer.android.com/about/versions/17/setup-sdk)
 
 The minimum declared Android version is **Android 8.0 / API 26**. This is a universal APK with no bundled native libraries or CPU-specific runtime. It uses the device's installed Android System WebView; keep that component current. The minimum SDK setting describes installation eligibility, rather than proof of testing every older Android version or device.
 
@@ -8,13 +10,13 @@ The installed app works offline. It needs no account, Node.js, browser tab or lo
 
 ## Download and install
 
-- [Mental-Arithmetic-1.1.0-Android.apk](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.0-Android.apk) — the signed Android application.
-- [Complete source code for all platforms](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.0-all-platforms-source.zip) — the shared frontend, Android project, desktop wrappers, build scripts, requirements, tests and documentation.
+- [Mental-Arithmetic-1.1.1-Android.apk](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.1-Android.apk) — the signed Android application.
+- [Complete source code for all platforms](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.1-all-platforms-source.zip) — the shared frontend, Android project, desktop wrappers, build scripts, requirements, tests and documentation.
 
 Exact APK path on the build Mac:
 
 ```text
-/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.0-Android.apk
+/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.1-Android.apk
 ```
 
 Copy or download the APK to the Android device, open it in **Files**, and follow Android's installation prompt for that file source. Open **Mental Arithmetic** from the launcher after installation. This is a direct APK delivery; it has not been submitted to Google Play. No Google Play account or publication is required to use the supplied file.
@@ -22,7 +24,7 @@ Copy or download the APK to the Android device, open it in **Files**, and follow
 For an already connected development device with ADB authorized, installation from a computer is also possible:
 
 ```text
-adb install -r Mental-Arithmetic-1.1.0-Android.apk
+adb install -r Mental-Arithmetic-1.1.1-Android.apk
 ```
 
 That command installs or updates this app only. No physical phone was connected during development; emulator and package-verification evidence is recorded separately below.
@@ -47,10 +49,10 @@ From the source project folder:
 ```text
 npm ci
 npm run build:android
-npm run verify:android -- release/Mental-Arithmetic-1.1.0-Android.apk
+npm run verify:android -- release/Mental-Arithmetic-1.1.1-Android.apk
 ```
 
-`build:android` builds the Vite production frontend, runs the Android release build and release lint, and copies the signed APK into `release/`. `verify:android` inspects that APK using the configured Android SDK. The Android application ID is `local.jeff.mentalarithmetic`, its version name is `1.1.0`, and its version code is `10100`.
+`build:android` builds the Vite production frontend, runs the Android release build and release lint, and copies the signed APK into `release/`. `verify:android` inspects that APK using the configured Android SDK. The Android application ID is `local.jeff.mentalarithmetic`, its version name is `1.1.1`, and its version code is `10100`.
 
 The Android project is in `android/`. Its plain Java `MainActivity` hosts the shared frontend in a WebView. The build copies `dist/` into APK assets, so lessons and Practice do not require a second implementation. Bundled content is served through a restricted local asset origin. The app has no JavaScript-to-native bridge, external navigation, file chooser, downloads, analytics or backend.
 
@@ -77,7 +79,7 @@ Use a disposable Android emulator, then build the separate instrumentation APK:
 
 ```text
 npm run build:android -- --tests
-adb -s emulator-5556 install -r release/Mental-Arithmetic-1.1.0-Android.apk
+adb -s emulator-5556 install -r release/Mental-Arithmetic-1.1.1-Android.apk
 adb -s emulator-5556 install -r -t android/app/build/outputs/apk/androidTest/release/app-release-androidTest.apk
 adb -s emulator-5556 shell am instrument -w local.jeff.mentalarithmetic.test/local.jeff.mentalarithmetic.AndroidTestRunner
 ```

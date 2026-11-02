@@ -137,13 +137,15 @@ public final class AndroidTestRunner extends Instrumentation {
             const help=q('#lesson-help');
             help.scrollIntoView({block:'center'});
             assert(help.textContent.includes('?') && help.textContent.includes('Click Here to Learn How!'),'visible question icon and exact instruction label');
-            assert(help.getAttribute('aria-label').includes('Click Here to Learn How!'),'accessible label includes visible words');
+            const label=help.querySelector('.lesson-help-label');
+            assert(label.textContent==='Click Here to Learn How!' && !label.closest('[aria-hidden=true]'),'visible text supplies the accessible name');
+            assert(help.querySelector('.lesson-help-icon').getAttribute('aria-hidden')==='true','decorative question icon excluded from accessible name');
             const b=help.getBoundingClientRect();
             assert(b.width>=180 && b.height>=44,'prominent native touch target');
             assert(b.left>=0 && b.right<=innerWidth+1 && b.top>=0 && b.bottom<=innerHeight+1,'CTA entirely in viewport');
             const range=document.createRange();range.selectNodeContents(help);
             assert([...range.getClientRects()].filter(r=>r.width&&r.height).every(r=>r.left>=b.left-1&&r.right<=b.right+1&&r.top>=b.top-1&&r.bottom<=b.bottom+1),'visible CTA content fits inside button');
-            return {label:help.textContent.trim(),accessibleLabel:help.getAttribute('aria-label'),width:b.width,height:b.height,viewportWidth:innerWidth};
+            return {label:help.textContent.trim(),accessibleLabel:label.textContent,width:b.width,height:b.height,viewportWidth:innerWidth};
             """);
         screenshot("android-learn-help-button.png");
         tapElement("#lesson-help");

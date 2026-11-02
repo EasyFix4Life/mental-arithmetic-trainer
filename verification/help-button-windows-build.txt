@@ -1,0 +1,44 @@
+  • electron-builder  version=26.18.0 os=27.2.0
+  • loaded configuration  file=/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/electron-builder.windows.json
+  • loaded parent configuration  file=/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/electron-builder.json
+  • skipped dependencies rebuild  reason=npmRebuild is set to false
+  • packaging       platform=win32 arch=x64 electron=45.0.0 appOutDir=/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-CKlBaE/win-unpacked
+  • downloaded      label=electron progress=100%
+  • downloaded electron zip extracted successfully  output=/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-CKlBaE/win-unpacked
+  • searching for node modules  pm=npm searchDir=/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer
+
+Restarting with byte-identical source and lockfile dependencies in temporary staging outside File Provider.
+  • electron-builder  version=26.18.0 os=27.2.0
+  • loaded configuration  file=/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-help-build-a4nzbd4n/electron-builder.windows.json
+  • loaded parent configuration  file=/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-help-build-a4nzbd4n/electron-builder.json
+  • skipped dependencies rebuild  reason=npmRebuild is set to false
+  • packaging       platform=win32 arch=x64 electron=45.0.0 appOutDir=/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-NORcdm/win-unpacked
+  • downloaded      label=electron progress=100%
+  • downloaded electron zip extracted successfully  output=/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-NORcdm/win-unpacked
+  • searching for node modules  pm=npm searchDir=/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-help-build-a4nzbd4n
+  • no node modules found in collection, trying next search directory  pm=npm searchDir=/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-help-build-a4nzbd4n
+  • searching for node modules  pm=traversal searchDir=/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-help-build-a4nzbd4n
+  • using manual traversal of node_modules to build dependency tree
+  • no node modules found in collection, trying next search directory  pm=traversal searchDir=/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-help-build-a4nzbd4n
+  • no node modules returned while searching directories  searchDirectories=[""]
+  • updating asar integrity executable resource  executablePath=/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-NORcdm/win-unpacked/Mental Arithmetic.exe
+  • default Electron icon is used  reason=application icon is not set
+  • file signing skipped via signExecutable configuration  file=/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-NORcdm/win-unpacked/Mental Arithmetic.exe
+  • building        target=zip arch=x64 file=/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-NORcdm/Mental-Arithmetic-1.1.1-Windows-x64.zip
+  • building        target=nsis file=/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-NORcdm/Mental-Arithmetic-1.1.1-Windows-x64-Setup.exe archs=x64 oneClick=false perMachine=false
+  • file signing skipped via signExecutable configuration  file=/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-NORcdm/Mental-Arithmetic-1.1.1-Windows-x64-Setup.__uninstaller.exe
+  • file signing skipped via signExecutable configuration  file=/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-NORcdm/Mental-Arithmetic-1.1.1-Windows-x64-Setup.exe
+  • building block map  blockMapFile=/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-NORcdm/Mental-Arithmetic-1.1.1-Windows-x64-Setup.exe.blockmap
+{
+  "version": "1.1.1",
+  "buildHost": "darwin",
+  "targetPlatform": "win32",
+  "architecture": "x64",
+  "appDirectory": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-NORcdm/win-unpacked",
+  "executablePath": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-NORcdm/win-unpacked/Mental Arithmetic.exe",
+  "artifacts": [
+    "/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-help-build-a4nzbd4n/release/Mental-Arithmetic-1.1.1-Windows-x64-Setup.exe",
+    "/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-help-build-a4nzbd4n/release/Mental-Arithmetic-1.1.1-Windows-x64-Setup.exe.blockmap",
+    "/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-help-build-a4nzbd4n/release/Mental-Arithmetic-1.1.1-Windows-x64.zip"
+  ]
+}

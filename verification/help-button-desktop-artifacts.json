@@ -1,0 +1,39 @@
+{
+  "version": "1.1.1",
+  "macNativeTests": {
+    "startTime": "2026-11-02T15:50:15.653Z",
+    "duration": 13550.049,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "macSignatureValid": true,
+  "macDiskImageChecksumValid": true,
+  "macAppZipCrcValid": true,
+  "macNativeScreenshot": "help-button-macos-cta.png",
+  "windowsNativeExecutionPerformed": false,
+  "byteIntegrityReport": "help-button-desktop-frontend-integrity.json",
+  "files": [
+    {
+      "name": "Mental-Arithmetic-1.1.1-macOS-arm64.dmg",
+      "bytes": 119194836,
+      "sha256": "154b292795abbdf144125e5714fcb26af80ad68780111d98b1fe9b680c4eff5c"
+    },
+    {
+      "name": "Mental-Arithmetic-1.1.1-macOS-arm64.zip",
+      "bytes": 115781999,
+      "sha256": "e09600745f922fe5ac7441a2d3c010579dc0bf39da9082e32ffc028579e50149"
+    },
+    {
+      "name": "Mental-Arithmetic-1.1.1-Windows-x64-Setup.exe",
+      "bytes": 121273613,
+      "sha256": "7136d847c17e3e52b02db10dec1f6446c3da9f97c659fe6a2a1bb59868be7f2d"
+    },
+    {
+      "name": "Mental-Arithmetic-1.1.1-Windows-x64.zip",
+      "bytes": 153161236,
+      "sha256": "60ad005bf25dfa11013c1f045735a802584a1b79a53eab05cfcda3daa56661b7"
+    }
+  ]
+}

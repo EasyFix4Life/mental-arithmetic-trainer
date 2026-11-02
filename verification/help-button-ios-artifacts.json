@@ -1,0 +1,72 @@
+{
+  "verifiedAt": "2026-11-02T15:46:07.028137+00:00",
+  "release": "1.1.1",
+  "build": "2",
+  "toolchain": "Xcode 27.0\nBuild version 27A5228h",
+  "files": [
+    {
+      "file": "Mental-Arithmetic-1.1.1-iOS-unsigned-archive.zip",
+      "bytes": 815326,
+      "sha256": "92b275d4da497c3ef0f6e8a8e33bf439988cf449b86ed776db6f4303386a0ecd",
+      "version": "1.1.1",
+      "build": "2",
+      "sdk": "iphoneos27.0",
+      "xcodeBuild": "27A5228h",
+      "minimumOS": "17.0",
+      "deviceFamilies": [
+        1,
+        2
+      ],
+      "architectures": "arm64",
+      "unsigned": true,
+      "helpTitleAndQuestionSymbolPresent": true,
+      "debugHarnessAbsent": true,
+      "testBundlesAbsent": true,
+      "webViewAbsent": true,
+      "zipCRCVerified": true
+    },
+    {
+      "file": "Mental-Arithmetic-1.1.1-iOS-Simulator-app.zip",
+      "bytes": 306489,
+      "sha256": "a19405e1c71b614dc43d91019292c7b31c22a21eb2614d95f755fca9981e20f7",
+      "version": "1.1.1",
+      "build": "2",
+      "sdk": "iphonesimulator27.0",
+      "xcodeBuild": "27A5228h",
+      "minimumOS": "17.0",
+      "deviceFamilies": [
+        1,
+        2
+      ],
+      "architectures": "x86_64 arm64",
+      "unsigned": true,
+      "helpTitleAndQuestionSymbolPresent": true,
+      "debugHarnessAbsent": true,
+      "testBundlesAbsent": true,
+      "webViewAbsent": true,
+      "zipCRCVerified": true
+    }
+  ],
+  "nativeRuns": [
+    {
+      "device": "MentalArithmetic-iPhone-26",
+      "runtime": "26.5",
+      "version": "1.1.1",
+      "passed": 8,
+      "skipped": 0,
+      "total": 8,
+      "assertions": 131,
+      "report": "help-button-ios-iphone26.json"
+    },
+    {
+      "device": "MentalArithmetic-iPad-26",
+      "runtime": "26.5",
+      "version": "1.1.1",
+      "passed": 7,
+      "skipped": 1,
+      "total": 8,
+      "assertions": 126,
+      "report": "help-button-ios-ipad26.json"
+    }
+  ]
+}

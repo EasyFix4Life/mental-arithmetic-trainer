@@ -1,6 +1,8 @@
 # Mental Arithmetic for Windows 10 and 11
 
-Version **1.1.0** packages the same Learn and Practice frontend as the macOS version with a Windows desktop runtime. The target is **Windows 10 or Windows 11 on a 64-bit Intel/AMD PC (x64)**. Electron 45.0.0 lists Windows 10 and later among its supported platforms and provides x64 binaries; see its [version-specific platform support statement](https://raw.githubusercontent.com/electron/electron/v45.0.0/README.md). This delivery does not include a 32-bit Windows or native Windows ARM64 package.
+**1.1.1 interface update:** the lesson-help button now reads **? Click Here to Learn How!**. See [the update report](verification/HELP_BUTTON_UPDATE.md) for current checks and screenshots. Prior detailed verification reports remain as the 1.1.0 baseline.
+
+Version **1.1.1** packages the same Learn and Practice frontend as the macOS version with a Windows desktop runtime. The target is **Windows 10 or Windows 11 on a 64-bit Intel/AMD PC (x64)**. Electron 45.0.0 lists Windows 10 and later among its supported platforms and provides x64 binaries; see its [version-specific platform support statement](https://raw.githubusercontent.com/electron/electron/v45.0.0/README.md). This delivery does not include a 32-bit Windows or native Windows ARM64 package.
 
 The app runs offline. A user installing the finished app does not need Node.js, npm, a browser tab, an account or a local web server.
 
@@ -8,8 +10,8 @@ The app runs offline. A user installing the finished app does not need Node.js, 
 
 Choose one of these two files:
 
-- [Mental-Arithmetic-1.1.0-Windows-x64-Setup.exe](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.0-Windows-x64-Setup.exe) — the normal Windows installer. Copy or download it to the Windows PC, open it, choose the installation folder and complete the wizard. It installs for the current user, without requesting administrator elevation. It creates Start menu and desktop shortcuts and can open the app when installation finishes. Windows' normal Installed Apps control can uninstall it.
-- [Mental-Arithmetic-1.1.0-Windows-x64.zip](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.0-Windows-x64.zip) — the alternative extracted-app distribution. Use **Extract All**, then open **Mental Arithmetic.exe** inside the extracted folder. Keep the whole folder together, including `resources`, `locales` and the runtime DLLs. Opening the executable directly inside the ZIP or copying only that executable is not a supported launch path.
+- [Mental-Arithmetic-1.1.1-Windows-x64-Setup.exe](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.1-Windows-x64-Setup.exe) — the normal Windows installer. Copy or download it to the Windows PC, open it, choose the installation folder and complete the wizard. It installs for the current user, without requesting administrator elevation. It creates Start menu and desktop shortcuts and can open the app when installation finishes. Windows' normal Installed Apps control can uninstall it.
+- [Mental-Arithmetic-1.1.1-Windows-x64.zip](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.1-Windows-x64.zip) — the alternative extracted-app distribution. Use **Extract All**, then open **Mental Arithmetic.exe** inside the extracted folder. Keep the whole folder together, including `resources`, `locales` and the runtime DLLs. Opening the executable directly inside the ZIP or copying only that executable is not a supported launch path.
 
 The application and installer are **unsigned**. Windows may display an unknown-publisher or SmartScreen prompt. No Windows signing certificate, Microsoft Store publication or system security setting change is part of this delivery.
 
@@ -32,7 +34,7 @@ Use the included source project and the Node.js versions specified in [README.md
 ```text
 npm ci
 npm run build:windows
-npm run verify:windows -- release/Mental-Arithmetic-1.1.0-Windows-x64.zip release/Mental-Arithmetic-1.1.0-Windows-x64-Setup.exe
+npm run verify:windows -- release/Mental-Arithmetic-1.1.1-Windows-x64.zip release/Mental-Arithmetic-1.1.1-Windows-x64-Setup.exe
 ```
 
 The finished installer and ZIP are copied to `release/`. The script uses temporary staging and records its unpacked executable and archive paths in `verification/windows-build-location.json`. It invokes electron-builder with `--publish never`; it does not publish an application or create a repository.
@@ -64,11 +66,11 @@ An additional read-only check evaluated unchanged `desktop/security.cjs` using W
 
 ## Exact paths for the macOS downloads
 
-The corresponding updated Mac delivery is version **1.1.0**, for **Apple silicon with macOS 13 or later**. Its ad hoc signature and lack of Apple notarization are described in [MACOS_APP.md](./MACOS_APP.md). These are the exact saved files on this Mac:
+The corresponding updated Mac delivery is version **1.1.1**, for **Apple silicon with macOS 13 or later**. Its ad hoc signature and lack of Apple notarization are described in [MACOS_APP.md](./MACOS_APP.md). These are the exact saved files on this Mac:
 
-- [Mac disk image — Mental-Arithmetic-1.1.0-macOS-arm64.dmg](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.0-macOS-arm64.dmg)
-- [Mac application ZIP — Mental-Arithmetic-1.1.0-macOS-arm64.zip](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.0-macOS-arm64.zip)
-- [Shared source for all platforms — Mental-Arithmetic-1.1.0-all-platforms-source.zip](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.0-all-platforms-source.zip)
+- [Mac disk image — Mental-Arithmetic-1.1.1-macOS-arm64.dmg](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.1-macOS-arm64.dmg)
+- [Mac application ZIP — Mental-Arithmetic-1.1.1-macOS-arm64.zip](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.1-macOS-arm64.zip)
+- [Shared source for all platforms — Mental-Arithmetic-1.1.1-all-platforms-source.zip](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.1-all-platforms-source.zip)
 - [Mac installation, launch and build instructions](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/MACOS_APP.md)
 
 For installation, open the DMG, drag **Mental Arithmetic.app** into **Applications**, then open it there. The Mac ZIP is an alternative copy of the same standalone app bundle.

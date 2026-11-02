@@ -1,0 +1,50 @@
+{
+  "version": "1.1.1",
+  "byteIdenticalAssets": [
+    {
+      "path": "dist/index.html",
+      "bytes": 594,
+      "sha256": "6e8db40d623aa78caab0428a249982bc5bf09e95ae564abdcfff3004e001fd11",
+      "stagingMatchesSource": true,
+      "macMatchesSource": true,
+      "windowsMatchesSource": true
+    },
+    {
+      "path": "dist/assets/index-BThi3byY.css",
+      "bytes": 8018,
+      "sha256": "d6d2e872e9c5173e900cdd988d89b94db8be5c4ae012ad2a8f560205f664af61",
+      "stagingMatchesSource": true,
+      "macMatchesSource": true,
+      "windowsMatchesSource": true
+    },
+    {
+      "path": "dist/assets/index-Bycc7fRe.js",
+      "bytes": 33829,
+      "sha256": "3d0c17eaea2de759d45f4858f1d1bd8e04a99ca07abfe9543d9c2f0219471054",
+      "stagingMatchesSource": true,
+      "macMatchesSource": true,
+      "windowsMatchesSource": true
+    },
+    {
+      "path": "desktop/main.cjs",
+      "bytes": 6088,
+      "sha256": "70ef65772f8f6390212190299348873b24b7b390a559049dd3a129c78ba301cb",
+      "stagingMatchesSource": true,
+      "macMatchesSource": true,
+      "windowsMatchesSource": true
+    },
+    {
+      "path": "desktop/security.cjs",
+      "bytes": 1839,
+      "sha256": "df896d0e2c572d4d1a3b5f0a46df5c910d9f6c2183cf67bddb7f5c2c5abf06a0",
+      "stagingMatchesSource": true,
+      "macMatchesSource": true,
+      "windowsMatchesSource": true
+    }
+  ],
+  "macAsar": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-111-dmg-xsg7v2ng/Mental Arithmetic.app/Contents/Resources/app.asar",
+  "winAsar": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-NORcdm/win-unpacked/resources/app.asar",
+  "packagedVersionMatches": true,
+  "stagingDependencyLockSHA256": "51d4ddfd9ee081b2a296976e6a2be60baf49f8cf8c4b25257a6a350abe10f86d",
+  "sourceDependencyLockSHA256": "51d4ddfd9ee081b2a296976e6a2be60baf49f8cf8c4b25257a6a350abe10f86d"
+}

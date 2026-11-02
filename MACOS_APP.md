@@ -1,10 +1,12 @@
 # Mental Arithmetic for macOS
 
+**1.1.1 interface update:** the lesson-help button now reads **? Click Here to Learn How!**. See [the update report](verification/HELP_BUTTON_UPDATE.md) for current checks and screenshots. Prior detailed verification reports remain as the 1.1.0 baseline.
+
 This desktop build contains the same Learn and Practice application as the website, packaged with its own runtime. It runs offline, without Node.js, npm, a browser tab or a local HTTP server on the user's computer.
 
 ## Open or install
 
-Use **Mental-Arithmetic-1.1.0-macOS-arm64.dmg**. Open the disk image and drag **Mental Arithmetic.app** to **Applications**, then open it there. The alternative ZIP contains the same standalone app bundle.
+Use **Mental-Arithmetic-1.1.1-macOS-arm64.dmg**. Open the disk image and drag **Mental Arithmetic.app** to **Applications**, then open it there. The alternative ZIP contains the same standalone app bundle.
 
 This build targets **Apple silicon Macs**, with **macOS 13.0 or later** required by the bundled runtime. It was built and tested on this Apple silicon Mac running macOS 27.2. It is not an Intel Mac or Windows build.
 

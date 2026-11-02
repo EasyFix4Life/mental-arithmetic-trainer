@@ -1,14 +1,16 @@
-# Mental Arithmetic — 1.1.0
+# Mental Arithmetic — 1.1.1
 
-Mental arithmetic lessons and ten-problem Practice for **web, macOS, Windows 10/11, Android, iPhone and iPad**. All versions include addition and multiplication with **one-, two- and three-digit operands**. Each of the six Learn categories has complete instructions, random examples, digit highlights, carry steps and a final answer. Addition uses operands above and below one another, aligned by place value. The owner's confirmed **12 × 12 = 144** and **18 × 18 = 324** demonstrations remain available unchanged.
+**1.1.1 interface update:** the lesson-help button now reads **? Click Here to Learn How!**. See [the update report](verification/HELP_BUTTON_UPDATE.md) for current checks and screenshots. Prior detailed verification reports remain as the 1.1.0 baseline.
+
+Mental arithmetic lessons and ten-problem Practice for **web, macOS, Windows 10/11, Android, iPhone and iPad**. All versions include addition and multiplication with **one-, two- and three-digit operands**. Each of the six Learn categories has complete instructions, random examples, digit highlights, carry steps and a final answer. The prominent **? Click Here to Learn How!** button opens the walkthrough in every lesson. Addition uses operands above and below one another, aligned by place value. The owner's confirmed **12 × 12 = 144** and **18 × 18 = 324** demonstrations remain available unchanged.
 
 Practice preserves the original behavior: ten unique unordered operand pairs, large Arial numerals on sepia, automatic submission at the expected digit length, immediate advancement after correct and incorrect entries, a live timer beside the bottom-right answer field, and the previous time in black or red at the upper left. A completed round shows score out of ten and maximum, minimum and average answer times. Each new round starts manually. Learn remains separate from active timed Practice.
 
-There is no backend, account, advertisement, analytics, saved learner history, explanation or mistake review during Practice. The apps run offline. No website deployment or App Store/Play Store submission is included.
+There is no backend, account, advertisement, analytics, saved learner history, explanation or mistake review during Practice. The apps run offline. The web application is also live at **https://whoami.school/** through its existing Cloudflare Pages project. App Store/Play Store submission is not included.
 
 ## Downloads and platform guides
 
-The private GitHub repository is [EasyFix4Life/mental-arithmetic-trainer](https://github.com/EasyFix4Life/mental-arithmetic-trainer). The [v1.1.0 release](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/tag/v1.1.0) carries the downloadable packages once uploaded. Local packages are also in the parent `outputs` folder.
+The private GitHub repository is [EasyFix4Life/mental-arithmetic-trainer](https://github.com/EasyFix4Life/mental-arithmetic-trainer). The [v1.1.1 release](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/tag/v1.1.1) carries the downloadable packages once uploaded. Local packages are also in the parent `outputs` folder.
 
 | Platform | Package | Guide |
 | --- | --- | --- |
@@ -31,7 +33,7 @@ npm run dev
 
 Open **http://127.0.0.1:5173/**. The server listens on this computer's loopback interface. Stop it with Ctrl+C. If 5173 is occupied, use `npm run dev -- --port 5174` and the printed URL. Browser tests expect port 5173.
 
-Choose **Learn**, then any lesson. Each selection begins with a random example. **New random example** avoids immediately repeating the same operand pair, including its reversal. The ranges are 1–9, 10–99 and 100–999. Open **?** for the walkthrough, then use Next, Back or its navigation buttons. Two-digit multiplication keeps **First → Inside → Outside → Last → Final answer**. Other lessons use neutral Step labels; the carry screens precede the final answer. The fixed 12 × 12 and 18 × 18 examples remain in the two-digit multiplication selector.
+Choose **Learn**, then any lesson. Each selection begins with a random example. **New random example** avoids immediately repeating the same operand pair, including its reversal. The ranges are 1–9, 10–99 and 100–999. Choose **? Click Here to Learn How!** for the walkthrough, then use Next, Back or its navigation buttons. Two-digit multiplication keeps **First → Inside → Outside → Last → Final answer**. Other lessons use neutral Step labels; the carry screens precede the final answer. The fixed 12 × 12 and 18 × 18 examples remain in the two-digit multiplication selector.
 
 Choose **Practice**, select an operation and digit count, then **Start**. Type digits; the expected final digit submits without Enter. Learn navigation is hidden during the round. After ten submissions, score and timing appear; **Start Another Round** starts the next round. Visiting Learn between rounds preserves selected settings and the completed result.
 
@@ -97,4 +99,4 @@ The original handoff's restrictions on missing scripts and three-digit instructi
 
 ## Verification boundaries
 
-See [verification/TEST_RESULTS.md](verification/TEST_RESULTS.md) for current results and the platform reports beside it. Packaged macOS and Android behavior is tested locally. Windows archive/executable integrity and shared frontend bytes are verified, but Windows 10/11 runtime installation and display scaling still need a Windows host. The native iOS app builds, launches and has separate core/integration evidence; Xcode's service-hub test-runner failure and simulator limitations are recorded explicitly. No claim of physical iPhone/iPad testing or App Store approval is made.
+See [verification/HELP_BUTTON_UPDATE.md](verification/HELP_BUTTON_UPDATE.md) for the 1.1.1 interface update and [verification/TEST_RESULTS.md](verification/TEST_RESULTS.md) for the 1.1.0 baseline results and the platform reports beside it. Packaged macOS and Android behavior is tested locally. Windows archive/executable integrity and shared frontend bytes are verified, but Windows 10/11 runtime installation and display scaling still need a Windows host. The native iOS app builds, launches and has separate core/integration evidence; Xcode's service-hub test-runner failure and simulator limitations are recorded explicitly. No claim of physical iPhone/iPad testing or App Store approval is made.

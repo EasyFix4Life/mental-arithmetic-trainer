@@ -1,0 +1,2092 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.11.1/bin/node",
+      "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/node_modules/.bin/playwright",
+      "test",
+      "--workers=4",
+      "--reporter=list,json"
+    ],
+    "configFile": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/playwright.config.ts",
+    "rootDir": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "name": "desktop",
+        "testDir": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/tests/browser",
+        "snapshotDir": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/tests/browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "trace": "retain-on-failure",
+          "channel": "chrome",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "name": "mobile",
+        "testDir": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/tests/browser",
+        "snapshotDir": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/mental-arithmetic-trainer/tests/browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "trace": "retain-on-failure",
+          "channel": "chrome",
+          "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Mobile/15E148 Safari/604.1",
+          "viewport": {
+            "width": 390,
+            "height": 664
+          },
+          "screen": {
+            "width": 390,
+            "height": 844
+          },
+          "deviceScaleFactor": 3,
+          "isMobile": true,
+          "hasTouch": true,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "mobile"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 4,
+    "webServer": {
+      "command": "npm run dev",
+      "url": "http://127.0.0.1:5173",
+      "reuseExistingServer": true,
+      "timeout": 30000
+    }
+  },
+  "suites": [
+    {
+      "title": "learn.spec.ts",
+      "file": "learn.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "both modes are accessible and all six lessons follow the original order plus three-digit extensions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 847,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:25.339Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-d5ad6182210c64b86bb6",
+          "file": "learn.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "addition is stacked and multiplication is horizontal, with large Arial operands on sepia",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1771,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:25.340Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-2ab8ec937690e919b5fa",
+          "file": "learn.spec.ts",
+          "line": 45,
+          "column": 1
+        },
+        {
+          "title": "prominent Learn How button supports keyboard activation, named walkthrough and focus return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 876,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:25.339Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-c2e9880c285492d4fa3b",
+          "file": "learn.spec.ts",
+          "line": 87,
+          "column": 1
+        },
+        {
+          "title": "Learn How button and operands stay separate and readable at narrow widths in all six lessons",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 1514,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:25.341Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-e0aa08457bbad28f6f1b",
+          "file": "learn.spec.ts",
+          "line": 122,
+          "column": 1
+        },
+        {
+          "title": "all six lessons have complete instructions and a correct final answer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1169,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:30.179Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-bcb5432c9fcb84b329ce",
+          "file": "learn.spec.ts",
+          "line": 157,
+          "column": 1
+        },
+        {
+          "title": "all six lessons open with random in-range operands and can request another example without starting Practice",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 2627,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:30.214Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-74cff15bf3f39b259516",
+          "file": "learn.spec.ts",
+          "line": 175,
+          "column": 1
+        },
+        {
+          "title": "a random asymmetric example applies First, Inside, Outside and Last with both carries and its final answer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 836,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:30.844Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-766da0053269f97a39cb",
+          "file": "learn.spec.ts",
+          "line": 229,
+          "column": 1
+        },
+        {
+          "title": "confirmed 12 × 12 walkthrough uses exact digit pairs and resolves the middle sum to 144",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 892,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:31.101Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-1795191357d4d5bec6d5",
+          "file": "learn.spec.ts",
+          "line": 295,
+          "column": 1
+        },
+        {
+          "title": "confirmed 18 × 18 trace carries 6 into 16, then 2 into First, to complete 324",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 835,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:31.355Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-39567ab8b788fccb3feb",
+          "file": "learn.spec.ts",
+          "line": 365,
+          "column": 1
+        },
+        {
+          "title": "changing confirmed examples resets the walkthrough and clears future digits and carries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 378,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:31.686Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-4caef8c26f631bf1c0e5",
+          "file": "learn.spec.ts",
+          "line": 448,
+          "column": 1
+        },
+        {
+          "title": "Learn never starts a practice timer or score; completed scores survive Learn and practice keeps immediate no-review progression",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 750,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:32.001Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-4e4dda5dab488664bc34",
+          "file": "learn.spec.ts",
+          "line": 483,
+          "column": 1
+        },
+        {
+          "title": "generic renderer highlights only supplied references and displays verified products, sums, carries and progressive digits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 332,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:32.072Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-c0fe561e5441f22d9f03",
+          "file": "learn.spec.ts",
+          "line": 530,
+          "column": 1
+        },
+        {
+          "title": "addition uses the same renderer without forced multiplication stage names or implied carries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 236,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:32.198Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-ff5995e62f2ecce31999",
+          "file": "learn.spec.ts",
+          "line": 590,
+          "column": 1
+        },
+        {
+          "title": "58 above 67 resolves carries to 125 using stacked sums",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 472,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:32.410Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-07a92191149871b49485",
+          "file": "learn.spec.ts",
+          "line": 630,
+          "column": 1
+        },
+        {
+          "title": "three-digit multiplication preserves the nine terms and resolves 123 times 456 to 56088",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 714,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:32.439Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-a23f64bd4916b8f5b977",
+          "file": "learn.spec.ts",
+          "line": 656,
+          "column": 1
+        },
+        {
+          "title": "both modes are accessible and all six lessons follow the original order plus three-digit extensions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 435,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:35.129Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-b2287a840290ae90aa8d",
+          "file": "learn.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "addition is stacked and multiplication is horizontal, with large Arial operands on sepia",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 660,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:35.169Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-b79a1823d10909faa0cc",
+          "file": "learn.spec.ts",
+          "line": 45,
+          "column": 1
+        },
+        {
+          "title": "prominent Learn How button supports keyboard activation, named walkthrough and focus return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 468,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:35.220Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-dd6c2b706d123d7a15f3",
+          "file": "learn.spec.ts",
+          "line": 87,
+          "column": 1
+        },
+        {
+          "title": "Learn How button and operands stay separate and readable at narrow widths in all six lessons",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 971,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:35.810Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-fe16ab0889e86e48978f",
+          "file": "learn.spec.ts",
+          "line": 122,
+          "column": 1
+        },
+        {
+          "title": "all six lessons have complete instructions and a correct final answer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 1116,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:35.968Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-ff74162405632a72a4f4",
+          "file": "learn.spec.ts",
+          "line": 157,
+          "column": 1
+        },
+        {
+          "title": "all six lessons open with random in-range operands and can request another example without starting Practice",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2302,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:36.108Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-a5e4b23921d55f018a80",
+          "file": "learn.spec.ts",
+          "line": 175,
+          "column": 1
+        },
+        {
+          "title": "a random asymmetric example applies First, Inside, Outside and Last with both carries and its final answer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 772,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:36.789Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-0bbec5bd1bdc1bd6cb1a",
+          "file": "learn.spec.ts",
+          "line": 229,
+          "column": 1
+        },
+        {
+          "title": "confirmed 12 × 12 walkthrough uses exact digit pairs and resolves the middle sum to 144",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 614,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:37.092Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-6ea04cb802961e1a4c3f",
+          "file": "learn.spec.ts",
+          "line": 295,
+          "column": 1
+        },
+        {
+          "title": "confirmed 18 × 18 trace carries 6 into 16, then 2 into First, to complete 324",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 968,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:37.567Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-c049574fa47e63114916",
+          "file": "learn.spec.ts",
+          "line": 365,
+          "column": 1
+        },
+        {
+          "title": "changing confirmed examples resets the walkthrough and clears future digits and carries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 580,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:38.137Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-a1b7353709cb863be463",
+          "file": "learn.spec.ts",
+          "line": 448,
+          "column": 1
+        },
+        {
+          "title": "Learn never starts a practice timer or score; completed scores survive Learn and practice keeps immediate no-review progression",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 630,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:37.713Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-5e7731c75ae74fcfc804",
+          "file": "learn.spec.ts",
+          "line": 483,
+          "column": 1
+        },
+        {
+          "title": "generic renderer highlights only supplied references and displays verified products, sums, carries and progressive digits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 409,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:38.352Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-6ffa5febaaabf325f441",
+          "file": "learn.spec.ts",
+          "line": 530,
+          "column": 1
+        },
+        {
+          "title": "addition uses the same renderer without forced multiplication stage names or implied carries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 278,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:38.418Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-f38a2d96c95817a5e666",
+          "file": "learn.spec.ts",
+          "line": 590,
+          "column": 1
+        },
+        {
+          "title": "58 above 67 resolves carries to 125 using stacked sums",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 549,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:38.544Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-fba40f21485efe706f45",
+          "file": "learn.spec.ts",
+          "line": 630,
+          "column": 1
+        },
+        {
+          "title": "three-digit multiplication preserves the nine terms and resolves 123 times 456 to 56088",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 791,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:38.701Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "189e4fdbb486cae0c630-ce4ec4e9b744b7e62a49",
+          "file": "learn.spec.ts",
+          "line": 656,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "trainer.spec.ts",
+      "file": "trainer.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "setup contains only the specified choices and waits for manual Start",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 203,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:32.763Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-2dab851344494b7e7aa8",
+          "file": "trainer.spec.ts",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "addition, 1 digit operands: ten unique problems, automatic scoring and manual restart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 667,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:32.856Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-74564eb648063fb1988d",
+          "file": "trainer.spec.ts",
+          "line": 95,
+          "column": 5
+        },
+        {
+          "title": "addition, 2 digit operands: ten unique problems, automatic scoring and manual restart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 658,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:32.895Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-df5c6bdf76af74530f5e",
+          "file": "trainer.spec.ts",
+          "line": 95,
+          "column": 5
+        },
+        {
+          "title": "addition, 3 digit operands: ten unique problems, automatic scoring and manual restart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 697,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:32.974Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-0325a2012064fe179f89",
+          "file": "trainer.spec.ts",
+          "line": 95,
+          "column": 5
+        },
+        {
+          "title": "multiplication, 1 digit operands: ten unique problems, automatic scoring and manual restart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 673,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:33.165Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-a644c2c59e0d49d6454f",
+          "file": "trainer.spec.ts",
+          "line": 95,
+          "column": 5
+        },
+        {
+          "title": "multiplication, 2 digit operands: ten unique problems, automatic scoring and manual restart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 637,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:33.530Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-911a787b7568758d733f",
+          "file": "trainer.spec.ts",
+          "line": 95,
+          "column": 5
+        },
+        {
+          "title": "multiplication, 3 digit operands: ten unique problems, automatic scoring and manual restart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 640,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:33.559Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-9824dec69993c4492723",
+          "file": "trainer.spec.ts",
+          "line": 95,
+          "column": 5
+        },
+        {
+          "title": "partial entry, Enter, Backspace, timers and completed-round minimum, maximum and raw-duration average",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4021,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:33.680Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-9e522720b3d382938565",
+          "file": "trainer.spec.ts",
+          "line": 142,
+          "column": 1
+        },
+        {
+          "title": "invalid characters are rejected as a transaction rather than stripped into an answer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 379,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:33.846Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-b76a60a289026cd25fd0",
+          "file": "trainer.spec.ts",
+          "line": 224,
+          "column": 1
+        },
+        {
+          "title": "leading zeros and atomic overlong input are each wrong and advance exactly once",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 489,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:34.175Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-10faa64362606927d218",
+          "file": "trainer.spec.ts",
+          "line": 247,
+          "column": 1
+        },
+        {
+          "title": "a separate physical key after auto-submit starts the next answer under the provisional policy",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 275,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:34.205Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-a1a3730e86a71e64cf06",
+          "file": "trainer.spec.ts",
+          "line": 268,
+          "column": 1
+        },
+        {
+          "title": "ten incorrect entries produce zero and Enter cannot submit a completed round",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 508,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:34.231Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-998b38a2baa04b51b974",
+          "file": "trainer.spec.ts",
+          "line": 281,
+          "column": 1
+        },
+        {
+          "title": "specified font, sepia, timer positions and no overflow at the configured viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 270,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:34.486Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-a574d1cfce2a29d38560",
+          "file": "trainer.spec.ts",
+          "line": 291,
+          "column": 1
+        },
+        {
+          "title": "setup contains only the specified choices and waits for manual Start",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 216,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:38.771Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-f3d3d61c870ed0738721",
+          "file": "trainer.spec.ts",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "addition, 1 digit operands: ten unique problems, automatic scoring and manual restart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 630,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:38.945Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-6f415fa58381bb61b7aa",
+          "file": "trainer.spec.ts",
+          "line": 95,
+          "column": 5
+        },
+        {
+          "title": "addition, 2 digit operands: ten unique problems, automatic scoring and manual restart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 646,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:38.993Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-1dd922a3557378869d0c",
+          "file": "trainer.spec.ts",
+          "line": 95,
+          "column": 5
+        },
+        {
+          "title": "addition, 3 digit operands: ten unique problems, automatic scoring and manual restart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 677,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:39.107Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-ac83d07025d2f9626c90",
+          "file": "trainer.spec.ts",
+          "line": 95,
+          "column": 5
+        },
+        {
+          "title": "multiplication, 1 digit operands: ten unique problems, automatic scoring and manual restart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 630,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:39.504Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-c44b90275c421b3f867b",
+          "file": "trainer.spec.ts",
+          "line": 95,
+          "column": 5
+        },
+        {
+          "title": "multiplication, 2 digit operands: ten unique problems, automatic scoring and manual restart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 643,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:39.583Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-4c49cfb85729f71430c2",
+          "file": "trainer.spec.ts",
+          "line": 95,
+          "column": 5
+        },
+        {
+          "title": "multiplication, 3 digit operands: ten unique problems, automatic scoring and manual restart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 618,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:39.646Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-eb4e1002e768b3b03f31",
+          "file": "trainer.spec.ts",
+          "line": 95,
+          "column": 5
+        },
+        {
+          "title": "partial entry, Enter, Backspace, timers and completed-round minimum, maximum and raw-duration average",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 4231,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:39.792Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-5284219995d42798ca39",
+          "file": "trainer.spec.ts",
+          "line": 142,
+          "column": 1
+        },
+        {
+          "title": "invalid characters are rejected as a transaction rather than stripped into an answer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 374,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:40.139Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-782ef5353ee0ed72a0e7",
+          "file": "trainer.spec.ts",
+          "line": 224,
+          "column": 1
+        },
+        {
+          "title": "leading zeros and atomic overlong input are each wrong and advance exactly once",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 488,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:40.235Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-82e7dcb311486774ee35",
+          "file": "trainer.spec.ts",
+          "line": 247,
+          "column": 1
+        },
+        {
+          "title": "a separate physical key after auto-submit starts the next answer under the provisional policy",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 278,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:40.272Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-9896c6421df697f9f697",
+          "file": "trainer.spec.ts",
+          "line": 268,
+          "column": 1
+        },
+        {
+          "title": "ten incorrect entries produce zero and Enter cannot submit a completed round",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 421,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:40.519Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-69bf29b9be383a0506b9",
+          "file": "trainer.spec.ts",
+          "line": 281,
+          "column": 1
+        },
+        {
+          "title": "specified font, sepia, timer positions and no overflow at the configured viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 328,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T15:39:40.556Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3532d8eb4340af2be2c8-fee324a5d31821047aa6",
+          "file": "trainer.spec.ts",
+          "line": 291,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-02T15:39:24.227Z",
+    "duration": 19959.469,
+    "expected": 56,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

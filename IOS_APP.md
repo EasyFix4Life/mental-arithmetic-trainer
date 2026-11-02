@@ -1,4 +1,6 @@
-# iPhone and iPad app — 1.1.0
+# iPhone and iPad app — 1.1.1
+
+**1.1.1 interface update:** the lesson-help button now reads **? Click Here to Learn How!**. See [the update report](verification/HELP_BUTTON_UPDATE.md) for current checks and screenshots. Prior detailed verification reports remain as the 1.1.0 baseline.
 
 The iOS app is a native Swift/UIKit application in `ios/MentalArithmetic.xcodeproj`. It uses Arial numerals, the existing sepia presentation, all six instructional categories with random examples, stacked addition, and ten-question Practice with automatic submission and minimum/maximum/average timing. It runs offline and contains no WebView, third-party SDK, account, analytics or network service. The minimum deployment target is iOS/iPadOS 17.0.
 
@@ -23,12 +25,12 @@ The first command packages a Release simulator `.app`; the second packages an **
 
 ## Supplied files
 
-- `Mental-Arithmetic-1.1.0-iOS-unsigned-archive.zip`: successful generic iOS Release archive, arm64, including the native app and archive metadata. Extract it before opening the `.xcarchive` in Xcode Organizer. This is **not a signed IPA** and cannot be installed directly on a physical iPhone.
-- `Mental-Arithmetic-1.1.0-iOS-Simulator-app.zip`: Release simulator app, for an Apple silicon Mac with an appropriate simulator runtime. This cannot be installed on a physical iPhone.
-- `Mental-Arithmetic-1.1.0-all-platforms-source.zip`: complete editable source, Xcode project, original supplied requirements, tests, guides and submission drafts.
-- `Mental-Arithmetic-1.1.0-iOS-submission-files.zip`: prepared App Store metadata, privacy/rating drafts, reviewer notes, icon and genuine simulator screenshots where included in the screenshot manifest.
+- `Mental-Arithmetic-1.1.1-iOS-unsigned-archive.zip`: successful generic iOS Release archive, arm64, including the native app and archive metadata. Extract it before opening the `.xcarchive` in Xcode Organizer. This is **not a signed IPA** and cannot be installed directly on a physical iPhone.
+- `Mental-Arithmetic-1.1.1-iOS-Simulator-app.zip`: Release simulator app, for an Apple silicon Mac with an appropriate simulator runtime. This cannot be installed on a physical iPhone.
+- `Mental-Arithmetic-1.1.1-all-platforms-source.zip`: complete editable source, Xcode project, original supplied requirements, tests, guides and submission drafts.
+- `Mental-Arithmetic-1.1.1-iOS-submission-files.zip`: prepared App Store metadata, privacy/rating drafts, reviewer notes, icon and genuine simulator screenshots where included in the screenshot manifest.
 
-The device archive has no development team or signing identity assigned. The provisional bundle identifier is `local.jeff.mentalarithmetic`; replace it with an identifier registered to your team before distribution. Version is **1.1.0**, build **1**.
+The device archive has no development team or signing identity assigned. The provisional bundle identifier is `local.jeff.mentalarithmetic`; replace it with an identifier registered to your team before distribution. Version is **1.1.1**, build **2**.
 
 ## Tests
 
