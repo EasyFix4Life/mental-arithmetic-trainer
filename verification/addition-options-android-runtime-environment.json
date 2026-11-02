@@ -1,0 +1,66 @@
+{
+  "verifiedAt": "2026-11-02T18:44:50.394315+00:00",
+  "serial": "emulator-5556",
+  "disposableEmulator": true,
+  "androidRelease": "17",
+  "sdkInt": 37,
+  "model": "sdk_gphone64_arm64",
+  "webViewPackage": "com.google.android.webview",
+  "webViewVersion": "145.0.7632.218",
+  "buildFingerprint": "google/sdk_gphone64_arm64/emu64a:17/CE2A.260420.051.A3/16571990:userdebug/dev-keys",
+  "screen": "Physical size: 1080x2400; Physical density: 420",
+  "releaseApk": {
+    "path": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.2-Android.apk",
+    "bytes": 665996,
+    "sha256": "276b4903a4c869fae6357b014b9eb59f44475923c0d8c3361604902704bff507"
+  },
+  "signerSha256": "5bee5bb4046742472cc391fae0f29b4589bdf42fdd27a4a041c0a241347139dc",
+  "sameSigningCertificateAsPreviousRelease": true,
+  "runtimeReport": "addition-options-android-runtime/android-runtime-results.json",
+  "passed": 9,
+  "failed": 0,
+  "physicalDevicesModified": false,
+  "sourceFilesChanged": [
+    "ANDROID_APP.md",
+    "android/app/build.gradle.kts",
+    "android/app/src/androidTest/java/local/jeff/mentalarithmetic/AndroidTestRunner.java"
+  ],
+  "screenshots": [
+    {
+      "file": "addition-options-android-runtime/android-learn-addition.png",
+      "bytes": 129887,
+      "sha256": "55538074e2b1b093f90f69fb51b20b5a5cae80a4b1ccb4fb0ca4138c767ff8f3"
+    },
+    {
+      "file": "addition-options-android-runtime/android-learn-confirmed.png",
+      "bytes": 141561,
+      "sha256": "aa2b1b66a1c482ec6df658c8f1cd75ecf13f832c68396578e6e946c4d6acbb9c"
+    },
+    {
+      "file": "addition-options-android-runtime/android-learn-help-button.png",
+      "bytes": 126181,
+      "sha256": "eaa14deaaae6bfb21299b159d1a7c36095ee8cc5401a372293713f052a800292"
+    },
+    {
+      "file": "addition-options-android-runtime/android-learn-three-digit.png",
+      "bytes": 156380,
+      "sha256": "d19056b314a62fd4af43c85d37ddf83810ce61d25ca7ad2925c65a34ae54dacc"
+    },
+    {
+      "file": "addition-options-android-runtime/android-practice-keyboard.png",
+      "bytes": 84569,
+      "sha256": "112be6c20528ed64c81f75add2b5121fd9ea88e03574cc93c9fead99c0b6709d"
+    },
+    {
+      "file": "addition-options-android-runtime/android-round-timing.png",
+      "bytes": 77825,
+      "sha256": "3a2a38625d30760d5d9f14469e62041fa87d3b5b1ae104886b3815d95b6d63ed"
+    },
+    {
+      "file": "addition-options-android-runtime/android-setup.png",
+      "bytes": 57456,
+      "sha256": "9292615213edc49b306b625268fde7fc389e39c920c20408cd0584c8440010e9"
+    }
+  ],
+  "disposableEmulatorStoppedAfterVerification": true
+}

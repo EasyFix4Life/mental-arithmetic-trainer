@@ -69,9 +69,9 @@ final class MentalArithmeticUITests: XCTestCase {
         XCTAssertFalse(app.staticTexts["previous-time"].exists)
     }
 
-    func test02AllSixPracticeConfigurationsUseTheirSelectedRanges() throws {
+    func test02FourPracticeConfigurationsUseTheirSelectedRanges() throws {
         for operation in ["Addition", "Multiplication"] {
-            for digits in 1...3 {
+            for digits in (operation == "Addition" || operation == "addition" ? [2] : [1, 2, 3]) {
                 app.terminate()
                 app.launch()
                 app.segmentedControls["operation-control"].buttons[operation].tap()
@@ -124,10 +124,10 @@ final class MentalArithmeticUITests: XCTestCase {
         capture("05-confirmed-multiplication-final-answer")
     }
 
-    func test04AllSixLessonPagesGenerateNewExamples() throws {
+    func test04FourAvailableLessonPagesGenerateNewExamples() throws {
         app.segmentedControls["mode-control"].buttons["Learn"].tap()
         for operation in ["addition", "multiplication"] {
-            for digits in 1...3 {
+            for digits in (operation == "Addition" || operation == "addition" ? [2] : [1, 2, 3]) {
                 let lessonButton = app.buttons["lesson-\(operation)-\(digits)"]
                 reveal(lessonButton, direction: .down)
                 lessonButton.tap()
@@ -207,10 +207,10 @@ final class MentalArithmeticUITests: XCTestCase {
         capture("07-three-digit-multiplication-final-answer")
     }
 
-    func test08AllSixLessonPagesProvideWorkingInstructionsAndFinalAnswers() throws {
+    func test08FourAvailableLessonPagesProvideWorkingInstructionsAndFinalAnswers() throws {
         app.segmentedControls["mode-control"].buttons["Learn"].tap()
         for operation in ["addition", "multiplication"] {
-            for digits in 1...3 {
+            for digits in (operation == "Addition" || operation == "addition" ? [2] : [1, 2, 3]) {
                 let lesson = app.buttons["lesson-\(operation)-\(digits)"]
                 reveal(lesson, direction: .down)
                 lesson.tap()
@@ -233,12 +233,31 @@ final class MentalArithmeticUITests: XCTestCase {
                 let final = app.staticTexts["final-answer-expression"]
                 XCTAssertTrue(final.exists)
                 XCTAssertTrue(final.label.hasSuffix("equals \(expected)"))
-                if operation == "addition" && digits == 3 {
+                if operation == "addition" && digits == 2 {
                     reveal(final)
-                    capture("08-three-digit-addition-final-answer")
+                    capture("08-two-digit-addition-final-answer")
                 }
             }
         }
+    }
+
+    func test09OnlyTwoDigitAdditionIsAvailableAfterSwitchingFromMultiplication() throws {
+        let operation = app.segmentedControls["operation-control"]
+        let digits = app.segmentedControls["digit-count-control"]
+        XCTAssertEqual(digits.buttons.allElementsBoundByIndex.map(\.label), ["2"])
+        for prior in ["1", "3"] {
+            operation.buttons["Multiplication"].tap()
+            XCTAssertEqual(digits.buttons.allElementsBoundByIndex.map(\.label), ["1", "2", "3"])
+            digits.buttons[prior].tap()
+            operation.buttons["Addition"].tap()
+            XCTAssertEqual(digits.buttons.allElementsBoundByIndex.map(\.label), ["2"])
+            XCTAssertTrue(digits.buttons["2"].isSelected)
+        }
+        app.segmentedControls["mode-control"].buttons["Learn"].tap()
+        XCTAssertFalse(app.buttons["lesson-addition-1"].exists)
+        XCTAssertFalse(app.buttons["lesson-addition-3"].exists)
+        XCTAssertTrue(app.buttons["lesson-addition-2"].exists)
+        for count in 1...3 { XCTAssertTrue(app.buttons["lesson-multiplication-\(count)"].exists) }
     }
 
     private func selectLearnLesson(_ id: String) {

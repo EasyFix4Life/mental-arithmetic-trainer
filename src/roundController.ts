@@ -1,4 +1,5 @@
 import { assessAnswer } from './answerPolicy';
+import { DEFAULT_SETTINGS, isAvailableSettings } from './availableOptions';
 import { generateRound, operandRange } from './generateRound';
 import { createTimer, type Clock, type Timer } from './timer';
 import {
@@ -54,7 +55,7 @@ export class RoundController {
   private durationsMs: number[] = [];
   private state: RoundSnapshot = Object.freeze({
     phase: 'idle',
-    settings: Object.freeze({ operation: 'addition', digitCount: 1 }),
+    settings: DEFAULT_SETTINGS,
     problem: null,
     index: 0,
     answeredCount: 0,
@@ -79,6 +80,9 @@ export class RoundController {
       throw new RangeError('Operation must be addition or multiplication.');
     }
     operandRange(settings.digitCount);
+    if (!isAvailableSettings(settings)) {
+      throw new RangeError('Addition practice supports two-digit operands only.');
+    }
     const generated = this.generate(settings.operation, settings.digitCount);
     validateRound(generated, settings);
     this.roundNumber += 1;

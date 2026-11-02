@@ -1,10 +1,9 @@
 import { expect, test, type Page } from '@playwright/test';
 
 const titles = [
-  'Single-digit addition', 'Single-digit multiplication', 'Two-digit addition', 'Two-digit multiplication',
-  'Three-digit addition', 'Three-digit multiplication',
+  'Single-digit multiplication', 'Two-digit addition', 'Two-digit multiplication', 'Three-digit multiplication',
 ];
-const lessonIds = ['addition-1', 'multiplication-1', 'addition-2', 'multiplication-2', 'addition-3', 'multiplication-3'];
+const lessonIds = ['multiplication-1', 'addition-2', 'multiplication-2', 'multiplication-3'];
 
 async function openLearn(page: Page, lessonId?: string) {
   await page.locator('#mode-learn').click();
@@ -24,7 +23,7 @@ test.beforeEach(async ({ page }) => {
   await page.goto('/');
 });
 
-test('both modes are accessible and all six lessons follow the original order plus three-digit extensions', async ({ page }) => {
+test('both modes are accessible and four available lessons preserve their relative order', async ({ page }, testInfo) => {
   await expect(page.locator('#mode-navigation')).toBeVisible();
   await expect(page.locator('#mode-learn')).toHaveAccessibleName('Learn');
   await expect(page.locator('#mode-practice')).toHaveAccessibleName('Practice');
@@ -35,6 +34,10 @@ test('both modes are accessible and all six lessons follow the original order pl
   expect(await page.locator('#lesson-catalog [data-lesson-id]').evaluateAll((elements) =>
     elements.map((element) => (element as HTMLElement).dataset.lessonId),
   )).toEqual(lessonIds);
+  await expect(page.locator('[data-lesson-id="addition-1"]')).toHaveCount(0);
+  await expect(page.locator('[data-lesson-id="addition-3"]')).toHaveCount(0);
+  await expect(page.locator('#lesson-title')).toHaveText('Two-digit addition');
+  await page.screenshot({ path: `verification/addition-options-${testInfo.project.name}-learn.png`, fullPage: true });
   await expect(page.locator('#learn-view')).not.toContainText(/children|age track/i);
   await page.locator('#mode-practice').click();
   await expect(page.locator('#practice-view')).toBeVisible();
@@ -49,7 +52,7 @@ test('addition is stacked and multiplication is horizontal, with large Arial ope
     await expect(page.locator('#lesson-title')).toHaveText(titles[index]!);
     const expression = page.locator('#learn-view .learn-expression').first();
     await expect(expression).toBeVisible();
-    await expect(expression).toContainText(index % 2 === 0 ? '+' : '×');
+    await expect(expression).toContainText(lessonIds[index]!.startsWith('addition-') ? '+' : '×');
     const layout = await expression.evaluate((element) => {
       const style = getComputedStyle(element);
       return {
@@ -63,7 +66,7 @@ test('addition is stacked and multiplication is horizontal, with large Arial ope
     });
     expect(layout.font).toMatch(/^Arial(?:,|$)/);
     expect(layout.fontSize).toBeGreaterThanOrEqual(testInfo.project.name === 'mobile' ? 40 : 48);
-    if (index % 2 === 0) {
+    if (lessonIds[index]!.startsWith('addition-')) {
       expect(layout.display).toBe('grid');
       expect(layout.children).toHaveLength(4);
       expect(layout.children[0]!.midY).toBeLessThan(layout.children[2]!.midY);
@@ -77,7 +80,7 @@ test('addition is stacked and multiplication is horizontal, with large Arial ope
       expect(layout.children[1]!.right).toBeLessThanOrEqual(layout.children[2]!.left);
       expect(Math.abs(layout.children[0]!.midY - layout.children[2]!.midY)).toBeLessThan(2);
     }
-    await expect(expression.locator('[data-digit-ref]')).toHaveCount((Math.floor(index / 2) + 1) * 2);
+    await expect(expression.locator('[data-digit-ref]')).toHaveCount(Number(lessonIds[index]!.split('-')[1]) * 2);
     await expect(expression.locator('.digit-highlight')).toHaveCount(0);
   }
   await expect(page.locator('html')).toHaveCSS('background-color', 'rgb(232, 215, 181)');
@@ -119,7 +122,7 @@ test('prominent Learn How button supports keyboard activation, named walkthrough
   await expect(help).toBeFocused();
 });
 
-test('Learn How button and operands stay separate and readable at narrow widths in all six lessons', async ({ page }, testInfo) => {
+test('Learn How button and operands stay separate and readable at narrow widths in all four lessons', async ({ page }, testInfo) => {
   await openLearn(page);
   for (const width of [280, 320, 390]) {
     await page.setViewportSize({ width, height: 844 });
@@ -154,12 +157,12 @@ test('Learn How button and operands stay separate and readable at narrow widths 
   }
 });
 
-test('all six lessons have complete instructions and a correct final answer', async ({ page }) => {
+test('all four lessons have complete instructions and a correct final answer', async ({ page }) => {
   await openLearn(page);
-  for (const [index, id] of lessonIds.entries()) {
+  for (const id of lessonIds) {
     await page.locator(`[data-lesson-id="${id}"]`).click();
     const values = (await page.locator('#lesson-expression .learn-operand').allTextContents()).map(Number);
-    const answer = String(index % 2 === 0 ? values[0]! + values[1]! : values[0]! * values[1]!);
+    const answer = String(id.startsWith('addition-') ? values[0]! + values[1]! : values[0]! * values[1]!);
     await openWalkthrough(page);
     await expect(page.locator('#walkthrough-status')).toBeHidden();
     await expect(page.locator('#walkthrough .step-operation')).toBeVisible();
@@ -172,12 +175,12 @@ test('all six lessons have complete instructions and a correct final answer', as
   }
 });
 
-test('all six lessons open with random in-range operands and can request another example without starting Practice', async ({ page }) => {
+test('all four lessons open with random in-range operands and can request another example without starting Practice', async ({ page }) => {
   // A constant RNG exercises the bounded immediate-repeat fallback as well as
   // ordinary generation; the UI must never hang or repeat a commuted pair.
   await page.evaluate(() => { Math.random = () => 0; });
   await openLearn(page);
-  for (const [index, id] of lessonIds.entries()) {
+  for (const id of lessonIds) {
     await page.locator(`[data-lesson-id="${id}"]`).click();
     const button = page.locator('#random-example');
     await expect(button).toBeVisible();
@@ -188,7 +191,7 @@ test('all six lessons open with random in-range operands and can request another
       const operands = await page.locator('#lesson-expression .learn-operand').allTextContents();
       expect(operands).toHaveLength(2);
       const values = operands.map(Number);
-      const digits = Math.floor(index / 2) + 1;
+      const digits = Number(id.split('-')[1]);
       const minimum = digits === 1 ? 1 : 10 ** (digits - 1);
       const maximum = 10 ** digits - 1;
       for (const value of values) {

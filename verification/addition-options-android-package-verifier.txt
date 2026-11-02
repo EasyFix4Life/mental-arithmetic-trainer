@@ -1,0 +1,4 @@
+Android 1.1.2: API 26 minimum / API 37 target, 18 CRC-checked APK members, verified signature and ZIP alignment.
+All 3 production frontend files match the APK byte-for-byte. No Android permissions or native ABI libraries are bundled.
+This package verification does not install or execute the APK.
+/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-addition-options-112-j1wm45u3/verification/android-artifacts.json

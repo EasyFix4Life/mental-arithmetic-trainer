@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://dl.google.com/android/repository/platform-37.0_r02.zip",
+    "bytes": 67281901,
+    "sha1": "ed8ebf7f8822a4de5686d427f237d2fa30ff7410",
+    "destination": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-addition-options-112-j1wm45u3/fresh-sdk/platforms/android-37.0",
+    "members": 11384,
+    "packageXmlPresent": false
+  },
+  {
+    "url": "https://dl.google.com/android/repository/build-tools_r37_macosx.zip",
+    "bytes": 81933386,
+    "sha1": "eb080751b2b2028eb3604f571027d6f7b3c46321",
+    "destination": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-addition-options-112-j1wm45u3/fresh-sdk/build-tools/37.0.0",
+    "members": 197,
+    "packageXmlPresent": false
+  }
+]

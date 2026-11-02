@@ -117,7 +117,17 @@ test('the native shell loads offline production assets with an isolated renderer
   expect(resources.styles[0]).toMatch(/^app:\/\/trainer\/assets\/.+\.css$/);
   expect(resources.observed.every((url) => url.startsWith('app://trainer/'))).toBe(true);
   await expect(window.locator('#operation option')).toHaveText(['Addition', 'Multiplication']);
-  await expect(window.locator('#digit-count option')).toHaveText(['1', '2', '3']);
+  await expect(window.locator('#digit-count option')).toHaveText(['2']);
+  await expect(window.locator('#digit-count')).toHaveValue('2');
+  await expect(window.locator('#app-downloads, #download-apps-link')).toHaveCount(0);
+  for (const previousDigits of ['1', '3']) {
+    await window.locator('#operation').selectOption('multiplication');
+    await expect(window.locator('#digit-count option')).toHaveText(['1', '2', '3']);
+    await window.locator('#digit-count').selectOption(previousDigits);
+    await window.locator('#operation').selectOption('addition');
+    await expect(window.locator('#digit-count option')).toHaveText(['2']);
+    await expect(window.locator('#digit-count')).toHaveValue('2');
+  }
   await expect(window.locator('html')).toHaveCSS('background-color', 'rgb(232, 215, 181)');
   await startRound(window, 'multiplication', 3);
   const first = await problem(window, 'multiplication');
@@ -150,8 +160,8 @@ test('the native shell loads offline production assets with an isolated renderer
 test('Learn preserves lesson order, authored digit selections, carry sequence and the final answer after Last', async ({ window }) => {
   await window.locator('#mode-learn').click();
   await expect(window.locator('#lesson-catalog [data-lesson-id]')).toHaveText([
-    'Single-digit addition', 'Single-digit multiplication', 'Two-digit addition', 'Two-digit multiplication',
-    'Three-digit addition', 'Three-digit multiplication',
+    'Single-digit multiplication', 'Two-digit addition', 'Two-digit multiplication',
+    'Three-digit multiplication',
   ]);
   await window.locator('[data-lesson-id="multiplication-2"]').click();
   await window.locator('#worked-example').selectOption('12-times-12');
@@ -216,12 +226,12 @@ test('Learn preserves lesson order, authored digit selections, carry sequence an
   await expect(window.locator('[data-stage-name="Last"]')).toHaveAttribute('aria-current', 'step');
 });
 
-test('native Learn provides full random instruction in all six lessons and preserves the confirmed multiplication carry method', async ({ window }) => {
+test('native Learn provides full random instruction in all four available lessons and preserves the confirmed multiplication carry method', async ({ window }) => {
   await window.locator('#mode-learn').click();
   for (const [lesson, operation, digits] of [
-    ['addition-1', 'addition', 1], ['multiplication-1', 'multiplication', 1],
+    ['multiplication-1', 'multiplication', 1],
     ['addition-2', 'addition', 2], ['multiplication-2', 'multiplication', 2],
-    ['addition-3', 'addition', 3], ['multiplication-3', 'multiplication', 3],
+    ['multiplication-3', 'multiplication', 3],
   ] as const) {
     await window.locator(`[data-lesson-id="${lesson}"]`).click();
     await expect(window.locator('#random-example')).toHaveAccessibleName('New random example');
@@ -382,9 +392,9 @@ test('Practice keeps input and live timers, then shows all ten raw answer times 
   await expect(window.locator('#answer')).toBeFocused();
 });
 
-test('all six Practice configurations produce ten unique in-range problems and a score out of ten', async ({ window }) => {
+test('all four available Practice configurations produce ten unique in-range problems and a score out of ten', async ({ window }) => {
   for (const operation of ['addition', 'multiplication'] as const) {
-    for (const digits of [1, 2, 3] as const) {
+    for (const digits of operation === 'addition' ? [2] as const : [1, 2, 3] as const) {
       await startRound(window, operation, digits);
       if (operation === 'addition') {
         await expect(window.locator('#problem')).toHaveClass(/vertical-addition/);

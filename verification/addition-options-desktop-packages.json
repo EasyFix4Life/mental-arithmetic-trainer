@@ -1,0 +1,39 @@
+{
+  "version": "1.1.2",
+  "macOS": {
+    "zipCRCpassed": true,
+    "zipAndDMGAppAsarIdentical": true,
+    "bundleVersion": "1.1.2",
+    "codeSignatureVerifiedDeepStrict": true,
+    "signature": "ad hoc",
+    "notarized": false,
+    "architecture": "arm64"
+  },
+  "artifacts": [
+    {
+      "name": "Mental-Arithmetic-1.1.2-macOS-arm64.dmg",
+      "bytes": 119192764,
+      "sha256": "711c4481fb4cd7514fdf353bdeffd675b35cd1d91d9c87d7ba61bc9edf9655d5"
+    },
+    {
+      "name": "Mental-Arithmetic-1.1.2-macOS-arm64.zip",
+      "bytes": 115783224,
+      "sha256": "6c182a05e3525500ec393560c9884a848b617086ccee1c0f17e2e1a651c8c310"
+    },
+    {
+      "name": "Mental-Arithmetic-1.1.2-Windows-x64-Setup.exe",
+      "bytes": 121274751,
+      "sha256": "728a112a38d5621050dd14b045b48dd7fb4ae98c99b8cbf4db9b5b2d86ca44f0"
+    },
+    {
+      "name": "Mental-Arithmetic-1.1.2-Windows-x64.zip",
+      "bytes": 153162461,
+      "sha256": "8013c5235a2c02dbb47c3ed04cdfc8787e2a0956a7d1f2096b45e55527ed9064"
+    },
+    {
+      "name": "Mental-Arithmetic-1.1.2-Web.zip",
+      "bytes": 14609,
+      "sha256": "30646e05f977ee926e96e3c08bf7c4972ec0c7415af7979be60809bb51b0a3d8"
+    }
+  ]
+}

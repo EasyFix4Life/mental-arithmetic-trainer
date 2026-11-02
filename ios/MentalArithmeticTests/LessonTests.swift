@@ -2,8 +2,8 @@ import XCTest
 @testable import MentalArithmetic
 
 final class LessonTests: XCTestCase {
-    func testCatalogContainsAllSixRequestedInstructionCategories() {
-        XCTAssertEqual(LessonCatalog.lessons.map(\.id), ["addition-1", "multiplication-1", "addition-2", "multiplication-2", "addition-3", "multiplication-3"])
+    func testCatalogContainsOnlyFourAvailableInstructionCategories() {
+        XCTAssertEqual(LessonCatalog.lessons.map(\.id), ["multiplication-1", "addition-2", "multiplication-2", "multiplication-3"])
         for lesson in LessonCatalog.lessons {
             XCTAssertTrue(lesson.hasAuthoredProcedure)
             XCTAssertEqual(lesson.examples.count, lesson.id == "multiplication-2" ? 2 : 1)
@@ -241,7 +241,7 @@ final class LessonTests: XCTestCase {
         XCTAssertEqual(max.steps.map(\.intermediateResult), ["18", "18", "18", "19", "19"])
     }
 
-    func testGenericExampleDispatchesAllSixConfigurations() throws {
+    func testGenericExampleDispatchesAllAvailableConfigurations() throws {
         for lesson in LessonCatalog.lessons {
             let source = try RandomExamples.generateProblem(operation: lesson.operation, digitCount: lesson.digitCount, rng: { 0.78 })
             let e = try LessonExamples.create(example: source)

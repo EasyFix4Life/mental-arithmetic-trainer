@@ -1,4 +1,5 @@
 import { inputPolicy, insertDigits, isDecimalEntry } from './inputPolicy';
+import { availableDigitCounts, normalizeAvailableSettings } from './availableOptions';
 import { RoundController, scoreText } from './roundController';
 import { formatTenths } from './timer';
 import type { DigitCount, Operation } from './types';
@@ -29,9 +30,7 @@ export function mountPracticeView(
         <div class="setting">
           <label for="digit-count">Digits per operand</label>
           <select id="digit-count">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
+            ${availableDigitCounts(controller.snapshot.settings.operation).map((digits) => `<option value="${digits}">${digits}</option>`).join('')}
           </select>
         </div>
       </div>
@@ -81,6 +80,24 @@ export function mountPracticeView(
   const options = { signal: listeners.signal };
   let frame = 0;
   let lastAcceptedValue = '';
+
+  function syncDigitOptions(): void {
+    const selected = normalizeAvailableSettings({
+      operation: operation.value as Operation,
+      digitCount: Number(digitCount.value) as DigitCount,
+    });
+    digitCount.replaceChildren(...availableDigitCounts(selected.operation).map((digits) => {
+      const option = document.createElement('option');
+      option.value = String(digits);
+      option.textContent = String(digits);
+      return option;
+    }));
+    digitCount.value = String(selected.digitCount);
+  }
+  operation.value = controller.snapshot.settings.operation;
+  digitCount.value = String(controller.snapshot.settings.digitCount);
+  syncDigitOptions();
+  operation.addEventListener('change', syncDigitOptions, options);
 
   // Safari can resize only the visual viewport when the numeric keyboard opens.
   // Keep both corner timers and the answer inside that visible area.

@@ -19,23 +19,22 @@ const source = JSON.parse(readFileSync(new URL(
 ), 'utf8')) as { lessons: SourceLesson[] };
 
 describe('source-preserving instructional catalog', () => {
-  it('preserves the supplied lesson order and adds both three-digit categories requested later', () => {
-    expect(lessons.slice(0, 4).map(({ id, title, operation, digitCount }) => ({
+  it('preserves the available supplied lessons in their original relative order and includes three-digit multiplication', () => {
+    expect(lessons.slice(0, 3).map(({ id, title, operation, digitCount }) => ({
       id, title, operation, digitCount,
-    }))).toEqual(source.lessons.map((lesson) => ({
+    }))).toEqual(source.lessons.filter((lesson) => lesson.id !== 'addition-1').map((lesson) => ({
       id: lesson.id,
       title: lesson.title,
       operation: lesson.operation,
       digitCount: lesson.digits_per_operand,
     })));
-    expect(lessons).toHaveLength(6);
-    expect(lessons.slice(4).map(({ id, operation, digitCount }) => ({ id, operation, digitCount }))).toEqual([
-      { id: 'addition-3', operation: 'addition', digitCount: 3 },
+    expect(lessons).toHaveLength(4);
+    expect(lessons.slice(3).map(({ id, operation, digitCount }) => ({ id, operation, digitCount }))).toEqual([
       { id: 'multiplication-3', operation: 'multiplication', digitCount: 3 },
     ]);
   });
 
-  it('provides generated instructions in all six categories using the later owner-described methodology', () => {
+  it('provides generated instructions in all four available categories using the owner-described methodology', () => {
     for (const lesson of lessons) {
       expect(lesson.authoredStatus).toMatch(/owner-described/i);
       expect(lesson.authoredStatus).not.toMatch(/pending|not yet/i);
@@ -121,10 +120,13 @@ describe('source-preserving instructional catalog', () => {
     expect(18 * 18).toBe(324);
   });
 
-  it('offers the owner-requested three-digit lessons without exceeding that scope', () => {
+  it('omits one- and three-digit addition while retaining one-, two- and three-digit multiplication', () => {
     expect(lessons.every((lesson) => lesson.digitCount <= 3)).toBe(true);
     expect(getLesson('multiplication-3')?.digitCount).toBe(3);
-    expect(getLesson('addition-3')?.digitCount).toBe(3);
+    expect(getLesson('addition-1')).toBeUndefined();
+    expect(getLesson('addition-3')).toBeUndefined();
+    expect(lessons.filter((lesson) => lesson.operation === 'addition').map((lesson) => lesson.digitCount)).toEqual([2]);
+    expect(lessons.filter((lesson) => lesson.operation === 'multiplication').map((lesson) => lesson.digitCount)).toEqual([1, 2, 3]);
     expect(getLesson('multiplication-4')).toBeUndefined();
     expect(getLesson('addition-4')).toBeUndefined();
   });

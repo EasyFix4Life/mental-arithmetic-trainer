@@ -3,7 +3,7 @@ import UIKit
 final class LearnViewController: UIViewController {
     private let scroll = UIScrollView()
     private let content = AppTheme.stack(spacing: 20)
-    private var lesson = LessonCatalog.lessons[0]
+    private var lesson = LessonCatalog.lessons.first(where: { $0.id == "addition-2" })!
     private var randomProblem: WorkedExample!
     private var randomExample: AuthoredExample?
     private var selectedExample: AuthoredExample?
@@ -190,7 +190,7 @@ final class LearnViewController: UIViewController {
         for (id, button) in lessonButtons { AppTheme.selected(id == lesson.id, button: button) }
         exampleMenu.isHidden = lesson.examples.isEmpty
         if !lesson.examples.isEmpty {
-            let randomAction = UIAction(title: "Random: \(randomProblem.left) × \(randomProblem.right)",
+            let randomAction = UIAction(title: "Random: \(randomProblem.left) \(randomProblem.operation.symbol) \(randomProblem.right)",
                                         state: selectedExample == nil ? .on : .off) { [weak self] _ in
                 self?.newRandomExample()
             }
@@ -203,7 +203,7 @@ final class LearnViewController: UIViewController {
             }
             exampleMenu.menu = UIMenu(title: "Worked example", children: [randomAction] + authored)
             exampleMenu.showsMenuAsPrimaryAction = true
-            exampleMenu.configuration?.title = selectedExample?.title ?? "Random: \(randomProblem.left) × \(randomProblem.right)"
+            exampleMenu.configuration?.title = selectedExample?.title ?? "Random: \(randomProblem.left) \(randomProblem.operation.symbol) \(randomProblem.right)"
         }
         configureExpression(expression, problem: currentProblem, selected: [])
         // Keep the complete example/help group together when the walkthrough

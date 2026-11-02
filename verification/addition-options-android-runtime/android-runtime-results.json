@@ -1,0 +1,171 @@
+{
+  "androidRelease": "17",
+  "sdkInt": 37,
+  "supportedAbis": [
+    "arm64-v8a"
+  ],
+  "model": "sdk_gphone64_arm64",
+  "package": "local.jeff.mentalarithmetic",
+  "version": "1.1.2",
+  "webViewPackage": "com.google.android.webview",
+  "webViewVersion": "145.0.7632.218",
+  "passed": 9,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "offline release shell, presentation and browser security",
+      "status": "passed",
+      "durationMs": 378,
+      "details": {
+        "url": "https:\/\/appassets.androidplatform.net\/index.html",
+        "blockNetworkLoads": true,
+        "allowFileAccess": false,
+        "allowContentAccess": false,
+        "javascript": true
+      }
+    },
+    {
+      "name": "prominent learn button label, bounds and native tap",
+      "status": "passed",
+      "durationMs": 471,
+      "details": {
+        "label": "?\n            Click Here to Learn How!",
+        "accessibleLabel": "Click Here to Learn How!",
+        "width": 379.4285888671875,
+        "height": 64,
+        "viewportWidth": 411
+      }
+    },
+    {
+      "name": "four available random lessons, excluded addition lengths and complete instructions",
+      "status": "passed",
+      "durationMs": 75,
+      "details": {
+        "lessonCategories": 4,
+        "excludedLessons": [
+          "addition-1",
+          "addition-3"
+        ],
+        "randomRequestsPerCategory": 4,
+        "completeWalkthroughs": 4,
+        "verticalAdditionCategories": 1
+      }
+    },
+    {
+      "name": "vertical addition instructions, carries and final answers",
+      "status": "passed",
+      "durationMs": 348,
+      "details": {
+        "twoDigit": {
+          "operands": [
+            58,
+            67
+          ],
+          "sum": 125
+        },
+        "allAdditionVertical": true
+      }
+    },
+    {
+      "name": "random two-digit trace, confirmed carries and final answer",
+      "status": "passed",
+      "durationMs": 305,
+      "details": {
+        "randomProduct": 8526,
+        "confirmedProduct": 324,
+        "stages": [
+          "First",
+          "Inside",
+          "Outside",
+          "Last",
+          "Final answer"
+        ]
+      }
+    },
+    {
+      "name": "three-digit multiplication groups and whole-value carries",
+      "status": "passed",
+      "durationMs": 286,
+      "details": {
+        "operands": [
+          123,
+          456
+        ],
+        "groupResults": [
+          4,
+          13,
+          28,
+          27,
+          18
+        ],
+        "resolved": [
+          28,
+          30,
+          16,
+          5
+        ],
+        "product": 56088
+      }
+    },
+    {
+      "name": "native numeric keyboard, visible answer and rotation preservation",
+      "status": "passed",
+      "durationMs": 2698,
+      "details": {
+        "answerBottom": 510.09524154663086,
+        "liveBottom": 497.44642639160156,
+        "viewportBottom": 526.09521484375,
+        "viewportHeight": 526.09521484375,
+        "problemId": "1:0",
+        "nativeInputType": 2,
+        "softwareKeyboardVisible": true,
+        "rotationPreservedState": true,
+        "nativeKeyEventRoundScore": "10 \/ 10"
+      }
+    },
+    {
+      "name": "ten accepted answers, wrong feedback and exact timing summary",
+      "status": "passed",
+      "durationMs": 297,
+      "details": {
+        "score": "9 \/ 10",
+        "minimum": "0.2 s",
+        "maximum": "1.4 s",
+        "average": "1.2 s",
+        "durations": [
+          220,
+          530,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499
+        ]
+      }
+    },
+    {
+      "name": "four available practice configurations and addition length guard",
+      "status": "passed",
+      "durationMs": 42,
+      "details": {
+        "configurations": 4,
+        "acceptedAnswers": 40,
+        "allScores": "10 \/ 10",
+        "additionOptions": [
+          2
+        ],
+        "multiplicationOptions": [
+          1,
+          2,
+          3
+        ],
+        "unsupportedSwitchesResetToTwo": true
+      }
+    }
+  ],
+  "finishedAtEpochMs": 1793645054515,
+  "runtimeExecution": true
+}

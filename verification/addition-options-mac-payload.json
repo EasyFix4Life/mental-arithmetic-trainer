@@ -1,0 +1,36 @@
+{
+  "version": "1.1.2",
+  "verifiedFrom": "Final read-only mounted DMG",
+  "matches": [
+    {
+      "file": "dist/index.html",
+      "bytes": 594,
+      "sha256": "177b2ba5c526fe8a1e7526f922ab464e1e0d5ca74e9ab7b8811929499aa34769",
+      "matches": true
+    },
+    {
+      "file": "dist/assets/index-CIxu1Qxd.js",
+      "bytes": 37936,
+      "sha256": "efdd6e5fea5af0461e14c2836ca340cc0c43bbc87c498a12e55070177214d48f",
+      "matches": true
+    },
+    {
+      "file": "dist/assets/index-DtQOxB5b.css",
+      "bytes": 9901,
+      "sha256": "2eba6d2085be7c2303cf188b22d9bad6d2f39b78ca95095a83eefbab95187bce",
+      "matches": true
+    },
+    {
+      "file": "desktop/main.cjs",
+      "bytes": 6088,
+      "sha256": "70ef65772f8f6390212190299348873b24b7b390a559049dd3a129c78ba301cb",
+      "matches": true
+    },
+    {
+      "file": "desktop/security.cjs",
+      "bytes": 1839,
+      "sha256": "df896d0e2c572d4d1a3b5f0a46df5c910d9f6c2183cf67bddb7f5c2c5abf06a0",
+      "matches": true
+    }
+  ]
+}

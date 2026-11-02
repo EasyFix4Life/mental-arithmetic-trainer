@@ -149,6 +149,19 @@ final class PracticeEngineTests: XCTestCase {
         XCTAssertEqual(controller.snapshot.index, 0)
     }
 
+    func testCurrentAppChoicesDefaultToTwoDigitAdditionAndNormalizeOperationSwitches() {
+        XCTAssertEqual(PracticeSettings.initial, PracticeSettings(operation: .addition, digitCount: .two))
+        XCTAssertEqual(RoundController().snapshot.settings, PracticeSettings.initial)
+        XCTAssertEqual(PracticeSettings.availableDigits(for: .addition), [.two])
+        XCTAssertEqual(PracticeSettings.availableDigits(for: .multiplication), [.one, .two, .three])
+        for priorDigits in OperandDigits.allCases {
+            XCTAssertEqual(PracticeSettings.appSelection(operation: .addition, digitCount: priorDigits),
+                           PracticeSettings(operation: .addition, digitCount: .two))
+            XCTAssertEqual(PracticeSettings.appSelection(operation: .multiplication, digitCount: priorDigits),
+                           PracticeSettings(operation: .multiplication, digitCount: priorDigits))
+        }
+    }
+
     func testPartialInvalidDuplicateAndStaleInputsDoNotAdvanceOrResetTimer() throws {
         var now = 1000.25
         let controller = RoundController(clock: { now }, generator: fixtures)

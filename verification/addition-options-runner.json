@@ -1,0 +1,149 @@
+{
+  "appVersion": "1.1.2",
+  "passedUnitTests": 203,
+  "passedBrowserTests": 64,
+  "browserProjects": [
+    "desktop",
+    "mobile"
+  ],
+  "playwrightVersion": "1.64.1",
+  "viteVersion": "8.3.5",
+  "testOrigin": "http://127.0.0.1:5174",
+  "temporaryRunner": "/tmp/mental-arithmetic-browser-addition-options",
+  "reasonForTemporaryRunner": "Original source directory had dataless File Provider dependencies and its existing Vite server did not respond. Identical package versions and byte-identical source/spec copies were used.",
+  "matchingFiles": [
+    {
+      "path": "src/main.ts",
+      "sha256": "c13ffd799c096737fe002924b377369aed35dfe77f5f83f3053e752ecb5bf3d2"
+    },
+    {
+      "path": "src/practiceView.ts",
+      "sha256": "ab1f84baf399816e066b189ff29cd5ccb3568949b5038df4161662adde6d34df"
+    },
+    {
+      "path": "src/view.ts",
+      "sha256": "4f78017b5cfedd2a91256f004e07aae544291231698b35c059662f1e95a611d5"
+    },
+    {
+      "path": "src/downloadsView.ts",
+      "sha256": "28c67be1929f4312e98ccef2dc9ed2ea978b74f68209ea7bb87beb1d0fb019a5"
+    },
+    {
+      "path": "src/types.ts",
+      "sha256": "f458432070b282817ece06654683477a9dfefee0201f64fd6f53cd14f2976b21"
+    },
+    {
+      "path": "src/answerPolicy.ts",
+      "sha256": "9a98d597b0f7baa7264b387f52ef8a1f5e80892e5c69446d2dda602f77dd89c1"
+    },
+    {
+      "path": "src/roundController.ts",
+      "sha256": "2c6c26477b164bdf447e6ef9713ad16e1ad7572b066b016d913feb8cdabd2f67"
+    },
+    {
+      "path": "src/style.css",
+      "sha256": "cf487fba850405fa4b6b9d8d3e9c28cba85a49372bcbfc17f33a0ab709236bdf"
+    },
+    {
+      "path": "src/timer.ts",
+      "sha256": "bfaeaa1c0497565f6d3ceeba0064d903f4559d5b70cb192f86556bb79e0d4b04"
+    },
+    {
+      "path": "src/availableOptions.ts",
+      "sha256": "2fe4df4c59cc81e13bda9fd3e7e2b087bef26a1d2a7761461bc07addec11f038"
+    },
+    {
+      "path": "src/inputPolicy.ts",
+      "sha256": "1c46093bcaf0345926a460bcf7663bc985d1f77ba1b0b0049cd5046428dda8e8"
+    },
+    {
+      "path": "src/generateRound.ts",
+      "sha256": "7b8b13e15b58e870f27468e538181423c1fa38f73bd5cceb66eb17a3ca8a52cf"
+    },
+    {
+      "path": "src/learn/confirmedMultiplicationExamples.ts",
+      "sha256": "6a12ecbe7580f493cb236d3cbb0eed98c1aa62f96d463777489a6ce79a5f60ba"
+    },
+    {
+      "path": "src/learn/lessonCatalog.ts",
+      "sha256": "99dbb1613cd37158e9772f67f41501d838cc26196ed6b02c7bad89b3a97d4666"
+    },
+    {
+      "path": "src/learn/instructionStepRenderer.ts",
+      "sha256": "5ca78729f4de35997670b927546985a7969e1c3aa5918759628f764c65107ca1"
+    },
+    {
+      "path": "src/learn/lessonTypes.ts",
+      "sha256": "4a473acf63bc53140d517547db4f27821f26bc16ad6d054015806571018a1f99"
+    },
+    {
+      "path": "src/learn/randomExample.ts",
+      "sha256": "368bee7f7bf9c40729d4988c18f92f4f119e1cba199419ba0b82b2656b345b82"
+    },
+    {
+      "path": "src/learn/positionalInstructions.ts",
+      "sha256": "f1392466307d8f0aed130cbc9abf6146a90ce973f6184057881c58901d3a848f"
+    },
+    {
+      "path": "src/learn/learnView.ts",
+      "sha256": "eb63ec7866b5319247519a57c628815bbf02fe8cb4eb6d633175a19079e32668"
+    },
+    {
+      "path": "src/learn/carryVisualizer.ts",
+      "sha256": "0458b1ec0abb951e02dfeb75a45c0270734666b0d3cef5734f7d9c89a857a90e"
+    },
+    {
+      "path": "tests/browser/trainer.spec.ts",
+      "sha256": "11ebfd665700f151d11270be26c6597a90c56ebec5f3d1ed66198e1c91a0f57e"
+    },
+    {
+      "path": "tests/browser/downloads.spec.ts",
+      "sha256": "df8bad699e37ae9b51302f669b2f9b0ff92cfebe045d43104dd1c686cdbaea78"
+    },
+    {
+      "path": "tests/browser/learn.spec.ts",
+      "sha256": "b71aef910781c65eed8d327dce7c1e33a9e9e6dc248859e4c0c430b2738602f7"
+    },
+    {
+      "path": "tests/unit/answerPolicy.test.ts",
+      "sha256": "801639d8fc6a372e4ccbfa5b79711b5b355bdf5547f19adcae23816b440a96d7"
+    },
+    {
+      "path": "tests/unit/generateRound.test.ts",
+      "sha256": "259a7249b786af942bbb6dad7e704a532b83c32f2c4e7656bfb24f7017697164"
+    },
+    {
+      "path": "tests/unit/availableOptions.test.ts",
+      "sha256": "ab1a0c6c7dbd2db8e4f681919be83fdf0d27f753a049be96f0d3ef67596f439e"
+    },
+    {
+      "path": "tests/unit/requirements.ts",
+      "sha256": "228ca3c0e2297f72e6ba974463c3a2e33ee005d2f1040b6e81a633dacf998da9"
+    },
+    {
+      "path": "tests/unit/randomExample.test.ts",
+      "sha256": "20a941f1a2be8cf5b60914ae2a0e2649337cc57420a2f3678747e3dbc99d3b68"
+    },
+    {
+      "path": "tests/unit/timer.test.ts",
+      "sha256": "3d5098d8f768b5ca649cef00f657fbbfd939f6a4be1e1f2d095c1204c0df6f7f"
+    },
+    {
+      "path": "tests/unit/roundController.test.ts",
+      "sha256": "868363cc4696ac4182ff678e36b524ade46fa3e07a6eea8153a4b764a4920444"
+    },
+    {
+      "path": "tests/unit/roundTiming.test.ts",
+      "sha256": "30470d873bc7d4ac85167358b39f0de725bcf79f5b4d067bad993560da7f1df4"
+    },
+    {
+      "path": "tests/unit/lessons.test.ts",
+      "sha256": "2b29b0510768c74ef66dd54a9d68ee6f95b08de65c6dbf4933c70cde7fd66cab"
+    },
+    {
+      "path": "tests/unit/positionalInstructions.test.ts",
+      "sha256": "6e470832d45170a6ed2427e9768eded7bf5b76156eb70675445d992b3e48154f"
+    }
+  ],
+  "sourceChangedAfterFreeze": false
+}

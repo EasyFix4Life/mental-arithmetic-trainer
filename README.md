@@ -1,8 +1,8 @@
-# Mental Arithmetic — 1.1.1
+# Mental Arithmetic — 1.1.2
 
-**1.1.1 interface update:** the lesson-help button now reads **? Click Here to Learn How!**. See [the update report](verification/HELP_BUTTON_UPDATE.md) for current checks and screenshots. Prior detailed verification reports remain as the 1.1.0 baseline.
+**1.1.2 available-options update:** Learn and Practice offer **two-digit addition** and **one-, two- and three-digit multiplication**. One-digit and three-digit addition have been removed at the owner's request. The prominent **? Click Here to Learn How!** button remains in every available lesson. See [the update report](verification/ADDITION_OPTIONS_UPDATE.md) for current checks; older verification reports are historical baselines.
 
-Mental arithmetic lessons and ten-problem Practice for **web, macOS, Windows 10/11, Android, iPhone and iPad**. All versions include addition and multiplication with **one-, two- and three-digit operands**. Each of the six Learn categories has complete instructions, random examples, digit highlights, carry steps and a final answer. The prominent **? Click Here to Learn How!** button opens the walkthrough in every lesson. Addition uses operands above and below one another, aligned by place value. The owner's confirmed **12 × 12 = 144** and **18 × 18 = 324** demonstrations remain available unchanged.
+Mental arithmetic lessons and ten-problem Practice for **web, macOS, Windows 10/11, Android, iPhone and iPad**. All versions offer **two-digit addition** and **one-, two- and three-digit multiplication**. Each of the four Learn categories has complete instructions, random examples, digit highlights, carry steps and a final answer. The prominent **? Click Here to Learn How!** button opens the walkthrough in every lesson. Addition uses operands above and below one another, aligned by place value. The owner's confirmed **12 × 12 = 144** and **18 × 18 = 324** demonstrations remain available unchanged.
 
 Practice preserves the original behavior: ten unique unordered operand pairs, large Arial numerals on sepia, automatic submission at the expected digit length, immediate advancement after correct and incorrect entries, a live timer beside the bottom-right answer field, and the previous time in black or red at the upper left. A completed round shows score out of ten and maximum, minimum and average answer times. Each new round starts manually. Learn remains separate from active timed Practice.
 
@@ -10,9 +10,9 @@ There is no backend, account, advertisement, analytics, saved learner history, e
 
 ## Downloads and platform guides
 
-The public GitHub repository is [EasyFix4Life/mental-arithmetic-trainer](https://github.com/EasyFix4Life/mental-arithmetic-trainer). The [v1.1.1 release](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/tag/v1.1.1) carries the downloadable packages. Local packages are also in the parent `outputs` folder.
+The public GitHub repository is [EasyFix4Life/mental-arithmetic-trainer](https://github.com/EasyFix4Life/mental-arithmetic-trainer). The [v1.1.2 release](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/tag/v1.1.2) carries the downloadable packages. Local packages are also in the parent `outputs` folder.
 
-The live website's **Download Apps** link opens clearly labeled macOS, Windows, Android, and iPhone/iPad download cards, plus web and complete-source ZIP links. macOS requires Apple silicon and macOS 13 or later; Windows supports Windows 10/11 x64; Android requires Android 8 or later. iOS downloads are unsigned Xcode development files, not a directly installable app or an App Store listing. Download links use the fixed, tested v1.1.1 release assets. This website-only section stays hidden during active Practice and is excluded from native app shells.
+The live website's **Download Apps** link opens clearly labeled macOS, Windows, Android, and iPhone/iPad download cards, plus web and complete-source ZIP links. macOS requires Apple silicon and macOS 13 or later; Windows supports Windows 10/11 x64; Android requires Android 8 or later. iOS downloads are unsigned Xcode development files, not a directly installable app or an App Store listing. Download links use the fixed, tested v1.1.2 release assets. This website-only section stays hidden during active Practice and is excluded from native app shells.
 
 | Platform | Package | Guide |
 | --- | --- | --- |
@@ -84,7 +84,7 @@ The arithmetic generators, answer/input policy, monotonic timer and round state 
 | `src/generateRound.ts`, `roundController.ts` | Unique rounds, immutable transitions and raw timing |
 | `src/answerPolicy.ts`, `inputPolicy.ts`, `timer.ts` | Exact input behavior and timing policies |
 | `src/practiceView.ts`, `view.ts` | Practice rendering and mode navigation |
-| `src/learn/lessonCatalog.ts`, `lessonTypes.ts` | Six lesson categories and explicit step schema |
+| `src/learn/lessonCatalog.ts`, `lessonTypes.ts` | Four available lesson categories and explicit step schema |
 | `src/learn/confirmedMultiplicationExamples.ts` | Preserved owner-confirmed fixed examples |
 | `src/learn/randomExample.ts`, `positionalInstructions.ts` | Random examples and owner-described positional procedure |
 | `src/learn/instructionStepRenderer.ts`, `carryVisualizer.ts` | Digit selections, vertical addition, explicit carries and final answer |
@@ -97,8 +97,8 @@ The arithmetic generators, answer/input policy, monotonic timer and round state 
 | `requirements/instruction/` | Original supplied lesson files and separate later owner instructions |
 | `verification/` | Actual results, package checks and review evidence |
 
-The original handoff's restrictions on missing scripts and three-digit instruction are superseded by the owner's later explicit requirement for all digit lengths and description of the common algorithm. The original files remain unchanged. Generated examples apply that described method; they are not represented as individually owner-authored examples. See [INSTRUCTIONAL_HANDOFF.md](INSTRUCTIONAL_HANDOFF.md) and its separate provenance record.
+The original handoff's restrictions on missing scripts and three-digit instruction were superseded by the owner's later all-length instructional request and description of the common algorithm. The subsequent 1.1.2 request removes one-digit and three-digit addition from the available Learn and Practice options. The general arithmetic algorithms and original supplied fixtures remain preserved. The exact later scope is recorded in [OWNER_ADDITION_OPTIONS_2026-11-02.md](requirements/instruction/OWNER_ADDITION_OPTIONS_2026-11-02.md). The original files remain unchanged. Generated examples apply that described method; they are not represented as individually owner-authored examples. See [INSTRUCTIONAL_HANDOFF.md](INSTRUCTIONAL_HANDOFF.md) and its separate provenance record.
 
 ## Verification boundaries
 
-See [verification/HELP_BUTTON_UPDATE.md](verification/HELP_BUTTON_UPDATE.md) for the 1.1.1 interface update and [verification/TEST_RESULTS.md](verification/TEST_RESULTS.md) for the 1.1.0 baseline results and the platform reports beside it. Packaged macOS and Android behavior is tested locally. Windows archive/executable integrity and shared frontend bytes are verified, but Windows 10/11 runtime installation and display scaling still need a Windows host. The native iOS app builds, launches and has separate core/integration evidence; Xcode's service-hub test-runner failure and simulator limitations are recorded explicitly. No claim of physical iPhone/iPad testing or App Store approval is made.
+See [verification/ADDITION_OPTIONS_UPDATE.md](verification/ADDITION_OPTIONS_UPDATE.md) for the 1.1.2 available-options update, [verification/HELP_BUTTON_UPDATE.md](verification/HELP_BUTTON_UPDATE.md) for the 1.1.1 help-button update and [verification/TEST_RESULTS.md](verification/TEST_RESULTS.md) for the 1.1.0 baseline results and the platform reports beside it. Packaged macOS and Android behavior is tested locally. Windows archive/executable integrity and shared frontend bytes are verified, but Windows 10/11 runtime installation and display scaling still need a Windows host. The native iOS app builds, launches and has separate core/integration evidence; Xcode's service-hub test-runner failure and simulator limitations are recorded explicitly. No claim of physical iPhone/iPad testing or App Store approval is made.

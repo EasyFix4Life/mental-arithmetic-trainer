@@ -29,13 +29,13 @@ final class SimulatorReviewRunner {
         do {
             if scenario == "suite" {
                 await record("01 automatic submission, input rejection, score and timing") { try await self.practiceRound() }
-                await record("02 all six practice configurations") { try await self.practiceConfigurations() }
+                await record("02 four practice configurations and operation switching") { try await self.practiceConfigurations() }
                 await record("03 confirmed 18 × 18 carry sequence") { try self.confirmedEighteen() }
-                await record("04 all six random lesson examples") { try self.randomLessons() }
+                await record("04 four available random lesson examples") { try self.randomLessons() }
                 await record("05 rotation, partial entry, keyboard and timer layout") { try await self.rotation() }
                 await record("06 local privacy policy") { try await self.privacy() }
                 await record("07 three-digit multiplication groups and carries") { try self.threeDigitMultiplication() }
-                await record("08 all six instructional walkthroughs") { try self.instructionalLessons() }
+                await record("08 four available instructional walkthroughs") { try self.instructionalLessons() }
                 resetRoot()
                 try chooseMode(0)
                 try chooseFixedExample(lessonID: "multiplication-3", index: 0)
@@ -44,9 +44,10 @@ final class SimulatorReviewRunner {
                 resetRoot()
                 switch scenario {
                 case "review-setup": break
+                case "review-catalog": try chooseMode(0)
                 case "review-practice":
-                    try control("operation-control", as: UISegmentedControl.self).selectedSegmentIndex = 1
-                    try control("digit-count-control", as: UISegmentedControl.self).selectedSegmentIndex = 2
+                    try choosePracticeOperation(1)
+                    try chooseDigitCount(3)
                     try press("practice-start")
                     await settle(0.2)
                     try edit(try currentAnswer())
@@ -60,9 +61,9 @@ final class SimulatorReviewRunner {
                     try chooseMode(0)
                     try chooseFixedExample(lessonID: "multiplication-3", index: 0)
                     for _ in 0..<2 { try press("step-next") }
-                case "review-addition3":
+                case "review-addition2":
                     try chooseMode(0)
-                    try chooseFixedExample(lessonID: "addition-3", index: 0)
+                    try chooseFixedExample(lessonID: "addition-2", index: 0)
                 case "review-help":
                     try chooseMode(0)
                     try press("lesson-multiplication-2")
@@ -110,7 +111,7 @@ final class SimulatorReviewRunner {
     }
 
     private func practiceRound() async throws {
-        try control("digit-count-control", as: UISegmentedControl.self).selectedSegmentIndex = 1
+        try chooseDigitCount(2)
         try press("practice-start")
         await settle(0.25)
         let first = try text("practice-problem")
@@ -152,20 +153,47 @@ final class SimulatorReviewRunner {
     }
 
     private func practiceConfigurations() async throws {
-        for operation in 0...1 {
-            for digits in 1...3 {
-                resetRoot()
-                try control("operation-control", as: UISegmentedControl.self).selectedSegmentIndex = operation
-                try control("digit-count-control", as: UISegmentedControl.self).selectedSegmentIndex = digits - 1
-                try press("practice-start")
-                let expression = try text("practice-problem")
-                let operands = numbers(expression)
-                try require(operands.count == 2 && operands.allSatisfy { String($0).count == digits }, "Practice range \(operation):\(digits)")
-                try require(expression.contains(operation == 0 ? "plus" : "times"), "Selected operation \(operation):\(digits)")
-                try edit(try currentAnswer())
-                try require(try text("practice-problem") != expression, "Configuration accepts correct answer \(operation):\(digits)")
-            }
+        let digits = try control("digit-count-control", as: UISegmentedControl.self)
+        try require(digits.numberOfSegments == 1 && digits.titleForSegment(at: 0) == "2"
+                    && digits.selectedSegmentIndex == 0, "Addition starts with only two-digit operands")
+        for priorDigits in [1, 3] {
+            try choosePracticeOperation(1)
+            try require(digits.numberOfSegments == 3
+                        && (0..<3).compactMap { digits.titleForSegment(at: $0) } == ["1", "2", "3"],
+                        "Multiplication retains all three digit choices")
+            try chooseDigitCount(priorDigits)
+            try choosePracticeOperation(0)
+            try require(digits.numberOfSegments == 1 && digits.titleForSegment(at: 0) == "2"
+                        && digits.selectedSegmentIndex == 0,
+                        "Switching multiplication \(priorDigits) to addition selects two digits")
         }
+        for (operation, digitCount) in [(0, 2), (1, 1), (1, 2), (1, 3)] {
+            resetRoot()
+            try choosePracticeOperation(operation)
+            try chooseDigitCount(digitCount)
+            try press("practice-start")
+            let expression = try text("practice-problem")
+            let operands = numbers(expression)
+            try require(operands.count == 2 && operands.allSatisfy { String($0).count == digitCount }, "Practice range \(operation):\(digitCount)")
+            try require(expression.contains(operation == 0 ? "plus" : "times"), "Selected operation \(operation):\(digitCount)")
+            try edit(try currentAnswer())
+            try require(try text("practice-problem") != expression, "Configuration accepts correct answer \(operation):\(digitCount)")
+        }
+    }
+
+    private func choosePracticeOperation(_ index: Int) throws {
+        let operation = try control("operation-control", as: UISegmentedControl.self)
+        operation.selectedSegmentIndex = index
+        operation.sendActions(for: .valueChanged)
+        window.layoutIfNeeded()
+    }
+
+    private func chooseDigitCount(_ value: Int) throws {
+        let digits = try control("digit-count-control", as: UISegmentedControl.self)
+        guard let index = (0..<digits.numberOfSegments).first(where: { digits.titleForSegment(at: $0) == String(value) }) else {
+            throw Failure("Unavailable practice digit count \(value)")
+        }
+        digits.selectedSegmentIndex = index
     }
 
     private func confirmedEighteen() throws {
@@ -186,12 +214,20 @@ final class SimulatorReviewRunner {
 
     private func randomLessons() throws {
         try chooseMode(0)
+        try require(try text("lesson-title") == "Two-digit addition", "Learn initially selects two-digit addition")
+        try require(LessonCatalog.lessons.map(\.id) == ["multiplication-1", "addition-2", "multiplication-2", "multiplication-3"],
+                    "Learn contains exactly the four available categories")
+        try require(find("lesson-addition-1") == nil && find("lesson-addition-3") == nil,
+                    "Single- and three-digit addition are absent from Learn")
         for lesson in LessonCatalog.lessons {
             try press("lesson-\(lesson.id)")
             try checkLearnHelp()
             let original = try text("lesson-expression")
             let operands = numbers(original)
             try require(operands.count == 2 && operands.allSatisfy { String($0).count == lesson.digitCount.rawValue }, "Learn range \(lesson.id)")
+            try require(try control("worked-example-menu", as: UIButton.self).configuration?.title
+                        == "Random: \(operands[0]) \(lesson.operation.symbol) \(operands[1])",
+                        "Random menu label uses the selected arithmetic operation \(lesson.id)")
             try press("random-example")
             try require(try text("lesson-expression") != original, "New random example \(lesson.id)")
         }
@@ -213,7 +249,8 @@ final class SimulatorReviewRunner {
     }
 
     private func rotation() async throws {
-        try control("digit-count-control", as: UISegmentedControl.self).selectedSegmentIndex = 2
+        try choosePracticeOperation(1)
+        try chooseDigitCount(3)
         try press("practice-start")
         await settle()
         let original = try text("practice-problem")

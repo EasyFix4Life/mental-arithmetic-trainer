@@ -13,7 +13,8 @@ final class PracticeViewController: UIViewController, UITextFieldDelegate {
     private let minimum = AppTheme.label(size: 24, identifier: "minimum-time")
     private let average = AppTheme.label(size: 24, identifier: "average-time")
     private let operation = UISegmentedControl(items: ["Addition", "Multiplication"])
-    private let digits = UISegmentedControl(items: ["1", "2", "3"])
+    private let digits = UISegmentedControl(items: ["2"])
+    private var digitChoices = PracticeSettings.availableDigits(for: .addition)
     private lazy var startButton = AppTheme.button("Start", identifier: "practice-start") { [weak self] in
         self?.startRound()
     }
@@ -116,6 +117,7 @@ final class PracticeViewController: UIViewController, UITextFieldDelegate {
         operation.accessibilityLabel = "Operation"
         digits.accessibilityIdentifier = "digit-count-control"
         digits.accessibilityLabel = "Digits per operand"
+        operation.addTarget(self, action: #selector(operationChanged), for: .valueChanged)
         setup.addArrangedSubview(settings)
         settings.widthAnchor.constraint(equalTo: setup.widthAnchor).isActive = true
         setup.addArrangedSubview(startButton)
@@ -202,9 +204,24 @@ final class PracticeViewController: UIViewController, UITextFieldDelegate {
         ])
     }
 
+    @objc private func operationChanged() {
+        let previous = digitChoices.indices.contains(digits.selectedSegmentIndex)
+            ? digitChoices[digits.selectedSegmentIndex] : .two
+        let selectedOperation: ArithmeticOperation = operation.selectedSegmentIndex == 0 ? .addition : .multiplication
+        let selection = PracticeSettings.appSelection(operation: selectedOperation, digitCount: previous)
+        digitChoices = PracticeSettings.availableDigits(for: selectedOperation)
+        digits.removeAllSegments()
+        for (index, value) in digitChoices.enumerated() {
+            digits.insertSegment(withTitle: String(value.rawValue), at: index, animated: false)
+        }
+        digits.selectedSegmentIndex = digitChoices.firstIndex(of: selection.digitCount) ?? 0
+    }
+
     private func startRound() {
-        let settings = PracticeSettings(operation: operation.selectedSegmentIndex == 0 ? .addition : .multiplication,
-                                        digitCount: OperandDigits(rawValue: digits.selectedSegmentIndex + 1) ?? .one)
+        let selected = digitChoices.indices.contains(digits.selectedSegmentIndex)
+            ? digitChoices[digits.selectedSegmentIndex] : .two
+        let settings = PracticeSettings.appSelection(
+            operation: operation.selectedSegmentIndex == 0 ? .addition : .multiplication, digitCount: selected)
         do {
             try controller.start(settings: settings)
             render()

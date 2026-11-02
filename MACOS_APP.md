@@ -1,12 +1,12 @@
 # Mental Arithmetic for macOS
 
-**1.1.1 interface update:** the lesson-help button now reads **? Click Here to Learn How!**. See [the update report](verification/HELP_BUTTON_UPDATE.md) for current checks and screenshots. Prior detailed verification reports remain as the 1.1.0 baseline.
+**1.1.2 available-options update:** Learn and Practice offer **two-digit addition** and **one-, two- and three-digit multiplication**. One-digit and three-digit addition have been removed at the owner's request. The prominent **? Click Here to Learn How!** button remains in every available lesson. See [the update report](verification/ADDITION_OPTIONS_UPDATE.md) for current checks; older verification reports are historical baselines.
 
 This desktop build contains the same Learn and Practice application as the website, packaged with its own runtime. It runs offline, without Node.js, npm, a browser tab or a local HTTP server on the user's computer.
 
 ## Open or install
 
-Use **Mental-Arithmetic-1.1.1-macOS-arm64.dmg**. Open the disk image and drag **Mental Arithmetic.app** to **Applications**, then open it there. The alternative ZIP contains the same standalone app bundle.
+Use **Mental-Arithmetic-1.1.2-macOS-arm64.dmg**. Open the disk image and drag **Mental Arithmetic.app** to **Applications**, then open it there. The alternative ZIP contains the same standalone app bundle.
 
 This build targets **Apple silicon Macs**, with **macOS 13.0 or later** required by the bundled runtime. It was built and tested on this Apple silicon Mac running macOS 27.2. It is not an Intel Mac or Windows build.
 
@@ -17,9 +17,9 @@ On this Mac, synced Documents adds Finder metadata to app/framework directories,
 ## Equivalent application behavior
 
 - Sepia background, Arial numerals and responsive layout.
-- Learn and Practice remain separate. All six lessons provide complete instruction and **New random example**: addition and multiplication with one-, two- and three-digit operands. Their ranges are 1–9, 10–99 and 100–999; an immediately reversed duplicate is avoided too. Addition operands are arranged above and below one another with aligned columns and a horizontal rule; multiplication operands remain horizontal.
-- Two-digit multiplication retains **First → Inside → Outside → Last**, required carry screens and **Final answer** after Last. The owner-confirmed 12 × 12 and 18 × 18 demonstrations remain selectable. Three-digit multiplication follows the owner's five specified product groups, including the specified middle-group order. Addition calculates the corresponding columns from left to right, then resolves carries from right to left. Single-digit lessons use the one-column or one-product base case. Generated examples apply these methods to new operands; they are not individually owner-authored scripts.
-- Practice supports addition/multiplication and one-, two- or three-digit operands, ten unique problems, automatic submission, immediate advancement, both timer displays, final score out of ten and manual restart. It also shows maximum, minimum and average answer time for each completed round, using all ten full-resolution durations, including incorrect submissions. Practice's provisional one-digit range remains 1–9.
+- Learn and Practice remain separate. All four available lessons provide complete instruction and **New random example**: two-digit addition and multiplication with one-, two- and three-digit operands. Their ranges are 1–9, 10–99 and 100–999; an immediately reversed duplicate is avoided too. Addition operands are arranged above and below one another with aligned columns and a horizontal rule; multiplication operands remain horizontal.
+- Two-digit multiplication retains **First → Inside → Outside → Last**, required carry screens and **Final answer** after Last. The owner-confirmed 12 × 12 and 18 × 18 demonstrations remain selectable. Three-digit multiplication follows the owner's five specified product groups, including the specified middle-group order. Addition calculates the corresponding columns from left to right, then resolves carries from right to left. Single-digit multiplication uses the one-product base case. Generated examples apply these methods to new operands; they are not individually owner-authored scripts.
+- Practice supports two-digit addition and one-, two- or three-digit multiplication, ten unique problems, automatic submission, immediate advancement, both timer displays, final score out of ten and manual restart. It also shows maximum, minimum and average answer time for each completed round, using all ten full-resolution durations, including incorrect submissions. Practice's provisional one-digit range remains 1–9.
 - Native Mac Edit, View and Window menus; copy/paste and standard keyboard behavior. Command-Q quits. Closing the window follows the normal Mac app lifecycle; reopening from the Dock creates a window again.
 - No account, server, analytics, auto-update or new scoring policy was added.
 

@@ -1,10 +1,11 @@
 import source from '../../requirements/instruction/Mental_Arithmetic_Instructional_Lessons_Codex_2026-10-24.json';
+import { isAvailableSettings } from '../availableOptions';
 import { confirmedMultiplicationExamples } from './confirmedMultiplicationExamples';
 import type { Lesson } from './lessonTypes';
 
-/** Original lesson order retained; the owner's later all-length request adds
- * three-digit instruction and supplies the shared positional methodology. */
-export const lessons: readonly Lesson[] = [
+/** Preserve the source registry and relative lesson order, then apply the
+ * owner's current app offerings without changing the supplied documents. */
+const catalog: readonly Lesson[] = [
   ...[...source.lessons].sort((a, b) => a.order - b.order).map((record): Lesson => {
     const examples = record.id === 'multiplication-2' ? confirmedMultiplicationExamples : undefined;
     return {
@@ -23,6 +24,8 @@ export const lessons: readonly Lesson[] = [
   { id: 'multiplication-3', title: 'Three-digit multiplication', operation: 'multiplication', digitCount: 3,
     authoredStatus: 'Owner-described five-group method', example: null, steps: [] },
 ];
+
+export const lessons: readonly Lesson[] = catalog.filter(isAvailableSettings);
 
 export function getLesson(id: string): Lesson | undefined {
   return lessons.find((lesson) => lesson.id === id);

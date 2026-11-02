@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 
-const releaseBase = 'https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.1/';
-const releaseFile = (name: string) => `${releaseBase}Mental-Arithmetic-1.1.1-${name}`;
+const releaseBase = 'https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/';
+const releaseFile = (name: string) => `${releaseBase}Mental-Arithmetic-1.1.2-${name}`;
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/');

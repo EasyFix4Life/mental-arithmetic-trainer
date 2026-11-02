@@ -1,0 +1,126 @@
+{
+  "version": "1.1.2",
+  "build": "3",
+  "date": "2026-11-02",
+  "toolchain": {
+    "application": "/Applications/Xcode-beta.app",
+    "version": "Xcode 27.0 beta",
+    "build": "27A5228h",
+    "sdk": "iOS 27"
+  },
+  "availableLessons": [
+    "multiplication-1",
+    "addition-2",
+    "multiplication-2",
+    "multiplication-3"
+  ],
+  "initialLearn": "addition-2",
+  "initialPractice": {
+    "operation": "addition",
+    "digitCount": 2
+  },
+  "operationSwitching": "Switching from one- or three-digit multiplication to addition selects two digits; multiplication retains one, two, and three digits.",
+  "unitTests": {
+    "route": "Foundation-only Swift package on macOS, using the exact app core",
+    "passed": 35,
+    "failed": 0,
+    "report": "verification/addition-options-ios-core-tests.txt"
+  },
+  "nativeUIKit": {
+    "iphone27": {
+      "passed": 8,
+      "total": 8,
+      "skipped": 0,
+      "report": "verification/addition-options-ios-iphone-27.json"
+    },
+    "ipad26_5": {
+      "passed": 7,
+      "total": 8,
+      "skipped": 1,
+      "skipReason": "The iPad simulator did not apply the programmatic landscape geometry request; physical rotation remains unverified.",
+      "report": "verification/addition-options-ios-ipad-26.json"
+    }
+  },
+  "testTargets": {
+    "buildForTesting": "passed",
+    "externalXCTestXCUITest": "Not executed: repeated DTServiceHub connection failure. The attempt was terminated after the service errors.",
+    "report": "verification/addition-options-ios-xctest.txt"
+  },
+  "builds": {
+    "debugSimulator": "passed",
+    "releaseSimulator": "passed",
+    "unsignedDeviceArchive": "passed"
+  },
+  "releaseBinaries": [
+    {
+      "kind": "simulator",
+      "version": "1.1.2",
+      "build": "3",
+      "minimumOS": "17.0",
+      "families": [
+        1,
+        2
+      ],
+      "architectures": "Architectures in the fat file: /tmp/mental-arithmetic-ios-addition-options/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/MentalArithmetic are: x86_64 arm64",
+      "debugHarnessAbsent": true,
+      "removedLessonTitlesAbsent": true,
+      "signatureDirectoryPresent": false
+    },
+    {
+      "kind": "device",
+      "version": "1.1.2",
+      "build": "3",
+      "minimumOS": "17.0",
+      "families": [
+        1,
+        2
+      ],
+      "architectures": "Non-fat file: /tmp/mental-arithmetic-ios-addition-options/Mental-Arithmetic-1.1.2-iOS-unsigned.xcarchive/Products/Applications/MentalArithmetic.app/MentalArithmetic is architecture: arm64",
+      "debugHarnessAbsent": true,
+      "removedLessonTitlesAbsent": true,
+      "signatureDirectoryPresent": false
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "Mental-Arithmetic-1.1.2-iOS-Simulator-app.zip",
+      "bytes": 308180,
+      "sha256": "facbb8dedf911f25f8d17579387cd42da24c7da8a5534d3a6d51fdabc4a3bdb8",
+      "copiesIdentical": true
+    },
+    {
+      "file": "Mental-Arithmetic-1.1.2-iOS-unsigned-archive.zip",
+      "bytes": 816848,
+      "sha256": "372cb670fa40162e8da51bfdeabcb9b7df365f3b74997e1c5e2fef4f6db7f678",
+      "copiesIdentical": true
+    },
+    {
+      "file": "Mental-Arithmetic-1.1.2-iOS-submission-files.zip",
+      "bytes": 4303402,
+      "sha256": "ae95b1820b8e1f1c474f0e4e6df56d3a4a8623a9e44289ad491a4a5ee7a87f1b",
+      "copiesIdentical": true
+    }
+  ],
+  "screenshots": {
+    "rawCount": 14,
+    "opaqueUploadCopies": 14,
+    "directories": [
+      "ios/AppStore/Screenshots/1.1.2-iPhone-27-beta",
+      "ios/AppStore/Screenshots/1.1.2-iPad-26.5"
+    ],
+    "visualReview": "Setup and the four-lesson catalog were reviewed on both devices: addition offers only two digits, four categories are visible, addition is stacked, the random-example menu uses +, and the help button is readable.",
+    "formatValidation": "PNG CRCs, decompression, and dimensions validated. Every RGB pixel was preserved while unused opaque alpha was removed."
+  },
+  "sourceMirror": {
+    "reason": "iCloud FileProvider evicted native files during the build. Sources were mirrored into /tmp to finish reliably, then all 26 source files were verified against the workspace.",
+    "allNativeSourceFilesMatchWorkspace": 26,
+    "manifest": "verification/addition-options-ios-mirror-sources.json"
+  },
+  "preserved": "Original supplied requirements and low-level historical arithmetic fixtures remain unchanged.",
+  "limitations": [
+    "The DEBUG UIKit control/delegate integration does not reproduce physical keyboard input or external XCUITest automation.",
+    "The iPad landscape geometry scenario was skipped.",
+    "Physical iPhone and iPad validation remains unverified.",
+    "The device archive is unsigned, is not an installable IPA, and has not been uploaded to the App Store or TestFlight."
+  ]
+}

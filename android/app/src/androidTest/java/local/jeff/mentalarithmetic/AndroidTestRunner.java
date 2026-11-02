@@ -69,13 +69,13 @@ public final class AndroidTestRunner extends Instrumentation {
 
             runCase("offline release shell, presentation and browser security", this::offlineShell);
             runCase("prominent learn button label, bounds and native tap", this::prominentHelp);
-            runCase("all six random lesson categories with complete instructions and vertical addition", this::randomLessons);
+            runCase("four available random lessons, excluded addition lengths and complete instructions", this::randomLessons);
             runCase("vertical addition instructions, carries and final answers", this::additionTrace);
             runCase("random two-digit trace, confirmed carries and final answer", this::multiplicationTrace);
             runCase("three-digit multiplication groups and whole-value carries", this::threeDigitTrace);
             runCase("native numeric keyboard, visible answer and rotation preservation", this::nativeKeyboard);
             runCase("ten accepted answers, wrong feedback and exact timing summary", this::timingRound);
-            runCase("all six operation and operand-length practice configurations", this::practiceConfigurations);
+            runCase("four available practice configurations and addition length guard", this::practiceConfigurations);
             report.put("passed", cases.length());
             report.put("failed", 0);
         } catch (Throwable error) {
@@ -121,6 +121,9 @@ public final class AndroidTestRunner extends Instrumentation {
         js("""
             assert(getComputedStyle(document.documentElement).backgroundColor==='rgb(232, 215, 181)','sepia');
             assert(!q('#setup').hidden && q('#exercise').hidden,'manual start');
+            assert(q('#operation').value==='addition','initial operation is addition');
+            assert(q('#digit-count').value==='2' && JSON.stringify([...q('#digit-count').options].map(o=>o.value))==='["2"]','addition initially offers only two digits');
+            assert(!q('#download-apps-link') && !q('#app-downloads'),'website download controls absent from offline native shell');
             assert(q('#answer').inputMode==='numeric','numeric inputmode');
             assert([...document.querySelectorAll('script[src],link[rel=stylesheet]')].every(e=>new URL(e.src||e.href).origin===location.origin),'bundled scripts/styles');
             assert(!document.documentElement.scrollWidth || document.documentElement.scrollWidth<=innerWidth,'portrait width');
@@ -157,12 +160,14 @@ public final class AndroidTestRunner extends Instrumentation {
     private JSONObject randomLessons() throws Exception {
         return js("""
             q('#mode-learn').click();
-            const ids=['addition-1','multiplication-1','addition-2','multiplication-2','addition-3','multiplication-3'];
-            const titles=['Single-digit addition','Single-digit multiplication','Two-digit addition','Two-digit multiplication','Three-digit addition','Three-digit multiplication'];
+            const ids=['multiplication-1','addition-2','multiplication-2','multiplication-3'];
+            const titles=['Single-digit multiplication','Two-digit addition','Two-digit multiplication','Three-digit multiplication'];
             assert(JSON.stringify([...document.querySelectorAll('#lesson-catalog button')].map(e=>e.textContent))===JSON.stringify(titles),'catalog order');
+            assert(!q('[data-lesson-id="addition-1"]') && !q('[data-lesson-id="addition-3"]'),'removed addition lengths absent from Learn');
             for(let i=0;i<ids.length;i++){
               q('[data-lesson-id="'+ids[i]+'"]').click();
-              const digits=Math.floor(i/2)+1;
+              const digits=Number(ids[i].slice(-1));
+              const addition=ids[i].startsWith('addition');
               let previous='';
               for(let n=0;n<4;n++){
                 const values=[...document.querySelectorAll('#lesson-expression .learn-operand')].map(e=>Number(e.textContent));
@@ -174,7 +179,7 @@ public final class AndroidTestRunner extends Instrumentation {
               q('#lesson-help').click();
               assert(!/pending|not yet recovered/i.test(q('#walkthrough-status').textContent),'all scripts available');
               assert(q('#walkthrough .step-intermediate-result'),'calculation instruction');
-              if(i%2===0){
+              if(addition){
                 const operands=[...q('#walkthrough .instruction-step .learn-expression').querySelectorAll('.learn-operand')].map(e=>e.getBoundingClientRect());
                 assert(operands.every(b=>b.width>0&&b.height>0),'visible addition instruction operands');
                 assert(operands[1].top>=operands[0].bottom-1,'addition operands above/below');
@@ -184,11 +189,11 @@ public final class AndroidTestRunner extends Instrumentation {
               let count=0;while(!q('#step-next').disabled){q('#step-next').click();assert(++count<12,'bounded complete walkthrough');}
               assert(q('#final-answer').getAttribute('aria-current')==='step','final answer after instructions');
               const problem=[...q('#lesson-expression').querySelectorAll('.learn-operand')].map(e=>Number(e.textContent));
-              const expected=i%2===0?problem[0]+problem[1]:problem[0]*problem[1];
+              const expected=addition?problem[0]+problem[1]:problem[0]*problem[1];
               assert(q('#walkthrough .final-answer-value').textContent===String(expected),'correct lesson final answer');
               q('#close-walkthrough').click();
             }
-            return {lessonCategories:6,randomRequestsPerCategory:4,completeWalkthroughs:6,verticalAdditionCategories:3};
+            return {lessonCategories:4,excludedLessons:['addition-1','addition-3'],randomRequestsPerCategory:4,completeWalkthroughs:4,verticalAdditionCategories:1};
             """);
     }
 
@@ -234,22 +239,14 @@ public final class AndroidTestRunner extends Instrumentation {
               q('#step-next').click();
             }
             assert(q('#walkthrough .learn-expression').getAttribute('aria-label')==='58 plus 67 equals 125','two-digit sum');
-            saved=Math.random;draws=[(587-100+.25)/900,(678-100+.25)/900];Math.random=()=>draws.shift()??0;
-            q('[data-lesson-id="addition-3"]').click();Math.random=saved;q('#lesson-help').click();
-            const expected=['11','15','15','16','12'];
-            for(let i=0;i<expected.length;i++){
-              assert(q('#walkthrough .step-intermediate-result').textContent===expected[i],'three-digit addition result '+i);
-              q('#step-next').click();
-            }
-            assert(q('#walkthrough .learn-expression').getAttribute('aria-label')==='587 plus 678 equals 1265','three-digit sum');
             const rows=[...q('#walkthrough .learn-expression').querySelectorAll('.learn-operand')].map(e=>e.getBoundingClientRect());
             assert(rows[1].top>=rows[0].bottom-1,'final addition still above/below');
             const digitRight=[...q('#walkthrough .learn-expression').querySelectorAll('.learn-operand')].map(e=>e.querySelector('.learn-digit:last-child').getBoundingClientRect().right);
             const answerRange=document.createRange();answerRange.selectNodeContents(q('#walkthrough .final-answer-value'));
             const answerRight=answerRange.getBoundingClientRect().right;
-            assert(digitRight.every(right=>Math.abs(right-answerRight)<2),'actual unit digits align with wider four-digit answer');
+            assert(digitRight.every(right=>Math.abs(right-answerRight)<2),'actual unit digits align with wider three-digit answer');
             q('#walkthrough').scrollIntoView({block:'start'});
-            return {twoDigit:{operands:[58,67],sum:125},threeDigit:{operands:[587,678],sum:1265},allAdditionVertical:true};
+            return {twoDigit:{operands:[58,67],sum:125},allAdditionVertical:true};
             """);
         screenshot("android-learn-addition.png");
         return result;
@@ -278,7 +275,7 @@ public final class AndroidTestRunner extends Instrumentation {
 
     private JSONObject nativeKeyboard() throws Exception {
         js("""
-            q('#mode-practice').click(); q('#operation').value='multiplication'; q('#digit-count').value='3';
+            q('#mode-practice').click(); q('#operation').value='multiplication'; q('#operation').dispatchEvent(new Event('change',{bubbles:true})); q('#digit-count').value='3';
             q('#start').scrollIntoView({block:'center'}); return {};
             """);
         tapElement("#start");
@@ -340,7 +337,7 @@ public final class AndroidTestRunner extends Instrumentation {
         JSONObject result = js("""
             const actualNow=performance.now.bind(performance); let clock=10000;
             Object.defineProperty(performance,'now',{configurable:true,value:()=>clock});
-            q('#operation').value='multiplication'; q('#digit-count').value='3'; q('#start').click();
+            q('#operation').value='multiplication'; q('#operation').dispatchEvent(new Event('change',{bubbles:true})); q('#digit-count').value='3'; q('#start').click();
             assert(q('#round-timing').hidden,'summary cleared');
             const durations=[220,530,1499,1499,1499,1499,1499,1499,1499,1499];
             for(let i=0;i<10;i++){
@@ -367,8 +364,18 @@ public final class AndroidTestRunner extends Instrumentation {
 
     private JSONObject practiceConfigurations() throws Exception {
         return js("""
-            for(const operation of ['addition','multiplication'])for(const digits of [1,2,3]){
-              q('#operation').value=operation; q('#digit-count').value=String(digits); q('#start').click();
+            const configurations=[['addition',2],['multiplication',1],['multiplication',2],['multiplication',3]];
+            const setOperation=operation=>{q('#operation').value=operation;q('#operation').dispatchEvent(new Event('change',{bubbles:true}));};
+            for(const priorDigits of [1,3]){
+              setOperation('multiplication');q('#digit-count').value=String(priorDigits);setOperation('addition');
+              assert(q('#digit-count').value==='2','switching to addition resets unsupported length');
+              assert(JSON.stringify([...q('#digit-count').options].map(o=>o.value))==='["2"]','only two-digit addition option exists');
+            }
+            for(const [operation,digits] of configurations){
+              setOperation(operation);
+              const expectedOptions=operation==='addition'?['2']:['1','2','3'];
+              assert(JSON.stringify([...q('#digit-count').options].map(o=>o.value))===JSON.stringify(expectedOptions),'available operation lengths');
+              q('#digit-count').value=String(digits); q('#start').click();
               assert(q('#round-timing').hidden && q('#setup').hidden,'manual restart clears result');
               const seen=new Set();
               for(let i=0;i<10;i++){
@@ -386,7 +393,7 @@ public final class AndroidTestRunner extends Instrumentation {
               assert(q('#score').textContent==='10 / 10','ten-problem score');
               assert(!q('#round-timing').hidden,'timing summary');
             }
-            return {configurations:6,acceptedAnswers:60,allScores:'10 / 10'};
+            return {configurations:4,acceptedAnswers:40,allScores:'10 / 10',additionOptions:[2],multiplicationOptions:[1,2,3],unsupportedSwitchesResetToTwo:true};
             """);
     }
 

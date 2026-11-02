@@ -1,4 +1,5 @@
 import { getLesson, lessons } from './lessonCatalog';
+import { DEFAULT_SETTINGS } from '../availableOptions';
 import { renderFinalAnswer, renderHorizontalExpression, renderInstructionStep } from './instructionStepRenderer';
 import { generateRandomProblem } from './randomExample';
 import { createInstructionExample } from './positionalInstructions';
@@ -79,7 +80,7 @@ export function mountLearnView(root: HTMLElement): () => void {
   const fragmentValues = find('#carry-fragment-values');
   const listeners = new AbortController();
   const options = { signal: listeners.signal };
-  let selected: Lesson = lessons[0]!;
+  let selected: Lesson = getLesson(`${DEFAULT_SETTINGS.operation}-${DEFAULT_SETTINGS.digitCount}`)!;
   let stepIndex = 0;
   let exampleIndex = -1;
   let open = false;

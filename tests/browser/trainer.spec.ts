@@ -80,18 +80,55 @@ test('setup contains only the specified choices and waits for manual Start', asy
   await expect(page.locator('#previous-time')).toBeHidden();
   await expect(page.locator('#round-timing')).toBeHidden();
   await expect(page.locator('#operation option')).toHaveText(['Addition', 'Multiplication']);
-  await expect(page.locator('#digit-count option')).toHaveText(['1', '2', '3']);
+  await expect(page.locator('#operation')).toHaveValue('addition');
+  await expect(page.locator('#digit-count option')).toHaveText(['2']);
+  await expect(page.locator('#digit-count')).toHaveValue('2');
   await expect(page.locator('#start')).toHaveText('Start');
   await expect(page.locator('label[for=operation]')).toContainText('Operation');
   await page.getByLabel('Operation', { exact: true }).selectOption('multiplication');
+  await expect(page.locator('#digit-count option')).toHaveText(['1', '2', '3']);
   await expect(page.locator('label[for=digit-count]')).toContainText('Digits per operand');
   await page.getByLabel('Digits per operand', { exact: true }).selectOption('3');
   await expect(page.locator('#exercise')).toBeHidden();
   await expect(page.locator('form')).toHaveCount(0);
 });
 
+test('multiplication lengths normalize to two-digit addition and its ten-answer round preserves timing', async ({ page }, testInfo) => {
+  for (const digits of ['1', '2', '3']) {
+    await page.locator('#operation').selectOption('multiplication');
+    await expect(page.locator('#digit-count option')).toHaveText(['1', '2', '3']);
+    await page.locator('#digit-count').selectOption(digits);
+    await page.locator('#operation').selectOption('addition');
+    await expect(page.locator('#digit-count option')).toHaveText(['2']);
+    await expect(page.locator('#digit-count')).toHaveValue('2');
+    await expect(page.locator('#exercise')).toBeHidden();
+  }
+  const instant = new Date('2026-11-02T16:00:00Z');
+  await page.clock.install({ time: instant });
+  await page.clock.pauseAt(new Date(instant.getTime() + 1_000));
+  await page.locator('#start').click();
+  for (let index = 0; index < 10; index += 1) {
+    const problem = await currentProblem(page, 'addition');
+    expect(String(problem.left)).toHaveLength(2);
+    expect(String(problem.right)).toHaveLength(2);
+    await page.clock.runFor((index + 1) * 100);
+    await page.keyboard.type(index < 8 ? problem.answer : '0'.repeat(problem.answer.length));
+  }
+  await expectFinished(page, 8);
+  await expect(page.locator('#minimum-time')).toHaveText('0.1 s');
+  await expect(page.locator('#maximum-time')).toHaveText('1.0 s');
+  await expect(page.locator('#average-time')).toHaveText('0.5 s');
+  await page.locator('#operation').selectOption('multiplication');
+  await page.locator('#digit-count').selectOption('3');
+  await page.locator('#operation').selectOption('addition');
+  await expect(page.locator('#digit-count')).toHaveValue('2');
+  await expectFinished(page, 8);
+  await expect(page.locator('#average-time')).toHaveText('0.5 s');
+  await page.screenshot({ path: `verification/addition-options-${testInfo.project.name}-practice.png`, fullPage: true });
+});
+
 for (const operation of ['addition', 'multiplication'] as const) {
-  for (const digits of [1, 2, 3] as const) {
+  for (const digits of operation === 'addition' ? [2] as const : [1, 2, 3] as const) {
     test(`${operation}, ${digits} digit operands: ten unique problems, automatic scoring and manual restart`, async ({ page }) => {
       await startRound(page, operation, digits);
       const seen = new Set<string>();
@@ -127,7 +164,7 @@ for (const operation of ['addition', 'multiplication'] as const) {
       await expectFinished(page, 10);
       // Waiting or changing either setting must leave the completed score in place.
       await page.locator('#operation').selectOption(operation === 'addition' ? 'multiplication' : 'addition');
-      await page.locator('#digit-count').selectOption(digits === 3 ? '1' : '3');
+      await page.locator('#digit-count').selectOption(operation === 'addition' ? '3' : '2');
       await expectFinished(page, 10);
       await page.locator('#start').click();
       await expect(page.locator('#score')).toBeHidden();
@@ -209,7 +246,7 @@ test('partial entry, Enter, Backspace, timers and completed-round minimum, maxim
   await expect(page.locator('#learn-view')).toBeVisible();
   await page.locator('#mode-practice').click();
   await page.locator('#operation').selectOption('addition');
-  await page.locator('#digit-count').selectOption('1');
+  await page.locator('#digit-count').selectOption('2');
   await expectFinished(page, 7);
   await expect(page.locator('#minimum-time')).toHaveText('0.2 s');
   await expect(page.locator('#maximum-time')).toHaveText('1.4 s');

@@ -59,13 +59,10 @@ struct InstructionalLesson: Equatable {
 }
 
 enum LessonCatalog {
-    /// All six categories use the owner's described methodology. Only 12×12 and
+    /// The four available categories use the owner's described methodology. Only 12×12 and
     /// 18×18 are individually owner-confirmed worked traces; the other examples
     /// are generated from the subsequently described general method.
     static let lessons = [
-        InstructionalLesson(id: "addition-1", title: "Single-digit addition", operation: .addition,
-            digitCount: .one, authoredStatus: "Owner-described method; generated instructions",
-            examples: [try! AdditionExamples.create(left: 8, right: 7, digitCount: .one)]),
         InstructionalLesson(id: "multiplication-1", title: "Single-digit multiplication", operation: .multiplication,
             digitCount: .one, authoredStatus: "Owner-described method; generated instructions",
             examples: [try! MultiplicationExamples.create(left: 8, right: 7, digitCount: .one)]),
@@ -74,9 +71,6 @@ enum LessonCatalog {
             examples: [try! AdditionExamples.create(left: 58, right: 67, digitCount: .two)]),
         InstructionalLesson(id: "multiplication-2", title: "Two-digit multiplication", operation: .multiplication,
             digitCount: .two, authoredStatus: "Two owner-confirmed worked examples", examples: ConfirmedExamples.multiplication),
-        InstructionalLesson(id: "addition-3", title: "Three-digit addition", operation: .addition,
-            digitCount: .three, authoredStatus: "Owner-described method; generated instructions",
-            examples: [try! AdditionExamples.create(left: 587, right: 678, digitCount: .three)]),
         InstructionalLesson(id: "multiplication-3", title: "Three-digit multiplication", operation: .multiplication,
             digitCount: .three, authoredStatus: "Owner-described method; generated instructions",
             examples: [try! MultiplicationExamples.create(left: 123, right: 456, digitCount: .three)]),

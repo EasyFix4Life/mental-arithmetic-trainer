@@ -1,0 +1,12 @@
+
+Running 5 tests using 1 worker
+
+(node:16639) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/desktop/app.spec.ts:79:1 › the native shell loads offline production assets with an isolated renderer and faithful layout (4.2s)
+  ✓  2 tests/desktop/app.spec.ts:160:1 › Learn preserves lesson order, authored digit selections, carry sequence and the final answer after Last (1.5s)
+  ✓  3 tests/desktop/app.spec.ts:229:1 › native Learn provides full random instruction in all four available lessons and preserves the confirmed multiplication carry method (1.9s)
+  ✓  4 tests/desktop/app.spec.ts:324:1 › Practice keeps input and live timers, then shows all ten raw answer times as minimum, maximum and average (4.8s)
+  ✓  5 tests/desktop/app.spec.ts:395:1 › all four available Practice configurations produce ten unique in-range problems and a score out of ten (1.6s)
+
+  5 passed (14.2s)

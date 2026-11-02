@@ -20,7 +20,17 @@ enum OperandDigits: Int, CaseIterable, Codable {
 struct PracticeSettings: Equatable {
     let operation: ArithmeticOperation
     let digitCount: OperandDigits
-    static let initial = PracticeSettings(operation: .addition, digitCount: .one)
+    static let initial = PracticeSettings(operation: .addition, digitCount: .two)
+
+    /// Current app choices. Arithmetic generators retain their full digit range
+    /// for the supplied historical fixtures and reusable instruction engine.
+    static func availableDigits(for operation: ArithmeticOperation) -> [OperandDigits] {
+        operation == .addition ? [.two] : OperandDigits.allCases
+    }
+
+    static func appSelection(operation: ArithmeticOperation, digitCount: OperandDigits) -> PracticeSettings {
+        PracticeSettings(operation: operation, digitCount: operation == .addition ? .two : digitCount)
+    }
 }
 
 struct ArithmeticProblem: Equatable {

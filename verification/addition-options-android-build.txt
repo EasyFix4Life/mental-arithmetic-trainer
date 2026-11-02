@@ -1,0 +1,123 @@
+Building the offline Android release and running Android lint.
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.4.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Checking the license for package Android SDK Platform-Tools in /private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-addition-options-112-j1wm45u3/fresh-sdk/licenses
+License for package Android SDK Platform-Tools accepted.
+Preparing "Install Android SDK Platform-Tools v.37.0.1".
+"Install Android SDK Platform-Tools v.37.0.1" ready.
+Installing Android SDK Platform-Tools in /private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-addition-options-112-j1wm45u3/fresh-sdk/platform-tools
+"Install Android SDK Platform-Tools v.37.0.1" complete.
+"Install Android SDK Platform-Tools v.37.0.1" finished.
+> Task :app:bundleWebAssets UP-TO-DATE
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :app:mergeReleaseNativeLibs NO-SOURCE
+> Task :app:stripReleaseDebugSymbols NO-SOURCE
+> Task :app:extractReleaseNativeSymbolTables NO-SOURCE
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:checkReleaseDuplicateClasses UP-TO-DATE
+> Task :app:generateReleaseResources UP-TO-DATE
+> Task :app:packageReleaseResources UP-TO-DATE
+> Task :app:processReleaseNavigationResources UP-TO-DATE
+> Task :app:parseReleaseLocalResources UP-TO-DATE
+> Task :app:generateReleaseRFile UP-TO-DATE
+> Task :app:compileReleaseKotlin NO-SOURCE
+> Task :app:javaPreCompileRelease UP-TO-DATE
+
+> Task :app:compileReleaseJavaWithJavac
+Note: /private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-addition-options-112-j1wm45u3/android/app/src/main/java/local/jeff/mentalarithmetic/MainActivity.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :app:checkReleaseAarMetadata UP-TO-DATE
+> Task :app:mapReleaseSourceSetPaths UP-TO-DATE
+> Task :app:compileReleaseNavigationResources UP-TO-DATE
+> Task :app:mergeReleaseResources UP-TO-DATE
+> Task :app:createReleaseCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksRelease UP-TO-DATE
+> Task :app:processReleaseMainManifest UP-TO-DATE
+> Task :app:processReleaseManifest
+> Task :app:desugarReleaseFileDependencies
+> Task :app:mergeReleaseStartupProfile
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:mergeReleaseArtProfile
+> Task :app:mergeReleaseAssets
+> Task :app:compressReleaseAssets
+> Task :app:extractReleaseVersionControlInfo
+> Task :app:extractProguardFiles
+> Task :app:generateReleaseLintVitalReportModel
+> Task :app:processReleaseJavaRes NO-SOURCE
+> Task :app:collectReleaseDependencies
+> Task :app:sdkReleaseDependencyData
+> Task :app:validateSigningRelease
+> Task :app:writeReleaseAppMetadata
+> Task :app:writeReleaseSigningConfigVersions
+> Task :app:preReleaseAndroidTestBuild SKIPPED
+> Task :app:generateReleaseLintReportModel
+> Task :app:processReleaseManifestForPackage
+> Task :app:mergeReleaseJavaResource
+> Task :app:preReleaseUnitTestBuild UP-TO-DATE
+> Task :app:generateReleaseAndroidTestResources
+> Task :app:packageReleaseAndroidTestResources
+> Task :app:processReleaseAndroidTestNavigationResources
+> Task :app:generateReleaseAndroidTestAssets UP-TO-DATE
+> Task :app:javaPreCompileReleaseAndroidTest
+> Task :app:mergeReleaseAndroidTestAssets
+> Task :app:compressReleaseAndroidTestAssets
+> Task :app:checkReleaseAndroidTestDuplicateClasses
+> Task :app:checkReleaseAndroidTestAarMetadata
+> Task :app:mapReleaseAndroidTestSourceSetPaths
+> Task :app:compileReleaseAndroidTestNavigationResources
+> Task :app:parseReleaseAndroidTestLocalResources
+> Task :app:mergeReleaseAndroidTestResources
+> Task :app:generateReleaseAndroidTestRFile
+> Task :app:processReleaseAndroidTestManifest
+> Task :app:desugarReleaseAndroidTestFileDependencies
+> Task :app:mergeExtDexReleaseAndroidTest
+> Task :app:mergeReleaseAndroidTestJniLibFolders
+> Task :app:mergeReleaseAndroidTestNativeLibs NO-SOURCE
+> Task :app:stripReleaseAndroidTestDebugSymbols NO-SOURCE
+> Task :app:validateSigningReleaseAndroidTest
+> Task :app:writeReleaseAndroidTestSigningConfigVersions
+> Task :app:processReleaseAndroidTestResources
+> Task :app:processReleaseResources
+> Task :app:mergeExtDexRelease
+> Task :app:dexBuilderRelease
+> Task :app:mergeReleaseGlobalSynthetics
+> Task :app:bundleReleaseClassesToCompileJar
+> Task :app:generateReleaseAndroidTestLintModel
+> Task :app:generateReleaseUnitTestLintModel
+> Task :app:compileReleaseAndroidTestKotlin NO-SOURCE
+> Task :app:compileReleaseAndroidTestJavaWithJavac
+> Task :app:mergeDexRelease
+> Task :app:dexBuilderReleaseAndroidTest
+> Task :app:compileReleaseArtProfile
+> Task :app:processReleaseAndroidTestJavaRes NO-SOURCE
+> Task :app:mergeReleaseAndroidTestGlobalSynthetics
+> Task :app:optimizeReleaseResources
+> Task :app:mergeReleaseAndroidTestJavaResource
+> Task :app:mergeDexReleaseAndroidTest
+> Task :app:packageReleaseAndroidTest
+> Task :app:createReleaseAndroidTestApkListingFileRedirect
+> Task :app:assembleReleaseAndroidTest
+> Task :app:lintAnalyzeReleaseAndroidTest
+> Task :app:lintAnalyzeReleaseUnitTest
+> Task :app:lintVitalAnalyzeRelease
+> Task :app:lintVitalReportRelease SKIPPED
+> Task :app:lintVitalRelease SKIPPED
+> Task :app:packageRelease
+> Task :app:createReleaseApkListingFileRedirect
+> Task :app:assembleRelease
+> Task :app:lintAnalyzeRelease
+
+> Task :app:lintReportRelease
+Wrote HTML report to file:///private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-addition-options-112-j1wm45u3/android/app/build/reports/lint-results-release.html
+
+> Task :app:lintRelease
+
+[Incubating] Problems report is available at: file:///private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-addition-options-112-j1wm45u3/android/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 12s
+79 actionable tasks: 63 executed, 16 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.4.1/userguide/configuration_cache_enabling.html
+Android APK: /private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-addition-options-112-j1wm45u3/release/Mental-Arithmetic-1.1.2-Android.apk

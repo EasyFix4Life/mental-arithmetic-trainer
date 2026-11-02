@@ -1,4 +1,4 @@
-# Draft App Review notes
+# Draft App Review notes — version 1.1.2, build 3
 
 Prepare the final signing, contact information, privacy URL, and App Store Connect fields before submitting this draft.
 
@@ -6,7 +6,7 @@ Mental Arithmetic is an offline, native UIKit app for mental addition and multip
 
 ## Practice
 
-1. Select **Practice**. Choose Addition or Multiplication and one, two, or three digits per operand. Tap **Start round**.
+1. Select **Practice**. Choose two-digit Addition or Multiplication with one, two, or three digits per operand. Addition offers only **2**; switching from one- or three-digit multiplication to Addition selects **2**. Tap **Start**.
 2. Type the answer using the numeric keyboard. Submission is automatic as soon as the expected number of answer digits has been entered. Enter/Return is not required and does not submit.
 3. Each accepted entry advances immediately, including incorrect entries. Incorrect answers do not open an explanation or correction screen.
 4. The live timer is beside the answer field. The previous completion time appears at the upper left in black for correct or red for incorrect.
@@ -15,7 +15,7 @@ Mental Arithmetic is an offline, native UIKit app for mental addition and multip
 
 ## Learn
 
-Choose **Learn**, select any of the six addition/multiplication and one-/two-/three-digit lessons, then use **New random example** for a fresh problem. Every lesson provides instructional calculation screens and a final-answer item. Addition shows digit sums and right-to-left carries. Single-digit multiplication shows the product. Two-digit multiplication follows the owner's confirmed First → Inside → Outside → Last sequence, with carry screens under Last and the final answer after Last. Three-digit multiplication uses the owner-described five groups of digit products followed by right-to-left carries. The fixed 12 × 12 and 18 × 18 demonstrations are available alongside generated examples. Generated examples are implemented from the owner-described methods; they are not represented as individually confirmed scripts or demonstrations.
+Choose **Learn**, select one of the four lessons: two-digit addition or single-, two-, or three-digit multiplication, then use **New random example** for a fresh problem. Every lesson provides instructional calculation screens and a final-answer item. Addition shows digit sums and right-to-left carries. Single-digit multiplication shows the product. Two-digit multiplication follows the owner's confirmed First → Inside → Outside → Last sequence, with carry screens under Last and the final answer after Last. Three-digit multiplication uses the owner-described five groups of digit products followed by right-to-left carries. The fixed 12 × 12 and 18 × 18 demonstrations are available alongside generated examples. Generated examples are implemented from the owner-described methods; they are not represented as individually confirmed scripts or demonstrations.
 
 ## Input decision retained from the supplied requirements
 
