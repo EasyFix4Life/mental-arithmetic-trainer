@@ -10,7 +10,9 @@ There is no backend, account, advertisement, analytics, saved learner history, e
 
 ## Downloads and platform guides
 
-The private GitHub repository is [EasyFix4Life/mental-arithmetic-trainer](https://github.com/EasyFix4Life/mental-arithmetic-trainer). The [v1.1.1 release](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/tag/v1.1.1) carries the downloadable packages once uploaded. Local packages are also in the parent `outputs` folder.
+The public GitHub repository is [EasyFix4Life/mental-arithmetic-trainer](https://github.com/EasyFix4Life/mental-arithmetic-trainer). The [v1.1.1 release](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/tag/v1.1.1) carries the downloadable packages. Local packages are also in the parent `outputs` folder.
+
+The live website's **Download Apps** link opens clearly labeled macOS, Windows, Android, and iPhone/iPad download cards, plus web and complete-source ZIP links. macOS requires Apple silicon and macOS 13 or later; Windows supports Windows 10/11 x64; Android requires Android 8 or later. iOS downloads are unsigned Xcode development files, not a directly installable app or an App Store listing. Download links use the fixed, tested v1.1.1 release assets. This website-only section stays hidden during active Practice and is excluded from native app shells.
 
 | Platform | Package | Guide |
 | --- | --- | --- |

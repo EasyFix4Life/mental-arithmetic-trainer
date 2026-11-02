@@ -1,20 +1,28 @@
 import { mountLearnView } from './learn/learnView';
+import { renderDownloadsSection } from './downloadsView';
 import { mountPracticeView } from './practiceView';
 import { RoundController } from './roundController';
 
+interface ViewOptions {
+  showDownloads?: boolean;
+}
+
 /** Modes share presentation only. Learn never submits to the practice controller. */
-export function mountView(root: HTMLElement, controller: RoundController): () => void {
+export function mountView(root: HTMLElement, controller: RoundController, viewOptions: ViewOptions = {}): () => void {
   root.innerHTML = `
     <nav id="mode-navigation" class="mode-navigation" aria-label="Modes">
       <button id="mode-learn" type="button" aria-pressed="false">Learn</button>
       <button id="mode-practice" type="button" aria-pressed="true">Practice</button>
+      ${viewOptions.showDownloads ? '<a id="download-apps-link" class="download-nav-link" href="#app-downloads">Download Apps</a>' : ''}
     </nav>
     <div id="learn-view" class="learn-view" hidden></div>
     <div id="practice-view"></div>
+    ${viewOptions.showDownloads ? renderDownloadsSection() : ''}
   `;
   const navigation = root.querySelector<HTMLElement>('#mode-navigation')!;
   const learn = root.querySelector<HTMLElement>('#learn-view')!;
   const practice = root.querySelector<HTMLElement>('#practice-view')!;
+  const downloads = root.querySelector<HTMLElement>('#app-downloads');
   const learnButton = root.querySelector<HTMLButtonElement>('#mode-learn')!;
   const practiceButton = root.querySelector<HTMLButtonElement>('#mode-practice')!;
   const listeners = new AbortController();
@@ -24,6 +32,7 @@ export function mountView(root: HTMLElement, controller: RoundController): () =>
   function renderMode(): void {
     const active = controller.snapshot.phase === 'active';
     navigation.hidden = active;
+    if (downloads) downloads.hidden = active;
     learn.hidden = mode !== 'learn';
     practice.hidden = mode !== 'practice';
     learnButton.setAttribute('aria-pressed', String(mode === 'learn'));

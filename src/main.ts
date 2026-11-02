@@ -1,7 +1,8 @@
 import './style.css';
+import { shouldShowWebsiteDownloads } from './downloadsView';
 import { RoundController } from './roundController';
 import { mountView } from './view';
 
 const root = document.querySelector<HTMLElement>('#app');
 if (!root) throw new Error('Application root is missing.');
-mountView(root, new RoundController());
+mountView(root, new RoundController(), { showDownloads: shouldShowWebsiteDownloads(window.location) });
