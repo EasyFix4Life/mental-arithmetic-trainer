@@ -36,6 +36,7 @@ final class SimulatorReviewRunner {
                 await record("06 local privacy policy") { try await self.privacy() }
                 await record("07 three-digit multiplication groups and carries") { try self.threeDigitMultiplication() }
                 await record("08 four available instructional walkthroughs") { try self.instructionalLessons() }
+                await record("09 corrected Inside and Outside for 82 × 76") { try self.correctedCrossProducts() }
                 resetRoot()
                 try chooseMode(0)
                 try chooseFixedExample(lessonID: "multiplication-3", index: 0)
@@ -65,6 +66,11 @@ final class SimulatorReviewRunner {
                 case "review-addition2":
                     try chooseMode(0)
                     try chooseFixedExample(lessonID: "addition-2", index: 0)
+                case "review-inside82", "review-outside82":
+                    try chooseMode(0)
+                    guard let learn = root.children.first(where: { $0 is LearnViewController }) as? LearnViewController else { throw Failure("Missing Learn controller") }
+                    try learn.qaSelectGeneratedExample(left: 82, right: 76)
+                    try press(scenario == "review-inside82" ? "stage-inside" : "stage-outside")
                 case "review-help":
                     try chooseMode(0)
                     try press("lesson-multiplication-2")
@@ -330,6 +336,26 @@ final class SimulatorReviewRunner {
         window.makeKeyAndVisible()
         root.loadViewIfNeeded()
         window.layoutIfNeeded()
+    }
+
+    private func correctedCrossProducts() throws {
+        try chooseMode(0)
+        guard let learn = root.children.compactMap({ $0 as? LearnViewController }).first else { throw Failure("Missing Learn controller") }
+        try learn.qaSelectGeneratedExample(left: 82, right: 76)
+        try press("stage-inside")
+        try require(try text("step-operation") == "2 × 7", "82 × 76 Inside is 2 × 7")
+        try require(try text("step-intermediate-result") == "14", "Inside result is 14")
+        let inside = try control("instruction-expression", as: ArithmeticExpressionView.self).accessibilityLabel ?? ""
+        try require(inside.contains("left operand, position 2, digit 2") && inside.contains("right operand, position 1, digit 7"), "Inside highlights inner digits 2 and 7")
+        try press("stage-outside")
+        let operation = try control("step-operation", as: ArithmeticExpressionView.self).accessibilityLabel
+        try require(operation == "8 times 6", "82 × 76 Outside is 8 × 6")
+        try require(try text("step-intermediate-result") == "62", "Combine Inside and Outside: 14 + 48 = 62")
+        let outside = try control("instruction-expression", as: ArithmeticExpressionView.self).accessibilityLabel ?? ""
+        try require(outside.contains("left operand, position 1, digit 8") && outside.contains("right operand, position 2, digit 6"), "Outside highlights outer digits 8 and 6")
+        try require(try text("step-narration") == "Combine Inside and Outside: 14 + 48 = 62.", "Narration uses the corrected cross-product order")
+        try press("final-answer")
+        try require((try control("final-answer-expression", as: ArithmeticExpressionView.self)).accessibilityLabel == "82 times 76 equals 6232", "Corrected walkthrough retains final answer 6232")
     }
 
     private func chooseMode(_ index: Int) throws {

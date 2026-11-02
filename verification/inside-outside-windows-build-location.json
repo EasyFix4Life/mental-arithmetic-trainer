@@ -1,0 +1,13 @@
+{
+  "version": "1.1.4",
+  "buildHost": "darwin",
+  "targetPlatform": "win32",
+  "architecture": "x64",
+  "appDirectory": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-tmdHuI/win-unpacked",
+  "executablePath": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-windows-tmdHuI/win-unpacked/Mental Arithmetic.exe",
+  "artifacts": [
+    "/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-114-desktop-gv_aozrr/release/Mental-Arithmetic-1.1.4-Windows-x64-Setup.exe",
+    "/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-114-desktop-gv_aozrr/release/Mental-Arithmetic-1.1.4-Windows-x64-Setup.exe.blockmap",
+    "/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-114-desktop-gv_aozrr/release/Mental-Arithmetic-1.1.4-Windows-x64.zip"
+  ]
+}

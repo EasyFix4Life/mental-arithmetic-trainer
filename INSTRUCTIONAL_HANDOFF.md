@@ -1,6 +1,8 @@
 # Instructional implementation handoff — 1.1.0
 
-**Current version 1.1.3 scope:** Learn and Practice offer two-digit addition and one-, two- and three-digit multiplication. The owner subsequently removed one-digit and three-digit addition. Earlier all-length statements below describe the instructional history; the original supplied documents are preserved. See [the current scope record](requirements/instruction/OWNER_ADDITION_OPTIONS_2026-11-02.md).
+**Current version 1.1.4 scope:** Learn and Practice offer two-digit addition and one-, two- and three-digit multiplication. The owner subsequently removed one-digit and three-digit addition. Earlier all-length statements below describe the instructional history; the original supplied documents are preserved. See [the current scope record](requirements/instruction/OWNER_ADDITION_OPTIONS_2026-11-02.md).
+
+**Current Inside/Outside correction:** For horizontal `ab × cd`, Inside uses `b × c` (inner digits) and Outside uses `a × d` (outer digits). The correction applies to highlights, arithmetic and narration in random and fixed examples on every platform. For 82 × 76, Inside is 2 × 7 = 14 and Outside is 8 × 6 = 48. See [the owner correction](requirements/instruction/OWNER_INSIDE_OUTSIDE_CORRECTION_2026-11-02.md); it supersedes the earlier mapping while preserving the original intake.
 
 
 The current app implements the owner's later request: **all versions have instructions for addition and multiplication with one-, two- and three-digit operands**. All six Learn categories open with a random example and have complete walkthroughs. The latest layout correction places addition operands above and below one another, aligned by place value, throughout Learn, calculations, final answers and Practice. Multiplication stays horizontal.

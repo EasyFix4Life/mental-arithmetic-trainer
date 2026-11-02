@@ -78,7 +78,7 @@ async function startRound(window: Page, operation: Operation, digits: DigitCount
 
 test('the native shell loads offline production assets with an isolated renderer and faithful layout', async ({ desktop, window }) => {
   expect(window.url()).toBe(appUrl);
-  await expect(window.locator('#app-version')).toHaveText('Version 1.1.3');
+  await expect(window.locator('#app-version')).toHaveText('Version 1.1.4');
   expect(await desktop.evaluate(({ app }) => app.isPackaged)).toBe(Boolean(process.env.DESKTOP_EXECUTABLE));
   const windows = await desktop.evaluate(({ BrowserWindow }) => BrowserWindow.getAllWindows().map((nativeWindow) => {
     // Electron exposes this read-only runtime inspection API internally; its
@@ -168,7 +168,7 @@ test('Learn preserves lesson order, authored digit selections, carry sequence an
   await window.locator('#worked-example').selectOption('12-times-12');
   await window.locator('#lesson-help').click();
   await expect(window.locator('#walkthrough-heading')).toBeFocused();
-  const pairs = [['left:0', 'right:0'], ['left:0', 'right:1'], ['left:1', 'right:0'], ['left:1', 'right:1']];
+  const pairs = [['left:0', 'right:0'], ['left:1', 'right:0'], ['left:0', 'right:1'], ['left:1', 'right:1']];
   const twelveDigits = ['1□□', '1□□', '14□', '144'];
   const twelveResults = ['1', '2', '4', '4'];
   for (let index = 0; index < pairs.length; index += 1) {
@@ -287,8 +287,8 @@ test('native Learn provides full random instruction in all four available lesson
   await expect(window.locator('#worked-example')).toHaveValue('random');
   await expect(window.locator('#lesson-expression .learn-expression')).toHaveAccessibleName('98 times 87');
   await window.locator('#lesson-help').click();
-  const operations = ['9 × 8', '9 × 7', '8 × 8 = 64; 63 + 64', '8 × 7', '127 + 5', '72 + 13'];
-  const results = ['72', '63', '127', '56', '132', '85'];
+  const operations = ['9 × 8', '8 × 8', '9 × 7 = 63; 64 + 63', '8 × 7', '127 + 5', '72 + 13'];
+  const results = ['72', '64', '127', '56', '132', '85'];
   for (let index = 0; index < operations.length; index += 1) {
     await expect(window.locator('#walkthrough .step-operation')).toHaveAccessibleName(operations[index]!);
     await expect(window.locator('#walkthrough .step-intermediate-result')).toHaveText(results[index]!);
@@ -433,4 +433,33 @@ test('all four available Practice configurations produce ten unique in-range pro
       await expect(window.locator('#round-timing')).toBeVisible();
     }
   }
+});
+
+
+test('Inside and Outside select the inner and outer digits of 82 times 76 in the packaged app', async ({ window }) => {
+  await window.locator('#mode-learn').click();
+  await window.evaluate(() => {
+    const draws = [(82 - 10 + 0.25) / 90, (76 - 10 + 0.25) / 90];
+    Math.random = () => draws.shift() ?? 0;
+  });
+  await window.locator('[data-lesson-id="multiplication-2"]').click();
+  await expect(window.locator('#lesson-expression .learn-expression')).toHaveAccessibleName('82 times 76');
+  await window.locator('#lesson-help').click();
+  await window.locator('[data-stage-name="Inside"]').click();
+  await expect(window.locator('#walkthrough .step-operation')).toHaveAccessibleName('2 × 7');
+  await expect(window.locator('#walkthrough .step-intermediate-result')).toHaveText('14');
+  expect(await window.locator('#walkthrough .digit-highlight').evaluateAll((elements) =>
+    elements.map((element) => (element as HTMLElement).dataset.digitRef),
+  )).toEqual(['left:1', 'right:0']);
+  await window.screenshot({ path: 'verification/inside-outside-macos-Inside.png', fullPage: true });
+  await window.locator('[data-stage-name="Outside"]').click();
+  await expect(window.locator('#walkthrough .step-operation')).toHaveAccessibleName('8 × 6 = 48; 14 + 48');
+  await expect(window.locator('#walkthrough .step-intermediate-result')).toHaveText('62');
+  await expect(window.locator('#walkthrough .step-narration')).toHaveText('Combine Inside and Outside: 14 + 48 = 62.');
+  expect(await window.locator('#walkthrough .digit-highlight').evaluateAll((elements) =>
+    elements.map((element) => (element as HTMLElement).dataset.digitRef),
+  )).toEqual(['left:0', 'right:1']);
+  await window.screenshot({ path: 'verification/inside-outside-macos-Outside.png', fullPage: true });
+  await window.locator('#final-answer').click();
+  await expect(window.locator('#walkthrough .learn-expression')).toHaveAccessibleName('82 times 76 equals 6232');
 });

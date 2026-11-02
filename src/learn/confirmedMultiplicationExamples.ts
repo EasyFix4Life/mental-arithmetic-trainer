@@ -1,10 +1,13 @@
 import type { AuthoredExample } from './lessonTypes';
 
 /**
- * Owner-confirmed examples only. These traces record Jeff's supplied sequence;
+ * Owner-confirmed examples only. These traces record Jeff's supplied sequence,
+ * with Inside/Outside digit selections corrected by his later screenshot report;
  * they do not generate or infer a general two-digit multiplication procedure.
  * Source utterances and the explicitly confirmed correction are preserved in
  * requirements/instruction/OWNER_CONFIRMED_MULTIPLICATION_2026-10-24.json.
+ * The later naming correction is recorded separately in
+ * requirements/instruction/OWNER_INSIDE_OUTSIDE_CORRECTION_2026-11-02.md.
  */
 export const confirmedMultiplicationExamples: readonly AuthoredExample[] = [
   {
@@ -24,16 +27,16 @@ export const confirmedMultiplicationExamples: readonly AuthoredExample[] = [
       {
         id: '12-inside',
         stageName: 'Inside',
-        highlightedDigitRefs: ['left:0', 'right:1'],
-        operationDisplay: '1 × 2',
+        highlightedDigitRefs: ['left:1', 'right:0'],
+        operationDisplay: '2 × 1',
         intermediateResult: '2',
         visibleResultDigits: '1□□',
       },
       {
         id: '12-outside',
         stageName: 'Outside',
-        highlightedDigitRefs: ['left:1', 'right:0'],
-        operationDisplay: '2 × 1 = 2; 2 + 2',
+        highlightedDigitRefs: ['left:0', 'right:1'],
+        operationDisplay: '1 × 2 = 2; 2 + 2',
         intermediateResult: '4',
         visibleResultDigits: '14□',
         narration: 'Combine Inside and Outside: 2 + 2 = 4.',
@@ -66,16 +69,16 @@ export const confirmedMultiplicationExamples: readonly AuthoredExample[] = [
       {
         id: '18-inside',
         stageName: 'Inside',
-        highlightedDigitRefs: ['left:0', 'right:1'],
-        operationDisplay: '1 × 8',
+        highlightedDigitRefs: ['left:1', 'right:0'],
+        operationDisplay: '8 × 1',
         intermediateResult: '8',
         visibleResultDigits: '□□□',
       },
       {
         id: '18-outside',
         stageName: 'Outside',
-        highlightedDigitRefs: ['left:1', 'right:0'],
-        operationDisplay: '8 × 1 = 8; 8 + 8',
+        highlightedDigitRefs: ['left:0', 'right:1'],
+        operationDisplay: '1 × 8 = 8; 8 + 8',
         intermediateResult: '16',
         visibleResultDigits: '□□□',
         narration: 'Combine Inside and Outside: 8 + 8 = 16.',

@@ -49,6 +49,8 @@ export function generateRandomProblem(
 /**
  * Apply the First → Inside → Outside → Last sequence and the carry direction
  * confirmed by Jeff for 12 × 12 and 18 × 18 to any two-digit operands.
+ * The owner's later correction names the adjacent inner digits Inside and
+ * the two outer digits Outside in the horizontal operand arrangement.
  * Arithmetic lives here; the instruction renderer only displays the trace.
  */
 export function createMultiplicationExample(left: number, right: number): AuthoredExample {
@@ -62,8 +64,8 @@ export function createMultiplicationExample(left: number, right: number): Author
   const rightFirst = Math.floor(right / 10);
   const rightLast = right % 10;
   const first = leftFirst * rightFirst;
-  const inside = leftFirst * rightLast;
-  const outside = leftLast * rightFirst;
+  const inside = leftLast * rightFirst;
+  const outside = leftFirst * rightLast;
   const middle = inside + outside;
   const last = leftLast * rightLast;
   const unitsDigit = last % 10;
@@ -91,16 +93,16 @@ export function createMultiplicationExample(left: number, right: number): Author
     {
       id: `${prefix}-inside`,
       stageName: 'Inside',
-      highlightedDigitRefs: ['left:0', 'right:1'],
-      operationDisplay: `${leftFirst} × ${rightLast}`,
+      highlightedDigitRefs: ['left:1', 'right:0'],
+      operationDisplay: `${leftLast} × ${rightFirst}`,
       intermediateResult: String(inside),
       visibleResultDigits: blank,
     },
     {
       id: `${prefix}-outside`,
       stageName: 'Outside',
-      highlightedDigitRefs: ['left:1', 'right:0'],
-      operationDisplay: `${leftLast} × ${rightFirst} = ${outside}; ${inside} + ${outside}`,
+      highlightedDigitRefs: ['left:0', 'right:1'],
+      operationDisplay: `${leftFirst} × ${rightLast} = ${outside}; ${inside} + ${outside}`,
       intermediateResult: String(middle),
       visibleResultDigits: blank,
       narration: `Combine Inside and Outside: ${inside} + ${outside} = ${middle}.`,

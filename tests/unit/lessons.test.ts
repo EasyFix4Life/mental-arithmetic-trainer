@@ -64,11 +64,11 @@ describe('source-preserving instructional catalog', () => {
     expect(example.finalAnswer).toBe('144');
     expect(example.steps.map((step) => step.stageName)).toEqual(['First', 'Inside', 'Outside', 'Last']);
     expect(example.steps.map((step) => step.highlightedDigitRefs)).toEqual([
-      ['left:0', 'right:0'], ['left:0', 'right:1'],
-      ['left:1', 'right:0'], ['left:1', 'right:1'],
+      ['left:0', 'right:0'], ['left:1', 'right:0'],
+      ['left:0', 'right:1'], ['left:1', 'right:1'],
     ]);
     expect(example.steps.map((step) => step.operationDisplay)).toEqual([
-      '1 × 1', '1 × 2', '2 × 1 = 2; 2 + 2', '2 × 2',
+      '1 × 1', '2 × 1', '1 × 2 = 2; 2 + 2', '2 × 2',
     ]);
     expect(example.steps.map((step) => step.intermediateResult)).toEqual(['1', '2', '4', '4']);
     expect(example.steps.map((step) => step.visibleResultDigits)).toEqual(['1□□', '1□□', '14□', '144']);
@@ -91,11 +91,11 @@ describe('source-preserving instructional catalog', () => {
       'First', 'Inside', 'Outside', 'Last', 'Last', 'Last',
     ]);
     expect(example.steps.slice(0, 4).map((step) => step.highlightedDigitRefs)).toEqual([
-      ['left:0', 'right:0'], ['left:0', 'right:1'],
-      ['left:1', 'right:0'], ['left:1', 'right:1'],
+      ['left:0', 'right:0'], ['left:1', 'right:0'],
+      ['left:0', 'right:1'], ['left:1', 'right:1'],
     ]);
     expect(example.steps.map((step) => step.operationDisplay)).toEqual([
-      '1 × 1', '1 × 8', '8 × 1 = 8; 8 + 8', '8 × 8', '16 + 6', '1 + 2',
+      '1 × 1', '8 × 1', '1 × 8 = 8; 8 + 8', '8 × 8', '16 + 6', '1 + 2',
     ]);
     expect(example.steps.map((step) => step.intermediateResult)).toEqual(['1', '8', '16', '64', '22', '3']);
     const [last, middleCarry, firstCarry] = example.steps.slice(3);

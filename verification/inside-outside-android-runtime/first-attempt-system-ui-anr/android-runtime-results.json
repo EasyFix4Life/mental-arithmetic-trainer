@@ -1,0 +1,33 @@
+{
+  "androidRelease": "17",
+  "sdkInt": 37,
+  "supportedAbis": [
+    "arm64-v8a"
+  ],
+  "model": "sdk_gphone64_arm64",
+  "package": "local.jeff.mentalarithmetic",
+  "version": "1.1.4",
+  "webViewPackage": "com.google.android.webview",
+  "webViewVersion": "145.0.7632.218",
+  "scenario": "acceptance",
+  "passed": 1,
+  "failed": 1,
+  "error": "java.lang.IllegalArgumentException: Targeted input event injection from pid 4181 was not directed at a window owned by uid 10235.",
+  "cases": [
+    {
+      "name": "offline release shell, presentation and browser security",
+      "status": "passed",
+      "durationMs": 303,
+      "details": {
+        "url": "https:\/\/appassets.androidplatform.net\/index.html",
+        "blockNetworkLoads": true,
+        "allowFileAccess": false,
+        "allowContentAccess": false,
+        "javascript": true,
+        "cacheMode": 2
+      }
+    }
+  ],
+  "finishedAtEpochMs": 1793659932448,
+  "runtimeExecution": true
+}

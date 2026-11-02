@@ -1,0 +1,132 @@
+[
+  {
+    "file": "ios/MentalArithmetic/AppDelegate.swift",
+    "workspaceSHA256": "bac4f814d67c660f552a6f48741640c32680ee7f213ef06e8306803d3e92a802",
+    "builtMirrorSHA256": "bac4f814d67c660f552a6f48741640c32680ee7f213ef06e8306803d3e92a802"
+  },
+  {
+    "file": "ios/MentalArithmetic/Assets.xcassets/AccentColor.colorset/Contents.json",
+    "workspaceSHA256": "57d9366f959e37f6fe335e4593ed8de0db87ee1791b4d8563f7a1282c91278da",
+    "builtMirrorSHA256": "57d9366f959e37f6fe335e4593ed8de0db87ee1791b4d8563f7a1282c91278da"
+  },
+  {
+    "file": "ios/MentalArithmetic/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+    "workspaceSHA256": "20c896dfa210f9b5e6ab34ee2b93568e99dfdc5547e676dabd1468884496db06",
+    "builtMirrorSHA256": "20c896dfa210f9b5e6ab34ee2b93568e99dfdc5547e676dabd1468884496db06"
+  },
+  {
+    "file": "ios/MentalArithmetic/Assets.xcassets/AppIcon.appiconset/Contents.json",
+    "workspaceSHA256": "9239900ca4c37dc860feb154216409f05d906e26f2d79550e1e8e8b8db6324c7",
+    "builtMirrorSHA256": "9239900ca4c37dc860feb154216409f05d906e26f2d79550e1e8e8b8db6324c7"
+  },
+  {
+    "file": "ios/MentalArithmetic/Assets.xcassets/Contents.json",
+    "workspaceSHA256": "e8e8ef4b27126d62305af321d12a6e64b866ca0b160f0f83efae90111f0ee576",
+    "builtMirrorSHA256": "e8e8ef4b27126d62305af321d12a6e64b866ca0b160f0f83efae90111f0ee576"
+  },
+  {
+    "file": "ios/MentalArithmetic/Assets.xcassets/SepiaColor.colorset/Contents.json",
+    "workspaceSHA256": "2b780d2c568d45dbb0b4f0a8e8d6e98fc996eaa5ea672385b313b10103ea86f1",
+    "builtMirrorSHA256": "2b780d2c568d45dbb0b4f0a8e8d6e98fc996eaa5ea672385b313b10103ea86f1"
+  },
+  {
+    "file": "ios/MentalArithmetic/Core/ConfirmedExamples.swift",
+    "workspaceSHA256": "bd157c428cbb7a618b6cbea656507a0861b50e61944e12f78ce44b66c68ae6de",
+    "builtMirrorSHA256": "bd157c428cbb7a618b6cbea656507a0861b50e61944e12f78ce44b66c68ae6de"
+  },
+  {
+    "file": "ios/MentalArithmetic/Core/Lessons.swift",
+    "workspaceSHA256": "fe3fef37a2c5a88440f164ed1bb9b089cfeb81feed42a90ae2cf8d5f377d3653",
+    "builtMirrorSHA256": "fe3fef37a2c5a88440f164ed1bb9b089cfeb81feed42a90ae2cf8d5f377d3653"
+  },
+  {
+    "file": "ios/MentalArithmetic/Core/PositionalInstructions.swift",
+    "workspaceSHA256": "67407f4519d0c0d5bdc566a3ba246d83cf50d5657974d969c75ca922a343f5c0",
+    "builtMirrorSHA256": "67407f4519d0c0d5bdc566a3ba246d83cf50d5657974d969c75ca922a343f5c0"
+  },
+  {
+    "file": "ios/MentalArithmetic/Core/PracticeEngine.swift",
+    "workspaceSHA256": "2e79e484425f18dd8cb3eae03e497d9d8e679e67769d79c1c7d4fa230c184956",
+    "builtMirrorSHA256": "2e79e484425f18dd8cb3eae03e497d9d8e679e67769d79c1c7d4fa230c184956"
+  },
+  {
+    "file": "ios/MentalArithmetic/Info.plist",
+    "workspaceSHA256": "6c0f5c4443ce91f24688ab278451e87eb4242df91e604047a27049ef903f58d1",
+    "builtMirrorSHA256": "6c0f5c4443ce91f24688ab278451e87eb4242df91e604047a27049ef903f58d1"
+  },
+  {
+    "file": "ios/MentalArithmetic/PrivacyInfo.xcprivacy",
+    "workspaceSHA256": "66399c68b4a904b6788b8b2edf9ec293807ac0060b011c177bf8663e1809f38b",
+    "builtMirrorSHA256": "66399c68b4a904b6788b8b2edf9ec293807ac0060b011c177bf8663e1809f38b"
+  },
+  {
+    "file": "ios/MentalArithmetic/QA/SimulatorReviewRunner.swift",
+    "workspaceSHA256": "aa2aa3815083b0b62bc309717b504584e583325f3b90b60955a9293ddf46252f",
+    "builtMirrorSHA256": "aa2aa3815083b0b62bc309717b504584e583325f3b90b60955a9293ddf46252f"
+  },
+  {
+    "file": "ios/MentalArithmetic/UI/AppTheme.swift",
+    "workspaceSHA256": "25d6e470017083c3e805546d38b149d42829b033be892958990441b9792c56da",
+    "builtMirrorSHA256": "25d6e470017083c3e805546d38b149d42829b033be892958990441b9792c56da"
+  },
+  {
+    "file": "ios/MentalArithmetic/UI/ArithmeticExpressionView.swift",
+    "workspaceSHA256": "bc041d4a243b8fa06f4c1e375ccdaec45821265fd83d5aad1072a98851c2c999",
+    "builtMirrorSHA256": "bc041d4a243b8fa06f4c1e375ccdaec45821265fd83d5aad1072a98851c2c999"
+  },
+  {
+    "file": "ios/MentalArithmetic/UI/LearnViewController.swift",
+    "workspaceSHA256": "3ec046e4b8aa7a3c1173006efa6e90139926bba89be37ea1cba3b2566e4f245c",
+    "builtMirrorSHA256": "3ec046e4b8aa7a3c1173006efa6e90139926bba89be37ea1cba3b2566e4f245c"
+  },
+  {
+    "file": "ios/MentalArithmetic/UI/PracticeViewController.swift",
+    "workspaceSHA256": "0294c83894b308dc36d66661ca1c2034864c8d6119aa20bc28ea43005872e824",
+    "builtMirrorSHA256": "0294c83894b308dc36d66661ca1c2034864c8d6119aa20bc28ea43005872e824"
+  },
+  {
+    "file": "ios/MentalArithmetic/UI/PrivacyViewController.swift",
+    "workspaceSHA256": "15109305117e19624e2a360c7ea8504d109643dab833ee4dd29538c5544f0ab0",
+    "builtMirrorSHA256": "15109305117e19624e2a360c7ea8504d109643dab833ee4dd29538c5544f0ab0"
+  },
+  {
+    "file": "ios/MentalArithmetic/UI/RootViewController.swift",
+    "workspaceSHA256": "3e7cab7738aa98d0bf79da89c74d25c97d536a3567fd726354ff334b9ea08912",
+    "builtMirrorSHA256": "3e7cab7738aa98d0bf79da89c74d25c97d536a3567fd726354ff334b9ea08912"
+  },
+  {
+    "file": "ios/MentalArithmetic.xcodeproj/project.pbxproj",
+    "workspaceSHA256": "58e1d6740f13ce09d46207610a6331c18f0f0e8b91a615e4c70070e0cb1742f9",
+    "builtMirrorSHA256": "58e1d6740f13ce09d46207610a6331c18f0f0e8b91a615e4c70070e0cb1742f9"
+  },
+  {
+    "file": "ios/MentalArithmetic.xcodeproj/xcshareddata/xcschemes/MentalArithmetic.xcscheme",
+    "workspaceSHA256": "2cee0a7f43a775e89b71f65b9d682476eb4c79af9f4ae9afceb29f310a082189",
+    "builtMirrorSHA256": "2cee0a7f43a775e89b71f65b9d682476eb4c79af9f4ae9afceb29f310a082189"
+  },
+  {
+    "file": "ios/MentalArithmeticTests/LessonTests.swift",
+    "workspaceSHA256": "e37aec2c170d8f17369a7996eef77860cb66742eac330bf5d399ddbd917a7260",
+    "builtMirrorSHA256": "e37aec2c170d8f17369a7996eef77860cb66742eac330bf5d399ddbd917a7260"
+  },
+  {
+    "file": "ios/MentalArithmeticTests/PracticeEngineTests.swift",
+    "workspaceSHA256": "119fb7a3934a495b6f49f950763a1ef2bab2bb59df5aefc13e5f9bbd7de82aff",
+    "builtMirrorSHA256": "119fb7a3934a495b6f49f950763a1ef2bab2bb59df5aefc13e5f9bbd7de82aff"
+  },
+  {
+    "file": "ios/MentalArithmeticTests/SuppliedAcceptanceData.swift",
+    "workspaceSHA256": "a5173c6082fc8335eb0a87263a30f0cea70cc8ab99b55e80f49867008f5eb2df",
+    "builtMirrorSHA256": "a5173c6082fc8335eb0a87263a30f0cea70cc8ab99b55e80f49867008f5eb2df"
+  },
+  {
+    "file": "ios/MentalArithmeticUITests/MentalArithmeticUITests.swift",
+    "workspaceSHA256": "90315cff1c238a2470993bd34529a61856eb06737f6d45eb0e61527ca466d528",
+    "builtMirrorSHA256": "90315cff1c238a2470993bd34529a61856eb06737f6d45eb0e61527ca466d528"
+  },
+  {
+    "file": "ios/Package.swift",
+    "workspaceSHA256": "cb8f872f6ba99e8a60884fba2c26bf86ebac8c6102e85b7af242268cb9330b97",
+    "builtMirrorSHA256": "cb8f872f6ba99e8a60884fba2c26bf86ebac8c6102e85b7af242268cb9330b97"
+  }
+]

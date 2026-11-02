@@ -114,8 +114,7 @@ static void CheckMultiplication(NSInteger digits) {
     Later(0.3, ^{
         NSString *policy = [(UITextView *)Find(@"privacy-policy-text") text];
         Require([policy containsString:@"does not collect personal data"], @"Existing Privacy sheet opens");
-        if ([ExpectedVersion isEqualToString:@"1.1.3"])
-            Require([policy containsString:@"Version 1.1.3 (build 4)"], @"Privacy displays the installed version and build");
+        Require([policy containsString:[NSString stringWithFormat:@"Version %@ (build %@)", ExpectedVersion, [NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleVersion"]]], @"Privacy displays the installed version and build");
         Report(nil);
     });
 }
@@ -148,9 +147,41 @@ static void CheckLessons(void) {
             Press(@"final-answer");
             Require([Find(@"final-answer-expression").accessibilityLabel hasSuffix:[@"equals " stringByAppendingString:answer]], [@"Correct instructional final answer: " stringByAppendingString:identifier]);
         }
-        Select(@"mode-control", 1);
-        Require([[(UILabel *)Find(@"round-score") text] isEqualToString:score], @"Practice results survive the Learn visit");
-        CheckMultiplication(1);
+        Press(@"lesson-multiplication-2");
+        NSArray<NSNumber *> *digits;
+        NSInteger a, b, c, d;
+        for (NSInteger attempt = 0; ; attempt++) {
+            digits = Numbers(Find(@"lesson-expression").accessibilityLabel);
+            Require(digits.count == 2, @"Two-digit multiplication example has two operands");
+            a = digits[0].integerValue / 10; b = digits[0].integerValue % 10;
+            c = digits[1].integerValue / 10; d = digits[1].integerValue % 10;
+            if (b * c != a * d) break;
+            Require(attempt < 20, @"A varied random example distinguishes the cross-products");
+            Press(@"random-example");
+        }
+        Press(@"lesson-help");
+        Press(@"stage-inside");
+        NSString *insideLabel = Find(@"instruction-expression").accessibilityLabel;
+        Require([insideLabel containsString:[NSString stringWithFormat:@"left operand, position 2, digit %ld", (long)b]] &&
+                [insideLabel containsString:[NSString stringWithFormat:@"right operand, position 1, digit %ld", (long)c]], @"Inside highlights the two inner digits");
+        Require([[(UILabel *)Find(@"step-operation") text] isEqualToString:[NSString stringWithFormat:@"%ld × %ld", (long)b, (long)c]], @"Inside calculation multiplies left units by right tens");
+        Require([[(UILabel *)Find(@"step-intermediate-result") text] integerValue] == b * c, @"Inside gives the inner-digit product");
+        Write(@"qa-release-artifact-audit-phase.json", @{@"phase": @"inside-corrected"});
+        Later(0.8, ^{
+            Press(@"stage-outside");
+            NSString *outsideLabel = Find(@"instruction-expression").accessibilityLabel;
+            Require([outsideLabel containsString:[NSString stringWithFormat:@"left operand, position 1, digit %ld", (long)a]] &&
+                    [outsideLabel containsString:[NSString stringWithFormat:@"right operand, position 2, digit %ld", (long)d]], @"Outside highlights the two outer digits");
+            Require([Find(@"step-operation").accessibilityLabel isEqualToString:[NSString stringWithFormat:@"%ld times %ld", (long)a, (long)d]], @"Outside calculation multiplies left tens by right units");
+            Require([[(UILabel *)Find(@"step-intermediate-result") text] integerValue] == b * c + a * d, @"Outside combines the corrected Inside and Outside products");
+            Require([[(UILabel *)Find(@"step-narration") text] isEqualToString:[NSString stringWithFormat:@"Combine Inside and Outside: %ld + %ld = %ld.", (long)(b * c), (long)(a * d), (long)(b * c + a * d)]], @"Narration follows Inside then Outside");
+            Write(@"qa-release-artifact-audit-phase.json", @{@"phase": @"outside-corrected"});
+            Later(0.8, ^{
+                Select(@"mode-control", 1);
+                Require([[(UILabel *)Find(@"round-score") text] isEqualToString:score], @"Practice results survive the Learn visit");
+                CheckMultiplication(1);
+            });
+        });
     });
 }
 

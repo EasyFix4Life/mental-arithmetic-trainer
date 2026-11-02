@@ -52,11 +52,35 @@ describe('random Learn operands', () => {
 });
 
 describe('the confirmed two-digit multiplication procedure applied to random operands', () => {
+  it('uses the inner digits for Inside and outer digits for Outside in the reported 82 × 76 example', () => {
+    const example = createMultiplicationExample(82, 76);
+    expect(example.steps.map((step) => step.operationDisplay)).toEqual([
+      '8 × 7', '2 × 7', '8 × 6 = 48; 14 + 48', '2 × 6', '62 + 1', '56 + 6',
+    ]);
+    expect(example.steps[1]!.highlightedDigitRefs).toEqual(['left:1', 'right:0']);
+    expect(example.steps[1]!.intermediateResult).toBe('14');
+    expect(example.steps[2]!.highlightedDigitRefs).toEqual(['left:0', 'right:1']);
+    expect(example.steps[2]!.narration).toBe('Combine Inside and Outside: 14 + 48 = 62.');
+    expect(example.steps.slice(3).map((step) => step.visibleResultDigits)).toEqual(['□□□2', '□□32', '6232']);
+    expect(example.finalAnswer).toBe('6232');
+  });
+
+  it('keeps a zero Inside product and carries the Outside product into First for 20 × 15', () => {
+    const example = createMultiplicationExample(20, 15);
+    expect(example.steps.map((step) => step.operationDisplay)).toEqual([
+      '2 × 1', '0 × 1', '2 × 5 = 10; 0 + 10', '0 × 5', '0 + 10', '2 + 1',
+    ]);
+    expect(example.steps[1]!.intermediateResult).toBe('0');
+    expect(example.steps[2]!.narration).toBe('Combine Inside and Outside: 0 + 10 = 10.');
+    expect(example.steps[4]!.carryOut).toBe('1');
+    expect(example.steps.at(-1)!.visibleResultDigits).toBe('300');
+  });
+
   it('produces the confirmed 18 × 18 carry calculations and routing', () => {
     const example = createMultiplicationExample(18, 18);
     expect(example.finalAnswer).toBe('324');
     expect(example.steps.map((step) => step.operationDisplay)).toEqual([
-      '1 × 1', '1 × 8', '8 × 1 = 8; 8 + 8', '8 × 8', '16 + 6', '1 + 2',
+      '1 × 1', '8 × 1', '1 × 8 = 8; 8 + 8', '8 × 8', '16 + 6', '1 + 2',
     ]);
     expect(example.steps.map((step) => step.intermediateResult)).toEqual(['1', '8', '16', '64', '22', '3']);
     expect(example.steps.slice(3).map((step) => step.visibleResultDigits)).toEqual(['□□4', '□24', '324']);
@@ -108,12 +132,12 @@ describe('the confirmed two-digit multiplication procedure applied to random ope
         const finalAnswer = String(left * right);
         const [leftTens, leftUnits] = Array.from(String(left), Number);
         const [rightTens, rightUnits] = Array.from(String(right), Number);
-        const expectedProducts = [leftTens! * rightTens!, leftTens! * rightUnits!,
+        const expectedProducts = [leftTens! * rightTens!, leftUnits! * rightTens!,
           leftTens! * rightUnits! + leftUnits! * rightTens!, leftUnits! * rightUnits!];
         expect(example.finalAnswer).toBe(finalAnswer);
         expect(example.steps.slice(0, 4).map((step) => step.stageName)).toEqual(['First', 'Inside', 'Outside', 'Last']);
         expect(example.steps.slice(0, 4).map((step) => step.highlightedDigitRefs)).toEqual([
-          ['left:0', 'right:0'], ['left:0', 'right:1'], ['left:1', 'right:0'], ['left:1', 'right:1'],
+          ['left:0', 'right:0'], ['left:1', 'right:0'], ['left:0', 'right:1'], ['left:1', 'right:1'],
         ]);
         expect(example.steps.slice(0, 4).map((step) => Number(step.intermediateResult))).toEqual(expectedProducts);
         expect(example.steps.at(-1)!.visibleResultDigits).toBe(finalAnswer);

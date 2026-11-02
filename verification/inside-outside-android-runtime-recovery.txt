@@ -1,0 +1,95 @@
+package:local.jeff.mentalarithmetic.test uid:10232
+package:local.jeff.mentalarithmetic uid:10235
+
+
+
+PASS offline release shell, presentation and browser security
+PASS prominent learn button label, bounds and native tap
+PASS four available random lessons, excluded addition lengths and complete instructions
+PASS vertical addition instructions, carries and final answers
+PASS Inside selects inner digits and Outside selects outer digits
+PASS random two-digit trace, confirmed carries and final answer
+PASS three-digit multiplication groups and whole-value carries
+PASS native numeric keyboard, visible answer and rotation preservation
+PASS ten accepted answers, wrong feedback and exact timing summary
+PASS four available practice configurations and addition length guard
+
+Android release acceptance: 10 passed, 0 failed.
+
+
+/sdcard/Android/data/local.jeff.mentalarithmetic/files/verification/./: 10 files pulled, 0 skipped. 20.5 MB/s (1082834 bytes in 0.050s)
+
+{"phase": "upgraded114-acceptance", "version": "1.1.4", "passed": 10, "failed": 0}
+{
+  "verifiedAt": "2026-11-02T22:53:25.148118+00:00",
+  "version": "1.1.4",
+  "versionCode": 10104,
+  "fromVersion": "1.1.3",
+  "publicBaselineDownloaded": true,
+  "publicBaselineSha256": "2ec50d38dc2461ec561c3140aef2637af72703406fe4daf2147192faeefe6e1e",
+  "device": {
+    "serial": "emulator-5556",
+    "ownedDisposableEmulator": true,
+    "androidRelease": "17",
+    "sdkInt": 37,
+    "webViewVersion": "145.0.7632.218",
+    "physicalDevicesModified": false
+  },
+  "sameUidAcrossUpdate": true,
+  "packageUids": "package:local.jeff.mentalarithmetic.test uid:10232\npackage:local.jeff.mentalarithmetic uid:10235",
+  "storageMarkerPersistedAfterColdRelaunchAndUpdate": true,
+  "applicationDataCleared": false,
+  "visibleVersion": "Version 1.1.4",
+  "additionOptions": [
+    "2"
+  ],
+  "multiplicationOptions": [
+    "1",
+    "2",
+    "3"
+  ],
+  "scriptUrls": [
+    "https://appassets.androidplatform.net/assets/index-DG7rQuqf.js"
+  ],
+  "nativeAcceptancePassed": 10,
+  "nativeAcceptanceFailed": 0,
+  "insideOutsideRegression": {
+    "inside": {
+      "operands": [
+        82,
+        76
+      ],
+      "stage": "Inside",
+      "highlightedDigitRefs": [
+        "left:1",
+        "right:0"
+      ],
+      "calculation": "2 \u00d7 7",
+      "result": 14
+    },
+    "outside": {
+      "stage": "Outside",
+      "highlightedDigitRefs": [
+        "left:0",
+        "right:1"
+      ],
+      "calculation": "8 \u00d7 6",
+      "result": 48,
+      "insidePlusOutside": 62
+    },
+    "finalAnswer": 6232
+  },
+  "actualReleaseApk": {
+    "path": "/tmp/mental-arithmetic-inside-outside-114-android/release/Mental-Arithmetic-1.1.4-Android.apk",
+    "bytes": 666885,
+    "sha256": "82311c8fe23dc0628d568edc250025b6e7d46a50b8f4ee94e37080ddeb39b205"
+  },
+  "environmentRecovery": {
+    "ownedEmulatorRestarted": true,
+    "dataWiped": false,
+    "firstAttemptBlockedBySystemUiAnr": true,
+    "applicationFailureObserved": false,
+    "firstAttemptReport": "inside-outside-android-runtime/first-attempt-system-ui-anr/android-runtime-results.json"
+  },
+  "allChecksPassed": true
+}

@@ -80,6 +80,7 @@ public final class AndroidTestRunner extends Instrumentation {
                 runCase("prominent learn button label, bounds and native tap", this::prominentHelp);
                 runCase("four available random lessons, excluded addition lengths and complete instructions", this::randomLessons);
                 runCase("vertical addition instructions, carries and final answers", this::additionTrace);
+                runCase("Inside selects inner digits and Outside selects outer digits", this::insideOutsideTrace);
                 runCase("random two-digit trace, confirmed carries and final answer", this::multiplicationTrace);
                 runCase("three-digit multiplication groups and whole-value carries", this::threeDigitTrace);
                 runCase("native numeric keyboard, visible answer and rotation preservation", this::nativeKeyboard);
@@ -165,7 +166,7 @@ public final class AndroidTestRunner extends Instrumentation {
             assert(q('#operation').value==='addition','initial operation is addition');
             assert(q('#digit-count').value==='2' && JSON.stringify([...q('#digit-count').options].map(o=>o.value))==='["2"]','addition initially offers only two digits');
             assert(!q('#download-apps-link') && !q('#app-downloads'),'website download controls absent from offline native shell');
-            assert(q('#app-version')?.textContent.includes('1.1.3'),'visible installed frontend version is 1.1.3');
+            assert(q('#app-version')?.textContent.includes('1.1.4'),'visible installed frontend version is 1.1.4');
             assert(q('#answer').inputMode==='numeric','numeric inputmode');
             assert([...document.querySelectorAll('script[src],link[rel=stylesheet]')].every(e=>new URL(e.src||e.href).origin===location.origin),'bundled scripts/styles');
             assert(!document.documentElement.scrollWidth || document.documentElement.scrollWidth<=innerWidth,'portrait width');
@@ -239,14 +240,44 @@ public final class AndroidTestRunner extends Instrumentation {
             """);
     }
 
+    /** Unequal cross-products make an Inside/Outside reversal observable. */
+    private JSONObject insideOutsideTrace() throws Exception {
+        JSONObject inside = js("""
+            const saved=Math.random; const draws=[(82-10+.25)/90,(76-10+.25)/90]; Math.random=()=>draws.shift()??0;
+            q('[data-lesson-id="multiplication-2"]').click(); Math.random=saved;
+            assert(q('#lesson-expression .learn-expression').getAttribute('aria-label')==='82 times 76','owner screenshot problem reproduced');
+            q('#lesson-help').click(); q('[data-stage-name="Inside"]').click();
+            const refs=[...q('#step-content').querySelectorAll('.digit-highlight')].map(e=>e.dataset.digitRef);
+            assert(JSON.stringify(refs)==='["left:1","right:0"]','Inside highlights the two inner digits');
+            assert(q('#step-content .step-operation').getAttribute('aria-label')==='2 × 7','Inside multiplies 2 by 7');
+            assert(q('#step-content .step-intermediate-result').textContent==='14','Inside result is 14');
+            q('#step-content').scrollIntoView({block:'start'});
+            return {operands:[82,76],stage:'Inside',highlightedDigitRefs:refs,calculation:'2 × 7',result:14};
+            """);
+        screenshot("android-inside-82-times-76.png");
+        JSONObject outside = js("""
+            q('[data-stage-name="Outside"]').click();
+            const refs=[...q('#step-content').querySelectorAll('.digit-highlight')].map(e=>e.dataset.digitRef);
+            assert(JSON.stringify(refs)==='["left:0","right:1"]','Outside highlights the two outer digits');
+            assert(q('#step-content .step-operation').getAttribute('aria-label')==='8 × 6 = 48; 14 + 48','Outside multiplies 8 by 6 and combines Inside then Outside');
+            assert(q('#step-content .step-intermediate-result').textContent==='62','cross-products sum to 62');
+            assert(q('#step-content .step-narration').textContent.includes('14 + 48 = 62'),'cross-sum narration follows corrected stage order');
+            q('#step-content').scrollIntoView({block:'start'});
+            return {stage:'Outside',highlightedDigitRefs:refs,calculation:'8 × 6',result:48,insidePlusOutside:62};
+            """);
+        screenshot("android-outside-82-times-76.png");
+        js("q('#final-answer').click();assert(q('#walkthrough .final-answer-value').textContent==='6232','correct final answer retained');return {};");
+        return new JSONObject().put("inside", inside).put("outside", outside).put("finalAnswer", 6232);
+    }
+
     private JSONObject multiplicationTrace() throws Exception {
         JSONObject result = js("""
             const saved=Math.random; const draws=[(98-10+.25)/90,(87-10+.25)/90]; Math.random=()=>draws.shift()??0;
             q('[data-lesson-id="multiplication-2"]').click(); Math.random=saved;
             assert(q('#lesson-expression .learn-expression').getAttribute('aria-label')==='98 times 87','asymmetric random problem');
             q('#lesson-help').click();
-            const operations=['9 × 8','9 × 7','8 × 8 = 64; 63 + 64','8 × 7','127 + 5','72 + 13'];
-            const values=['72','63','127','56','132','85'];
+            const operations=['9 × 8','8 × 8','9 × 7 = 63; 64 + 63','8 × 7','127 + 5','72 + 13'];
+            const values=['72','64','127','56','132','85'];
             for(let i=0;i<operations.length;i++){
               assert(q('#walkthrough .step-operation').getAttribute('aria-label')===operations[i],'operation '+i);
               assert(q('#walkthrough .step-intermediate-result').textContent===values[i],'result '+i);

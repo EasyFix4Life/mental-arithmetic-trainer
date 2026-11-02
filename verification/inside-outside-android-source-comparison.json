@@ -1,0 +1,105 @@
+{
+  "allChecksPassed": true,
+  "files": [
+    {
+      "file": ".DS_Store",
+      "sha256": "f0c85a9d3420b89e9c180dd899bf84087cc28b23d7952a3e36577899328b2c8d",
+      "matchesSource": true
+    },
+    {
+      "file": "gradlew",
+      "sha256": "aed171fb114f82e6eaea4970a245a200e0582a7dcc8ec0891ca41b6e4a62b754",
+      "matchesSource": true
+    },
+    {
+      "file": ".gitignore",
+      "sha256": "4b71a2f5b107646ffd932f62b9a9d2b29b2b1b2961141d46acbcf5e0f0bb825a",
+      "matchesSource": true
+    },
+    {
+      "file": "build.gradle.kts",
+      "sha256": "10ad2226ce187796b3ac67efe18af47d623a140f3ad1554134424a8365c4bd5a",
+      "matchesSource": true
+    },
+    {
+      "file": "settings.gradle.kts",
+      "sha256": "b7c72111d943383ed0e438bf6e3308372cc38a82b16c0eba8428cde7e6e3b253",
+      "matchesSource": true
+    },
+    {
+      "file": "gradle.properties",
+      "sha256": "f25cd99d5ffec7ec41afdc5f03ee0c4afa060457ecabfb9504a93b1bf7e19e14",
+      "matchesSource": true
+    },
+    {
+      "file": "gradlew.bat",
+      "sha256": "fedad02c18e266ec094995a5751b7fe1eb6e74f66bf75db64fae2e50eb22c234",
+      "matchesSource": true
+    },
+    {
+      "file": "app/build.gradle.kts",
+      "sha256": "6b143c9d0a3f9582d56dbd27cc33753b535079670a9bfa0271646beee02e8c38",
+      "matchesSource": true
+    },
+    {
+      "file": "tests/AssetPathPolicyTest.java",
+      "sha256": "9337f1acd09bf673e1eb9a2a577f07e1f1fc0fa20d27d895113281caa14a2dde",
+      "matchesSource": true
+    },
+    {
+      "file": "gradle/wrapper/gradle-wrapper.jar",
+      "sha256": "55243ef57851f12b070ad14f7f5bb8302daceeebc5bce5ece5fa6edb23e1145c",
+      "matchesSource": true
+    },
+    {
+      "file": "gradle/wrapper/gradle-wrapper.properties",
+      "sha256": "13287ffad6cf3064056ddad80d95b855132348930b2dc6c91490588c55b3ac7d",
+      "matchesSource": true
+    },
+    {
+      "file": "app/src/main/AndroidManifest.xml",
+      "sha256": "25b51c635b44f3b1b34187866e32a65731ad4c7727faad67bd579a56d6067216",
+      "matchesSource": true
+    },
+    {
+      "file": "app/src/main/java/local/jeff/mentalarithmetic/MainActivity.java",
+      "sha256": "d916631c8d41ce6100761af54db85c74d6b5853e80ce0d9d5402b534b8b4d241",
+      "matchesSource": true
+    },
+    {
+      "file": "app/src/main/java/local/jeff/mentalarithmetic/AssetPathPolicy.java",
+      "sha256": "0575aaf0786f9e540a34b1a1eff4690eaa92db2f0cf1ea1575bcd1f925fc4fb7",
+      "matchesSource": true
+    },
+    {
+      "file": "app/src/main/res/drawable/ic_arithmetic.xml",
+      "sha256": "00b01b2bcb414c7208db0707c57a7b130d7eb4e7332f6196a2dcc8a4d2542abc",
+      "matchesSource": true
+    },
+    {
+      "file": "app/src/main/res/values/colors.xml",
+      "sha256": "5c8d27ced47918c50c5af4165aea1b5100941422cf15ba28d97f768c465d47d6",
+      "matchesSource": true
+    },
+    {
+      "file": "app/src/main/res/values/styles.xml",
+      "sha256": "9fe519bf75e9dd37b20d439e684f55cb65f3bf02c30c5e0590b5e116688befb4",
+      "matchesSource": true
+    },
+    {
+      "file": "app/src/main/res/values/strings.xml",
+      "sha256": "5062752393818f42a5288673355154479589b4e18ef7f76f0b4747a5833cdf23",
+      "matchesSource": true
+    },
+    {
+      "file": "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "sha256": "62d2336b909ff38c65209d90361cebec5247bdd5766b7e45e4ba88741672441a",
+      "matchesSource": true
+    },
+    {
+      "file": "app/src/androidTest/java/local/jeff/mentalarithmetic/AndroidTestRunner.java",
+      "sha256": "e95ff77e2320e538f95e2e8d00de1ac0e7d79fc4e9e5e6e727b445dbc528f760",
+      "matchesSource": true
+    }
+  ]
+}

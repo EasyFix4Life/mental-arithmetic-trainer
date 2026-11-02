@@ -1,0 +1,4 @@
+Windows 1.1.4: ZIP CRC, NSIS embedded payload, 7 x64 executable/DLL headers, 4 production frontend files and 2 shell files verified.
+All 72 ZIP files match the installer payload; 1 installer-only elevation helper(s) separately inspected.
+Windows 10/11 runtime execution was not performed by this verification.
+/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-114-desktop-gv_aozrr/verification/windows-artifacts.json

@@ -1,0 +1,163 @@
+{
+  "version": "1.1.4",
+  "build": "5",
+  "date": "2026-11-02",
+  "toolchain": {
+    "application": "/Applications/Xcode-beta.app",
+    "version": "Xcode 27.0",
+    "build": "27A5228h"
+  },
+  "correction": {
+    "example": "82 \u00d7 76",
+    "inside": {
+      "digitRefs": [
+        "left:1",
+        "right:0"
+      ],
+      "calculation": "2 \u00d7 7",
+      "result": "14"
+    },
+    "outside": {
+      "digitRefs": [
+        "left:0",
+        "right:1"
+      ],
+      "calculation": "8 \u00d7 6",
+      "result": "48"
+    },
+    "combine": "14 + 48 = 62",
+    "finalAnswer": "6232",
+    "fixedExamplesUpdated": [
+      "12 \u00d7 12",
+      "18 \u00d7 18"
+    ]
+  },
+  "coreTests": {
+    "passed": 36,
+    "failed": 0,
+    "report": "verification/inside-outside-ios-core-tests.txt",
+    "coverage": "Unequal cross-products82\u00d776, zero/carry cases, corrected fixed traces and inner/outer mapping for all8100 two-digit products"
+  },
+  "builds": {
+    "debugSimulator": "passed",
+    "releaseSimulator": "passed",
+    "unsignedDeviceArchive": "passed"
+  },
+  "debugUIKit": {
+    "iphone": {
+      "passed": 9,
+      "total": 9,
+      "skipped": 0,
+      "report": "verification/inside-outside-ios-iphone-27.json"
+    },
+    "ipad": {
+      "passed": 8,
+      "total": 9,
+      "skipped": 1,
+      "report": "verification/inside-outside-ios-ipad-26.json"
+    }
+  },
+  "actualPackagedReleaseAudits": {
+    "iphone": {
+      "version": "1.1.4",
+      "build": "5",
+      "passedChecks": 242,
+      "binaryUnchanged": true,
+      "report": "verification/inside-outside-ios-iphone-release.json"
+    },
+    "ipad": {
+      "version": "1.1.4",
+      "build": "5",
+      "passedChecks": 242,
+      "binaryUnchanged": true,
+      "report": "verification/inside-outside-ios-ipad-release.json"
+    }
+  },
+  "auditMethod": "Separate simulator-only dylib drives the final ZIP-extracted Release app UIKit controls and text-field delegates. Packaged and installed executable hashes match; no audit library is shipped.",
+  "availableLessons": [
+    "multiplication-1",
+    "addition-2",
+    "multiplication-2",
+    "multiplication-3"
+  ],
+  "defaultLearn": "addition-2",
+  "defaultPractice": {
+    "operation": "addition",
+    "digitCount": 2
+  },
+  "visibleVersionLocation": "Existing Privacy sheet: Version1.1.4 (build5)",
+  "releaseBinaries": [
+    {
+      "kind": "simulator",
+      "version": "1.1.4",
+      "build": "5",
+      "minimumOS": "17.0",
+      "families": [
+        1,
+        2
+      ],
+      "architectures": "Architectures in the fat file: /tmp/mental-arithmetic-ios-inside-outside/packaged-release/MentalArithmetic.app/MentalArithmetic are: x86_64 arm64",
+      "debugHarnessAbsent": true,
+      "externalAuditLibraryAbsent": true,
+      "removedLessonTitlesAbsent": true,
+      "signatureDirectoryPresent": false
+    },
+    {
+      "kind": "device",
+      "version": "1.1.4",
+      "build": "5",
+      "minimumOS": "17.0",
+      "families": [
+        1,
+        2
+      ],
+      "architectures": "Non-fat file: /tmp/mental-arithmetic-ios-inside-outside/Mental-Arithmetic-1.1.4-iOS-unsigned.xcarchive/Products/Applications/MentalArithmetic.app/MentalArithmetic is architecture: arm64",
+      "debugHarnessAbsent": true,
+      "externalAuditLibraryAbsent": true,
+      "removedLessonTitlesAbsent": true,
+      "signatureDirectoryPresent": false
+    }
+  ],
+  "sourceFilesVerifiedAgainstMirror": 26,
+  "sourceManifest": "verification/inside-outside-ios-native-sources.json",
+  "screenshots": {
+    "raw": 20,
+    "opaqueUploadCopies": 20,
+    "directories": [
+      "ios/AppStore/Screenshots/1.1.4-iPhone-27-beta",
+      "ios/AppStore/Screenshots/1.1.4-iPad-26.5"
+    ],
+    "validation": "Native simulator captures; PNG CRCs/decompression/dimensions valid; RGB samples preserved while unused opaque alpha removed.82\u00d776 Inside/Outside visually reviewed."
+  },
+  "submissionFiles": 55,
+  "artifacts": [
+    {
+      "file": "Mental-Arithmetic-1.1.4-iOS-Simulator-app.zip",
+      "bytes": 308885,
+      "sha256": "0599b52c6be48cbbdd7ea3f1ae2dead1382eb03d367914b3a6865b0ddb11b222",
+      "copiesIdentical": true
+    },
+    {
+      "file": "Mental-Arithmetic-1.1.4-iOS-unsigned-archive.zip",
+      "bytes": 813773,
+      "sha256": "1512285bf4ef007d2e31645b4d8e125ab4ec0f72400bb442a3dc62dd119d7397",
+      "copiesIdentical": true
+    },
+    {
+      "file": "Mental-Arithmetic-1.1.4-iOS-submission-files.zip",
+      "bytes": 7012281,
+      "sha256": "9424bd3ab11ba40d688956f2a2f30635ef4ff16ec1c86dfa07da449ce4498e4f",
+      "copiesIdentical": true
+    }
+  ],
+  "limitations": [
+    "UIKit control actions and text-field delegates are not physical keyboard or external XCUITest automation.",
+    "iPad programmatic landscape geometry request remains skipped. Physical iPhone/iPad validation is unverified.",
+    "Device archive is unsigned and is not an installable IPA. No App Store or TestFlight upload/signing was performed."
+  ],
+  "allChecksPassed": true,
+  "ownedSimulatorsShutDown": {
+    "35D20D1C-73F0-4F9F-A579-8FE27083201A": "Shutdown",
+    "F397A467-4ACD-4D14-A984-A8946A491219": "Shutdown"
+  }
+}

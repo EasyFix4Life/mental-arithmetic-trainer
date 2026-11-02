@@ -1,0 +1,417 @@
+{
+  "status": "local-native-simulator-review-assets-not-uploaded",
+  "device": {
+    "dataPath": "/Users/pussieromatic/Library/Developer/CoreSimulator/Devices/35D20D1C-73F0-4F9F-A579-8FE27083201A/data",
+    "dataPathSize": 2911305728,
+    "logPath": "/Users/pussieromatic/Library/Logs/CoreSimulator/35D20D1C-73F0-4F9F-A579-8FE27083201A",
+    "udid": "35D20D1C-73F0-4F9F-A579-8FE27083201A",
+    "lastUsedAt": "2026-11-02T22:50:43Z",
+    "isAvailable": true,
+    "logPathSize": 598016,
+    "deviceTypeIdentifier": "com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro",
+    "state": "Booted",
+    "name": "MentalArithmetic-iPhone-27"
+  },
+  "screenshots": [
+    {
+      "file": "01-practice-setup.png",
+      "scenario": "review-setup",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "4da1d4ff44950348fc9801932970ef2ae915c4a30be4668e003ff11d379bfb00",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-setup",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "27.0",
+        "timestamp": "2026-11-02T22:51:44Z",
+        "total": 0,
+        "version": "1.1.4",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      },
+      "uploadFile": "Upload/01-practice-setup.png",
+      "uploadSHA256": "fb5235b57a2e7359f5f6e81fffba460a1263247f37cdcacef8a02b172edb85c6",
+      "uploadHasAlphaChannel": false,
+      "uploadNormalization": "AppKit PNG decode/encode; each RGB sample preserved; unused opaque alpha removed; no redraw or resizing",
+      "uploadValidation": "PNG chunk CRCs and decompression passed; dimensions preserved"
+    },
+    {
+      "file": "02-practice-live-keyboard.png",
+      "scenario": "review-practice",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "8399788cc14d1b67dbea3ff3c538dc52f2cfdc9faf64628fb0ed446f223c2246",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-practice",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "27.0",
+        "timestamp": "2026-11-02T22:51:48Z",
+        "total": 0,
+        "version": "1.1.4",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      },
+      "uploadFile": "Upload/02-practice-live-keyboard.png",
+      "uploadSHA256": "9726dc7a87b0d6c2dd26444dadb2e36b08ae56406b456afd434eb9cf0ed9472f",
+      "uploadHasAlphaChannel": false,
+      "uploadNormalization": "AppKit PNG decode/encode; each RGB sample preserved; unused opaque alpha removed; no redraw or resizing",
+      "uploadValidation": "PNG chunk CRCs and decompression passed; dimensions preserved"
+    },
+    {
+      "file": "03-score-and-round-times.png",
+      "scenario": "review-score",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "6fef9160bfd6bda20f6e899946c3a0a94c1315adc30f30062bf3893839c4dab9",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-score",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "27.0",
+        "timestamp": "2026-11-02T22:51:52Z",
+        "total": 0,
+        "version": "1.1.4",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      },
+      "uploadFile": "Upload/03-score-and-round-times.png",
+      "uploadSHA256": "1a66bfb4894e39f342c68c0625cccc5379e672762145b0d0eb9ef0198d754217",
+      "uploadHasAlphaChannel": false,
+      "uploadNormalization": "AppKit PNG decode/encode; each RGB sample preserved; unused opaque alpha removed; no redraw or resizing",
+      "uploadValidation": "PNG chunk CRCs and decompression passed; dimensions preserved"
+    },
+    {
+      "file": "04-confirmed-two-digit-carry.png",
+      "scenario": "review-learn18",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "7f1bf963415bd0259100ee9f8be679774107742a7caa670d69d6aed283a66a8a",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-learn18",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "27.0",
+        "timestamp": "2026-11-02T22:51:55Z",
+        "total": 0,
+        "version": "1.1.4",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      },
+      "uploadFile": "Upload/04-confirmed-two-digit-carry.png",
+      "uploadSHA256": "d58506a74e43703af75dd0d61c3d7120d3c05e27d3bb06803660d48050310737",
+      "uploadHasAlphaChannel": false,
+      "uploadNormalization": "AppKit PNG decode/encode; each RGB sample preserved; unused opaque alpha removed; no redraw or resizing",
+      "uploadValidation": "PNG chunk CRCs and decompression passed; dimensions preserved"
+    },
+    {
+      "file": "05-three-digit-multiplication.png",
+      "scenario": "review-learn3",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "d6d7054a7cf6383925e5978ed5c89592446c574a2ebb82917f84cf9c7292cb36",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-learn3",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "27.0",
+        "timestamp": "2026-11-02T22:51:58Z",
+        "total": 0,
+        "version": "1.1.4",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      },
+      "uploadFile": "Upload/05-three-digit-multiplication.png",
+      "uploadSHA256": "5758cc82cb2b24aa6f619f743070e130c13b483d1c24e45faccb746bd895e592",
+      "uploadHasAlphaChannel": false,
+      "uploadNormalization": "AppKit PNG decode/encode; each RGB sample preserved; unused opaque alpha removed; no redraw or resizing",
+      "uploadValidation": "PNG chunk CRCs and decompression passed; dimensions preserved"
+    },
+    {
+      "file": "06-two-digit-addition.png",
+      "scenario": "review-addition2",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "808b361133cc5d697c5530930bef37f9fcd5cd04029acbecfd5ab6b1d703ae66",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-addition2",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "27.0",
+        "timestamp": "2026-11-02T22:52:00Z",
+        "total": 0,
+        "version": "1.1.4",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      },
+      "uploadFile": "Upload/06-two-digit-addition.png",
+      "uploadSHA256": "599d34b78374a930b92a95dbac41984453a109a84a92954de2f51f276aa99af7",
+      "uploadHasAlphaChannel": false,
+      "uploadNormalization": "AppKit PNG decode/encode; each RGB sample preserved; unused opaque alpha removed; no redraw or resizing",
+      "uploadValidation": "PNG chunk CRCs and decompression passed; dimensions preserved"
+    },
+    {
+      "file": "07-learn-catalog.png",
+      "scenario": "review-catalog",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "cede9f6eef47922132995f85ebb93d4b7dfea2b66ef308f232c3ce920d54ba8e",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-catalog",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "27.0",
+        "timestamp": "2026-11-02T22:52:02Z",
+        "total": 0,
+        "version": "1.1.4",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      },
+      "uploadFile": "Upload/07-learn-catalog.png",
+      "uploadSHA256": "493efdd15f06a04fb6862967a077755394053a68fe7220068ffbd973f461a8bf",
+      "uploadHasAlphaChannel": false,
+      "uploadNormalization": "AppKit PNG decode/encode; each RGB sample preserved; unused opaque alpha removed; no redraw or resizing",
+      "uploadValidation": "PNG chunk CRCs and decompression passed; dimensions preserved"
+    },
+    {
+      "file": "08-version-and-privacy.png",
+      "scenario": "review-privacy",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "de539fa34631ccbc2cbd61fd5c9ed928a69b2af2def4a1f631544d51d494dd7d",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-privacy",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "27.0",
+        "timestamp": "2026-11-02T22:52:04Z",
+        "total": 0,
+        "version": "1.1.4",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      },
+      "uploadFile": "Upload/08-version-and-privacy.png",
+      "uploadSHA256": "85b86404bb44e10b1f40d75c3e1f6deab9e8a547939e503b2cf71176c33f115b",
+      "uploadHasAlphaChannel": false,
+      "uploadNormalization": "AppKit PNG decode/encode; each RGB sample preserved; unused opaque alpha removed; no redraw or resizing",
+      "uploadValidation": "PNG chunk CRCs and decompression passed; dimensions preserved"
+    },
+    {
+      "file": "09-corrected-inside.png",
+      "scenario": "review-inside82",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "0b7330ef3f5b63d594ed54cbaced8bf4fcf6276c5e305cddc47acdade643d1e4",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-inside82",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "27.0",
+        "timestamp": "2026-11-02T22:52:07Z",
+        "total": 0,
+        "version": "1.1.4",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      },
+      "uploadFile": "Upload/09-corrected-inside.png",
+      "uploadSHA256": "405987681d6cb89ecf7ac5df340d1b539c048e27737cb539ce7c3f31afee1eb1",
+      "uploadHasAlphaChannel": false,
+      "uploadNormalization": "AppKit PNG decode/encode; each RGB sample preserved; unused opaque alpha removed; no redraw or resizing",
+      "uploadValidation": "PNG chunk CRCs and decompression passed; dimensions preserved"
+    },
+    {
+      "file": "10-corrected-outside.png",
+      "scenario": "review-outside82",
+      "width": 1206,
+      "height": 2622,
+      "bitDepth": 8,
+      "pngColorType": 6,
+      "hasAlphaChannel": true,
+      "sha256": "d3c0f0af30a0d65a7e2c3b87eba04bff62f86d1b9bca39fbc3651c94b89b6fbd",
+      "modified": false,
+      "nativeReport": {
+        "cases": [],
+        "deviceModel": "iPhone",
+        "error": null,
+        "kind": "debug-native-uikit-integration-and-review",
+        "limitations": [
+          "Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation",
+          "DEBUG-only fixture selection for individually specified worked examples",
+          "No App Store distribution signature or physical-device test implied"
+        ],
+        "passed": 0,
+        "scenario": "review-outside82",
+        "skipped": 0,
+        "status": "passed",
+        "systemVersion": "27.0",
+        "timestamp": "2026-11-02T22:52:10Z",
+        "total": 0,
+        "version": "1.1.4",
+        "window": {
+          "height": 874,
+          "width": 402
+        }
+      },
+      "uploadFile": "Upload/10-corrected-outside.png",
+      "uploadSHA256": "58817f0bedfc2e6bb4b337acb8421c8442ebbbce298e7c7421603e37fb7c03ba",
+      "uploadHasAlphaChannel": false,
+      "uploadNormalization": "AppKit PNG decode/encode; each RGB sample preserved; unused opaque alpha removed; no redraw or resizing",
+      "uploadValidation": "PNG chunk CRCs and decompression passed; dimensions preserved"
+    }
+  ],
+  "source": "Actual native app running on the specified Simulator; simctl io screenshot",
+  "fixtureSetup": "DEBUG-only native review harness; Release excludes this code",
+  "officialSpecifications": "https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications/",
+  "publicationChecks": [
+    "Review final content and metadata",
+    "Verify required device sizes",
+    "Ensure no alpha channel",
+    "Sign and submit through the owner's developer account"
+  ],
+  "uploadCopiesReadyForOwnerReview": true
+}

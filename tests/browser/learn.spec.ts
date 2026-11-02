@@ -229,6 +229,43 @@ test('all four lessons open with random in-range operands and can request anothe
   await expect(page.locator('#lesson-expression .learn-expression')).not.toHaveAccessibleName('18 times 18');
 });
 
+for (const example of [
+  { left: 82, right: 76, inside: '2 × 7', insideResult: '14', outside: '8 × 6 = 48; 14 + 48', sum: '14 + 48 = 62', answer: '6232' },
+  { left: 20, right: 15, inside: '0 × 1', insideResult: '0', outside: '2 × 5 = 10; 0 + 10', sum: '0 + 10 = 10', answer: '300' },
+]) {
+  test(`Inside selects inner digits and Outside selects outer digits for ${example.left} × ${example.right}`, async ({ page }, testInfo) => {
+    await openLearn(page);
+    await page.evaluate(({ left, right }) => {
+      const draws = [(left - 10 + 0.25) / 90, (right - 10 + 0.25) / 90];
+      Math.random = () => draws.shift() ?? 0;
+    }, example);
+    await page.locator('[data-lesson-id="multiplication-2"]').click();
+    await expect(page.locator('#lesson-expression .learn-expression'))
+      .toHaveAccessibleName(`${example.left} times ${example.right}`);
+    await openWalkthrough(page);
+    await page.locator('[data-stage-name="Inside"]').click();
+    await expect(page.locator('#walkthrough .instruction-step h3')).toHaveText('Inside');
+    await expect(page.locator('#walkthrough .step-operation')).toHaveAccessibleName(example.inside);
+    await expect(page.locator('#walkthrough .step-intermediate-result')).toHaveText(example.insideResult);
+    expect(await page.locator('#walkthrough .digit-highlight').evaluateAll((elements) =>
+      elements.map((element) => (element as HTMLElement).dataset.digitRef),
+    )).toEqual(['left:1', 'right:0']);
+    if (example.left === 82) await page.screenshot({ path: `verification/inside-outside-${testInfo.project.name}-inside.png`, fullPage: true });
+
+    await page.locator('[data-stage-name="Outside"]').click();
+    await expect(page.locator('#walkthrough .instruction-step h3')).toHaveText('Outside');
+    await expect(page.locator('#walkthrough .step-operation')).toHaveAccessibleName(example.outside);
+    await expect(page.locator('#walkthrough .step-narration')).toHaveText(`Combine Inside and Outside: ${example.sum}.`);
+    expect(await page.locator('#walkthrough .digit-highlight').evaluateAll((elements) =>
+      elements.map((element) => (element as HTMLElement).dataset.digitRef),
+    )).toEqual(['left:0', 'right:1']);
+    if (example.left === 82) await page.screenshot({ path: `verification/inside-outside-${testInfo.project.name}-outside.png`, fullPage: true });
+
+    await page.locator('#final-answer').click();
+    await expect(page.locator('#walkthrough .final-answer-value')).toHaveText(example.answer);
+  });
+}
+
 test('a random asymmetric example applies First, Inside, Outside and Last with both carries and its final answer', async ({ page }, testInfo) => {
   await openLearn(page);
   await page.evaluate(() => {
@@ -240,10 +277,10 @@ test('a random asymmetric example applies First, Inside, Outside and Last with b
   await expect(page.locator('#lesson-expression .learn-expression')).toHaveAccessibleName('98 times 87');
   await openWalkthrough(page);
 
-  const operations = ['9 × 8', '9 × 7', '8 × 8 = 64; 63 + 64', '8 × 7', '127 + 5', '72 + 13'];
-  const intermediate = ['72', '63', '127', '56', '132', '85'];
+  const operations = ['9 × 8', '8 × 8', '9 × 7 = 63; 64 + 63', '8 × 7', '127 + 5', '72 + 13'];
+  const intermediate = ['72', '64', '127', '56', '132', '85'];
   const stages = ['First', 'Inside', 'Outside', 'Last', 'Last', 'Last'];
-  const pairs = [['left:0', 'right:0'], ['left:0', 'right:1'], ['left:1', 'right:0'], ['left:1', 'right:1']];
+  const pairs = [['left:0', 'right:0'], ['left:1', 'right:0'], ['left:0', 'right:1'], ['left:1', 'right:1']];
   for (let index = 0; index < operations.length; index += 1) {
     await expect(page.locator('#walkthrough .instruction-step h3').first()).toHaveText(stages[index]!);
     await expect(page.locator('#walkthrough .step-operation')).toHaveAccessibleName(operations[index]!);
@@ -307,8 +344,8 @@ test('confirmed 12 × 12 walkthrough uses exact digit pairs and resolves the mid
   await expect(page.locator('#carry-fragment')).toBeHidden();
   await openWalkthrough(page);
   const stages = ['First', 'Inside', 'Outside', 'Last'];
-  const pairs = [['left:0', 'right:0'], ['left:0', 'right:1'], ['left:1', 'right:0'], ['left:1', 'right:1']];
-  const calculations = ['1 × 1', '1 × 2', '2 × 1 = 2; 2 + 2', '2 × 2'];
+  const pairs = [['left:0', 'right:0'], ['left:1', 'right:0'], ['left:0', 'right:1'], ['left:1', 'right:1']];
+  const calculations = ['1 × 1', '2 × 1', '1 × 2 = 2; 2 + 2', '2 × 2'];
   const intermediate = ['1', '2', '4', '4'];
   const answers = ['1□□', '1□□', '14□', '144'];
   await expect(page.locator('#walkthrough [data-stage-name]')).toHaveText(stages);
@@ -371,9 +408,9 @@ test('confirmed 18 × 18 trace carries 6 into 16, then 2 into First, to complete
   await openWalkthrough(page);
   const stages = ['First', 'Inside', 'Outside', 'Last', 'Last', 'Last'];
   const pairs = [
-    ['left:0', 'right:0'], ['left:0', 'right:1'], ['left:1', 'right:0'], ['left:1', 'right:1'],
+    ['left:0', 'right:0'], ['left:1', 'right:0'], ['left:0', 'right:1'], ['left:1', 'right:1'],
   ];
-  const calculations = ['1 × 1', '1 × 8', '8 × 1 = 8; 8 + 8', '8 × 8', '16 + 6', '1 + 2'];
+  const calculations = ['1 × 1', '8 × 1', '1 × 8 = 8; 8 + 8', '8 × 8', '16 + 6', '1 + 2'];
   const intermediate = ['1', '8', '16', '64', '22', '3'];
   await expect(page.locator('#walkthrough [data-stage-name]')).toHaveText(['First', 'Inside', 'Outside', 'Last']);
   for (let index = 0; index < 6; index += 1) {

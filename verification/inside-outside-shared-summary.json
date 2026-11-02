@@ -1,0 +1,222 @@
+{
+  "version": "1.1.4",
+  "runner": "/tmp/mental-arithmetic-inside-outside-shared",
+  "unitPassed": 215,
+  "unitFailed": 0,
+  "browserStats": {
+    "startTime": "2026-11-02T22:51:40.112Z",
+    "duration": 28818.217,
+    "expected": 68,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "build": "typecheck and Vite build passed",
+  "runtimeBrowser": "Installed Google Chrome; mobile is Chromium iPhone13 emulation, not physical Safari",
+  "exhaustiveTwoDigitPairs": 8100,
+  "sourceMatchingFiles": 39,
+  "sourceHashes": [
+    {
+      "path": "src/answerPolicy.ts",
+      "sha256": "9a98d597b0f7baa7264b387f52ef8a1f5e80892e5c69446d2dda602f77dd89c1",
+      "matches": true
+    },
+    {
+      "path": "src/availableOptions.ts",
+      "sha256": "2fe4df4c59cc81e13bda9fd3e7e2b087bef26a1d2a7761461bc07addec11f038",
+      "matches": true
+    },
+    {
+      "path": "src/downloadsView.ts",
+      "sha256": "cb2fb09d884a87e038cde8150f3a3bbdf56212d0825ab57be7ce1db3f270f5b8",
+      "matches": true
+    },
+    {
+      "path": "src/generateRound.ts",
+      "sha256": "7b8b13e15b58e870f27468e538181423c1fa38f73bd5cceb66eb17a3ca8a52cf",
+      "matches": true
+    },
+    {
+      "path": "src/inputPolicy.ts",
+      "sha256": "1c46093bcaf0345926a460bcf7663bc985d1f77ba1b0b0049cd5046428dda8e8",
+      "matches": true
+    },
+    {
+      "path": "src/learn/carryVisualizer.ts",
+      "sha256": "0458b1ec0abb951e02dfeb75a45c0270734666b0d3cef5734f7d9c89a857a90e",
+      "matches": true
+    },
+    {
+      "path": "src/learn/confirmedMultiplicationExamples.ts",
+      "sha256": "3411c4e1e4daaf173d7f5ce047e9e103f89b849933352b58a448a869a5fa800c",
+      "matches": true
+    },
+    {
+      "path": "src/learn/instructionStepRenderer.ts",
+      "sha256": "5ca78729f4de35997670b927546985a7969e1c3aa5918759628f764c65107ca1",
+      "matches": true
+    },
+    {
+      "path": "src/learn/learnView.ts",
+      "sha256": "eb63ec7866b5319247519a57c628815bbf02fe8cb4eb6d633175a19079e32668",
+      "matches": true
+    },
+    {
+      "path": "src/learn/lessonCatalog.ts",
+      "sha256": "99dbb1613cd37158e9772f67f41501d838cc26196ed6b02c7bad89b3a97d4666",
+      "matches": true
+    },
+    {
+      "path": "src/learn/lessonTypes.ts",
+      "sha256": "4a473acf63bc53140d517547db4f27821f26bc16ad6d054015806571018a1f99",
+      "matches": true
+    },
+    {
+      "path": "src/learn/positionalInstructions.ts",
+      "sha256": "f1392466307d8f0aed130cbc9abf6146a90ce973f6184057881c58901d3a848f",
+      "matches": true
+    },
+    {
+      "path": "src/learn/randomExample.ts",
+      "sha256": "03e5b67986bacb5626b1903e85d4c8b7f2518f06e6807859feeba8adfeb3dcd5",
+      "matches": true
+    },
+    {
+      "path": "src/main.ts",
+      "sha256": "c13ffd799c096737fe002924b377369aed35dfe77f5f83f3053e752ecb5bf3d2",
+      "matches": true
+    },
+    {
+      "path": "src/practiceView.ts",
+      "sha256": "ab1f84baf399816e066b189ff29cd5ccb3568949b5038df4161662adde6d34df",
+      "matches": true
+    },
+    {
+      "path": "src/release.ts",
+      "sha256": "66dad2cd60afa38a41233d4115b32c0470ee9da6b0a426949eaa63abd73a5114",
+      "matches": true
+    },
+    {
+      "path": "src/roundController.ts",
+      "sha256": "2c6c26477b164bdf447e6ef9713ad16e1ad7572b066b016d913feb8cdabd2f67",
+      "matches": true
+    },
+    {
+      "path": "src/style.css",
+      "sha256": "12d2f107426a99934c95186d3f4b305101349ec058ef335539d9fa78bc7340a1",
+      "matches": true
+    },
+    {
+      "path": "src/timer.ts",
+      "sha256": "bfaeaa1c0497565f6d3ceeba0064d903f4559d5b70cb192f86556bb79e0d4b04",
+      "matches": true
+    },
+    {
+      "path": "src/types.ts",
+      "sha256": "f458432070b282817ece06654683477a9dfefee0201f64fd6f53cd14f2976b21",
+      "matches": true
+    },
+    {
+      "path": "src/view.ts",
+      "sha256": "860f5b14cf7e85a4b055d90a4e7cea025681012d311815519fa10bb5df7ea9d0",
+      "matches": true
+    },
+    {
+      "path": "tests/browser/downloads.spec.ts",
+      "sha256": "5dd447a3998c9dd871d30f352ef1f8fc493912ca5000cb716541d7702714f944",
+      "matches": true
+    },
+    {
+      "path": "tests/browser/learn.spec.ts",
+      "sha256": "b11ae6d21af199fccf1b7caaa20d71ddd0b818f2947e8193e2e695eaa81f28e5",
+      "matches": true
+    },
+    {
+      "path": "tests/browser/trainer.spec.ts",
+      "sha256": "11ebfd665700f151d11270be26c6597a90c56ebec5f3d1ed66198e1c91a0f57e",
+      "matches": true
+    },
+    {
+      "path": "tests/desktop/app.spec.ts",
+      "sha256": "d876c03906ebaa5e6a0b5dfb7e6f4c14bbe1a9eba9ca4d219513c9bb39ebb65e",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/answerPolicy.test.ts",
+      "sha256": "801639d8fc6a372e4ccbfa5b79711b5b355bdf5547f19adcae23816b440a96d7",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/availableOptions.test.ts",
+      "sha256": "ab1a0c6c7dbd2db8e4f681919be83fdf0d27f753a049be96f0d3ef67596f439e",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/generateRound.test.ts",
+      "sha256": "259a7249b786af942bbb6dad7e704a532b83c32f2c4e7656bfb24f7017697164",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/lessons.test.ts",
+      "sha256": "feca0cd6d8e695b8783425024df6983498c6be4799a86383a02c96d2b251f011",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/positionalInstructions.test.ts",
+      "sha256": "6e470832d45170a6ed2427e9768eded7bf5b76156eb70675445d992b3e48154f",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/randomExample.test.ts",
+      "sha256": "031365dab704831f77f8cad34027402ab08a55c28b3a6715c08d28905a2d37f1",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/release.test.ts",
+      "sha256": "1ee27f785a7fe417b2c860f07a67a95e3104ba2c0bb4c17ea0fabfd8edc8da2a",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/requirements.ts",
+      "sha256": "228ca3c0e2297f72e6ba974463c3a2e33ee005d2f1040b6e81a633dacf998da9",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/roundController.test.ts",
+      "sha256": "868363cc4696ac4182ff678e36b524ade46fa3e07a6eea8153a4b764a4920444",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/roundTiming.test.ts",
+      "sha256": "30470d873bc7d4ac85167358b39f0de725bcf79f5b4d067bad993560da7f1df4",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/timer.test.ts",
+      "sha256": "3d5098d8f768b5ca649cef00f657fbbfd939f6a4be1e1f2d095c1204c0df6f7f",
+      "matches": true
+    },
+    {
+      "path": "public/_headers",
+      "sha256": "3fdc8f8e6af5ff2d1a5424f8cff40a3c11c7deefec052bc2f377ea0fd7ca8ff1",
+      "matches": true
+    },
+    {
+      "path": "package.json",
+      "sha256": "d48d07f14f641cc14e84719e0fe00b4a0721946b3c01666be09efd3de3efc30b",
+      "matches": true
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "f0757c82c2bc7549042e5441f5f8dddb3c057c73994b0e3018b3b1e355a06007",
+      "matches": true
+    }
+  ],
+  "threeDigitAudit": "Three-digit multiplication uses Step1..5 diagonal groups, with no Inside or Outside labels. No changes needed.",
+  "practiceScope": "No practice engine changes; full practice input, round scoring and timing suite passed.",
+  "initialAttempts": [
+    "Bundled Playwright Chromium executable was absent; no browser launched. Switched to installed Google Chrome.",
+    "First Chrome run67/68 passed, with a setup reset during a timing test after a comment-only source synchronization caused development hot reload. Complete rerun on frozen source68/68 passed."
+  ],
+  "allChecksPassed": true
+}

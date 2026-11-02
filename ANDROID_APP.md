@@ -1,8 +1,10 @@
 # Mental Arithmetic for Android
 
-**1.1.1 interface update:** the lesson-help button now reads **? Click Here to Learn How!**. See [the update report](verification/HELP_BUTTON_UPDATE.md) for current checks and screenshots. Prior detailed verification reports remain as the 1.1.0 baseline.
+**1.1.4 instructional correction:** **Inside** now selects the two inner digits, and **Outside** selects the two outer digits in every two-digit multiplication walkthrough. For **82 × 76**, Inside is **2 × 7 = 14** and Outside is **8 × 6 = 48**. See [the Android correction checks](verification/INSIDE_OUTSIDE_ANDROID_TEST_RESULTS.md).
 
-Version **1.1.3** packages the same lessons, random examples and Practice timing as the macOS and Windows apps in a signed Android APK. It targets **Android 17 / API 37**, the current stable major Android release as of **24 October 2026**. Google announced Android 17 on 16 June 2026; its SDK setup guide specifies `compileSdk = 37` and `targetSdk = 37`. [Android 17 release announcement](https://android-developers.googleblog.com/2026/06/Android-17.html) · [Android 17 SDK setup](https://developer.android.com/about/versions/17/setup-sdk)
+The prominent **? Click Here to Learn How!** button introduced in 1.1.1 is preserved. [Its historical update report](verification/HELP_BUTTON_UPDATE.md) and the earlier verification records remain available.
+
+Version **1.1.4** packages the same lessons, random examples and Practice timing as the macOS and Windows apps in a signed Android APK. It targets **Android 17 / API 37**, the current stable major Android release as of **24 October 2026**. Google announced Android 17 on 16 June 2026; its SDK setup guide specifies `compileSdk = 37` and `targetSdk = 37`. [Android 17 release announcement](https://android-developers.googleblog.com/2026/06/Android-17.html) · [Android 17 SDK setup](https://developer.android.com/about/versions/17/setup-sdk)
 
 The minimum declared Android version is **Android 8.0 / API 26**. This is a universal APK with no bundled native libraries or CPU-specific runtime. It uses the device's installed Android System WebView; keep that component current. The minimum SDK setting describes installation eligibility, rather than proof of testing every older Android version or device.
 
@@ -10,13 +12,13 @@ The installed app works offline. It needs no account, Node.js, browser tab or lo
 
 ## Download and install
 
-- [Mental-Arithmetic-1.1.3-Android.apk](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.3-Android.apk) — the signed Android application.
-- [Complete source code for all platforms](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.3-all-platforms-source.zip) — the shared frontend, Android project, desktop wrappers, build scripts, requirements, tests and documentation.
+- [Mental-Arithmetic-1.1.4-Android.apk](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.4-Android.apk) — the signed Android application.
+- [Complete source code for all platforms](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.4-all-platforms-source.zip) — the shared frontend, Android project, desktop wrappers, build scripts, requirements, tests and documentation.
 
 Exact APK path on the build Mac:
 
 ```text
-/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.3-Android.apk
+/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.4-Android.apk
 ```
 
 Copy or download the APK to the Android device, open it in **Files**, and follow Android's installation prompt for that file source. Open **Mental Arithmetic** from the launcher after installation. This is a direct APK delivery; it has not been submitted to Google Play. No Google Play account or publication is required to use the supplied file.
@@ -24,18 +26,18 @@ Copy or download the APK to the Android device, open it in **Files**, and follow
 For an already connected development device with ADB authorized, installation from a computer is also possible:
 
 ```text
-adb install -r Mental-Arithmetic-1.1.3-Android.apk
+adb install -r Mental-Arithmetic-1.1.4-Android.apk
 ```
 
 That command installs or updates this app only. No physical phone was connected during development; emulator and package-verification evidence is recorded separately below.
 
 ## Lessons, examples and Practice
 
-Version 1.1.3 shows its release identity in the interface and clears only the app's WebView resource cache when the installed app version changes. The offline container already disables HTTP caching and sends `Cache-Control: no-store`; the version-change clear is an additional upgrade safeguard and preserves stored application/DOM data.
+The cache safeguard introduced in version 1.1.3 is preserved in 1.1.4. The app shows its release identity in the interface and clears only the app's WebView resource cache when the installed app version changes. The offline container already disables HTTP caching and sends `Cache-Control: no-store`; the version-change clear is an additional upgrade safeguard and preserves stored application/DOM data.
 
 - The sepia background, large numerals and responsive interface use the same production frontend as the existing apps. The CSS requests Arial with system sans-serif fallbacks; Android uses an available fallback when Arial is not installed, and the APK does not redistribute proprietary font files. The native Android container respects the status bar, navigation area, display cutouts and on-screen keyboard.
 - Learn lists four categories: two-digit addition, and one-, two- and three-digit multiplication. One- and three-digit addition are excluded from both Learn and Practice. Every available category has random examples, **New random example**, a complete interactive calculation/carry walkthrough and a separate final answer. Operand ranges are 1–9, 10–99 and 100–999. The next generated pair avoids the immediately preceding pair and its reversal.
-- Two-digit multiplication follows **First → Inside → Outside → Last**, including the required carries, with **Final answer** following Last. The confirmed **12 × 12** and **18 × 18** demonstrations remain selectable. Generated examples apply that confirmed calculation method. Three-digit multiplication follows the owner-described five-group sequence, including the central first×last, last×first, middle×middle order. Addition uses corresponding digit sums and right-to-left carry resolution. Addition operands and sums appear above/below in Learn, calculations, final answers and Practice.
+- Two-digit multiplication follows **First → Inside → Outside → Last**, including the required carries, with **Final answer** following Last. The confirmed **12 × 12** and **18 × 18** demonstrations remain selectable. Version 1.1.4 corrects the two cross-product labels and digit selections: for **82 × 76**, **Inside is 2 × 7 = 14** (the inner digits), and **Outside is 8 × 6 = 48** (the outer digits). Inside and Outside are then combined as **14 + 48 = 62**. This correction applies to generated examples and the confirmed demonstrations; carry resolution and the final answer are unchanged. Three-digit multiplication follows the owner-described five-group sequence, including the central first×last, last×first, middle×middle order. Addition uses corresponding digit sums and right-to-left carry resolution. Addition operands and sums appear above/below in Learn, calculations, final answers and Practice.
 - Practice offers two-digit addition and one-, two- or three-digit multiplication. Addition defaults to two digits; switching to Addition from another operand length restores two digits. Each round contains ten unique problems. An answer submits automatically when its length reaches the expected number of digits, and both correct and incorrect submissions advance immediately. Enter is not required.
 - The live timer stays beside the answer field at the bottom right. The previous answer's completion time appears at the upper left, black for correct or red for incorrect.
 - The completed set shows the score out of ten, **Maximum time**, **Minimum time** and **Average time**. All ten accepted answers count, including incorrect answers. The average uses the full-resolution durations, then the interface displays completed tenths of a second. Another round starts manually. Starting a new round clears the previous summary; the app does not save a history of completed sets.
@@ -51,10 +53,10 @@ From the source project folder:
 ```text
 npm ci
 npm run build:android
-npm run verify:android -- release/Mental-Arithmetic-1.1.3-Android.apk
+npm run verify:android -- release/Mental-Arithmetic-1.1.4-Android.apk
 ```
 
-`build:android` builds the Vite production frontend, runs the Android release build and release lint, and copies the signed APK into `release/`. `verify:android` inspects that APK using the configured Android SDK. The Android application ID is `local.jeff.mentalarithmetic`, its version name is `1.1.3`, and its version code is `10103`.
+`build:android` builds the Vite production frontend, runs the Android release build and release lint, and copies the signed APK into `release/`. `verify:android` inspects that APK using the configured Android SDK. The Android application ID is `local.jeff.mentalarithmetic`, its version name is `1.1.4`, and its version code is `10104`.
 
 The Android project is in `android/`. Its plain Java `MainActivity` hosts the shared frontend in a WebView. The build copies `dist/` into APK assets, so lessons and Practice do not require a second implementation. Bundled content is served through a restricted local asset origin. The app has no JavaScript-to-native bridge, external navigation, file chooser, downloads, analytics or backend.
 
@@ -81,7 +83,7 @@ Use a disposable Android emulator, then build the separate instrumentation APK:
 
 ```text
 npm run build:android -- --tests
-adb -s emulator-5556 install -r release/Mental-Arithmetic-1.1.3-Android.apk
+adb -s emulator-5556 install -r release/Mental-Arithmetic-1.1.4-Android.apk
 adb -s emulator-5556 install -r -t android/app/build/outputs/apk/androidTest/release/app-release-androidTest.apk
 adb -s emulator-5556 shell am instrument -w local.jeff.mentalarithmetic.test/local.jeff.mentalarithmetic.AndroidTestRunner
 ```
@@ -92,7 +94,9 @@ A separate local [private signing backup](/Users/pussieromatic/Documents/Codex/2
 
 ## Verification and limits
 
-The 1.1.3 release verification is recorded in [RELEASE_FIX_ANDROID_TEST_RESULTS.md](verification/RELEASE_FIX_ANDROID_TEST_RESULTS.md). It independently downloads the public APKs, records their actual installed versions and option lists, and tests upgrades while retaining WebView data. New raw evidence uses the `release-fix-android` prefix. The public 1.1.2 APK was found to have the intended four-category catalog on this emulator, both directly and after a real 1.1.1 upgrade; the user-reported cause was not reproduced.
+Current 1.1.4 verification is recorded in [INSIDE_OUTSIDE_ANDROID_TEST_RESULTS.md](verification/INSIDE_OUTSIDE_ANDROID_TEST_RESULTS.md). Its raw evidence uses the `inside-outside-android` prefix.
+
+The historical 1.1.3 release verification is recorded in [RELEASE_FIX_ANDROID_TEST_RESULTS.md](verification/RELEASE_FIX_ANDROID_TEST_RESULTS.md). It independently downloads the public APKs, records their actual installed versions and option lists, and tests upgrades while retaining WebView data. New raw evidence uses the `release-fix-android` prefix. The public 1.1.2 APK was found to have the intended four-category catalog on this emulator, both directly and after a real 1.1.1 upgrade. The owner subsequently confirmed the phone had 1.1.1 installed; its older catalog explained that report.
 
 The 1.1.2 addition-options update is verified separately in [ADDITION_OPTIONS_ANDROID_TEST_RESULTS.md](verification/ADDITION_OPTIONS_ANDROID_TEST_RESULTS.md); its raw files use the `addition-options-android` prefix. Earlier reports below describe their recorded versions.
 

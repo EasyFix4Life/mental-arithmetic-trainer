@@ -1,0 +1,3 @@
+PASS actual installed lesson and practice options
+
+Android release acceptance: 1 passed, 0 failed.

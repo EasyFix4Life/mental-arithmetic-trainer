@@ -1,12 +1,12 @@
 # Mental Arithmetic for macOS
 
-**1.1.3 verified-download update:** Learn and Practice offer **two-digit addition** and **one-, two- and three-digit multiplication**. The app and every website download identify version **1.1.3**. Use the [current release](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/tag/v1.1.3) or [website downloads](https://whoami.school/#app-downloads); older releases are historical. See [the delivery verification report](verification/RELEASE_DOWNLOAD_FIX.md).
+**1.1.4 Inside/Outside correction:** Two-digit multiplication now uses **Inside = top units × bottom tens** and **Outside = top tens × bottom units**, including their highlighted digits, calculations and intermediate results. For **82 × 76**, these are **2 × 7 = 14** and **8 × 6 = 48**. Learn and Practice retain **two-digit addition** and **one-, two- and three-digit multiplication**. Use the [current release](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/tag/v1.1.4) or [website downloads](https://whoami.school/#app-downloads). See [the correction report](verification/INSIDE_OUTSIDE_CORRECTION.md).
 
 This desktop build contains the same Learn and Practice application as the website, packaged with its own runtime. It runs offline, without Node.js, npm, a browser tab or a local HTTP server on the user's computer.
 
 ## Open or install
 
-Use **Mental-Arithmetic-1.1.3-macOS-arm64.dmg**. Open the disk image and drag **Mental Arithmetic.app** to **Applications**, then open it there. The alternative ZIP contains the same standalone app bundle.
+Use **Mental-Arithmetic-1.1.4-macOS-arm64.dmg**. Open the disk image and drag **Mental Arithmetic.app** to **Applications**, then open it there. The alternative ZIP contains the same standalone app bundle.
 
 This build targets **Apple silicon Macs**, with **macOS 13.0 or later** required by the bundled runtime. It was built and tested on this Apple silicon Mac running macOS 27.2. It is not an Intel Mac or Windows build.
 
@@ -54,4 +54,4 @@ npm run test:desktop
 
 By default, the desktop tests launch the source shell against the production build. To test a packaged application, set `DESKTOP_EXECUTABLE` to its `Contents/MacOS/Mental Arithmetic` executable before running `npm run test:desktop`. The suite follows [Playwright's Electron testing API](https://playwright.dev/docs/api/class-electron), and requires no Vite server.
 
-Current results and package-integrity evidence are recorded in `verification/RELEASE_DOWNLOAD_FIX.md`, `verification/release-fix-macos-results.json` and `verification/release-fix-mac-payload.json`; `verification/MACOS_TEST_RESULTS.md` remains a historical baseline. The equivalent Windows 10/11 x64 build and its verification limits are documented in `WINDOWS_APP.md`.
+Current results and package-integrity evidence are recorded in `verification/INSIDE_OUTSIDE_CORRECTION.md`, `verification/inside-outside-macos-results.json` and `verification/inside-outside-mac-package.json`; `verification/MACOS_TEST_RESULTS.md` remains a historical baseline. The equivalent Windows 10/11 x64 build and its verification limits are documented in `WINDOWS_APP.md`.

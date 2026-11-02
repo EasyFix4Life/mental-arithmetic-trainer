@@ -1,0 +1,12 @@
+PASS offline release shell, presentation and browser security
+PASS prominent learn button label, bounds and native tap
+PASS four available random lessons, excluded addition lengths and complete instructions
+PASS vertical addition instructions, carries and final answers
+PASS Inside selects inner digits and Outside selects outer digits
+PASS random two-digit trace, confirmed carries and final answer
+PASS three-digit multiplication groups and whole-value carries
+PASS native numeric keyboard, visible answer and rotation preservation
+PASS ten accepted answers, wrong feedback and exact timing summary
+PASS four available practice configurations and addition length guard
+
+Android release acceptance: 10 passed, 0 failed.

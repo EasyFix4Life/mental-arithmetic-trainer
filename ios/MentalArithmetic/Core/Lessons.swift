@@ -140,7 +140,8 @@ enum MultiplicationExamples {
         guard (10...99).contains(left), (10...99).contains(right) else { throw LessonError.invalidOperands }
         let leftFirst = left / 10, leftLast = left % 10
         let rightFirst = right / 10, rightLast = right % 10
-        let first = leftFirst * rightFirst, inside = leftFirst * rightLast, outside = leftLast * rightFirst
+        // Inside selects the adjacent inner digits; Outside selects the outer digits.
+        let first = leftFirst * rightFirst, inside = leftLast * rightFirst, outside = leftFirst * rightLast
         let middle = inside + outside, last = leftLast * rightLast
         let unitsDigit = last % 10, carryToMiddle = last / 10
         let resolvedMiddle = middle + carryToMiddle
@@ -157,11 +158,11 @@ enum MultiplicationExamples {
                 highlightedDigitRefs: ["left:0", "right:0"], operationDisplay: "\(leftFirst) × \(rightFirst)",
                 intermediateResult: String(first), visibleResultDigits: blank),
             InstructionStep(id: "\(prefix)-inside", stageName: .inside,
-                highlightedDigitRefs: ["left:0", "right:1"], operationDisplay: "\(leftFirst) × \(rightLast)",
+                highlightedDigitRefs: ["left:1", "right:0"], operationDisplay: "\(leftLast) × \(rightFirst)",
                 intermediateResult: String(inside), visibleResultDigits: blank),
             InstructionStep(id: "\(prefix)-outside", stageName: .outside,
-                highlightedDigitRefs: ["left:1", "right:0"], operationDisplay: "\(leftLast) × \(rightFirst) = \(outside); \(inside) + \(outside)",
-                calculationTerms: [CalculationTerm(left: String(leftLast), right: String(rightFirst), operation: .multiplication),
+                highlightedDigitRefs: ["left:0", "right:1"], operationDisplay: "\(leftFirst) × \(rightLast) = \(outside); \(inside) + \(outside)",
+                calculationTerms: [CalculationTerm(left: String(leftFirst), right: String(rightLast), operation: .multiplication),
                     CalculationTerm(left: String(inside), right: String(outside), operation: .addition)],
                 intermediateResult: String(middle), visibleResultDigits: blank,
                 narration: "Combine Inside and Outside: \(inside) + \(outside) = \(middle)."),

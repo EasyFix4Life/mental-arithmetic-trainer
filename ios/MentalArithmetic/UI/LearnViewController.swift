@@ -51,6 +51,14 @@ final class LearnViewController: UIViewController {
         showWalkthrough()
         return true
     }
+    func qaSelectGeneratedExample(left: Int, right: Int) throws {
+        selectLesson(LessonCatalog.lessons.first { $0.id == "multiplication-2" }!)
+        selectedExample = try MultiplicationExamples.create(left: left, right: right)
+        isOpen = true
+        stepIndex = 0
+        render()
+        showWalkthrough()
+    }
     #endif
 
     override func viewDidLoad() {

@@ -57,7 +57,10 @@ final class LessonTests: XCTestCase {
         XCTAssertEqual(e.steps.map(\.stageName), [.first, .inside, .outside, .last])
         XCTAssertEqual(e.steps.map(\.intermediateResult), ["1", "2", "4", "4"])
         XCTAssertEqual(e.steps.map(\.visibleResultDigits), ["1□□", "1□□", "14□", "144"])
-        XCTAssertEqual(e.steps[2].operationDisplay, "2 × 1 = 2; 2 + 2")
+        XCTAssertEqual(e.steps[1].highlightedDigitRefs, ["left:1", "right:0"])
+        XCTAssertEqual(e.steps[1].operationDisplay, "2 × 1")
+        XCTAssertEqual(e.steps[2].highlightedDigitRefs, ["left:0", "right:1"])
+        XCTAssertEqual(e.steps[2].operationDisplay, "1 × 2 = 2; 2 + 2")
         XCTAssertEqual(e.steps[3].narration, "Product = 144.")
     }
 
@@ -69,6 +72,10 @@ final class LessonTests: XCTestCase {
         XCTAssertEqual(e.steps.map(\.stageName), [.first, .inside, .outside, .last, .last, .last])
         XCTAssertEqual(e.steps.map(\.intermediateResult), ["1", "8", "16", "64", "22", "3"])
         XCTAssertEqual(e.steps.map(\.visibleResultDigits), ["□□□", "□□□", "□□□", "□□4", "□24", "324"])
+        XCTAssertEqual(e.steps[1].highlightedDigitRefs, ["left:1", "right:0"])
+        XCTAssertEqual(e.steps[1].operationDisplay, "8 × 1")
+        XCTAssertEqual(e.steps[2].highlightedDigitRefs, ["left:0", "right:1"])
+        XCTAssertEqual(e.steps[2].operationDisplay, "1 × 8 = 8; 8 + 8")
         XCTAssertEqual(e.steps[3].carryOut, "6")
         XCTAssertEqual(e.steps[3].carryToStepId, e.steps[4].id)
         XCTAssertEqual(e.steps[4].carryIn, "6")
@@ -80,6 +87,26 @@ final class LessonTests: XCTestCase {
         XCTAssertEqual(e.steps[5].narration, "1 + 2 = 3. Product = 324.")
     }
 
+    func testInsideAndOutsideUseInnerAndOuterDigitsForUnequalCrossProducts() throws {
+        for (left, right) in [(82, 76), (70, 24), (29, 83)] {
+            let e = try MultiplicationExamples.create(left: left, right: right)
+            let inside = (left % 10) * (right / 10)
+            let outside = (left / 10) * (right % 10)
+            XCTAssertEqual(e.steps[1].highlightedDigitRefs, ["left:1", "right:0"])
+            XCTAssertEqual(e.steps[1].operationDisplay, "\(left % 10) × \(right / 10)")
+            XCTAssertEqual(e.steps[1].intermediateResult, String(inside))
+            XCTAssertEqual(e.steps[2].highlightedDigitRefs, ["left:0", "right:1"])
+            XCTAssertEqual(e.steps[2].operationDisplay, "\(left / 10) × \(right % 10) = \(outside); \(inside) + \(outside)")
+            XCTAssertEqual(e.steps[2].calculationTerms, [
+                CalculationTerm(left: String(left / 10), right: String(right % 10), operation: .multiplication),
+                CalculationTerm(left: String(inside), right: String(outside), operation: .addition)
+            ])
+            XCTAssertEqual(e.steps[2].narration, "Combine Inside and Outside: \(inside) + \(outside) = \(inside + outside).")
+            XCTAssertEqual(e.finalAnswer, String(left * right))
+            XCTAssertEqual(e.steps.last?.visibleResultDigits, e.finalAnswer)
+        }
+    }
+
     func testAll8100TwoDigitProductsAndCarryRoutes() throws {
         var count = 0
         for left in 10...99 {
@@ -89,6 +116,9 @@ final class LessonTests: XCTestCase {
                 XCTAssertEqual(e.steps.last?.visibleResultDigits, e.finalAnswer)
                 XCTAssertEqual(Array(e.steps.prefix(4)).map(\.stageName), [.first, .inside, .outside, .last])
                 XCTAssertTrue(e.steps.dropFirst(4).allSatisfy { $0.stageName == .last })
+                XCTAssertEqual(e.steps[1].highlightedDigitRefs, ["left:1", "right:0"])
+                XCTAssertEqual(e.steps[1].intermediateResult, String((left % 10) * (right / 10)))
+                XCTAssertEqual(e.steps[2].highlightedDigitRefs, ["left:0", "right:1"])
                 XCTAssertEqual(Set(e.steps.map(\.id)).count, e.steps.count)
                 for step in e.steps {
                     XCTAssertEqual(step.visibleResultDigits?.count, e.finalAnswer?.count)

@@ -1,0 +1,3 @@
+PASS offline release shell, presentation and browser security
+
+Android release acceptance: 1 passed, 1 failed.
