@@ -1,0 +1,27 @@
+{
+  "release": "v1.1.2",
+  "files": [
+    {
+      "url": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-iOS-Simulator-app.zip",
+      "bytes": 308180,
+      "sha256": "facbb8dedf911f25f8d17579387cd42da24c7da8a5534d3a6d51fdabc4a3bdb8",
+      "version": "1.1.2",
+      "build": "3",
+      "removedAdditionLessonTitlesAbsent": true,
+      "fourCurrentLessonTitlesPresent": true,
+      "debugHarnessAbsent": true
+    },
+    {
+      "url": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-iOS-unsigned-archive.zip",
+      "bytes": 816848,
+      "sha256": "372cb670fa40162e8da51bfdeabcb9b7df365f3b74997e1c5e2fef4f6db7f678",
+      "version": "1.1.2",
+      "build": "3",
+      "removedAdditionLessonTitlesAbsent": true,
+      "fourCurrentLessonTitlesPresent": true,
+      "debugHarnessAbsent": true
+    }
+  ],
+  "interpretation": "The actual public iOS1.1.2 simulator app passed all four categories and all four Practice configurations. The reported Android issue was not reproduced on native iOS.",
+  "runtimeReport": "verification/release-fix-ios-public-1.1.2.json"
+}

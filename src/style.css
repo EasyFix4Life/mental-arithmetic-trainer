@@ -36,6 +36,7 @@ button:hover { background: #decca7; }
 }
 .mode-navigation button { min-height: 2.75rem; padding: 0.5rem 1.4rem; }
 .mode-navigation [aria-pressed="true"] { font-weight: 700; border-width: 2px; }
+.app-version { flex-basis: 100%; font-size: 0.875rem; line-height: 1.4; text-align: center; }
 .download-nav-link {
   display: inline-flex;
   align-items: center;
@@ -73,6 +74,7 @@ button:hover { background: #decca7; }
 }
 .download-card h3 { margin: 0; font-size: 1.5rem; font-weight: 700; }
 .download-card p { margin: 0.75rem 0 0; line-height: 1.5; }
+.download-version { font-weight: 700; }
 .download-status { font-weight: 700; }
 .download-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 0.4rem; margin-top: 1.25rem; }
 .download-button, .download-alternative, .download-utilities a { color: inherit; overflow-wrap: anywhere; text-underline-offset: 0.15em; }

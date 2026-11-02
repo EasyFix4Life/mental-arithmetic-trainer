@@ -45,6 +45,7 @@ final class SimulatorReviewRunner {
                 switch scenario {
                 case "review-setup": break
                 case "review-catalog": try chooseMode(0)
+                case "review-privacy": try press("privacy-policy")
                 case "review-practice":
                     try choosePracticeOperation(1)
                     try chooseDigitCount(3)

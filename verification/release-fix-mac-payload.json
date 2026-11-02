@@ -1,0 +1,41 @@
+{
+  "version": "1.1.3",
+  "matches": [
+    {
+      "file": "dist/index.html",
+      "bytes": 594,
+      "sha256": "13203261ecef9e034ca3d93a64be7df35a6475a3ba3108060028afc04d93f061",
+      "matches": true
+    },
+    {
+      "file": "dist/_headers",
+      "bytes": 123,
+      "sha256": "3fdc8f8e6af5ff2d1a5424f8cff40a3c11c7deefec052bc2f377ea0fd7ca8ff1",
+      "matches": true
+    },
+    {
+      "file": "dist/assets/index-BgzoV_mc.js",
+      "bytes": 39252,
+      "sha256": "5ed19479a5719b5c4cd927bc839aa8798282cc1afb8071c0ea188f9f7b07194f",
+      "matches": true
+    },
+    {
+      "file": "dist/assets/index-Cr3j_8aO.css",
+      "bytes": 10000,
+      "sha256": "3eda5cd9126e3897b32675871b32d99d61a532084d68699d7cbd829c56c069d4",
+      "matches": true
+    },
+    {
+      "file": "desktop/main.cjs",
+      "bytes": 6088,
+      "sha256": "70ef65772f8f6390212190299348873b24b7b390a559049dd3a129c78ba301cb",
+      "matches": true
+    },
+    {
+      "file": "desktop/security.cjs",
+      "bytes": 1839,
+      "sha256": "df896d0e2c572d4d1a3b5f0a46df5c910d9f6c2183cf67bddb7f5c2c5abf06a0",
+      "matches": true
+    }
+  ]
+}

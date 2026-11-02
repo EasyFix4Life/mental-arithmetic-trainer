@@ -36,9 +36,13 @@ public final class AndroidTestRunner extends Instrumentation {
     private WebView webView;
     private final JSONArray cases = new JSONArray();
     private File evidenceDirectory;
+    private String scenario;
+    private String seedUpgradeMarker;
 
     @Override public void onCreate(Bundle arguments) {
         super.onCreate(arguments);
+        scenario = arguments == null ? "acceptance" : arguments.getString("scenario", "acceptance");
+        seedUpgradeMarker = arguments == null ? null : arguments.getString("seed-upgrade-marker");
         start();
     }
 
@@ -66,16 +70,22 @@ public final class AndroidTestRunner extends Instrumentation {
             report.put("version", getTargetContext().getPackageManager().getPackageInfo(getTargetContext().getPackageName(), 0).versionName);
             report.put("webViewPackage", WebView.getCurrentWebViewPackage().packageName);
             report.put("webViewVersion", WebView.getCurrentWebViewPackage().versionName);
+            report.put("scenario", scenario);
 
-            runCase("offline release shell, presentation and browser security", this::offlineShell);
-            runCase("prominent learn button label, bounds and native tap", this::prominentHelp);
-            runCase("four available random lessons, excluded addition lengths and complete instructions", this::randomLessons);
-            runCase("vertical addition instructions, carries and final answers", this::additionTrace);
-            runCase("random two-digit trace, confirmed carries and final answer", this::multiplicationTrace);
-            runCase("three-digit multiplication groups and whole-value carries", this::threeDigitTrace);
-            runCase("native numeric keyboard, visible answer and rotation preservation", this::nativeKeyboard);
-            runCase("ten accepted answers, wrong feedback and exact timing summary", this::timingRound);
-            runCase("four available practice configurations and addition length guard", this::practiceConfigurations);
+            if ("catalog".equals(scenario)) {
+                runCase("actual installed lesson and practice options", this::installedOptions);
+            } else {
+                check("acceptance".equals(scenario), "Known instrumentation scenario");
+                runCase("offline release shell, presentation and browser security", this::offlineShell);
+                runCase("prominent learn button label, bounds and native tap", this::prominentHelp);
+                runCase("four available random lessons, excluded addition lengths and complete instructions", this::randomLessons);
+                runCase("vertical addition instructions, carries and final answers", this::additionTrace);
+                runCase("random two-digit trace, confirmed carries and final answer", this::multiplicationTrace);
+                runCase("three-digit multiplication groups and whole-value carries", this::threeDigitTrace);
+                runCase("native numeric keyboard, visible answer and rotation preservation", this::nativeKeyboard);
+                runCase("ten accepted answers, wrong feedback and exact timing summary", this::timingRound);
+                runCase("four available practice configurations and addition length guard", this::practiceConfigurations);
+            }
             report.put("passed", cases.length());
             report.put("failed", 0);
         } catch (Throwable error) {
@@ -101,6 +111,35 @@ public final class AndroidTestRunner extends Instrumentation {
         finish(exitCode, result);
     }
 
+    /** Inspect the installed release without assuming a particular catalog version. */
+    private JSONObject installedOptions() throws Exception {
+        if (seedUpgradeMarker != null) {
+            js("localStorage.setItem('release-upgrade-probe'," + JSONObject.quote(seedUpgradeMarker) + ");return {};");
+        }
+        JSONObject result = js("""
+            const initial={operation:q('#operation').value,digits:q('#digit-count').value,options:[...q('#digit-count').options].map(o=>o.value)};
+            q('#mode-learn').click();
+            const lessons=[...document.querySelectorAll('#lesson-catalog button')].map(b=>({id:b.dataset.lessonId,title:b.textContent}));
+            q('#mode-practice').click();
+            q('#operation').value='addition';q('#operation').dispatchEvent(new Event('change',{bubbles:true}));
+            const addition=[...q('#digit-count').options].map(o=>o.value);
+            q('#operation').value='multiplication';q('#operation').dispatchEvent(new Event('change',{bubbles:true}));
+            const multiplication=[...q('#digit-count').options].map(o=>o.value);
+            q('#operation').value='addition';q('#operation').dispatchEvent(new Event('change',{bubbles:true}));
+            return {initial,lessons,addition,multiplication,document:location.href,scripts:[...document.scripts].map(s=>s.src),visibleVersion:q('#app-version')?.textContent||null,upgradeMarker:localStorage.getItem('release-upgrade-probe')};
+            """);
+        AtomicReference<Integer> cacheMode = new AtomicReference<>();
+        runOnMainSync(() -> cacheMode.set(webView.getSettings().getCacheMode()));
+        result.put("cacheMode", cacheMode.get());
+        screenshot("android-installed-practice.png");
+        js("q('#mode-learn').click();scrollTo(0,0);return {};");
+        screenshot("android-installed-learn.png");
+        // The test runner's finish() ends its process. Give Chromium's delayed
+        // DOM storage commit time to finish before a real package upgrade.
+        if (seedUpgradeMarker != null) SystemClock.sleep(6_000);
+        return result;
+    }
+
     private JSONObject offlineShell() throws Exception {
         AtomicReference<JSONObject> settings = new AtomicReference<>();
         runOnMainSync(() -> {
@@ -111,12 +150,14 @@ public final class AndroidTestRunner extends Instrumentation {
                 value.put("allowFileAccess", webView.getSettings().getAllowFileAccess());
                 value.put("allowContentAccess", webView.getSettings().getAllowContentAccess());
                 value.put("javascript", webView.getSettings().getJavaScriptEnabled());
+                value.put("cacheMode", webView.getSettings().getCacheMode());
             } catch (Exception error) { throw new AssertionError(error); }
             settings.set(value);
         });
         JSONObject value = settings.get();
         check(value.getString("url").equals("https://appassets.androidplatform.net/index.html"), "Offline app origin");
         check(value.getBoolean("blockNetworkLoads"), "Network loads blocked");
+        check(value.getInt("cacheMode") == android.webkit.WebSettings.LOAD_NO_CACHE, "WebView HTTP cache disabled");
         check(!value.getBoolean("allowFileAccess") && !value.getBoolean("allowContentAccess"), "File/content access disabled");
         js("""
             assert(getComputedStyle(document.documentElement).backgroundColor==='rgb(232, 215, 181)','sepia');
@@ -124,6 +165,7 @@ public final class AndroidTestRunner extends Instrumentation {
             assert(q('#operation').value==='addition','initial operation is addition');
             assert(q('#digit-count').value==='2' && JSON.stringify([...q('#digit-count').options].map(o=>o.value))==='["2"]','addition initially offers only two digits');
             assert(!q('#download-apps-link') && !q('#app-downloads'),'website download controls absent from offline native shell');
+            assert(q('#app-version')?.textContent.includes('1.1.3'),'visible installed frontend version is 1.1.3');
             assert(q('#answer').inputMode==='numeric','numeric inputmode');
             assert([...document.querySelectorAll('script[src],link[rel=stylesheet]')].every(e=>new URL(e.src||e.href).origin===location.origin),'bundled scripts/styles');
             assert(!document.documentElement.scrollWidth || document.documentElement.scrollWidth<=innerWidth,'portrait width');

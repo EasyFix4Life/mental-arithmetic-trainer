@@ -3,6 +3,9 @@ package local.jeff.mentalarithmetic;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Insets;
 import android.net.Uri;
@@ -71,10 +74,30 @@ public final class MainActivity extends Activity {
         webView.setTag("mental-arithmetic-webview");
         webView.setBackgroundColor(SEPIA);
         configureWebView(webView);
+        clearPreviousReleaseCache();
         content.addView(webView, new FrameLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         content.requestApplyInsets();
         webView.loadUrl(AssetPathPolicy.APP_URL);
+    }
+
+    /** Retain application data while discarding this app's obsolete WebView HTTP cache. */
+    @SuppressWarnings("deprecation")
+    private void clearPreviousReleaseCache() {
+        try {
+            PackageInfo installed = getPackageManager().getPackageInfo(getPackageName(), 0);
+            long currentVersion = Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
+                    ? installed.getLongVersionCode() : installed.versionCode;
+            SharedPreferences versions = getSharedPreferences("offline-frontend", MODE_PRIVATE);
+            if (versions.getLong("last-version-code", -1) != currentVersion) {
+                // Defensive update isolation. LOAD_NO_CACHE and no-store already
+                // apply to all asset loads; this also removes older disk entries.
+                webView.clearCache(true);
+                versions.edit().putLong("last-version-code", currentVersion).apply();
+            }
+        } catch (PackageManager.NameNotFoundException impossible) {
+            throw new IllegalStateException("Cannot identify the installed application", impossible);
+        }
     }
 
     @SuppressWarnings("deprecation")

@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 
-const releaseBase = 'https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/';
-const releaseFile = (name: string) => `${releaseBase}Mental-Arithmetic-1.1.2-${name}`;
+const releaseBase = 'https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.3/';
+const releaseFile = (name: string) => `${releaseBase}Mental-Arithmetic-1.1.3-${name}`;
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/');
@@ -12,32 +12,34 @@ test('website offers clearly named, platform-specific public release downloads',
   await expect(section).toBeVisible();
   await expect(section.locator('.download-card h3')).toHaveText(['macOS', 'Windows', 'Android', 'iPhone & iPad']);
   await expect(section.locator('.download-card')).toHaveCount(4);
+  await expect(page.locator('#app-version')).toHaveText('Version 1.1.3');
+  await expect(section.locator('.download-version')).toHaveText(Array(4).fill('Version 1.1.3'));
 
   const platforms = [
     {
       title: 'macOS', requirements: /Apple silicon.*macOS 13 or later/,
       links: [
-        ['Download macOS app (.dmg)', 'macOS-arm64.dmg'],
-        ['macOS app ZIP alternative', 'macOS-arm64.zip'],
+        ['Download macOS app 1.1.3 (.dmg)', 'macOS-arm64.dmg'],
+        ['macOS app 1.1.3 ZIP alternative', 'macOS-arm64.zip'],
       ],
     },
     {
       title: 'Windows', requirements: /Windows 10 and 11.*64-bit \(x64\)/,
       links: [
-        ['Download Windows installer (.exe)', 'Windows-x64-Setup.exe'],
-        ['Windows app ZIP alternative', 'Windows-x64.zip'],
+        ['Download Windows installer 1.1.3 (.exe)', 'Windows-x64-Setup.exe'],
+        ['Windows app 1.1.3 ZIP alternative', 'Windows-x64.zip'],
       ],
     },
     {
       title: 'Android', requirements: /Android 8 or later/,
-      links: [['Download Android app (.apk)', 'Android.apk']],
+      links: [['Download Android app 1.1.3 (.apk)', 'Android.apk']],
     },
     {
       title: 'iPhone & iPad', requirements: /Development files for Xcode on a Mac/,
       links: [
-        ['Download iOS unsigned Xcode archive', 'iOS-unsigned-archive.zip'],
-        ['Download iOS simulator app', 'iOS-Simulator-app.zip'],
-        ['Download iOS source (all-platforms ZIP)', 'all-platforms-source.zip'],
+        ['Download iOS unsigned Xcode archive 1.1.3', 'iOS-unsigned-archive.zip'],
+        ['Download iOS simulator app 1.1.3', 'iOS-Simulator-app.zip'],
+        ['Download iOS source 1.1.3 (all-platforms ZIP)', 'all-platforms-source.zip'],
       ],
     },
   ];
@@ -55,9 +57,9 @@ test('website offers clearly named, platform-specific public release downloads',
   await expect(ios).toContainText('The device archive is unsigned and cannot be installed directly.');
   await expect(ios).toContainText('An App Store download is not available yet.');
   await expect(ios.getByRole('link', { name: /install|app store/i })).toHaveCount(0);
-  await expect(section.getByRole('link', { name: 'Download Web files (.zip)', exact: true }))
+  await expect(section.getByRole('link', { name: 'Download Web files 1.1.3 (.zip)', exact: true }))
     .toHaveAttribute('href', releaseFile('Web.zip'));
-  await expect(section.getByRole('link', { name: 'Download all-platforms source (.zip)', exact: true }))
+  await expect(section.getByRole('link', { name: 'Download all-platforms source 1.1.3 (.zip)', exact: true }))
     .toHaveAttribute('href', releaseFile('all-platforms-source.zip'));
   await expect(section.getByRole('link', { name: 'View all releases', exact: true }))
     .toHaveAttribute('href', 'https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases');
@@ -132,7 +134,7 @@ test('platform cards and navigation fit desktop and 390/280-pixel phones without
     await expect(page.locator('html')).toHaveCSS('background-color', 'rgb(232, 215, 181)');
     if ((testInfo.project.name === 'desktop' && width === 1280)
       || (testInfo.project.name === 'mobile' && width < 700)) {
-      await page.screenshot({ path: `verification/downloads-${testInfo.project.name}-${width}.png`, fullPage: true });
+      await page.screenshot({ path: `verification/release-fix-downloads-${testInfo.project.name}-${width}.png`, fullPage: true });
     }
   }
 });
@@ -149,6 +151,7 @@ test('downloads hide throughout a ten-answer round and return with correct score
   const durations = [120, 230, 340, 450, 560, 670, 780, 890, 1000, 1110];
   for (let index = 0; index < durations.length; index += 1) {
     await expect(page.locator('#mode-navigation')).toBeHidden();
+    await expect(page.locator('#app-version')).toBeHidden();
     await expect(page.locator('#download-apps-link')).toBeHidden();
     await expect(page.locator('#app-downloads')).toBeHidden();
     await expect(page.locator('#round-timing')).toBeHidden();
@@ -179,6 +182,8 @@ test('downloads hide throughout a ten-answer round and return with correct score
   await expect(page.locator('#minimum-time')).toHaveText('0.1 s');
   await expect(page.locator('#average-time')).toHaveText('0.6 s');
   await expect(page.locator('#mode-navigation')).toBeVisible();
+  await expect(page.locator('#app-version')).toHaveText('Version 1.1.3');
+  await expect(page.locator('#app-version')).toBeVisible();
   await expect(page.locator('#download-apps-link')).toBeVisible();
   await expect(page.locator('#app-downloads')).toBeVisible();
   await expect(page.locator('#exercise')).toBeHidden();
@@ -223,6 +228,7 @@ test('production view excludes download controls from native app origins and the
         downloads: root.querySelectorAll('#app-downloads').length,
         navigationLinks: root.querySelectorAll('#download-apps-link').length,
         practiceVisible: !root.querySelector<HTMLElement>('#practice-view')!.hidden,
+        appVersion: root.querySelector('#app-version')!.textContent,
       };
       unmount();
       return mounted;
@@ -238,5 +244,6 @@ test('production view excludes download controls from native app origins and the
     expect(mount.downloads).toBe(Number(mount.origin.website));
     expect(mount.navigationLinks).toBe(Number(mount.origin.website));
     expect(mount.practiceVisible).toBe(true);
+    expect(mount.appVersion).toBe('Version 1.1.3');
   }
 });

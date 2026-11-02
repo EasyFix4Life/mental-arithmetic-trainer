@@ -1,4 +1,4 @@
-# Draft App Review notes — version 1.1.2, build 3
+# Draft App Review notes — version 1.1.3, build 4
 
 Prepare the final signing, contact information, privacy URL, and App Store Connect fields before submitting this draft.
 
@@ -26,3 +26,7 @@ The original specification leaves treatment of a later key after automatic submi
 The app does not send answers, timings, identifiers, or other app data to the developer or third parties. Round state exists in memory during the current process. The application requests no personal-data permissions. No demo account or network access is necessary to review the app.
 
 App Review contact, public support URL, and public privacy URL must be supplied in App Store Connect before submission.
+
+## Installed version
+
+Open the existing **Privacy** sheet from setup or Learn to see **Version 1.1.3 (build 4)**. This identifies the installed release without adding controls during timed Practice.

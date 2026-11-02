@@ -1,6 +1,6 @@
 # Instructional implementation handoff — 1.1.0
 
-**Current version 1.1.2 scope:** Learn and Practice offer two-digit addition and one-, two- and three-digit multiplication. The owner subsequently removed one-digit and three-digit addition. Earlier all-length statements below describe the instructional history; the original supplied documents are preserved. See [the current scope record](requirements/instruction/OWNER_ADDITION_OPTIONS_2026-11-02.md).
+**Current version 1.1.3 scope:** Learn and Practice offer two-digit addition and one-, two- and three-digit multiplication. The owner subsequently removed one-digit and three-digit addition. Earlier all-length statements below describe the instructional history; the original supplied documents are preserved. See [the current scope record](requirements/instruction/OWNER_ADDITION_OPTIONS_2026-11-02.md).
 
 
 The current app implements the owner's later request: **all versions have instructions for addition and multiplication with one-, two- and three-digit operands**. All six Learn categories open with a random example and have complete walkthroughs. The latest layout correction places addition operands above and below one another, aligned by place value, throughout Learn, calculations, final answers and Practice. Multiplication stays horizontal.

@@ -1,0 +1,147 @@
+{
+  "verifiedAt": "2026-11-02T20:17:27.394366+00:00",
+  "device": "disposable emulator-5556; Android17/API37; no physical device modified",
+  "artifacts": [
+    {
+      "name": "public-1.1.1.apk",
+      "bytes": 664676,
+      "sha256": "3149d9b271f80f11ddc2f87081e4250323a6abefe865568726a5dae9884842a9",
+      "frontend": [
+        {
+          "file": "assets/www/assets/index-BThi3byY.css",
+          "bytes": 8018,
+          "sha256": "d6d2e872e9c5173e900cdd988d89b94db8be5c4ae012ad2a8f560205f664af61"
+        },
+        {
+          "file": "assets/www/assets/index-Bycc7fRe.js",
+          "bytes": 33829,
+          "sha256": "3d0c17eaea2de759d45f4858f1d1bd8e04a99ca07abfe9543d9c2f0219471054"
+        },
+        {
+          "file": "assets/www/index.html",
+          "bytes": 594,
+          "sha256": "6e8db40d623aa78caab0428a249982bc5bf09e95ae564abdcfff3004e001fd11"
+        }
+      ],
+      "anonymousDownloadUrl": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.1/Mental-Arithmetic-1.1.1-Android.apk"
+    },
+    {
+      "name": "public-1.1.2.apk",
+      "bytes": 665996,
+      "sha256": "276b4903a4c869fae6357b014b9eb59f44475923c0d8c3361604902704bff507",
+      "frontend": [
+        {
+          "file": "assets/www/assets/index-CIxu1Qxd.js",
+          "bytes": 37936,
+          "sha256": "efdd6e5fea5af0461e14c2836ca340cc0c43bbc87c498a12e55070177214d48f"
+        },
+        {
+          "file": "assets/www/assets/index-DtQOxB5b.css",
+          "bytes": 9901,
+          "sha256": "2eba6d2085be7c2303cf188b22d9bad6d2f39b78ca95095a83eefbab95187bce"
+        },
+        {
+          "file": "assets/www/index.html",
+          "bytes": 594,
+          "sha256": "177b2ba5c526fe8a1e7526f922ab464e1e0d5ca74e9ab7b8811929499aa34769"
+        }
+      ],
+      "anonymousDownloadUrl": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-Android.apk"
+    }
+  ],
+  "phases": [
+    {
+      "name": "public112-installed",
+      "installedVersion": "1.1.2",
+      "passed": 1,
+      "failed": 0,
+      "report": "public112-installed/android-runtime-results.json",
+      "lessonIds": [
+        "multiplication-1",
+        "addition-2",
+        "multiplication-2",
+        "multiplication-3"
+      ],
+      "additionOptions": [
+        "2"
+      ],
+      "multiplicationOptions": [
+        "1",
+        "2",
+        "3"
+      ],
+      "cacheMode": 2,
+      "scriptUrls": [
+        "https://appassets.androidplatform.net/assets/index-CIxu1Qxd.js"
+      ]
+    },
+    {
+      "name": "public111-baseline",
+      "installedVersion": "1.1.1",
+      "passed": 1,
+      "failed": 0,
+      "report": "public111-baseline/android-runtime-results.json",
+      "lessonIds": [
+        "addition-1",
+        "multiplication-1",
+        "addition-2",
+        "multiplication-2",
+        "addition-3",
+        "multiplication-3"
+      ],
+      "additionOptions": [
+        "1",
+        "2",
+        "3"
+      ],
+      "multiplicationOptions": [
+        "1",
+        "2",
+        "3"
+      ],
+      "cacheMode": 2,
+      "scriptUrls": [
+        "https://appassets.androidplatform.net/assets/index-Bycc7fRe.js"
+      ]
+    },
+    {
+      "name": "public111-to112-upgrade",
+      "installedVersion": "1.1.2",
+      "passed": 1,
+      "failed": 0,
+      "report": "public111-to112-upgrade/android-runtime-results.json",
+      "lessonIds": [
+        "multiplication-1",
+        "addition-2",
+        "multiplication-2",
+        "multiplication-3"
+      ],
+      "additionOptions": [
+        "2"
+      ],
+      "multiplicationOptions": [
+        "1",
+        "2",
+        "3"
+      ],
+      "cacheMode": 2,
+      "scriptUrls": [
+        "https://appassets.androidplatform.net/assets/index-CIxu1Qxd.js"
+      ]
+    },
+    {
+      "name": "public112-upgrade-acceptance",
+      "installedVersion": "1.1.2",
+      "passed": 9,
+      "failed": 0,
+      "report": "public112-upgrade-acceptance/android-runtime-results.json"
+    }
+  ],
+  "public112InstalledOptionsCorrect": true,
+  "public111To112UpgradeOptionsCorrect": true,
+  "public112UpgradedNativeAcceptancePassed": true,
+  "reportedIssueReproduced": false,
+  "cacheFinding": "Both public releases report cacheMode 2 (WebSettings.LOAD_NO_CACHE). This emulator test does not establish cached HTML as the reported cause.",
+  "reportedDeviceState": "The installed version and state of the reporting physical device were not inspected; no claim is made about that device.",
+  "diagnosticInstrumentationApkSha256": "35ba6b70766b963bc32e1dcb83f42c6115bd5f8fc1771590ec308405206e897d"
+}

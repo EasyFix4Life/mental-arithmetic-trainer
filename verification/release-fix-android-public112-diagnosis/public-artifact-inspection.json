@@ -1,0 +1,46 @@
+[
+  {
+    "name": "public-1.1.1.apk",
+    "bytes": 664676,
+    "sha256": "3149d9b271f80f11ddc2f87081e4250323a6abefe865568726a5dae9884842a9",
+    "frontend": [
+      {
+        "file": "assets/www/assets/index-BThi3byY.css",
+        "bytes": 8018,
+        "sha256": "d6d2e872e9c5173e900cdd988d89b94db8be5c4ae012ad2a8f560205f664af61"
+      },
+      {
+        "file": "assets/www/assets/index-Bycc7fRe.js",
+        "bytes": 33829,
+        "sha256": "3d0c17eaea2de759d45f4858f1d1bd8e04a99ca07abfe9543d9c2f0219471054"
+      },
+      {
+        "file": "assets/www/index.html",
+        "bytes": 594,
+        "sha256": "6e8db40d623aa78caab0428a249982bc5bf09e95ae564abdcfff3004e001fd11"
+      }
+    ]
+  },
+  {
+    "name": "public-1.1.2.apk",
+    "bytes": 665996,
+    "sha256": "276b4903a4c869fae6357b014b9eb59f44475923c0d8c3361604902704bff507",
+    "frontend": [
+      {
+        "file": "assets/www/assets/index-CIxu1Qxd.js",
+        "bytes": 37936,
+        "sha256": "efdd6e5fea5af0461e14c2836ca340cc0c43bbc87c498a12e55070177214d48f"
+      },
+      {
+        "file": "assets/www/assets/index-DtQOxB5b.css",
+        "bytes": 9901,
+        "sha256": "2eba6d2085be7c2303cf188b22d9bad6d2f39b78ca95095a83eefbab95187bce"
+      },
+      {
+        "file": "assets/www/index.html",
+        "bytes": 594,
+        "sha256": "177b2ba5c526fe8a1e7526f922ab464e1e0d5ca74e9ab7b8811929499aa34769"
+      }
+    ]
+  }
+]

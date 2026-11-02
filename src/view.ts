@@ -2,6 +2,7 @@ import { mountLearnView } from './learn/learnView';
 import { renderDownloadsSection } from './downloadsView';
 import { mountPracticeView } from './practiceView';
 import { RoundController } from './roundController';
+import { APP_VERSION } from './release';
 
 interface ViewOptions {
   showDownloads?: boolean;
@@ -14,6 +15,7 @@ export function mountView(root: HTMLElement, controller: RoundController, viewOp
       <button id="mode-learn" type="button" aria-pressed="false">Learn</button>
       <button id="mode-practice" type="button" aria-pressed="true">Practice</button>
       ${viewOptions.showDownloads ? '<a id="download-apps-link" class="download-nav-link" href="#app-downloads">Download Apps</a>' : ''}
+      <span id="app-version" class="app-version">Version ${APP_VERSION}</span>
     </nav>
     <div id="learn-view" class="learn-view" hidden></div>
     <div id="practice-view"></div>

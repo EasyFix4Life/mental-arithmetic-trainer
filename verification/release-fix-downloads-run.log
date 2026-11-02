@@ -1,0 +1,33 @@
+
+Running 10 tests using 7 workers
+
+(node:24006) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24007) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24008) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24011) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24009) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24010) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24012) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 [desktop] › tests/browser/downloads.spec.ts:206:1 › production view excludes download controls from native app origins and the default mount (1.0s)
+  ✓   2 [desktop] › tests/browser/downloads.spec.ts:10:1 › website offers clearly named, platform-specific public release downloads (1.3s)
+  ✓   7 [mobile] › tests/browser/downloads.spec.ts:10:1 › website offers clearly named, platform-specific public release downloads (1.3s)
+  ✓   6 [mobile] › tests/browser/downloads.spec.ts:76:1 › Download Apps is keyboard reachable and scrolls to a named section from either mode (1.3s)
+  ✓   4 [desktop] › tests/browser/downloads.spec.ts:76:1 › Download Apps is keyboard reachable and scrolls to a named section from either mode (1.3s)
+  ✓   8 [mobile] › tests/browser/downloads.spec.ts:206:1 › production view excludes download controls from native app origins and the default mount (199ms)
+  ✓   3 [desktop] › tests/browser/downloads.spec.ts:100:1 › platform cards and navigation fit desktop and 390/280-pixel phones without overlap (1.6s)
+(node:24111) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24112) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   9 [mobile] › tests/browser/downloads.spec.ts:100:1 › platform cards and navigation fit desktop and 390/280-pixel phones without overlap (689ms)
+  ✓   1 [desktop] › tests/browser/downloads.spec.ts:142:1 › downloads hide throughout a ten-answer round and return with correct score and timing (3.2s)
+  ✓  10 [mobile] › tests/browser/downloads.spec.ts:142:1 › downloads hide throughout a ten-answer round and return with correct score and timing (2.2s)
+
+  10 passed (6.0s)

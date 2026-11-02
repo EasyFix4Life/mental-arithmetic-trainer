@@ -1,0 +1,5 @@
+{
+  "markerPersistedBeforeUpgrade": true,
+  "markerPreservedAcrossUpgrade": true,
+  "limit": "One cold-relaunch control; no further persistence investigation in this release."
+}

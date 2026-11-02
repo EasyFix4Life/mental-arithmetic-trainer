@@ -1,0 +1,143 @@
+{
+  "version": "1.1.3",
+  "build": "4",
+  "date": "2026-11-02",
+  "toolchain": {
+    "application": "/Applications/Xcode-beta.app",
+    "version": "Xcode 27.0 beta",
+    "build": "27A5228h"
+  },
+  "public112Findings": "Anonymous public 1.1.2 iOS downloads match the previously verified package hashes. The actual downloaded simulator Release passed all four Learn categories, switching M1/M3 to A2, and forty answers across four complete Practice rounds. The reported Android issue was not reproduced on native iOS.",
+  "publicDownloadsReport": "verification/release-fix-ios-public-downloads.json",
+  "actualPackagedReleaseAudits": {
+    "public112": {
+      "version": "1.1.2",
+      "build": "3",
+      "passedChecks": 229,
+      "binaryUnchanged": true,
+      "report": "verification/release-fix-ios-public-1.1.2.json"
+    },
+    "iphone113": {
+      "version": "1.1.3",
+      "build": "4",
+      "passedChecks": 230,
+      "binaryUnchanged": true,
+      "report": "verification/release-fix-ios-1.1.3-iphone-release.json"
+    },
+    "ipad113": {
+      "version": "1.1.3",
+      "build": "4",
+      "passedChecks": 230,
+      "binaryUnchanged": true,
+      "report": "verification/release-fix-ios-1.1.3-ipad-release.json"
+    }
+  },
+  "auditMethod": "Separate simulator-only dylib drives the packaged Release app UIKit controls and text-field delegates. Downloaded and installed executable hashes are equal; the dylib is not included in either delivered Release app.",
+  "visibleVersionLocation": "Existing Privacy sheet: Version 1.1.3 (build 4)",
+  "availableLessons": [
+    "multiplication-1",
+    "addition-2",
+    "multiplication-2",
+    "multiplication-3"
+  ],
+  "defaultLearn": "addition-2",
+  "defaultPractice": {
+    "operation": "addition",
+    "digitCount": 2
+  },
+  "coreTests": {
+    "passed": 35,
+    "failed": 0,
+    "report": "verification/release-fix-ios-core-tests.txt"
+  },
+  "debugUIKit": {
+    "iphone27": {
+      "passed": 8,
+      "total": 8,
+      "skipped": 0,
+      "report": "verification/release-fix-ios-iphone-27.json"
+    },
+    "ipad26_5": {
+      "passed": 7,
+      "total": 8,
+      "skipped": 1,
+      "skipReason": "The simulator did not apply the programmatic landscape geometry request.",
+      "report": "verification/release-fix-ios-ipad-26.json"
+    }
+  },
+  "builds": {
+    "debugSimulator": "passed",
+    "releaseSimulator": "passed",
+    "unsignedDeviceArchive": "passed"
+  },
+  "releaseBinaries": [
+    {
+      "kind": "simulator",
+      "version": "1.1.3",
+      "build": "4",
+      "minimumOS": "17.0",
+      "families": [
+        1,
+        2
+      ],
+      "architectures": "Architectures in the fat file: /tmp/mental-arithmetic-ios-addition-options/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/MentalArithmetic are: x86_64 arm64",
+      "debugHarnessAbsent": true,
+      "externalAuditLibraryAbsent": true,
+      "removedLessonTitlesAbsent": true,
+      "signatureDirectoryPresent": false
+    },
+    {
+      "kind": "device",
+      "version": "1.1.3",
+      "build": "4",
+      "minimumOS": "17.0",
+      "families": [
+        1,
+        2
+      ],
+      "architectures": "Non-fat file: /tmp/mental-arithmetic-ios-addition-options/Mental-Arithmetic-1.1.3-iOS-unsigned.xcarchive/Products/Applications/MentalArithmetic.app/MentalArithmetic is architecture: arm64",
+      "debugHarnessAbsent": true,
+      "externalAuditLibraryAbsent": true,
+      "removedLessonTitlesAbsent": true,
+      "signatureDirectoryPresent": false
+    }
+  ],
+  "sourceFilesVerifiedAgainstMirror": 26,
+  "sourceManifest": "verification/release-fix-ios-native-sources.json",
+  "screenshots": {
+    "raw": 16,
+    "opaqueUploadCopies": 16,
+    "directories": [
+      "ios/AppStore/Screenshots/1.1.3-iPhone-27-beta",
+      "ios/AppStore/Screenshots/1.1.3-iPad-26.5"
+    ],
+    "validation": "PNG CRCs, decompression and dimensions validated; each RGB pixel preserved while unused opaque alpha is removed. Privacy version screenshot visually reviewed on both devices."
+  },
+  "submissionFiles": 47,
+  "artifacts": [
+    {
+      "file": "Mental-Arithmetic-1.1.3-iOS-Simulator-app.zip",
+      "bytes": 309339,
+      "sha256": "f0322fc6a63a60d9b3d136a552afa4ef06736ccde4accfba7b3b12ba942a7447",
+      "copiesIdentical": true
+    },
+    {
+      "file": "Mental-Arithmetic-1.1.3-iOS-unsigned-archive.zip",
+      "bytes": 817597,
+      "sha256": "0c0c104d11b2ca646b9c6815c251313eef5c95924c214ccf1a1cb0850e33c497",
+      "copiesIdentical": true
+    },
+    {
+      "file": "Mental-Arithmetic-1.1.3-iOS-submission-files.zip",
+      "bytes": 5324930,
+      "sha256": "4751afc84b4c1d25a41c4c0c333c32d7203ebc2cd1718a9d9c486df09c2e2811",
+      "copiesIdentical": true
+    }
+  ],
+  "limitations": [
+    "External audit uses real UIKit control actions and delegates, not physical keyboard or external XCUITest automation.",
+    "This headless installation has no Simulator.app GUI. Earlier Xcode-hosted test execution encountered a DTServiceHub connection failure.",
+    "Programmatic iPad landscape rotation was skipped. Physical iPhone/iPad validation remains unverified.",
+    "The device archive remains unsigned and is not an installable IPA. No App Store or TestFlight upload/signing was performed."
+  ]
+}

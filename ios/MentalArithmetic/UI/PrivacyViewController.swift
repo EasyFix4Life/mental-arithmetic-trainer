@@ -16,6 +16,8 @@ final class PrivacyViewController: UIViewController {
         text.isEditable = false
         text.isSelectable = true
         text.accessibilityIdentifier = "privacy-policy-text"
+        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "Unknown"
+        let build = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "Unknown"
         text.text = """
         Mental Arithmetic works entirely on your device.
 
@@ -24,6 +26,8 @@ final class PrivacyViewController: UIViewController {
         Your current practice score and answer times stay in memory during the current session. They are not sent anywhere or saved as a history. They reset when the app process exits.
 
         The app does not collect personal data.
+
+        Version \(version) (build \(build))
         """
         view.addSubview(text)
         NSLayoutConstraint.activate([

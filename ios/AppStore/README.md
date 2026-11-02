@@ -1,6 +1,6 @@
 # App Store submission draft
 
-Updated locally for version **1.1.2, build 3** on 2 November 2026. No App Store Connect submission or public store publication has been made. These preparation files may be included in the owner-authorized GitHub repository. The owner has asked to prepare the app and submission files before enrolling in the Apple Developer Program.
+Updated locally for version **1.1.3, build 4** on 2 November 2026. No App Store Connect submission or public store publication has been made. These preparation files may be included in the owner-authorized GitHub repository. The owner has asked to prepare the app and submission files before enrolling in the Apple Developer Program.
 
 This is a native iPhone and iPad application. It contains local arithmetic generation, answer entry, timing, and lesson presentation; it does not load the website in a browser or require a server.
 
@@ -29,6 +29,8 @@ The historical screenshot folders contain raw native captures plus **`Upload/`**
 
 No purchase, subscription, advertising, account, cloud synchronization, social feed, or external lesson service is implemented. Do not claim these in the listing.
 
-Version 1.1.2 removes single- and three-digit addition from both Learn and Practice. Current simulator review assets are in the `Screenshots/1.1.2-*` folders, with matching `verification/addition-options-ios-*` reports. Only the 1.1.2 screenshot folders are included in the current submission-files ZIP; earlier folders remain historical evidence. These files are prepared for review and have not been uploaded.
+Version 1.1.2 removes single- and three-digit addition from both Learn and Practice. Current simulator review assets are in the `Screenshots/1.1.3-*` folders, with matching `verification/addition-options-ios-*` reports. Only the 1.1.3 screenshot folders are included in the current submission-files ZIP; earlier folders remain historical evidence. These files are prepared for review and have not been uploaded.
 
 For 1.1.2, 35 portable Swift core tests pass. The DEBUG UIKit review passes 8/8 iPhone scenarios and 7/8 iPad scenarios; iPad programmatic rotation is explicitly skipped. Test targets compile, but Xcode-hosted execution remains blocked by the local DTServiceHub connection failure. See `../../verification/addition-options-ios-summary.json` and `../../IOS_APP.md` for current evidence and limits.
+
+For the 1.1.3 refresh, the actual public 1.1.2 simulator package passed an independent audit before rebuilding. Current packaged Release verification and public-download findings are recorded in `../../verification/release-fix-ios-summary.json`. The existing Privacy sheet displays the installed version and build. The external simulator-only audit library drives packaged UIKit controls without changing the app executable; it is not physical keyboard or external XCUITest input.

@@ -1,0 +1,125 @@
+Building the offline Android release and running Android lint.
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.4.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+w: file:///private/tmp/mental-arithmetic-android-upgrade-113/build/android/app/build.gradle.kts:53:41: 'fun srcDir(srcDir: Any): Any' is deprecated. Use `directories` mutable set instead.
+
+> Task :app:bundleWebAssets
+> Task :app:preBuild
+> Task :app:preReleaseBuild
+> Task :app:mergeReleaseJniLibFolders
+> Task :app:mergeReleaseNativeLibs NO-SOURCE
+> Task :app:stripReleaseDebugSymbols NO-SOURCE
+> Task :app:extractReleaseNativeSymbolTables NO-SOURCE
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:checkReleaseDuplicateClasses
+> Task :app:generateReleaseResources
+> Task :app:packageReleaseResources
+> Task :app:processReleaseNavigationResources
+> Task :app:javaPreCompileRelease
+> Task :app:checkReleaseAarMetadata
+> Task :app:mapReleaseSourceSetPaths
+> Task :app:compileReleaseNavigationResources
+> Task :app:parseReleaseLocalResources
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksRelease
+> Task :app:generateReleaseRFile
+
+> Task :app:processReleaseMainManifest
+/private/tmp/mental-arithmetic-android-upgrade-113/build/android/app/src/main/AndroidManifest.xml:7:9-42 Warning:
+	android:extractNativeLibs should not be specified in this source AndroidManifest.xml file. See https://d.android.com/guide/topics/manifest/application-element#extractNativeLibs for more information.
+The AGP Upgrade Assistant can remove the attribute from the AndroidManifest.xml file and update the build file accordingly. See https://d.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :app:compileReleaseKotlin NO-SOURCE
+> Task :app:mergeReleaseResources
+
+> Task :app:compileReleaseJavaWithJavac
+Note: /private/tmp/mental-arithmetic-android-upgrade-113/build/android/app/src/main/java/local/jeff/mentalarithmetic/MainActivity.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :app:processReleaseManifest
+> Task :app:desugarReleaseFileDependencies
+> Task :app:mergeReleaseStartupProfile
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:mergeReleaseArtProfile
+> Task :app:mergeReleaseAssets
+> Task :app:compressReleaseAssets
+> Task :app:extractReleaseVersionControlInfo
+> Task :app:extractProguardFiles
+> Task :app:generateReleaseLintVitalReportModel
+> Task :app:processReleaseJavaRes NO-SOURCE
+> Task :app:collectReleaseDependencies
+> Task :app:sdkReleaseDependencyData
+> Task :app:validateSigningRelease
+> Task :app:mergeReleaseJavaResource
+> Task :app:writeReleaseAppMetadata
+> Task :app:writeReleaseSigningConfigVersions
+> Task :app:preReleaseAndroidTestBuild SKIPPED
+> Task :app:generateReleaseLintReportModel
+> Task :app:preReleaseUnitTestBuild
+> Task :app:generateReleaseAndroidTestResources
+> Task :app:packageReleaseAndroidTestResources
+> Task :app:processReleaseAndroidTestNavigationResources
+> Task :app:generateReleaseAndroidTestAssets UP-TO-DATE
+> Task :app:javaPreCompileReleaseAndroidTest
+> Task :app:mergeReleaseAndroidTestAssets
+> Task :app:parseReleaseAndroidTestLocalResources
+> Task :app:compressReleaseAndroidTestAssets
+> Task :app:checkReleaseAndroidTestDuplicateClasses
+> Task :app:checkReleaseAndroidTestAarMetadata
+> Task :app:mapReleaseAndroidTestSourceSetPaths
+> Task :app:generateReleaseAndroidTestRFile
+> Task :app:compileReleaseAndroidTestNavigationResources
+> Task :app:mergeReleaseAndroidTestResources
+> Task :app:processReleaseAndroidTestManifest
+> Task :app:desugarReleaseAndroidTestFileDependencies
+> Task :app:mergeExtDexReleaseAndroidTest
+> Task :app:mergeReleaseAndroidTestJniLibFolders
+> Task :app:mergeReleaseAndroidTestNativeLibs NO-SOURCE
+> Task :app:stripReleaseAndroidTestDebugSymbols NO-SOURCE
+> Task :app:validateSigningReleaseAndroidTest
+> Task :app:writeReleaseAndroidTestSigningConfigVersions
+> Task :app:processReleaseManifestForPackage
+> Task :app:processReleaseAndroidTestResources
+> Task :app:processReleaseResources
+> Task :app:mergeExtDexRelease
+> Task :app:dexBuilderRelease
+> Task :app:mergeReleaseGlobalSynthetics
+> Task :app:bundleReleaseClassesToCompileJar
+> Task :app:generateReleaseAndroidTestLintModel
+> Task :app:generateReleaseUnitTestLintModel
+> Task :app:optimizeReleaseResources
+> Task :app:compileReleaseAndroidTestKotlin NO-SOURCE
+> Task :app:compileReleaseAndroidTestJavaWithJavac
+> Task :app:mergeDexRelease
+> Task :app:dexBuilderReleaseAndroidTest
+> Task :app:compileReleaseArtProfile
+> Task :app:mergeReleaseAndroidTestGlobalSynthetics
+> Task :app:processReleaseAndroidTestJavaRes NO-SOURCE
+> Task :app:mergeReleaseAndroidTestJavaResource
+> Task :app:mergeDexReleaseAndroidTest
+> Task :app:packageReleaseAndroidTest
+> Task :app:createReleaseAndroidTestApkListingFileRedirect
+> Task :app:assembleReleaseAndroidTest
+> Task :app:lintAnalyzeReleaseAndroidTest
+> Task :app:lintAnalyzeReleaseUnitTest
+> Task :app:lintVitalAnalyzeRelease
+> Task :app:lintVitalReportRelease SKIPPED
+> Task :app:lintVitalRelease SKIPPED
+> Task :app:packageRelease
+> Task :app:createReleaseApkListingFileRedirect
+> Task :app:assembleRelease
+> Task :app:lintAnalyzeRelease
+
+> Task :app:lintReportRelease
+Wrote HTML report to file:///private/tmp/mental-arithmetic-android-upgrade-113/build/android/app/build/reports/lint-results-release.html
+
+> Task :app:lintRelease
+
+[Incubating] Problems report is available at: file:///private/tmp/mental-arithmetic-android-upgrade-113/build/android/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 13s
+79 actionable tasks: 79 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.4.1/userguide/configuration_cache_enabling.html
+Android APK: /private/tmp/mental-arithmetic-android-upgrade-113/build/release/Mental-Arithmetic-1.1.3-Android.apk

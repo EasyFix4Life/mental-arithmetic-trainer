@@ -68,6 +68,7 @@ def main() -> None:
         ("review-learn3", "05-three-digit-multiplication"),
         ("review-addition2", "06-two-digit-addition"),
         ("review-catalog", "07-learn-catalog"),
+        ("review-privacy", "08-version-and-privacy"),
     ]:
         native_result = scenario(fixture)
         target = args.output / f"{filename}.png"

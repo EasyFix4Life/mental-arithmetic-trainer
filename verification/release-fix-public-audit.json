@@ -1,0 +1,183 @@
+{
+  "checkedAtUtc": "2026-11-02T20:14:47.097Z",
+  "url": "https://whoami.school/",
+  "mainCommit": "0c6712a1c26f549c0617d54685998f221b4d98c4",
+  "latestRelease": "v1.1.2",
+  "initial": {
+    "operation": "addition",
+    "digits": "2",
+    "digitChoices": [
+      "2"
+    ],
+    "navText": "Learn\n      Practice\n      Download Apps",
+    "downloadLinks": [
+      {
+        "label": "Download macOS app (.dmg)",
+        "href": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-macOS-arm64.dmg"
+      },
+      {
+        "label": "macOS app ZIP alternative",
+        "href": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-macOS-arm64.zip"
+      },
+      {
+        "label": "Download Windows installer (.exe)",
+        "href": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-Windows-x64-Setup.exe"
+      },
+      {
+        "label": "Windows app ZIP alternative",
+        "href": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-Windows-x64.zip"
+      },
+      {
+        "label": "Download Android app (.apk)",
+        "href": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-Android.apk"
+      },
+      {
+        "label": "Download iOS unsigned Xcode archive",
+        "href": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-iOS-unsigned-archive.zip"
+      },
+      {
+        "label": "Download iOS simulator app",
+        "href": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-iOS-Simulator-app.zip"
+      },
+      {
+        "label": "Download iOS source (all-platforms ZIP)",
+        "href": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-all-platforms-source.zip"
+      },
+      {
+        "label": "Download Web files (.zip)",
+        "href": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-Web.zip"
+      },
+      {
+        "label": "Download all-platforms source (.zip)",
+        "href": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-all-platforms-source.zip"
+      },
+      {
+        "label": "View all releases",
+        "href": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases"
+      }
+    ]
+  },
+  "afterMultiplication3ToAddition": "2",
+  "lessons": [
+    {
+      "id": "multiplication-1",
+      "title": "Single-digit multiplication"
+    },
+    {
+      "id": "addition-2",
+      "title": "Two-digit addition"
+    },
+    {
+      "id": "multiplication-2",
+      "title": "Two-digit multiplication"
+    },
+    {
+      "id": "multiplication-3",
+      "title": "Three-digit multiplication"
+    }
+  ],
+  "liveJs": {
+    "filename": "index-CIxu1Qxd.js",
+    "bytes": 37936,
+    "sha256": "efdd6e5fea5af0461e14c2836ca340cc0c43bbc87c498a12e55070177214d48f"
+  },
+  "htmlHeaders": "HTTP/2 200 \r\ndate: Mon, 02 Nov 2026 20:14:19 GMT\r\ncontent-type: text/html; charset=utf-8\r\nx-content-type-options: nosniff\r\nreport-to: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=29kQ8h1t9QiZMGXF6WH%2F2yU6bOkgPNsyHdy54%2FOea6kHmmkEspvb2hshQqI2zmLbPr8pzhcuIr9REYfWCL%2B%2BZATDzUBdKH08eQOE4okPdKb9XE6KACKS3P8w1nRYLUAeQujGYhB%2F6a72B6Rh\"}]}\r\nnel: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}\r\naccess-control-allow-origin: *\r\ncache-control: public, max-age=0, must-revalidate\r\nreferrer-policy: strict-origin-when-cross-origin\r\nserver: cloudflare\r\ncf-cache-status: DYNAMIC\r\ncf-ray: a545ce0d2aa8bcec-ATL\r\nalt-svc: h3=\":443\"; ma=86400\r\n\r\n",
+  "javascriptHeaders": "HTTP/2 200 \r\ndate: Mon, 02 Nov 2026 20:14:35 GMT\r\ncontent-type: application/javascript\r\ncontent-length: 37936\r\nx-content-type-options: nosniff\r\nreport-to: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=xTBaSbxJxSCX5h%2F5R3Hw5bOKro2YogG2CpFMWbeO%2Bn9juSO6yCHIT5JRV0iKyWrBIXstkGyOqVk7SE6f3%2FbZNzqEz35bt%2FPb%2Bjb%2Fq3r%2B%2FakgjsPowsgI5gwmZysLEQQrb3INvYeg2Ft27020\"}]}\r\nnel: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}\r\naccess-control-allow-origin: *\r\ncache-control: public, max-age=14400, must-revalidate\r\netag: \"4832a593ea9d644183b1f09e0b4666c0\"\r\nreferrer-policy: strict-origin-when-cross-origin\r\nserver: cloudflare\r\naccept-ranges: bytes\r\ncf-cache-status: REVALIDATED\r\ncf-ray: a545ce6dea7b4bd0-ATL\r\nalt-svc: h3=\":443\"; ma=86400\r\n\r\n",
+  "release": {
+    "tag_name": "v1.1.2",
+    "target_commitish": "main",
+    "published_at": "2026-11-02T18:52:59Z",
+    "updated_at": "2026-11-02T18:52:59Z",
+    "html_url": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/tag/v1.1.2",
+    "assets": [
+      {
+        "name": "Mental-Arithmetic-1.1.2-all-platforms-source.zip",
+        "bytes": 18986888,
+        "digest": "sha256:038555134f69803c8cdcf09eca59d8ce9cb7709103f623204361fd343f9a4520",
+        "updatedAt": "2026-11-02T18:49:37Z",
+        "url": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-all-platforms-source.zip"
+      },
+      {
+        "name": "Mental-Arithmetic-1.1.2-Android.apk",
+        "bytes": 665996,
+        "digest": "sha256:276b4903a4c869fae6357b014b9eb59f44475923c0d8c3361604902704bff507",
+        "updatedAt": "2026-11-02T18:47:44Z",
+        "url": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-Android.apk"
+      },
+      {
+        "name": "Mental-Arithmetic-1.1.2-iOS-Simulator-app.zip",
+        "bytes": 308180,
+        "digest": "sha256:facbb8dedf911f25f8d17579387cd42da24c7da8a5534d3a6d51fdabc4a3bdb8",
+        "updatedAt": "2026-11-02T18:48:39Z",
+        "url": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-iOS-Simulator-app.zip"
+      },
+      {
+        "name": "Mental-Arithmetic-1.1.2-iOS-submission-files.zip",
+        "bytes": 4303402,
+        "digest": "sha256:ae95b1820b8e1f1c474f0e4e6df56d3a4a8623a9e44289ad491a4a5ee7a87f1b",
+        "updatedAt": "2026-11-02T18:48:41Z",
+        "url": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-iOS-submission-files.zip"
+      },
+      {
+        "name": "Mental-Arithmetic-1.1.2-iOS-unsigned-archive.zip",
+        "bytes": 816848,
+        "digest": "sha256:372cb670fa40162e8da51bfdeabcb9b7df365f3b74997e1c5e2fef4f6db7f678",
+        "updatedAt": "2026-11-02T18:48:39Z",
+        "url": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-iOS-unsigned-archive.zip"
+      },
+      {
+        "name": "Mental-Arithmetic-1.1.2-macOS-arm64.dmg",
+        "bytes": 119192764,
+        "digest": "sha256:711c4481fb4cd7514fdf353bdeffd675b35cd1d91d9c87d7ba61bc9edf9655d5",
+        "updatedAt": "2026-11-02T18:45:48Z",
+        "url": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-macOS-arm64.dmg"
+      },
+      {
+        "name": "Mental-Arithmetic-1.1.2-macOS-arm64.zip",
+        "bytes": 115783224,
+        "digest": "sha256:6c182a05e3525500ec393560c9884a848b617086ccee1c0f17e2e1a651c8c310",
+        "updatedAt": "2026-11-02T18:46:32Z",
+        "url": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-macOS-arm64.zip"
+      },
+      {
+        "name": "Mental-Arithmetic-1.1.2-SHA256.txt",
+        "bytes": 1087,
+        "digest": "sha256:0916513e663af262c2dae792375bdda3a29388900777422d0aaddb74eeb485cf",
+        "updatedAt": "2026-11-02T18:49:37Z",
+        "url": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-SHA256.txt"
+      },
+      {
+        "name": "Mental-Arithmetic-1.1.2-Web.zip",
+        "bytes": 14609,
+        "digest": "sha256:30646e05f977ee926e96e3c08bf7c4972ec0c7415af7979be60809bb51b0a3d8",
+        "updatedAt": "2026-11-02T18:47:43Z",
+        "url": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-Web.zip"
+      },
+      {
+        "name": "Mental-Arithmetic-1.1.2-Windows-x64-Setup.exe",
+        "bytes": 121274751,
+        "digest": "sha256:728a112a38d5621050dd14b045b48dd7fb4ae98c99b8cbf4db9b5b2d86ca44f0",
+        "updatedAt": "2026-11-02T18:47:02Z",
+        "url": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-Windows-x64-Setup.exe"
+      },
+      {
+        "name": "Mental-Arithmetic-1.1.2-Windows-x64.zip",
+        "bytes": 153162461,
+        "digest": "sha256:8013c5235a2c02dbb47c3ed04cdfc8787e2a0956a7d1f2096b45e55527ed9064",
+        "updatedAt": "2026-11-02T18:47:43Z",
+        "url": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.2/Mental-Arithmetic-1.1.2-Windows-x64.zip"
+      }
+    ]
+  },
+  "publicWebArchive": {
+    "bytes": 14609,
+    "sha256": "30646e05f977ee926e96e3c08bf7c4972ec0c7415af7979be60809bb51b0a3d8",
+    "javascriptMatchesLiveWebsite": true,
+    "files": [
+      "dist/assets/index-CIxu1Qxd.js",
+      "dist/assets/index-DtQOxB5b.css",
+      "dist/index.html"
+    ]
+  },
+  "finding": "The current public website and Web archive already offer only two-digit addition and four Learn categories. No website arithmetic-option regression was reproduced. A previously loaded page can retain earlier code and pinned download URLs; this is a possible stale-page route, not an established cause of the reported Android behavior."
+}

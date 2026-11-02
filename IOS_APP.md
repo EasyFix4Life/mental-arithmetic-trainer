@@ -1,6 +1,6 @@
-# iPhone and iPad app — 1.1.2
+# iPhone and iPad app — 1.1.3
 
-**1.1.2 update:** single- and three-digit addition have been removed from Learn and Practice. Addition starts at two digits and offers only two digits. Multiplication retains one, two, and three digits. The **? Click Here to Learn How!** button, random examples, ten-problem rounds, and round timing are preserved. Current evidence uses `verification/addition-options-ios-*`; earlier reports are historical baselines.
+**1.1.3 release refresh:** Learn and Practice offer two-digit addition and single-, two-, or three-digit multiplication. The existing Privacy sheet now displays **Version 1.1.3 (build 4)** so an installed copy can be identified. Random examples, the teaching method, automatic answer submission, and round timing are preserved. Current evidence uses `verification/release-fix-ios-*`.
 
 The iOS app is a native Swift/UIKit application in `ios/MentalArithmetic.xcodeproj`. It uses Arial numerals, the existing sepia presentation, four instructional categories (two-digit addition and single-, two-, and three-digit multiplication) with random examples, stacked addition, and ten-question Practice with automatic submission and minimum/maximum/average timing. It runs offline and contains no WebView, third-party SDK, account, analytics or network service. The minimum deployment target is iOS/iPadOS 17.0.
 
@@ -25,12 +25,12 @@ The first command packages a Release simulator `.app`; the second packages an **
 
 ## Supplied files
 
-- `Mental-Arithmetic-1.1.2-iOS-unsigned-archive.zip`: successful generic iOS Release archive, arm64, including the native app and archive metadata. Extract it before opening the `.xcarchive` in Xcode Organizer. This is **not a signed IPA** and cannot be installed directly on a physical iPhone.
-- `Mental-Arithmetic-1.1.2-iOS-Simulator-app.zip`: Release simulator app, for an Apple silicon Mac with an appropriate simulator runtime. This cannot be installed on a physical iPhone.
-- `Mental-Arithmetic-1.1.2-all-platforms-source.zip`: complete editable source, Xcode project, original supplied requirements, tests, guides and submission drafts.
-- `Mental-Arithmetic-1.1.2-iOS-submission-files.zip`: prepared App Store metadata, privacy/rating drafts, reviewer notes, icon and genuine simulator screenshots where included in the screenshot manifest.
+- `Mental-Arithmetic-1.1.3-iOS-unsigned-archive.zip`: successful generic iOS Release archive, arm64, including the native app and archive metadata. Extract it before opening the `.xcarchive` in Xcode Organizer. This is **not a signed IPA** and cannot be installed directly on a physical iPhone.
+- `Mental-Arithmetic-1.1.3-iOS-Simulator-app.zip`: Release simulator app, for an Apple silicon Mac with an appropriate simulator runtime. This cannot be installed on a physical iPhone.
+- `Mental-Arithmetic-1.1.3-all-platforms-source.zip`: complete editable source, Xcode project, original supplied requirements, tests, guides and submission drafts.
+- `Mental-Arithmetic-1.1.3-iOS-submission-files.zip`: prepared App Store metadata, privacy/rating drafts, reviewer notes, icon and genuine simulator screenshots where included in the screenshot manifest.
 
-The device archive has no development team or signing identity assigned. The provisional bundle identifier is `local.jeff.mentalarithmetic`; replace it with an identifier registered to your team before distribution. Version is **1.1.2**, build **3**.
+The device archive has no development team or signing identity assigned. The provisional bundle identifier is `local.jeff.mentalarithmetic`; replace it with an identifier registered to your team before distribution. Version is **1.1.3**, build **4**.
 
 ## Tests
 
@@ -58,7 +58,18 @@ You chose to prepare the app before Apple Developer enrollment. To complete a si
 
 Sources for the eventual submission workflow: [Apple App Store Connect release notes](https://developer.apple.com/help/app-store-connect/release-notes/), [Apple submitting guide](https://developer.apple.com/app-store/submitting/), and [App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/).
 
-## Version 1.1.2 verification
+## Version 1.1.3 artifact verification
+
+The actual public 1.1.2 iOS simulator download was audited before rebuilding. It passed 229 assertions covering all four Learn categories, operation switching, random examples, instructions, final answers, and complete ten-question rounds for each of the four Practice configurations. Its downloaded and installed executable hashes matched. The public device archive also contains version 1.1.2, build 3, and excludes the removed addition lesson titles. This audit did not reproduce the reported Android issue on native iOS.
+
+Version 1.1.3 is built using Xcode beta and includes the installed version in Privacy. The verification tool `ios/AppStore/run_release_artifact_audit.py` tests an extracted Release simulator ZIP through a separate simulator-only library. It drives the packaged app's real UIKit controls and text-field delegates, verifies all four Practice configurations and lessons, and checks that the app executable remains unchanged. It is separate from physical keyboard input and external XCUITest automation. Current results are in `verification/release-fix-ios-summary.json` and the matching per-device reports.
+
+The device archive is unsigned and cannot be installed directly on a physical iPhone. Physical iPhone/iPad validation and signed App Store/TestFlight distribution remain unverified. Earlier Xcode-hosted test execution encountered a local DTServiceHub connection failure; the packaged Release verification uses the separate route described above.
+
+Current screenshot folders are `ios/AppStore/Screenshots/1.1.3-iPhone-27-beta/` and `ios/AppStore/Screenshots/1.1.3-iPad-26.5/`. They include setup, the four-category Learn catalog, and Privacy with the version marker. Their `Upload/` copies preserve RGB pixels and dimensions while removing unused opaque alpha. Only these current folders are included in the 1.1.3 submission-files ZIP.
+
+## Historical version 1.1.2 verification
+
 
 The current Foundation-only Swift suite passes **35 tests**. The DEBUG UIKit review passes **8 of 8 scenarios on iPhone (iOS 27 beta)** and **7 of 8 on iPad (iPadOS 26.5)**, with the programmatic iPad rotation scenario explicitly skipped. The cases verify the four available categories, the default two-digit addition selection, switching from one- or three-digit multiplication back to two-digit addition, random examples, the existing carry walkthroughs, automatic submission, scoring, and round timing. The iOS random-example menu now uses the selected operation’s symbol.
 

@@ -1,0 +1,59 @@
+
+Success
+
+Performing Streamed Install
+Success
+
+Performing Streamed Install
+Success
+
+
+PASS actual installed lesson and practice options
+
+Android release acceptance: 1 passed, 0 failed.
+
+
+/sdcard/Android/data/local.jeff.mentalarithmetic/files/verification/./: 3 files pulled, 0 skipped. 13.7 MB/s (176277 bytes in 0.012s)
+
+{"phase": "public112-seeded-for113", "version": "1.1.2", "passed": 1, "cases": [{"name": "actual installed lesson and practice options", "status": "passed", "durationMs": 6536, "details": {"initial": {"operation": "addition", "digits": "2", "options": ["2"]}, "lessons": [{"id": "multiplication-1", "title": "Single-digit multiplication"}, {"id": "addition-2", "title": "Two-digit addition"}, {"id": "multiplication-2", "title": "Two-digit multiplication"}, {"id": "multiplication-3", "title": "Three-digit multiplication"}], "addition": ["2"], "multiplication": ["1", "2", "3"], "document": "https://appassets.androidplatform.net/index.html", "scripts": ["https://appassets.androidplatform.net/assets/index-CIxu1Qxd.js"], "visibleVersion": null, "upgradeMarker": "preserved-from-public-1.1.2", "cacheMode": 2}}]}
+
+
+PASS actual installed lesson and practice options
+
+Android release acceptance: 1 passed, 0 failed.
+
+
+/sdcard/Android/data/local.jeff.mentalarithmetic/files/verification/./: 3 files pulled, 0 skipped. 37.4 MB/s (177735 bytes in 0.005s)
+
+{"phase": "public112-marker-cold-relaunch", "version": "1.1.2", "passed": 1, "cases": [{"name": "actual installed lesson and practice options", "status": "passed", "durationMs": 524, "details": {"initial": {"operation": "addition", "digits": "2", "options": ["2"]}, "lessons": [{"id": "multiplication-1", "title": "Single-digit multiplication"}, {"id": "addition-2", "title": "Two-digit addition"}, {"id": "multiplication-2", "title": "Two-digit multiplication"}, {"id": "multiplication-3", "title": "Three-digit multiplication"}], "addition": ["2"], "multiplication": ["1", "2", "3"], "document": "https://appassets.androidplatform.net/index.html", "scripts": ["https://appassets.androidplatform.net/assets/index-CIxu1Qxd.js"], "visibleVersion": null, "upgradeMarker": "preserved-from-public-1.1.2", "cacheMode": 2}}]}
+
+Performing Streamed Install
+Success
+
+
+PASS actual installed lesson and practice options
+
+Android release acceptance: 1 passed, 0 failed.
+
+
+/sdcard/Android/data/local.jeff.mentalarithmetic/files/verification/./: 3 files pulled, 0 skipped. 10.5 MB/s (188517 bytes in 0.017s)
+
+{"phase": "built113-upgraded-from112", "version": "1.1.3", "passed": 1, "cases": [{"name": "actual installed lesson and practice options", "status": "passed", "durationMs": 539, "details": {"initial": {"operation": "addition", "digits": "2", "options": ["2"]}, "lessons": [{"id": "multiplication-1", "title": "Single-digit multiplication"}, {"id": "addition-2", "title": "Two-digit addition"}, {"id": "multiplication-2", "title": "Two-digit multiplication"}, {"id": "multiplication-3", "title": "Three-digit multiplication"}], "addition": ["2"], "multiplication": ["1", "2", "3"], "document": "https://appassets.androidplatform.net/index.html", "scripts": ["https://appassets.androidplatform.net/assets/index-BgzoV_mc.js"], "visibleVersion": "Version 1.1.3", "upgradeMarker": "preserved-from-public-1.1.2", "cacheMode": 2}}]}
+
+
+PASS offline release shell, presentation and browser security
+PASS prominent learn button label, bounds and native tap
+PASS four available random lessons, excluded addition lengths and complete instructions
+PASS vertical addition instructions, carries and final answers
+PASS random two-digit trace, confirmed carries and final answer
+PASS three-digit multiplication groups and whole-value carries
+PASS native numeric keyboard, visible answer and rotation preservation
+PASS ten accepted answers, wrong feedback and exact timing summary
+PASS four available practice configurations and addition length guard
+
+Android release acceptance: 9 passed, 0 failed.
+
+
+/sdcard/Android/data/local.jeff.mentalarithmetic/files/verification/./: 8 files pulled, 0 skipped. 44.1 MB/s (802729 bytes in 0.017s)
+
+{"phase": "built113-native-acceptance", "version": "1.1.3", "passed": 9, "cases": [{"name": "offline release shell, presentation and browser security", "status": "passed", "durationMs": 271, "details": {"url": "https://appassets.androidplatform.net/index.html", "blockNetworkLoads": true, "allowFileAccess": false, "allowContentAccess": false, "javascript": true, "cacheMode": 2}}, {"name": "prominent learn button label, bounds and native tap", "status": "passed", "durationMs": 294, "details": {"label": "?\n            Click Here to Learn How!", "accessibleLabel": "Click Here to Learn How!", "width": 379.4285888671875, "height": 64, "viewportWidth": 411}}, {"name": "four available random lessons, excluded addition lengths and complete instructions", "status": "passed", "durationMs": 13, "details": {"lessonCategories": 4, "excludedLessons": ["addition-1", "addition-3"], "randomRequestsPerCategory": 4, "completeWalkthroughs": 4, "verticalAdditionCategories": 1}}, {"name": "vertical addition instructions, carries and final answers", "status": "passed", "durationMs": 271, "details": {"twoDigit": {"operands": [58, 67], "sum": 125}, "allAdditionVertical": true}}, {"name": "random two-digit trace, confirmed carries and final answer", "status": "passed", "durationMs": 267, "details": {"randomProduct": 8526, "confirmedProduct": 324, "stages": ["First", "Inside", "Outside", "Last", "Final answer"]}}, {"name": "three-digit multiplication groups and whole-value carries", "status": "passed", "durationMs": 264, "details": {"operands": [123, 456], "groupResults": [4, 13, 28, 27, 18], "resolved": [28, 30, 16, 5], "product": 56088}}, {"name": "native numeric keyboard, visible answer and rotation preservation", "status": "passed", "durationMs": 1937, "details": {"answerBottom": 510.09524154663086, "liveBottom": 497.44642639160156, "viewportBottom": 526.09521484375, "viewportHeight": 526.09521484375, "problemId": "1:0", "nativeInputType": 2, "softwareKeyboardVisible": true, "rotationPreservedState": true, "nativeKeyEventRoundScore": "10 / 10"}}, {"name": "ten accepted answers, wrong feedback and exact timing summary", "status": "passed", "durationMs": 275, "details": {"score": "9 / 10", "minimum": "0.2 s", "maximum": "1.4 s", "average": "1.2 s", "durations": [220, 530, 1499, 1499, 1499, 1499, 1499, 1499, 1499, 1499]}}, {"name": "four available practice configurations and addition length guard", "status": "passed", "durationMs": 20, "details": {"configurations": 4, "acceptedAnswers": 40, "allScores": "10 / 10", "additionOptions": [2], "multiplicationOptions": [1, 2, 3], "unsupportedSwitchesResetToTwo": true}}]}

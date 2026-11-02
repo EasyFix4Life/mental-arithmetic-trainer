@@ -1,0 +1,22 @@
+{
+  "downloadedAnonymously": true,
+  "tag": "v1.1.2",
+  "assets": [
+    {
+      "platform": "macOS",
+      "version": "1.1.2",
+      "jsName": "assets/index-CIxu1Qxd.js",
+      "jsBytes": 37936,
+      "jsSha256": "efdd6e5fea5af0461e14c2836ca340cc0c43bbc87c498a12e55070177214d48f",
+      "matchesVerified112Production": true
+    },
+    {
+      "platform": "Windows",
+      "version": "1.1.2",
+      "jsName": "assets/index-CIxu1Qxd.js",
+      "jsBytes": 37936,
+      "jsSha256": "efdd6e5fea5af0461e14c2836ca340cc0c43bbc87c498a12e55070177214d48f",
+      "matchesVerified112Production": true
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "createdAt": "2026-11-02T20:18:20.389Z",
+  "applicationId": "local.jeff.mentalarithmetic",
+  "version": "1.1.3",
+  "minSdk": 26,
+  "targetSdk": 37,
+  "compileSdk": 37,
+  "signingMode": "persistent-local-release-keystore",
+  "keystorePath": "/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/work/android-signing/mental-arithmetic.p12",
+  "javaHome": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-help-build-a4nzbd4n/fresh-jdk/jdk-21.0.13+9/Contents/Home",
+  "androidHome": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-addition-options-112-j1wm45u3/fresh-sdk",
+  "gradleBin": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-help-build-a4nzbd4n/fresh-gradle/gradle-9.4.1/bin/gradle",
+  "artifact": "/private/tmp/mental-arithmetic-android-upgrade-113/build/release/Mental-Arithmetic-1.1.3-Android.apk",
+  "builtApk": "/private/tmp/mental-arithmetic-android-upgrade-113/build/android/app/build/outputs/apk/release/app-release.apk",
+  "testApk": "/private/tmp/mental-arithmetic-android-upgrade-113/build/android/app/build/outputs/apk/androidTest/release/app-release-androidTest.apk"
+}

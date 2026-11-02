@@ -78,6 +78,7 @@ async function startRound(window: Page, operation: Operation, digits: DigitCount
 
 test('the native shell loads offline production assets with an isolated renderer and faithful layout', async ({ desktop, window }) => {
   expect(window.url()).toBe(appUrl);
+  await expect(window.locator('#app-version')).toHaveText('Version 1.1.3');
   expect(await desktop.evaluate(({ app }) => app.isPackaged)).toBe(Boolean(process.env.DESKTOP_EXECUTABLE));
   const windows = await desktop.evaluate(({ BrowserWindow }) => BrowserWindow.getAllWindows().map((nativeWindow) => {
     // Electron exposes this read-only runtime inspection API internally; its
