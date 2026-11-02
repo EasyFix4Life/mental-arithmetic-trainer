@@ -63,7 +63,7 @@ Preserve unrelated DNS records. Do not transfer domain registration to Cloudflar
 
 ## HTTPS
 
-The configured minimum TLS version is **1.2**, with TLS **1.3 enabled**.
+The configured SSL/TLS mode is **Full (Strict)**. The minimum TLS version is **1.2**, with TLS **1.3 enabled**.
 
 After nameserver propagation, verify Cloudflare activation, the Pages custom-domain status, and certificate provisioning. Enable and verify **Always Use HTTPS** when available. Confirm that HTTP requests reach HTTPS, both HTTPS hostnames present valid certificates, and `www` redirects to the apex while preserving paths and query strings. Update the activation status above only after these checks pass.
 
