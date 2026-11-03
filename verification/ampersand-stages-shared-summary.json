@@ -1,0 +1,387 @@
+{
+  "version": "1.2.0-preview.3",
+  "checkedAt": "2026-11-03T15:53:33.478758+00:00",
+  "baselineCommit": "0db325764a191e8e07d130e52efebcbb467d3239",
+  "runner": "/tmp/mental-arithmetic-ampersand-stages-preview",
+  "previewUrl": "http://127.0.0.1:5203/",
+  "unitPassed": 219,
+  "unitFailed": 0,
+  "browserStats": {
+    "startTime": "2026-11-03T15:52:16.089Z",
+    "duration": 24364.262,
+    "expected": 84,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "sourceMatchingFiles": 46,
+  "sourceHashes": [
+    {
+      "path": "src/answerPolicy.ts",
+      "sha256": "9a98d597b0f7baa7264b387f52ef8a1f5e80892e5c69446d2dda602f77dd89c1",
+      "matches": true
+    },
+    {
+      "path": "src/availableOptions.ts",
+      "sha256": "2fe4df4c59cc81e13bda9fd3e7e2b087bef26a1d2a7761461bc07addec11f038",
+      "matches": true
+    },
+    {
+      "path": "src/designTokens.css",
+      "sha256": "8516544a0b49a81985f6a9cab0524aab2886f772bd56114930a8b93ed9a0bb23",
+      "matches": true
+    },
+    {
+      "path": "src/downloadsView.ts",
+      "sha256": "a38e45fedf3add1b56e0a7b5c76a0ecad6091376021c68a6596e054b7deb433a",
+      "matches": true
+    },
+    {
+      "path": "src/generateRound.ts",
+      "sha256": "7b8b13e15b58e870f27468e538181423c1fa38f73bd5cceb66eb17a3ca8a52cf",
+      "matches": true
+    },
+    {
+      "path": "src/inputPolicy.ts",
+      "sha256": "1c46093bcaf0345926a460bcf7663bc985d1f77ba1b0b0049cd5046428dda8e8",
+      "matches": true
+    },
+    {
+      "path": "src/learn/carryVisualizer.ts",
+      "sha256": "4d092ae458ad1663806badccdf459b4334196a9ff0cc370cd25bd5c7a329362d",
+      "matches": true
+    },
+    {
+      "path": "src/learn/confirmedMultiplicationExamples.ts",
+      "sha256": "3411c4e1e4daaf173d7f5ce047e9e103f89b849933352b58a448a869a5fa800c",
+      "matches": true
+    },
+    {
+      "path": "src/learn/instructionStepRenderer.ts",
+      "sha256": "cccb71e72d4b96329d54a4538d52d0ac1454bd0a0ab3f96fdfec3d65c92dfc80",
+      "matches": true
+    },
+    {
+      "path": "src/learn/learnView.ts",
+      "sha256": "648a18541d2bd76f1b7228c53593f85dab7cb952b4c4b7764a731f40ea381638",
+      "matches": true
+    },
+    {
+      "path": "src/learn/lessonCatalog.ts",
+      "sha256": "99dbb1613cd37158e9772f67f41501d838cc26196ed6b02c7bad89b3a97d4666",
+      "matches": true
+    },
+    {
+      "path": "src/learn/lessonTypes.ts",
+      "sha256": "4a473acf63bc53140d517547db4f27821f26bc16ad6d054015806571018a1f99",
+      "matches": true
+    },
+    {
+      "path": "src/learn/positionalInstructions.ts",
+      "sha256": "f1392466307d8f0aed130cbc9abf6146a90ce973f6184057881c58901d3a848f",
+      "matches": true
+    },
+    {
+      "path": "src/learn/randomExample.ts",
+      "sha256": "03e5b67986bacb5626b1903e85d4c8b7f2518f06e6807859feeba8adfeb3dcd5",
+      "matches": true
+    },
+    {
+      "path": "src/main.ts",
+      "sha256": "c13ffd799c096737fe002924b377369aed35dfe77f5f83f3053e752ecb5bf3d2",
+      "matches": true
+    },
+    {
+      "path": "src/practiceView.ts",
+      "sha256": "ce63b28229713f95826516785a780a55cf28e59c237f945db586ccf0fa0fb15a",
+      "matches": true
+    },
+    {
+      "path": "src/release.ts",
+      "sha256": "09a4a8afa5d5519ea60e1eb181071fce7466ab6738d74f6a534671724794050c",
+      "matches": true
+    },
+    {
+      "path": "src/roundController.ts",
+      "sha256": "2c6c26477b164bdf447e6ef9713ad16e1ad7572b066b016d913feb8cdabd2f67",
+      "matches": true
+    },
+    {
+      "path": "src/style.css",
+      "sha256": "712a8ebd969257ff7472872cf46d771c01d3910db6f6961f5765f55620b2453f",
+      "matches": true
+    },
+    {
+      "path": "src/timer.ts",
+      "sha256": "bfaeaa1c0497565f6d3ceeba0064d903f4559d5b70cb192f86556bb79e0d4b04",
+      "matches": true
+    },
+    {
+      "path": "src/types.ts",
+      "sha256": "f458432070b282817ece06654683477a9dfefee0201f64fd6f53cd14f2976b21",
+      "matches": true
+    },
+    {
+      "path": "src/view.ts",
+      "sha256": "860f5b14cf7e85a4b055d90a4e7cea025681012d311815519fa10bb5df7ea9d0",
+      "matches": true
+    },
+    {
+      "path": "tests/browser/downloads.spec.ts",
+      "sha256": "bdc215a8fcdc4a32c733713033e8c19d624f6e06b2136c9a4dec5a8bc76903da",
+      "matches": true
+    },
+    {
+      "path": "tests/browser/grouped-stages.spec.ts",
+      "sha256": "c760f325c167397148d402bfe8b4097e8478423c70734b84b3cd1330898614cb",
+      "matches": true
+    },
+    {
+      "path": "tests/browser/learn.spec.ts",
+      "sha256": "abdbb0a02c9314db92497e8a2b245e1fc0bc72a0611156d727a403d9cf3cbc4f",
+      "matches": true
+    },
+    {
+      "path": "tests/browser/scholarly-visuals.spec.ts",
+      "sha256": "d6553a8d4cb6a938f4a750b8b6f4d34fdbc6af1c1cb92bbece2d849f30ace27c",
+      "matches": true
+    },
+    {
+      "path": "tests/browser/trainer.spec.ts",
+      "sha256": "1ee7776f746ce63daec1876b0becb5c0e6be94d5965fef555cf272bea71961c9",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/answerPolicy.test.ts",
+      "sha256": "801639d8fc6a372e4ccbfa5b79711b5b355bdf5547f19adcae23816b440a96d7",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/availableOptions.test.ts",
+      "sha256": "ab1a0c6c7dbd2db8e4f681919be83fdf0d27f753a049be96f0d3ef67596f439e",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/generateRound.test.ts",
+      "sha256": "259a7249b786af942bbb6dad7e704a532b83c32f2c4e7656bfb24f7017697164",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/lessons.test.ts",
+      "sha256": "feca0cd6d8e695b8783425024df6983498c6be4799a86383a02c96d2b251f011",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/positionalInstructions.test.ts",
+      "sha256": "6e470832d45170a6ed2427e9768eded7bf5b76156eb70675445d992b3e48154f",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/randomExample.test.ts",
+      "sha256": "031365dab704831f77f8cad34027402ab08a55c28b3a6715c08d28905a2d37f1",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/release.test.ts",
+      "sha256": "42f3a523bfa272bb3eca8366b70e086c5f2a6a43e1d2ad4580c70a5b9b88df90",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/requirements.ts",
+      "sha256": "228ca3c0e2297f72e6ba974463c3a2e33ee005d2f1040b6e81a633dacf998da9",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/roundController.test.ts",
+      "sha256": "868363cc4696ac4182ff678e36b524ade46fa3e07a6eea8153a4b764a4920444",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/roundTiming.test.ts",
+      "sha256": "30470d873bc7d4ac85167358b39f0de725bcf79f5b4d067bad993560da7f1df4",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/timer.test.ts",
+      "sha256": "3d5098d8f768b5ca649cef00f657fbbfd939f6a4be1e1f2d095c1204c0df6f7f",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/visualTokens.test.ts",
+      "sha256": "e39fac4a5752b7229d02d2698c0c4c2091fd7dde91fa77e2edbb3a884ee4d1c7",
+      "matches": true
+    },
+    {
+      "path": "public/_headers",
+      "sha256": "3fdc8f8e6af5ff2d1a5424f8cff40a3c11c7deefec052bc2f377ea0fd7ca8ff1",
+      "matches": true
+    },
+    {
+      "path": "design/visual-tokens.json",
+      "sha256": "e528980cf72f0925920c2942f1eace9213eec735b9a7b2eac739c41d9a19afd9",
+      "matches": true
+    },
+    {
+      "path": "package.json",
+      "sha256": "c9a7a3d907e3327ef6ed5bbcb324642a19c73207550a9a48ba0f58cff4bc1014",
+      "matches": true
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "9dc5b91706430c56ab837a99b0e49d539264ffd800b697c50d22fc9e571424c2",
+      "matches": true
+    },
+    {
+      "path": "scripts/generate-visual-tokens.mjs",
+      "sha256": "4a0d988e0712fae71829f1a92200711a9de92016e1cc8aeb5cbff80f15ad871b",
+      "matches": true
+    },
+    {
+      "path": "ios/MentalArithmetic/UI/VisualTokens.generated.swift",
+      "sha256": "29525c5d667d5059f49af29e593f326f80a059bf90250c3f4197d541d5d97346",
+      "matches": true
+    },
+    {
+      "path": "android/app/src/main/res/values/visual_tokens.xml",
+      "sha256": "9f423f4be68f1e6f927de078b10f013f33f729b934a628369bfaa43add7123f5",
+      "matches": true
+    }
+  ],
+  "unchangedModules": [
+    {
+      "path": "src/answerPolicy.ts",
+      "sha256": "9a98d597b0f7baa7264b387f52ef8a1f5e80892e5c69446d2dda602f77dd89c1",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/availableOptions.ts",
+      "sha256": "2fe4df4c59cc81e13bda9fd3e7e2b087bef26a1d2a7761461bc07addec11f038",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/generateRound.ts",
+      "sha256": "7b8b13e15b58e870f27468e538181423c1fa38f73bd5cceb66eb17a3ca8a52cf",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/inputPolicy.ts",
+      "sha256": "1c46093bcaf0345926a460bcf7663bc985d1f77ba1b0b0049cd5046428dda8e8",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/roundController.ts",
+      "sha256": "2c6c26477b164bdf447e6ef9713ad16e1ad7572b066b016d913feb8cdabd2f67",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/timer.ts",
+      "sha256": "bfaeaa1c0497565f6d3ceeba0064d903f4559d5b70cb192f86556bb79e0d4b04",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/types.ts",
+      "sha256": "f458432070b282817ece06654683477a9dfefee0201f64fd6f53cd14f2976b21",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/learn/lessonTypes.ts",
+      "sha256": "4a473acf63bc53140d517547db4f27821f26bc16ad6d054015806571018a1f99",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/learn/lessonCatalog.ts",
+      "sha256": "99dbb1613cd37158e9772f67f41501d838cc26196ed6b02c7bad89b3a97d4666",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/learn/confirmedMultiplicationExamples.ts",
+      "sha256": "3411c4e1e4daaf173d7f5ce047e9e103f89b849933352b58a448a869a5fa800c",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/learn/randomExample.ts",
+      "sha256": "03e5b67986bacb5626b1903e85d4c8b7f2518f06e6807859feeba8adfeb3dcd5",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/learn/positionalInstructions.ts",
+      "sha256": "f1392466307d8f0aed130cbc9abf6146a90ce973f6184057881c58901d3a848f",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/main.ts",
+      "sha256": "c13ffd799c096737fe002924b377369aed35dfe77f5f83f3053e752ecb5bf3d2",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/view.ts",
+      "sha256": "860f5b14cf7e85a4b055d90a4e7cea025681012d311815519fa10bb5df7ea9d0",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/practiceView.ts",
+      "sha256": "ce63b28229713f95826516785a780a55cf28e59c237f945db586ccf0fa0fb15a",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/learn/carryVisualizer.ts",
+      "sha256": "4d092ae458ad1663806badccdf459b4334196a9ff0cc370cd25bd5c7a329362d",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/learn/instructionStepRenderer.ts",
+      "sha256": "cccb71e72d4b96329d54a4538d52d0ac1454bd0a0ab3f96fdfec3d65c92dfc80",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/designTokens.css",
+      "sha256": "8516544a0b49a81985f6a9cab0524aab2886f772bd56114930a8b93ed9a0bb23",
+      "unchangedFromPreview2": true
+    }
+  ],
+  "headerOnlyNavDiffReconstructsBaseline": true,
+  "headerOnlyCSSDiffReconstructsBaseline": true,
+  "change": "Only the two grouped Learn header connectors now display literal upright ampersands; all carry-route arrows are unchanged",
+  "responsiveChecks": {
+    "widths": [
+      280,
+      390,
+      768,
+      1280
+    ],
+    "textScalePercent": [
+      100,
+      200
+    ],
+    "headerAmpersands": 2,
+    "headerArrows": 0,
+    "connectionTransform": "none",
+    "writingMode": "horizontal-tb",
+    "carryArrowsStillLiteralRightArrows": true
+  },
+  "distFiles": [
+    {
+      "path": "_headers",
+      "bytes": 123,
+      "sha256": "3fdc8f8e6af5ff2d1a5424f8cff40a3c11c7deefec052bc2f377ea0fd7ca8ff1"
+    },
+    {
+      "path": "assets/index-DElzVqT9.js",
+      "bytes": 44663,
+      "sha256": "335d7df79568823a0cc86028498d933b6a69f12adfcb051e4a933e78a8c0dab9"
+    },
+    {
+      "path": "assets/index-W3-ZKpMk.css",
+      "bytes": 19132,
+      "sha256": "e7343db31e3dabc91abcd536bb5ce88fa6527e17a5e61bb3ae095b7c0fc7788e"
+    },
+    {
+      "path": "index.html",
+      "bytes": 594,
+      "sha256": "d3445c1b8a49cc56cdcff30bd14180e35d12db5a6df1c049faa0fbc641f6e71c"
+    }
+  ],
+  "browserScope": "Installed Google Chrome desktop and Chromium iPhone13 emulation; not Safari/physical-device coverage",
+  "published": false,
+  "allChecksPassed": true
+}

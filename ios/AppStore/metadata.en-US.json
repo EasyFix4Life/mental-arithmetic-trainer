@@ -1,11 +1,11 @@
 {
-  "status": "draft-not-uploaded",
+  "status": "github-development-download-preparation-not-app-store-or-testflight",
   "locale": "en-US",
   "name": "Mental Arithmetic",
   "nameAvailabilityChecked": false,
   "subtitle": "Lessons and timed practice",
   "promotionalText": "Practice addition and multiplication in ten-question rounds, with clear numerals and your answer times at the end of each set.",
-  "description": "Practice mental addition and multiplication with a simple, focused interface. Choose two-digit addition or multiplication with one-, two-, or three-digit operands, then complete ten unique problems in each round.\n\nAnswers submit automatically when the required number of digits has been entered. Each submission moves immediately to the next problem. A live timer accompanies the answer field, and the previous answer's completion time appears in black for correct or red for incorrect. At the end of a round, see your score out of ten and your maximum, minimum, and average answer times. Start each new round yourself.\n\nLearn provides instructions and random examples for four categories: two-digit addition, single-digit multiplication, two-digit multiplication, and three-digit multiplication. Addition shows the digit calculations and carries. Two-digit multiplication follows First, Inside, Outside, and Last; three-digit multiplication combines five groups of digit products. Follow the carry steps and see the final answer after the calculations. The confirmed 12 × 12 and 18 × 18 demonstrations are also available.\n\nThe app runs locally without an account, advertisements, analytics, or an internet connection. Its sepia background and large Arial numerals keep attention on the arithmetic.",
+  "description": "Practice mental addition and multiplication with a simple, focused interface. Choose two-digit addition or multiplication with one- or two-digit operands, then complete ten unique problems in each round.\n\nAnswers submit automatically when the required number of digits has been entered. Each submission moves immediately to the next problem. A live timer accompanies the answer field, and the previous answer's completion time appears in black, with a separate black cross and border for incorrect answers. At the end of a round, see your score out of ten and your maximum, minimum, and average answer times. Start each new round yourself.\n\nLearn provides instructions and random examples for single-digit and two-digit multiplication. Two-digit multiplication follows First, Inside, Outside, and Last. Follow the carry steps and see the final answer after the calculations. The confirmed 12 × 12 and 18 × 18 demonstrations are also available.\n\nThe app runs locally without an account, advertisements, analytics, or an internet connection. Its very light ivory background, scholarly text and large Arial numerals keep attention on the arithmetic.",
   "keywords": "mental,arithmetic,math,addition,multiplication,numbers,practice,timer,lessons",
   "primaryCategoryProposal": "Education",
   "secondaryCategoryProposal": null,
@@ -34,11 +34,14 @@
     "Pricing and territories",
     "Final content rating questionnaire"
   ],
-  "version": "1.1.4",
-  "build": "5",
+  "version": "1.2.0",
+  "build": "10",
   "minimumOS": "iOS 17.0 / iPadOS 17.0",
   "platforms": [
     "iPhone",
     "iPad"
-  ]
+  ],
+  "reviewEdition": "1.2.0",
+  "distributionType": "GitHub and website development downloads; not a signed installable IPA",
+  "releaseScope": "Approved preview 4 app behavior unchanged. Learn M1/M2; Practice A2/M1/M2; grouped literal ampersands and all arithmetic/carry/input/timing behavior retained. Native build 10 and release preparation metadata only. No App Store/TestFlight submission."
 }

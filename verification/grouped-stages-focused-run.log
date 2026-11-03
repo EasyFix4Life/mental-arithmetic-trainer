@@ -1,0 +1,25 @@
+
+> mental-arithmetic-trainer@1.2.0-preview.2 test:browser
+> playwright test tests/browser/grouped-stages.spec.ts --workers=2
+
+[WebServer] (node:87354) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 2 workers
+
+(node:87356) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:87355) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/browser/grouped-stages.spec.ts:16:1 › named stages form one enclosed product with a distinct middle sum and a separate final answer (563ms)
+  ✓  3 [desktop] › tests/browser/grouped-stages.spec.ts:105:1 › numbered lessons retain their own navigation and Practice remains outside the instructional palette (464ms)
+(node:87390) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [desktop] › tests/browser/grouped-stages.spec.ts:59:1 › grouped equation reflows as intact units at narrow, tablet and desktop widths with doubled text (1.9s)
+  ✓  4 [mobile] › tests/browser/grouped-stages.spec.ts:16:1 › named stages form one enclosed product with a distinct middle sum and a separate final answer (394ms)
+(node:87407) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  5 [mobile] › tests/browser/grouped-stages.spec.ts:105:1 › numbered lessons retain their own navigation and Practice remains outside the instructional palette (469ms)
+  ✓  6 [mobile] › tests/browser/grouped-stages.spec.ts:59:1 › grouped equation reflows as intact units at narrow, tablet and desktop widths with doubled text (2.2s)
+
+  6 passed (6.0s)

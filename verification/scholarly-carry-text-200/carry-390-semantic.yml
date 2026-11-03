@@ -1,0 +1,15 @@
+- region "Carry information":
+  - group "Incoming carry":
+    - term: From
+    - definition: Last (64)
+    - term: Carry in
+    - definition: "6"
+    - term: To
+    - definition: Carry to the middle
+  - group "Outgoing carry":
+    - term: From
+    - definition: Carry to the middle
+    - term: Carry out
+    - definition: "2"
+    - term: To
+    - definition: First (1)

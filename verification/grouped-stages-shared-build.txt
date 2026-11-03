@@ -1,0 +1,23 @@
+
+> mental-arithmetic-trainer@1.2.0-preview.2 build
+> npm run design:check && npm run typecheck && vite build
+
+
+> mental-arithmetic-trainer@1.2.0-preview.2 design:check
+> node scripts/generate-visual-tokens.mjs --check
+
+Verified 3 platform token files.
+
+> mental-arithmetic-trainer@1.2.0-preview.2 typecheck
+> tsc --noEmit
+
+vite v8.3.5 building client environment for production...
+transforming...
+✓ 25 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                  0.59 kB │ gzip:  0.34 kB
+dist/assets/index-1mzuqHi8.css  19.21 kB │ gzip:  4.15 kB
+dist/assets/index-DxIERzM0.js   44.65 kB │ gzip: 13.38 kB
+
+✓ built in 42ms

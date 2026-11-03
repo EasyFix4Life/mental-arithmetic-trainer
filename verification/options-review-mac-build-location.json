@@ -1,0 +1,13 @@
+{
+  "version": "1.2.0-preview.4",
+  "platform": "mac",
+  "output": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-options-mac-JfvTBp",
+  "artifacts": [
+    "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-options-desktop-j_9vd5uu/release/Mental-Arithmetic-1.2.0-preview.4-macOS-arm64.dmg",
+    "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-options-desktop-j_9vd5uu/release/Mental-Arithmetic-1.2.0-preview.4-macOS-arm64.dmg.blockmap",
+    "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-options-desktop-j_9vd5uu/release/Mental-Arithmetic-1.2.0-preview.4-macOS-arm64.zip",
+    "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-options-desktop-j_9vd5uu/release/Mental-Arithmetic-1.2.0-preview.4-macOS-arm64.zip.blockmap"
+  ],
+  "publish": "never",
+  "appPath": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-options-mac-JfvTBp/mac-arm64/Mental Arithmetic.app"
+}

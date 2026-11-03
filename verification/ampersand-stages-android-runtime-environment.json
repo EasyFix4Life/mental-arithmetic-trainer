@@ -1,0 +1,448 @@
+{
+  "verifiedAt": "2026-11-03T15:59:11.011854+00:00",
+  "version": "1.2.0-preview.3",
+  "versionCode": 10202,
+  "baseline": {
+    "version": "1.2.0-preview.2",
+    "versionCode": 10201,
+    "source": "preserved final local preview2 APK",
+    "sha256": "af8f837cdc60b0f43b3cc965bce825ecb73a685ef65e0f10bc63a2d960065142"
+  },
+  "device": {
+    "serial": "emulator-5556",
+    "ownedDisposableEmulator": true,
+    "androidRelease": "17",
+    "sdkInt": 37,
+    "webViewVersion": "145.0.7632.218",
+    "physicalDevicesModified": false
+  },
+  "sameUidAcrossUpdate": true,
+  "packageUids": "package:local.jeff.mentalarithmetic.test uid:10232\npackage:local.jeff.mentalarithmetic uid:10236",
+  "storageMarkerPersistedAfterColdRelaunchAndUpdate": true,
+  "applicationDataClearedDuringUpgrade": false,
+  "visibleVersion": "Version 1.2.0-preview.3",
+  "additionOptions": [
+    "2"
+  ],
+  "multiplicationOptions": [
+    "1",
+    "2",
+    "3"
+  ],
+  "scriptUrls": [
+    "https://appassets.androidplatform.net/assets/index-DElzVqT9.js"
+  ],
+  "nativeAcceptancePassed": 13,
+  "nativeAcceptanceFailed": 0,
+  "groupedHeader": {
+    "order": [
+      "First",
+      "Inside",
+      "Outside",
+      "Last",
+      "Final Answer"
+    ],
+    "initialStyles": [
+      {
+        "name": "First",
+        "color": "rgb(18, 108, 112)",
+        "fill": "rgb(226, 241, 239)",
+        "fontWeight": "700",
+        "borderWidth": "1.90476px"
+      },
+      {
+        "name": "Inside",
+        "color": "rgb(117, 80, 147)",
+        "fill": "rgb(238, 229, 244)",
+        "fontWeight": "700",
+        "borderWidth": "1.90476px"
+      },
+      {
+        "name": "Outside",
+        "color": "rgb(117, 80, 147)",
+        "fill": "rgb(238, 229, 244)",
+        "fontWeight": "700",
+        "borderWidth": "1.90476px"
+      },
+      {
+        "name": "Last",
+        "color": "rgb(136, 90, 21)",
+        "fill": "rgb(246, 236, 216)",
+        "fontWeight": "700",
+        "borderWidth": "1.90476px"
+      }
+    ],
+    "selectedStyles": [
+      {
+        "name": "First",
+        "color": "rgb(18, 108, 112)",
+        "fill": "rgb(226, 241, 239)",
+        "fontWeight": "700",
+        "borderWidth": "1.90476px"
+      },
+      {
+        "name": "Inside",
+        "color": "rgb(117, 80, 147)",
+        "fill": "rgb(238, 229, 244)",
+        "fontWeight": "700",
+        "borderWidth": "1.90476px"
+      },
+      {
+        "name": "Outside",
+        "color": "rgb(117, 80, 147)",
+        "fill": "rgb(238, 229, 244)",
+        "fontWeight": "700",
+        "borderWidth": "1.90476px"
+      },
+      {
+        "name": "Last",
+        "color": "rgb(136, 90, 21)",
+        "fill": "rgb(246, 236, 216)",
+        "fontWeight": "700",
+        "borderWidth": "1.90476px"
+      }
+    ],
+    "grouping": "[First & [Inside + Outside] & Last] = [Final Answer: 8526]",
+    "portrait": {
+      "width": 411,
+      "height": 838,
+      "bounds": {
+        "#stage-sequence": {
+          "x": 17,
+          "y": -0.065476194024086,
+          "width": 377.4285888671875,
+          "height": 282.952392578125,
+          "top": -0.065476194024086,
+          "right": 394.4285888671875,
+          "bottom": 282.8869163841009,
+          "left": 17
+        },
+        "#stage-product-group": {
+          "x": 17,
+          "y": -0.065476194024086,
+          "width": 213.59524536132812,
+          "height": 229.84524536132812,
+          "top": -0.065476194024086,
+          "right": 230.59524536132812,
+          "bottom": 229.77976916730404,
+          "left": 17
+        },
+        "#stage-middle-group": {
+          "x": 23.154762268066406,
+          "y": 86.39881134033203,
+          "width": 201.2857208251953,
+          "height": 56.91666793823242,
+          "top": 86.39881134033203,
+          "right": 224.44048309326172,
+          "bottom": 143.31547927856445,
+          "left": 23.154762268066406
+        },
+        "#stage-middle-plus": {
+          "x": 111.76786041259766,
+          "y": 105.50595092773438,
+          "width": 10.6130952835083,
+          "height": 18.702381134033203,
+          "top": 105.50595092773438,
+          "right": 122.38095569610596,
+          "bottom": 124.20833206176758,
+          "left": 111.76786041259766
+        },
+        "#stage-connection-first": {
+          "x": 117.98214721679688,
+          "y": 59.19643020629883,
+          "width": 11.630952835083008,
+          "height": 18.702381134033203,
+          "top": 59.19643020629883,
+          "right": 129.61310005187988,
+          "bottom": 77.89881134033203,
+          "left": 117.98214721679688
+        },
+        "#stage-connection-last": {
+          "x": 117.98214721679688,
+          "y": 151.8154754638672,
+          "width": 11.630952835083008,
+          "height": 18.702381134033203,
+          "top": 151.8154754638672,
+          "right": 129.61310005187988,
+          "bottom": 170.5178565979004,
+          "left": 117.98214721679688
+        },
+        "#stage-equals": {
+          "x": 17,
+          "y": 251.23214721679688,
+          "width": 10.2619047164917,
+          "height": 18.702381134033203,
+          "top": 251.23214721679688,
+          "right": 27.2619047164917,
+          "bottom": 269.9345283508301,
+          "left": 17
+        },
+        "#final-answer": {
+          "x": 35.761905670166016,
+          "y": 238.27976989746094,
+          "width": 191.90476989746094,
+          "height": 44.60714340209961,
+          "top": 238.27976989746094,
+          "right": 227.66667556762695,
+          "bottom": 282.88691329956055,
+          "left": 35.761905670166016
+        }
+      }
+    },
+    "landscape": {
+      "width": 862,
+      "height": 359,
+      "bounds": {
+        "#stage-sequence": {
+          "x": 25.869047164916992,
+          "y": 0.1190476194024086,
+          "width": 810.7380981445312,
+          "height": 69.22618865966797,
+          "top": 0.1190476194024086,
+          "right": 836.6071453094482,
+          "bottom": 69.34523627907038,
+          "left": 25.869047164916992
+        },
+        "#stage-product-group": {
+          "x": 25.869047164916992,
+          "y": 0.1190476194024086,
+          "width": 389.5357360839844,
+          "height": 69.22618865966797,
+          "top": 0.1190476194024086,
+          "right": 415.40478324890137,
+          "bottom": 69.34523627907038,
+          "left": 25.869047164916992
+        },
+        "#stage-middle-group": {
+          "x": 122.05952453613281,
+          "y": 6.273809432983398,
+          "width": 201.2857208251953,
+          "height": 56.91666793823242,
+          "top": 6.273809432983398,
+          "right": 323.3452453613281,
+          "bottom": 63.19047737121582,
+          "left": 122.05952453613281
+        },
+        "#stage-middle-plus": {
+          "x": 210.67262268066406,
+          "y": 25.380952835083008,
+          "width": 10.6130952835083,
+          "height": 18.702381134033203,
+          "top": 25.380952835083008,
+          "right": 221.28571796417236,
+          "bottom": 44.08333396911621,
+          "left": 210.67262268066406
+        },
+        "#stage-connection-first": {
+          "x": 101.92857360839844,
+          "y": 25.380952835083008,
+          "width": 11.630952835083008,
+          "height": 18.702381134033203,
+          "top": 25.380952835083008,
+          "right": 113.55952644348145,
+          "bottom": 44.08333396911621,
+          "left": 101.92857360839844
+        },
+        "#stage-connection-last": {
+          "x": 331.8452453613281,
+          "y": 25.380952835083008,
+          "width": 11.630952835083008,
+          "height": 18.702381134033203,
+          "top": 25.380952835083008,
+          "right": 343.47619819641113,
+          "bottom": 44.08333396911621,
+          "left": 331.8452453613281
+        },
+        "#stage-equals": {
+          "x": 423.9047546386719,
+          "y": 25.380952835083008,
+          "width": 10.2619047164917,
+          "height": 18.702381134033203,
+          "top": 25.380952835083008,
+          "right": 434.1666593551636,
+          "bottom": 44.08333396911621,
+          "left": 423.9047546386719
+        },
+        "#final-answer": {
+          "x": 442.66668701171875,
+          "y": 12.428571701049805,
+          "width": 191.90476989746094,
+          "height": 44.60714340209961,
+          "top": 12.428571701049805,
+          "right": 634.5714569091797,
+          "bottom": 57.035715103149414,
+          "left": 442.66668701171875
+        }
+      }
+    }
+  },
+  "learnVisuals": {
+    "palette": [
+      {
+        "stage": "First",
+        "color": "rgb(18, 108, 112)",
+        "borderWidth": "1.90476px",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "refs": [
+          "left:0",
+          "right:0"
+        ]
+      },
+      {
+        "stage": "Inside",
+        "color": "rgb(117, 80, 147)",
+        "borderWidth": "1.90476px",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "refs": [
+          "left:1",
+          "right:0"
+        ]
+      },
+      {
+        "stage": "Outside",
+        "color": "rgb(117, 80, 147)",
+        "borderWidth": "1.90476px",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "refs": [
+          "left:0",
+          "right:1"
+        ]
+      },
+      {
+        "stage": "Last",
+        "color": "rgb(136, 90, 21)",
+        "borderWidth": "1.90476px",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "refs": [
+          "left:1",
+          "right:1"
+        ]
+      }
+    ],
+    "equalHighlightBorder": "1.90476px",
+    "carries": {
+      "last": {
+        "kind": "out",
+        "from": "Last",
+        "value": "5",
+        "to": "Inside + Outside (127)",
+        "text": "FromLast\u2192Carry out5\u2192ToInside + Outside (127)"
+      },
+      "middle": [
+        {
+          "kind": "in",
+          "from": "Last (56)",
+          "value": "5",
+          "to": "Carry to the middle",
+          "text": "FromLast (56)\u2192Carry in5\u2192ToCarry to the middle"
+        },
+        {
+          "kind": "out",
+          "from": "Carry to the middle",
+          "value": "13",
+          "to": "First (72)",
+          "text": "FromCarry to the middle\u2192Carry out13\u2192ToFirst (72)"
+        }
+      ]
+    }
+  },
+  "keyboardAndShortWrongFeedback": {
+    "answerBottom": 509.0952606201172,
+    "liveBottom": 500.32740020751953,
+    "viewportBottom": 526.09521484375,
+    "viewportHeight": 526.09521484375,
+    "problemId": "1:0",
+    "nativeInputType": 2,
+    "softwareKeyboardVisible": true,
+    "landscapeKeyboardLayout": {
+      "width": 862,
+      "height": 122,
+      "visibleHeight": 121.9047622680664,
+      "answerBottom": 113.40476608276367,
+      "liveBottom": 108.42857360839844,
+      "viewportBottom": 121.9047622680664,
+      "problem": {
+        "x": 25.869047164916992,
+        "y": 73.17857360839844,
+        "width": 448.4821472167969,
+        "height": 40.226192474365234,
+        "top": 73.17857360839844,
+        "right": 474.35119438171387,
+        "bottom": 113.40476608276367,
+        "left": 25.869047164916992
+      }
+    },
+    "landscapeWithPreviousFeedback": {
+      "width": 862,
+      "height": 122,
+      "visibleHeight": 121.9047622680664,
+      "bounds": {
+        "#problem": {
+          "x": 25.869047164916992,
+          "y": 73.17857360839844,
+          "width": 448.4821472167969,
+          "height": 40.226192474365234,
+          "top": 73.17857360839844,
+          "right": 474.35119438171387,
+          "bottom": 113.40476608276367,
+          "left": 25.869047164916992
+        },
+        "#answer": {
+          "x": 656.3511962890625,
+          "y": 63.92857360839844,
+          "width": 123.31547546386719,
+          "height": 49.476192474365234,
+          "top": 63.92857360839844,
+          "right": 779.6666717529297,
+          "bottom": 113.40476608276367,
+          "left": 656.3511962890625
+        },
+        "#live-time": {
+          "x": 801.2261962890625,
+          "y": 68.9047622680664,
+          "width": 35.38095474243164,
+          "height": 39.52381134033203,
+          "top": 68.9047622680664,
+          "right": 836.6071510314941,
+          "bottom": 108.42857360839844,
+          "left": 801.2261962890625
+        },
+        "#previous-feedback": {
+          "x": 25.869047164916992,
+          "y": 3.3988096714019775,
+          "width": 50.863094329833984,
+          "height": 27.6011905670166,
+          "top": 3.3988096714019775,
+          "right": 76.73214149475098,
+          "bottom": 31.00000023841858,
+          "left": 25.869047164916992
+        }
+      }
+    },
+    "rotationPreservedState": true,
+    "nativeKeyEventRoundScore": "9 / 10"
+  },
+  "actualReleaseApk": {
+    "path": "/tmp/mental-arithmetic-ampersand-stages-android/release/Mental-Arithmetic-1.2.0-preview.3-Android.apk",
+    "bytes": 670065,
+    "sha256": "b67c79c9137b6340e3d18ee883bdbf2b06ce0d4483e2c99b8bcfca08a41ea613"
+  },
+  "localReviewOnly": true,
+  "published": false,
+  "allChecksPassed": true,
+  "ownedEmulatorStopRequestedAfterVerification": true,
+  "launchCoordination": {
+    "nativeBootSequencedAfterIosOwnedShutdown": true,
+    "applicationFailureBeforeBoot": false
+  },
+  "ownedEmulatorStoppedAfterVerification": true,
+  "ownedEmulatorProcessExited": true,
+  "manualScreenshotReview": {
+    "learnPortrait": true,
+    "learnLandscape": true,
+    "practiceWrongFeedbackPortrait": true,
+    "practiceWrongFeedbackLandscapeKeyboard": true,
+    "headerLiteralAmpersandsUprightAndReadable": true,
+    "landscapeRotationSettledBeforeCapture": true
+  }
+}

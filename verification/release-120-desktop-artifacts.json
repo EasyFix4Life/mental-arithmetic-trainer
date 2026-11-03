@@ -1,0 +1,22 @@
+[
+  {
+    "file": "Mental-Arithmetic-1.2.0-macOS-arm64.dmg",
+    "bytes": 119213044,
+    "sha256": "bc8f6132348108aede4f10a5aec15e6bd2392b68a164ccae1f2858d8811f2f42"
+  },
+  {
+    "file": "Mental-Arithmetic-1.2.0-macOS-arm64.zip",
+    "bytes": 115786667,
+    "sha256": "873bcdba55fa9e3ecc9745e6045f5bbfa109fb96bf4cf1a2b4b4cae546187855"
+  },
+  {
+    "file": "Mental-Arithmetic-1.2.0-Windows-x64-Setup.exe",
+    "bytes": 121278033,
+    "sha256": "fa249c66e977c1590bd26929010abf1b043c2133a91dfcb05c54a28dccb4178a"
+  },
+  {
+    "file": "Mental-Arithmetic-1.2.0-Windows-x64.zip",
+    "bytes": 153165912,
+    "sha256": "a3fe0143d4df5601b0d13038a8fb1f78293e394103e147b24cbaeedc1c7dbdd8"
+  }
+]

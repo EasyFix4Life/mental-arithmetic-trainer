@@ -25,11 +25,18 @@ struct PracticeSettings: Equatable {
     /// Current app choices. Arithmetic generators retain their full digit range
     /// for the supplied historical fixtures and reusable instruction engine.
     static func availableDigits(for operation: ArithmeticOperation) -> [OperandDigits] {
-        operation == .addition ? [.two] : OperandDigits.allCases
+        operation == .addition ? [.two] : [.one, .two]
     }
 
+    static func isAvailable(operation: ArithmeticOperation, digitCount: OperandDigits) -> Bool {
+        availableDigits(for: operation).contains(digitCount)
+    }
+
+    var isAvailable: Bool { Self.isAvailable(operation: operation, digitCount: digitCount) }
+
     static func appSelection(operation: ArithmeticOperation, digitCount: OperandDigits) -> PracticeSettings {
-        PracticeSettings(operation: operation, digitCount: operation == .addition ? .two : digitCount)
+        let allowed = availableDigits(for: operation)
+        return PracticeSettings(operation: operation, digitCount: allowed.contains(digitCount) ? digitCount : allowed[0])
     }
 }
 

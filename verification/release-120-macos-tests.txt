@@ -1,0 +1,19 @@
+
+> mental-arithmetic-trainer@1.2.0 test:desktop
+> playwright test --config desktop.playwright.config.ts
+
+
+Running 8 tests using 1 worker
+
+(node:38537) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/desktop/app.spec.ts:60:1 › the native shell loads offline production assets with an isolated renderer and faithful layout (3.6s)
+  ✓  2 tests/desktop/app.spec.ts:142:1 › Learn preserves lesson order, authored digit selections, carry sequence and the final answer after Last (1.2s)
+  ✓  3 tests/desktop/app.spec.ts:212:1 › native Learn provides full random instruction in both available multiplication lessons and preserves the confirmed multiplication carry method (1.3s)
+  ✓  4 tests/desktop/app.spec.ts:303:1 › Practice keeps input and live timers, then shows all ten raw answer times as minimum, maximum and average (4.3s)
+  ✓  5 tests/desktop/app.spec.ts:376:1 › all three available Practice configurations produce ten unique in-range problems and a score out of ten (982ms)
+  ✓  6 tests/desktop/app.spec.ts:419:1 › Inside and Outside select the inner and outer digits of 82 times 76 in the packaged app (792ms)
+  ✓  7 tests/desktop/app.spec.ts:448:1 › scholarly Learn colors and carry routes remain separate from monochrome Practice (917ms)
+  ✓  8 tests/desktop/app.spec.ts:486:1 › named multiplication stages form an outlined middle sum and a separate completed answer (809ms)
+
+  8 passed (14.4s)

@@ -1,0 +1,119 @@
+{
+  "checkedAt": "2026-11-03T14:51:19.652Z",
+  "methods": {
+    "github": "read-only GitHub connector API",
+    "website": "anonymous HTTPS fetch and byte comparison"
+  },
+  "repository": "EasyFix4Life/mental-arithmetic-trainer",
+  "main": {
+    "actual": "a5c5fd58c6e41abb3167b20c626b90bfbdfa1152",
+    "expected": "a5c5fd58c6e41abb3167b20c626b90bfbdfa1152",
+    "unchanged": true
+  },
+  "latestRelease": {
+    "id": 432052748,
+    "tag": "v1.1.4",
+    "draft": false,
+    "prerelease": false,
+    "publishedAt": "2026-11-02T22:58:16Z",
+    "url": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/tag/v1.1.4",
+    "assetCount": 11
+  },
+  "releasesListed": [
+    {
+      "id": 432052748,
+      "tag": "v1.1.4",
+      "draft": false,
+      "prerelease": false,
+      "publishedAt": "2026-11-02T22:58:16Z"
+    },
+    {
+      "id": 431925700,
+      "tag": "v1.1.3",
+      "draft": false,
+      "prerelease": false,
+      "publishedAt": "2026-11-02T20:26:28Z"
+    },
+    {
+      "id": 431839139,
+      "tag": "v1.1.2",
+      "draft": false,
+      "prerelease": false,
+      "publishedAt": "2026-11-02T18:52:59Z"
+    },
+    {
+      "id": 431647652,
+      "tag": "v1.1.1",
+      "draft": false,
+      "prerelease": false,
+      "publishedAt": "2026-11-02T16:09:24Z"
+    },
+    {
+      "id": 422751580,
+      "tag": "v1.1.0",
+      "draft": false,
+      "prerelease": false,
+      "publishedAt": "2026-10-24T13:42:09Z"
+    }
+  ],
+  "noPreviewRelease": true,
+  "releaseListCompleteFirstPage": true,
+  "mutationsPerformed": false,
+  "website": {
+    "checkedAt": "2026-11-03T14:53:16.559197+00:00",
+    "url": "https://whoami.school/",
+    "status": 200,
+    "versionInActualServedJavaScript": "1.1.4",
+    "previewVersionAbsentFromActualServedJavaScript": true,
+    "html": {
+      "bytes": 961,
+      "sha256": "67619ff44da394c7d7511f611d33fef2b69de34b5a465c29c7f30ff34e01afc0",
+      "matchesPreviousPublished114LiveHTML": true,
+      "previousPublicVerification": "Mental-Arithmetic-1.1.4-public-verification.json",
+      "public114ArchiveHtmlBytes": 594,
+      "rawByteIdenticalToPublic114WebZip": false,
+      "cacheControl": "no-store, max-age=0, must-revalidate",
+      "additionalExternalScripts": [
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "baselineMarkupMatchesAfterRemovingOnlyObservedCloudflareBeaconAndWhitespace": true,
+      "differenceNote": "The existing Cloudflare hosting beacon and closing-body indentation differ from the source ZIP. The full live HTML hash, including that beacon, exactly matches the prior published1.1.4 verification. The redesign did not introduce or configure it."
+    },
+    "applicationAssets": [
+      {
+        "path": "./assets/index-DG7rQuqf.js",
+        "url": "https://whoami.school/assets/index-DG7rQuqf.js",
+        "status": 200,
+        "bytes": 39252,
+        "sha256": "216750eb63c9a3becc5465612adfa8e969386a6ce114c00a2d0c380eb65a6199",
+        "matchesPublic114WebZip": true,
+        "matchesPreviousPublished114Evidence": true
+      },
+      {
+        "path": "./assets/index-Cr3j_8aO.css",
+        "url": "https://whoami.school/assets/index-Cr3j_8aO.css",
+        "status": 200,
+        "bytes": 10000,
+        "sha256": "3eda5cd9126e3897b32675871b32d99d61a532084d68699d7cbd829c56c069d4",
+        "matchesPublic114WebZip": true,
+        "matchesPreviousPublished114Evidence": true
+      }
+    ],
+    "public114WebZip": {
+      "url": "https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.1.4/Mental-Arithmetic-1.1.4-Web.zip",
+      "bytes": 15292,
+      "sha256": "156642b36137875a3c06e958362b5025a9dbec6b6fa21906eb70e554b5836efe",
+      "matchesGitHubAssetDigest": true
+    },
+    "applicationAssetsMatchPublished114": true
+  },
+  "checkedAcceptanceCriteria": [
+    "Remote main remains the supplied1.1.4 baseline commit",
+    "Latest published release is1.1.4 and is neither draft nor prerelease",
+    "Complete release list contains no preview release",
+    "Live application JS and CSS match the published1.1.4 Web archive and prior verification",
+    "Actual served application code declares1.1.4 and contains no1.2.0-preview.1 version",
+    "Raw live HTML including the existing hosting beacon matches the prior published1.1.4 verification"
+  ],
+  "allChecksPassed": true
+}

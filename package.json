@@ -1,6 +1,6 @@
 {
   "name": "mental-arithmetic-trainer",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "private": true,
   "type": "module",
   "main": "desktop/main.cjs",
@@ -12,7 +12,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:browser": "playwright test",
-    "build": "npm run typecheck && vite build",
+    "build": "npm run design:check && npm run typecheck && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "desktop": "npm run build && electron .",
     "test:desktop": "playwright test --config desktop.playwright.config.ts",
@@ -23,7 +23,9 @@
     "build:android": "npm run build && node scripts/build-android.mjs",
     "verify:android": "node scripts/verify-android.mjs",
     "build:ios": "node scripts/build-ios.mjs",
-    "build:ios:simulator": "node scripts/build-ios.mjs --simulator"
+    "build:ios:simulator": "node scripts/build-ios.mjs --simulator",
+    "design:tokens": "node scripts/generate-visual-tokens.mjs",
+    "design:check": "node scripts/generate-visual-tokens.mjs --check"
   },
   "devDependencies": {
     "@playwright/test": "1.64.1",
@@ -33,5 +35,10 @@
     "typescript": "7.0.2",
     "vite": "8.3.5",
     "vitest": "5.0.5"
+  },
+  "config": {
+    "downloadVersion": "1.2.0",
+    "reviewBuild": false,
+    "androidVersionCode": 10204
   }
 }

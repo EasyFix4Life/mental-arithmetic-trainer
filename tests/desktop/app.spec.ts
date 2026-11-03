@@ -6,7 +6,7 @@ import { _electron, type ElectronApplication, type Page } from 'playwright';
 const require = createRequire(import.meta.url);
 const appUrl = 'app://trainer/index.html';
 type Operation = 'addition' | 'multiplication';
-type DigitCount = 1 | 2 | 3;
+type DigitCount = 1 | 2;
 
 /**
  * By default this launches the source shell against dist/. Set DESKTOP_EXECUTABLE
@@ -47,25 +47,6 @@ async function problem(window: Page, operation: Operation) {
   return { left, right, answer, text: (await window.locator('#problem').textContent()) ?? '' };
 }
 
-async function expectVerticalAddition(window: Page, selector: string, final = false) {
-  const layout = await window.locator(selector).evaluate((element, hasResult) => {
-    const top = element.querySelector('[data-side="left"]')!.getBoundingClientRect();
-    const bottom = element.querySelector('[data-side="right"]')!.getBoundingClientRect();
-    const rule = element.querySelector('.addition-rule')!.getBoundingClientRect();
-    const result = hasResult ? element.querySelector('.final-answer-value')!.getBoundingClientRect() : null;
-    return { top: { bottom: top.bottom, right: top.right },
-      bottom: { top: bottom.top, bottom: bottom.bottom, right: bottom.right },
-      rule: { top: rule.top, bottom: rule.bottom }, result: result ? { top: result.top, right: result.right } : null };
-  }, final);
-  expect(layout.top.bottom).toBeLessThanOrEqual(layout.bottom.top + 1);
-  expect(Math.abs(layout.top.right - layout.bottom.right)).toBeLessThanOrEqual(1);
-  expect(layout.rule.top).toBeGreaterThanOrEqual(layout.bottom.bottom - 1);
-  if (layout.result) {
-    expect(layout.result.top).toBeGreaterThanOrEqual(layout.rule.bottom - 1);
-    expect(Math.abs(layout.result.right - layout.bottom.right)).toBeLessThanOrEqual(1);
-  }
-}
-
 async function startRound(window: Page, operation: Operation, digits: DigitCount) {
   await window.locator('#operation').selectOption(operation);
   await window.locator('#digit-count').selectOption(String(digits));
@@ -78,7 +59,7 @@ async function startRound(window: Page, operation: Operation, digits: DigitCount
 
 test('the native shell loads offline production assets with an isolated renderer and faithful layout', async ({ desktop, window }) => {
   expect(window.url()).toBe(appUrl);
-  await expect(window.locator('#app-version')).toHaveText('Version 1.1.4');
+  await expect(window.locator('#app-version')).toHaveText('Version 1.2.0');
   expect(await desktop.evaluate(({ app }) => app.isPackaged)).toBe(Boolean(process.env.DESKTOP_EXECUTABLE));
   const windows = await desktop.evaluate(({ BrowserWindow }) => BrowserWindow.getAllWindows().map((nativeWindow) => {
     // Electron exposes this read-only runtime inspection API internally; its
@@ -121,16 +102,16 @@ test('the native shell loads offline production assets with an isolated renderer
   await expect(window.locator('#digit-count option')).toHaveText(['2']);
   await expect(window.locator('#digit-count')).toHaveValue('2');
   await expect(window.locator('#app-downloads, #download-apps-link')).toHaveCount(0);
-  for (const previousDigits of ['1', '3']) {
+  for (const previousDigits of ['1', '2']) {
     await window.locator('#operation').selectOption('multiplication');
-    await expect(window.locator('#digit-count option')).toHaveText(['1', '2', '3']);
+    await expect(window.locator('#digit-count option')).toHaveText(['1', '2']);
     await window.locator('#digit-count').selectOption(previousDigits);
     await window.locator('#operation').selectOption('addition');
     await expect(window.locator('#digit-count option')).toHaveText(['2']);
     await expect(window.locator('#digit-count')).toHaveValue('2');
   }
-  await expect(window.locator('html')).toHaveCSS('background-color', 'rgb(232, 215, 181)');
-  await startRound(window, 'multiplication', 3);
+  await expect(window.locator('html')).toHaveCSS('background-color', 'rgb(250, 247, 240)');
+  await startRound(window, 'multiplication', 2);
   const first = await problem(window, 'multiplication');
   await window.keyboard.type(first.answer);
   await expect(window.locator('#previous-time')).toBeVisible();
@@ -146,7 +127,7 @@ test('the native shell loads offline production assets with an isolated renderer
       previous: rectangle('#previous-time'), answer: rectangle('#answer'), live: rectangle('#live-time'),
     };
   });
-  expect(layout.font).toMatch(/^Arial(?:,|$)/);
+  expect(layout.font.replaceAll('"', '')).toMatch(/^Arial(?:,|$)/);
   expect(layout.size).toBeGreaterThanOrEqual(72);
   expect(layout.scrollWidth).toBeLessThanOrEqual(layout.width);
   expect(layout.previous.x).toBeLessThan(layout.width / 4);
@@ -155,14 +136,15 @@ test('the native shell loads offline production assets with an isolated renderer
   expect(layout.live.x).toBeGreaterThan(layout.answer.right);
   expect(layout.live.right).toBeLessThanOrEqual(layout.width);
   expect(Math.abs(layout.live.x - layout.answer.right)).toBeLessThan(50);
-  await window.screenshot({ path: 'verification/desktop-practice-app.png', fullPage: true });
+  await window.screenshot({ path: 'verification/release-120-macos-practice-app.png', fullPage: true });
 });
 
 test('Learn preserves lesson order, authored digit selections, carry sequence and the final answer after Last', async ({ window }) => {
   await window.locator('#mode-learn').click();
+  await expect(window.locator('#lesson-title')).toHaveText('Single-digit multiplication');
+  await expect(window.locator('[data-lesson-id="addition-2"], [data-lesson-id="multiplication-3"]')).toHaveCount(0);
   await expect(window.locator('#lesson-catalog [data-lesson-id]')).toHaveText([
-    'Single-digit multiplication', 'Two-digit addition', 'Two-digit multiplication',
-    'Three-digit multiplication',
+    'Single-digit multiplication', 'Two-digit multiplication',
   ]);
   await window.locator('[data-lesson-id="multiplication-2"]').click();
   await window.locator('#worked-example').selectOption('12-times-12');
@@ -180,7 +162,7 @@ test('Learn preserves lesson order, authored digit selections, carry sequence an
     await expect(window.locator('#walkthrough .carry-visualizer')).toHaveCount(0);
     await window.locator('#step-next').click();
   }
-  await expect(window.locator('#stage-sequence button')).toHaveText(['First', 'Inside', 'Outside', 'Last', 'Final answer: 144']);
+  await expect(window.locator('#stage-sequence button')).toHaveText(['First', 'Inside', 'Outside', 'Last', 'Final Answer: 144']);
   await expect(window.locator('#walkthrough .learn-expression')).toHaveAccessibleName('12 times 12 equals 144');
   await expect(window.locator('#step-next')).toBeDisabled();
 
@@ -215,24 +197,23 @@ test('Learn preserves lesson order, authored digit selections, carry sequence an
     }
     await window.locator('#step-next').click();
   }
-  await expect(window.locator('#stage-sequence button')).toHaveText(['First', 'Inside', 'Outside', 'Last', 'Final answer: 324']);
+  await expect(window.locator('#stage-sequence button')).toHaveText(['First', 'Inside', 'Outside', 'Last', 'Final Answer: 324']);
   await expect(window.locator('#final-answer')).toHaveAttribute('aria-current', 'step');
   await expect(window.locator('#walkthrough .learn-expression')).toHaveAccessibleName('18 times 18 equals 324');
   await expect(window.locator('#step-position')).toHaveText('7 / 7');
   await expect(window.locator('#step-next')).toBeDisabled();
   await expect(window.locator('#live-time')).toBeHidden();
-  await window.screenshot({ path: 'verification/desktop-app.png', fullPage: true });
+  await window.screenshot({ path: 'verification/release-120-macos-app.png', fullPage: true });
   await window.locator('#step-back').click();
   await expect(window.locator('#walkthrough .step-result-digits')).toHaveText('324');
   await expect(window.locator('[data-stage-name="Last"]')).toHaveAttribute('aria-current', 'step');
 });
 
-test('native Learn provides full random instruction in all four available lessons and preserves the confirmed multiplication carry method', async ({ window }) => {
+test('native Learn provides full random instruction in both available multiplication lessons and preserves the confirmed multiplication carry method', async ({ window }) => {
   await window.locator('#mode-learn').click();
-  for (const [lesson, operation, digits] of [
-    ['multiplication-1', 'multiplication', 1],
-    ['addition-2', 'addition', 2], ['multiplication-2', 'multiplication', 2],
-    ['multiplication-3', 'multiplication', 3],
+  await expect(window.locator('[data-lesson-id="addition-2"], [data-lesson-id="multiplication-3"]')).toHaveCount(0);
+  for (const [lesson, digits] of [
+    ['multiplication-1', 1], ['multiplication-2', 2],
   ] as const) {
     await window.locator(`[data-lesson-id="${lesson}"]`).click();
     await expect(window.locator('#random-example')).toHaveAccessibleName('New random example');
@@ -242,12 +223,11 @@ test('native Learn provides full random instruction in all four available lesson
       expect(operand).toBeGreaterThanOrEqual(digits === 1 ? 1 : 10 ** (digits - 1));
       expect(operand).toBeLessThanOrEqual(10 ** digits - 1);
     }
-    if (operation === 'addition') await expectVerticalAddition(window, '#lesson-expression .learn-expression');
     await window.locator('#random-example').click();
     const secondOperands = await window.locator('#lesson-expression .learn-operand').allTextContents();
     expect(secondOperands.map(Number).sort((left, right) => left - right).join(':')).not.toBe(firstKey);
     const [left, right] = secondOperands.map(Number) as [number, number];
-    const answer = String(operation === 'addition' ? left + right : left * right);
+    const answer = String(left * right);
     await expect(window.locator('#lesson-help')).toContainText('Click Here to Learn How!');
     await expect(window.locator('#lesson-help')).toHaveAccessibleName(/Click Here to Learn How!/);
     const helpBounds = await window.locator('#lesson-help').evaluate(element => {
@@ -258,17 +238,15 @@ test('native Learn provides full random instruction in all four available lesson
     expect(helpBounds.height).toBeGreaterThanOrEqual(44);
     expect(helpBounds.left).toBeGreaterThanOrEqual(0);
     expect(helpBounds.right).toBeLessThanOrEqual(helpBounds.viewportWidth);
-    if (lesson === 'multiplication-3') await window.screenshot({ path: 'verification/help-button-macos-cta.png', fullPage: true });
     await window.locator('#lesson-help').click();
     await expect(window.locator('#walkthrough-status')).toBeHidden();
     await expect(window.locator('#walkthrough .step-operation')).toBeVisible();
     await expect(window.locator('#step-position')).toHaveText(/^1 \/ (?:[2-9]|[1-9][0-9]+)$/);
     await window.locator('#final-answer').click();
     await expect(window.locator('#walkthrough .learn-expression')).toHaveAccessibleName(
-      `${left} ${operation === 'addition' ? 'plus' : 'times'} ${right} equals ${answer}`,
+      `${left} times ${right} equals ${answer}`,
     );
     await expect(window.locator('#step-next')).toBeDisabled();
-    if (operation === 'addition') await expectVerticalAddition(window, '#walkthrough .learn-expression', true);
     await window.locator('#close-walkthrough').click();
   }
 
@@ -305,12 +283,12 @@ test('native Learn provides full random instruction in all four available lesson
     await window.locator('#step-next').click();
   }
   await expect(window.locator('#stage-sequence button')).toHaveText([
-    'First', 'Inside', 'Outside', 'Last', 'Final answer: 8526',
+    'First', 'Inside', 'Outside', 'Last', 'Final Answer: 8526',
   ]);
   await expect(window.locator('#final-answer')).toHaveAttribute('aria-current', 'step');
   await expect(window.locator('#walkthrough .learn-expression')).toHaveAccessibleName('98 times 87 equals 8526');
   await expect(window.locator('#step-next')).toBeDisabled();
-  await window.screenshot({ path: 'verification/desktop-app-learn-random.png', fullPage: true });
+  await window.screenshot({ path: 'verification/release-120-macos-app-learn-random.png', fullPage: true });
   await window.locator('#random-example').click();
   await expect(window.locator('#walkthrough')).toBeVisible();
   await expect(window.locator('#walkthrough .instruction-step h3').first()).toHaveText('First');
@@ -326,7 +304,7 @@ test('Practice keeps input and live timers, then shows all ten raw answer times 
   const instant = new Date('2026-10-24T16:00:00Z');
   await window.clock.install({ time: instant });
   await window.clock.pauseAt(new Date(instant.getTime() + 1_000));
-  await startRound(window, 'multiplication', 3);
+  await startRound(window, 'multiplication', 2);
   const first = await problem(window, 'multiplication');
   await expect(window.locator('#live-time')).toHaveText('0.0');
   await window.clock.runFor(220);
@@ -348,7 +326,9 @@ test('Practice keeps input and live timers, then shows all ten raw answer times 
   await window.keyboard.type('0'.repeat(second.answer.length));
   await expect(window.locator('#problem')).not.toHaveText(second.text);
   await expect(window.locator('#previous-time')).toHaveText('0.5');
-  await expect(window.locator('#previous-time')).toHaveCSS('color', 'rgb(176, 0, 0)');
+  await expect(window.locator('#previous-time')).toHaveCSS('color', 'rgb(0, 0, 0)');
+  await expect(window.locator('#previous-status')).toHaveText('×');
+  await expect(window.locator('#previous-feedback')).toHaveCSS('border-top-color', 'rgb(0, 0, 0)');
   await expect(window.locator('#answer')).toHaveValue('');
   await expect(window.locator('#answer')).toBeFocused();
   await expect(window.locator('#exercise')).not.toContainText(/review|retry|hint|walkthrough/i);
@@ -374,7 +354,7 @@ test('Practice keeps input and live timers, then shows all ten raw answer times 
   await expect(window.locator('#minimum-time')).toHaveText('0.2 s');
   await expect(window.locator('#maximum-time')).toHaveText('1.4 s');
   await expect(window.locator('#average-time')).toHaveText('1.2 s');
-  await window.screenshot({ path: 'verification/desktop-app-round-timing.png', fullPage: true });
+  await window.screenshot({ path: 'verification/release-120-macos-app-round-timing.png', fullPage: true });
   await window.clock.runFor(3_000);
   await expect(window.locator('#exercise')).toBeHidden();
   await expect(window.locator('#average-time')).toHaveText('1.2 s');
@@ -393,9 +373,9 @@ test('Practice keeps input and live timers, then shows all ten raw answer times 
   await expect(window.locator('#answer')).toBeFocused();
 });
 
-test('all four available Practice configurations produce ten unique in-range problems and a score out of ten', async ({ window }) => {
+test('all three available Practice configurations produce ten unique in-range problems and a score out of ten', async ({ window }) => {
   for (const operation of ['addition', 'multiplication'] as const) {
-    for (const digits of operation === 'addition' ? [2] as const : [1, 2, 3] as const) {
+    for (const digits of operation === 'addition' ? [2] as const : [1, 2] as const) {
       await startRound(window, operation, digits);
       if (operation === 'addition') {
         await expect(window.locator('#problem')).toHaveClass(/vertical-addition/);
@@ -451,7 +431,7 @@ test('Inside and Outside select the inner and outer digits of 82 times 76 in the
   expect(await window.locator('#walkthrough .digit-highlight').evaluateAll((elements) =>
     elements.map((element) => (element as HTMLElement).dataset.digitRef),
   )).toEqual(['left:1', 'right:0']);
-  await window.screenshot({ path: 'verification/inside-outside-macos-Inside.png', fullPage: true });
+  await window.screenshot({ path: 'verification/release-120-macos-Inside.png', fullPage: true });
   await window.locator('[data-stage-name="Outside"]').click();
   await expect(window.locator('#walkthrough .step-operation')).toHaveAccessibleName('8 × 6 = 48; 14 + 48');
   await expect(window.locator('#walkthrough .step-intermediate-result')).toHaveText('62');
@@ -459,7 +439,79 @@ test('Inside and Outside select the inner and outer digits of 82 times 76 in the
   expect(await window.locator('#walkthrough .digit-highlight').evaluateAll((elements) =>
     elements.map((element) => (element as HTMLElement).dataset.digitRef),
   )).toEqual(['left:0', 'right:1']);
-  await window.screenshot({ path: 'verification/inside-outside-macos-Outside.png', fullPage: true });
+  await window.screenshot({ path: 'verification/release-120-macos-Outside.png', fullPage: true });
   await window.locator('#final-answer').click();
   await expect(window.locator('#walkthrough .learn-expression')).toHaveAccessibleName('82 times 76 equals 6232');
+});
+
+
+test('scholarly Learn colors and carry routes remain separate from monochrome Practice', async ({ window }) => {
+  await expect(window.locator('html')).toHaveCSS('background-color', 'rgb(250, 247, 240)');
+  await expect(window.locator('#setup-title')).toHaveCSS('font-family', /Baskerville/);
+  await window.locator('#mode-learn').click();
+  await window.locator('[data-lesson-id="multiplication-2"]').click();
+  await window.locator('#worked-example').selectOption('18-times-18');
+  await window.locator('#lesson-help').click();
+  for (const [stage, color] of [['First','rgb(18, 108, 112)'],['Inside','rgb(117, 80, 147)'],['Outside','rgb(117, 80, 147)'],['Last','rgb(136, 90, 21)']] as const) {
+    await expect(window.locator(`[data-stage-name="${stage}"]`)).toHaveCSS('color',color);
+    await window.locator(`[data-stage-name="${stage}"]`).click();
+    await expect(window.locator('#walkthrough .digit-highlight').first()).toHaveCSS('color',color);
+    const bracket=window.locator('#walkthrough .digit-pairing-connector path');
+    await expect(bracket).toHaveCount(1);
+    await expect(bracket).toHaveAttribute('d', /^M /);
+  }
+  await expect(window.locator('.carry-route[data-route-kind="out"] .carry-out')).toHaveText('6');
+  await expect(window.locator('.carry-route-destination')).toContainText('Inside + Outside (16)');
+  await window.locator('#step-next').click();
+  await expect(window.locator('.carry-route')).toHaveCount(2);
+  await expect(window.locator('.carry-in')).toHaveText('6');
+  await expect(window.locator('.carry-out')).toHaveText('2');
+  await expect(window.locator('.carry-from-step')).toHaveText('Last (64)');
+  await expect(window.locator('.carry-to-step')).toHaveText('First (1)');
+  await expect(window.locator('#walkthrough .digit-pairing-connector')).toHaveCount(0);
+  await window.screenshot({path:'verification/release-120-macos-carry.png',fullPage:true});
+  await window.locator('#mode-practice').click();
+  await startRound(window,'multiplication',2);
+  const current=await problem(window,'multiplication');
+  const wrong=(current.answer[0]==='9'?'8':'9')+current.answer.slice(1);
+  await window.keyboard.type(wrong);
+  await expect(window.locator('#previous-status')).toHaveText('×');
+  await expect(window.locator('#previous-time')).toHaveCSS('color','rgb(0, 0, 0)');
+  await expect(window.locator('#previous-feedback')).toHaveCSS('border-top-color','rgb(0, 0, 0)');
+  await expect(window.locator('#answer')).toHaveCSS('background-color','rgb(255, 255, 255)');
+  await window.screenshot({path:'verification/release-120-macos-monochrome.png',fullPage:true});
+});
+
+
+test('named multiplication stages form an outlined middle sum and a separate completed answer', async ({ window }) => {
+  await window.locator('#mode-learn').click();
+  await window.locator('[data-lesson-id="multiplication-2"]').click();
+  await window.locator('#worked-example').selectOption('18-times-18');
+  await window.locator('#lesson-help').click();
+  await expect(window.locator('#stage-product-group')).toBeVisible();
+  await expect(window.locator('#stage-middle-group button')).toHaveText(['Inside', 'Outside']);
+  await expect(window.locator('#stage-middle-plus')).toHaveText('+');
+  for (const id of ['stage-connection-first','stage-connection-last']) {
+    await expect(window.locator('#'+id)).toHaveText('&');
+    await expect(window.locator('#'+id)).toHaveCSS('transform','none');
+  }
+  await expect(window.locator('#stage-sequence')).not.toContainText(/[→↓]/);
+  await expect(window.locator('#stage-equals')).toHaveText('=');
+  await expect(window.locator('#stage-product-group #final-answer')).toHaveCount(0);
+  await expect(window.locator('#final-answer')).toHaveText('Final Answer: 324');
+  await expect(window.locator('#stage-sequence button')).toHaveText(['First','Inside','Outside','Last','Final Answer: 324']);
+  for (const [stage, fill] of [['First','rgb(226, 241, 239)'],['Inside','rgb(238, 229, 244)'],['Outside','rgb(238, 229, 244)'],['Last','rgb(246, 236, 216)']] as const) {
+    const button=window.locator(`[data-stage-name="${stage}"]`);
+    await expect(button).toHaveCSS('font-weight','700');
+    await expect(button).toHaveCSS('border-top-width','2px');
+    await expect(button).toHaveCSS('background-color',fill);
+    await button.click();
+    await expect(button).toHaveAttribute('aria-current','step');
+  }
+  await window.screenshot({path:'verification/release-120-macos-header.png',fullPage:true});
+  await window.locator('#final-answer').click();
+  await expect(window.locator('#walkthrough .learn-expression')).toHaveAccessibleName('18 times 18 equals 324');
+  await expect(window.locator('#step-position')).toHaveText('7 / 7');
+  await window.locator('#step-back').click();
+  await expect(window.locator('#step-position')).toHaveText('6 / 7');
 });

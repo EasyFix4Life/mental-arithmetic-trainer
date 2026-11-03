@@ -1,0 +1,4 @@
+Android 1.2.0-preview.4: API 26 minimum / API 37 target, 19 CRC-checked APK members, verified signature and ZIP alignment.
+All 4 production frontend files match the APK byte-for-byte. No Android permissions or native ABI libraries are bundled.
+This package verification does not install or execute the APK.
+/private/tmp/mental-arithmetic-options-review-android/verification/android-artifacts.json

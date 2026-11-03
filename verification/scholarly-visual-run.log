@@ -1,0 +1,27 @@
+
+> mental-arithmetic-trainer@1.2.0-preview.1 test:browser
+> playwright test tests/browser/scholarly-visuals.spec.ts --workers=2
+
+[WebServer] (node:61535) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 2 workers
+
+(node:61556) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:61555) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/browser/scholarly-visuals.spec.ts:41:1 › carry routes expose whole authored values, origins and destinations without reconnecting operand digits (4.5s)
+  ✓  2 [desktop] › tests/browser/scholarly-visuals.spec.ts:15:1 › scholarly text and Arial mathematics accompany equal Learn stage treatments and authored pair brackets (5.7s)
+  ✓  4 [desktop] › tests/browser/scholarly-visuals.spec.ts:94:1 › Practice uses only monochrome controls and feedback with a separate wrong-answer symbol and unchanged numeric time (1.4s)
+(node:61741) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 [desktop] › tests/browser/scholarly-visuals.spec.ts:62:1 › narrow, tablet and doubled text layouts preserve aligned addition, bracket geometry and result boxes (9.4s)
+(node:61805) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  5 [mobile] › tests/browser/scholarly-visuals.spec.ts:15:1 › scholarly text and Arial mathematics accompany equal Learn stage treatments and authored pair brackets (5.7s)
+  ✓  7 [mobile] › tests/browser/scholarly-visuals.spec.ts:41:1 › carry routes expose whole authored values, origins and destinations without reconnecting operand digits (1.2s)
+  ✓  8 [mobile] › tests/browser/scholarly-visuals.spec.ts:94:1 › Practice uses only monochrome controls and feedback with a separate wrong-answer symbol and unchanged numeric time (696ms)
+  ✓  6 [mobile] › tests/browser/scholarly-visuals.spec.ts:62:1 › narrow, tablet and doubled text layouts preserve aligned addition, bracket geometry and result boxes (3.6s)
+
+  8 passed (23.3s)

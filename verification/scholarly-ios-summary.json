@@ -1,0 +1,167 @@
+{
+  "reviewEdition": "1.2.0-preview.1",
+  "nativeVersion": "1.2.0",
+  "build": "6",
+  "date": "2026-11-03",
+  "status": "local-design-preview-not-published",
+  "baseline": {
+    "version": "1.1.4",
+    "commit": "a5c5fd58c6e41abb3167b20c626b90bfbdfa1152",
+    "mathematicalCoreFilesByteIdentical": 4,
+    "compatibilityReport": "verification/scholarly-ios-core-compatibility.json"
+  },
+  "toolchain": {
+    "application": "/Applications/Xcode-beta.app",
+    "version": "Xcode27.0 beta",
+    "build": "27A5228h"
+  },
+  "visuals": {
+    "paper": "#FAF7F0",
+    "ink": "#000000",
+    "field": "#FFFFFF",
+    "first": "#2D6567",
+    "inside": "#6C5483",
+    "outside": "#6C5483",
+    "last": "#7D5723",
+    "textTypeface": "Baskerville",
+    "mathematicsTypeface": "ArialMT",
+    "practiceIncorrect": "Black \u00d7 cue and border; original numeric time and accessible correctness label preserved",
+    "pairConnectors": "Static and drawn only for one explicit existing digit pair; carry completion and multi-product groups are not assigned guessed pairings",
+    "carries": "Existing origin, whole carry value and destination; thirteen preserved in99\u00d759 regression",
+    "developingAnswer": "Equal-width Arial places render only the existing provided answer string"
+  },
+  "dynamicType": {
+    "testedCategory": "UIContentSizeCategoryAccessibilityExtraExtraExtraLarge",
+    "learn": "Headings scale; stage/catalog/header/navigation reflow vertically; no clipped stage labels; equation fits viewport",
+    "practice": "Actual keyboard-aware layout keeps mathematics between previous feedback and answer entry; timer stays beside the field; compact mathematics/feedback fit available space",
+    "nativeSegmentedControls": "Single-line scaled label font capped24pt while surrounding text remains scalable/scrollable"
+  },
+  "coreTests": {
+    "passed": 36,
+    "failed": 0,
+    "report": "verification/scholarly-ios-core-tests.txt"
+  },
+  "builds": {
+    "debugSimulator": "passed",
+    "releaseSimulator": "passed",
+    "unsignedDeviceArchive": "passed"
+  },
+  "debugUIKit": {
+    "iphone": {
+      "passed": 11,
+      "total": 11,
+      "skipped": 0,
+      "report": "verification/scholarly-ios-iphone-27.json",
+      "landscape": "Actual native rotation retains partial input and verifies mathematics, feedback, answer/timer nonoverlap in normal and enlarged text with keyboard"
+    },
+    "ipad": {
+      "passed": 10,
+      "total": 11,
+      "skipped": 1,
+      "report": "verification/scholarly-ios-ipad-26.json"
+    }
+  },
+  "actualPackagedReleaseAudits": {
+    "iphone": {
+      "version": "1.2.0",
+      "build": "6",
+      "passedChecks": 260,
+      "binaryUnchanged": true,
+      "report": "verification/scholarly-ios-iphone-release.json"
+    },
+    "ipad": {
+      "version": "1.2.0",
+      "build": "6",
+      "passedChecks": 260,
+      "binaryUnchanged": true,
+      "report": "verification/scholarly-ios-ipad-release.json"
+    }
+  },
+  "auditMethod": "Separate simulator-only dylib drives the final ZIP-extracted Release app UIKit controls and text-field delegates. Packaged/installed executable hashes match; no audit library is shipped.",
+  "availableLessons": [
+    "multiplication-1",
+    "addition-2",
+    "multiplication-2",
+    "multiplication-3"
+  ],
+  "defaultLearn": "addition-2",
+  "defaultPractice": {
+    "operation": "addition",
+    "digitCount": 2
+  },
+  "releaseBinaries": [
+    {
+      "kind": "simulator",
+      "version": "1.2.0",
+      "build": "6",
+      "minimumOS": "17.0",
+      "families": [
+        1,
+        2
+      ],
+      "architectures": "Architectures in the fat file: /tmp/mental-arithmetic-ios-scholarly/packaged-release/MentalArithmetic.app/MentalArithmetic are: x86_64 arm64",
+      "debugHarnessAbsent": true,
+      "externalAuditLibraryAbsent": true,
+      "removedLessonTitlesAbsent": true,
+      "signatureDirectoryPresent": false
+    },
+    {
+      "kind": "device",
+      "version": "1.2.0",
+      "build": "6",
+      "minimumOS": "17.0",
+      "families": [
+        1,
+        2
+      ],
+      "architectures": "Non-fat file: /tmp/mental-arithmetic-ios-scholarly/Mental-Arithmetic-1.2.0-preview.1-iOS-unsigned.xcarchive/Products/Applications/MentalArithmetic.app/MentalArithmetic is architecture: arm64",
+      "debugHarnessAbsent": true,
+      "externalAuditLibraryAbsent": true,
+      "removedLessonTitlesAbsent": true,
+      "signatureDirectoryPresent": false
+    }
+  ],
+  "sourceFilesVerifiedAgainstMirror": 29,
+  "sourceManifest": "verification/scholarly-ios-native-sources.json",
+  "generatedTokens": "ios/MentalArithmetic/UI/VisualTokens.generated.swift automatically included by Xcode synchronized source group; compiled in all three builds",
+  "screenshots": {
+    "raw": 30,
+    "opaqueReviewCopies": 30,
+    "directories": [
+      "ios/AppStore/Screenshots/1.2.0-preview.1-iPhone-27-beta",
+      "ios/AppStore/Screenshots/1.2.0-preview.1-iPad-26.5"
+    ],
+    "validation": "Actual native simulator captures; PNG CRCs/decompression/dimensions valid; decoded RGB samples preserved when removing unused opaque alpha. Inside/Outside brackets, iPad carry route, Practice monochrome feedback and enlarged keyboard layout visually reviewed."
+  },
+  "submissionFiles": 75,
+  "artifacts": [
+    {
+      "file": "Mental-Arithmetic-1.2.0-preview.1-iOS-Simulator-app.zip",
+      "bytes": 374247,
+      "sha256": "fd893c53e5b9ad3e06f1e4b98ce99d2c01816fe199faa78a212ce13513db38b2",
+      "copiesIdentical": true
+    },
+    {
+      "file": "Mental-Arithmetic-1.2.0-preview.1-iOS-unsigned-archive.zip",
+      "bytes": 896802,
+      "sha256": "7a490be00159da2fb8b1753240f1d23ab1df1b441312650ae3c95728280035bc",
+      "copiesIdentical": true
+    },
+    {
+      "file": "Mental-Arithmetic-1.2.0-preview.1-iOS-submission-files.zip",
+      "bytes": 8896563,
+      "sha256": "ce442b2b1f3edf15822feca2ab1c864742cbb6d3ccde88f1f0603ffce9739463",
+      "copiesIdentical": true
+    }
+  ],
+  "limitations": [
+    "UIKit control actions and text-field delegates are not physical keyboard or external XCUITest automation.",
+    "iPad programmatic landscape geometry request remains explicitly skipped; physical iPhone/iPad validation is unverified.",
+    "The device archive is unsigned and not an installable IPA. No App Store/TestFlight upload, production deployment or GitHub release publication was performed."
+  ],
+  "allChecksPassed": true,
+  "ownedSimulatorsShutDown": {
+    "35D20D1C-73F0-4F9F-A579-8FE27083201A": "Shutdown",
+    "F397A467-4ACD-4D14-A984-A8946A491219": "Shutdown"
+  }
+}

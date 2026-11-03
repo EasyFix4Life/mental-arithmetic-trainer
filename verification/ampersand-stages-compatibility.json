@@ -1,0 +1,267 @@
+{
+  "checkedAt": "2026-11-03T15:54:35.799185+00:00",
+  "version": "1.2.0-preview.3",
+  "baselineCommit": "0db325764a191e8e07d130e52efebcbb467d3239",
+  "fileCount": 42,
+  "files": [
+    {
+      "path": "src/answerPolicy.ts",
+      "bytes": 894,
+      "sha256": "9a98d597b0f7baa7264b387f52ef8a1f5e80892e5c69446d2dda602f77dd89c1",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/availableOptions.ts",
+      "bytes": 1040,
+      "sha256": "2fe4df4c59cc81e13bda9fd3e7e2b087bef26a1d2a7761461bc07addec11f038",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/generateRound.ts",
+      "bytes": 2719,
+      "sha256": "7b8b13e15b58e870f27468e538181423c1fa38f73bd5cceb66eb17a3ca8a52cf",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/inputPolicy.ts",
+      "bytes": 943,
+      "sha256": "1c46093bcaf0345926a460bcf7663bc985d1f77ba1b0b0049cd5046428dda8e8",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/roundController.ts",
+      "bytes": 5247,
+      "sha256": "2c6c26477b164bdf447e6ef9713ad16e1ad7572b066b016d913feb8cdabd2f67",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/timer.ts",
+      "bytes": 606,
+      "sha256": "bfaeaa1c0497565f6d3ceeba0064d903f4559d5b70cb192f86556bb79e0d4b04",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/types.ts",
+      "bytes": 1089,
+      "sha256": "f458432070b282817ece06654683477a9dfefee0201f64fd6f53cd14f2976b21",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/learn/lessonTypes.ts",
+      "bytes": 2254,
+      "sha256": "4a473acf63bc53140d517547db4f27821f26bc16ad6d054015806571018a1f99",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/learn/lessonCatalog.ts",
+      "bytes": 1705,
+      "sha256": "99dbb1613cd37158e9772f67f41501d838cc26196ed6b02c7bad89b3a97d4666",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/learn/confirmedMultiplicationExamples.ts",
+      "bytes": 4192,
+      "sha256": "3411c4e1e4daaf173d7f5ce047e9e103f89b849933352b58a448a869a5fa800c",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/learn/randomExample.ts",
+      "bytes": 7079,
+      "sha256": "03e5b67986bacb5626b1903e85d4c8b7f2518f06e6807859feeba8adfeb3dcd5",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/learn/positionalInstructions.ts",
+      "bytes": 6932,
+      "sha256": "f1392466307d8f0aed130cbc9abf6146a90ce973f6184057881c58901d3a848f",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/main.ts",
+      "bytes": 396,
+      "sha256": "c13ffd799c096737fe002924b377369aed35dfe77f5f83f3053e752ecb5bf3d2",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/view.ts",
+      "bytes": 2822,
+      "sha256": "860f5b14cf7e85a4b055d90a4e7cea025681012d311815519fa10bb5df7ea9d0",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/practiceView.ts",
+      "bytes": 10700,
+      "sha256": "ce63b28229713f95826516785a780a55cf28e59c237f945db586ccf0fa0fb15a",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/learn/carryVisualizer.ts",
+      "bytes": 3121,
+      "sha256": "4d092ae458ad1663806badccdf459b4334196a9ff0cc370cd25bd5c7a329362d",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/learn/instructionStepRenderer.ts",
+      "bytes": 11599,
+      "sha256": "cccb71e72d4b96329d54a4538d52d0ac1454bd0a0ab3f96fdfec3d65c92dfc80",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "ios/MentalArithmetic/UI/PracticeViewController.swift",
+      "bytes": 19273,
+      "sha256": "470b85192c60ff7a0f06d55143581ff192b5699f268cb5592a65497ebe48006a",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "src/designTokens.css",
+      "bytes": 770,
+      "sha256": "8516544a0b49a81985f6a9cab0524aab2886f772bd56114930a8b93ed9a0bb23",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "ios/MentalArithmetic/UI/VisualTokens.generated.swift",
+      "bytes": 1662,
+      "sha256": "29525c5d667d5059f49af29e593f326f80a059bf90250c3f4197d541d5d97346",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "android/app/src/main/res/values/visual_tokens.xml",
+      "bytes": 281,
+      "sha256": "9f423f4be68f1e6f927de078b10f013f33f729b934a628369bfaa43add7123f5",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "scripts/generate-visual-tokens.mjs",
+      "bytes": 3599,
+      "sha256": "4a0d988e0712fae71829f1a92200711a9de92016e1cc8aeb5cbff80f15ad871b",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "ios/MentalArithmetic/Core/ConfirmedExamples.swift",
+      "bytes": 5788,
+      "sha256": "bd157c428cbb7a618b6cbea656507a0861b50e61944e12f78ce44b66c68ae6de",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "ios/MentalArithmetic/Core/Lessons.swift",
+      "bytes": 12430,
+      "sha256": "fe3fef37a2c5a88440f164ed1bb9b089cfeb81feed42a90ae2cf8d5f377d3653",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "ios/MentalArithmetic/Core/PositionalInstructions.swift",
+      "bytes": 6603,
+      "sha256": "67407f4519d0c0d5bdc566a3ba246d83cf50d5657974d969c75ca922a343f5c0",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "ios/MentalArithmetic/Core/PracticeEngine.swift",
+      "bytes": 9528,
+      "sha256": "2e79e484425f18dd8cb3eae03e497d9d8e679e67769d79c1c7d4fa230c184956",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "requirements/CODEX_START_HERE.md",
+      "bytes": 5431,
+      "sha256": "579d70b0de8e1af2096d273df29d295c839bccf5319a6c50d39298b453bdf3b9",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "requirements/EXAMPLES_AND_EDGE_CASES.json",
+      "bytes": 9626,
+      "sha256": "859f00b3d1b50c2771fd33ff75989e16a294c087ee82e87ab7edef1d80b04a15",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "requirements/PRACTICE_TIMING_UPDATE_2026-10-24.json",
+      "bytes": 871,
+      "sha256": "e8580148f461dc8ccd41f0b88690c0173d4e64a2900132701aa27a971af84eb6",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "requirements/PRODUCT_SPEC.md",
+      "bytes": 10984,
+      "sha256": "44b308a200101be30fc2adaa77d468a3e6430749a7536f29814a683ea83337fd",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "requirements/QA_CHECKLIST.md",
+      "bytes": 4290,
+      "sha256": "fa0df05581610e973c3013315faab5206717ca28fa7343d668baa9d8a5c2f861",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "requirements/design/Math_Trainer_Work_Design_Brief_2026-11-03_NEW.md",
+      "bytes": 8759,
+      "sha256": "3a27dafcd88a9c6e4a6e26bdc9f519448fc82bc21970fef11498bb64fb92817f",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "requirements/design/OWNER_GROUPED_STAGE_LAYOUT_2026-11-03.md",
+      "bytes": 2379,
+      "sha256": "a670ac59609742b20b8e71320c9fdb8b8f18f45aed507e04cb85ce9073ea5273",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "requirements/instruction/ALL_LENGTHS_OWNER_METHOD_2026-10-24.json",
+      "bytes": 2183,
+      "sha256": "9e0588a3fe4c7d061920897fee66ed374a68ca4307a21913d51f4181fab0cfed",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "requirements/instruction/CODEX_INSTRUCTIONAL_HANDOFF.md",
+      "bytes": 10605,
+      "sha256": "2abb2e3ccb2a36555b2914fd612054d81aefd158e90ae8bb55842d6f280aba10",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "requirements/instruction/EXAMPLES_AND_EDGE_CASES.json",
+      "bytes": 9626,
+      "sha256": "859f00b3d1b50c2771fd33ff75989e16a294c087ee82e87ab7edef1d80b04a15",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "requirements/instruction/INSTRUCTIONAL_LESSON_DATA_as_text.txt",
+      "bytes": 2560,
+      "sha256": "986c9bbbe488a83db37da16bb6d536c39cf3c88d4e6b635b1eccae69fde8e120",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "requirements/instruction/LEARN_RANDOM_EXAMPLES_2026-10-24.json",
+      "bytes": 2039,
+      "sha256": "15f912cf5aabecd4bf3e7b91210340958027ce0ae5b409e59a089e7e6a698f0e",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "requirements/instruction/Mental_Arithmetic_Instructional_Lessons_Codex_2026-10-24.json",
+      "bytes": 3021,
+      "sha256": "7766b177e3c046cdf7ebf507a67674e94c53896833afb5dfaa46555c8500edd3",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "requirements/instruction/OWNER_ADDITION_OPTIONS_2026-11-02.md",
+      "bytes": 778,
+      "sha256": "33042607254321271287b3397682b9a541e5c3e7d9c37fef7772344eaeb2b09a",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "requirements/instruction/OWNER_CONFIRMED_MULTIPLICATION_2026-10-24.json",
+      "bytes": 5434,
+      "sha256": "929811c266726924a77efb6831d9abfb37006d8dc4b7eca9abef0fdf4efa578b",
+      "unchangedFromPreview2": true
+    },
+    {
+      "path": "requirements/instruction/OWNER_INSIDE_OUTSIDE_CORRECTION_2026-11-02.md",
+      "bytes": 1694,
+      "sha256": "cf175032deb42bfe8843bc61a3d1491350fbce88ddbd0d44097e09c4473dcbc0",
+      "unchangedFromPreview2": true
+    }
+  ],
+  "canonicalPaletteAndDesignTokensUnchangedExceptVersion": true,
+  "allThreeGeneratedTokenFilesByteIdentical": true,
+  "PracticeAndCarryRouteCodeUnchanged": true,
+  "headerOnlyNavDiffReconstructsPreview2": true,
+  "headerOnlyCSSDiffReconstructsPreview2": true,
+  "scope": "Only the two header arrows become literal upright ampersands, with matching accessible conjunction. Carry arrows, mathematical traces, practice code and all prior requirements are unchanged.",
+  "allChecksPassed": true
+}

@@ -1,0 +1,15 @@
+{
+  "taskOwnedOnly": true,
+  "devices": [
+    {
+      "udid": "35D20D1C-73F0-4F9F-A579-8FE27083201A",
+      "name": "MentalArithmetic-iPhone-27",
+      "state": "Shutdown"
+    },
+    {
+      "udid": "F397A467-4ACD-4D14-A984-A8946A491219",
+      "name": "MentalArithmetic-iPad-26",
+      "state": "Shutdown"
+    }
+  ]
+}

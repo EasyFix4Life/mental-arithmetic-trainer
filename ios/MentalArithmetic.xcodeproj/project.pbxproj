@@ -69,8 +69,8 @@
 				"PRODUCT_MODULE_NAME" = "MentalArithmetic";
 				"TARGETED_DEVICE_FAMILY" = "1,2";
 				"CODE_SIGN_STYLE" = "Automatic";
-				"MARKETING_VERSION" = "1.1.4";
-				"CURRENT_PROJECT_VERSION" = "5";
+				"MARKETING_VERSION" = "1.2.0";
+				"CURRENT_PROJECT_VERSION" = "10";
 				"GENERATE_INFOPLIST_FILE" = "NO";
 				"INFOPLIST_FILE" = "MentalArithmetic/Info.plist";
 				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
@@ -101,8 +101,8 @@
 				"PRODUCT_MODULE_NAME" = "MentalArithmetic";
 				"TARGETED_DEVICE_FAMILY" = "1,2";
 				"CODE_SIGN_STYLE" = "Automatic";
-				"MARKETING_VERSION" = "1.1.4";
-				"CURRENT_PROJECT_VERSION" = "5";
+				"MARKETING_VERSION" = "1.2.0";
+				"CURRENT_PROJECT_VERSION" = "10";
 				"GENERATE_INFOPLIST_FILE" = "NO";
 				"INFOPLIST_FILE" = "MentalArithmetic/Info.plist";
 				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
@@ -206,8 +206,8 @@
 				"PRODUCT_MODULE_NAME" = "MentalArithmeticTests";
 				"TARGETED_DEVICE_FAMILY" = "1,2";
 				"CODE_SIGN_STYLE" = "Automatic";
-				"MARKETING_VERSION" = "1.1.4";
-				"CURRENT_PROJECT_VERSION" = "5";
+				"MARKETING_VERSION" = "1.2.0";
+				"CURRENT_PROJECT_VERSION" = "10";
 				"GENERATE_INFOPLIST_FILE" = "YES";
 				"BUNDLE_LOADER" = "$(TEST_HOST)";
 				"TEST_HOST" = "$(BUILT_PRODUCTS_DIR)/MentalArithmetic.app/MentalArithmetic";
@@ -236,8 +236,8 @@
 				"PRODUCT_MODULE_NAME" = "MentalArithmeticTests";
 				"TARGETED_DEVICE_FAMILY" = "1,2";
 				"CODE_SIGN_STYLE" = "Automatic";
-				"MARKETING_VERSION" = "1.1.4";
-				"CURRENT_PROJECT_VERSION" = "5";
+				"MARKETING_VERSION" = "1.2.0";
+				"CURRENT_PROJECT_VERSION" = "10";
 				"GENERATE_INFOPLIST_FILE" = "YES";
 				"BUNDLE_LOADER" = "$(TEST_HOST)";
 				"TEST_HOST" = "$(BUILT_PRODUCTS_DIR)/MentalArithmetic.app/MentalArithmetic";
@@ -340,8 +340,8 @@
 				"PRODUCT_MODULE_NAME" = "MentalArithmeticUITests";
 				"TARGETED_DEVICE_FAMILY" = "1,2";
 				"CODE_SIGN_STYLE" = "Automatic";
-				"MARKETING_VERSION" = "1.1.4";
-				"CURRENT_PROJECT_VERSION" = "5";
+				"MARKETING_VERSION" = "1.2.0";
+				"CURRENT_PROJECT_VERSION" = "10";
 				"GENERATE_INFOPLIST_FILE" = "YES";
 				"TEST_TARGET_NAME" = "MentalArithmetic";
 				"LD_RUNPATH_SEARCH_PATHS" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -369,8 +369,8 @@
 				"PRODUCT_MODULE_NAME" = "MentalArithmeticUITests";
 				"TARGETED_DEVICE_FAMILY" = "1,2";
 				"CODE_SIGN_STYLE" = "Automatic";
-				"MARKETING_VERSION" = "1.1.4";
-				"CURRENT_PROJECT_VERSION" = "5";
+				"MARKETING_VERSION" = "1.2.0";
+				"CURRENT_PROJECT_VERSION" = "10";
 				"GENERATE_INFOPLIST_FILE" = "YES";
 				"TEST_TARGET_NAME" = "MentalArithmetic";
 				"LD_RUNPATH_SEARCH_PATHS" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

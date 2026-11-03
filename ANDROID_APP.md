@@ -1,5 +1,125 @@
 # Mental Arithmetic for Android
 
+## Stable version 1.2.0
+
+Version **1.2.0**, Android code **10204**, contains the approved preview4 offerings:
+
+- **Learn:** Single-digit multiplication and Two-digit multiplication; initial selection is single-digit multiplication.
+- **Practice:** Two-digit addition, Single-digit multiplication and Two-digit multiplication; initial selection is two-digit addition.
+
+No addition lesson or three-digit multiplication choice appears in the active interface. Two-digit addition Practice retains vertically aligned two-digit operands and ten unique questions. The lessons, corrected Inside/Outside pairings, upright **&** header connectors, carry routes, random examples, automatic answer submission and minimum/maximum/average timings match the approved preview.
+
+- APK: [Mental-Arithmetic-1.2.0-Android.apk](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.2.0-Android.apk).
+- Verification: [RELEASE_120_ANDROID_TEST_RESULTS.md](verification/RELEASE_120_ANDROID_TEST_RESULTS.md).
+- Application ID: **local.jeff.mentalarithmetic**, with the original signing identity.
+- Supported minimum: **Android 8.0 / API 26**; compile/target API **37**. The universal APK uses the device's installed System WebView.
+
+Code **10204** is higher than preview4's **10203**, so the stable package can install as an update. Build the current stable checkout using the prerequisites and private signing files documented below:
+
+```text
+npm ci
+npm run build:android -- --tests
+npm run verify:android -- release/Mental-Arithmetic-1.2.0-Android.apk
+```
+
+All sections below are preserved historical release/preview records. Their version numbers, public-status statements and build commands describe those earlier snapshots; use this stable section for version 1.2.0.
+
+
+## Local offering review — 1.2.0-preview.4
+
+The current local preview offers exactly these choices:
+
+- **Learn:** Single-digit multiplication and Two-digit multiplication. Learn starts on single-digit multiplication; addition lessons and three-digit multiplication are absent from the active catalog.
+- **Practice:** Two-digit addition, Single-digit multiplication and Two-digit multiplication. Addition retains two two-digit operands and ten unique questions per manually started round. Three-digit multiplication is absent from the digit selector.
+
+This revision changes availability rather than the retained arithmetic and teaching procedures. The corrected Inside/Outside pairings, two upright **&** header connectors, grouped stage controls, carry arrows, random examples, automatic submission and round timing remain. Historical three-digit engine fixtures and earlier evidence remain available in source.
+
+- Local APK: [Mental-Arithmetic-1.2.0-preview.4-Android.apk](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.2.0-preview.4-Android.apk).
+- Verification: [OPTIONS_REVIEW_ANDROID_TEST_RESULTS.md](verification/OPTIONS_REVIEW_ANDROID_TEST_RESULTS.md).
+- Version name/code: **1.2.0-preview.4 / 10203**, using the original app identity and signing key.
+
+This preview is for local review. It has not been published or added to website downloads; **1.1.4 remains the public release**. Earlier sections below document preserved historical builds. Build this preview4 checkout using the prerequisites and private signing files described below:
+
+```text
+npm ci
+npm run build:android -- --tests
+npm run verify:android -- release/Mental-Arithmetic-1.2.0-preview.4-Android.apk
+```
+
+
+## Local literal-ampersand review — 1.2.0-preview.3
+
+This local revision changes only the two connectors in the named-stage header to the literal **&** character:
+
+**[First & [Inside + Outside] & Last] = [Final Answer: ####]**
+
+Both ampersands remain upright in portrait and landscape. The middle plus sign, equals sign, separate complete Final Answer control, colors, fills, bold text and equal strokes remain as in preview2. Carry-route arrows and digit-pair connections retain their existing appearance and meaning. Arithmetic and Practice are unchanged.
+
+- Local APK: [Mental-Arithmetic-1.2.0-preview.3-Android.apk](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.2.0-preview.3-Android.apk).
+- Verification: [AMPERSAND_STAGES_ANDROID_TEST_RESULTS.md](verification/AMPERSAND_STAGES_ANDROID_TEST_RESULTS.md).
+- Version name/code: **1.2.0-preview.3 / 10202**, using the original app identity and signing key.
+
+Preview2 and preview1 artifacts and evidence remain preserved. This preview has not been deployed or published; **1.1.4 remains the public release**. Build this current checkout with the same prerequisites and private signing files documented below:
+
+```text
+npm ci
+npm run build:android -- --tests
+npm run verify:android -- release/Mental-Arithmetic-1.2.0-preview.3-Android.apk
+```
+
+
+## Local grouped-stage review preview — 1.2.0-preview.2
+
+This local review revision presents two-digit multiplication stages as **[First → [Inside + Outside] → Last] = [Final Answer: ####]**. The outer group contains the four instructional stages; the inner group joins Inside and Outside with a visible plus sign. An equals sign follows the outer group, and the complete **Final Answer** stays in its own interactive box.
+
+All four stage controls use bold type and equal **2px** colored borders. Their text and lighter fills follow the shared design tokens:
+
+| Stage | Text and border | Lighter fill |
+| --- | --- | --- |
+| First | `#126C70` | `#E2F1EF` |
+| Inside and Outside | `#755093` | `#EEE5F4` |
+| Last | `#885A15` | `#F6ECD8` |
+
+The revision retains the ivory native chrome, instructional arithmetic and corrected Inside/Outside pairings. Practice uses the existing monochrome preview design, timing and input behavior. This is a local build with the original application identity and signing key, version name **1.2.0-preview.2**, and version code **10201** configured in `package.json` and the Android project. It has not been published or added to website downloads; **1.1.4 remains the public release**.
+
+- Local APK: [Mental-Arithmetic-1.2.0-preview.2-Android.apk](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.2.0-preview.2-Android.apk).
+- Native review checks: [GROUPED_STAGES_ANDROID_TEST_RESULTS.md](verification/GROUPED_STAGES_ANDROID_TEST_RESULTS.md).
+- The earlier preview1 APK and its verification below are preserved.
+
+Build this source checkout with the same Android prerequisites and original private signing files described below:
+
+```text
+npm ci
+npm run build:android -- --tests
+npm run verify:android -- release/Mental-Arithmetic-1.2.0-preview.2-Android.apk
+```
+
+
+## Earlier local visual review preview — 1.2.0-preview.1
+
+**1.2.0-preview.1** (Android version code **10200**) is a local review build of the scholarly visual design. It has not been published, uploaded to an app store, or added to production website downloads. **1.1.4 remains the public release**, and its download links below remain unchanged.
+
+The preview uses the shared `design/visual-tokens.json` specification: light ivory **#FAF7F0**, scholarly serif text with platform fallbacks, and large Arial mathematical numerals with available sans-serif fallbacks. Native launch/inset/status/navigation areas match the ivory background with dark system icons. Learn uses **First #2D6567**, **Inside/Outside #6C5483**, and **Last #7D5723** with equal highlighting weight. Carry values name their source and destination. Practice uses black content and controls on ivory with a white answer field; an incorrect previous time is distinguished by a black **×** and border. The numeric time remains separate and black.
+
+The arithmetic, instructional order, corrected Inside/Outside digit selections, random examples, two-digit-only addition choice, ten-question scoring, immediate submission/advance, keyboard behavior and timing statistics are preserved.
+
+- Local preview APK: [Mental-Arithmetic-1.2.0-preview.1-Android.apk](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.2.0-preview.1-Android.apk).
+- Preview verification: [VISUAL_REVIEW_ANDROID_TEST_RESULTS.md](verification/VISUAL_REVIEW_ANDROID_TEST_RESULTS.md).
+
+To build this development preview from its source checkout, use:
+
+```text
+npm ci
+npm run build:android -- --tests
+npm run verify:android -- release/Mental-Arithmetic-1.2.0-preview.1-Android.apk
+```
+
+The Android prerequisites and private signing-key requirements below apply to both the preview and public baseline.
+
+This preview uses the original application identity and signing key so it can update 1.1.4. Its higher version code means Android cannot install 1.1.4 back over it as a normal update; returning to 1.1.4 would require uninstalling the preview and losing this app's local data. The development checks use an owned disposable emulator rather than a personal phone.
+
+## Public 1.1.4 baseline
+
 **1.1.4 instructional correction:** **Inside** now selects the two inner digits, and **Outside** selects the two outer digits in every two-digit multiplication walkthrough. For **82 × 76**, Inside is **2 × 7 = 14** and Outside is **8 × 6 = 48**. See [the Android correction checks](verification/INSIDE_OUTSIDE_ANDROID_TEST_RESULTS.md).
 
 The prominent **? Click Here to Learn How!** button introduced in 1.1.1 is preserved. [Its historical update report](verification/HELP_BUTTON_UPDATE.md) and the earlier verification records remain available.

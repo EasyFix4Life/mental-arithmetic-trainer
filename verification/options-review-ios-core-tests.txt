@@ -1,0 +1,117 @@
+Building for debugging...
+[Planning deferred tasks]
+[28 / 52]
+[29 / 53] MentalArithmetic
+[41 / 92]
+[46 / 92]
+[48 / 92]
+[53 / 92]
+[57 / 92]
+[60 / 92]
+[62 / 92]
+[63 / 92]
+[68 / 92] MentalArithmetic
+[76 / 92] MentalArithmetic
+[82 / 93] MentalArithmeticTests-product
+[102 / 131]
+[106 / 131]
+[108 / 131]
+[111 / 131]
+[114 / 131]
+[115 / 131]
+[122 / 131] MentalArithmeticTests-product
+[125 / 131] MentalArithmeticTests-product
+[127 / 131] MentalArithmeticTests-product
+Build complete! (6.90 sec)
+Test Suite 'All tests' started at 2026-11-03 11:22:36.134.
+Test Suite 'MentalArithmeticTests.xctest' started at 2026-11-03 11:22:36.136.
+Test Suite 'LessonTests' started at 2026-11-03 11:22:36.136.
+Test Case '-[MentalArithmeticTests.LessonTests testAdditionGroupOrderVerticalTermsAndCarries]' started.
+Test Case '-[MentalArithmeticTests.LessonTests testAdditionGroupOrderVerticalTermsAndCarries]' passed (0.001 seconds).
+Test Case '-[MentalArithmeticTests.LessonTests testAll8100TwoDigitProductsAndCarryRoutes]' started.
+Test Case '-[MentalArithmeticTests.LessonTests testAll8100TwoDigitProductsAndCarryRoutes]' passed (0.166 seconds).
+Test Case '-[MentalArithmeticTests.LessonTests testAllOneAndTwoDigitAdditionTraces]' started.
+Test Case '-[MentalArithmeticTests.LessonTests testAllOneAndTwoDigitAdditionTraces]' passed (0.054 seconds).
+Test Case '-[MentalArithmeticTests.LessonTests testAllSingleDigitMultiplicationTraces]' started.
+Test Case '-[MentalArithmeticTests.LessonTests testAllSingleDigitMultiplicationTraces]' passed (0.001 seconds).
+Test Case '-[MentalArithmeticTests.LessonTests testExactConfirmedEighteenTimesEighteenTraceAndCarryRoutes]' started.
+Test Case '-[MentalArithmeticTests.LessonTests testExactConfirmedEighteenTimesEighteenTraceAndCarryRoutes]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.LessonTests testExactConfirmedTwelveTimesTwelveTrace]' started.
+Test Case '-[MentalArithmeticTests.LessonTests testExactConfirmedTwelveTimesTwelveTrace]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.LessonTests testGeneratedEighteenCarryDirectionsAndZeroOnesDigits]' started.
+Test Case '-[MentalArithmeticTests.LessonTests testGeneratedEighteenCarryDirectionsAndZeroOnesDigits]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.LessonTests testGenericExampleDispatchesHistoricalConfigurations]' started.
+Test Case '-[MentalArithmeticTests.LessonTests testGenericExampleDispatchesHistoricalConfigurations]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.LessonTests testHistoricalRandomExamplesCoverAllDigitSizesAndOperations]' started.
+Test Case '-[MentalArithmeticTests.LessonTests testHistoricalRandomExamplesCoverAllDigitSizesAndOperations]' passed (0.001 seconds).
+Test Case '-[MentalArithmeticTests.LessonTests testInsideAndOutsideUseInnerAndOuterDigitsForUnequalCrossProducts]' started.
+Test Case '-[MentalArithmeticTests.LessonTests testInsideAndOutsideUseInnerAndOuterDigitsForUnequalCrossProducts]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.LessonTests testLearnAvailabilityIsIndependentOfPracticeAndRetainsHistoricalFixtures]' started.
+Test Case '-[MentalArithmeticTests.LessonTests testLearnAvailabilityIsIndependentOfPracticeAndRetainsHistoricalFixtures]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.LessonTests testLearnCatalogContainsOnlyOneAndTwoDigitMultiplication]' started.
+Test Case '-[MentalArithmeticTests.LessonTests testLearnCatalogContainsOnlyOneAndTwoDigitMultiplication]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.LessonTests testMultiplicationTraceRejectsOutOfScopeOperands]' started.
+Test Case '-[MentalArithmeticTests.LessonTests testMultiplicationTraceRejectsOutOfScopeOperands]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.LessonTests testNoImmediateUnorderedRepeatEvenWithConstantRNGAndUpperBound]' started.
+Test Case '-[MentalArithmeticTests.LessonTests testNoImmediateUnorderedRepeatEvenWithConstantRNGAndUpperBound]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.LessonTests testOwnerSpecifiedThreeDigitGroupOrderAndCarrySequence]' started.
+Test Case '-[MentalArithmeticTests.LessonTests testOwnerSpecifiedThreeDigitGroupOrderAndCarrySequence]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.LessonTests testRandomExamplesRejectInvalidInjectedSamples]' started.
+Test Case '-[MentalArithmeticTests.LessonTests testRandomExamplesRejectInvalidInjectedSamples]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.LessonTests testThreeDigitAdditionBoundaryAndVariedExamples]' started.
+Test Case '-[MentalArithmeticTests.LessonTests testThreeDigitAdditionBoundaryAndVariedExamples]' passed (0.055 seconds).
+Test Case '-[MentalArithmeticTests.LessonTests testThreeDigitMultiplicationBoundaryAndDeterministicVariedProducts]' started.
+Test Case '-[MentalArithmeticTests.LessonTests testThreeDigitMultiplicationBoundaryAndDeterministicVariedProducts]' passed (0.091 seconds).
+Test Suite 'LessonTests' passed at 2026-11-03 11:22:36.507.
+	 Executed 18 tests, with 0 failures (0 unexpected) in 0.370 (0.371) seconds
+Test Suite 'PracticeEngineTests' started at 2026-11-03 11:22:36.507.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testAppAvailabilityExcludesThreeDigitPracticeButRetainsHistoricalGenerator]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testAppAvailabilityExcludesThreeDigitPracticeButRetainsHistoricalGenerator]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testAtomicOverlongSubmitsOnlyOneWrongAnswer]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testAtomicOverlongSubmitsOnlyOneWrongAnswer]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testCompletedSummaryIsStableAndRequiresManualRestart]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testCompletedSummaryIsStableAndRequiresManualRestart]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testCorrectAndWrongAcceptedAnswersAdvanceImmediately]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testCorrectAndWrongAcceptedAnswersAdvanceImmediately]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testCurrentAppChoicesDefaultToTwoDigitAdditionAndNormalizeOperationSwitches]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testCurrentAppChoicesDefaultToTwoDigitAdditionAndNormalizeOperationSwitches]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testGenerationFailurePreservesExistingStateAndTimer]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testGenerationFailurePreservesExistingStateAndTimer]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testGeneratorTerminatesWithPathologicalRNG]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testGeneratorTerminatesWithPathologicalRNG]' passed (0.001 seconds).
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testIdleNeedsManualStart]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testIdleNeedsManualStart]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testInvalidTransactionsAreRejectedWhole]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testInvalidTransactionsAreRejectedWhole]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testPartialInvalidDuplicateAndStaleInputsDoNotAdvanceOrResetTimer]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testPartialInvalidDuplicateAndStaleInputsDoNotAdvanceOrResetTimer]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testProvisionalNextPhysicalKeyTargetsCurrentProblem]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testProvisionalNextPhysicalKeyTargetsCurrentProblem]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testReplacementDeletionAndAtomicInsertion]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testReplacementDeletionAndAtomicInsertion]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testSixConfigurationsHaveTenUniqueUnorderedInRangePairs]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testSixConfigurationsHaveTenUniqueUnorderedInRangePairs]' passed (0.006 seconds).
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testSquaresRemainEligibleAndOperandOrderCanReverse]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testSquaresRemainEligibleAndOperandOrderCanReverse]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testSummaryUsesRawTimesForAllTenIncludingIncorrectAnswers]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testSummaryUsesRawTimesForAllTenIncludingIncorrectAnswers]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testSuppliedArithmeticExamples]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testSuppliedArithmeticExamples]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testSuppliedInputCases]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testSuppliedInputCases]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testSuppliedScoreCases]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testSuppliedScoreCases]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testTimerDisplaysCompletedTenthsAndClampsNegativeClock]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testTimerDisplaysCompletedTenthsAndClampsNegativeClock]' passed (0.000 seconds).
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testValidationRejectsCommutativeDuplicatesMismatchedRangesAndOperation]' started.
+Test Case '-[MentalArithmeticTests.PracticeEngineTests testValidationRejectsCommutativeDuplicatesMismatchedRangesAndOperation]' passed (0.000 seconds).
+Test Suite 'PracticeEngineTests' passed at 2026-11-03 11:22:36.517.
+	 Executed 20 tests, with 0 failures (0 unexpected) in 0.009 (0.009) seconds
+Test Suite 'MentalArithmeticTests.xctest' passed at 2026-11-03 11:22:36.517.
+	 Executed 38 tests, with 0 failures (0 unexpected) in 0.379 (0.381) seconds
+Test Suite 'All tests' passed at 2026-11-03 11:22:36.517.
+	 Executed 38 tests, with 0 failures (0 unexpected) in 0.379 (0.382) seconds
+◇ Test run started.
+↳ Testing Library Version: 2074
+↳ Target Platform: arm64e-apple-macos14.0
+✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.

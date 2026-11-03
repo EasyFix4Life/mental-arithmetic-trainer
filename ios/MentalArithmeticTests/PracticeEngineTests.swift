@@ -153,12 +153,25 @@ final class PracticeEngineTests: XCTestCase {
         XCTAssertEqual(PracticeSettings.initial, PracticeSettings(operation: .addition, digitCount: .two))
         XCTAssertEqual(RoundController().snapshot.settings, PracticeSettings.initial)
         XCTAssertEqual(PracticeSettings.availableDigits(for: .addition), [.two])
-        XCTAssertEqual(PracticeSettings.availableDigits(for: .multiplication), [.one, .two, .three])
+        XCTAssertEqual(PracticeSettings.availableDigits(for: .multiplication), [.one, .two])
         for priorDigits in OperandDigits.allCases {
             XCTAssertEqual(PracticeSettings.appSelection(operation: .addition, digitCount: priorDigits),
                            PracticeSettings(operation: .addition, digitCount: .two))
             XCTAssertEqual(PracticeSettings.appSelection(operation: .multiplication, digitCount: priorDigits),
-                           PracticeSettings(operation: .multiplication, digitCount: priorDigits))
+                           PracticeSettings(operation: .multiplication, digitCount: priorDigits == .three ? .one : priorDigits))
+        }
+    }
+
+    func testAppAvailabilityExcludesThreeDigitPracticeButRetainsHistoricalGenerator() {
+        for operation in ArithmeticOperation.allCases {
+            for digits in OperandDigits.allCases {
+                let settings = PracticeSettings(operation: operation, digitCount: digits)
+                XCTAssertEqual(settings.isAvailable, operation == .addition ? digits == .two : digits != .three)
+                XCTAssertTrue(PracticeSettings.appSelection(operation: operation, digitCount: digits).isAvailable)
+            }
+            let historical = RoundGenerator.generate(settings: PracticeSettings(operation: operation, digitCount: .three))
+            XCTAssertEqual(historical.count, 10)
+            XCTAssertTrue(historical.allSatisfy { (100...999).contains($0.left) && (100...999).contains($0.right) })
         }
     }
 

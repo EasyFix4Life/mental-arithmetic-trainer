@@ -1,78 +1,74 @@
-# iPhone and iPad app — 1.1.4
+# iPhone and iPad development downloads — 1.2.0
 
-**1.1.4 correction:** Two-digit multiplication now labels the inner and outer digit pairs correctly. For 82 × 76, **Inside is 2 × 7 = 14** and **Outside is 8 × 6 = 48**, followed by **14 + 48 = 62**. Fixed 12 × 12 and 18 × 18 walkthroughs use the same corrected selections. Learn and Practice retain two-digit addition and single-, two-, or three-digit multiplication; Practice timing and automatic submission are unchanged. Privacy displays **Version 1.1.4 (build 5)**. Current evidence uses `verification/inside-outside-ios-*`.
+**Version 1.2.0, build 10.** Prepared for the owner-authorized GitHub 1.2.0 release as iOS development downloads. The native app matches approved preview 4 (`2cd3f1e6f15c0709fe444ff9cf32585d41ac89e2`) without UI, arithmetic or option changes. These packages have not been submitted to App Store Connect or TestFlight.
 
-The iOS app is a native Swift/UIKit application in `ios/MentalArithmetic.xcodeproj`. It uses Arial numerals, the existing sepia presentation, four instructional categories (two-digit addition and single-, two-, and three-digit multiplication) with random examples, stacked addition, and ten-question Practice with automatic submission and minimum/maximum/average timing. It runs offline and contains no WebView, third-party SDK, account, analytics or network service. The minimum deployment target is iOS/iPadOS 17.0.
+The iOS app is native Swift/UIKit, with iOS/iPadOS 17.0 minimum compatibility. It runs offline without a WebView, account, advertisements, analytics, tracking or app network requests. Learn offers single- and two-digit multiplication only, starting at its first available lesson (single-digit multiplication). Practice offers two-digit addition plus single- and two-digit multiplication. No addition lesson or three-digit multiplication option appears in the app. The three-digit arithmetic engine, original requirements and historical fixtures remain available in source for verification and later work. Arithmetic algorithms and owner-confirmed instruction data retain their existing corrected Inside/Outside selections, random examples, ten-question Practice, automatic answer submission and round timing.
 
-## Open and run with Xcode beta
+## Current app choices
 
-Open the Xcode project in **Xcode-beta.app**, select the **MentalArithmetic** scheme, choose an iPhone or iPad simulator and press Run. No paid membership is needed for the simulator.
+The current Learn catalog is **M1, M2**. Practice is **A2, M1, M2**, retaining A2 as its initial setting. Switching operations preserves an allowed digit count; invalid stale settings normalize to the selected operation's first allowed count (A2 or M1). Learn availability is separate from Practice availability. `LessonCatalog.allLessons` retains the historical instruction fixtures, while `LessonCatalog.lessons` filters the app's two available lessons. No generator arithmetic or carry procedure is deleted.
+
+The named two-digit multiplication controls now express the requested visual relationship:
+
+`[ First & [ Inside + Outside ] & Last ] = [ Final Answer: #### ]`
+
+First, Inside, Outside and Last remain four independently selectable buttons. All four use the same bold Baskerville type, padding and two-point borders, with matching light fills. Inside and Outside stay together inside an outlined violet middle section with an explicit plus sign. The two literal upright ampersands are decorative header connectors; the existing carry-route down arrows are unchanged. The neutral Final Answer button and visible equals sign are outside the stage enclosure; its digits use Arial. Selection changes underlining and accessibility traits without changing the four boxes' relative weight.
+
+The logical action order remains First, Inside, Outside, Last, Final Answer. Direct stage/final selection, Next/Back and existing carry screens are preserved. The wide layout is selected only when the measured complete diagram (words, shared padding, group margins, measured ampersands, plus, equals and final caption) fits. Otherwise the outer sections stack; the middle pair independently stacks when needed, including largest accessibility text, within the same outline. Unbreakable heading words fit their available line while retaining Dynamic Type scaling. Other numbered lessons keep their existing navigation.
+
+Version 1.2.0 packages the approved preview 4 behavior. All native app, core and test sources remain byte-identical to that approved commit; only the native build number and release preparation metadata change. Earlier 1.1.4 and preview packages, source snapshots, screenshots and reports are retained as historical files.
+
+## Visual changes
+
+The shared design specification is `design/VISUAL_DESIGN_SPEC.md`; canonical colors and dimensions are in `design/visual-tokens.json`. `npm run design:tokens` generates `ios/MentalArithmetic/UI/VisualTokens.generated.swift`. Xcode's synchronized source group includes this generated file automatically; do not hand-edit it.
+
+- Ivory paper `#FAF7F0`, black ink and white controls/answer fields replace the darker sepia presentation.
+- Baskerville supplies scholarly headings, prose and controls; mathematical calculations, operands, answer entry, timers and scores remain Arial.
+- Learn alone uses First teal `#126C70`, Inside and Outside the same violet `#755093`, and Last amber `#885A15`. Each uses equal two-point borders and bold type. Stage fills are First `#E2F1EF`, Inside/Outside `#EEE5F4`, Last `#F6ECD8`; selection adds an underline. Single-digit instructional steps remain neutral.
+- Existing static pair connectors appear only when the existing calculation explicitly agrees with a single authored highlighted pair. Carry-completion and multi-product screens do not gain guessed pairings.
+- Carries show their existing origin, whole carried value and destination in static routes. Developing-answer slots render only the provided answer characters. No value or place is inferred by the presentation.
+- Practice uses black/white/ivory throughout. Incorrect feedback keeps its numeric time and accessible correctness description, with a separate black **×** and border replacing red. Timers retain their existing positions.
+
+Text supports Dynamic Type. Accessible stage/catalog layouts reflow vertically, with scrollable instructional content. Native segmented choices remain one line and cap their scaled label font at 24 points to preserve readable complete choices; surrounding text scales without that cap. Timed mathematics scales within its available space to avoid covering the answer/timer. System keyboards remain platform-owned.
+
+## Open and build with Xcode beta
+
+Open `ios/MentalArithmetic.xcodeproj` with `/Applications/Xcode-beta.app`, choose **MentalArithmetic**, select an iPhone or iPad simulator and Run. No Apple Developer Program membership is required for simulator review.
 
 ```bash
 open -a /Applications/Xcode-beta.app ios/MentalArithmetic.xcodeproj
-```
-
-The verified local toolchain is `/Applications/Xcode-beta.app/Contents/Developer`, Xcode 27 beta build **27A5228h**, with the iOS 27 SDK. The simulator checks use iOS 26.5 and 27 where recorded in `verification/IOS_TEST_RESULTS.md`. This beta toolchain was explicitly requested by the owner.
-
-To build from Terminal without changing the system's selected Xcode:
-
-```bash
 DEVELOPER_DIR=/Applications/Xcode-beta.app/Contents/Developer npm run build:ios:simulator
 DEVELOPER_DIR=/Applications/Xcode-beta.app/Contents/Developer npm run build:ios
 ```
 
-The first command packages a Release simulator `.app`; the second packages an **unsigned device archive**. Both write ZIPs to `release/`. They do not sign, upload, create an App Store Connect record, or publish the app. The scripts prefer the installed Xcode beta when `DEVELOPER_DIR` is absent, while preserving an explicit override.
+Local verification uses Xcode 27 beta build **27A5228h**, as requested by the owner. The normal build scripts derive artifact filenames from the shared package version. Native `CFBundleShortVersionString` is 1.2.0 and `CFBundleVersion` is 10; Privacy displays those installed native values.
 
-## Supplied files
+## Download files
 
-- `Mental-Arithmetic-1.1.4-iOS-unsigned-archive.zip`: successful generic iOS Release archive, arm64, including the native app and archive metadata. Extract it before opening the `.xcarchive` in Xcode Organizer. This is **not a signed IPA** and cannot be installed directly on a physical iPhone.
-- `Mental-Arithmetic-1.1.4-iOS-Simulator-app.zip`: Release simulator app, for an Apple silicon Mac with an appropriate simulator runtime. This cannot be installed on a physical iPhone.
-- `Mental-Arithmetic-1.1.4-all-platforms-source.zip`: complete editable source, Xcode project, original supplied requirements, tests, guides and submission drafts.
-- `Mental-Arithmetic-1.1.4-iOS-submission-files.zip`: prepared App Store metadata, privacy/rating drafts, reviewer notes, icon and genuine simulator screenshots where included in the screenshot manifest.
+- `Mental-Arithmetic-1.2.0-iOS-Simulator-app.zip`: Release `.app` for the iOS Simulator on a Mac. It cannot be installed on a physical iPhone/iPad.
+- `Mental-Arithmetic-1.2.0-iOS-unsigned-archive.zip`: arm64 device `.xcarchive`. It is unsigned, is **not an installable IPA**, and requires the owner's development team and signing before device distribution.
+- `Mental-Arithmetic-1.2.0-iOS-submission-files.zip`: **review-only preparation files**, current build 10 screenshots, metadata drafts and icon. Its name follows the existing packaging convention; it is not a completed App Store submission.
+- The complete source archive includes the native project, current design specification/tokens, original requirements, tests and historical evidence.
 
-The device archive has no development team or signing identity assigned. The provisional bundle identifier is `local.jeff.mentalarithmetic`; replace it with an identifier registered to your team before distribution. Version is **1.1.4**, build **5**.
+The provisional app identifier remains `local.jeff.mentalarithmetic`. No signing identity, Apple developer team or provisioning profile has been created.
 
-## Tests
+## Verification and its limits
 
-The native Foundation-only core has a Swift package manifest for reproducible portable verification:
-
-```bash
-xcrun swift test --package-path ios --scratch-path /tmp/mental-arithmetic-core-tests
-```
-
-This runs the exact Swift files used by the iOS app. It is a macOS test of portable core behavior, not an iOS UI test. The native Xcode project additionally contains XCTest and XCUITest targets:
+Portable core tests run with:
 
 ```bash
-xcodebuild -project ios/MentalArithmetic.xcodeproj -scheme MentalArithmetic \
-  -destination 'platform=iOS Simulator,id=YOUR_SIMULATOR_UDID' \
-  -derivedDataPath /tmp/mental-arithmetic-xcode-tests CODE_SIGNING_ALLOWED=NO test
+DEVELOPER_DIR=/Applications/Xcode-beta.app/Contents/Developer swift test --package-path ios
 ```
 
-On this installation, Xcode's test service failed before tests could execute. The report records this failure and the separate successful verification routes. A DEBUG-only simulator review harness drives actual UIKit controls and text-field delegates; it produces JSON results and real screenshots. It does not claim physical-keyboard or XCUITest coverage. The harness and fixture helpers compile out of Release, which is checked against the delivered archive.
+These test the exact Foundation-only files used by the native app, on macOS. Native visual verification separately uses a DEBUG-only review harness driving actual UIKit controls and text-field delegates. It checks the ivory tokens, serif/Arial distinction, stage colors, corrected pair selection, static carries, monochrome feedback and enlarged text. The complete existing arithmetic/input/timing checks remain in place. DEBUG fixture helpers compile out of Release.
 
-## App Store preparation
+`ios/AppStore/run_release_artifact_audit.py` additionally checks the app extracted from the final simulator ZIP through a separate simulator-only verification library. It verifies real packaged UIKit controls, selected-digit colors/calculations and complete Practice rounds, while checking that the installed executable hash remains identical. The library is not included in delivered app bundles.
 
-The drafts in `ios/AppStore/` include the product listing, reviewer notes, an offline-first privacy policy, privacy questionnaire suggestions, screenshot exporter and owner decisions still needed. The app itself includes a local Privacy sheet. Its privacy manifest declares no tracking or collection and the required elapsed-timer API reason. No permission prompts or account credentials are requested by the app.
+Current build 10 package reports and logs use `verification/release-120-ios-*`, especially `verification/release-120-ios-summary.json`. The final ZIP-extracted Release app is checked on the owned iPhone/iOS 27 and iPad/iPadOS 26.5 simulators with the expected version **1.2.0/build 10**. The existing full runtime auditor verifies the exact two-lesson Learn catalog/default, absent removed options, Practice switching, complete A2/M1/M2 rounds, A2 input/score/timing, random examples/final answers, corrected Inside/Outside pair selections, grouped literal ampersands and largest accessibility layouts. New screenshots, including the current Privacy version display, are in `ios/AppStore/Screenshots/1.2.0-build10-*`.
 
-You chose to prepare the app before Apple Developer enrollment. To complete a signed submission later, enroll in the Apple Developer Program, assign your development team and registered identifier, provide your seller/support/reviewer contact details, supply public support/privacy policy URLs, and choose price/territories. Recheck acceptance of the **exact Xcode beta build** when uploading: Apple's supported builds change over time. The delivered unsigned archive has not been accepted by App Store Connect or reviewed by Apple. No App Store or TestFlight upload has been made.
+The approved preview 4's **38 portable core tests** remain applicable because all app/core/test sources are byte-identical. Those tests were not rerun for this metadata-only packaging step. The comparison report records exact source hashes against the approved commit. Earlier preview reports and screenshots remain preserved historical proof.
+These routes do not establish physical keyboard/device testing or external XCUITest execution. The existing iPad programmatic landscape request remains an explicitly reported skip where the simulator does not apply it. Earlier Xcode-hosted test execution encountered a local DTServiceHub failure; that history is preserved separately.
 
-Sources for the eventual submission workflow: [Apple App Store Connect release notes](https://developer.apple.com/help/app-store-connect/release-notes/), [Apple submitting guide](https://developer.apple.com/app-store/submitting/), and [App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/).
+## Distribution boundary
 
-## Version 1.1.4 artifact verification
-
-The portable Foundation-only Swift suite includes 36 tests. Regressions cover the owner's unequal-product example 82 × 76, zero and carry cases, the corrected fixed examples, and the inner/outer digit mapping across all 8,100 two-digit products.
-
-Release simulator and unsigned device archive builds use Xcode 27 beta, version **1.1.4, build 5**. `ios/AppStore/run_release_artifact_audit.py` tests the app extracted from the final simulator ZIP through a separate simulator-only library. It drives the packaged app's real UIKit controls and text-field delegates, checks the corrected Inside/Outside calculations and selected digits, verifies all four Practice configurations and lessons, and checks that the executable remains unchanged. It is separate from physical keyboard input and external XCUITest automation. Results are in `verification/inside-outside-ios-summary.json` and the matching per-device reports.
-
-The DEBUG-only native review harness additionally checks and captures the exact 82 × 76 Inside and Outside screens. Current screenshot folders are `ios/AppStore/Screenshots/1.1.4-iPhone-27-beta/` and `ios/AppStore/Screenshots/1.1.4-iPad-26.5/`. Their `Upload/` copies preserve decoded RGB pixels and dimensions while removing unused opaque alpha. Only these current folders are included in the 1.1.4 submission-files ZIP.
-
-The device archive is unsigned and cannot be installed directly on a physical iPhone. Physical iPhone/iPad validation and signed App Store/TestFlight distribution remain unverified. Earlier Xcode-hosted test execution encountered a local DTServiceHub connection failure; the packaged Release verification uses the separate route described above. Final pass/skip counts and device runtimes are reported in the current summary rather than inferred from older releases.
-
-## Historical version 1.1.2 verification
-
-
-The historical 1.1.2 Foundation-only Swift suite passed **35 tests**. The DEBUG UIKit review passes **8 of 8 scenarios on iPhone (iOS 27 beta)** and **7 of 8 on iPad (iPadOS 26.5)**, with the programmatic iPad rotation scenario explicitly skipped. The cases verify the four available categories, the default two-digit addition selection, switching from one- or three-digit multiplication back to two-digit addition, random examples, the existing carry walkthroughs, automatic submission, scoring, and round timing. The iOS random-example menu now uses the selected operation’s symbol.
-
-Release simulator and unsigned device archive builds passed using Xcode beta. Version is **1.1.2, build 3**. The simulator package includes arm64 and x86_64; the device archive is arm64. Both Release binaries exclude the DEBUG review harness. XCTest and XCUITest targets compile successfully, but the external test service still fails to connect (`DTServiceHub`), so the UIKit review is reported separately from XCUITest. Physical iPhone/iPad testing and signed App Store distribution remain unverified.
-
-Current simulator captures, including setup and the four-lesson catalog, are in `ios/AppStore/Screenshots/1.1.2-iPhone-27-beta/` and `ios/AppStore/Screenshots/1.1.2-iPad-26.5/`. Their `Upload/` copies remove unused opaque alpha without changing RGB pixels or dimensions. These current folders are the only screenshots in the 1.1.2 submission-files ZIP. Current results and build logs use `verification/addition-options-ios-*`.
+The owner has authorized GitHub and website downloads for release 1.2.0. These iOS packages are development downloads: the Simulator app runs on a Mac, and the unsigned device archive requires a development team and signing before physical-device distribution. It is not an installable IPA or an App Store release. No Apple Developer membership, signing identity, distribution certificate, TestFlight upload or App Store submission is supplied or performed here. Apple enrollment, a permanent identifier/team, signing, physical-device validation, owner support/privacy/contact fields and final App Store review remain necessary for signed distribution.

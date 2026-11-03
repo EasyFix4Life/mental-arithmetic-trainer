@@ -1,0 +1,595 @@
+{
+  "checkedAt": "2026-11-03T14:43:33.681Z",
+  "productChanged": false,
+  "preview": "1.2.0-preview.1",
+  "previewUrl": "http://127.0.0.1:5195/",
+  "results": [
+    {
+      "width": 280,
+      "height": 844,
+      "textScale": "200% (34px from 17px base)",
+      "pageZoom": 1,
+      "example": "18 × 18",
+      "screen": "Carry to the middle",
+      "measurement": {
+        "viewport": {
+          "width": 280,
+          "scale": 1,
+          "rootFont": "34px",
+          "documentWidth": 280
+        },
+        "routes": [
+          {
+            "kind": "in",
+            "role": "group",
+            "accessibleLabel": "Incoming carry",
+            "columns": "141px",
+            "text": "FromLast (64)→Carry in6→ToCarry to the middle",
+            "fields": [
+              {
+                "className": "carry-route-origin carry-from-step",
+                "text": "Last (64)",
+                "fontSize": "34px",
+                "box": {
+                  "x": 70,
+                  "y": -51.0625,
+                  "width": 141,
+                  "height": 47.59375,
+                  "top": -51.0625,
+                  "right": 211,
+                  "bottom": -3.46875,
+                  "left": 70
+                },
+                "words": [
+                  {
+                    "word": "Last",
+                    "fragments": [
+                      {
+                        "x": 82.234375,
+                        "y": -47.0625,
+                        "width": 57.734375,
+                        "height": 39
+                      }
+                    ]
+                  },
+                  {
+                    "word": "(64)",
+                    "fragments": [
+                      {
+                        "x": 148.453125,
+                        "y": -47.0625,
+                        "width": 50.3125,
+                        "height": 39
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "className": "carry-route-value carry-in",
+                "text": "6",
+                "fontSize": "51px",
+                "box": {
+                  "x": 70,
+                  "y": 116.875,
+                  "width": 141,
+                  "height": 71.390625,
+                  "top": 116.875,
+                  "right": 211,
+                  "bottom": 188.265625,
+                  "left": 70
+                },
+                "words": [
+                  {
+                    "word": "6",
+                    "fragments": [
+                      {
+                        "x": 126.3125,
+                        "y": 123.875,
+                        "width": 28.375,
+                        "height": 57
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "className": "carry-route-destination",
+                "text": "Carry to the middle",
+                "fontSize": "34px",
+                "box": {
+                  "x": 70,
+                  "y": 308.609375,
+                  "width": 141,
+                  "height": 142.78125,
+                  "top": 308.609375,
+                  "right": 211,
+                  "bottom": 451.390625,
+                  "left": 70
+                },
+                "words": [
+                  {
+                    "word": "Carry",
+                    "fragments": [
+                      {
+                        "x": 82.078125,
+                        "y": 312.609375,
+                        "width": 81.4375,
+                        "height": 39
+                      }
+                    ]
+                  },
+                  {
+                    "word": "to",
+                    "fragments": [
+                      {
+                        "x": 172,
+                        "y": 312.609375,
+                        "width": 26.921875,
+                        "height": 39
+                      }
+                    ]
+                  },
+                  {
+                    "word": "the",
+                    "fragments": [
+                      {
+                        "x": 119.0625,
+                        "y": 360.203125,
+                        "width": 42.859375,
+                        "height": 39
+                      }
+                    ]
+                  },
+                  {
+                    "word": "middle",
+                    "fragments": [
+                      {
+                        "x": 93.375,
+                        "y": 407.796875,
+                        "width": 94.234375,
+                        "height": 39
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "out",
+            "role": "group",
+            "accessibleLabel": "Outgoing carry",
+            "columns": "141px",
+            "text": "FromCarry to the middle→Carry out2→ToFirst (1)",
+            "fields": [
+              {
+                "className": "carry-route-origin",
+                "text": "Carry to the middle",
+                "fontSize": "34px",
+                "box": {
+                  "x": 70,
+                  "y": 571.046875,
+                  "width": 141,
+                  "height": 142.78125,
+                  "top": 571.046875,
+                  "right": 211,
+                  "bottom": 713.828125,
+                  "left": 70
+                },
+                "words": [
+                  {
+                    "word": "Carry",
+                    "fragments": [
+                      {
+                        "x": 82.078125,
+                        "y": 575.046875,
+                        "width": 81.4375,
+                        "height": 39
+                      }
+                    ]
+                  },
+                  {
+                    "word": "to",
+                    "fragments": [
+                      {
+                        "x": 172,
+                        "y": 575.046875,
+                        "width": 26.921875,
+                        "height": 39
+                      }
+                    ]
+                  },
+                  {
+                    "word": "the",
+                    "fragments": [
+                      {
+                        "x": 119.0625,
+                        "y": 622.640625,
+                        "width": 42.859375,
+                        "height": 39
+                      }
+                    ]
+                  },
+                  {
+                    "word": "middle",
+                    "fragments": [
+                      {
+                        "x": 93.375,
+                        "y": 670.234375,
+                        "width": 94.234375,
+                        "height": 39
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "className": "carry-route-value carry-out",
+                "text": "2",
+                "fontSize": "51px",
+                "box": {
+                  "x": 70,
+                  "y": 834.171875,
+                  "width": 141,
+                  "height": 71.390625,
+                  "top": 834.171875,
+                  "right": 211,
+                  "bottom": 905.5625,
+                  "left": 70
+                },
+                "words": [
+                  {
+                    "word": "2",
+                    "fragments": [
+                      {
+                        "x": 126.3125,
+                        "y": 841.171875,
+                        "width": 28.375,
+                        "height": 57
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "className": "carry-route-destination carry-to-step",
+                "text": "First (1)",
+                "fontSize": "34px",
+                "box": {
+                  "x": 70,
+                  "y": 1025.90625,
+                  "width": 141,
+                  "height": 47.59375,
+                  "top": 1025.90625,
+                  "right": 211,
+                  "bottom": 1073.5,
+                  "left": 70
+                },
+                "words": [
+                  {
+                    "word": "First",
+                    "fragments": [
+                      {
+                        "x": 88.96875,
+                        "y": 1029.90625,
+                        "width": 61.265625,
+                        "height": 39
+                      }
+                    ]
+                  },
+                  {
+                    "word": "(1)",
+                    "fragments": [
+                      {
+                        "x": 158.71875,
+                        "y": 1029.90625,
+                        "width": 33.3125,
+                        "height": 39
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "allChecksPassed": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "textScale": "200% (34px from 17px base)",
+      "pageZoom": 1,
+      "example": "18 × 18",
+      "screen": "Carry to the middle",
+      "measurement": {
+        "viewport": {
+          "width": 390,
+          "scale": 1,
+          "rootFont": "34px",
+          "documentWidth": 390
+        },
+        "routes": [
+          {
+            "kind": "in",
+            "role": "group",
+            "accessibleLabel": "Incoming carry",
+            "columns": "251px",
+            "text": "FromLast (64)→Carry in6→ToCarry to the middle",
+            "fields": [
+              {
+                "className": "carry-route-origin carry-from-step",
+                "text": "Last (64)",
+                "fontSize": "34px",
+                "box": {
+                  "x": 70,
+                  "y": -59.109375,
+                  "width": 251,
+                  "height": 47.59375,
+                  "top": -59.109375,
+                  "right": 321,
+                  "bottom": -11.515625,
+                  "left": 70
+                },
+                "words": [
+                  {
+                    "word": "Last",
+                    "fragments": [
+                      {
+                        "x": 137.234375,
+                        "y": -55.109375,
+                        "width": 57.734375,
+                        "height": 39
+                      }
+                    ]
+                  },
+                  {
+                    "word": "(64)",
+                    "fragments": [
+                      {
+                        "x": 203.453125,
+                        "y": -55.109375,
+                        "width": 50.3125,
+                        "height": 39
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "className": "carry-route-value carry-in",
+                "text": "6",
+                "fontSize": "51px",
+                "box": {
+                  "x": 70,
+                  "y": 108.828125,
+                  "width": 251,
+                  "height": 71.390625,
+                  "top": 108.828125,
+                  "right": 321,
+                  "bottom": 180.21875,
+                  "left": 70
+                },
+                "words": [
+                  {
+                    "word": "6",
+                    "fragments": [
+                      {
+                        "x": 181.3125,
+                        "y": 115.828125,
+                        "width": 28.375,
+                        "height": 57
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "className": "carry-route-destination",
+                "text": "Carry to the middle",
+                "fontSize": "34px",
+                "box": {
+                  "x": 70,
+                  "y": 300.5625,
+                  "width": 251,
+                  "height": 95.1875,
+                  "top": 300.5625,
+                  "right": 321,
+                  "bottom": 395.75,
+                  "left": 70
+                },
+                "words": [
+                  {
+                    "word": "Carry",
+                    "fragments": [
+                      {
+                        "x": 111.390625,
+                        "y": 304.5625,
+                        "width": 81.4375,
+                        "height": 39
+                      }
+                    ]
+                  },
+                  {
+                    "word": "to",
+                    "fragments": [
+                      {
+                        "x": 201.3125,
+                        "y": 304.5625,
+                        "width": 26.921875,
+                        "height": 39
+                      }
+                    ]
+                  },
+                  {
+                    "word": "the",
+                    "fragments": [
+                      {
+                        "x": 236.71875,
+                        "y": 304.5625,
+                        "width": 42.875,
+                        "height": 39
+                      }
+                    ]
+                  },
+                  {
+                    "word": "middle",
+                    "fragments": [
+                      {
+                        "x": 148.375,
+                        "y": 352.15625,
+                        "width": 94.234375,
+                        "height": 39
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "out",
+            "role": "group",
+            "accessibleLabel": "Outgoing carry",
+            "columns": "251px",
+            "text": "FromCarry to the middle→Carry out2→ToFirst (1)",
+            "fields": [
+              {
+                "className": "carry-route-origin",
+                "text": "Carry to the middle",
+                "fontSize": "34px",
+                "box": {
+                  "x": 70,
+                  "y": 515.40625,
+                  "width": 251,
+                  "height": 95.1875,
+                  "top": 515.40625,
+                  "right": 321,
+                  "bottom": 610.59375,
+                  "left": 70
+                },
+                "words": [
+                  {
+                    "word": "Carry",
+                    "fragments": [
+                      {
+                        "x": 111.390625,
+                        "y": 519.40625,
+                        "width": 81.4375,
+                        "height": 39
+                      }
+                    ]
+                  },
+                  {
+                    "word": "to",
+                    "fragments": [
+                      {
+                        "x": 201.3125,
+                        "y": 519.40625,
+                        "width": 26.921875,
+                        "height": 39
+                      }
+                    ]
+                  },
+                  {
+                    "word": "the",
+                    "fragments": [
+                      {
+                        "x": 236.71875,
+                        "y": 519.40625,
+                        "width": 42.875,
+                        "height": 39
+                      }
+                    ]
+                  },
+                  {
+                    "word": "middle",
+                    "fragments": [
+                      {
+                        "x": 148.375,
+                        "y": 567,
+                        "width": 94.234375,
+                        "height": 39
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "className": "carry-route-value carry-out",
+                "text": "2",
+                "fontSize": "51px",
+                "box": {
+                  "x": 70,
+                  "y": 730.9375,
+                  "width": 251,
+                  "height": 71.390625,
+                  "top": 730.9375,
+                  "right": 321,
+                  "bottom": 802.328125,
+                  "left": 70
+                },
+                "words": [
+                  {
+                    "word": "2",
+                    "fragments": [
+                      {
+                        "x": 181.3125,
+                        "y": 737.9375,
+                        "width": 28.375,
+                        "height": 57
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "className": "carry-route-destination carry-to-step",
+                "text": "First (1)",
+                "fontSize": "34px",
+                "box": {
+                  "x": 70,
+                  "y": 922.671875,
+                  "width": 251,
+                  "height": 47.59375,
+                  "top": 922.671875,
+                  "right": 321,
+                  "bottom": 970.265625,
+                  "left": 70
+                },
+                "words": [
+                  {
+                    "word": "First",
+                    "fragments": [
+                      {
+                        "x": 143.96875,
+                        "y": 926.671875,
+                        "width": 61.265625,
+                        "height": 39
+                      }
+                    ]
+                  },
+                  {
+                    "word": "(1)",
+                    "fragments": [
+                      {
+                        "x": 213.71875,
+                        "y": 926.671875,
+                        "width": 33.3125,
+                        "height": 39
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "allChecksPassed": true
+    }
+  ],
+  "allChecksPassed": true
+}

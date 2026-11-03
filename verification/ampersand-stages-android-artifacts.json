@@ -1,0 +1,72 @@
+{
+  "verifiedAt": "2026-11-03T15:54:29.678Z",
+  "version": "1.2.0-preview.3",
+  "verificationHost": {
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "sdkBuildTools": "37.0.0",
+  "apk": {
+    "path": "/tmp/mental-arithmetic-ampersand-stages-android/release/Mental-Arithmetic-1.2.0-preview.3-Android.apk",
+    "bytes": 670065,
+    "sha256": "b67c79c9137b6340e3d18ee883bdbf2b06ce0d4483e2c99b8bcfca08a41ea613",
+    "entryCount": 19,
+    "crcPassed": true,
+    "zipAlignmentPassed": true
+  },
+  "manifest": {
+    "applicationId": "local.jeff.mentalarithmetic",
+    "versionName": "1.2.0-preview.3",
+    "versionCode": 10202,
+    "label": "Mental Arithmetic",
+    "minSdk": 26,
+    "targetSdk": 37,
+    "launcher": "local.jeff.mentalarithmetic.MainActivity",
+    "permissions": [],
+    "debuggable": false
+  },
+  "signature": {
+    "verified": true,
+    "schemes": {
+      "v1": false,
+      "v2": true,
+      "v3": false,
+      "v3.1": false,
+      "v3.2": false,
+      "v4": false
+    },
+    "signerSha256": "5bee5bb4046742472cc391fae0f29b4589bdf42fdd27a4a041c0a241347139dc"
+  },
+  "nativeLibraries": [],
+  "architecture": "Universal APK; uses the installed Android System WebView; no bundled native libraries",
+  "frontend": [
+    {
+      "file": "_headers",
+      "bytes": 123,
+      "sha256": "3fdc8f8e6af5ff2d1a5424f8cff40a3c11c7deefec052bc2f377ea0fd7ca8ff1",
+      "matches": true
+    },
+    {
+      "file": "assets/index-DElzVqT9.js",
+      "bytes": 44663,
+      "sha256": "335d7df79568823a0cc86028498d933b6a69f12adfcb051e4a933e78a8c0dab9",
+      "matches": true
+    },
+    {
+      "file": "assets/index-W3-ZKpMk.css",
+      "bytes": 19132,
+      "sha256": "e7343db31e3dabc91abcd536bb5ce88fa6527e17a5e61bb3ae095b7c0fc7788e",
+      "matches": true
+    },
+    {
+      "file": "index.html",
+      "bytes": 594,
+      "sha256": "d3445c1b8a49cc56cdcff30bd14180e35d12db5a6df1c049faa0fbc641f6e71c",
+      "matches": true
+    }
+  ],
+  "runtimeExecution": {
+    "performed": false,
+    "reason": "This verifier inspects package bytes only. Separate emulator/device evidence is required for runtime claims."
+  }
+}

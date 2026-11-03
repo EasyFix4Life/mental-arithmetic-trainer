@@ -2,8 +2,8 @@ import XCTest
 @testable import MentalArithmetic
 
 final class LessonTests: XCTestCase {
-    func testCatalogContainsOnlyFourAvailableInstructionCategories() {
-        XCTAssertEqual(LessonCatalog.lessons.map(\.id), ["multiplication-1", "addition-2", "multiplication-2", "multiplication-3"])
+    func testLearnCatalogContainsOnlyOneAndTwoDigitMultiplication() {
+        XCTAssertEqual(LessonCatalog.lessons.map(\.id), ["multiplication-1", "multiplication-2"])
         for lesson in LessonCatalog.lessons {
             XCTAssertTrue(lesson.hasAuthoredProcedure)
             XCTAssertEqual(lesson.examples.count, lesson.id == "multiplication-2" ? 2 : 1)
@@ -11,8 +11,20 @@ final class LessonTests: XCTestCase {
         }
     }
 
-    func testRandomExamplesCoverAllDigitSizesAndOperations() throws {
-        for lesson in LessonCatalog.lessons {
+    func testLearnAvailabilityIsIndependentOfPracticeAndRetainsHistoricalFixtures() {
+        XCTAssertEqual(LessonCatalog.allLessons.map(\.id), ["multiplication-1", "addition-2", "multiplication-2", "multiplication-3"])
+        XCTAssertEqual(LessonCatalog.lessons.first?.id, "multiplication-1")
+        XCTAssertTrue(PracticeSettings.isAvailable(operation: .addition, digitCount: .two))
+        XCTAssertFalse(LessonCatalog.isAvailable(operation: .addition, digitCount: .two))
+        for operation in ArithmeticOperation.allCases {
+            for digits in OperandDigits.allCases {
+                XCTAssertEqual(LessonCatalog.isAvailable(operation: operation, digitCount: digits), operation == .multiplication && digits != .three)
+            }
+        }
+    }
+
+    func testHistoricalRandomExamplesCoverAllDigitSizesAndOperations() throws {
+        for lesson in LessonCatalog.allLessons {
             for _ in 0..<100 {
                 let example = try RandomExamples.generateProblem(operation: lesson.operation, digitCount: lesson.digitCount)
                 XCTAssertEqual(example.operation, lesson.operation)
@@ -271,8 +283,8 @@ final class LessonTests: XCTestCase {
         XCTAssertEqual(max.steps.map(\.intermediateResult), ["18", "18", "18", "19", "19"])
     }
 
-    func testGenericExampleDispatchesAllAvailableConfigurations() throws {
-        for lesson in LessonCatalog.lessons {
+    func testGenericExampleDispatchesHistoricalConfigurations() throws {
+        for lesson in LessonCatalog.allLessons {
             let source = try RandomExamples.generateProblem(operation: lesson.operation, digitCount: lesson.digitCount, rng: { 0.78 })
             let e = try LessonExamples.create(example: source)
             let a = Int(source.left)!, b = Int(source.right)!

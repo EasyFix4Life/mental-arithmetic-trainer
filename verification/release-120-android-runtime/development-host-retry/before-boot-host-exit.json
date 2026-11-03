@@ -1,0 +1,12 @@
+{
+  "recordedAtUTC": "2026-11-03T16:40:02.428770+00:00",
+  "phase": "emulator host startup before Android boot",
+  "bootCompleted": false,
+  "applicationStarted": false,
+  "hostProcessAbsent": true,
+  "iosOwnedSimulatorsVerifiedOffBeforeLaunch": true,
+  "causeEstablished": false,
+  "productChangesPerformed": false,
+  "hostExitCode": 137,
+  "hostSignal": 9
+}

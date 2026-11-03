@@ -1,0 +1,47 @@
+{
+  "version": "1.2.0-preview.4",
+  "crc": "No errors detected in compressed data of release/Mental-Arithmetic-1.2.0-preview.4-macOS-arm64.zip.",
+  "dmgZipAsarIdentical": true,
+  "signatureVerified": true,
+  "files": [
+    {
+      "path": "dist/_headers",
+      "sha256": "3fdc8f8e6af5ff2d1a5424f8cff40a3c11c7deefec052bc2f377ea0fd7ca8ff1",
+      "bytes": 123
+    },
+    {
+      "path": "dist/assets/index-O0K00jXj.js",
+      "sha256": "774c58f12463c4df19cec4c9104fc368cb9f4e7776c767ef0cb5fadd000e2659",
+      "bytes": 44754
+    },
+    {
+      "path": "dist/assets/index-W3-ZKpMk.css",
+      "sha256": "e7343db31e3dabc91abcd536bb5ce88fa6527e17a5e61bb3ae095b7c0fc7788e",
+      "bytes": 19132
+    },
+    {
+      "path": "dist/index.html",
+      "sha256": "1f31c92fa40c0972c678e4348fd8ebadc204de3585fe6808a88bb55eb6b0a7c7",
+      "bytes": 594
+    },
+    {
+      "path": "desktop/main.cjs",
+      "sha256": "70ef65772f8f6390212190299348873b24b7b390a559049dd3a129c78ba301cb",
+      "bytes": 6088
+    },
+    {
+      "path": "desktop/security.cjs",
+      "sha256": "df896d0e2c572d4d1a3b5f0a46df5c910d9f6c2183cf67bddb7f5c2c5abf06a0",
+      "bytes": 1839
+    }
+  ],
+  "nativeTests": {
+    "startTime": "2026-11-03T16:28:16.533Z",
+    "duration": 12850.764,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "allChecksPassed": true
+}

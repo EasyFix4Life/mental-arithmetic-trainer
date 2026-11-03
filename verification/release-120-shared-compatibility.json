@@ -1,0 +1,190 @@
+{
+  "version": "1.2.0",
+  "approvedBaselineCommit": "2cd3f1e6f15c0709fe444ff9cf32585d41ac89e2",
+  "scope": "Independent shared executable-source audit against approved preview4. Only release metadata and explanatory comments changed; approved functionality is byte-exact.",
+  "wholeFileChecks": [
+    {
+      "path": "src/answerPolicy.ts",
+      "sha256": "9a98d597b0f7baa7264b387f52ef8a1f5e80892e5c69446d2dda602f77dd89c1",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/availableOptions.ts",
+      "sha256": "f84b3176d3d1441781227e6959d3576008b23da2a4120d3cd824e4973724cf4e",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/designTokens.css",
+      "sha256": "8516544a0b49a81985f6a9cab0524aab2886f772bd56114930a8b93ed9a0bb23",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/generateRound.ts",
+      "sha256": "7b8b13e15b58e870f27468e538181423c1fa38f73bd5cceb66eb17a3ca8a52cf",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/inputPolicy.ts",
+      "sha256": "1c46093bcaf0345926a460bcf7663bc985d1f77ba1b0b0049cd5046428dda8e8",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/learn/carryVisualizer.ts",
+      "sha256": "4d092ae458ad1663806badccdf459b4334196a9ff0cc370cd25bd5c7a329362d",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/learn/confirmedMultiplicationExamples.ts",
+      "sha256": "3411c4e1e4daaf173d7f5ce047e9e103f89b849933352b58a448a869a5fa800c",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/learn/instructionStepRenderer.ts",
+      "sha256": "cccb71e72d4b96329d54a4538d52d0ac1454bd0a0ab3f96fdfec3d65c92dfc80",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/learn/learnView.ts",
+      "sha256": "42a5fd5db1bef89fd4f7c8d2d180885fd5a4b101ee1a09158820f30974b20f1f",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/learn/lessonCatalog.ts",
+      "sha256": "1f0099ef75fcc546c98ab32ea6aa492ecf0fd3d9ad575196ac750cbf4e9fefcb",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/learn/lessonTypes.ts",
+      "sha256": "4a473acf63bc53140d517547db4f27821f26bc16ad6d054015806571018a1f99",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/learn/positionalInstructions.ts",
+      "sha256": "f1392466307d8f0aed130cbc9abf6146a90ce973f6184057881c58901d3a848f",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/learn/randomExample.ts",
+      "sha256": "03e5b67986bacb5626b1903e85d4c8b7f2518f06e6807859feeba8adfeb3dcd5",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/main.ts",
+      "sha256": "c13ffd799c096737fe002924b377369aed35dfe77f5f83f3053e752ecb5bf3d2",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/practiceView.ts",
+      "sha256": "ce63b28229713f95826516785a780a55cf28e59c237f945db586ccf0fa0fb15a",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/roundController.ts",
+      "sha256": "ad3de8085d727fa44a120b7e545d1e07a823e9bd10ec5294c365070cd9efdf7c",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/style.css",
+      "sha256": "712a8ebd969257ff7472872cf46d771c01d3910db6f6961f5765f55620b2453f",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/timer.ts",
+      "sha256": "bfaeaa1c0497565f6d3ceeba0064d903f4559d5b70cb192f86556bb79e0d4b04",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/types.ts",
+      "sha256": "f458432070b282817ece06654683477a9dfefee0201f64fd6f53cd14f2976b21",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/view.ts",
+      "sha256": "860f5b14cf7e85a4b055d90a4e7cea025681012d311815519fa10bb5df7ea9d0",
+      "byteIdentical": true
+    },
+    {
+      "path": "scripts/generate-visual-tokens.mjs",
+      "sha256": "4a0d988e0712fae71829f1a92200711a9de92016e1cc8aeb5cbff80f15ad871b",
+      "byteIdentical": true
+    },
+    {
+      "path": "ios/MentalArithmetic/UI/VisualTokens.generated.swift",
+      "sha256": "29525c5d667d5059f49af29e593f326f80a059bf90250c3f4197d541d5d97346",
+      "byteIdentical": true
+    },
+    {
+      "path": "android/app/src/main/res/values/visual_tokens.xml",
+      "sha256": "9f423f4be68f1e6f927de078b10f013f33f729b934a628369bfaa43add7123f5",
+      "byteIdentical": true
+    }
+  ],
+  "wholeFileUnchangedCount": 23,
+  "scopedCommentChecks": [
+    {
+      "path": "src/release.ts",
+      "comparison": "documentation-comment-only change; executable TypeScript identical",
+      "normalizedSHA256": "09a4a8afa5d5519ea60e1eb181071fce7466ab6738d74f6a534671724794050c",
+      "matchesApprovedBaseline": true
+    },
+    {
+      "path": "src/downloadsView.ts",
+      "comparison": "documentation-comment-only change; executable TypeScript identical",
+      "normalizedSHA256": "a38e45fedf3add1b56e0a7b5c76a0ecad6091376021c68a6596e054b7deb433a",
+      "matchesApprovedBaseline": true
+    }
+  ],
+  "allExecutableFrontendSourceIdenticalToApprovedPreview4": true,
+  "learnAndPracticeOptionsAndDefaultsIdentical": true,
+  "arithmeticInputTimingGenerationAndRenderersIdentical": true,
+  "canonicalTokensIdenticalExceptVersion": true,
+  "originalRequirementsPreserved": 18,
+  "historicalUnitTestsUnchanged": [
+    {
+      "path": "tests/unit/answerPolicy.test.ts",
+      "sha256": "801639d8fc6a372e4ccbfa5b79711b5b355bdf5547f19adcae23816b440a96d7"
+    },
+    {
+      "path": "tests/unit/availableOptions.test.ts",
+      "sha256": "ab4450442d4b8197c8699844fc721d940253bdaf789d37addb53420546a9fb4c"
+    },
+    {
+      "path": "tests/unit/generateRound.test.ts",
+      "sha256": "259a7249b786af942bbb6dad7e704a532b83c32f2c4e7656bfb24f7017697164"
+    },
+    {
+      "path": "tests/unit/lessons.test.ts",
+      "sha256": "1c056cb9409d9c6831027c776599dd72746fa0b109f223b971cb398bef5e06f3"
+    },
+    {
+      "path": "tests/unit/positionalInstructions.test.ts",
+      "sha256": "6e470832d45170a6ed2427e9768eded7bf5b76156eb70675445d992b3e48154f"
+    },
+    {
+      "path": "tests/unit/randomExample.test.ts",
+      "sha256": "031365dab704831f77f8cad34027402ab08a55c28b3a6715c08d28905a2d37f1"
+    },
+    {
+      "path": "tests/unit/requirements.ts",
+      "sha256": "228ca3c0e2297f72e6ba974463c3a2e33ee005d2f1040b6e81a633dacf998da9"
+    },
+    {
+      "path": "tests/unit/roundController.test.ts",
+      "sha256": "868363cc4696ac4182ff678e36b524ade46fa3e07a6eea8153a4b764a4920444"
+    },
+    {
+      "path": "tests/unit/roundTiming.test.ts",
+      "sha256": "30470d873bc7d4ac85167358b39f0de725bcf79f5b4d067bad993560da7f1df4"
+    },
+    {
+      "path": "tests/unit/timer.test.ts",
+      "sha256": "3d5098d8f768b5ca649cef00f657fbbfd939f6a4be1e1f2d095c1204c0df6f7f"
+    },
+    {
+      "path": "tests/unit/visualTokens.test.ts",
+      "sha256": "e39fac4a5752b7229d02d2698c0c4c2091fd7dde91fa77e2edbb3a884ee4d1c7"
+    }
+  ],
+  "historicalUnitTestFileCount": 11,
+  "allChecksPassed": true
+}

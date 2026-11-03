@@ -1,0 +1,876 @@
+Command line invocation:
+    /Applications/Xcode-beta.app/Contents/Developer/usr/bin/xcodebuild -project /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic.xcodeproj -scheme MentalArithmetic -configuration Release -destination "generic/platform=iOS Simulator" -derivedDataPath /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData CODE_SIGNING_ALLOWED=NO build
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'MentalArithmetic' in project 'MentalArithmetic' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode-beta.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode-beta.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: d4808df647bc95862ae77cb1d3d97587
+Build description path: /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/XCBuildData/d4808df647bc95862ae77cb1d3d97587.xcbuilddata
+CreateBuildDirectory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex
+    cd /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic.xcodeproj
+    builtin-create-build-directory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex
+
+CreateBuildDirectory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/CompilationCache.noindex
+    cd /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic.xcodeproj
+    builtin-create-build-directory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/CompilationCache.noindex
+
+CreateBuildDirectory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules
+    cd /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic.xcodeproj
+    builtin-create-build-directory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules
+
+CreateBuildDirectory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products
+    cd /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic.xcodeproj
+    builtin-create-build-directory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products
+
+ClangStatCache /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKStatCaches.noindex/iphonesimulator27.0-24A5390e-e43fee13dd4b37625cdebfde7abd7d2e3243818bda632a4370e1cc7a9fd181c5.sdkstatcache
+    cd /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic.xcodeproj
+    /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -o /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKStatCaches.noindex/iphonesimulator27.0-24A5390e-e43fee13dd4b37625cdebfde7abd7d2e3243818bda632a4370e1cc7a9fd181c5.sdkstatcache
+
+CreateBuildDirectory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex
+    cd /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic.xcodeproj
+    builtin-create-build-directory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex
+
+CreateBuildDirectory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator
+    cd /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic.xcodeproj
+    builtin-create-build-directory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator
+
+CreateBuildDirectory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+    cd /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic.xcodeproj
+    builtin-create-build-directory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+CreateBuildDirectory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/PrecompiledHeaders
+    cd /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic.xcodeproj
+    builtin-create-build-directory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/PrecompiledHeaders
+
+CreateBuildDirectory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/ExplicitPrecompiledModules
+    cd /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic.xcodeproj
+    builtin-create-build-directory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+CreateBuildDirectory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphonesimulator
+    cd /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic.xcodeproj
+    builtin-create-build-directory /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphonesimulator
+
+WriteAuxiliaryFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic-ffd8e2374cede1c42ea983bab62fd75a-VFS-iphonesimulator/all-product-headers.yaml
+    cd /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic.xcodeproj
+    write-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic-ffd8e2374cede1c42ea983bab62fd75a-VFS-iphonesimulator/all-product-headers.yaml
+
+WriteAuxiliaryFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic.hmap (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    write-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic.hmap
+
+WriteAuxiliaryFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic.DependencyStaticMetadataFileList (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    write-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-project-headers.hmap (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    write-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-project-headers.hmap
+
+WriteAuxiliaryFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic.DependencyMetadataFileList (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    write-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic.DependencyMetadataFileList
+
+WriteAuxiliaryFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.SwiftFileList (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    write-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.SwiftFileList
+
+WriteAuxiliaryFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic-OutputFileMap.json (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    write-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic-OutputFileMap.json
+
+WriteAuxiliaryFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.SwiftConstValuesFileList (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    write-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.LinkFileList (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    write-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.LinkFileList
+
+WriteAuxiliaryFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic_const_extract_protocols.json (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    write-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic_const_extract_protocols.json
+
+WriteAuxiliaryFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic_const_extract_protocols.json (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    write-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic_const_extract_protocols.json
+
+WriteAuxiliaryFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.SwiftFileList (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    write-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.SwiftFileList
+
+WriteAuxiliaryFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.LinkFileList (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    write-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.LinkFileList
+
+WriteAuxiliaryFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic-OutputFileMap.json (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    write-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic-OutputFileMap.json
+
+WriteAuxiliaryFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.SwiftConstValuesFileList (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    write-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-own-target-headers.hmap (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    write-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-own-target-headers.hmap
+
+WriteAuxiliaryFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-generated-files.hmap (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    write-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-generated-files.hmap
+
+WriteAuxiliaryFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-all-target-headers.hmap (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    write-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-all-target-headers.hmap
+
+WriteAuxiliaryFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-all-non-framework-target-headers.hmap (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    write-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-all-non-framework-target-headers.hmap
+
+MkDir /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    /bin/mkdir -p /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app
+
+CpResource /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/PrivacyInfo.xcprivacy /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/PrivacyInfo.xcprivacy (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/PrivacyInfo.xcprivacy /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app
+
+MkDir /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_output/thinned (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    /bin/mkdir -p /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_output/thinned
+
+MkDir /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_output/unthinned (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    /bin/mkdir -p /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_output/unthinned
+
+GenerateAssetSymbols /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Assets.xcassets (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    /Applications/Xcode-beta.app/Contents/Developer/usr/bin/actool /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Assets.xcassets --compile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app --output-format human-readable-text --notices --warnings --export-dependency-info /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_dependencies --output-partial-info-plist /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_generated_info.plist --app-icon AppIcon --accent-color AccentColor --compress-pngs --enable-on-demand-resources YES --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 17.0 --platform iphonesimulator --bundle-identifier local.jeff.mentalarithmetic --generate-swift-asset-symbol-extensions NO --generate-swift-asset-symbols /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources/GeneratedAssetSymbols.swift --generate-objc-asset-symbols /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources/GeneratedAssetSymbols.h --generate-asset-symbol-index /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/* com.apple.actool.compilation-results */
+/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources/GeneratedAssetSymbols.h
+/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources/GeneratedAssetSymbols.swift
+
+
+CompileAssetCatalogVariant thinned /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Assets.xcassets (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    /Applications/Xcode-beta.app/Contents/Developer/usr/bin/actool /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Assets.xcassets --compile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_output/thinned --output-format human-readable-text --notices --warnings --export-dependency-info /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_dependencies_thinned --output-partial-info-plist /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_generated_info.plist_thinned --app-icon AppIcon --accent-color AccentColor --compress-pngs --enable-on-demand-resources YES --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 17.0 --platform iphonesimulator
+/* com.apple.actool.compilation-results */
+/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_generated_info.plist_thinned
+/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_output/thinned/AppIcon60x60@2x.png
+/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_output/thinned/AppIcon76x76@2x~ipad.png
+/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_output/thinned/Assets.car
+
+
+SwiftDriver MentalArithmetic normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftDriver -- /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name MentalArithmetic -O @/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.SwiftFileList -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target x86_64-apple-ios17.0-simulator -g -module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 5 -I /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator -F /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator -c -j15 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKStatCaches.noindex/iphonesimulator27.0-24A5390e-e43fee13dd4b37625cdebfde7abd7d2e3243818bda632a4370e1cc7a9fd181c5.sdkstatcache -output-file-map /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex -sdk-module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-generated-files.hmap -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-own-target-headers.hmap -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-all-target-headers.hmap -Xcc -iquote -Xcc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-project-headers.hmap -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/include -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources-normal/x86_64 -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources/x86_64 -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic-Swift.h -working-directory /tmp/mental-arithmetic-ios-release-120/ios -experimental-emit-module-separately -disable-cmo
+
+SwiftDriver MentalArithmetic normal arm64 com.apple.xcode.tools.swift.compiler (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftDriver -- /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name MentalArithmetic -O @/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.SwiftFileList -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 5 -I /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator -F /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator -c -j15 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKStatCaches.noindex/iphonesimulator27.0-24A5390e-e43fee13dd4b37625cdebfde7abd7d2e3243818bda632a4370e1cc7a9fd181c5.sdkstatcache -output-file-map /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex -sdk-module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-generated-files.hmap -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-own-target-headers.hmap -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-all-target-headers.hmap -Xcc -iquote -Xcc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-project-headers.hmap -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/include -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources-normal/arm64 -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources/arm64 -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic-Swift.h -working-directory /tmp/mental-arithmetic-ios-release-120/ios -experimental-emit-module-separately -disable-cmo
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_stdarg-8C4A07LH27SVKQNGDDJGI79M8.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_SwiftConcurrencyShims-3EZ520IHCVWHXUG2V8USMAROA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_stdbool-2YBEVLB5ERFHFBL95JZX2SREX.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/ptrauth-7KUF5TC1NLWM12F047X13VM0O.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_AvailabilityInternal-VVQ3UPRRR0J2ISOZ9L3DNJSY.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_stdbool-7V46T1WH41S7Q9DP72LYCWKXO.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_stdarg-9MMY4WRDWZ6RS52H1M0ZCDKZ7.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_stddef-8Y0H9R5Q2L62D8VABBBQ44VGS.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/SwiftShims-7MLFEAYPT3B2PE6Y98YKX70OC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_AvailabilityInternal-T6X7QF5YK1HFLBAP0G1S8E84.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_SwiftConcurrencyShims-9VA9PSLRG3KTUPKMCUALQ52IT.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/DeveloperToolsSupport-B6G7Q99ELDMDT9W8DTT9IBZJK.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/SwiftShims-3KTMF5YAFV3CWNFMNJQF9GVXB.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/ptrcheck-5IWTBD1P0BGNNPT2EHFE3C5QX.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_stddef-BS6SR5WDLT86K5873M7C5UVE4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/DeveloperToolsSupport-CIP4LSA23LGTI62ZCKH8H5GFJ.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_float-DJFLI6YZUHZ0DNZ7DP8NHC61T.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/ptrauth-B78EUA3XF7IN4GC3O9UTK66RP.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_float-8C9UIGDDXW9BLQR7IZ9A4EFKK.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/ptrcheck-7PU4E82TQ7YOMQGY0VLLFND7G.pcm
+
+LinkAssetCatalog /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Assets.xcassets (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-linkAssetCatalog --thinned /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_output/thinned --thinned-dependencies /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_dependencies_thinned --thinned-info-plist-content /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_generated_info.plist_thinned --unthinned /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_output/unthinned --unthinned-dependencies /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_dependencies_unthinned --unthinned-info-plist-content /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_generated_info.plist_unthinned --output /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app --plist-output /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_generated_info.plist
+note: Emplaced /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/Assets.car (in target 'MentalArithmetic' from project 'MentalArithmetic')
+note: Emplaced /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/AppIcon76x76@2x~ipad.png (in target 'MentalArithmetic' from project 'MentalArithmetic')
+note: Emplaced /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/AppIcon60x60@2x.png (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+ProcessInfoPlistFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/Info.plist /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Info.plist (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-infoPlistUtility /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Info.plist -producttype com.apple.product-type.application -genpkginfo /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_generated_info.plist -o /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/Info.plist
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_DarwinFoundation1-CMFSGXS2ELXEQIKW2I39B8FJO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_DarwinFoundation1-1GOXTJOJ2EJLEOTICUEWAJ3NX.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_DarwinFoundation2-A7HWKVE84IRGD9FVRO9KANJFB.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_limits-BQ7JU9YG3VTESJWZSU8D1IG3F.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_limits-4B8F1K8AWZMSUOHEQMQBAQ66I.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_DarwinFoundation2-BG017EP9ARLLUAU0EQE850K8I.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_stdint-CYD6IWQ4LCTVZS1JF3ECINY7D.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/string_h-CY417V5T2HLPJWKUR42YP9NNQ.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_tgmath-IFS90Z6RYE98Y9W5S3NRZTSI.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/sys_types-BNH0BOK716K02ZRW8Z0HR7PHY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_tgmath-51UO7DDCR20JW13Z44Y472J5.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_stdint-5Q0W1DCNL8SZH2M2M4E2YDU1K.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/string_h-2GPW3FR7XGC4C5W9IGVIMBIQM.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/sys_types-A3Y4W816CWCO3PHIO47W6EB2E.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_stdatomic-8BEOWC2QCF17MQ0PTK79Y8VPF.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_DarwinFoundation3-26RKMYDPKYX8GFZVUVOZ18Q4X.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_stdatomic-3LZ3JI88VAUAWU4P6JULZPDKT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_DarwinFoundation3-B9A7GYG4K07FHH1K0MAC1DISS.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_intrinsics-DG6JBVPJRONKKVZCF2IIZT65C.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_inttypes-7D4OCKHYXY9XUUNR8S2WSBEID.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_intrinsics-AAXBUM18G374BHYJXXQ7GVJQO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_Builtin_inttypes-3K64KJVPFLIT9X95GC3I05BIZ.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/Darwin-44V0Y6Z3AXLOVPKU85Q6PFG8Z.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/Darwin-CCVAS4YN1DPZI4WEFEDE8D7VM.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/simd-4KSBYU43VXPVGX9K0C04ZIQUD.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/ObjectiveC-6E8F2Z89MKC5F984VI80QA9LQ.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/MachO-7UROOVDZK8K70E687V7434I0T.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/simd-EMHVI21UWR1Y4435K5S7BUXUU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/ObjectiveC-5SVDJ5JP3TOMHOHRD4G4J6MSR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/MachO-492IXG9HWRU35NH4RPOVC9LL5.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/os_object-CLNDJPZQNCETKP0MEFWKD0PZW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/os_object-213EYEZS765FCOX0N5H18UO18.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/os_workgroup-DYSH31PRJLPSWNAPZ2ALCUIPW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/Spatial-EVL5BCSPQCRBWIQYH1QMLA6ER.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/os_workgroup-ENW8E16WDJ876IO9GTAU01AP7.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/Dispatch-8OYUM9O52TU4P0HW4HBXGAHNM.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/Dispatch-EHNGHTNP6XOMXKMPIFNR3CE51.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/XPC-8PFM5BXLGYKI865P03K9KZKBU.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/CoreFoundation-1QVIUOHLDZEJXPUV0WNPZAL31.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/XPC-2ZFNHGB3YY1W6GZ7UXVJKZM98.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/CoreFoundation-8FAI36MN1EUQ0SJOKGM2CHMCD.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/os-90C17OQ94EWG14WPBS8ZMHDKH.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/Spatial-ESJC5WZLIALDZ719RHGGEFMNY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/os-525XLS8KN63C6YHLS8IWSC9T7.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/CoreGraphics-6VKA3ERWAQDW0OWF6CS6OW4I8.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/CFNetwork-4AG4RUSKQRYSCVXTK8RTZDZNK.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/Security-3TSQ10S2JSM26Y5HDXULUI4OH.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/Security-DHTD62YZKDNXC7OSNQV1NBLHU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/CoreGraphics-2KFWE2N80BPKMSJU0O89RLD86.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/CFNetwork-7OA3SGG7LM0OR64NPXT7YMJND.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/Foundation-6VLPGPJDW9B2S0VOI8MYVR03R.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/CoreText-97A9H88YIJQT1F10DZRGWZEDI.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/ImageIO-AAO5XH05BKB3B8T4AWYDJJJBC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/Foundation-96XQRX2PWXK7YM0GPBIMTDK4H.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/CoreText-BJZSS4EM82S4NC8ZNLO4LM5JU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/ImageIO-3PJZTG00Q5EB6NB597M6EWYRF.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/Accessibility-2GG3M7Z9PRNKMXXGZUX1S4FIS.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/UniformTypeIdentifiers-D4JCT2HITLWBZZZ6VB7LZ5MXZ.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/IOSurface-7H4XY8KGTNCVACYSO0GMWQEUT.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/Symbols-4LH65U8QKR7UDX0S04UP8DZOU.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/OpenGLES-1GV3ZENTUIR4MEKUP3703ZKC.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/FileProvider-5VC8XTOSBXASWOE25UD292FVF.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/CoreTransferable-3499G3N01NZXMNTRIUAGRIAM6.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_LocationEssentials-968TN396GD20O9TT9K9NCKPHA.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/OSLog-BGLAZ13KZOGVIFRLOG4FONZ60.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/UserNotifications-DP1NYVXIF6H7D8WRHCDRAM731.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/UIUtilities-12R8RZXUF13CZHIBXAKNZ179S.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/DataDetection-97CKRVTD6KW585UG2NBPYPIP1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/OSLog-C7B80Z8F16E0XBWA05ND7714R.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/DataDetection-CT4W69EEY5KRFUAK2H8MWX4JQ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/IOSurface-F2W3KJW4KA73QJL1BYIBKMPDI.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/UserNotifications-36H4P9NDYXJ0PCJQ2DJMMPP2C.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/Symbols-28535JBG1ET2VWXWIKXUGF3JL.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/UniformTypeIdentifiers-Q9P3BKM2STBCTO1B3PERHA1F.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/OpenGLES-CCNEODQYQCFRMFXJ75EITRZS2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/UIUtilities-BPYPH0NZSQXB6YDDNV982VIS8.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/CoreLocation-AANQ2NXSGT3VD0PTHZ40V005T.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/FileProvider-6O4W0V6UBUQEH6FVKBR01KB08.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/_LocationEssentials-30HBRVCWA5ITV9I564UT6KOVS.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/CoreTransferable-ECX7M8V34HFY7UWWDDRWJAL9R.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/Metal-6N1PO0OS9TRQVE7UKXVA6EWGR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/Accessibility-2Z8QU1Z2YJGCEKPFJSI33WIXU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/Metal-3G7EILX0NIA0AXRZ00JQE8XL9.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/CoreLocation-514LV4MBTX01YCPN2RATYY810.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/CoreMotion-CKD5NYPOV4D48APYC19XH03JB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/CoreMotion-B6KKLY3V8RCBIQX9V3G84FXSS.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/CoreVideo-BP6ZNE2D5YB76K5XDQ83ZHRTQ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/CoreVideo-PG6DKXLHFNDZJHL2PO0OWA6Z.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/QuartzCore-7AKYPH8CY1HFONB8QN2HXK1S7.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/CoreImage-11RE1RVF1QJK4Q6B0OCBJ3KRK.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/CoreImage-DDMOFK4KUJRJ77TGTQGLB3GZV.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/QuartzCore-26DWSRMD19H0KDV6QY4FUQJEE.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/SwiftUICore-4DXWS2Q047AT8NISACOUAZ4C2.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/UIKit-7G8H5J04W34AMR4YW5QDLAH5W.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/SwiftUICore-2DJCYPC6PQU2DFC8X9KN2X5H5.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules/UIKit-BX8EKXJ1CTKT4PGY3PSV4K54B.pcm
+
+SwiftCompile normal x86_64 Compiling\ RootViewController.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/RootViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal x86_64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/RootViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile RootViewController.swift
+
+SwiftEmitModule normal x86_64 Emitting\ module\ for\ MentalArithmetic (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal x86_64 (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    
+
+SwiftCompile normal x86_64 Compiling\ PracticeViewController.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/PracticeViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal x86_64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/PracticeViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile PracticeViewController.swift
+
+/tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/PracticeViewController.swift:83:15: warning: 'traitCollectionDidChange' was deprecated in iOS 17.0: Use the trait change registration APIs declared in the UITraitChangeObservable protocol [#DeprecatedDeclaration]
+ 81 | 
+ 82 |     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+ 83 |         super.traitCollectionDidChange(previousTraitCollection)
+    |               `- warning: 'traitCollectionDidChange' was deprecated in iOS 17.0: Use the trait change registration APIs declared in the UITraitChangeObservable protocol [#DeprecatedDeclaration]
+ 84 |         if previousTraitCollection?.preferredContentSizeCategory != traitCollection.preferredContentSizeCategory {
+ 85 |             summary.axis = traitCollection.preferredContentSizeCategory.isAccessibilityCategory ? .vertical : .horizontal
+
+[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>
+SwiftCompile normal x86_64 Compiling\ MultiplicationStageGroupView.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/MultiplicationStageGroupView.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal x86_64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/MultiplicationStageGroupView.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile MultiplicationStageGroupView.swift
+
+SwiftCompile normal x86_64 Compiling\ GeneratedAssetSymbols.swift /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile GeneratedAssetSymbols.swift
+
+SwiftCompile normal x86_64 Compiling\ LearnViewController.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/LearnViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal x86_64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/LearnViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile LearnViewController.swift
+
+/tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/LearnViewController.swift:415:15: warning: 'traitCollectionDidChange' was deprecated in iOS 17.0: Use the trait change registration APIs declared in the UITraitChangeObservable protocol [#DeprecatedDeclaration]
+413 | 
+414 |     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+415 |         super.traitCollectionDidChange(previousTraitCollection)
+    |               `- warning: 'traitCollectionDidChange' was deprecated in iOS 17.0: Use the trait change registration APIs declared in the UITraitChangeObservable protocol [#DeprecatedDeclaration]
+416 |         if previousTraitCollection?.preferredContentSizeCategory != traitCollection.preferredContentSizeCategory {
+417 |             for row in catalogRows { row.axis = traitCollection.preferredContentSizeCategory.isAccessibilityCategory ? .vertical : .horizontal }
+
+[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>
+SwiftCompile normal x86_64 Compiling\ VisualTokens.generated.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/VisualTokens.generated.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal x86_64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/VisualTokens.generated.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile VisualTokens.generated.swift
+
+SwiftCompile normal x86_64 Compiling\ PrivacyViewController.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/PrivacyViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal x86_64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/PrivacyViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile PrivacyViewController.swift
+
+SwiftCompile normal x86_64 Compiling\ AppDelegate.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/AppDelegate.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal x86_64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/AppDelegate.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile AppDelegate.swift
+
+SwiftCompile normal x86_64 Compiling\ CarryRouteView.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/CarryRouteView.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal x86_64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/CarryRouteView.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile CarryRouteView.swift
+
+SwiftCompile normal x86_64 Compiling\ ConfirmedExamples.swift,\ Lessons.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Core/ConfirmedExamples.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Core/Lessons.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal x86_64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Core/ConfirmedExamples.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile ConfirmedExamples.swift
+
+SwiftCompile normal x86_64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Core/Lessons.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile Lessons.swift
+
+SwiftCompile normal x86_64 Compiling\ AppTheme.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/AppTheme.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal x86_64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/AppTheme.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile AppTheme.swift
+
+SwiftCompile normal x86_64 Compiling\ DevelopingAnswerLabel.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/DevelopingAnswerLabel.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal x86_64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/DevelopingAnswerLabel.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile DevelopingAnswerLabel.swift
+
+SwiftCompile normal x86_64 Compiling\ PositionalInstructions.swift,\ PracticeEngine.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Core/PositionalInstructions.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Core/PracticeEngine.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal x86_64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Core/PositionalInstructions.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile PositionalInstructions.swift
+
+SwiftCompile normal x86_64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Core/PracticeEngine.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile PracticeEngine.swift
+
+SwiftCompile normal x86_64 Compiling\ SimulatorReviewRunner.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/QA/SimulatorReviewRunner.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal x86_64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/QA/SimulatorReviewRunner.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile SimulatorReviewRunner.swift
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ MentalArithmetic (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    
+
+SwiftDriverJobDiscovery normal x86_64 Compiling SimulatorReviewRunner.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 Compiling\ AppTheme.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/AppTheme.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/AppTheme.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile AppTheme.swift
+
+SwiftDriverJobDiscovery normal x86_64 Compiling GeneratedAssetSymbols.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 Compiling\ PracticeViewController.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/PracticeViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+/tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/PracticeViewController.swift:83:15: warning: 'traitCollectionDidChange' was deprecated in iOS 17.0: Use the trait change registration APIs declared in the UITraitChangeObservable protocol [#DeprecatedDeclaration]
+ 81 | 
+ 82 |     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+ 83 |         super.traitCollectionDidChange(previousTraitCollection)
+    |               `- warning: 'traitCollectionDidChange' was deprecated in iOS 17.0: Use the trait change registration APIs declared in the UITraitChangeObservable protocol [#DeprecatedDeclaration]
+ 84 |         if previousTraitCollection?.preferredContentSizeCategory != traitCollection.preferredContentSizeCategory {
+ 85 |             summary.axis = traitCollection.preferredContentSizeCategory.isAccessibilityCategory ? .vertical : .horizontal
+
+[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>
+
+SwiftCompile normal arm64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/PracticeViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile PracticeViewController.swift
+
+SwiftDriverJobDiscovery normal x86_64 Compiling VisualTokens.generated.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 Compiling\ DevelopingAnswerLabel.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/DevelopingAnswerLabel.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/DevelopingAnswerLabel.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile DevelopingAnswerLabel.swift
+
+SwiftDriverJobDiscovery normal x86_64 Compiling AppDelegate.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 Compiling\ LearnViewController.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/LearnViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/LearnViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile LearnViewController.swift
+
+/tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/LearnViewController.swift:415:15: warning: 'traitCollectionDidChange' was deprecated in iOS 17.0: Use the trait change registration APIs declared in the UITraitChangeObservable protocol [#DeprecatedDeclaration]
+413 | 
+414 |     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+415 |         super.traitCollectionDidChange(previousTraitCollection)
+    |               `- warning: 'traitCollectionDidChange' was deprecated in iOS 17.0: Use the trait change registration APIs declared in the UITraitChangeObservable protocol [#DeprecatedDeclaration]
+416 |         if previousTraitCollection?.preferredContentSizeCategory != traitCollection.preferredContentSizeCategory {
+417 |             for row in catalogRows { row.axis = traitCollection.preferredContentSizeCategory.isAccessibilityCategory ? .vertical : .horizontal }
+
+[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>
+SwiftDriverJobDiscovery normal x86_64 Compiling CarryRouteView.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 Compiling\ GeneratedAssetSymbols.swift /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile GeneratedAssetSymbols.swift
+
+SwiftDriverJobDiscovery normal x86_64 Compiling RootViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 Compiling\ AppDelegate.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/AppDelegate.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/AppDelegate.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile AppDelegate.swift
+
+SwiftDriverJobDiscovery normal x86_64 Compiling DevelopingAnswerLabel.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 Compiling\ ConfirmedExamples.swift,\ Lessons.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Core/ConfirmedExamples.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Core/Lessons.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Core/ConfirmedExamples.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile ConfirmedExamples.swift
+
+SwiftCompile normal arm64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Core/Lessons.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile Lessons.swift
+
+SwiftDriverJobDiscovery normal x86_64 Compiling PrivacyViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 Compiling\ VisualTokens.generated.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/VisualTokens.generated.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/VisualTokens.generated.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile VisualTokens.generated.swift
+
+SwiftDriverJobDiscovery normal arm64 Compiling GeneratedAssetSymbols.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 Compiling\ RootViewController.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/RootViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/RootViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile RootViewController.swift
+
+SwiftDriverJobDiscovery normal x86_64 Emitting module for MentalArithmetic (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling VisualTokens.generated.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftDriver\ Compilation\ Requirements MentalArithmetic normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name MentalArithmetic -O @/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.SwiftFileList -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target x86_64-apple-ios17.0-simulator -g -module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 5 -I /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator -F /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator -c -j15 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKStatCaches.noindex/iphonesimulator27.0-24A5390e-e43fee13dd4b37625cdebfde7abd7d2e3243818bda632a4370e1cc7a9fd181c5.sdkstatcache -output-file-map /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex -sdk-module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-generated-files.hmap -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-own-target-headers.hmap -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-all-target-headers.hmap -Xcc -iquote -Xcc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-project-headers.hmap -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/include -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources-normal/x86_64 -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources/x86_64 -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic-Swift.h -working-directory /tmp/mental-arithmetic-ios-release-120/ios -experimental-emit-module-separately -disable-cmo
+
+SwiftCompile normal arm64 Compiling\ PositionalInstructions.swift,\ PracticeEngine.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Core/PositionalInstructions.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Core/PracticeEngine.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Core/PositionalInstructions.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile PositionalInstructions.swift
+
+SwiftCompile normal arm64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/Core/PracticeEngine.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile PracticeEngine.swift
+
+SwiftDriverJobDiscovery normal x86_64 Compiling MultiplicationStageGroupView.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+Copy /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.swiftmodule/x86_64-apple-ios-simulator.swiftmodule /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.swiftmodule (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.swiftmodule /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.swiftmodule/x86_64-apple-ios-simulator.swiftmodule
+
+Copy /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.swiftmodule/x86_64-apple-ios-simulator.swiftdoc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.swiftdoc (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.swiftdoc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.swiftmodule/x86_64-apple-ios-simulator.swiftdoc
+
+Copy /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.swiftmodule/x86_64-apple-ios-simulator.abi.json /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.abi.json (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.abi.json /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.swiftmodule/x86_64-apple-ios-simulator.abi.json
+
+Copy /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.swiftsourceinfo (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.swiftsourceinfo /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo
+
+SwiftCompile normal arm64 Compiling\ PrivacyViewController.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/PrivacyViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/PrivacyViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile PrivacyViewController.swift
+
+SwiftCompile normal arm64 Compiling\ ArithmeticExpressionView.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/ArithmeticExpressionView.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+/tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/ArithmeticExpressionView.swift:50:15: warning: 'traitCollectionDidChange' was deprecated in iOS 17.0: Use the trait change registration APIs declared in the UITraitChangeObservable protocol [#DeprecatedDeclaration]
+ 48 | 
+ 49 |     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+ 50 |         super.traitCollectionDidChange(previousTraitCollection)
+    |               `- warning: 'traitCollectionDidChange' was deprecated in iOS 17.0: Use the trait change registration APIs declared in the UITraitChangeObservable protocol [#DeprecatedDeclaration]
+ 51 |         if previousTraitCollection?.preferredContentSizeCategory != traitCollection.preferredContentSizeCategory,
+ 52 |            let c = configuration {
+
+[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>
+
+SwiftCompile normal arm64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/ArithmeticExpressionView.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile ArithmeticExpressionView.swift
+
+SwiftDriverJobDiscovery normal arm64 Compiling AppDelegate.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 Compiling\ MultiplicationStageGroupView.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/MultiplicationStageGroupView.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/MultiplicationStageGroupView.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile MultiplicationStageGroupView.swift
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for MentalArithmetic (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftDriver\ Compilation\ Requirements MentalArithmetic normal arm64 com.apple.xcode.tools.swift.compiler (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name MentalArithmetic -O @/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.SwiftFileList -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 5 -I /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator -F /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator -c -j15 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKStatCaches.noindex/iphonesimulator27.0-24A5390e-e43fee13dd4b37625cdebfde7abd7d2e3243818bda632a4370e1cc7a9fd181c5.sdkstatcache -output-file-map /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex -sdk-module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-generated-files.hmap -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-own-target-headers.hmap -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-all-target-headers.hmap -Xcc -iquote -Xcc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-project-headers.hmap -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/include -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources-normal/arm64 -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources/arm64 -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic-Swift.h -working-directory /tmp/mental-arithmetic-ios-release-120/ios -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Compiling DevelopingAnswerLabel.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal x86_64 Compiling\ ArithmeticExpressionView.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/ArithmeticExpressionView.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+/tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/ArithmeticExpressionView.swift:50:15: warning: 'traitCollectionDidChange' was deprecated in iOS 17.0: Use the trait change registration APIs declared in the UITraitChangeObservable protocol [#DeprecatedDeclaration]
+ 48 | 
+ 49 |     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+ 50 |         super.traitCollectionDidChange(previousTraitCollection)
+    |               `- warning: 'traitCollectionDidChange' was deprecated in iOS 17.0: Use the trait change registration APIs declared in the UITraitChangeObservable protocol [#DeprecatedDeclaration]
+ 51 |         if previousTraitCollection?.preferredContentSizeCategory != traitCollection.preferredContentSizeCategory,
+ 52 |            let c = configuration {
+
+[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>
+
+SwiftCompile normal x86_64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/ArithmeticExpressionView.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile ArithmeticExpressionView.swift
+
+SwiftMergeGeneratedHeaders /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources/MentalArithmetic-Swift.h /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic-Swift.h /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic-Swift.h (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-swiftHeaderTool -arch arm64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic-Swift.h -arch x86_64 /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic-Swift.h -o /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources/MentalArithmetic-Swift.h
+
+SwiftDriverJobDiscovery normal arm64 Compiling RootViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+Copy /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.swiftmodule/arm64-apple-ios-simulator.swiftmodule /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.swiftmodule (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.swiftmodule /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.swiftmodule/arm64-apple-ios-simulator.swiftdoc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.swiftdoc (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.swiftdoc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.swiftmodule/arm64-apple-ios-simulator.swiftdoc
+
+Copy /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.swiftmodule/arm64-apple-ios-simulator.abi.json /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.abi.json (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.abi.json /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.swiftsourceinfo (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.swiftsourceinfo /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+SwiftCompile normal arm64 Compiling\ CarryRouteView.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/CarryRouteView.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/UI/CarryRouteView.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile CarryRouteView.swift
+
+SwiftDriverJobDiscovery normal arm64 Compiling PrivacyViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 Compiling\ SimulatorReviewRunner.swift /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/QA/SimulatorReviewRunner.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftCompile normal arm64 /tmp/mental-arithmetic-ios-release-120/ios/MentalArithmetic/QA/SimulatorReviewRunner.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-SwiftPerFileCompile SimulatorReviewRunner.swift
+
+SwiftDriverJobDiscovery normal arm64 Compiling CarryRouteView.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling SimulatorReviewRunner.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftDriverJobDiscovery normal x86_64 Compiling AppTheme.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling MultiplicationStageGroupView.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftDriverJobDiscovery normal x86_64 Compiling PracticeViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling AppTheme.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling PracticeViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftDriverJobDiscovery normal x86_64 Compiling PositionalInstructions.swift, PracticeEngine.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling ArithmeticExpressionView.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftDriverJobDiscovery normal x86_64 Compiling ConfirmedExamples.swift, Lessons.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftDriverJobDiscovery normal x86_64 Compiling ArithmeticExpressionView.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftDriverJobDiscovery normal x86_64 Compiling LearnViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftDriver\ Compilation MentalArithmetic normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-Swift-Compilation -- /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name MentalArithmetic -O @/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.SwiftFileList -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target x86_64-apple-ios17.0-simulator -g -module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 5 -I /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator -F /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator -c -j15 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKStatCaches.noindex/iphonesimulator27.0-24A5390e-e43fee13dd4b37625cdebfde7abd7d2e3243818bda632a4370e1cc7a9fd181c5.sdkstatcache -output-file-map /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex -sdk-module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-generated-files.hmap -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-own-target-headers.hmap -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-all-target-headers.hmap -Xcc -iquote -Xcc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-project-headers.hmap -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/include -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources-normal/x86_64 -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources/x86_64 -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic-Swift.h -working-directory /tmp/mental-arithmetic-ios-release-120/ios -experimental-emit-module-separately -disable-cmo
+
+Ld /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/Binary/MentalArithmetic normal x86_64 (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target x86_64-apple-ios17.0-simulator -isysroot /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphonesimulator -L/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator -F/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphonesimulator -F/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator -filelist /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -Xlinker -object_path_lto -Xlinker /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic_lto.o -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.swiftmodule -o /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/Binary/MentalArithmetic
+
+SwiftDriverJobDiscovery normal arm64 Compiling PositionalInstructions.swift, PracticeEngine.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling LearnViewController.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling ConfirmedExamples.swift, Lessons.swift (in target 'MentalArithmetic' from project 'MentalArithmetic')
+
+SwiftDriver\ Compilation MentalArithmetic normal arm64 com.apple.xcode.tools.swift.compiler (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-Swift-Compilation -- /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name MentalArithmetic -O @/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.SwiftFileList -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 5 -I /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator -F /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator -c -j15 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKStatCaches.noindex/iphonesimulator27.0-24A5390e-e43fee13dd4b37625cdebfde7abd7d2e3243818bda632a4370e1cc7a9fd181c5.sdkstatcache -output-file-map /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex -sdk-module-cache-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-generated-files.hmap -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-own-target-headers.hmap -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-all-target-headers.hmap -Xcc -iquote -Xcc /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic-project-headers.hmap -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/include -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources-normal/arm64 -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources/arm64 -Xcc -I/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic-Swift.h -working-directory /tmp/mental-arithmetic-ios-release-120/ios -experimental-emit-module-separately -disable-cmo
+
+Ld /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/Binary/MentalArithmetic normal arm64 (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.0-simulator -isysroot /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphonesimulator -L/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator -F/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphonesimulator -F/tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator -filelist /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -Xlinker -object_path_lto -Xlinker /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic_lto.o -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.swiftmodule -o /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/Binary/MentalArithmetic
+
+CreateUniversalBinary /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/MentalArithmetic normal arm64\ x86_64 (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo -create /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/Binary/MentalArithmetic /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/Binary/MentalArithmetic -output /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/MentalArithmetic
+
+CopySwiftLibs /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/MentalArithmetic --scan-folder /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/Frameworks --scan-folder /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/PlugIns --scan-folder /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/SystemExtensions --scan-folder /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/Extensions --platform iphonesimulator --toolchain /Users/pussieromatic/Library/Developer/DVTDownloads/MetalToolchain/mounts/e0303a069097c7034cc5befc63a7a7c2c8ee7720/Metal.xctoolchain --toolchain /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+Ignoring --strip-bitcode because --sign was not passed
+
+ExtractAppIntentsMetadata (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Users/pussieromatic/Library/Developer/DVTDownloads/MetalToolchain/mounts/e0303a069097c7034cc5befc63a7a7c2c8ee7720/Metal.xctoolchain --module-name MentalArithmetic --sdk-root /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk --xcode-version 27A5228h --platform-family iOS --deployment-target 17.0 --bundle-identifier local.jeff.mentalarithmetic --output /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app --target-triple arm64-apple-ios17.0-simulator --target-triple x86_64-apple-ios17.0-simulator --binary-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/MentalArithmetic --dependency-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic_dependency_info.dat --dependency-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic_dependency_info.dat --stringsdata-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --stringsdata-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.SwiftFileList --source-file-list /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.SwiftFileList --metadata-file-list /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic.DependencyMetadataFileList --static-metadata-file-list /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic.DependencyStaticMetadataFileList --swift-const-vals-list /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/arm64/MentalArithmetic.SwiftConstValuesFileList --swift-const-vals-list /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/Objects-normal/x86_64/MentalArithmetic.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-11-03 11:36:58.281 appintentsmetadataprocessor[28564:4950642] Starting appintentsmetadataprocessor export
+2026-11-03 11:36:58.283 appintentsmetadataprocessor[28564:4950642] warning: Metadata extraction skipped, no AppIntents.framework dependency found
+
+GenerateDSYMFile /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app.dSYM /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/MentalArithmetic (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    export PATH\=/Applications/Xcode-beta.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources:/Users/pussieromatic/Library/Developer/DVTDownloads/MetalToolchain/mounts/e0303a069097c7034cc5befc63a7a7c2c8ee7720/Metal.xctoolchain/usr/bin:/Users/pussieromatic/Library/Developer/DVTDownloads/MetalToolchain/mounts/e0303a069097c7034cc5befc63a7a7c2c8ee7720/Metal.xctoolchain/usr/local/bin:/Users/pussieromatic/Library/Developer/DVTDownloads/MetalToolchain/mounts/e0303a069097c7034cc5befc63a7a7c2c8ee7720/Metal.xctoolchain/usr/libexec:/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin:/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/bin:/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/local/bin:/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/local/bin:/Applications/Xcode-beta.app/Contents/Developer/usr/bin:/Applications/Xcode-beta.app/Contents/Developer/usr/local/bin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/pussieromatic/.codex/tmp/arg0-macos/codex-arg0I0FYcV:/Users/pussieromatic/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/pussieromatic/.local/bin:/Applications/Sublime\ Text.app/Contents/SharedSupport/bin:/Applications/ChatGPT.app/Contents/Resources:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/Users/pussieromatic/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS
+    /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/MentalArithmetic -o /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app.dSYM
+
+AppIntentsSSUTraining (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/Info.plist --temp-dir-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/ssu --bundle-id local.jeff.mentalarithmetic --product-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app --extracted-metadata-path /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/Metadata.appintents --metadata-file-list /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic.DependencyMetadataFileList --source-file /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/Info.plist --archive-ssu-assets
+2026-11-03 11:36:58.302 appintentsnltrainingprocessor[28566:4950650] Parsing options for appintentsnltrainingprocessor
+2026-11-03 11:36:58.303 appintentsnltrainingprocessor[28566:4950650] Starting AppIntents SSU YAML Generation
+2026-11-03 11:36:58.303 appintentsnltrainingprocessor[28566:4950650] No AppShortcuts found - Skipping.
+
+RegisterExecutionPolicyException /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-RegisterExecutionPolicyException /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app
+
+Validate /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    builtin-validationUtility /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app -shallow-bundle -infoplist-subpath Info.plist
+
+Touch /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-release-120/ios
+    /usr/bin/touch -c /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app
+
+PruneExplicitPrecompiledModules /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/SDKExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/mental-arithmetic-ios-release-120/SimulatorDerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+** BUILD SUCCEEDED **
+

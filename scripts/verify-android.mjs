@@ -71,9 +71,13 @@ try {
   await Promise.all([aapt2Path, zipalignPath, apksignerPath].map((file) => access(file)));
 
   const packageInfo = JSON.parse(await readFile(path.join(projectRoot, 'package.json'), 'utf8'));
-  const [major, minor, patch] = packageInfo.version.split('.').map(Number);
+  const versionMatch = /^(\d+)\.(\d+)\.(\d+)(?:-[0-9A-Za-z.-]+)?$/.exec(packageInfo.version);
+  assert.ok(versionMatch, 'Shared application uses a numeric semantic version with an optional prerelease label');
+  const [major, minor, patch] = versionMatch.slice(1, 4).map(Number);
   assert.ok([major, minor, patch].every(Number.isSafeInteger), 'Shared application uses a numeric semantic version');
-  const expectedVersionCode = major * 10000 + minor * 100 + patch;
+  const expectedVersionCode = packageInfo.config?.androidVersionCode ?? (major * 10000 + minor * 100 + patch);
+  assert.ok(Number.isSafeInteger(expectedVersionCode) && expectedVersionCode > 0,
+    'Configured Android version code is a positive safe integer');
   const apkBytes = await readFile(apkPath);
   const listing = await run(sevenZipPath, ['l', '-slt', apkPath]);
   const entries = parseEntries(listing);
@@ -101,7 +105,7 @@ try {
   const permissions = badging.split(/\r?\n/).filter((line) => /^uses-permission/.test(line));
   assert.equal(applicationId, 'local.jeff.mentalarithmetic', 'Application ID');
   assert.equal(versionName, packageInfo.version, 'APK version matches the shared application');
-  assert.equal(Number(versionCode), expectedVersionCode, 'Android version code matches the shared semantic version');
+  assert.equal(Number(versionCode), expectedVersionCode, 'Android version code matches the configured code or semantic-version fallback');
   assert.equal(minSdk, 26, 'Minimum Android 8.0 / API 26');
   assert.equal(targetSdk, 37, 'Targets Android 17 / API 37');
   assert.equal(label, 'Mental Arithmetic', 'Application label');

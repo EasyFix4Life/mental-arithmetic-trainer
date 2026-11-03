@@ -1,0 +1,154 @@
+{
+  "verifiedAt": "2026-11-03T14:43:24.666422+00:00",
+  "version": "1.2.0-preview.1",
+  "versionCode": 10200,
+  "fromVersion": "1.1.4",
+  "publicBaselineDownloaded": true,
+  "publicBaselineSha256": "82311c8fe23dc0628d568edc250025b6e7d46a50b8f4ee94e37080ddeb39b205",
+  "device": {
+    "serial": "emulator-5556",
+    "ownedDisposableEmulator": true,
+    "androidRelease": "17",
+    "sdkInt": 37,
+    "webViewVersion": "145.0.7632.218",
+    "physicalDevicesModified": false
+  },
+  "sameUidAcrossUpdate": true,
+  "packageUids": "package:local.jeff.mentalarithmetic.test uid:10232\npackage:local.jeff.mentalarithmetic uid:10235",
+  "storageMarkerPersistedAfterColdRelaunchAndUpdate": true,
+  "applicationDataCleared": false,
+  "visibleVersion": "Version 1.2.0-preview.1",
+  "additionOptions": [
+    "2"
+  ],
+  "multiplicationOptions": [
+    "1",
+    "2",
+    "3"
+  ],
+  "scriptUrls": [
+    "https://appassets.androidplatform.net/assets/index-VARByz_F.js"
+  ],
+  "nativeAcceptancePassed": 12,
+  "nativeAcceptanceFailed": 0,
+  "insideOutsideRegression": {
+    "inside": {
+      "operands": [
+        82,
+        76
+      ],
+      "stage": "Inside",
+      "highlightedDigitRefs": [
+        "left:1",
+        "right:0"
+      ],
+      "calculation": "2 \u00d7 7",
+      "result": 14
+    },
+    "outside": {
+      "stage": "Outside",
+      "highlightedDigitRefs": [
+        "left:0",
+        "right:1"
+      ],
+      "calculation": "8 \u00d7 6",
+      "result": 48,
+      "insidePlusOutside": 62
+    },
+    "finalAnswer": 6232
+  },
+  "learnVisuals": {
+    "palette": [
+      {
+        "stage": "First",
+        "color": "rgb(45, 101, 103)",
+        "borderWidth": "1.90476px",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "refs": [
+          "left:0",
+          "right:0"
+        ]
+      },
+      {
+        "stage": "Inside",
+        "color": "rgb(108, 84, 131)",
+        "borderWidth": "1.90476px",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "refs": [
+          "left:1",
+          "right:0"
+        ]
+      },
+      {
+        "stage": "Outside",
+        "color": "rgb(108, 84, 131)",
+        "borderWidth": "1.90476px",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "refs": [
+          "left:0",
+          "right:1"
+        ]
+      },
+      {
+        "stage": "Last",
+        "color": "rgb(125, 87, 35)",
+        "borderWidth": "1.90476px",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "refs": [
+          "left:1",
+          "right:1"
+        ]
+      }
+    ],
+    "equalHighlightBorder": "1.90476px",
+    "carries": {
+      "last": {
+        "kind": "out",
+        "from": "Last",
+        "value": "5",
+        "to": "Inside + Outside (127)",
+        "text": "FromLast\u2192Carry out5\u2192ToInside + Outside (127)"
+      },
+      "middle": [
+        {
+          "kind": "in",
+          "from": "Last (56)",
+          "value": "5",
+          "to": "Carry to the middle",
+          "text": "FromLast (56)\u2192Carry in5\u2192ToCarry to the middle"
+        },
+        {
+          "kind": "out",
+          "from": "Carry to the middle",
+          "value": "13",
+          "to": "First (72)",
+          "text": "FromCarry to the middle\u2192Carry out13\u2192ToFirst (72)"
+        }
+      ]
+    }
+  },
+  "practiceVisuals": {
+    "incorrectCue": "\u00d7",
+    "numericTime": "0.0",
+    "feedbackBorder": "1.90476px",
+    "foreground": "rgb(0, 0, 0)",
+    "answerBackground": "rgb(255, 255, 255)",
+    "visibleElementsChecked": 10
+  },
+  "actualReleaseApk": {
+    "path": "/tmp/mental-arithmetic-visual-review-android/release/Mental-Arithmetic-1.2.0-preview.1-Android.apk",
+    "bytes": 669253,
+    "sha256": "82baf9b19c44afa9a4d9695d7103a851ba61f9fdfda14ce65ed7af120cdfbc91"
+  },
+  "testRefinement": {
+    "firstRunPassedCases": 9,
+    "firstRunFailure": "2px CSS border computed as1.90476px at2.625DPR; corrected assertion allows one device-pixel quantization while checking the declared2px token",
+    "productChangeForRefinement": false
+  },
+  "localReviewOnly": true,
+  "published": false,
+  "allChecksPassed": false,
+  "developmentSnapshot": true,
+  "manualReviewFinding": "At862x122CSSpx with the landscape numeric keyboard open, the problem is obscured by the answer field. Earlier automated tests checked field/timer bounds but lacked the required non-overlap assertion. This is not a final acceptance result.",
+  "supersededBy": "visual-review-android-runtime-environment.json after the short-landscape fix"
+}

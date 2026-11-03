@@ -1,0 +1,12 @@
+{
+  "baseline": "approved 1.2.0-preview.4",
+  "stable": "1.2.0",
+  "verifiedInputFileCount": 20,
+  "changedInputs": [
+    "app/build.gradle.kts",
+    "app/src/androidTest/java/local/jeff/mentalarithmetic/AndroidTestRunner.java"
+  ],
+  "changePurpose": "Stable version/code metadata and exact stable visible-version acceptance assertion only",
+  "productionShellAndResourcesUnchanged": true,
+  "allChecksPassed": true
+}

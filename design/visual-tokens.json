@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "background": "#FAF7F0",
+  "ink": "#000000",
+  "field": "#FFFFFF",
+  "learn": {
+    "first": "#126C70",
+    "inside": "#755093",
+    "outside": "#755093",
+    "last": "#885A15"
+  },
+  "typography": {
+    "text": [
+      "Baskerville",
+      "Palatino Linotype",
+      "Book Antiqua",
+      "Georgia",
+      "serif"
+    ],
+    "mathematics": [
+      "Arial",
+      "Helvetica",
+      "sans-serif"
+    ],
+    "nativeText": "Baskerville",
+    "nativeMathematics": "ArialMT",
+    "baseTextPx": 17,
+    "lineHeight": 1.55
+  },
+  "spacingPx": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48
+  ],
+  "borders": {
+    "controlPx": 1,
+    "emphasisPx": 2,
+    "radiusPx": 4
+  },
+  "controls": {
+    "minimumTargetPx": 44,
+    "learnHelpMinimumPx": 64
+  },
+  "version": "1.2.0",
+  "learnFill": {
+    "first": "#E2F1EF",
+    "inside": "#EEE5F4",
+    "outside": "#EEE5F4",
+    "last": "#F6ECD8"
+  }
+}

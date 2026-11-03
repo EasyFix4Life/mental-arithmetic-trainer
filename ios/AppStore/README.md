@@ -1,3 +1,9 @@
+# iOS development-download preparation — 1.2.0
+
+**Native version 1.2.0, build 10 · 3 November 2026.** Prepared for the owner-authorized GitHub 1.2.0 release and website download list. This is development software, not a signed installable IPA, App Store release or TestFlight build. No Apple Store upload or submission occurred. Apple Developer membership and signing are still unavailable.
+
+The app matches approved preview 4 exactly: Learn offers M1/M2, Practice offers A2/M1/M2, and the grouped ampersand header, carries, random examples, timing and input behavior are preserved. Current final-package proof uses `../../verification/release-120-ios-*`; screenshots including the build 10 Privacy version display are in `Screenshots/1.2.0-build10-*`. See `../../IOS_APP.md` for package types, local launch/build instructions and verification limits. Prior release/preview preparation notes follow as historical context.
+
 # App Store submission draft
 
 Updated locally for version **1.1.4, build 5** on 2 November 2026. No App Store Connect submission or public store publication has been made. These preparation files may be included in the owner-authorized GitHub repository. The owner has asked to prepare the app and submission files before enrolling in the Apple Developer Program.

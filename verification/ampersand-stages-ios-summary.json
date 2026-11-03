@@ -1,0 +1,141 @@
+{
+  "reviewEdition": "1.2.0-preview.3",
+  "nativeVersion": "1.2.0",
+  "build": "8",
+  "date": "2026-11-03",
+  "status": "local-literal-ampersand-preview-not-published",
+  "baseline": {
+    "preview": "1.2.0-preview.2",
+    "commit": "0db325764a191e8e07d130e52efebcbb467d3239",
+    "unchangedFiles": 9,
+    "compatibilityReport": "verification/ampersand-stages-ios-compatibility.json",
+    "preserved": "Four core files, Practice, CarryRouteView, ArithmeticExpressionView, AppTheme and generated tokens are byte-identical to preview2; core also unchanged from production114"
+  },
+  "toolchain": {
+    "application": "/Applications/Xcode-beta.app",
+    "version": "Xcode27.0 beta",
+    "build": "27A5228h"
+  },
+  "header": {
+    "diagram": "[ First & [ Inside + Outside ] & Last ] = [ Final Answer: #### ]",
+    "connectors": "Exactly two literal & labels, identity transforms at every tested normal/largest-text layout; no arrows inside the product header",
+    "carryRoutes": "Existing down arrows and whole actual carry values preserved",
+    "measurement": "Wide feasibility measures actual scaled & glyph width; no rotations or CSS-like transforms",
+    "scope": "Named two-digit multiplication header only"
+  },
+  "builds": {
+    "releaseSimulator": "passed",
+    "unsignedDeviceArchive": "passed"
+  },
+  "actualPackagedReleaseAudits": {
+    "iphone": {
+      "version": "1.2.0",
+      "build": "8",
+      "passedChecks": 251,
+      "binaryUnchanged": true,
+      "report": "verification/ampersand-stages-ios-iphone-release.json"
+    },
+    "ipad": {
+      "version": "1.2.0",
+      "build": "8",
+      "passedChecks": 250,
+      "binaryUnchanged": true,
+      "report": "verification/ampersand-stages-ios-ipad-release.json"
+    }
+  },
+  "auditMethod": "Separate simulator-only external dylib drives final ZIP-extracted Release UIKit controls and text-field delegates. Delivered and installed executable hashes match; external audit library is not shipped.",
+  "currentCoverage": [
+    "Normal narrow iPhone and wide iPad layouts; largest Dynamic Type stacks",
+    "Exactly two upright ampersands, no header arrows, measured glyph fit",
+    "Group containment, discrete Inside/Outside buttons, explicit plus and separate equals/Final Answer",
+    "All4directstageactions and correct Final Answer product",
+    "Equal bold font/padding/2ptborders/lightfills, logical accessible action order, casing and Arial result digits",
+    "Complete stage words and unclipped Final Answer caption",
+    "Unchanged carry-route arrows and actual whole carry value"
+  ],
+  "priorFullSuites": {
+    "rerunForThisConnectorChange": false,
+    "historicalPreview": "1.2.0-preview.2",
+    "coreTests": 36,
+    "debugIPhone": "12/12",
+    "debugIPad": "11/12 with rotation skip",
+    "releaseIPhoneAssertions": 558,
+    "releaseIPadAssertions": 558,
+    "report": "verification/grouped-stages-ios-summary.json"
+  },
+  "releaseBinaries": [
+    {
+      "kind": "simulator",
+      "version": "1.2.0",
+      "build": "8",
+      "minimumOS": "17.0",
+      "families": [
+        1,
+        2
+      ],
+      "architectures": "Architectures in the fat file: /tmp/mental-arithmetic-ios-ampersand/packaged-release/MentalArithmetic.app/MentalArithmetic are: x86_64 arm64",
+      "debugHarnessAbsent": true,
+      "externalAuditLibraryAbsent": true,
+      "removedLessonTitlesAbsent": true,
+      "signatureDirectoryPresent": false
+    },
+    {
+      "kind": "device",
+      "version": "1.2.0",
+      "build": "8",
+      "minimumOS": "17.0",
+      "families": [
+        1,
+        2
+      ],
+      "architectures": "Non-fat file: /tmp/mental-arithmetic-ios-ampersand/Mental-Arithmetic-1.2.0-preview.3-iOS-unsigned.xcarchive/Products/Applications/MentalArithmetic.app/MentalArithmetic is architecture: arm64",
+      "debugHarnessAbsent": true,
+      "externalAuditLibraryAbsent": true,
+      "removedLessonTitlesAbsent": true,
+      "signatureDirectoryPresent": false
+    }
+  ],
+  "sourceFilesVerifiedAgainstMirror": 30,
+  "sourceManifest": "verification/ampersand-stages-ios-native-sources.json",
+  "screenshots": {
+    "raw": 10,
+    "opaqueReviewCopies": 10,
+    "directories": [
+      "ios/AppStore/Screenshots/1.2.0-preview.3-iPhone-27-beta",
+      "ios/AppStore/Screenshots/1.2.0-preview.3-iPad-26.5"
+    ],
+    "validation": "Actual native simulator captures; PNG CRCs/decompression/dimensions valid; every RGB sample preserved while removing unused opaque alpha; no redraw/resize. Preview1/2 galleries preserved."
+  },
+  "submissionFiles": 35,
+  "artifacts": [
+    {
+      "file": "Mental-Arithmetic-1.2.0-preview.3-iOS-Simulator-app.zip",
+      "bytes": 407483,
+      "sha256": "e720f1345348153e70e28c40508d77a409938ffdb48e7ce893a751ccca04b199",
+      "copiesIdentical": true
+    },
+    {
+      "file": "Mental-Arithmetic-1.2.0-preview.3-iOS-unsigned-archive.zip",
+      "bytes": 933266,
+      "sha256": "94ae447257aa2ef50778722b7baa82c34b160fc71266b714683978708fe5fb00",
+      "copiesIdentical": true
+    },
+    {
+      "file": "Mental-Arithmetic-1.2.0-preview.3-iOS-submission-files.zip",
+      "bytes": 2987205,
+      "sha256": "b65ab091bd9cae24890db899db0bc834cab6f8f70a7819319934ef45825f681c",
+      "copiesIdentical": true
+    }
+  ],
+  "limitations": [
+    "UIKit control actions and text-field delegates are not physical input, external XCUITest or manual VoiceOver automation.",
+    "No new rotation/keyboard/full-Practice suite is claimed for this connector-only edit; retained scope is verified by source hashes and historical full-suite proof.",
+    "Device archive is unsigned, not an installable IPA. No App Store/TestFlight upload, physical-device distribution, production deployment or GitHub release publication occurred."
+  ],
+  "allChecksPassed": true,
+  "simulatorCleanup": {
+    "verifiedShutdown": 2,
+    "taskOwnedOnly": true,
+    "report": "verification/ampersand-stages-ios-simulator-cleanup.json"
+  }
+}

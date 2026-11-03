@@ -5,6 +5,12 @@ final class PrivacyViewController: UIViewController {
         super.viewDidLoad()
         title = "Privacy"
         view.backgroundColor = AppTheme.background
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = AppTheme.background
+        appearance.titleTextAttributes = [.font: AppTheme.font(20), .foregroundColor: AppTheme.ink]
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
         navigationController?.navigationBar.tintColor = AppTheme.ink
         navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .done,
             primaryAction: UIAction { [weak self] _ in self?.dismiss(animated: false) })
@@ -13,6 +19,7 @@ final class PrivacyViewController: UIViewController {
         text.backgroundColor = .clear
         text.textColor = AppTheme.ink
         text.font = AppTheme.font(20)
+        text.adjustsFontForContentSizeCategory = true
         text.isEditable = false
         text.isSelectable = true
         text.accessibilityIdentifier = "privacy-policy-text"

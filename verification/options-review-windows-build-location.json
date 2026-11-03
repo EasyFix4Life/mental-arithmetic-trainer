@@ -1,0 +1,12 @@
+{
+  "version": "1.2.0-preview.4",
+  "platform": "windows",
+  "output": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-options-windows-5kO3AW",
+  "artifacts": [
+    "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-options-desktop-j_9vd5uu/release/Mental-Arithmetic-1.2.0-preview.4-Windows-x64-Setup.exe",
+    "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-options-desktop-j_9vd5uu/release/Mental-Arithmetic-1.2.0-preview.4-Windows-x64-Setup.exe.blockmap",
+    "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-options-desktop-j_9vd5uu/release/Mental-Arithmetic-1.2.0-preview.4-Windows-x64.zip"
+  ],
+  "publish": "never",
+  "appPath": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-options-windows-5kO3AW/win-unpacked/Mental Arithmetic.exe"
+}

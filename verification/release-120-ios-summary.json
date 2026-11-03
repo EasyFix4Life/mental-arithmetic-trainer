@@ -1,0 +1,155 @@
+{
+  "releaseEdition": "1.2.0",
+  "nativeVersion": "1.2.0",
+  "build": "10",
+  "date": "2026-11-03",
+  "status": "prepared-for-owner-authorized-github-development-downloads",
+  "approvedBaseline": {
+    "edition": "1.2.0-preview.4",
+    "commit": "2cd3f1e6f15c0709fe444ff9cf32585d41ac89e2",
+    "byteIdenticalFiles": 31,
+    "onlyNativeProjectChange": "Six build-number values change from 9 to 10",
+    "compatibilityReport": "verification/release-120-ios-compatibility.json",
+    "appCoreTestAndAuditorSourcesUnchanged": true
+  },
+  "availability": {
+    "learn": [
+      "multiplication-1",
+      "multiplication-2"
+    ],
+    "learnDefault": "multiplication-1",
+    "practice": [
+      "addition-2",
+      "multiplication-1",
+      "multiplication-2"
+    ],
+    "practiceDefault": "addition-2",
+    "historicalEngineAndFixturesRetained": true
+  },
+  "toolchain": {
+    "application": "/Applications/Xcode-beta.app",
+    "version": "Xcode27.0 beta",
+    "build": "27A5228h"
+  },
+  "approvedCoreTests": {
+    "passed": 38,
+    "rerunForMetadataOnlyRelease": false,
+    "report": "verification/options-review-ios-core-tests.txt",
+    "basis": "Exact app/core/test source hashes match the approved preview4 commit"
+  },
+  "builds": {
+    "releaseSimulator": "passed",
+    "unsignedDeviceArchive": "passed"
+  },
+  "actualPackagedReleaseAudits": {
+    "iphone": {
+      "version": "1.2.0",
+      "build": "10",
+      "passedChecks": 552,
+      "binaryUnchanged": true,
+      "report": "verification/release-120-ios-iphone-release.json"
+    },
+    "ipad": {
+      "version": "1.2.0",
+      "build": "10",
+      "passedChecks": 552,
+      "binaryUnchanged": true,
+      "report": "verification/release-120-ios-ipad-release.json"
+    }
+  },
+  "auditMethod": "The unchanged external simulator-only auditor drives the final ZIP-extracted Release app UIKit controls and text-field delegates with expected version 1.2.0/build 10. Delivered and installed executable hashes match; the auditor library is not shipped.",
+  "currentCoverage": [
+    "Exact M1/M2 Learn catalog/default and absence of addition or M3 Learn controls",
+    "Practice A2 only and M1/M2 only; operation switching normalization",
+    "Forty automatic Practice answers: A2 round9/10 with partial/Return/unique/range/timing checks, M1/M2 rounds10/10 and largest-text A2 round9/10",
+    "Random examples and correct final answers for both available lessons",
+    "Corrected Inside/Outside highlights, calculations, narration and complete pair brackets",
+    "Direct named-stage/final actions, Next/Back and existing carry progression",
+    "Exactly two upright ampersands, whole words, grouping/equal styles/accessibility order and Arial final digits",
+    "Largest accessibility stage wrapping and Practice problem/input/timer/feedback geometry",
+    "Privacy displays current Version 1.2.0 (build 10)"
+  ],
+  "releaseBinaries": [
+    {
+      "kind": "simulator",
+      "version": "1.2.0",
+      "build": "10",
+      "minimumOS": "17.0",
+      "families": [
+        1,
+        2
+      ],
+      "architectures": "Architectures in the fat file: /tmp/mental-arithmetic-ios-release-120/packaged-release/MentalArithmetic.app/MentalArithmetic are: x86_64 arm64",
+      "debugHarnessAbsent": true,
+      "externalAuditLibraryAbsent": true,
+      "oldRemovedAdditionTitlesAbsent": true,
+      "signatureDirectoryPresent": false
+    },
+    {
+      "kind": "device",
+      "version": "1.2.0",
+      "build": "10",
+      "minimumOS": "17.0",
+      "families": [
+        1,
+        2
+      ],
+      "architectures": "Non-fat file: /tmp/mental-arithmetic-ios-release-120/Mental-Arithmetic-1.2.0-iOS-unsigned.xcarchive/Products/Applications/MentalArithmetic.app/MentalArithmetic is architecture: arm64",
+      "debugHarnessAbsent": true,
+      "externalAuditLibraryAbsent": true,
+      "oldRemovedAdditionTitlesAbsent": true,
+      "signatureDirectoryPresent": false
+    }
+  ],
+  "sourceFilesVerifiedAgainstMirror": 30,
+  "sourceManifest": "verification/release-120-ios-native-sources.json",
+  "screenshots": {
+    "raw": 18,
+    "opaqueReviewCopies": 18,
+    "directories": [
+      "ios/AppStore/Screenshots/1.2.0-build10-iPhone-27-beta",
+      "ios/AppStore/Screenshots/1.2.0-build10-iPad-26.5"
+    ],
+    "validation": "Actual native captures; PNG CRCs/decompression/dimensions valid; every RGB sample preserved when removing unused opaque alpha. No redraw or resizing. Current build10 Privacy/version is visible. Prior galleries and preview4 packages preserved."
+  },
+  "submissionFiles": 51,
+  "artifacts": [
+    {
+      "file": "Mental-Arithmetic-1.2.0-iOS-Simulator-app.zip",
+      "bytes": 408567,
+      "sha256": "c6dd232f8789934da53dbfa000c685394d67a7e1db6d7a938a7f893b87ea0f59",
+      "copiesIdentical": true
+    },
+    {
+      "file": "Mental-Arithmetic-1.2.0-iOS-unsigned-archive.zip",
+      "bytes": 936753,
+      "sha256": "ac252c44835345f3cbd4a11eb2a3667ea38a3defcd339890e7194b82b5a40acf",
+      "copiesIdentical": true
+    },
+    {
+      "file": "Mental-Arithmetic-1.2.0-iOS-submission-files.zip",
+      "bytes": 5434205,
+      "sha256": "6793f07795da228629941745662f51631e6678eb4ba62287c73a15ad4a2f1fa4",
+      "copiesIdentical": true
+    }
+  ],
+  "simulatorCleanup": {
+    "verifiedShutdown": 2,
+    "taskOwnedOnly": true,
+    "report": "verification/release-120-ios-simulator-cleanup.json"
+  },
+  "distribution": {
+    "purpose": "Owner-authorized GitHub and website development downloads",
+    "childRemoteWritesPerformed": false,
+    "signedIPAProduced": false,
+    "appStoreUploadPerformed": false,
+    "testFlightUploadPerformed": false,
+    "appleDeveloperMembershipStillRequired": true
+  },
+  "limitations": [
+    "UIKit control actions/delegates are not physical input, external XCUITest or manual VoiceOver automation.",
+    "The approved 38 core tests and prior Debug target compilation are historical results with exact unchanged source; no new core or DEBUG suite is claimed for this metadata-only step.",
+    "Device archive is unsigned and not an installable IPA; Apple signing/enrollment and physical-device validation remain outstanding."
+  ],
+  "allChecksPassed": true
+}

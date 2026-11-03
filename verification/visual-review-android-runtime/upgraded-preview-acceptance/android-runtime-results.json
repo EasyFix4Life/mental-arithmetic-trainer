@@ -1,0 +1,360 @@
+{
+  "androidRelease": "17",
+  "sdkInt": 37,
+  "supportedAbis": [
+    "arm64-v8a"
+  ],
+  "model": "sdk_gphone64_arm64",
+  "package": "local.jeff.mentalarithmetic",
+  "version": "1.2.0-preview.1",
+  "webViewPackage": "com.google.android.webview",
+  "webViewVersion": "145.0.7632.218",
+  "scenario": "acceptance",
+  "passed": 12,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "offline release shell, presentation and browser security",
+      "status": "passed",
+      "durationMs": 286,
+      "details": {
+        "url": "https:\/\/appassets.androidplatform.net\/index.html",
+        "blockNetworkLoads": true,
+        "allowFileAccess": false,
+        "allowContentAccess": false,
+        "javascript": true,
+        "cacheMode": 2,
+        "nativePaper": -329744,
+        "lightStatusBar": true,
+        "lightNavigationBar": true
+      }
+    },
+    {
+      "name": "prominent learn button label, bounds and native tap",
+      "status": "passed",
+      "durationMs": 298,
+      "details": {
+        "label": "?\n            Click Here to Learn How!",
+        "accessibleLabel": "Click Here to Learn How!",
+        "width": 377.4285888671875,
+        "height": 64,
+        "viewportWidth": 411
+      }
+    },
+    {
+      "name": "four available random lessons, excluded addition lengths and complete instructions",
+      "status": "passed",
+      "durationMs": 12,
+      "details": {
+        "lessonCategories": 4,
+        "excludedLessons": [
+          "addition-1",
+          "addition-3"
+        ],
+        "randomRequestsPerCategory": 4,
+        "completeWalkthroughs": 4,
+        "verticalAdditionCategories": 1
+      }
+    },
+    {
+      "name": "vertical addition instructions, carries and final answers",
+      "status": "passed",
+      "durationMs": 266,
+      "details": {
+        "twoDigit": {
+          "operands": [
+            58,
+            67
+          ],
+          "sum": 125
+        },
+        "allAdditionVertical": true
+      }
+    },
+    {
+      "name": "Inside selects inner digits and Outside selects outer digits",
+      "status": "passed",
+      "durationMs": 532,
+      "details": {
+        "inside": {
+          "operands": [
+            82,
+            76
+          ],
+          "stage": "Inside",
+          "highlightedDigitRefs": [
+            "left:1",
+            "right:0"
+          ],
+          "calculation": "2 × 7",
+          "result": 14
+        },
+        "outside": {
+          "stage": "Outside",
+          "highlightedDigitRefs": [
+            "left:0",
+            "right:1"
+          ],
+          "calculation": "8 × 6",
+          "result": 48,
+          "insidePlusOutside": 62
+        },
+        "finalAnswer": 6232
+      }
+    },
+    {
+      "name": "random two-digit trace, confirmed carries and final answer",
+      "status": "passed",
+      "durationMs": 274,
+      "details": {
+        "randomProduct": 8526,
+        "confirmedProduct": 324,
+        "stages": [
+          "First",
+          "Inside",
+          "Outside",
+          "Last",
+          "Final answer"
+        ]
+      }
+    },
+    {
+      "name": "scholarly Learn palette, shared stage emphasis and explicit carry routes",
+      "status": "passed",
+      "durationMs": 800,
+      "details": {
+        "palette": [
+          {
+            "stage": "First",
+            "color": "rgb(45, 101, 103)",
+            "borderWidth": "1.90476px",
+            "fontFamily": "Arial, Helvetica, sans-serif",
+            "refs": [
+              "left:0",
+              "right:0"
+            ]
+          },
+          {
+            "stage": "Inside",
+            "color": "rgb(108, 84, 131)",
+            "borderWidth": "1.90476px",
+            "fontFamily": "Arial, Helvetica, sans-serif",
+            "refs": [
+              "left:1",
+              "right:0"
+            ]
+          },
+          {
+            "stage": "Outside",
+            "color": "rgb(108, 84, 131)",
+            "borderWidth": "1.90476px",
+            "fontFamily": "Arial, Helvetica, sans-serif",
+            "refs": [
+              "left:0",
+              "right:1"
+            ]
+          },
+          {
+            "stage": "Last",
+            "color": "rgb(125, 87, 35)",
+            "borderWidth": "1.90476px",
+            "fontFamily": "Arial, Helvetica, sans-serif",
+            "refs": [
+              "left:1",
+              "right:1"
+            ]
+          }
+        ],
+        "equalHighlightBorder": "1.90476px",
+        "carries": {
+          "last": {
+            "kind": "out",
+            "from": "Last",
+            "value": "5",
+            "to": "Inside + Outside (127)",
+            "text": "FromLast→Carry out5→ToInside + Outside (127)"
+          },
+          "middle": [
+            {
+              "kind": "in",
+              "from": "Last (56)",
+              "value": "5",
+              "to": "Carry to the middle",
+              "text": "FromLast (56)→Carry in5→ToCarry to the middle"
+            },
+            {
+              "kind": "out",
+              "from": "Carry to the middle",
+              "value": "13",
+              "to": "First (72)",
+              "text": "FromCarry to the middle→Carry out13→ToFirst (72)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "three-digit multiplication groups and whole-value carries",
+      "status": "passed",
+      "durationMs": 288,
+      "details": {
+        "operands": [
+          123,
+          456
+        ],
+        "groupResults": [
+          4,
+          13,
+          28,
+          27,
+          18
+        ],
+        "resolved": [
+          28,
+          30,
+          16,
+          5
+        ],
+        "product": 56088
+      }
+    },
+    {
+      "name": "native numeric keyboard, visible answer and rotation preservation",
+      "status": "passed",
+      "durationMs": 2617,
+      "details": {
+        "answerBottom": 509.0952606201172,
+        "liveBottom": 500.32740020751953,
+        "viewportBottom": 526.09521484375,
+        "viewportHeight": 526.09521484375,
+        "problemId": "1:0",
+        "nativeInputType": 2,
+        "softwareKeyboardVisible": true,
+        "landscapeKeyboardLayout": {
+          "width": 862,
+          "height": 122,
+          "visibleHeight": 121.9047622680664,
+          "answerBottom": 113.40476608276367,
+          "liveBottom": 108.42857360839844,
+          "viewportBottom": 121.9047622680664,
+          "problem": {
+            "x": 25.869047164916992,
+            "y": 73.17857360839844,
+            "width": 448.4821472167969,
+            "height": 40.226192474365234,
+            "top": 73.17857360839844,
+            "right": 474.35119438171387,
+            "bottom": 113.40476608276367,
+            "left": 25.869047164916992
+          }
+        },
+        "landscapeWithPreviousFeedback": {
+          "width": 862,
+          "height": 122,
+          "visibleHeight": 121.9047622680664,
+          "bounds": {
+            "#problem": {
+              "x": 25.869047164916992,
+              "y": 73.17857360839844,
+              "width": 448.4821472167969,
+              "height": 40.226192474365234,
+              "top": 73.17857360839844,
+              "right": 474.35119438171387,
+              "bottom": 113.40476608276367,
+              "left": 25.869047164916992
+            },
+            "#answer": {
+              "x": 656.3511962890625,
+              "y": 63.92857360839844,
+              "width": 123.31547546386719,
+              "height": 49.476192474365234,
+              "top": 63.92857360839844,
+              "right": 779.6666717529297,
+              "bottom": 113.40476608276367,
+              "left": 656.3511962890625
+            },
+            "#live-time": {
+              "x": 801.2261962890625,
+              "y": 68.9047622680664,
+              "width": 35.38095474243164,
+              "height": 39.52381134033203,
+              "top": 68.9047622680664,
+              "right": 836.6071510314941,
+              "bottom": 108.42857360839844,
+              "left": 801.2261962890625
+            },
+            "#previous-feedback": {
+              "x": 25.869047164916992,
+              "y": 3.3988096714019775,
+              "width": 50.863094329833984,
+              "height": 27.6011905670166,
+              "top": 3.3988096714019775,
+              "right": 76.73214149475098,
+              "bottom": 31.00000023841858,
+              "left": 25.869047164916992
+            }
+          }
+        },
+        "rotationPreservedState": true,
+        "nativeKeyEventRoundScore": "9 \/ 10"
+      }
+    },
+    {
+      "name": "monochrome incorrect feedback and white answer field",
+      "status": "passed",
+      "durationMs": 308,
+      "details": {
+        "incorrectCue": "×",
+        "numericTime": "0.0",
+        "feedbackBorder": "1.90476px",
+        "foreground": "rgb(0, 0, 0)",
+        "answerBackground": "rgb(255, 255, 255)",
+        "visibleElementsChecked": 10
+      }
+    },
+    {
+      "name": "ten accepted answers, wrong feedback and exact timing summary",
+      "status": "passed",
+      "durationMs": 287,
+      "details": {
+        "score": "9 \/ 10",
+        "minimum": "0.2 s",
+        "maximum": "1.4 s",
+        "average": "1.2 s",
+        "durations": [
+          220,
+          530,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499
+        ]
+      }
+    },
+    {
+      "name": "four available practice configurations and addition length guard",
+      "status": "passed",
+      "durationMs": 23,
+      "details": {
+        "configurations": 4,
+        "acceptedAnswers": 40,
+        "allScores": "10 \/ 10",
+        "additionOptions": [
+          2
+        ],
+        "multiplicationOptions": [
+          1,
+          2,
+          3
+        ],
+        "unsupportedSwitchesResetToTwo": true
+      }
+    }
+  ],
+  "finishedAtEpochMs": 1793717286504,
+  "runtimeExecution": true
+}

@@ -1,0 +1,617 @@
+{
+  "androidRelease": "17",
+  "sdkInt": 37,
+  "supportedAbis": [
+    "arm64-v8a"
+  ],
+  "model": "sdk_gphone64_arm64",
+  "package": "local.jeff.mentalarithmetic",
+  "version": "1.2.0-preview.4",
+  "webViewPackage": "com.google.android.webview",
+  "webViewVersion": "145.0.7632.218",
+  "scenario": "acceptance",
+  "passed": 13,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "offline release shell, presentation and browser security",
+      "status": "passed",
+      "durationMs": 271,
+      "details": {
+        "url": "https:\/\/appassets.androidplatform.net\/index.html",
+        "blockNetworkLoads": true,
+        "allowFileAccess": false,
+        "allowContentAccess": false,
+        "javascript": true,
+        "cacheMode": 2,
+        "nativePaper": -329744,
+        "lightStatusBar": true,
+        "lightNavigationBar": true
+      }
+    },
+    {
+      "name": "prominent learn button label, bounds and native tap",
+      "status": "passed",
+      "durationMs": 299,
+      "details": {
+        "label": "?\n            Click Here to Learn How!",
+        "accessibleLabel": "Click Here to Learn How!",
+        "width": 377.4285888671875,
+        "height": 64,
+        "viewportWidth": 411
+      }
+    },
+    {
+      "name": "exactly two multiplication Learn lessons with random complete instructions",
+      "status": "passed",
+      "durationMs": 7,
+      "details": {
+        "lessonCategories": 2,
+        "offeredLessons": [
+          "multiplication-1",
+          "multiplication-2"
+        ],
+        "excludedLessons": [
+          "addition-1",
+          "addition-2",
+          "addition-3",
+          "multiplication-3"
+        ],
+        "randomRequestsPerCategory": 4,
+        "completeWalkthroughs": 2
+      }
+    },
+    {
+      "name": "two-digit addition Practice, vertical operands and digit-count auto-submission",
+      "status": "passed",
+      "durationMs": 272,
+      "details": {
+        "operands": [
+          58,
+          67
+        ],
+        "sum": 125,
+        "operandDigits": [
+          2,
+          2
+        ],
+        "verticalColumns": true,
+        "partialInput": "12",
+        "automaticSubmission": "125",
+        "acceptedAnswers": 10,
+        "uniquePairs": 10,
+        "score": "10 \/ 10"
+      }
+    },
+    {
+      "name": "Inside selects inner digits and Outside selects outer digits",
+      "status": "passed",
+      "durationMs": 522,
+      "details": {
+        "inside": {
+          "operands": [
+            82,
+            76
+          ],
+          "stage": "Inside",
+          "highlightedDigitRefs": [
+            "left:1",
+            "right:0"
+          ],
+          "calculation": "2 × 7",
+          "result": 14
+        },
+        "outside": {
+          "stage": "Outside",
+          "highlightedDigitRefs": [
+            "left:0",
+            "right:1"
+          ],
+          "calculation": "8 × 6",
+          "result": 48,
+          "insidePlusOutside": 62
+        },
+        "finalAnswer": 6232
+      }
+    },
+    {
+      "name": "random two-digit trace, confirmed carries and final answer",
+      "status": "passed",
+      "durationMs": 262,
+      "details": {
+        "randomProduct": 8526,
+        "confirmedProduct": 324,
+        "stages": [
+          "First",
+          "Inside",
+          "Outside",
+          "Last",
+          "Final Answer"
+        ]
+      }
+    },
+    {
+      "name": "literal ampersand grouped First middle Last expression, equal filled stages and separate Final Answer",
+      "status": "passed",
+      "durationMs": 1452,
+      "details": {
+        "order": [
+          "First",
+          "Inside",
+          "Outside",
+          "Last",
+          "Final Answer"
+        ],
+        "initialStyles": [
+          {
+            "name": "First",
+            "color": "rgb(18, 108, 112)",
+            "fill": "rgb(226, 241, 239)",
+            "fontWeight": "700",
+            "borderWidth": "1.90476px"
+          },
+          {
+            "name": "Inside",
+            "color": "rgb(117, 80, 147)",
+            "fill": "rgb(238, 229, 244)",
+            "fontWeight": "700",
+            "borderWidth": "1.90476px"
+          },
+          {
+            "name": "Outside",
+            "color": "rgb(117, 80, 147)",
+            "fill": "rgb(238, 229, 244)",
+            "fontWeight": "700",
+            "borderWidth": "1.90476px"
+          },
+          {
+            "name": "Last",
+            "color": "rgb(136, 90, 21)",
+            "fill": "rgb(246, 236, 216)",
+            "fontWeight": "700",
+            "borderWidth": "1.90476px"
+          }
+        ],
+        "selectedStyles": [
+          {
+            "name": "First",
+            "color": "rgb(18, 108, 112)",
+            "fill": "rgb(226, 241, 239)",
+            "fontWeight": "700",
+            "borderWidth": "1.90476px"
+          },
+          {
+            "name": "Inside",
+            "color": "rgb(117, 80, 147)",
+            "fill": "rgb(238, 229, 244)",
+            "fontWeight": "700",
+            "borderWidth": "1.90476px"
+          },
+          {
+            "name": "Outside",
+            "color": "rgb(117, 80, 147)",
+            "fill": "rgb(238, 229, 244)",
+            "fontWeight": "700",
+            "borderWidth": "1.90476px"
+          },
+          {
+            "name": "Last",
+            "color": "rgb(136, 90, 21)",
+            "fill": "rgb(246, 236, 216)",
+            "fontWeight": "700",
+            "borderWidth": "1.90476px"
+          }
+        ],
+        "grouping": "[First & [Inside + Outside] & Last] = [Final Answer: 8526]",
+        "portrait": {
+          "width": 411,
+          "height": 838,
+          "bounds": {
+            "#stage-sequence": {
+              "x": 17,
+              "y": 0.1011904776096344,
+              "width": 377.4285888671875,
+              "height": 282.952392578125,
+              "top": 0.1011904776096344,
+              "right": 394.4285888671875,
+              "bottom": 283.05358305573463,
+              "left": 17
+            },
+            "#stage-product-group": {
+              "x": 17,
+              "y": 0.1011904776096344,
+              "width": 213.59524536132812,
+              "height": 229.84524536132812,
+              "top": 0.1011904776096344,
+              "right": 230.59524536132812,
+              "bottom": 229.94643583893776,
+              "left": 17
+            },
+            "#stage-middle-group": {
+              "x": 23.154762268066406,
+              "y": 86.56547546386719,
+              "width": 201.2857208251953,
+              "height": 56.91666793823242,
+              "top": 86.56547546386719,
+              "right": 224.44048309326172,
+              "bottom": 143.4821434020996,
+              "left": 23.154762268066406
+            },
+            "#stage-middle-plus": {
+              "x": 111.76786041259766,
+              "y": 105.67262268066406,
+              "width": 10.6130952835083,
+              "height": 18.702381134033203,
+              "top": 105.67262268066406,
+              "right": 122.38095569610596,
+              "bottom": 124.37500381469727,
+              "left": 111.76786041259766
+            },
+            "#stage-connection-first": {
+              "x": 117.98214721679688,
+              "y": 59.36309814453125,
+              "width": 11.630952835083008,
+              "height": 18.702381134033203,
+              "top": 59.36309814453125,
+              "right": 129.61310005187988,
+              "bottom": 78.06547927856445,
+              "left": 117.98214721679688
+            },
+            "#stage-connection-last": {
+              "x": 117.98214721679688,
+              "y": 151.98214721679688,
+              "width": 11.630952835083008,
+              "height": 18.702381134033203,
+              "top": 151.98214721679688,
+              "right": 129.61310005187988,
+              "bottom": 170.68452835083008,
+              "left": 117.98214721679688
+            },
+            "#stage-equals": {
+              "x": 17,
+              "y": 251.39881896972656,
+              "width": 10.2619047164917,
+              "height": 18.702381134033203,
+              "top": 251.39881896972656,
+              "right": 27.2619047164917,
+              "bottom": 270.10120010375977,
+              "left": 17
+            },
+            "#final-answer": {
+              "x": 35.761905670166016,
+              "y": 238.44642639160156,
+              "width": 191.90476989746094,
+              "height": 44.60714340209961,
+              "top": 238.44642639160156,
+              "right": 227.66667556762695,
+              "bottom": 283.0535697937012,
+              "left": 35.761905670166016
+            }
+          }
+        },
+        "landscape": {
+          "width": 862,
+          "height": 359,
+          "bounds": {
+            "#stage-sequence": {
+              "x": 25.869047164916992,
+              "y": -0.095238097012043,
+              "width": 810.7380981445312,
+              "height": 69.22618865966797,
+              "top": -0.095238097012043,
+              "right": 836.6071453094482,
+              "bottom": 69.13095056265593,
+              "left": 25.869047164916992
+            },
+            "#stage-product-group": {
+              "x": 25.869047164916992,
+              "y": -0.095238097012043,
+              "width": 389.5357360839844,
+              "height": 69.22618865966797,
+              "top": -0.095238097012043,
+              "right": 415.40478324890137,
+              "bottom": 69.13095056265593,
+              "left": 25.869047164916992
+            },
+            "#stage-middle-group": {
+              "x": 122.05952453613281,
+              "y": 6.059524059295654,
+              "width": 201.2857208251953,
+              "height": 56.91666793823242,
+              "top": 6.059524059295654,
+              "right": 323.3452453613281,
+              "bottom": 62.976191997528076,
+              "left": 122.05952453613281
+            },
+            "#stage-middle-plus": {
+              "x": 210.67262268066406,
+              "y": 25.166667938232422,
+              "width": 10.6130952835083,
+              "height": 18.702381134033203,
+              "top": 25.166667938232422,
+              "right": 221.28571796417236,
+              "bottom": 43.869049072265625,
+              "left": 210.67262268066406
+            },
+            "#stage-connection-first": {
+              "x": 101.92857360839844,
+              "y": 25.166667938232422,
+              "width": 11.630952835083008,
+              "height": 18.702381134033203,
+              "top": 25.166667938232422,
+              "right": 113.55952644348145,
+              "bottom": 43.869049072265625,
+              "left": 101.92857360839844
+            },
+            "#stage-connection-last": {
+              "x": 331.8452453613281,
+              "y": 25.166667938232422,
+              "width": 11.630952835083008,
+              "height": 18.702381134033203,
+              "top": 25.166667938232422,
+              "right": 343.47619819641113,
+              "bottom": 43.869049072265625,
+              "left": 331.8452453613281
+            },
+            "#stage-equals": {
+              "x": 423.9047546386719,
+              "y": 25.166667938232422,
+              "width": 10.2619047164917,
+              "height": 18.702381134033203,
+              "top": 25.166667938232422,
+              "right": 434.1666593551636,
+              "bottom": 43.869049072265625,
+              "left": 423.9047546386719
+            },
+            "#final-answer": {
+              "x": 442.66668701171875,
+              "y": 12.214285850524902,
+              "width": 191.90476989746094,
+              "height": 44.60714340209961,
+              "top": 12.214285850524902,
+              "right": 634.5714569091797,
+              "bottom": 56.82142925262451,
+              "left": 442.66668701171875
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "scholarly Learn palette, shared stage emphasis and explicit carry routes",
+      "status": "passed",
+      "durationMs": 917,
+      "details": {
+        "palette": [
+          {
+            "stage": "First",
+            "color": "rgb(18, 108, 112)",
+            "borderWidth": "1.90476px",
+            "fontFamily": "Arial, Helvetica, sans-serif",
+            "refs": [
+              "left:0",
+              "right:0"
+            ]
+          },
+          {
+            "stage": "Inside",
+            "color": "rgb(117, 80, 147)",
+            "borderWidth": "1.90476px",
+            "fontFamily": "Arial, Helvetica, sans-serif",
+            "refs": [
+              "left:1",
+              "right:0"
+            ]
+          },
+          {
+            "stage": "Outside",
+            "color": "rgb(117, 80, 147)",
+            "borderWidth": "1.90476px",
+            "fontFamily": "Arial, Helvetica, sans-serif",
+            "refs": [
+              "left:0",
+              "right:1"
+            ]
+          },
+          {
+            "stage": "Last",
+            "color": "rgb(136, 90, 21)",
+            "borderWidth": "1.90476px",
+            "fontFamily": "Arial, Helvetica, sans-serif",
+            "refs": [
+              "left:1",
+              "right:1"
+            ]
+          }
+        ],
+        "equalHighlightBorder": "1.90476px",
+        "carries": {
+          "last": {
+            "kind": "out",
+            "from": "Last",
+            "value": "5",
+            "to": "Inside + Outside (127)",
+            "text": "FromLast→Carry out5→ToInside + Outside (127)"
+          },
+          "middle": [
+            {
+              "kind": "in",
+              "from": "Last (56)",
+              "value": "5",
+              "to": "Carry to the middle",
+              "text": "FromLast (56)→Carry in5→ToCarry to the middle"
+            },
+            {
+              "kind": "out",
+              "from": "Carry to the middle",
+              "value": "13",
+              "to": "First (72)",
+              "text": "FromCarry to the middle→Carry out13→ToFirst (72)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "single-digit multiplication instruction, final answer and fresh example reset",
+      "status": "passed",
+      "durationMs": 407,
+      "details": {
+        "operands": [
+          8,
+          7
+        ],
+        "product": 56,
+        "highlightedDigitRefs": [
+          "left:0",
+          "right:0"
+        ],
+        "instructionAndSeparateFinal": true,
+        "freshExample": [
+          1,
+          9
+        ],
+        "resetToFirstInstruction": true
+      }
+    },
+    {
+      "name": "native numeric keyboard, visible answer and rotation preservation",
+      "status": "passed",
+      "durationMs": 3490,
+      "details": {
+        "answerBottom": 509.0952606201172,
+        "liveBottom": 500.32740020751953,
+        "viewportBottom": 526.09521484375,
+        "viewportHeight": 526.09521484375,
+        "problemId": "2:0",
+        "nativeInputType": 2,
+        "softwareKeyboardVisible": true,
+        "landscapeKeyboardLayout": {
+          "width": 862,
+          "height": 122,
+          "visibleHeight": 121.9047622680664,
+          "answerBottom": 113.40476608276367,
+          "liveBottom": 108.42857360839844,
+          "viewportBottom": 121.9047622680664,
+          "problem": {
+            "x": 25.869047164916992,
+            "y": 73.17857360839844,
+            "width": 448.4821472167969,
+            "height": 40.226192474365234,
+            "top": 73.17857360839844,
+            "right": 474.35119438171387,
+            "bottom": 113.40476608276367,
+            "left": 25.869047164916992
+          }
+        },
+        "landscapeWithPreviousFeedback": {
+          "width": 862,
+          "height": 122,
+          "visibleHeight": 121.9047622680664,
+          "bounds": {
+            "#problem": {
+              "x": 25.869047164916992,
+              "y": 73.17857360839844,
+              "width": 448.4821472167969,
+              "height": 40.226192474365234,
+              "top": 73.17857360839844,
+              "right": 474.35119438171387,
+              "bottom": 113.40476608276367,
+              "left": 25.869047164916992
+            },
+            "#answer": {
+              "x": 656.3511962890625,
+              "y": 63.92857360839844,
+              "width": 123.31547546386719,
+              "height": 49.476192474365234,
+              "top": 63.92857360839844,
+              "right": 779.6666717529297,
+              "bottom": 113.40476608276367,
+              "left": 656.3511962890625
+            },
+            "#live-time": {
+              "x": 801.2261962890625,
+              "y": 68.9047622680664,
+              "width": 35.38095474243164,
+              "height": 39.52381134033203,
+              "top": 68.9047622680664,
+              "right": 836.6071510314941,
+              "bottom": 108.42857360839844,
+              "left": 801.2261962890625
+            },
+            "#previous-feedback": {
+              "x": 25.869047164916992,
+              "y": 3.3988096714019775,
+              "width": 50.863094329833984,
+              "height": 27.6011905670166,
+              "top": 3.3988096714019775,
+              "right": 76.73214149475098,
+              "bottom": 31.00000023841858,
+              "left": 25.869047164916992
+            }
+          }
+        },
+        "rotationPreservedState": true,
+        "nativeKeyEventRoundScore": "9 \/ 10"
+      }
+    },
+    {
+      "name": "monochrome incorrect feedback and white answer field",
+      "status": "passed",
+      "durationMs": 296,
+      "details": {
+        "incorrectCue": "×",
+        "numericTime": "0.0",
+        "feedbackBorder": "1.90476px",
+        "foreground": "rgb(0, 0, 0)",
+        "answerBackground": "rgb(255, 255, 255)",
+        "visibleElementsChecked": 10
+      }
+    },
+    {
+      "name": "ten accepted answers, wrong feedback and exact timing summary",
+      "status": "passed",
+      "durationMs": 340,
+      "details": {
+        "score": "9 \/ 10",
+        "minimum": "0.2 s",
+        "maximum": "1.4 s",
+        "average": "1.2 s",
+        "durations": [
+          220,
+          530,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499,
+          1499
+        ]
+      }
+    },
+    {
+      "name": "exactly three Practice configurations, ten unique questions each and option guards",
+      "status": "passed",
+      "durationMs": 41,
+      "details": {
+        "configurations": 3,
+        "acceptedAnswers": 30,
+        "allScores": "10 \/ 10",
+        "additionOptions": [
+          2
+        ],
+        "multiplicationOptions": [
+          1,
+          2
+        ],
+        "additionSwitchesResetToTwo": true,
+        "threeDigitOptionAbsent": true,
+        "noAdditionLearn": true
+      }
+    }
+  ],
+  "finishedAtEpochMs": 1793723219436,
+  "runtimeExecution": true
+}

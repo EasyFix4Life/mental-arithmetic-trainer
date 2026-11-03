@@ -1,0 +1,74 @@
+Command line invocation:
+    /Applications/Xcode-beta.app/Contents/Developer/usr/bin/xcodebuild -project /tmp/mental-arithmetic-ios-options-review/ios/MentalArithmetic.xcodeproj -scheme MentalArithmetic -configuration Release -destination "generic/platform=iOS Simulator" -derivedDataPath /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData CODE_SIGNING_ALLOWED=NO build
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'MentalArithmetic' in project 'MentalArithmetic' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode-beta.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /tmp/mental-arithmetic-ios-options-review/ios/MentalArithmetic/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode-beta.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: a4a875818b68e2aebc751c9bef3e2186
+Build description path: /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Intermediates.noindex/XCBuildData/a4a875818b68e2aebc751c9bef3e2186.xcbuilddata
+ClangStatCache /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/SDKStatCaches.noindex/iphonesimulator27.0-24A5390e-e43fee13dd4b37625cdebfde7abd7d2e3243818bda632a4370e1cc7a9fd181c5.sdkstatcache
+    cd /tmp/mental-arithmetic-ios-options-review/ios/MentalArithmetic.xcodeproj
+    /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -o /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/SDKStatCaches.noindex/iphonesimulator27.0-24A5390e-e43fee13dd4b37625cdebfde7abd7d2e3243818bda632a4370e1cc7a9fd181c5.sdkstatcache
+
+ProcessInfoPlistFile /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/Info.plist /tmp/mental-arithmetic-ios-options-review/ios/MentalArithmetic/Info.plist (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-options-review/ios
+    builtin-infoPlistUtility /tmp/mental-arithmetic-ios-options-review/ios/MentalArithmetic/Info.plist -producttype com.apple.product-type.application -genpkginfo /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/assetcatalog_generated_info.plist -o /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/Info.plist
+
+AppIntentsSSUTraining (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-options-review/ios
+    /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/Info.plist --temp-dir-path /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/ssu --bundle-id local.jeff.mentalarithmetic --product-path /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app --extracted-metadata-path /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/Metadata.appintents --metadata-file-list /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/MentalArithmetic.DependencyMetadataFileList --source-file /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/Info.plist --archive-ssu-assets
+2026-11-03 11:23:33.043 appintentsnltrainingprocessor[16444:4887615] Parsing options for appintentsnltrainingprocessor
+2026-11-03 11:23:33.043 appintentsnltrainingprocessor[16444:4887615] Starting AppIntents SSU YAML Generation
+2026-11-03 11:23:33.043 appintentsnltrainingprocessor[16444:4887615] No AppShortcuts found - Skipping.
+
+CopySwiftLibs /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-options-review/ios
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/MentalArithmetic --scan-folder /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/Frameworks --scan-folder /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/PlugIns --scan-folder /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/SystemExtensions --scan-folder /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/Extensions --platform iphonesimulator --toolchain /Users/pussieromatic/Library/Developer/DVTDownloads/MetalToolchain/mounts/e0303a069097c7034cc5befc63a7a7c2c8ee7720/Metal.xctoolchain --toolchain /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Intermediates.noindex/MentalArithmetic.build/Release-iphonesimulator/MentalArithmetic.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+Ignoring --strip-bitcode because --sign was not passed
+
+GenerateDSYMFile /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app.dSYM /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/MentalArithmetic (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-options-review/ios
+    export PATH\=/Applications/Xcode-beta.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources:/Users/pussieromatic/Library/Developer/DVTDownloads/MetalToolchain/mounts/e0303a069097c7034cc5befc63a7a7c2c8ee7720/Metal.xctoolchain/usr/bin:/Users/pussieromatic/Library/Developer/DVTDownloads/MetalToolchain/mounts/e0303a069097c7034cc5befc63a7a7c2c8ee7720/Metal.xctoolchain/usr/local/bin:/Users/pussieromatic/Library/Developer/DVTDownloads/MetalToolchain/mounts/e0303a069097c7034cc5befc63a7a7c2c8ee7720/Metal.xctoolchain/usr/libexec:/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin:/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/bin:/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/local/bin:/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/local/bin:/Applications/Xcode-beta.app/Contents/Developer/usr/bin:/Applications/Xcode-beta.app/Contents/Developer/usr/local/bin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/pussieromatic/.codex/tmp/arg0-macos/codex-arg0I0FYcV:/Users/pussieromatic/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/pussieromatic/.local/bin:/Applications/Sublime\ Text.app/Contents/SharedSupport/bin:/Applications/ChatGPT.app/Contents/Resources:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/Users/pussieromatic/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS
+    /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app/MentalArithmetic -o /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app.dSYM
+
+Validate /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app (in target 'MentalArithmetic' from project 'MentalArithmetic')
+    cd /tmp/mental-arithmetic-ios-options-review/ios
+    builtin-validationUtility /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Products/Release-iphonesimulator/MentalArithmetic.app -shallow-bundle -infoplist-subpath Info.plist
+
+PruneExplicitPrecompiledModules /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/mental-arithmetic-ios-options-review/SimulatorDerivedData/SDKExplicitPrecompiledModules
+
+** BUILD SUCCEEDED **
+

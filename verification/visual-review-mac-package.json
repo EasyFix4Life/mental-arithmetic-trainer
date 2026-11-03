@@ -1,0 +1,52 @@
+{
+  "version": "1.2.0-preview.1",
+  "reviewOnly": true,
+  "publicDownloadVersion": "1.1.4",
+  "checkedAt": "2026-11-03T14:50:15.518Z",
+  "finalDmgReadOnlyMount": "/tmp/mental-arithmetic-visual-review-dmg/Mental Arithmetic.app",
+  "zipCRCpassed": true,
+  "zipDMGAsarIdentical": true,
+  "deepStrictSignaturePassed": true,
+  "signature": "ad hoc",
+  "notarized": false,
+  "payload": [
+    {
+      "file": "dist/_headers",
+      "bytes": 123,
+      "sha256": "3fdc8f8e6af5ff2d1a5424f8cff40a3c11c7deefec052bc2f377ea0fd7ca8ff1",
+      "matches": true
+    },
+    {
+      "file": "dist/assets/index-BGWIhUsi.css",
+      "bytes": 17387,
+      "sha256": "eefb54974a1c95c535bff029718725d0d102c3825f50e839750876aeae5b3365",
+      "matches": true
+    },
+    {
+      "file": "dist/assets/index-BglQMeYT.js",
+      "bytes": 43214,
+      "sha256": "94ae0472bf1dc1f2017e67022bbb42aa51e83777a21c3122bc30600ee6662df8",
+      "matches": true
+    },
+    {
+      "file": "dist/index.html",
+      "bytes": 594,
+      "sha256": "7a24a0c2997040882f7af6a5ea4d10eb7f9bdef2a5b937b8deab3d6c170d5071",
+      "matches": true
+    },
+    {
+      "file": "desktop/main.cjs",
+      "bytes": 6088,
+      "sha256": "70ef65772f8f6390212190299348873b24b7b390a559049dd3a129c78ba301cb",
+      "matches": true
+    },
+    {
+      "file": "desktop/security.cjs",
+      "bytes": 1839,
+      "sha256": "df896d0e2c572d4d1a3b5f0a46df5c910d9f6c2183cf67bddb7f5c2c5abf06a0",
+      "matches": true
+    }
+  ],
+  "includesShortKeyboardFix": true,
+  "allChecksPassed": true
+}

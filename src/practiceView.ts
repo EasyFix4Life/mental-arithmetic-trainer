@@ -37,7 +37,10 @@ export function mountPracticeView(
       <button id="start" type="button">Start</button>
     </section>
     <section id="exercise" class="exercise" aria-label="Arithmetic practice" hidden>
-      <output id="previous-time" class="previous-time" aria-live="off" hidden></output>
+      <div id="previous-feedback" class="previous-feedback" hidden>
+        <span id="previous-status" class="previous-status" aria-hidden="true" hidden>×</span>
+        <output id="previous-time" class="previous-time" aria-live="off" hidden></output>
+      </div>
       <p id="problem" class="problem" aria-live="polite" aria-atomic="true">
         <span id="left-operand"></span>
         <span id="operator" aria-hidden="true"></span>
@@ -75,6 +78,8 @@ export function mountPracticeView(
   const operator = find('#operator');
   const answer = find<HTMLInputElement>('#answer');
   const previous = find<HTMLOutputElement>('#previous-time');
+  const previousFeedback = find('#previous-feedback');
+  const previousStatus = find('#previous-status');
   const live = find<HTMLOutputElement>('#live-time');
   const listeners = new AbortController();
   const options = { signal: listeners.signal };
@@ -133,6 +138,9 @@ export function mountPracticeView(
     lastAcceptedValue = '';
     live.textContent = '0.0';
     previous.hidden = !active || !state.previous;
+    previousFeedback.hidden = previous.hidden;
+    previousStatus.hidden = !state.previous || state.previous.correct;
+    previousFeedback.dataset.correct = String(state.previous?.correct ?? true);
     previous.textContent = '';
     const summary = state.phase === 'finished' ? state.timingSummary : null;
     roundTiming.hidden = summary === null;

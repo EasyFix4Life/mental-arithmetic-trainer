@@ -1,0 +1,402 @@
+{
+  "version": "1.2.0-preview.2",
+  "checkedAt": "2026-11-03T15:16:42.413208+00:00",
+  "runner": "/tmp/mental-arithmetic-grouped-stages-preview",
+  "previewUrl": "http://127.0.0.1:5199/",
+  "baselineCommit": "f01c38aa8f14ea6f752db9a4c37ed94e3ffd0969",
+  "unitPassed": 219,
+  "unitFailed": 0,
+  "browserStats": {
+    "startTime": "2026-11-03T15:15:43.867Z",
+    "duration": 23929.8,
+    "expected": 84,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "sourceMatchingFiles": 47,
+  "sourceHashes": [
+    {
+      "path": "src/answerPolicy.ts",
+      "sha256": "9a98d597b0f7baa7264b387f52ef8a1f5e80892e5c69446d2dda602f77dd89c1",
+      "matches": true
+    },
+    {
+      "path": "src/availableOptions.ts",
+      "sha256": "2fe4df4c59cc81e13bda9fd3e7e2b087bef26a1d2a7761461bc07addec11f038",
+      "matches": true
+    },
+    {
+      "path": "src/designTokens.css",
+      "sha256": "8516544a0b49a81985f6a9cab0524aab2886f772bd56114930a8b93ed9a0bb23",
+      "matches": true
+    },
+    {
+      "path": "src/downloadsView.ts",
+      "sha256": "a38e45fedf3add1b56e0a7b5c76a0ecad6091376021c68a6596e054b7deb433a",
+      "matches": true
+    },
+    {
+      "path": "src/generateRound.ts",
+      "sha256": "7b8b13e15b58e870f27468e538181423c1fa38f73bd5cceb66eb17a3ca8a52cf",
+      "matches": true
+    },
+    {
+      "path": "src/inputPolicy.ts",
+      "sha256": "1c46093bcaf0345926a460bcf7663bc985d1f77ba1b0b0049cd5046428dda8e8",
+      "matches": true
+    },
+    {
+      "path": "src/learn/carryVisualizer.ts",
+      "sha256": "4d092ae458ad1663806badccdf459b4334196a9ff0cc370cd25bd5c7a329362d",
+      "matches": true
+    },
+    {
+      "path": "src/learn/confirmedMultiplicationExamples.ts",
+      "sha256": "3411c4e1e4daaf173d7f5ce047e9e103f89b849933352b58a448a869a5fa800c",
+      "matches": true
+    },
+    {
+      "path": "src/learn/instructionStepRenderer.ts",
+      "sha256": "cccb71e72d4b96329d54a4538d52d0ac1454bd0a0ab3f96fdfec3d65c92dfc80",
+      "matches": true
+    },
+    {
+      "path": "src/learn/learnView.ts",
+      "sha256": "3d4d232eac1a10234ff277ad720cbf325c8e8f9c4d40fe66731f764917b85b78",
+      "matches": true
+    },
+    {
+      "path": "src/learn/lessonCatalog.ts",
+      "sha256": "99dbb1613cd37158e9772f67f41501d838cc26196ed6b02c7bad89b3a97d4666",
+      "matches": true
+    },
+    {
+      "path": "src/learn/lessonTypes.ts",
+      "sha256": "4a473acf63bc53140d517547db4f27821f26bc16ad6d054015806571018a1f99",
+      "matches": true
+    },
+    {
+      "path": "src/learn/positionalInstructions.ts",
+      "sha256": "f1392466307d8f0aed130cbc9abf6146a90ce973f6184057881c58901d3a848f",
+      "matches": true
+    },
+    {
+      "path": "src/learn/randomExample.ts",
+      "sha256": "03e5b67986bacb5626b1903e85d4c8b7f2518f06e6807859feeba8adfeb3dcd5",
+      "matches": true
+    },
+    {
+      "path": "src/main.ts",
+      "sha256": "c13ffd799c096737fe002924b377369aed35dfe77f5f83f3053e752ecb5bf3d2",
+      "matches": true
+    },
+    {
+      "path": "src/practiceView.ts",
+      "sha256": "ce63b28229713f95826516785a780a55cf28e59c237f945db586ccf0fa0fb15a",
+      "matches": true
+    },
+    {
+      "path": "src/release.ts",
+      "sha256": "09a4a8afa5d5519ea60e1eb181071fce7466ab6738d74f6a534671724794050c",
+      "matches": true
+    },
+    {
+      "path": "src/roundController.ts",
+      "sha256": "2c6c26477b164bdf447e6ef9713ad16e1ad7572b066b016d913feb8cdabd2f67",
+      "matches": true
+    },
+    {
+      "path": "src/style.css",
+      "sha256": "c87d6a524e6396eae082bf644053b6adf0b688fbfed848c8235bb133c127652d",
+      "matches": true
+    },
+    {
+      "path": "src/timer.ts",
+      "sha256": "bfaeaa1c0497565f6d3ceeba0064d903f4559d5b70cb192f86556bb79e0d4b04",
+      "matches": true
+    },
+    {
+      "path": "src/types.ts",
+      "sha256": "f458432070b282817ece06654683477a9dfefee0201f64fd6f53cd14f2976b21",
+      "matches": true
+    },
+    {
+      "path": "src/view.ts",
+      "sha256": "860f5b14cf7e85a4b055d90a4e7cea025681012d311815519fa10bb5df7ea9d0",
+      "matches": true
+    },
+    {
+      "path": "tests/browser/downloads.spec.ts",
+      "sha256": "9d6031f189bb9c47d2f4c62e7106e05d45ead3a94f6455c9ede0a7c14a9107b5",
+      "matches": true
+    },
+    {
+      "path": "tests/browser/grouped-stages.spec.ts",
+      "sha256": "2c2bc5c50b47fb7d8f0703da3a2c657fc5a7e02c8dfafdb8e644827c63295a9b",
+      "matches": true
+    },
+    {
+      "path": "tests/browser/learn.spec.ts",
+      "sha256": "abdbb0a02c9314db92497e8a2b245e1fc0bc72a0611156d727a403d9cf3cbc4f",
+      "matches": true
+    },
+    {
+      "path": "tests/browser/scholarly-visuals.spec.ts",
+      "sha256": "82292930d082f2d97d5bce249f1df2fd45075a4a298195f1cf79588c96f3d507",
+      "matches": true
+    },
+    {
+      "path": "tests/browser/trainer.spec.ts",
+      "sha256": "1ee7776f746ce63daec1876b0becb5c0e6be94d5965fef555cf272bea71961c9",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/answerPolicy.test.ts",
+      "sha256": "801639d8fc6a372e4ccbfa5b79711b5b355bdf5547f19adcae23816b440a96d7",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/availableOptions.test.ts",
+      "sha256": "ab1a0c6c7dbd2db8e4f681919be83fdf0d27f753a049be96f0d3ef67596f439e",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/generateRound.test.ts",
+      "sha256": "259a7249b786af942bbb6dad7e704a532b83c32f2c4e7656bfb24f7017697164",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/lessons.test.ts",
+      "sha256": "feca0cd6d8e695b8783425024df6983498c6be4799a86383a02c96d2b251f011",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/positionalInstructions.test.ts",
+      "sha256": "6e470832d45170a6ed2427e9768eded7bf5b76156eb70675445d992b3e48154f",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/randomExample.test.ts",
+      "sha256": "031365dab704831f77f8cad34027402ab08a55c28b3a6715c08d28905a2d37f1",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/release.test.ts",
+      "sha256": "42f3a523bfa272bb3eca8366b70e086c5f2a6a43e1d2ad4580c70a5b9b88df90",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/requirements.ts",
+      "sha256": "228ca3c0e2297f72e6ba974463c3a2e33ee005d2f1040b6e81a633dacf998da9",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/roundController.test.ts",
+      "sha256": "868363cc4696ac4182ff678e36b524ade46fa3e07a6eea8153a4b764a4920444",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/roundTiming.test.ts",
+      "sha256": "30470d873bc7d4ac85167358b39f0de725bcf79f5b4d067bad993560da7f1df4",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/timer.test.ts",
+      "sha256": "3d5098d8f768b5ca649cef00f657fbbfd939f6a4be1e1f2d095c1204c0df6f7f",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/visualTokens.test.ts",
+      "sha256": "e39fac4a5752b7229d02d2698c0c4c2091fd7dde91fa77e2edbb3a884ee4d1c7",
+      "matches": true
+    },
+    {
+      "path": "public/_headers",
+      "sha256": "3fdc8f8e6af5ff2d1a5424f8cff40a3c11c7deefec052bc2f377ea0fd7ca8ff1",
+      "matches": true
+    },
+    {
+      "path": "design/VISUAL_DESIGN_SPEC.md",
+      "sha256": "471d8ef7383f3f86ffc54e9d82133ead67b2bda46d71307e3ddccc94a40383f0",
+      "matches": true
+    },
+    {
+      "path": "design/visual-tokens.json",
+      "sha256": "398c8d1b8a4045cc403c4bd1ea0e07ecdda351d19c26ba1a47596ca1338d574a",
+      "matches": true
+    },
+    {
+      "path": "package.json",
+      "sha256": "dfae6a80f74576f96b395ff264e0a4e1b8599e764e325ea43591edb80aea5efe",
+      "matches": true
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "bd6855c56d53e8f26c41b86ea222db4a0ba1554f30bd8c57fe5057841f433e1b",
+      "matches": true
+    },
+    {
+      "path": "scripts/generate-visual-tokens.mjs",
+      "sha256": "4a0d988e0712fae71829f1a92200711a9de92016e1cc8aeb5cbff80f15ad871b",
+      "matches": true
+    },
+    {
+      "path": "ios/MentalArithmetic/UI/VisualTokens.generated.swift",
+      "sha256": "29525c5d667d5059f49af29e593f326f80a059bf90250c3f4197d541d5d97346",
+      "matches": true
+    },
+    {
+      "path": "android/app/src/main/res/values/visual_tokens.xml",
+      "sha256": "9f423f4be68f1e6f927de078b10f013f33f729b934a628369bfaa43add7123f5",
+      "matches": true
+    }
+  ],
+  "unchangedArithmeticPracticeAndInstructionRendering": [
+    {
+      "path": "src/answerPolicy.ts",
+      "sha256": "9a98d597b0f7baa7264b387f52ef8a1f5e80892e5c69446d2dda602f77dd89c1",
+      "matchesPreview1Baseline": true
+    },
+    {
+      "path": "src/availableOptions.ts",
+      "sha256": "2fe4df4c59cc81e13bda9fd3e7e2b087bef26a1d2a7761461bc07addec11f038",
+      "matchesPreview1Baseline": true
+    },
+    {
+      "path": "src/generateRound.ts",
+      "sha256": "7b8b13e15b58e870f27468e538181423c1fa38f73bd5cceb66eb17a3ca8a52cf",
+      "matchesPreview1Baseline": true
+    },
+    {
+      "path": "src/inputPolicy.ts",
+      "sha256": "1c46093bcaf0345926a460bcf7663bc985d1f77ba1b0b0049cd5046428dda8e8",
+      "matchesPreview1Baseline": true
+    },
+    {
+      "path": "src/roundController.ts",
+      "sha256": "2c6c26477b164bdf447e6ef9713ad16e1ad7572b066b016d913feb8cdabd2f67",
+      "matchesPreview1Baseline": true
+    },
+    {
+      "path": "src/timer.ts",
+      "sha256": "bfaeaa1c0497565f6d3ceeba0064d903f4559d5b70cb192f86556bb79e0d4b04",
+      "matchesPreview1Baseline": true
+    },
+    {
+      "path": "src/types.ts",
+      "sha256": "f458432070b282817ece06654683477a9dfefee0201f64fd6f53cd14f2976b21",
+      "matchesPreview1Baseline": true
+    },
+    {
+      "path": "src/learn/lessonTypes.ts",
+      "sha256": "4a473acf63bc53140d517547db4f27821f26bc16ad6d054015806571018a1f99",
+      "matchesPreview1Baseline": true
+    },
+    {
+      "path": "src/learn/lessonCatalog.ts",
+      "sha256": "99dbb1613cd37158e9772f67f41501d838cc26196ed6b02c7bad89b3a97d4666",
+      "matchesPreview1Baseline": true
+    },
+    {
+      "path": "src/learn/confirmedMultiplicationExamples.ts",
+      "sha256": "3411c4e1e4daaf173d7f5ce047e9e103f89b849933352b58a448a869a5fa800c",
+      "matchesPreview1Baseline": true
+    },
+    {
+      "path": "src/learn/randomExample.ts",
+      "sha256": "03e5b67986bacb5626b1903e85d4c8b7f2518f06e6807859feeba8adfeb3dcd5",
+      "matchesPreview1Baseline": true
+    },
+    {
+      "path": "src/learn/positionalInstructions.ts",
+      "sha256": "f1392466307d8f0aed130cbc9abf6146a90ce973f6184057881c58901d3a848f",
+      "matchesPreview1Baseline": true
+    },
+    {
+      "path": "src/main.ts",
+      "sha256": "c13ffd799c096737fe002924b377369aed35dfe77f5f83f3053e752ecb5bf3d2",
+      "matchesPreview1Baseline": true
+    },
+    {
+      "path": "src/view.ts",
+      "sha256": "860f5b14cf7e85a4b055d90a4e7cea025681012d311815519fa10bb5df7ea9d0",
+      "matchesPreview1Baseline": true
+    },
+    {
+      "path": "src/practiceView.ts",
+      "sha256": "ce63b28229713f95826516785a780a55cf28e59c237f945db586ccf0fa0fb15a",
+      "matchesPreview1Baseline": true
+    },
+    {
+      "path": "src/learn/carryVisualizer.ts",
+      "sha256": "4d092ae458ad1663806badccdf459b4334196a9ff0cc370cd25bd5c7a329362d",
+      "matchesPreview1Baseline": true
+    },
+    {
+      "path": "src/learn/instructionStepRenderer.ts",
+      "sha256": "cccb71e72d4b96329d54a4538d52d0ac1454bd0a0ab3f96fdfec3d65c92dfc80",
+      "matchesPreview1Baseline": true
+    }
+  ],
+  "distFiles": [
+    {
+      "path": "_headers",
+      "bytes": 123,
+      "sha256": "3fdc8f8e6af5ff2d1a5424f8cff40a3c11c7deefec052bc2f377ea0fd7ca8ff1"
+    },
+    {
+      "path": "assets/index-1mzuqHi8.css",
+      "bytes": 19211,
+      "sha256": "e6f971b665874d2ccb0e18f34703603837195922e111cb4bce1880fbbe53ac44"
+    },
+    {
+      "path": "assets/index-DxIERzM0.js",
+      "bytes": 44655,
+      "sha256": "4c8ad196008b9128cc364710605971bfa0b6fe301a987d53d580078826bc321c"
+    },
+    {
+      "path": "index.html",
+      "bytes": 594,
+      "sha256": "1d8a9292e93005c5451a32b9292f779ece4d7413e0879aae58649bac5b7a0a18"
+    }
+  ],
+  "scope": "Learn named-stage navigation presentation plus colors; no arithmetic, Practice handlers or native/platform version mutations by this agent",
+  "groupContract": {
+    "outer": "stage-product-group",
+    "middle": "stage-middle-group",
+    "plus": "stage-middle-plus",
+    "equals": "stage-equals",
+    "final": "final-answer",
+    "order": [
+      "First",
+      "Inside",
+      "Outside",
+      "Last",
+      "Final Answer: ####"
+    ],
+    "symbolsDecorative": true,
+    "middleAccessibleName": "Middle contribution: Inside plus Outside"
+  },
+  "responsiveChecks": {
+    "widths": [
+      280,
+      390,
+      768,
+      1280
+    ],
+    "textScalePercent": [
+      100,
+      200
+    ],
+    "wholeStageWordsStaySingleLine": true,
+    "middlePairRemainsInsideOneBoundary": true,
+    "desktopSingleExpressionWhenRoom": true,
+    "tabOrderAndDirectActivationPreserved": true,
+    "PracticeComputedColorsStrictMonochrome": true,
+    "prior862x122KeyboardRegressionStillPasses": true
+  },
+  "browserScope": "Installed Google Chrome desktop and Chromium iPhone13 emulation; not physical-device or Safari tests",
+  "published": false,
+  "allChecksPassed": true
+}

@@ -1,0 +1,361 @@
+{
+  "version": "1.2.0-preview.4",
+  "baselineCommit": "e54135d691f37dfce8e38c60e59f0fd3d9525007",
+  "scope": "Independent shared-code byte audit. Availability policy and initial Learn selection intentionally changed; native iOS scoped compatibility is recorded separately.",
+  "wholeFileChecks": [
+    {
+      "path": "src/answerPolicy.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "9a98d597b0f7baa7264b387f52ef8a1f5e80892e5c69446d2dda602f77dd89c1",
+      "currentSHA256": "9a98d597b0f7baa7264b387f52ef8a1f5e80892e5c69446d2dda602f77dd89c1",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/generateRound.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "7b8b13e15b58e870f27468e538181423c1fa38f73bd5cceb66eb17a3ca8a52cf",
+      "currentSHA256": "7b8b13e15b58e870f27468e538181423c1fa38f73bd5cceb66eb17a3ca8a52cf",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/inputPolicy.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "1c46093bcaf0345926a460bcf7663bc985d1f77ba1b0b0049cd5046428dda8e8",
+      "currentSHA256": "1c46093bcaf0345926a460bcf7663bc985d1f77ba1b0b0049cd5046428dda8e8",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/timer.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "bfaeaa1c0497565f6d3ceeba0064d903f4559d5b70cb192f86556bb79e0d4b04",
+      "currentSHA256": "bfaeaa1c0497565f6d3ceeba0064d903f4559d5b70cb192f86556bb79e0d4b04",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/types.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "f458432070b282817ece06654683477a9dfefee0201f64fd6f53cd14f2976b21",
+      "currentSHA256": "f458432070b282817ece06654683477a9dfefee0201f64fd6f53cd14f2976b21",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/learn/lessonTypes.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "4a473acf63bc53140d517547db4f27821f26bc16ad6d054015806571018a1f99",
+      "currentSHA256": "4a473acf63bc53140d517547db4f27821f26bc16ad6d054015806571018a1f99",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/learn/confirmedMultiplicationExamples.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "3411c4e1e4daaf173d7f5ce047e9e103f89b849933352b58a448a869a5fa800c",
+      "currentSHA256": "3411c4e1e4daaf173d7f5ce047e9e103f89b849933352b58a448a869a5fa800c",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/learn/randomExample.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "03e5b67986bacb5626b1903e85d4c8b7f2518f06e6807859feeba8adfeb3dcd5",
+      "currentSHA256": "03e5b67986bacb5626b1903e85d4c8b7f2518f06e6807859feeba8adfeb3dcd5",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/learn/positionalInstructions.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "f1392466307d8f0aed130cbc9abf6146a90ce973f6184057881c58901d3a848f",
+      "currentSHA256": "f1392466307d8f0aed130cbc9abf6146a90ce973f6184057881c58901d3a848f",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/learn/carryVisualizer.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "4d092ae458ad1663806badccdf459b4334196a9ff0cc370cd25bd5c7a329362d",
+      "currentSHA256": "4d092ae458ad1663806badccdf459b4334196a9ff0cc370cd25bd5c7a329362d",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/learn/instructionStepRenderer.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "cccb71e72d4b96329d54a4538d52d0ac1454bd0a0ab3f96fdfec3d65c92dfc80",
+      "currentSHA256": "cccb71e72d4b96329d54a4538d52d0ac1454bd0a0ab3f96fdfec3d65c92dfc80",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/practiceView.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "ce63b28229713f95826516785a780a55cf28e59c237f945db586ccf0fa0fb15a",
+      "currentSHA256": "ce63b28229713f95826516785a780a55cf28e59c237f945db586ccf0fa0fb15a",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/main.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "c13ffd799c096737fe002924b377369aed35dfe77f5f83f3053e752ecb5bf3d2",
+      "currentSHA256": "c13ffd799c096737fe002924b377369aed35dfe77f5f83f3053e752ecb5bf3d2",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/view.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "860f5b14cf7e85a4b055d90a4e7cea025681012d311815519fa10bb5df7ea9d0",
+      "currentSHA256": "860f5b14cf7e85a4b055d90a4e7cea025681012d311815519fa10bb5df7ea9d0",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/style.css",
+      "comparison": "whole file",
+      "baselineSHA256": "712a8ebd969257ff7472872cf46d771c01d3910db6f6961f5765f55620b2453f",
+      "currentSHA256": "712a8ebd969257ff7472872cf46d771c01d3910db6f6961f5765f55620b2453f",
+      "byteIdentical": true
+    },
+    {
+      "path": "src/designTokens.css",
+      "comparison": "whole file",
+      "baselineSHA256": "8516544a0b49a81985f6a9cab0524aab2886f772bd56114930a8b93ed9a0bb23",
+      "currentSHA256": "8516544a0b49a81985f6a9cab0524aab2886f772bd56114930a8b93ed9a0bb23",
+      "byteIdentical": true
+    },
+    {
+      "path": "scripts/generate-visual-tokens.mjs",
+      "comparison": "whole file",
+      "baselineSHA256": "4a0d988e0712fae71829f1a92200711a9de92016e1cc8aeb5cbff80f15ad871b",
+      "currentSHA256": "4a0d988e0712fae71829f1a92200711a9de92016e1cc8aeb5cbff80f15ad871b",
+      "byteIdentical": true
+    },
+    {
+      "path": "ios/MentalArithmetic/UI/VisualTokens.generated.swift",
+      "comparison": "whole file",
+      "baselineSHA256": "29525c5d667d5059f49af29e593f326f80a059bf90250c3f4197d541d5d97346",
+      "currentSHA256": "29525c5d667d5059f49af29e593f326f80a059bf90250c3f4197d541d5d97346",
+      "byteIdentical": true
+    },
+    {
+      "path": "android/app/src/main/res/values/visual_tokens.xml",
+      "comparison": "whole file",
+      "baselineSHA256": "9f423f4be68f1e6f927de078b10f013f33f729b934a628369bfaa43add7123f5",
+      "currentSHA256": "9f423f4be68f1e6f927de078b10f013f33f729b934a628369bfaa43add7123f5",
+      "byteIdentical": true
+    },
+    {
+      "path": "tests/unit/answerPolicy.test.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "801639d8fc6a372e4ccbfa5b79711b5b355bdf5547f19adcae23816b440a96d7",
+      "currentSHA256": "801639d8fc6a372e4ccbfa5b79711b5b355bdf5547f19adcae23816b440a96d7",
+      "byteIdentical": true
+    },
+    {
+      "path": "tests/unit/generateRound.test.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "259a7249b786af942bbb6dad7e704a532b83c32f2c4e7656bfb24f7017697164",
+      "currentSHA256": "259a7249b786af942bbb6dad7e704a532b83c32f2c4e7656bfb24f7017697164",
+      "byteIdentical": true
+    },
+    {
+      "path": "tests/unit/positionalInstructions.test.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "6e470832d45170a6ed2427e9768eded7bf5b76156eb70675445d992b3e48154f",
+      "currentSHA256": "6e470832d45170a6ed2427e9768eded7bf5b76156eb70675445d992b3e48154f",
+      "byteIdentical": true
+    },
+    {
+      "path": "tests/unit/randomExample.test.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "031365dab704831f77f8cad34027402ab08a55c28b3a6715c08d28905a2d37f1",
+      "currentSHA256": "031365dab704831f77f8cad34027402ab08a55c28b3a6715c08d28905a2d37f1",
+      "byteIdentical": true
+    },
+    {
+      "path": "tests/unit/release.test.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "42f3a523bfa272bb3eca8366b70e086c5f2a6a43e1d2ad4580c70a5b9b88df90",
+      "currentSHA256": "42f3a523bfa272bb3eca8366b70e086c5f2a6a43e1d2ad4580c70a5b9b88df90",
+      "byteIdentical": true
+    },
+    {
+      "path": "tests/unit/requirements.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "228ca3c0e2297f72e6ba974463c3a2e33ee005d2f1040b6e81a633dacf998da9",
+      "currentSHA256": "228ca3c0e2297f72e6ba974463c3a2e33ee005d2f1040b6e81a633dacf998da9",
+      "byteIdentical": true
+    },
+    {
+      "path": "tests/unit/roundController.test.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "868363cc4696ac4182ff678e36b524ade46fa3e07a6eea8153a4b764a4920444",
+      "currentSHA256": "868363cc4696ac4182ff678e36b524ade46fa3e07a6eea8153a4b764a4920444",
+      "byteIdentical": true
+    },
+    {
+      "path": "tests/unit/roundTiming.test.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "30470d873bc7d4ac85167358b39f0de725bcf79f5b4d067bad993560da7f1df4",
+      "currentSHA256": "30470d873bc7d4ac85167358b39f0de725bcf79f5b4d067bad993560da7f1df4",
+      "byteIdentical": true
+    },
+    {
+      "path": "tests/unit/timer.test.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "3d5098d8f768b5ca649cef00f657fbbfd939f6a4be1e1f2d095c1204c0df6f7f",
+      "currentSHA256": "3d5098d8f768b5ca649cef00f657fbbfd939f6a4be1e1f2d095c1204c0df6f7f",
+      "byteIdentical": true
+    },
+    {
+      "path": "tests/unit/visualTokens.test.ts",
+      "comparison": "whole file",
+      "baselineSHA256": "e39fac4a5752b7229d02d2698c0c4c2091fd7dde91fa77e2edbb3a884ee4d1c7",
+      "currentSHA256": "e39fac4a5752b7229d02d2698c0c4c2091fd7dde91fa77e2edbb3a884ee4d1c7",
+      "byteIdentical": true
+    },
+    {
+      "path": "requirements/CODEX_START_HERE.md",
+      "comparison": "whole file",
+      "baselineSHA256": "579d70b0de8e1af2096d273df29d295c839bccf5319a6c50d39298b453bdf3b9",
+      "currentSHA256": "579d70b0de8e1af2096d273df29d295c839bccf5319a6c50d39298b453bdf3b9",
+      "byteIdentical": true
+    },
+    {
+      "path": "requirements/EXAMPLES_AND_EDGE_CASES.json",
+      "comparison": "whole file",
+      "baselineSHA256": "859f00b3d1b50c2771fd33ff75989e16a294c087ee82e87ab7edef1d80b04a15",
+      "currentSHA256": "859f00b3d1b50c2771fd33ff75989e16a294c087ee82e87ab7edef1d80b04a15",
+      "byteIdentical": true
+    },
+    {
+      "path": "requirements/PRACTICE_TIMING_UPDATE_2026-10-24.json",
+      "comparison": "whole file",
+      "baselineSHA256": "e8580148f461dc8ccd41f0b88690c0173d4e64a2900132701aa27a971af84eb6",
+      "currentSHA256": "e8580148f461dc8ccd41f0b88690c0173d4e64a2900132701aa27a971af84eb6",
+      "byteIdentical": true
+    },
+    {
+      "path": "requirements/PRODUCT_SPEC.md",
+      "comparison": "whole file",
+      "baselineSHA256": "44b308a200101be30fc2adaa77d468a3e6430749a7536f29814a683ea83337fd",
+      "currentSHA256": "44b308a200101be30fc2adaa77d468a3e6430749a7536f29814a683ea83337fd",
+      "byteIdentical": true
+    },
+    {
+      "path": "requirements/QA_CHECKLIST.md",
+      "comparison": "whole file",
+      "baselineSHA256": "fa0df05581610e973c3013315faab5206717ca28fa7343d668baa9d8a5c2f861",
+      "currentSHA256": "fa0df05581610e973c3013315faab5206717ca28fa7343d668baa9d8a5c2f861",
+      "byteIdentical": true
+    },
+    {
+      "path": "requirements/design/Math_Trainer_Work_Design_Brief_2026-11-03_NEW.md",
+      "comparison": "whole file",
+      "baselineSHA256": "3a27dafcd88a9c6e4a6e26bdc9f519448fc82bc21970fef11498bb64fb92817f",
+      "currentSHA256": "3a27dafcd88a9c6e4a6e26bdc9f519448fc82bc21970fef11498bb64fb92817f",
+      "byteIdentical": true
+    },
+    {
+      "path": "requirements/design/OWNER_AMPERSAND_CONNECTORS_2026-11-03.md",
+      "comparison": "whole file",
+      "baselineSHA256": "fbb2c2801590855e90d52d89f63de3da3d49a553ec934b095c8a76f93c2d211e",
+      "currentSHA256": "fbb2c2801590855e90d52d89f63de3da3d49a553ec934b095c8a76f93c2d211e",
+      "byteIdentical": true
+    },
+    {
+      "path": "requirements/design/OWNER_GROUPED_STAGE_LAYOUT_2026-11-03.md",
+      "comparison": "whole file",
+      "baselineSHA256": "a670ac59609742b20b8e71320c9fdb8b8f18f45aed507e04cb85ce9073ea5273",
+      "currentSHA256": "a670ac59609742b20b8e71320c9fdb8b8f18f45aed507e04cb85ce9073ea5273",
+      "byteIdentical": true
+    },
+    {
+      "path": "requirements/instruction/ALL_LENGTHS_OWNER_METHOD_2026-10-24.json",
+      "comparison": "whole file",
+      "baselineSHA256": "9e0588a3fe4c7d061920897fee66ed374a68ca4307a21913d51f4181fab0cfed",
+      "currentSHA256": "9e0588a3fe4c7d061920897fee66ed374a68ca4307a21913d51f4181fab0cfed",
+      "byteIdentical": true
+    },
+    {
+      "path": "requirements/instruction/CODEX_INSTRUCTIONAL_HANDOFF.md",
+      "comparison": "whole file",
+      "baselineSHA256": "2abb2e3ccb2a36555b2914fd612054d81aefd158e90ae8bb55842d6f280aba10",
+      "currentSHA256": "2abb2e3ccb2a36555b2914fd612054d81aefd158e90ae8bb55842d6f280aba10",
+      "byteIdentical": true
+    },
+    {
+      "path": "requirements/instruction/EXAMPLES_AND_EDGE_CASES.json",
+      "comparison": "whole file",
+      "baselineSHA256": "859f00b3d1b50c2771fd33ff75989e16a294c087ee82e87ab7edef1d80b04a15",
+      "currentSHA256": "859f00b3d1b50c2771fd33ff75989e16a294c087ee82e87ab7edef1d80b04a15",
+      "byteIdentical": true
+    },
+    {
+      "path": "requirements/instruction/INSTRUCTIONAL_LESSON_DATA_as_text.txt",
+      "comparison": "whole file",
+      "baselineSHA256": "986c9bbbe488a83db37da16bb6d536c39cf3c88d4e6b635b1eccae69fde8e120",
+      "currentSHA256": "986c9bbbe488a83db37da16bb6d536c39cf3c88d4e6b635b1eccae69fde8e120",
+      "byteIdentical": true
+    },
+    {
+      "path": "requirements/instruction/LEARN_RANDOM_EXAMPLES_2026-10-24.json",
+      "comparison": "whole file",
+      "baselineSHA256": "15f912cf5aabecd4bf3e7b91210340958027ce0ae5b409e59a089e7e6a698f0e",
+      "currentSHA256": "15f912cf5aabecd4bf3e7b91210340958027ce0ae5b409e59a089e7e6a698f0e",
+      "byteIdentical": true
+    },
+    {
+      "path": "requirements/instruction/Mental_Arithmetic_Instructional_Lessons_Codex_2026-10-24.json",
+      "comparison": "whole file",
+      "baselineSHA256": "7766b177e3c046cdf7ebf507a67674e94c53896833afb5dfaa46555c8500edd3",
+      "currentSHA256": "7766b177e3c046cdf7ebf507a67674e94c53896833afb5dfaa46555c8500edd3",
+      "byteIdentical": true
+    },
+    {
+      "path": "requirements/instruction/OWNER_ADDITION_OPTIONS_2026-11-02.md",
+      "comparison": "whole file",
+      "baselineSHA256": "33042607254321271287b3397682b9a541e5c3e7d9c37fef7772344eaeb2b09a",
+      "currentSHA256": "33042607254321271287b3397682b9a541e5c3e7d9c37fef7772344eaeb2b09a",
+      "byteIdentical": true
+    },
+    {
+      "path": "requirements/instruction/OWNER_CONFIRMED_MULTIPLICATION_2026-10-24.json",
+      "comparison": "whole file",
+      "baselineSHA256": "929811c266726924a77efb6831d9abfb37006d8dc4b7eca9abef0fdf4efa578b",
+      "currentSHA256": "929811c266726924a77efb6831d9abfb37006d8dc4b7eca9abef0fdf4efa578b",
+      "byteIdentical": true
+    },
+    {
+      "path": "requirements/instruction/OWNER_INSIDE_OUTSIDE_CORRECTION_2026-11-02.md",
+      "comparison": "whole file",
+      "baselineSHA256": "cf175032deb42bfe8843bc61a3d1491350fbce88ddbd0d44097e09c4473dcbc0",
+      "currentSHA256": "cf175032deb42bfe8843bc61a3d1491350fbce88ddbd0d44097e09c4473dcbc0",
+      "byteIdentical": true
+    }
+  ],
+  "wholeFileUnchangedCount": 46,
+  "originalRequirementsPreserved": 17,
+  "scopedChecks": [
+    {
+      "path": "src/roundController.ts",
+      "comparison": "replace ONLY unavailable-settings error message with baseline literal",
+      "baselineSHA256": "2c6c26477b164bdf447e6ef9713ad16e1ad7572b066b016d913feb8cdabd2f67",
+      "normalizedCurrentSHA256": "2c6c26477b164bdf447e6ef9713ad16e1ad7572b066b016d913feb8cdabd2f67",
+      "byteIdenticalOutsideDocumentedChange": true
+    },
+    {
+      "path": "src/learn/lessonCatalog.ts",
+      "comparison": "normalize ONLY exported historical catalog name and Learn-specific availability predicate; all historical records preserved",
+      "baselineSHA256": "99dbb1613cd37158e9772f67f41501d838cc26196ed6b02c7bad89b3a97d4666",
+      "normalizedCurrentSHA256": "99dbb1613cd37158e9772f67f41501d838cc26196ed6b02c7bad89b3a97d4666",
+      "byteIdenticalOutsideDocumentedChange": true
+    },
+    {
+      "path": "src/learn/learnView.ts",
+      "comparison": "normalize ONLY initial Learn lesson from first available M1 back to former A2 default/import; all rendering/events/carry/ampersand code unchanged",
+      "baselineSHA256": "648a18541d2bd76f1b7228c53593f85dab7cb952b4c4b7764a731f40ea381638",
+      "normalizedCurrentSHA256": "648a18541d2bd76f1b7228c53593f85dab7cb952b4c4b7764a731f40ea381638",
+      "byteIdenticalOutsideDocumentedChange": true
+    }
+  ],
+  "intentionalPolicyModule": "src/availableOptions.ts: Practice A2/M1/M2 and independent Learn M1/M2 predicate; historical engine remains 1\u20133 digits.",
+  "canonicalTokensUnchangedExceptVersion": true,
+  "practiceViewAndHandlersByteIdentical": true,
+  "arithmeticInputTimingGenerationAndRenderersByteIdentical": true,
+  "historicalUnitTestsUnchangedCount": 10,
+  "historicalArithmeticFixturesRetained": true,
+  "allChecksPassed": true
+}

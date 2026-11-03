@@ -6,8 +6,8 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.graphics.Insets;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.net.http.SslError;
 import android.os.Build;
@@ -41,7 +41,6 @@ import java.util.Map;
 
 /** Offline Android host for the unchanged Vite production frontend. */
 public final class MainActivity extends Activity {
-    private static final int SEPIA = Color.rgb(232, 215, 181);
     private WebView webView;
     private FrameLayout content;
     private boolean showingLoadError;
@@ -52,7 +51,7 @@ public final class MainActivity extends Activity {
         configureSystemBars();
 
         content = new FrameLayout(this);
-        content.setBackgroundColor(SEPIA);
+        content.setBackgroundColor(getColor(R.color.visual_paper));
         content.setOnApplyWindowInsetsListener((view, insets) -> {
             // API 35+ enforces edge-to-edge. Padding the native WebView container
             // gives the existing CSS a viewport above the keyboard and inside
@@ -72,7 +71,7 @@ public final class MainActivity extends Activity {
 
         webView = new WebView(this);
         webView.setTag("mental-arithmetic-webview");
-        webView.setBackgroundColor(SEPIA);
+        webView.setBackgroundColor(getColor(R.color.visual_paper));
         configureWebView(webView);
         clearPreviousReleaseCache();
         content.addView(webView, new FrameLayout.LayoutParams(
@@ -103,6 +102,8 @@ public final class MainActivity extends Activity {
     @SuppressWarnings("deprecation")
     private void configureSystemBars() {
         Window window = getWindow();
+        window.setStatusBarColor(getColor(R.color.visual_paper));
+        window.setNavigationBarColor(getColor(R.color.visual_paper));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             window.setDecorFitsSystemWindows(false);
         }
@@ -203,7 +204,8 @@ public final class MainActivity extends Activity {
         showingLoadError = true;
         TextView error = new TextView(this);
         error.setText(R.string.load_error);
-        error.setTextColor(Color.rgb(36, 30, 22));
+        error.setTextColor(getColor(R.color.visual_ink));
+        error.setTypeface(Typeface.create("serif", Typeface.NORMAL));
         error.setTextSize(18);
         int padding = (int) (24 * getResources().getDisplayMetrics().density);
         error.setPadding(padding, padding, padding, padding);

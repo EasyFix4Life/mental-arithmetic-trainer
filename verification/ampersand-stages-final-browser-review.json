@@ -1,0 +1,29 @@
+{
+  "version": "1.2.0-preview.3",
+  "url": "http://127.0.0.1:5202/",
+  "buttons": [
+    "First",
+    "Inside",
+    "Outside",
+    "Last",
+    "Final Answer: 324"
+  ],
+  "connectors": [
+    {
+      "id": "stage-connection-first",
+      "text": "&",
+      "transform": "none"
+    },
+    {
+      "id": "stage-connection-last",
+      "text": "&",
+      "transform": "none"
+    }
+  ],
+  "equals": "=",
+  "finalOutsideProduct": true,
+  "middle": "+",
+  "text": "First&Inside+Outside&Last=Final Answer: 324",
+  "reviewedAt": "2026-11-03T15:55:14.536Z",
+  "published": false
+}

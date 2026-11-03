@@ -1,5 +1,14 @@
 # Mental Arithmetic for Windows 10 and 11
 
+**Production release: 1.2.0**, Windows 10/11 x64. Download the current package from [the v1.2.0 release](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/tag/v1.2.0) or [whoami.school](https://whoami.school/#app-downloads). This publishes the approved preview 4 interface and options; all previous releases/previews remain preserved.
+
+Release 1.2.0 offers **one- and two-digit multiplication in Learn**, and **two-digit addition plus one- and two-digit multiplication in Practice**. Addition has no Learn option; three-digit multiplication is removed from both modes. The ivory/Baskerville/Arial design, colored Learn stages, literal upright **&** header connectors, digit-pair brackets, carry routes and monochrome Practice are preserved. Arithmetic and interaction rules are unchanged. See [RELEASE_1_2_0.md](RELEASE_1_2_0.md), [the visual specification](design/VISUAL_DESIGN_SPEC.md) and [current verification](verification/RELEASE_1_2_0_RESULTS.md).
+
+Build the release using `npm run build:windows`. Current package filenames use `1.2.0`; the 1.1.4 download references below describe the preserved published release.
+
+## Published 1.1.4 reference
+
+
 **1.1.4 Inside/Outside correction:** Two-digit multiplication now uses **Inside = top units × bottom tens** and **Outside = top tens × bottom units**, including their highlighted digits, calculations and intermediate results. For **82 × 76**, these are **2 × 7 = 14** and **8 × 6 = 48**. Learn and Practice retain **two-digit addition** and **one-, two- and three-digit multiplication**. Use the [current release](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/tag/v1.1.4) or [website downloads](https://whoami.school/#app-downloads). See [the correction report](verification/INSIDE_OUTSIDE_CORRECTION.md).
 
 Version **1.1.4** packages the same Learn and Practice frontend as the macOS version with a Windows desktop runtime. The target is **Windows 10 or Windows 11 on a 64-bit Intel/AMD PC (x64)**. Electron 45.0.0 lists Windows 10 and later among its supported platforms and provides x64 binaries; see its [version-specific platform support statement](https://raw.githubusercontent.com/electron/electron/v45.0.0/README.md). This delivery does not include a 32-bit Windows or native Windows ARM64 package.
@@ -17,7 +26,7 @@ The application and installer are **unsigned**. Windows may display an unknown-p
 
 Closing the Windows app's final window quits it. Reopen it using its shortcut or the extracted executable to start again. The native Edit and View menus provide standard clipboard and zoom controls.
 
-## Same lessons, examples and Practice timing
+## Published 1.1.4 behavior — historical reference
 
 - Sepia background, large Arial numerals and responsive layout remain the same.
 - Learn lists four available lessons, with full instruction, random examples and **New random example** for two-digit addition and one-, two- and three-digit multiplication. Single-digit examples use 1–9, two-digit examples use 10–99 and three-digit examples use 100–999. The next random pair avoids the immediately previous pair, including its reversal. Addition uses vertically aligned operands and a horizontal rule in Learn and Practice; multiplication remains horizontal.
@@ -34,7 +43,7 @@ Use the included source project and the Node.js versions specified in [README.md
 ```text
 npm ci
 npm run build:windows
-npm run verify:windows -- release/Mental-Arithmetic-1.1.4-Windows-x64.zip release/Mental-Arithmetic-1.1.4-Windows-x64-Setup.exe
+npm run verify:windows -- release/Mental-Arithmetic-1.2.0-Windows-x64.zip release/Mental-Arithmetic-1.2.0-Windows-x64-Setup.exe
 ```
 
 The finished installer and ZIP are copied to `release/`. The script uses temporary staging and records its unpacked executable and archive paths in `verification/windows-build-location.json`. It invokes electron-builder with `--publish never`; it does not publish an application or create a repository.
@@ -52,6 +61,8 @@ That command builds the frontend and launches the locally installed Electron run
 ## Verification and limits
 
 The build and verification records distinguish packaging from native execution:
+
+Current 1.2.0 results are in [RELEASE_1_2_0_RESULTS.md](verification/RELEASE_1_2_0_RESULTS.md), `verification/release-120-windows-artifacts.json`, `verification/release-120-windows-archive-integrity.txt` and `verification/release-120-cross-platform-packages.json`. The records below are the preserved published **1.1.4** verification baseline.
 
 - `verification/inside-outside-windows-build.txt` records the Windows packaging command's output.
 - `verification/inside-outside-windows-artifacts.json` records the checked release bytes, SHA-256 hashes, ZIP integrity, installer signature/embedded payload, x64 PE executable and DLL headers, required runtime resources, packaged version and frontend/shell comparisons.

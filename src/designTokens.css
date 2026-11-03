@@ -1,0 +1,28 @@
+/* Generated from design/visual-tokens.json. Run npm run design:tokens. */
+:root {
+  --paper: #FAF7F0;
+  --ink: #000000;
+  --field: #FFFFFF;
+  --learn-first: #126C70;
+  --learn-inside: #755093;
+  --learn-outside: #755093;
+  --learn-last: #885A15;
+  --learn-first-fill: #E2F1EF;
+  --learn-inside-fill: #EEE5F4;
+  --learn-outside-fill: #EEE5F4;
+  --learn-last-fill: #F6ECD8;
+  --font-text: "Baskerville", "Palatino Linotype", "Book Antiqua", "Georgia", serif;
+  --font-math: "Arial", "Helvetica", sans-serif;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --border-control: 1px;
+  --border-emphasis: 2px;
+  --radius-control: 4px;
+  --target-min: 44px;
+  --help-min: 64px;
+}

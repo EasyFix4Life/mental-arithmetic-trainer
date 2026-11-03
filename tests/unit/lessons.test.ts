@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { getLesson, lessons } from '../../src/learn/lessonCatalog';
+import { allLessons, getLesson, lessons } from '../../src/learn/lessonCatalog';
 import { createInstructionExample } from '../../src/learn/positionalInstructions';
 import { generateRandomProblem } from '../../src/learn/randomExample';
 
@@ -19,22 +19,18 @@ const source = JSON.parse(readFileSync(new URL(
 ), 'utf8')) as { lessons: SourceLesson[] };
 
 describe('source-preserving instructional catalog', () => {
-  it('preserves the available supplied lessons in their original relative order and includes three-digit multiplication', () => {
-    expect(lessons.slice(0, 3).map(({ id, title, operation, digitCount }) => ({
+  it('retains historical data while exposing only the two multiplication lessons in their relative order', () => {
+    expect(allLessons.slice(0, source.lessons.length).map(({ id, title, operation, digitCount }) => ({
       id, title, operation, digitCount,
-    }))).toEqual(source.lessons.filter((lesson) => lesson.id !== 'addition-1').map((lesson) => ({
-      id: lesson.id,
-      title: lesson.title,
-      operation: lesson.operation,
-      digitCount: lesson.digits_per_operand,
-    })));
-    expect(lessons).toHaveLength(4);
-    expect(lessons.slice(3).map(({ id, operation, digitCount }) => ({ id, operation, digitCount }))).toEqual([
-      { id: 'multiplication-3', operation: 'multiplication', digitCount: 3 },
+    }))).toEqual(source.lessons.map(lesson => ({ id: lesson.id, title: lesson.title,
+      operation: lesson.operation, digitCount: lesson.digits_per_operand })));
+    expect(allLessons.map(lesson => lesson.id)).toEqual([
+      'addition-1', 'multiplication-1', 'addition-2', 'multiplication-2', 'addition-3', 'multiplication-3',
     ]);
+    expect(lessons.map(lesson => lesson.id)).toEqual(['multiplication-1', 'multiplication-2']);
   });
 
-  it('provides generated instructions in all four available categories using the owner-described methodology', () => {
+  it('provides generated instructions in both available multiplication categories using the owner-described methodology', () => {
     for (const lesson of lessons) {
       expect(lesson.authoredStatus).toMatch(/owner-described/i);
       expect(lesson.authoredStatus).not.toMatch(/pending|not yet/i);
@@ -120,13 +116,13 @@ describe('source-preserving instructional catalog', () => {
     expect(18 * 18).toBe(324);
   });
 
-  it('omits one- and three-digit addition while retaining one-, two- and three-digit multiplication', () => {
-    expect(lessons.every((lesson) => lesson.digitCount <= 3)).toBe(true);
-    expect(getLesson('multiplication-3')?.digitCount).toBe(3);
-    expect(getLesson('addition-1')).toBeUndefined();
-    expect(getLesson('addition-3')).toBeUndefined();
-    expect(lessons.filter((lesson) => lesson.operation === 'addition').map((lesson) => lesson.digitCount)).toEqual([2]);
-    expect(lessons.filter((lesson) => lesson.operation === 'multiplication').map((lesson) => lesson.digitCount)).toEqual([1, 2, 3]);
+  it('omits all addition and three-digit multiplication from Learn without deleting historical traces', () => {
+    for (const id of ['addition-1', 'addition-2', 'addition-3', 'multiplication-3']) {
+      expect(getLesson(id)).toBeUndefined();
+      expect(allLessons.find(lesson => lesson.id === id)).toBeDefined();
+    }
+    expect(lessons.filter(lesson => lesson.operation === 'addition')).toEqual([]);
+    expect(lessons.map(lesson => lesson.digitCount)).toEqual([1, 2]);
     expect(getLesson('multiplication-4')).toBeUndefined();
     expect(getLesson('addition-4')).toBeUndefined();
   });

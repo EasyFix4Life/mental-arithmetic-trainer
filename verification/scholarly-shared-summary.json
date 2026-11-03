@@ -1,0 +1,342 @@
+{
+  "checkedAt": "2026-11-03T14:47:27.432579+00:00",
+  "version": "1.2.0-preview.1",
+  "runner": "/tmp/mental-arithmetic-scholarly-preview",
+  "previewUrl": "http://127.0.0.1:5195/",
+  "unitPassed": 218,
+  "unitFailed": 0,
+  "browserStats": {
+    "startTime": "2026-11-03T14:46:34.211Z",
+    "duration": 25522.784,
+    "expected": 78,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "build": "Canonical design tokens, strict TypeScript and Vite production build passed",
+  "browserScope": "Installed Google Chrome desktop plus Chromium iPhone13 emulation; not Safari or physical-device testing",
+  "responsiveScope": {
+    "widths": [
+      280,
+      390,
+      768,
+      1024
+    ],
+    "textSizes": [
+      "100%",
+      "200%"
+    ],
+    "checks": [
+      "No horizontal document overflow",
+      "Pair bracket geometry stays inside its diagram",
+      "Equal-width result cells",
+      "Vertically aligned addition",
+      "Whole carry13 with explicit origin/destination",
+      "No operand connector on carry-only screens",
+      "Practice computed colors limited to black/white/ivory/transparent",
+      "Numeric prior time unchanged and separate \u00d7/border incorrect cue",
+      "Landscape keyboard862\u00d7122 keeps full problem/input/live/previousfeedback in separate regions",
+      "Visual-only122px height with400px layout viewport receives same layout through CSS container query",
+      "Focused18\u00d718middle-carry at280/390 with200%TEXT uses one readable column and intact words"
+    ]
+  },
+  "matchingSourceFiles": 46,
+  "sourceHashes": [
+    {
+      "path": "src/answerPolicy.ts",
+      "sha256": "9a98d597b0f7baa7264b387f52ef8a1f5e80892e5c69446d2dda602f77dd89c1",
+      "matches": true
+    },
+    {
+      "path": "src/availableOptions.ts",
+      "sha256": "2fe4df4c59cc81e13bda9fd3e7e2b087bef26a1d2a7761461bc07addec11f038",
+      "matches": true
+    },
+    {
+      "path": "src/designTokens.css",
+      "sha256": "49ceb78f0f1d86358c1ee820d4dde66d8f2cc129aa77297865230b5ae513ee84",
+      "matches": true
+    },
+    {
+      "path": "src/downloadsView.ts",
+      "sha256": "a38e45fedf3add1b56e0a7b5c76a0ecad6091376021c68a6596e054b7deb433a",
+      "matches": true
+    },
+    {
+      "path": "src/generateRound.ts",
+      "sha256": "7b8b13e15b58e870f27468e538181423c1fa38f73bd5cceb66eb17a3ca8a52cf",
+      "matches": true
+    },
+    {
+      "path": "src/inputPolicy.ts",
+      "sha256": "1c46093bcaf0345926a460bcf7663bc985d1f77ba1b0b0049cd5046428dda8e8",
+      "matches": true
+    },
+    {
+      "path": "src/learn/carryVisualizer.ts",
+      "sha256": "4d092ae458ad1663806badccdf459b4334196a9ff0cc370cd25bd5c7a329362d",
+      "matches": true
+    },
+    {
+      "path": "src/learn/confirmedMultiplicationExamples.ts",
+      "sha256": "3411c4e1e4daaf173d7f5ce047e9e103f89b849933352b58a448a869a5fa800c",
+      "matches": true
+    },
+    {
+      "path": "src/learn/instructionStepRenderer.ts",
+      "sha256": "cccb71e72d4b96329d54a4538d52d0ac1454bd0a0ab3f96fdfec3d65c92dfc80",
+      "matches": true
+    },
+    {
+      "path": "src/learn/learnView.ts",
+      "sha256": "9d8bc2b943aaf81769a8b6ad6446c7e6fdd62e8419d069f412889ed5c7d6339a",
+      "matches": true
+    },
+    {
+      "path": "src/learn/lessonCatalog.ts",
+      "sha256": "99dbb1613cd37158e9772f67f41501d838cc26196ed6b02c7bad89b3a97d4666",
+      "matches": true
+    },
+    {
+      "path": "src/learn/lessonTypes.ts",
+      "sha256": "4a473acf63bc53140d517547db4f27821f26bc16ad6d054015806571018a1f99",
+      "matches": true
+    },
+    {
+      "path": "src/learn/positionalInstructions.ts",
+      "sha256": "f1392466307d8f0aed130cbc9abf6146a90ce973f6184057881c58901d3a848f",
+      "matches": true
+    },
+    {
+      "path": "src/learn/randomExample.ts",
+      "sha256": "03e5b67986bacb5626b1903e85d4c8b7f2518f06e6807859feeba8adfeb3dcd5",
+      "matches": true
+    },
+    {
+      "path": "src/main.ts",
+      "sha256": "c13ffd799c096737fe002924b377369aed35dfe77f5f83f3053e752ecb5bf3d2",
+      "matches": true
+    },
+    {
+      "path": "src/practiceView.ts",
+      "sha256": "ce63b28229713f95826516785a780a55cf28e59c237f945db586ccf0fa0fb15a",
+      "matches": true
+    },
+    {
+      "path": "src/release.ts",
+      "sha256": "09a4a8afa5d5519ea60e1eb181071fce7466ab6738d74f6a534671724794050c",
+      "matches": true
+    },
+    {
+      "path": "src/roundController.ts",
+      "sha256": "2c6c26477b164bdf447e6ef9713ad16e1ad7572b066b016d913feb8cdabd2f67",
+      "matches": true
+    },
+    {
+      "path": "src/style.css",
+      "sha256": "b50bc2de9b7c0ce8e7767de3c190d48d6bd558ffc8605a189fee4fb55ccd244e",
+      "matches": true
+    },
+    {
+      "path": "src/timer.ts",
+      "sha256": "bfaeaa1c0497565f6d3ceeba0064d903f4559d5b70cb192f86556bb79e0d4b04",
+      "matches": true
+    },
+    {
+      "path": "src/types.ts",
+      "sha256": "f458432070b282817ece06654683477a9dfefee0201f64fd6f53cd14f2976b21",
+      "matches": true
+    },
+    {
+      "path": "src/view.ts",
+      "sha256": "860f5b14cf7e85a4b055d90a4e7cea025681012d311815519fa10bb5df7ea9d0",
+      "matches": true
+    },
+    {
+      "path": "tests/browser/downloads.spec.ts",
+      "sha256": "2cb0323382e32a88b0f3b79d24aa1be8ed6a80b76db8361269d9f68b902ecac6",
+      "matches": true
+    },
+    {
+      "path": "tests/browser/learn.spec.ts",
+      "sha256": "3ece0fa769885ec32c7b7019b3c55ece65315dc90992732f84e6727b21c925d8",
+      "matches": true
+    },
+    {
+      "path": "tests/browser/scholarly-visuals.spec.ts",
+      "sha256": "6d6b6417eb424b2df07eebe68bfaf1b1f980073c32a87a2d960deb6d666c5fb2",
+      "matches": true
+    },
+    {
+      "path": "tests/browser/trainer.spec.ts",
+      "sha256": "1ee7776f746ce63daec1876b0becb5c0e6be94d5965fef555cf272bea71961c9",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/answerPolicy.test.ts",
+      "sha256": "801639d8fc6a372e4ccbfa5b79711b5b355bdf5547f19adcae23816b440a96d7",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/availableOptions.test.ts",
+      "sha256": "ab1a0c6c7dbd2db8e4f681919be83fdf0d27f753a049be96f0d3ef67596f439e",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/generateRound.test.ts",
+      "sha256": "259a7249b786af942bbb6dad7e704a532b83c32f2c4e7656bfb24f7017697164",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/lessons.test.ts",
+      "sha256": "feca0cd6d8e695b8783425024df6983498c6be4799a86383a02c96d2b251f011",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/positionalInstructions.test.ts",
+      "sha256": "6e470832d45170a6ed2427e9768eded7bf5b76156eb70675445d992b3e48154f",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/randomExample.test.ts",
+      "sha256": "031365dab704831f77f8cad34027402ab08a55c28b3a6715c08d28905a2d37f1",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/release.test.ts",
+      "sha256": "42f3a523bfa272bb3eca8366b70e086c5f2a6a43e1d2ad4580c70a5b9b88df90",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/requirements.ts",
+      "sha256": "228ca3c0e2297f72e6ba974463c3a2e33ee005d2f1040b6e81a633dacf998da9",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/roundController.test.ts",
+      "sha256": "868363cc4696ac4182ff678e36b524ade46fa3e07a6eea8153a4b764a4920444",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/roundTiming.test.ts",
+      "sha256": "30470d873bc7d4ac85167358b39f0de725bcf79f5b4d067bad993560da7f1df4",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/timer.test.ts",
+      "sha256": "3d5098d8f768b5ca649cef00f657fbbfd939f6a4be1e1f2d095c1204c0df6f7f",
+      "matches": true
+    },
+    {
+      "path": "tests/unit/visualTokens.test.ts",
+      "sha256": "e95d6bde70e71291018fa7cc57622ad9e119510a028917d9f4c65675a25f4548",
+      "matches": true
+    },
+    {
+      "path": "public/_headers",
+      "sha256": "3fdc8f8e6af5ff2d1a5424f8cff40a3c11c7deefec052bc2f377ea0fd7ca8ff1",
+      "matches": true
+    },
+    {
+      "path": "design/VISUAL_DESIGN_SPEC.md",
+      "sha256": "61b7a70b0feeda0f61075338be1f322647ee815aa54a8c149a357dd75f64afc8",
+      "matches": true
+    },
+    {
+      "path": "design/visual-tokens.json",
+      "sha256": "d2bb1c3a15a3570b4b0fa6118b34f96b12368669f1778ed2f116b4d5dda20720",
+      "matches": true
+    },
+    {
+      "path": "package.json",
+      "sha256": "575ea504c2b3b51e4e4a5245cd92d774a942cadeb9f5e51d8fdf58b1a22134dc",
+      "matches": true
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "d14a9fc291ded9fee98203a8edbd84a820fbcc15c06c8bf60e1c551dae40c8ac",
+      "matches": true
+    },
+    {
+      "path": "scripts/generate-visual-tokens.mjs",
+      "sha256": "150221eeeaa4298faec4b27f6b481d6bed373688759a533c4f5a6a501975deb7",
+      "matches": true
+    },
+    {
+      "path": "ios/MentalArithmetic/UI/VisualTokens.generated.swift",
+      "sha256": "71b31fd4153ea6c118ca88cd2b9fd36064e1df8a6804573f9300b6bf9710c8c0",
+      "matches": true
+    },
+    {
+      "path": "android/app/src/main/res/values/visual_tokens.xml",
+      "sha256": "9f423f4be68f1e6f927de078b10f013f33f729b934a628369bfaa43add7123f5",
+      "matches": true
+    }
+  ],
+  "arithmeticAndPracticePolicyUnchanged": [
+    {
+      "path": "src/roundController.ts",
+      "sha256": "2c6c26477b164bdf447e6ef9713ad16e1ad7572b066b016d913feb8cdabd2f67",
+      "matchesBaseline": true
+    },
+    {
+      "path": "src/generateRound.ts",
+      "sha256": "7b8b13e15b58e870f27468e538181423c1fa38f73bd5cceb66eb17a3ca8a52cf",
+      "matchesBaseline": true
+    },
+    {
+      "path": "src/inputPolicy.ts",
+      "sha256": "1c46093bcaf0345926a460bcf7663bc985d1f77ba1b0b0049cd5046428dda8e8",
+      "matchesBaseline": true
+    },
+    {
+      "path": "src/availableOptions.ts",
+      "sha256": "2fe4df4c59cc81e13bda9fd3e7e2b087bef26a1d2a7761461bc07addec11f038",
+      "matchesBaseline": true
+    },
+    {
+      "path": "src/learn/randomExample.ts",
+      "sha256": "03e5b67986bacb5626b1903e85d4c8b7f2518f06e6807859feeba8adfeb3dcd5",
+      "matchesBaseline": true
+    },
+    {
+      "path": "src/learn/confirmedMultiplicationExamples.ts",
+      "sha256": "3411c4e1e4daaf173d7f5ce047e9e103f89b849933352b58a448a869a5fa800c",
+      "matchesBaseline": true
+    },
+    {
+      "path": "src/learn/positionalInstructions.ts",
+      "sha256": "f1392466307d8f0aed130cbc9abf6146a90ce973f6184057881c58901d3a848f",
+      "matchesBaseline": true
+    }
+  ],
+  "distFiles": [
+    {
+      "path": "_headers",
+      "bytes": 123,
+      "sha256": "3fdc8f8e6af5ff2d1a5424f8cff40a3c11c7deefec052bc2f377ea0fd7ca8ff1"
+    },
+    {
+      "path": "assets/index-BGWIhUsi.css",
+      "bytes": 17387,
+      "sha256": "eefb54974a1c95c535bff029718725d0d102c3825f50e839750876aeae5b3365"
+    },
+    {
+      "path": "assets/index-BglQMeYT.js",
+      "bytes": 43214,
+      "sha256": "94ae0472bf1dc1f2017e67022bbb42aa51e83777a21c3122bc30600ee6662df8"
+    },
+    {
+      "path": "index.html",
+      "bytes": 594,
+      "sha256": "7a24a0c2997040882f7af6a5ea4d10eb7f9bdef2a5b937b8deab3d6c170d5071"
+    }
+  ],
+  "cleanup": "One ResizeObserver per Learn mount, disconnected in returned cleanup; no observer per step",
+  "notes": [
+    "Initial responsive development checks identified overflowing long words/navigation at280px and constrained result cells at1024px with doubled text; fixed before final successful suite.",
+    "Native Android revealed a862\u00d7122landscape-keyboard overlap after the first visual build. A bounded CSS-only layout now reserves separate horizontal regions; focused desktop/mobile checks plus full78-case browser suite pass. No Practice event handlers changed."
+  ],
+  "published": false,
+  "allChecksPassed": true
+}

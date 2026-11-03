@@ -1,0 +1,26 @@
+[
+  {
+    "file": "ios/MentalArithmetic/Core/ConfirmedExamples.swift",
+    "baselineCommit": "a5c5fd58c6e41abb3167b20c626b90bfbdfa1152",
+    "sha256": "bd157c428cbb7a618b6cbea656507a0861b50e61944e12f78ce44b66c68ae6de",
+    "byteIdentical": true
+  },
+  {
+    "file": "ios/MentalArithmetic/Core/Lessons.swift",
+    "baselineCommit": "a5c5fd58c6e41abb3167b20c626b90bfbdfa1152",
+    "sha256": "fe3fef37a2c5a88440f164ed1bb9b089cfeb81feed42a90ae2cf8d5f377d3653",
+    "byteIdentical": true
+  },
+  {
+    "file": "ios/MentalArithmetic/Core/PositionalInstructions.swift",
+    "baselineCommit": "a5c5fd58c6e41abb3167b20c626b90bfbdfa1152",
+    "sha256": "67407f4519d0c0d5bdc566a3ba246d83cf50d5657974d969c75ca922a343f5c0",
+    "byteIdentical": true
+  },
+  {
+    "file": "ios/MentalArithmetic/Core/PracticeEngine.swift",
+    "baselineCommit": "a5c5fd58c6e41abb3167b20c626b90bfbdfa1152",
+    "sha256": "2e79e484425f18dd8cb3eae03e497d9d8e679e67769d79c1c7d4fa230c184956",
+    "byteIdentical": true
+  }
+]

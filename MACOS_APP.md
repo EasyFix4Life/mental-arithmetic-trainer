@@ -1,5 +1,14 @@
 # Mental Arithmetic for macOS
 
+**Production release: 1.2.0**, macOS Apple silicon. Download the current package from [the v1.2.0 release](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/tag/v1.2.0) or [whoami.school](https://whoami.school/#app-downloads). This publishes the approved preview 4 interface and options; all previous releases/previews remain preserved.
+
+Release 1.2.0 offers **one- and two-digit multiplication in Learn**, and **two-digit addition plus one- and two-digit multiplication in Practice**. Addition has no Learn option; three-digit multiplication is removed from both modes. The ivory/Baskerville/Arial design, colored Learn stages, literal upright **&** header connectors, digit-pair brackets, carry routes and monochrome Practice are preserved. Arithmetic and interaction rules are unchanged. See [RELEASE_1_2_0.md](RELEASE_1_2_0.md), [the visual specification](design/VISUAL_DESIGN_SPEC.md) and [current verification](verification/RELEASE_1_2_0_RESULTS.md).
+
+Build the release using `npm run build:mac`. Current package filenames use `1.2.0`; the 1.1.4 download references below describe the preserved published release.
+
+## Published 1.1.4 reference
+
+
 **1.1.4 Inside/Outside correction:** Two-digit multiplication now uses **Inside = top units × bottom tens** and **Outside = top tens × bottom units**, including their highlighted digits, calculations and intermediate results. For **82 × 76**, these are **2 × 7 = 14** and **8 × 6 = 48**. Learn and Practice retain **two-digit addition** and **one-, two- and three-digit multiplication**. Use the [current release](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/tag/v1.1.4) or [website downloads](https://whoami.school/#app-downloads). See [the correction report](verification/INSIDE_OUTSIDE_CORRECTION.md).
 
 This desktop build contains the same Learn and Practice application as the website, packaged with its own runtime. It runs offline, without Node.js, npm, a browser tab or a local HTTP server on the user's computer.
@@ -14,7 +23,7 @@ The app has a valid **ad hoc code signature** for this local build. It has **not
 
 On this Mac, synced Documents adds Finder metadata to app/framework directories, which interferes with signing. Packaging therefore occurs in temporary staging; the finished ZIP and DMG are copied into the outputs folder. Using the DMG to place the app in Applications keeps the runnable bundle outside that synced build location. No system security settings were changed.
 
-## Equivalent application behavior
+## Published 1.1.4 behavior — historical reference
 
 - Sepia background, Arial numerals and responsive layout.
 - Learn and Practice remain separate. All four available lessons provide complete instruction and **New random example**: two-digit addition and multiplication with one-, two- and three-digit operands. Their ranges are 1–9, 10–99 and 100–999; an immediately reversed duplicate is avoided too. Addition operands are arranged above and below one another with aligned columns and a horizontal rule; multiplication operands remain horizontal.
@@ -54,4 +63,4 @@ npm run test:desktop
 
 By default, the desktop tests launch the source shell against the production build. To test a packaged application, set `DESKTOP_EXECUTABLE` to its `Contents/MacOS/Mental Arithmetic` executable before running `npm run test:desktop`. The suite follows [Playwright's Electron testing API](https://playwright.dev/docs/api/class-electron), and requires no Vite server.
 
-Current results and package-integrity evidence are recorded in `verification/INSIDE_OUTSIDE_CORRECTION.md`, `verification/inside-outside-macos-results.json` and `verification/inside-outside-mac-package.json`; `verification/MACOS_TEST_RESULTS.md` remains a historical baseline. The equivalent Windows 10/11 x64 build and its verification limits are documented in `WINDOWS_APP.md`.
+Current 1.2.0 results are in [RELEASE_1_2_0_RESULTS.md](verification/RELEASE_1_2_0_RESULTS.md), `verification/release-120-macos-results.json`, `verification/release-120-mac-package.json` and `verification/release-120-cross-platform-packages.json`. The preserved `verification/INSIDE_OUTSIDE_CORRECTION.md`, `verification/inside-outside-macos-results.json`, `verification/inside-outside-mac-package.json` and `verification/MACOS_TEST_RESULTS.md` describe historical baselines. The equivalent Windows 10/11 x64 build and its verification limits are documented in `WINDOWS_APP.md`.

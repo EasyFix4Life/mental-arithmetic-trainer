@@ -1,0 +1,67 @@
+{
+  "url": "http://127.0.0.1:5196/",
+  "version": "Version 1.2.0-preview.1",
+  "checkedAt": "2026-11-03T14:43:42.964Z",
+  "additionDigits": [
+    "2"
+  ],
+  "publishedDownloadVersions": [
+    "Version 1.1.4",
+    "Version 1.1.4",
+    "Version 1.1.4",
+    "Version 1.1.4"
+  ],
+  "practice": {
+    "correct": "false",
+    "cue": "×",
+    "fieldBackground": "rgb(255, 255, 255)",
+    "paper": "rgb(250, 247, 240)",
+    "time": "0.2",
+    "timeColor": "rgb(0, 0, 0)"
+  },
+  "completedScore": "9 / 10",
+  "assets": {
+    "scripts": [
+      "./assets/index-BglQMeYT.js"
+    ],
+    "styles": [
+      "./assets/index-BGWIhUsi.css"
+    ]
+  },
+  "learnOperands": [
+    "21",
+    "34"
+  ],
+  "inside": {
+    "calculation": "1 × 3",
+    "color": "rgb(108, 84, 131)",
+    "connector": "M 63.8203125 107.2734375 V 115.2734375 H 187.765625 V 107.2734375",
+    "highlights": [
+      "left:1",
+      "right:0"
+    ]
+  },
+  "outside": {
+    "calculation": "2 × 4 = 8; 3 + 8",
+    "color": "rgb(108, 84, 131)",
+    "highlights": [
+      "left:0",
+      "right:1"
+    ]
+  },
+  "carries": [
+    {
+      "destination": "Carry to the middle",
+      "kind": "in",
+      "origin": "Last (64)",
+      "value": "6"
+    },
+    {
+      "destination": "First (1)",
+      "kind": "out",
+      "origin": "Carry to the middle",
+      "value": "2"
+    }
+  ],
+  "allChecksPassed": true
+}

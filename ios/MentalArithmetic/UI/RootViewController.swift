@@ -1,7 +1,7 @@
 import UIKit
 
 final class RootViewController: UIViewController {
-    private let mode = UISegmentedControl(items: ["Learn", "Practice"])
+    private let mode = ScholarlySegmentedControl(items: ["Learn", "Practice"])
     private let modeContainer = UIView()
     private let container = UIView()
     private lazy var practice = PracticeViewController()
@@ -15,8 +15,7 @@ final class RootViewController: UIViewController {
         view.tintColor = AppTheme.ink
         mode.selectedSegmentIndex = 1
         mode.accessibilityIdentifier = "mode-control"
-        mode.setTitleTextAttributes([.font: AppTheme.font(18), .foregroundColor: AppTheme.ink], for: .normal)
-        mode.selectedSegmentTintColor = AppTheme.highlight
+        AppTheme.styleSegments(mode)
         mode.addTarget(self, action: #selector(changeMode), for: .valueChanged)
         mode.translatesAutoresizingMaskIntoConstraints = false
         modeContainer.translatesAutoresizingMaskIntoConstraints = false
@@ -32,7 +31,7 @@ final class RootViewController: UIViewController {
             modeHeight,
             mode.centerXAnchor.constraint(equalTo: modeContainer.centerXAnchor),
             mode.topAnchor.constraint(equalTo: modeContainer.topAnchor, constant: 8),
-            mode.widthAnchor.constraint(equalToConstant: 260),
+            mode.widthAnchor.constraint(equalTo: modeContainer.widthAnchor, constant: -48),
             mode.heightAnchor.constraint(equalToConstant: 44),
             container.topAnchor.constraint(equalTo: modeContainer.bottomAnchor),
             container.leadingAnchor.constraint(equalTo: view.leadingAnchor),

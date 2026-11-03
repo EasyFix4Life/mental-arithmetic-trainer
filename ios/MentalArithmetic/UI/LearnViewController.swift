@@ -1,15 +1,44 @@
 import UIKit
 
+/// Preserve whole words at the largest text settings. The heading still scales
+/// with Dynamic Type, fitting only an otherwise unbreakable word to its line.
+private final class WalkthroughHeadingLabel: UILabel {
+    init() {
+        super.init(frame: .zero)
+        text = "Instructional walkthrough"
+        textColor = AppTheme.ink
+        font = AppTheme.font(21, bold: true)
+        numberOfLines = 0
+        lineBreakMode = .byWordWrapping
+        adjustsFontForContentSizeCategory = false
+        accessibilityIdentifier = "walkthrough-heading"
+        translatesAutoresizingMaskIntoConstraints = false
+    }
+    required init?(coder: NSCoder) { fatalError("Use init()") }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        guard bounds.width > 0 else { return }
+        let base = UIFont(name: "Baskerville-Bold", size: 21) ?? UIFont.boldSystemFont(ofSize: 21)
+        let intended = UIFontMetrics(forTextStyle: .body).scaledFont(for: base, compatibleWith: traitCollection)
+        let longest = (text ?? "").split(separator: " ").map { (String($0) as NSString).size(withAttributes: [.font: intended]).width }.max() ?? 1
+        let size = intended.pointSize * min(1, bounds.width / max(1, longest))
+        if abs(font.pointSize - size) > 0.25 { font = intended.withSize(size) }
+    }
+}
+
 final class LearnViewController: UIViewController {
     private let scroll = UIScrollView()
     private let content = AppTheme.stack(spacing: 20)
-    private var lesson = LessonCatalog.lessons.first(where: { $0.id == "addition-2" })!
+    private var lesson = LessonCatalog.lessons[0]
     private var randomProblem: WorkedExample!
     private var randomExample: AuthoredExample?
     private var selectedExample: AuthoredExample?
     private var stepIndex = 0
     private var isOpen = false
     private var lessonButtons = [String: UIButton]()
+    private var catalogRows = [UIStackView]()
+    private var walkthroughHeader: UIStackView?
+    private var groupedStageLayoutSignature: String?
     private let heading = AppTheme.label(size: 28, identifier: "lesson-title")
     private let status = AppTheme.label(size: 17, identifier: "lesson-status")
     private let exampleMenu = AppTheme.button("Worked example", identifier: "worked-example-menu", action: {})
@@ -28,7 +57,7 @@ final class LearnViewController: UIViewController {
     private let stages = AppTheme.stack(spacing: 8)
     private let stepContent = AppTheme.stack(spacing: 16)
     private let navigation = AppTheme.stack(axis: .horizontal, spacing: 12, alignment: .center)
-    private let position = AppTheme.label(size: 18, identifier: "step-position")
+    private let position = AppTheme.label(size: 18, identifier: "step-position", mathematics: true)
     private lazy var back = AppTheme.button("Back", identifier: "step-back") { [weak self] in self?.move(-1) }
     private lazy var nextButton = AppTheme.button("Next", identifier: "step-next") { [weak self] in self?.move(1) }
 
@@ -89,7 +118,7 @@ final class LearnViewController: UIViewController {
         content.addArrangedSubview(AppTheme.label("Learn", size: 32))
         let catalog = AppTheme.stack(spacing: 8)
         for pairStart in stride(from: 0, to: LessonCatalog.lessons.count, by: 2) {
-            let row = AppTheme.stack(axis: .horizontal, spacing: 8)
+            let row = AppTheme.stack(axis: traitCollection.preferredContentSizeCategory.isAccessibilityCategory ? .vertical : .horizontal, spacing: 8)
             row.distribution = .fillEqually
             for index in pairStart..<min(pairStart + 2, LessonCatalog.lessons.count) {
                 let item = LessonCatalog.lessons[index]
@@ -104,6 +133,7 @@ final class LearnViewController: UIViewController {
                 lessonButtons[item.id] = button
                 row.addArrangedSubview(button)
             }
+            catalogRows.append(row)
             catalog.addArrangedSubview(row)
         }
         content.addArrangedSubview(catalog)
@@ -127,14 +157,16 @@ final class LearnViewController: UIViewController {
         }
         help.titleLabel?.lineBreakMode = .byWordWrapping
         help.heightAnchor.constraint(greaterThanOrEqualToConstant: 64).isActive = true
-        help.layer.cornerRadius = 8
-        help.layer.borderWidth = 2
-        help.backgroundColor = AppTheme.highlight
+        help.layer.cornerRadius = VisualTokens.cornerRadius
+        help.layer.borderWidth = VisualTokens.emphasisBorder
+        help.backgroundColor = VisualTokens.field
         help.accessibilityLabel = "Click Here to Learn How!"
         help.accessibilityHint = "Opens the instructional walkthrough for this lesson."
         content.addArrangedSubview(problemRow)
-        let header = AppTheme.stack(axis: .horizontal, spacing: 16, alignment: .center)
-        let walkthroughHeading = AppTheme.label("Instructional walkthrough", size: 21, bold: true)
+        let header = AppTheme.stack(axis: traitCollection.preferredContentSizeCategory.isAccessibilityCategory ? .vertical : .horizontal, spacing: 16, alignment: .fill)
+        walkthroughHeader = header
+        navigation.axis = traitCollection.preferredContentSizeCategory.isAccessibilityCategory ? .vertical : .horizontal
+        let walkthroughHeading = WalkthroughHeadingLabel()
         header.addArrangedSubview(walkthroughHeading)
         let close = AppTheme.button("Close", identifier: "close-walkthrough") { [weak self] in
             self?.isOpen = false
@@ -231,9 +263,12 @@ final class LearnViewController: UIViewController {
         let finalAnswer = currentExample?.finalAnswer
         let isFinal = finalAnswer != nil && stepIndex == steps.count
         let currentStep = steps.indices.contains(stepIndex) ? steps[stepIndex] : nil
-        let stageRow = AppTheme.stack(axis: .horizontal, spacing: 6)
+        let stageRow = AppTheme.stack(axis: traitCollection.preferredContentSizeCategory.isAccessibilityCategory ? .vertical : .horizontal, spacing: 8)
         stageRow.distribution = .fillEqually
         var shownLabels = Set<String>()
+        var namedButtons = [MultiplicationStage: UIButton]()
+        let grouped = lesson.id == "multiplication-2"
+            && Set(steps.compactMap(\.stageName)) == Set(MultiplicationStage.allCases)
         for (index, step) in steps.enumerated() {
             guard let title = step.stageName?.rawValue ?? step.navigationLabel,
                   shownLabels.insert(title).inserted else { continue }
@@ -248,32 +283,55 @@ final class LearnViewController: UIViewController {
                 attributes.font = AppTheme.font(16)
                 return attributes
             }
-            AppTheme.selected((currentStep?.stageName?.rawValue ?? currentStep?.navigationLabel) == title && !isFinal, button: button)
-            stageRow.addArrangedSubview(button)
+            if grouped, let stage = step.stageName {
+                AppTheme.namedStage(stage, current: currentStep?.stageName == stage && !isFinal, button: button, traits: view.window?.traitCollection ?? traitCollection)
+                namedButtons[stage] = button
+            } else {
+                AppTheme.selected((currentStep?.stageName?.rawValue ?? currentStep?.navigationLabel) == title && !isFinal, button: button, accent: AppTheme.accent(for: step.stageName))
+                stageRow.addArrangedSubview(button)
+            }
         }
         if !stageRow.arrangedSubviews.isEmpty { stages.addArrangedSubview(stageRow) }
+        var finalButton: UIButton?
         if let finalAnswer {
-            let final = AppTheme.button("Final answer: \(finalAnswer)", identifier: "final-answer") { [weak self] in
+            let final = AppTheme.button("Final Answer: \(finalAnswer)", identifier: "final-answer") { [weak self] in
                 guard let self else { return }
                 self.stepIndex = self.currentSteps.count
                 self.renderStep()
             }
-            AppTheme.selected(isFinal, button: final)
-            stages.addArrangedSubview(final)
+            if grouped {
+                AppTheme.finalAnswer(finalAnswer, current: isFinal, button: final)
+                finalButton = final
+            } else {
+                AppTheme.selected(isFinal, button: final)
+                stages.addArrangedSubview(final)
+            }
         }
+        if grouped {
+            let layout = namedStageLayout(answer: finalAnswer ?? "")
+            groupedStageLayoutSignature = "\(layout.wide)-\(layout.middleStacked)"
+            stages.addArrangedSubview(MultiplicationStageGroupView(buttons: namedButtons, finalButton: finalButton,
+                wide: layout.wide, enlarged: traitCollection.preferredContentSizeCategory.isAccessibilityCategory,
+                middleStacked: layout.middleStacked, productMinimum: layout.productMinimum, resultMinimum: layout.resultMinimum,
+                traits: view.window?.traitCollection ?? traitCollection))
+        } else { groupedStageLayoutSignature = nil }
         if isFinal, let finalAnswer {
-            stepContent.addArrangedSubview(AppTheme.label("Final answer", size: 22, bold: true))
+            stepContent.addArrangedSubview(AppTheme.label("Final Answer", size: 22, bold: true))
             let result = ArithmeticExpressionView(fontSize: 44, identifier: "final-answer-expression")
             result.configure(left: currentProblem.left, right: currentProblem.right,
                              operation: currentProblem.operation, result: finalAnswer)
             stepContent.addArrangedSubview(result)
         } else if let step = currentStep {
             if let stage = step.stageName?.rawValue ?? step.navigationLabel {
-                stepContent.addArrangedSubview(AppTheme.label(stage, size: 22, bold: true))
+                let label = AppTheme.label(stage, size: 22, bold: true, identifier: "stage-heading")
+                label.textColor = AppTheme.accent(for: step.stageName)
+                stepContent.addArrangedSubview(label)
             }
             if let title = step.stepLabel { stepContent.addArrangedSubview(AppTheme.label(title, size: 19)) }
             let selectedExpression = ArithmeticExpressionView(fontSize: 58, identifier: "instruction-expression")
-            configureExpression(selectedExpression, problem: currentProblem, selected: step.highlightedDigitRefs ?? [])
+            selectedExpression.configure(left: currentProblem.left, right: currentProblem.right, operation: currentProblem.operation,
+                                         selected: step.highlightedDigitRefs ?? [], accent: AppTheme.accent(for: step.stageName),
+                                         connectPair: hasExplicitPairing(step: step, problem: currentProblem))
             stepContent.addArrangedSubview(selectedExpression)
             if let narration = step.narration { stepContent.addArrangedSubview(AppTheme.label(narration, size: 20, identifier: "step-narration")) }
             if let terms = step.calculationTerms, !terms.isEmpty {
@@ -287,6 +345,7 @@ final class LearnViewController: UIViewController {
                 addDetail("Calculation", step.operationDisplay, identifier: "step-operation")
             }
             addDetail("Intermediate result", step.intermediateResult, identifier: "step-intermediate-result")
+            if step.carryIn != nil || step.carryOut != nil { stepContent.addArrangedSubview(CarryRouteView(step: step)) }
             addDetail("Answer digits so far", step.visibleResultDigits, identifier: "step-result-digits")
             addDetail("Carry in", step.carryIn, identifier: "carry-in")
             addDetail("Carry out", step.carryOut, identifier: "carry-out")
@@ -306,8 +365,77 @@ final class LearnViewController: UIViewController {
         guard let value else { return }
         let row = AppTheme.stack(spacing: 5)
         row.addArrangedSubview(AppTheme.label(heading, size: 15))
-        row.addArrangedSubview(AppTheme.label(value, size: 26, identifier: identifier))
+        if identifier == "step-result-digits" {
+            let answer = DevelopingAnswerLabel()
+            answer.text = value
+            answer.font = AppTheme.mathFont(28)
+            answer.adjustsFontForContentSizeCategory = true
+            answer.accessibilityIdentifier = identifier
+            answer.accessibilityLabel = value
+            answer.accessibilityHint = "Answer digits so far"
+            answer.translatesAutoresizingMaskIntoConstraints = false
+            answer.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+            row.addArrangedSubview(answer)
+        } else {
+            row.addArrangedSubview(AppTheme.label(value, size: 26, identifier: identifier,
+                mathematics: !["carry-from", "carry-to"].contains(identifier)))
+        }
         stepContent.addArrangedSubview(row)
+    }
+
+    /// Decide from the complete measured diagram, not a width breakpoint alone.
+    /// Each value below is typography/spacing only; no arithmetic is performed.
+    private func namedStageLayout(answer: String) -> (wide: Bool, middleStacked: Bool, productMinimum: CGFloat, resultMinimum: CGFloat) {
+        let traits = view.window?.traitCollection ?? traitCollection
+        let base = UIFont(name: "Baskerville-Bold", size: 16) ?? UIFont.boldSystemFont(ofSize: 16)
+        let text = UIFontMetrics(forTextStyle: .body).scaledFont(for: base, compatibleWith: traits)
+        let digits = AppTheme.mathFont(16, bold: true, compatibleWith: traits)
+        func word(_ value: String, font: UIFont) -> CGFloat { ceil((value as NSString).size(withAttributes: [.font: font]).width) }
+        let widths = MultiplicationStage.allCases.map { word($0.rawValue, font: text) + 32 }
+        let plus = word("+", font: AppTheme.mathFont(22, bold: true, compatibleWith: traits))
+        let middle = widths[1] + widths[2] + plus + 16 + 16
+        let ampersands = word("&", font: AppTheme.mathFont(20, compatibleWith: traits)) * 2
+        let product = widths[0] + middle + widths[3] + ampersands + 32 + 24
+        let final = word("Final Answer: ", font: text) + word(answer, font: digits) + 32
+        let result = final + word("=", font: AppTheme.mathFont(28, compatibleWith: traits)) + 8
+        let enlarged = traits.preferredContentSizeCategory.isAccessibilityCategory
+        let wide = !enlarged && content.bounds.width >= max(760, product + result + 12 + 4)
+        return (wide, enlarged || (!wide && middle > content.bounds.width - 24), product, result)
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if let previous = groupedStageLayoutSignature {
+            let layout = namedStageLayout(answer: currentExample?.finalAnswer ?? "")
+            if previous != "\(layout.wide)-\(layout.middleStacked)" { renderStep() }
+        }
+    }
+
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if previousTraitCollection?.preferredContentSizeCategory != traitCollection.preferredContentSizeCategory {
+            for row in catalogRows { row.axis = traitCollection.preferredContentSizeCategory.isAccessibilityCategory ? .vertical : .horizontal }
+            walkthroughHeader?.axis = traitCollection.preferredContentSizeCategory.isAccessibilityCategory ? .vertical : .horizontal
+            navigation.axis = traitCollection.preferredContentSizeCategory.isAccessibilityCategory ? .vertical : .horizontal
+            if isViewLoaded { render() }
+        }
+    }
+
+    /// Draw a connector only when the existing single calculation explicitly
+    /// agrees with exactly one selected digit from each operand. Carry sums and
+    /// multi-product groups remain unconnected rather than implying a new pair.
+    private func hasExplicitPairing(step: InstructionStep, problem: WorkedExample) -> Bool {
+        guard let refs = step.highlightedDigitRefs, refs.count == 2,
+              let leftRef = refs.first(where: { $0.hasPrefix("left:") }),
+              let rightRef = refs.first(where: { $0.hasPrefix("right:") }),
+              let leftIndex = Int(leftRef.dropFirst(5)), let rightIndex = Int(rightRef.dropFirst(6)),
+              leftIndex < problem.left.count, rightIndex < problem.right.count,
+              let operation = step.operationDisplay else { return false }
+        let left = Array(problem.left)[leftIndex], right = Array(problem.right)[rightIndex]
+        let prefix = "\(left) \(problem.operation.symbol) \(right)"
+        guard operation.hasPrefix(prefix) else { return false }
+        let remainder = String(operation.dropFirst(prefix.count))
+        return remainder.isEmpty || remainder.hasPrefix(" = ") || remainder.hasPrefix("; ")
     }
 
     private func move(_ direction: Int) {

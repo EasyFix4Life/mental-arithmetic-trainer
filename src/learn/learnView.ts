@@ -1,6 +1,5 @@
 import { getLesson, lessons } from './lessonCatalog';
-import { DEFAULT_SETTINGS } from '../availableOptions';
-import { renderFinalAnswer, renderHorizontalExpression, renderInstructionStep } from './instructionStepRenderer';
+import { renderFinalAnswer, renderHorizontalExpression, renderInstructionStep, updatePairingConnectors } from './instructionStepRenderer';
 import { generateRandomProblem } from './randomExample';
 import { createInstructionExample } from './positionalInstructions';
 import type { AuthoredExample, Lesson } from './lessonTypes';
@@ -80,7 +79,11 @@ export function mountLearnView(root: HTMLElement): () => void {
   const fragmentValues = find('#carry-fragment-values');
   const listeners = new AbortController();
   const options = { signal: listeners.signal };
-  let selected: Lesson = getLesson(`${DEFAULT_SETTINGS.operation}-${DEFAULT_SETTINGS.digitCount}`)!;
+  // One observer belongs to this mounted view; replacement steps never create
+  // additional observers. Resize/text scaling updates only static geometry.
+  const connectorObserver = new ResizeObserver(() => updatePairingConnectors(content));
+  connectorObserver.observe(content);
+  let selected: Lesson = lessons[0]!;
   let stepIndex = 0;
   let exampleIndex = -1;
   let open = false;
@@ -117,11 +120,11 @@ export function mountLearnView(root: HTMLElement): () => void {
     // Carry resolution can take several screens within Last. The final-answer
     // result item follows the four named instructions.
     const renderedStages = new Set<string>();
+    const stageButtons = new Map<string, HTMLButtonElement>();
     for (const [index, item] of steps.entries()) {
       const label = item.stageName ?? item.navigationLabel;
       if (!label || renderedStages.has(label)) continue;
       renderedStages.add(label);
-      const li = document.createElement('li');
       const button = document.createElement('button');
       button.type = 'button';
       button.textContent = label;
@@ -132,16 +135,64 @@ export function mountLearnView(root: HTMLElement): () => void {
         renderStep();
         stageSequence.querySelector<HTMLButtonElement>(`[data-stage-name="${label}"]`)?.focus();
       });
-      li.append(button);
-      stageSequence.append(li);
+      stageButtons.set(label, button);
+    }
+    const namedStages = ['First', 'Inside', 'Outside', 'Last'];
+    const grouped = namedStages.every(label => stageButtons.has(label));
+    stageSequence.classList.toggle('stage-sequence-grouped', grouped);
+    stageSequence.dataset.grouped = String(grouped);
+    function symbol(value: string, className: string, id?: string): HTMLSpanElement {
+      const mark = document.createElement('span');
+      mark.className = className;
+      if (id) mark.id = id;
+      mark.textContent = value;
+      mark.setAttribute('aria-hidden', 'true');
+      return mark;
+    }
+    if (grouped) {
+      const item = document.createElement('li');
+      item.className = 'stage-product-item';
+      const product = document.createElement('div');
+      product.id = 'stage-product-group';
+      product.className = 'stage-product-group';
+      product.setAttribute('role', 'group');
+      product.setAttribute('aria-label', 'First and middle contribution and Last');
+      const middleUnit = document.createElement('div');
+      middleUnit.className = 'stage-flow-unit stage-middle-unit';
+      const middle = document.createElement('div');
+      middle.id = 'stage-middle-group';
+      middle.className = 'middle-stage-group';
+      middle.setAttribute('role', 'group');
+      middle.setAttribute('aria-label', 'Middle contribution: Inside plus Outside');
+      middle.append(stageButtons.get('Inside')!, symbol('+', 'stage-middle-plus', 'stage-middle-plus'), stageButtons.get('Outside')!);
+      middleUnit.append(symbol('&', 'stage-flow-connection', 'stage-connection-first'), middle);
+      const lastUnit = document.createElement('div');
+      lastUnit.className = 'stage-flow-unit stage-last-unit';
+      lastUnit.append(symbol('&', 'stage-flow-connection', 'stage-connection-last'), stageButtons.get('Last')!);
+      product.append(stageButtons.get('First')!, middleUnit, lastUnit);
+      item.append(product);
+      stageSequence.append(item);
+    } else {
+      for (const button of stageButtons.values()) {
+        const item = document.createElement('li');
+        item.append(button);
+        stageSequence.append(item);
+      }
     }
     if (finalAnswer !== undefined) {
       const li = document.createElement('li');
+      li.className = 'stage-final-item';
+      if (grouped) {
+        li.append(symbol('=', 'stage-equals', 'stage-equals'));
+      }
       const button = document.createElement('button');
       button.type = 'button';
       button.id = 'final-answer';
       button.dataset.finalAnswer = finalAnswer;
-      button.textContent = `Final answer: ${finalAnswer}`;
+      const answerValue = document.createElement('span');
+      answerValue.className = 'stage-final-value';
+      answerValue.textContent = finalAnswer;
+      button.append('Final Answer: ', answerValue);
       if (isFinalAnswer) button.setAttribute('aria-current', 'step');
       button.addEventListener('click', () => {
         stepIndex = steps.length;
@@ -155,6 +206,7 @@ export function mountLearnView(root: HTMLElement): () => void {
     else if (step) content.append(renderInstructionStep(
       step, problem, selected.digitCount, selected.operation,
     ));
+    updatePairingConnectors(content);
     position.textContent = step || isFinalAnswer ? `${stepIndex + 1} / ${screenCount()}` : '';
     back.disabled = stepIndex <= 0;
     next.disabled = stepIndex >= screenCount() - 1;
@@ -274,5 +326,5 @@ export function mountLearnView(root: HTMLElement): () => void {
     }
   }, options);
   renderLesson();
-  return () => { listeners.abort(); root.replaceChildren(); };
+  return () => { connectorObserver.disconnect(); listeners.abort(); root.replaceChildren(); };
 }

@@ -59,10 +59,10 @@ struct InstructionalLesson: Equatable {
 }
 
 enum LessonCatalog {
-    /// The four available categories use the owner's described methodology. Only 12×12 and
+    /// Historical instruction fixtures retain the owner's described methodology. Only 12×12 and
     /// 18×18 are individually owner-confirmed worked traces; the other examples
     /// are generated from the subsequently described general method.
-    static let lessons = [
+    static let allLessons = [
         InstructionalLesson(id: "multiplication-1", title: "Single-digit multiplication", operation: .multiplication,
             digitCount: .one, authoredStatus: "Owner-described method; generated instructions",
             examples: [try! MultiplicationExamples.create(left: 8, right: 7, digitCount: .one)]),
@@ -75,6 +75,14 @@ enum LessonCatalog {
             digitCount: .three, authoredStatus: "Owner-described method; generated instructions",
             examples: [try! MultiplicationExamples.create(left: 123, right: 456, digitCount: .three)]),
     ]
+
+    /// Learn availability is independent of Practice choices. Historical addition
+    /// and three-digit methods remain in allLessons for reusable engine tests.
+    static let lessons = allLessons.filter { isAvailable(operation: $0.operation, digitCount: $0.digitCount) }
+
+    static func isAvailable(operation: ArithmeticOperation, digitCount: OperandDigits) -> Bool {
+        operation == .multiplication && [.one, .two].contains(digitCount)
+    }
 }
 
 enum RandomExamples {

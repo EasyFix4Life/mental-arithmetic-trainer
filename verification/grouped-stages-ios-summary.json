@@ -1,0 +1,195 @@
+{
+  "reviewEdition": "1.2.0-preview.2",
+  "nativeVersion": "1.2.0",
+  "build": "7",
+  "date": "2026-11-03",
+  "status": "local-grouped-stage-preview-not-published",
+  "baseline": {
+    "preview": "1.2.0-preview.1",
+    "commit": "f01c38aa8f14ea6f752db9a4c37ed94e3ffd0969",
+    "coreFilesByteIdentical": 4,
+    "practiceViewControllerByteIdentical": true,
+    "coreAlsoByteIdenticalToProduction114": true,
+    "compatibilityReport": "verification/grouped-stages-ios-compatibility.json"
+  },
+  "toolchain": {
+    "application": "/Applications/Xcode-beta.app",
+    "version": "Xcode 27.0 beta",
+    "build": "27A5228h"
+  },
+  "groupedStages": {
+    "diagram": "[ First \u2192 [ Inside + Outside ] \u2192 Last ] = [ Final Answer: #### ]",
+    "scope": "Named two-digit multiplication only; numbered lessons remain generic",
+    "productContainer": "stage-product-group",
+    "middleContainer": "stage-middle-group",
+    "middleChildren": [
+      "stage-inside",
+      "stage-middle-plus",
+      "stage-outside"
+    ],
+    "outsideProduct": [
+      "stage-equals",
+      "final-answer"
+    ],
+    "logicalActionOrder": [
+      "stage-first",
+      "stage-inside",
+      "stage-outside",
+      "stage-last",
+      "final-answer"
+    ],
+    "arrows": "Decorative connectors, not multiplication",
+    "caption": "Final Answer: result",
+    "typography": "All four named buttons use Baskerville Bold at the same scaled 16-point base; final result digits use Arial.",
+    "borders": "Equal 2-point named-stage borders, 4-point corners and minimum 44-point targets.",
+    "padding": "Equal 12 points top/bottom and 16 points leading/trailing.",
+    "selection": "Underline and selected accessibility trait only; unchanged font weight and border"
+  },
+  "palette": {
+    "paper": "#FAF7F0",
+    "ink": "#000000",
+    "field": "#FFFFFF",
+    "first": "#126C70",
+    "inside": "#755093",
+    "outside": "#755093",
+    "last": "#885A15",
+    "firstFill": "#E2F1EF",
+    "insideFill": "#EEE5F4",
+    "outsideFill": "#EEE5F4",
+    "lastFill": "#F6ECD8"
+  },
+  "responsive": {
+    "wide": "Only selected if measured words, padding, margins, arrows, plus, equals and complete Final Answer caption fit; required component minima prevent compression",
+    "narrow": "Outer sections stack; middle independently stacks when its pair would not fit",
+    "largestText": "AccessibilityExtraExtraExtraLarge tested; whole stage words, plus/equals, middle containment and Final Answer wrapping verified. Unbreakable walkthrough-heading words fit their line without splitting."
+  },
+  "coreTests": {
+    "passed": 36,
+    "failed": 0,
+    "report": "verification/grouped-stages-ios-core-tests.txt"
+  },
+  "builds": {
+    "debugSimulator": "passed",
+    "releaseSimulator": "passed",
+    "unsignedDeviceArchive": "passed"
+  },
+  "debugUIKit": {
+    "iphone": {
+      "passed": 12,
+      "total": 12,
+      "skipped": 0,
+      "report": "verification/grouped-stages-ios-iphone-27.json"
+    },
+    "ipad": {
+      "passed": 11,
+      "total": 12,
+      "skipped": 1,
+      "report": "verification/grouped-stages-ios-ipad-26.json"
+    }
+  },
+  "actualPackagedReleaseAudits": {
+    "iphone": {
+      "version": "1.2.0",
+      "build": "7",
+      "passedChecks": 558,
+      "binaryUnchanged": true,
+      "report": "verification/grouped-stages-ios-iphone-release.json"
+    },
+    "ipad": {
+      "version": "1.2.0",
+      "build": "7",
+      "passedChecks": 558,
+      "binaryUnchanged": true,
+      "report": "verification/grouped-stages-ios-ipad-release.json"
+    }
+  },
+  "auditMethod": "Separate simulator-only dylib drives the final ZIP-extracted Release app UIKit controls and text-field delegates. Packaged and installed executable hashes match; no audit library is shipped.",
+  "releaseAuditCoverage": [
+    "All four direct stage actions, Next/Back and existing carry paths to Final Answer.",
+    "Stage containment, logical accessible action order, explicit plus/equals and a separate Final Answer box.",
+    "Equal bold font, padding, 2-point borders and light fills; Arial final digits and correct caption casing.",
+    "Complete pair brackets and the corrected Inside/Outside cross-products.",
+    "Whole words, caption wrapping and glyph visibility in normal and largest accessibility text.",
+    "Fifty Practice answers across all four configurations, including largest-text keyboard geometry and unchanged scoring/timing."
+  ],
+  "availableLessons": [
+    "multiplication-1",
+    "addition-2",
+    "multiplication-2",
+    "multiplication-3"
+  ],
+  "releaseBinaries": [
+    {
+      "kind": "simulator",
+      "version": "1.2.0",
+      "build": "7",
+      "minimumOS": "17.0",
+      "families": [
+        1,
+        2
+      ],
+      "architectures": "Architectures in the fat file: /tmp/mental-arithmetic-ios-grouped-stages/packaged-release/MentalArithmetic.app/MentalArithmetic are: x86_64 arm64",
+      "debugHarnessAbsent": true,
+      "externalAuditLibraryAbsent": true,
+      "removedLessonTitlesAbsent": true,
+      "signatureDirectoryPresent": false
+    },
+    {
+      "kind": "device",
+      "version": "1.2.0",
+      "build": "7",
+      "minimumOS": "17.0",
+      "families": [
+        1,
+        2
+      ],
+      "architectures": "Non-fat file: /tmp/mental-arithmetic-ios-grouped-stages/Mental-Arithmetic-1.2.0-preview.2-iOS-unsigned.xcarchive/Products/Applications/MentalArithmetic.app/MentalArithmetic is architecture: arm64",
+      "debugHarnessAbsent": true,
+      "externalAuditLibraryAbsent": true,
+      "removedLessonTitlesAbsent": true,
+      "signatureDirectoryPresent": false
+    }
+  ],
+  "sourceFilesVerifiedAgainstMirror": 30,
+  "sourceManifest": "verification/grouped-stages-ios-native-sources.json",
+  "screenshots": {
+    "raw": 40,
+    "opaqueReviewCopies": 40,
+    "directories": [
+      "ios/AppStore/Screenshots/1.2.0-preview.2-iPhone-27-beta",
+      "ios/AppStore/Screenshots/1.2.0-preview.2-iPad-26.5"
+    ],
+    "validation": "Actual native captures; PNG CRCs, decompression and dimensions passed. Decoded RGB samples are preserved in opaque copies. Wide iPad words, phone stacking, all four stages, Final Answer, accessibility header/middle/final and Practice were visually reviewed."
+  },
+  "submissionFiles": 95,
+  "artifacts": [
+    {
+      "file": "Mental-Arithmetic-1.2.0-preview.2-iOS-Simulator-app.zip",
+      "bytes": 407630,
+      "sha256": "afe5d061eb26d143d681fb4acd8d9b14aaabab2e48b6cde1ee5b62f849a5a564",
+      "copiesIdentical": true
+    },
+    {
+      "file": "Mental-Arithmetic-1.2.0-preview.2-iOS-unsigned-archive.zip",
+      "bytes": 933417,
+      "sha256": "32810d8bd6217ee826ecb0e0ff74f36a5250bf613b92c646b5a1c4f0e45911e8",
+      "copiesIdentical": true
+    },
+    {
+      "file": "Mental-Arithmetic-1.2.0-preview.2-iOS-submission-files.zip",
+      "bytes": 11557217,
+      "sha256": "240263af7ec10fabd08856c96b4feefc081f0ef6770142772217d9bc024475bf",
+      "copiesIdentical": true
+    }
+  ],
+  "limitations": [
+    "UIKit control actions and text-field delegates are not physical keyboard input, external XCUITest or manual VoiceOver automation.",
+    "The existing iPad programmatic landscape request remains explicitly skipped. Physical iPhone/iPad validation remains unverified.",
+    "The device archive is unsigned and is not an installable IPA. No App Store/TestFlight upload, production deployment or GitHub release publication was performed."
+  ],
+  "allChecksPassed": true,
+  "ownedSimulatorsShutDown": {
+    "35D20D1C-73F0-4F9F-A579-8FE27083201A": "Shutdown",
+    "F397A467-4ACD-4D14-A984-A8946A491219": "Shutdown"
+  }
+}

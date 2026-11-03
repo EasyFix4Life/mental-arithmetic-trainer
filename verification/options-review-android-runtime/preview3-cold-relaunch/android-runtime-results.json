@@ -1,0 +1,67 @@
+{
+  "androidRelease": "17",
+  "sdkInt": 37,
+  "supportedAbis": [
+    "arm64-v8a"
+  ],
+  "model": "sdk_gphone64_arm64",
+  "package": "local.jeff.mentalarithmetic",
+  "version": "1.2.0-preview.3",
+  "webViewPackage": "com.google.android.webview",
+  "webViewVersion": "145.0.7632.218",
+  "scenario": "catalog",
+  "passed": 1,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "actual installed lesson and practice options",
+      "status": "passed",
+      "durationMs": 815,
+      "details": {
+        "initial": {
+          "operation": "addition",
+          "digits": "2",
+          "options": [
+            "2"
+          ]
+        },
+        "lessons": [
+          {
+            "id": "multiplication-1",
+            "title": "Single-digit multiplication"
+          },
+          {
+            "id": "addition-2",
+            "title": "Two-digit addition"
+          },
+          {
+            "id": "multiplication-2",
+            "title": "Two-digit multiplication"
+          },
+          {
+            "id": "multiplication-3",
+            "title": "Three-digit multiplication"
+          }
+        ],
+        "selectedLesson": "addition-2",
+        "addition": [
+          "2"
+        ],
+        "multiplication": [
+          "1",
+          "2",
+          "3"
+        ],
+        "document": "https:\/\/appassets.androidplatform.net\/index.html",
+        "scripts": [
+          "https:\/\/appassets.androidplatform.net\/assets\/index-DElzVqT9.js"
+        ],
+        "visibleVersion": "Version 1.2.0-preview.3",
+        "upgradeMarker": "options-review-preview4-preserved-from-preview3",
+        "cacheMode": 2
+      }
+    }
+  ],
+  "finishedAtEpochMs": 1793723207105,
+  "runtimeExecution": true
+}

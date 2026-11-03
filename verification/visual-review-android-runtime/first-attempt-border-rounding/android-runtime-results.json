@@ -1,0 +1,249 @@
+{
+  "androidRelease": "17",
+  "sdkInt": 37,
+  "supportedAbis": [
+    "arm64-v8a"
+  ],
+  "model": "sdk_gphone64_arm64",
+  "package": "local.jeff.mentalarithmetic",
+  "version": "1.2.0-preview.1",
+  "webViewPackage": "com.google.android.webview",
+  "webViewVersion": "145.0.7632.218",
+  "scenario": "acceptance",
+  "passed": 9,
+  "failed": 1,
+  "error": "java.lang.AssertionError: Error: incorrect cue has black emphasis border Error: incorrect cue has black emphasis border\n    at assert (<anonymous>:1:77)\n    at <anonymous>:9:1\n    at <anonymous>:16:3\n    at <anonymous>:16:83",
+  "cases": [
+    {
+      "name": "offline release shell, presentation and browser security",
+      "status": "passed",
+      "durationMs": 266,
+      "details": {
+        "url": "https:\/\/appassets.androidplatform.net\/index.html",
+        "blockNetworkLoads": true,
+        "allowFileAccess": false,
+        "allowContentAccess": false,
+        "javascript": true,
+        "cacheMode": 2,
+        "nativePaper": -329744,
+        "lightStatusBar": true,
+        "lightNavigationBar": true
+      }
+    },
+    {
+      "name": "prominent learn button label, bounds and native tap",
+      "status": "passed",
+      "durationMs": 290,
+      "details": {
+        "label": "?\n            Click Here to Learn How!",
+        "accessibleLabel": "Click Here to Learn How!",
+        "width": 377.4285888671875,
+        "height": 64,
+        "viewportWidth": 411
+      }
+    },
+    {
+      "name": "four available random lessons, excluded addition lengths and complete instructions",
+      "status": "passed",
+      "durationMs": 16,
+      "details": {
+        "lessonCategories": 4,
+        "excludedLessons": [
+          "addition-1",
+          "addition-3"
+        ],
+        "randomRequestsPerCategory": 4,
+        "completeWalkthroughs": 4,
+        "verticalAdditionCategories": 1
+      }
+    },
+    {
+      "name": "vertical addition instructions, carries and final answers",
+      "status": "passed",
+      "durationMs": 303,
+      "details": {
+        "twoDigit": {
+          "operands": [
+            58,
+            67
+          ],
+          "sum": 125
+        },
+        "allAdditionVertical": true
+      }
+    },
+    {
+      "name": "Inside selects inner digits and Outside selects outer digits",
+      "status": "passed",
+      "durationMs": 555,
+      "details": {
+        "inside": {
+          "operands": [
+            82,
+            76
+          ],
+          "stage": "Inside",
+          "highlightedDigitRefs": [
+            "left:1",
+            "right:0"
+          ],
+          "calculation": "2 × 7",
+          "result": 14
+        },
+        "outside": {
+          "stage": "Outside",
+          "highlightedDigitRefs": [
+            "left:0",
+            "right:1"
+          ],
+          "calculation": "8 × 6",
+          "result": 48,
+          "insidePlusOutside": 62
+        },
+        "finalAnswer": 6232
+      }
+    },
+    {
+      "name": "random two-digit trace, confirmed carries and final answer",
+      "status": "passed",
+      "durationMs": 281,
+      "details": {
+        "randomProduct": 8526,
+        "confirmedProduct": 324,
+        "stages": [
+          "First",
+          "Inside",
+          "Outside",
+          "Last",
+          "Final answer"
+        ]
+      }
+    },
+    {
+      "name": "scholarly Learn palette, shared stage emphasis and explicit carry routes",
+      "status": "passed",
+      "durationMs": 830,
+      "details": {
+        "palette": [
+          {
+            "stage": "First",
+            "color": "rgb(45, 101, 103)",
+            "borderWidth": "1.90476px",
+            "fontFamily": "Arial, Helvetica, sans-serif",
+            "refs": [
+              "left:0",
+              "right:0"
+            ]
+          },
+          {
+            "stage": "Inside",
+            "color": "rgb(108, 84, 131)",
+            "borderWidth": "1.90476px",
+            "fontFamily": "Arial, Helvetica, sans-serif",
+            "refs": [
+              "left:1",
+              "right:0"
+            ]
+          },
+          {
+            "stage": "Outside",
+            "color": "rgb(108, 84, 131)",
+            "borderWidth": "1.90476px",
+            "fontFamily": "Arial, Helvetica, sans-serif",
+            "refs": [
+              "left:0",
+              "right:1"
+            ]
+          },
+          {
+            "stage": "Last",
+            "color": "rgb(125, 87, 35)",
+            "borderWidth": "1.90476px",
+            "fontFamily": "Arial, Helvetica, sans-serif",
+            "refs": [
+              "left:1",
+              "right:1"
+            ]
+          }
+        ],
+        "equalHighlightBorder": "1.90476px",
+        "carries": {
+          "last": {
+            "kind": "out",
+            "from": "Last",
+            "value": "5",
+            "to": "Inside + Outside (127)",
+            "text": "FromLast→Carry out5→ToInside + Outside (127)"
+          },
+          "middle": [
+            {
+              "kind": "in",
+              "from": "Last (56)",
+              "value": "5",
+              "to": "Carry to the middle",
+              "text": "FromLast (56)→Carry in5→ToCarry to the middle"
+            },
+            {
+              "kind": "out",
+              "from": "Carry to the middle",
+              "value": "13",
+              "to": "First (72)",
+              "text": "FromCarry to the middle→Carry out13→ToFirst (72)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "three-digit multiplication groups and whole-value carries",
+      "status": "passed",
+      "durationMs": 290,
+      "details": {
+        "operands": [
+          123,
+          456
+        ],
+        "groupResults": [
+          4,
+          13,
+          28,
+          27,
+          18
+        ],
+        "resolved": [
+          28,
+          30,
+          16,
+          5
+        ],
+        "product": 56088
+      }
+    },
+    {
+      "name": "native numeric keyboard, visible answer and rotation preservation",
+      "status": "passed",
+      "durationMs": 2702,
+      "details": {
+        "answerBottom": 509.0952606201172,
+        "liveBottom": 500.32740020751953,
+        "viewportBottom": 526.09521484375,
+        "viewportHeight": 526.09521484375,
+        "problemId": "1:0",
+        "nativeInputType": 2,
+        "softwareKeyboardVisible": true,
+        "landscapeKeyboardLayout": {
+          "width": 862,
+          "height": 122,
+          "visibleHeight": 121.9047622680664,
+          "answerBottom": 96.03571319580078,
+          "liveBottom": 80.25595474243164,
+          "viewportBottom": 121.9047622680664
+        },
+        "rotationPreservedState": true,
+        "nativeKeyEventRoundScore": "10 \/ 10"
+      }
+    }
+  ],
+  "finishedAtEpochMs": 1793716924820,
+  "runtimeExecution": true
+}

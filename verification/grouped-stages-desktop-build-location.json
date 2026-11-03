@@ -1,0 +1,11 @@
+{
+  "platform": "darwin",
+  "architecture": "arm64",
+  "appPath": "/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-mac-Tk7eEm/mac-arm64/Mental Arithmetic.app",
+  "artifacts": [
+    "/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-grouped-desktop-9h4xmv78/release/Mental-Arithmetic-1.2.0-preview.2-macOS-arm64.dmg",
+    "/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-grouped-desktop-9h4xmv78/release/Mental-Arithmetic-1.2.0-preview.2-macOS-arm64.dmg.blockmap",
+    "/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-grouped-desktop-9h4xmv78/release/Mental-Arithmetic-1.2.0-preview.2-macOS-arm64.zip",
+    "/private/var/folders/1p/9htr4kp1425f4kg3w5jhyp9m0000gn/T/mental-arithmetic-grouped-desktop-9h4xmv78/release/Mental-Arithmetic-1.2.0-preview.2-macOS-arm64.zip.blockmap"
+  ]
+}

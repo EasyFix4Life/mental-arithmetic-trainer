@@ -29,17 +29,20 @@ final class SimulatorReviewRunner {
         do {
             if scenario == "suite" {
                 await record("01 automatic submission, input rejection, score and timing") { try await self.practiceRound() }
-                await record("02 four practice configurations and operation switching") { try await self.practiceConfigurations() }
+                await record("02 three practice configurations and operation switching") { try await self.practiceConfigurations() }
                 await record("03 confirmed 18 × 18 carry sequence") { try self.confirmedEighteen() }
-                await record("04 four available random lesson examples") { try self.randomLessons() }
+                await record("04 two available random lesson examples") { try self.randomLessons() }
                 await record("05 rotation, partial entry, keyboard and timer layout") { try await self.rotation() }
                 await record("06 local privacy policy") { try await self.privacy() }
-                await record("07 three-digit multiplication groups and carries") { try self.threeDigitMultiplication() }
-                await record("08 four available instructional walkthroughs") { try self.instructionalLessons() }
+                await record("07 removed options stay absent") { try self.removedOptions() }
+                await record("08 two available instructional walkthroughs") { try self.instructionalLessons() }
                 await record("09 corrected Inside and Outside for 82 × 76") { try self.correctedCrossProducts() }
+                await record("10 scholarly visual tokens, pairings and monochrome feedback") { try await self.scholarlyVisuals() }
+                await record("11 enlarged text and accessible layout") { try await self.enlargedText() }
+                await record("12 grouped named stages, equal emphasis, logical actions and separate final box") { try self.groupedStages() }
                 resetRoot()
                 try chooseMode(0)
-                try chooseFixedExample(lessonID: "multiplication-3", index: 0)
+                try chooseFixedExample(lessonID: "multiplication-2", index: 0)
                 try press("final-answer")
             } else {
                 resetRoot()
@@ -49,7 +52,7 @@ final class SimulatorReviewRunner {
                 case "review-privacy": try press("privacy-policy")
                 case "review-practice":
                     try choosePracticeOperation(1)
-                    try chooseDigitCount(3)
+                    try chooseDigitCount(2)
                     try press("practice-start")
                     await settle(0.2)
                     try edit(try currentAnswer())
@@ -59,18 +62,54 @@ final class SimulatorReviewRunner {
                     try chooseFixedExample(lessonID: "multiplication-2", index: 1)
                     try press("stage-last")
                     try press("step-next")
-                case "review-learn3":
+                case "review-carry-route":
                     try chooseMode(0)
-                    try chooseFixedExample(lessonID: "multiplication-3", index: 0)
-                    for _ in 0..<2 { try press("step-next") }
-                case "review-addition2":
+                    try chooseFixedExample(lessonID: "multiplication-2", index: 1)
+                    try press("stage-last")
+                    try press("step-next")
+                case "review-carry13":
                     try chooseMode(0)
-                    try chooseFixedExample(lessonID: "addition-2", index: 0)
-                case "review-inside82", "review-outside82":
+                    guard let learn = root.children.compactMap({ $0 as? LearnViewController }).first else { throw Failure("Missing Learn controller") }
+                    try learn.qaSelectGeneratedExample(left: 99, right: 59)
+                    try press("stage-last"); try press("step-next")
+                case "review-practice-wrong":
+                    try chooseDigitCount(2)
+                    try press("practice-start")
+                    await settle(0.2)
+                    let expected = try currentAnswer()
+                    try edit(String(repeating: "0", count: expected.count))
+                case "review-large-practice":
+                    window.traitOverrides.preferredContentSizeCategory = .accessibilityExtraExtraExtraLarge
+                    resetRoot()
+                    try chooseDigitCount(2); try press("practice-start")
+                    await settle(0.2)
+                    let expected = try currentAnswer()
+                    try edit(String(repeating: "0", count: expected.count))
+                case "review-large-middle", "review-large-final":
+                    window.traitOverrides.preferredContentSizeCategory = .accessibilityExtraExtraExtraLarge
+                    resetRoot(); try chooseMode(0)
+                    try chooseFixedExample(lessonID: "multiplication-2", index: 0)
+                    try press(scenario == "review-large-final" ? "final-answer" : "stage-inside")
+                    await settle()
+                    scrollReviewElementToTop(scenario == "review-large-final" ? "stage-last" : "stage-middle-group")
+                case "review-large-type":
+                    window.traitOverrides.preferredContentSizeCategory = .accessibilityExtraExtraExtraLarge
+                    resetRoot()
+                    try chooseMode(0)
+                    try chooseFixedExample(lessonID: "multiplication-2", index: 0)
+                    try press("stage-inside")
+                case "review-learn1":
+                    try chooseMode(0)
+                    try press("lesson-multiplication-1")
+                    try press("lesson-help")
+                case "review-addition-practice":
+                    try choosePracticeOperation(0)
+                case "review-inside82", "review-outside82", "review-first82", "review-last82", "review-final82":
                     try chooseMode(0)
                     guard let learn = root.children.first(where: { $0 is LearnViewController }) as? LearnViewController else { throw Failure("Missing Learn controller") }
                     try learn.qaSelectGeneratedExample(left: 82, right: 76)
-                    try press(scenario == "review-inside82" ? "stage-inside" : "stage-outside")
+                    let targets = ["review-inside82": "stage-inside", "review-outside82": "stage-outside", "review-first82": "stage-first", "review-last82": "stage-last", "review-final82": "final-answer"]
+                    try press(targets[scenario]!)
                 case "review-help":
                     try chooseMode(0)
                     try press("lesson-multiplication-2")
@@ -137,7 +176,7 @@ final class SimulatorReviewRunner {
         let nines = String(repeating: "9", count: secondAnswer.count)
         try edit(nines == secondAnswer ? String(repeating: "0", count: secondAnswer.count) : nines)
         try require(try text("practice-problem") != second, "Incorrect answer immediately advances")
-        try require(try control("previous-time", as: UILabel.self).textColor.isEqual(AppTheme.incorrect), "Incorrect previous time is red")
+        try require(isBlack(try control("previous-time", as: UILabel.self).textColor), "Incorrect previous time is black")
         for _ in 2..<10 {
             await settle(0.12)
             try edit(try currentAnswer())
@@ -163,18 +202,18 @@ final class SimulatorReviewRunner {
         let digits = try control("digit-count-control", as: UISegmentedControl.self)
         try require(digits.numberOfSegments == 1 && digits.titleForSegment(at: 0) == "2"
                     && digits.selectedSegmentIndex == 0, "Addition starts with only two-digit operands")
-        for priorDigits in [1, 3] {
+        for priorDigits in [1, 2] {
             try choosePracticeOperation(1)
-            try require(digits.numberOfSegments == 3
-                        && (0..<3).compactMap { digits.titleForSegment(at: $0) } == ["1", "2", "3"],
-                        "Multiplication retains all three digit choices")
+            try require(digits.numberOfSegments == 2
+                        && (0..<2).compactMap { digits.titleForSegment(at: $0) } == ["1", "2"],
+                        "Multiplication exposes only one and two digits")
             try chooseDigitCount(priorDigits)
             try choosePracticeOperation(0)
             try require(digits.numberOfSegments == 1 && digits.titleForSegment(at: 0) == "2"
                         && digits.selectedSegmentIndex == 0,
                         "Switching multiplication \(priorDigits) to addition selects two digits")
         }
-        for (operation, digitCount) in [(0, 2), (1, 1), (1, 2), (1, 3)] {
+        for (operation, digitCount) in [(0, 2), (1, 1), (1, 2)] {
             resetRoot()
             try choosePracticeOperation(operation)
             try chooseDigitCount(digitCount)
@@ -221,11 +260,11 @@ final class SimulatorReviewRunner {
 
     private func randomLessons() throws {
         try chooseMode(0)
-        try require(try text("lesson-title") == "Two-digit addition", "Learn initially selects two-digit addition")
-        try require(LessonCatalog.lessons.map(\.id) == ["multiplication-1", "addition-2", "multiplication-2", "multiplication-3"],
-                    "Learn contains exactly the four available categories")
-        try require(find("lesson-addition-1") == nil && find("lesson-addition-3") == nil,
-                    "Single- and three-digit addition are absent from Learn")
+        try require(try text("lesson-title") == "Single-digit multiplication", "Learn initially selects its first available lesson")
+        try require(LessonCatalog.lessons.map(\.id) == ["multiplication-1", "multiplication-2"],
+                    "Learn contains exactly single- and two-digit multiplication")
+        try require(find("lesson-addition-1") == nil && find("lesson-addition-2") == nil && find("lesson-addition-3") == nil && find("lesson-multiplication-3") == nil,
+                    "All addition and three-digit multiplication are absent from Learn")
         for lesson in LessonCatalog.lessons {
             try press("lesson-\(lesson.id)")
             try checkLearnHelp()
@@ -257,7 +296,7 @@ final class SimulatorReviewRunner {
 
     private func rotation() async throws {
         try choosePracticeOperation(1)
-        try chooseDigitCount(3)
+        try chooseDigitCount(2)
         try press("practice-start")
         await settle()
         let original = try text("practice-problem")
@@ -281,8 +320,20 @@ final class SimulatorReviewRunner {
         try require(field.isFirstResponder, "Answer retains numeric keyboard focus")
         try require(timerFrame.minX >= fieldFrame.maxX && abs(timerFrame.midY - fieldFrame.midY) <= 35, "Live timer remains beside answer")
         try require(window.bounds.contains(fieldFrame) && window.bounds.contains(timerFrame), "Answer and timer stay inside landscape window")
+        let problem = try control("practice-problem", as: ArithmeticExpressionView.self)
+        let initialMath = problem.convert(problem.bounds, to: window)
+        try require(initialMath.maxY <= fieldFrame.minY + 1, "Landscape mathematics does not overlap answer or live timer")
         try edit(String(answer.dropFirst()))
         try require(try text("practice-problem") != original, "Rotated input still submits correctly")
+        window.traitOverrides.preferredContentSizeCategory = .accessibilityExtraExtraExtraLarge
+        await settle(0.25)
+        let enlargedMath = problem.convert(problem.bounds, to: window)
+        let enlargedField = field.convert(field.bounds, to: window)
+        let previous = try control("previous-time", as: UILabel.self)
+        let enlargedPrevious = previous.convert(previous.bounds, to: window)
+        try require(enlargedMath.maxY <= enlargedField.minY + 1 && enlargedMath.minY >= enlargedPrevious.maxY - 1,
+                    "Landscape enlarged mathematics avoids feedback, answer and timer: math=\(enlargedMath), field=\(enlargedField), previous=\(enlargedPrevious)")
+        window.traitOverrides.preferredContentSizeCategory = .large
         scene.requestGeometryUpdate(.iOS(interfaceOrientations: .portrait))
         await settle(0.5)
     }
@@ -293,14 +344,18 @@ final class SimulatorReviewRunner {
         try require(try text("privacy-policy-text").contains("does not collect personal data"), "Local privacy policy opens without an account or network")
     }
 
-    private func threeDigitMultiplication() throws {
+    private func removedOptions() throws {
         try chooseMode(0)
-        try chooseFixedExample(lessonID: "multiplication-3", index: 0)
-        for (index, value) in ["4", "13", "28", "27", "18", "28", "30", "16", "5"].enumerated() {
-            try require(try text("step-intermediate-result") == value, "123 × 456 screen \(index + 1): \(value)")
-            try press("step-next")
+        try require(try text("lesson-title") == "Single-digit multiplication", "Default Learn lesson is available M1")
+        for id in ["addition-1", "addition-2", "addition-3", "multiplication-3"] {
+            try require(find("lesson-" + id) == nil, "Removed Learn option is absent: \(id)")
         }
-        try require(try text("final-answer-expression") == "123 times 456 equals 56088", "Three-digit final answer is 56088")
+        try chooseMode(1)
+        try choosePracticeOperation(1)
+        let digits = try control("digit-count-control", as: UISegmentedControl.self)
+        try require((0..<digits.numberOfSegments).compactMap { digits.titleForSegment(at: $0) } == ["1", "2"], "Practice has no three-digit multiplication choice")
+        try choosePracticeOperation(0)
+        try require((0..<digits.numberOfSegments).compactMap { digits.titleForSegment(at: $0) } == ["2"], "Two-digit addition remains in Practice")
     }
 
     private func instructionalLessons() throws {
@@ -356,6 +411,201 @@ final class SimulatorReviewRunner {
         try require(try text("step-narration") == "Combine Inside and Outside: 14 + 48 = 62.", "Narration uses the corrected cross-product order")
         try press("final-answer")
         try require((try control("final-answer-expression", as: ArithmeticExpressionView.self)).accessibilityLabel == "82 times 76 equals 6232", "Corrected walkthrough retains final answer 6232")
+    }
+
+    private func isBlack(_ color: UIColor) -> Bool {
+        var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+        return color.getRed(&r, green: &g, blue: &b, alpha: &a) && r == 0 && g == 0 && b == 0 && a == 1
+    }
+    private func isWhite(_ color: UIColor) -> Bool {
+        var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+        return color.getRed(&r, green: &g, blue: &b, alpha: &a) && r == 1 && g == 1 && b == 1 && a == 1
+    }
+
+    private func scholarlyVisuals() async throws {
+        try require(root.view.backgroundColor!.isEqual(VisualTokens.paper), "Exact ivory paper background")
+        try require(VisualTokens.inside.isEqual(VisualTokens.outside), "Inside and Outside share muted violet")
+        try require((try control("practice-start", as: UIButton.self)).configuration?.background.cornerRadius == 4, "Restrained four-point corners")
+        try require(isBlack((try control("practice-start", as: UIButton.self)).configuration?.baseForegroundColor ?? .clear), "Practice controls use black ink")
+        try chooseDigitCount(2)
+        try press("practice-start")
+        await settle(0.2)
+        let expected = try currentAnswer()
+        try edit(String(repeating: "0", count: expected.count))
+        let time = try control("previous-time", as: UILabel.self)
+        let cue = try control("previous-incorrect-cue", as: UILabel.self)
+        try require(isBlack(time.textColor) && isBlack(cue.textColor), "Incorrect feedback is entirely black")
+        try require(time.text?.range(of: #"^[0-9]+\.[0-9]$"#, options: .regularExpression) != nil, "Numeric previous-time content is unchanged")
+        try require(isVisible(cue) && cue.text == "×" && time.superview!.layer.borderWidth == 2, "Incorrect feedback has a visible black cross and emphasized border")
+        try require(isWhite((try control("answer-field", as: UITextField.self)).backgroundColor!), "White answer field")
+        for id in ["previous-time", "live-time"] {
+            let label = try control(id, as: UILabel.self)
+            try require(label.font.fontName.contains("Arial"), "Arial mathematics: \(id)")
+        }
+        try chooseMode(0)
+        guard let learn = root.children.compactMap({ $0 as? LearnViewController }).first else { throw Failure("Missing Learn controller") }
+        try learn.qaSelectGeneratedExample(left: 82, right: 76)
+        for (stage, indices) in [("inside", [1, 5]), ("outside", [0, 6])] {
+            try press("stage-" + stage)
+            let expression = try control("instruction-expression", as: ArithmeticExpressionView.self)
+            let label = descendants(in: expression).compactMap { $0 as? UILabel }.first!
+            for index in indices {
+                let color = label.attributedText?.attribute(.foregroundColor, at: index, effectiveRange: nil) as? UIColor
+                try require(color?.isEqual(VisualTokens.inside) == true, "\(stage) selected digit uses canonical violet")
+            }
+            let connector = try control("pair-connector", as: UIView.self)
+            let stroke = connector.layer.sublayers?.compactMap { $0 as? CAShapeLayer }.first
+            try require(stroke?.path?.boundingBox.width ?? 0 > 20 && stroke?.path?.boundingBox.height ?? 0 >= 10, "\(stage) has a complete static single-pair bracket")
+            try require(stroke?.strokeColor == VisualTokens.inside.cgColor, "\(stage) connector uses the same muted violet")
+            try require((try control("stage-heading", as: UILabel.self)).font.fontName.contains("Baskerville"), "Scholarly serif stage heading")
+            try require(expression.accessibilityLabel!.contains("Selected digits:"), "Pair selection retains accessible descriptions")
+        }
+        try chooseFixedExample(lessonID: "multiplication-2", index: 1)
+        try press("stage-last"); try press("step-next")
+        try require(find("carry-route") != nil, "Carry origin and destination route is present")
+        try require(descendants(in: window).compactMap { $0 as? UILabel }.contains { $0.accessibilityIdentifier == "carry-route-value" && $0.text?.contains("6") == true }, "Whole incoming carry value is visible")
+        try require(find("step-result-digits") is DevelopingAnswerLabel, "Developing answer uses aligned Arial slots")
+        try press("step-next")
+        try require(find("pair-connector") == nil, "Carry completion does not imply multiplying the earlier digit pair again")
+        try learn.qaSelectGeneratedExample(left: 99, right: 59)
+        try press("stage-last"); try press("step-next")
+        try require(try text("carry-out") == "13", "Authored multi-digit carry is thirteen")
+        try require(descendants(in: window).compactMap { $0 as? UILabel }.contains { $0.accessibilityIdentifier == "carry-route-value" && $0.text?.contains("13") == true }, "Carry route preserves the whole two-digit carry thirteen")
+    }
+
+    private func scrollReviewElementToTop(_ identifier: String) {
+        guard let target = find(identifier) else { return }
+        var ancestor = target.superview
+        while let view = ancestor {
+            if let scroll = view as? UIScrollView {
+                let position = target.convert(target.bounds, to: scroll).minY - 12
+                let maximum = max(0, scroll.contentSize.height - scroll.bounds.height + scroll.adjustedContentInset.bottom)
+                scroll.setContentOffset(CGPoint(x: 0, y: min(max(0, position), maximum)), animated: false)
+                return
+            }
+            ancestor = view.superview
+        }
+    }
+
+    private func logicalStageIDs(_ view: UIView) -> [String] {
+        if view is UIButton { return view.accessibilityIdentifier.map { [$0] } ?? [] }
+        let children = view.accessibilityElements as? [UIView] ?? view.subviews
+        return children.flatMap { logicalStageIDs($0) }
+    }
+
+    private func assertGroupedStages(answer: String) throws {
+        let product = try control("stage-product-group", as: UIStackView.self)
+        let middle = try control("stage-middle-group", as: UIStackView.self)
+        let plus = try control("stage-middle-plus", as: UILabel.self)
+        let equals = try control("stage-equals", as: UILabel.self)
+        let final = try control("final-answer", as: UIButton.self)
+        try require(middle.isDescendant(of: product), "Middle section remains inside the outer stage enclosure")
+        try require(plus.text == "+" && plus.isDescendant(of: middle), "The middle visibly joins Inside and Outside with plus")
+        for glyph in [plus, equals] {
+            let width = ((glyph.text ?? "") as NSString).size(withAttributes: [.font: glyph.font!]).width
+            try require(glyph.bounds.width >= width - 1, "Plus and equals glyphs remain fully visible")
+        }
+        let middleButtons = descendants(in: middle).compactMap { $0 as? UIButton }
+        try require(middleButtons.map(\.accessibilityIdentifier) == ["stage-inside", "stage-outside"], "Inside and Outside remain two distinct middle buttons")
+        try require(!final.isDescendant(of: product) && !equals.isDescendant(of: product) && equals.text == "=", "Equals and Final Answer are outside the stage enclosure")
+        try require(!product.isAccessibilityElement && !middle.isAccessibilityElement, "Semantic grouping does not collapse interactive stage buttons")
+        let group = try control("multiplication-stage-group", as: UIStackView.self)
+        try require(logicalStageIDs(group) == ["stage-first", "stage-inside", "stage-outside", "stage-last", "final-answer"], "Logical accessible action order is First Inside Outside Last Final Answer")
+        var faces = [UIFont]()
+        var insets = [NSDirectionalEdgeInsets]()
+        for stage in MultiplicationStage.allCases {
+            let button = try control("stage-" + stage.rawValue.lowercased(), as: UIButton.self)
+            try require(button.isDescendant(of: product), "\(stage.rawValue) remains inside the stage enclosure")
+            try require(button.layer.borderWidth == 2, "\(stage.rawValue) has an equal two-point border")
+            try require(button.backgroundColor?.isEqual(AppTheme.stageFill(for: stage)) == true, "\(stage.rawValue) uses its light matching fill")
+            guard let label = button.titleLabel else { throw Failure("Missing stage title") }
+            let face = label.attributedText?.attribute(.font, at: 0, effectiveRange: nil) as? UIFont ?? label.font!
+            faces.append(face); insets.append(button.configuration!.contentInsets)
+            try require((label.attributedText?.size().width ?? label.intrinsicContentSize.width) <= label.bounds.width + 1, "\(stage.rawValue) remains a whole readable word")
+            try require(face.fontName.contains("Baskerville") && face.fontName.contains("Bold"), "\(stage.rawValue) is bold scholarly text")
+            try require(button.bounds.height >= 44, "\(stage.rawValue) preserves its minimum target")
+        }
+        try require(faces.allSatisfy { $0.fontName == faces[0].fontName && abs($0.pointSize - faces[0].pointSize) < 0.1 }, "All four boxes share font and size in every selection state")
+        try require(insets.allSatisfy { $0 == insets[0] }, "All four boxes share padding")
+        try require(final.accessibilityLabel == "Final Answer: " + answer, "Final Answer caption uses the requested casing and result")
+        if let styled = final.titleLabel?.attributedText {
+            let range = (styled.string as NSString).range(of: answer, options: .backwards)
+            try require(range.location != NSNotFound, "Final box displays the result digits")
+            let face = styled.attribute(.font, at: range.location, effectiveRange: nil) as? UIFont
+            try require(face?.fontName.contains("Arial") == true, "Final box result digits use Arial")
+        } else { throw Failure("Missing styled Final Answer caption") }
+        for id in ["stage-connection-first", "stage-connection-last"] {
+            let arrow = try control(id, as: UILabel.self)
+            try require(arrow.text == "&" && arrow.transform.isIdentity && !arrow.isAccessibilityElement, "Literal upright ampersands visually connect the stages")
+        }
+    }
+
+    private func groupedStages() throws {
+        try chooseMode(0)
+        guard let learn = root.children.compactMap({ $0 as? LearnViewController }).first else { throw Failure("Missing Learn controller") }
+        try learn.qaSelectGeneratedExample(left: 82, right: 76)
+        for stage in MultiplicationStage.allCases {
+            try press("stage-" + stage.rawValue.lowercased())
+            try require(try text("stage-heading") == stage.rawValue, "Direct stage selection remains: \(stage.rawValue)")
+            try assertGroupedStages(answer: "6232")
+        }
+        try press("final-answer")
+        try require(try text("final-answer-expression") == "82 times 76 equals 6232", "Separate final box opens the existing final answer directly")
+        try assertGroupedStages(answer: "6232")
+        try press("step-back")
+        try require(find("step-intermediate-result") != nil, "Back from Final Answer returns to the existing last instruction screen")
+        try press("step-next")
+        try require(find("final-answer-expression") != nil, "Next still reaches the final answer after the last instruction")
+        for id in ["multiplication-1"] {
+            try press("lesson-" + id); try press("lesson-help")
+            try require(find("stage-product-group") == nil, "Numbered lesson keeps generic navigation: \(id)")
+        }
+    }
+
+    private func enlargedText() async throws {
+        window.traitOverrides.preferredContentSizeCategory = .accessibilityExtraExtraExtraLarge
+        defer { window.traitOverrides.preferredContentSizeCategory = .large; resetRoot() }
+        resetRoot()
+        try chooseMode(0)
+        try chooseFixedExample(lessonID: "multiplication-2", index: 0)
+        try press("stage-inside")
+        await settle()
+        let heading = try control("stage-heading", as: UILabel.self)
+        try require(heading.font.pointSize > 22, "Dynamic Type scales explanatory headings")
+        let expression = try control("instruction-expression", as: ArithmeticExpressionView.self)
+        try require(expression.bounds.width <= window.bounds.width && expression.bounds.width > 0, "Enlarged equation remains within the viewport width")
+        for name in ["inside", "outside", "first", "last"] {
+            let button = try control("stage-" + name, as: UIButton.self)
+            try require(button.bounds.width > 100 && button.bounds.height >= 44, "Accessible stage target remains usable: \(name)")
+            let label = button.titleLabel!
+            try require(label.intrinsicContentSize.height <= button.bounds.height + 1, "Enlarged stage text is not clipped: \(name)")
+        }
+        let walkthroughHeading = try control("walkthrough-heading", as: UILabel.self)
+        let longestHeading = ("Instructional" as NSString).size(withAttributes: [.font: walkthroughHeading.font!]).width
+        try require(longestHeading <= walkthroughHeading.bounds.width + 1, "Largest-text walkthrough heading preserves whole words")
+        try assertGroupedStages(answer: "144")
+        let middle = try control("stage-middle-group", as: UIStackView.self)
+        try require(middle.axis == .vertical, "Enlarged middle pair stacks inside the same outline")
+        let final = try control("final-answer", as: UIButton.self)
+        let needed = final.titleLabel!.sizeThatFits(CGSize(width: final.titleLabel!.bounds.width, height: .greatestFiniteMagnitude))
+        try require(final.titleLabel!.bounds.height >= needed.height - 1, "Enlarged Final Answer caption wraps without clipping")
+        resetRoot()
+        try chooseDigitCount(2); try press("practice-start")
+        await settle(0.2)
+        let expected = try currentAnswer()
+        try edit(String(repeating: "0", count: expected.count))
+        await settle()
+        let problem = try control("practice-problem", as: ArithmeticExpressionView.self)
+        let answer = try control("answer-field", as: UITextField.self)
+        let live = try control("live-time", as: UILabel.self)
+        let previous = try control("previous-time", as: UILabel.self)
+        let mathRect = problem.convert(problem.bounds, to: window)
+        let answerRect = answer.convert(answer.bounds, to: window)
+        let liveRect = live.convert(live.bounds, to: window)
+        let previousRect = previous.convert(previous.bounds, to: window)
+        try require(mathRect.maxY <= answerRect.minY + 1 && mathRect.minY >= previousRect.maxY - 1, "Enlarged Practice mathematics stays between previous feedback and answer entry: math=\(mathRect), answer=\(answerRect), previous=\(previousRect), base=\(problem.fontSize), traits=\(problem.traitCollection.preferredContentSizeCategory.rawValue), windowTraits=\(window.traitCollection.preferredContentSizeCategory.rawValue), font72=\(AppTheme.mathFont(72, compatibleWith: window.traitCollection).pointSize)")
+        try require(answerRect.minX >= 0 && liveRect.maxX <= window.bounds.width + 1, "Enlarged answer and live timer stay within viewport")
+        try require(answer.font!.fontName.contains("Arial") && isBlack(previous.textColor), "Enlarged Practice retains Arial and black feedback")
     }
 
     private func chooseMode(_ index: Int) throws {
@@ -464,6 +714,7 @@ final class SimulatorReviewRunner {
             "systemVersion": UIDevice.current.systemVersion,
             "timestamp": ISO8601DateFormatter().string(from: Date()),
             "version": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") ?? "unknown",
+            "build": Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") ?? "unknown",
             "window": ["width": window.bounds.width, "height": window.bounds.height],
             "limitations": ["Control actions and UITextFieldDelegate integration, not physical keyboard input or external XCUITest automation", "DEBUG-only fixture selection for individually specified worked examples", "No App Store distribution signature or physical-device test implied"]
         ]

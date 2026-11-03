@@ -102,6 +102,7 @@ export function renderInstructionStep(
   const section = document.createElement('section');
   section.className = 'instruction-step';
   section.dataset.stepId = step.id;
+  if (step.stageName !== undefined) section.dataset.stageTone = step.stageName.toLowerCase();
   if (step.stageName !== undefined) {
     const title = document.createElement('h3');
     title.textContent = step.stageName;
@@ -118,7 +119,21 @@ export function renderInstructionStep(
     heading.textContent = step.navigationLabel;
     section.append(heading);
   }
-  section.append(renderHorizontalExpression(example, digitCount, operation, step.highlightedDigitRefs));
+  const expression = renderHorizontalExpression(example, digitCount, operation, step.highlightedDigitRefs);
+  if (example && connectsAuthoredPair(step, example)) {
+    const diagram = document.createElement('div');
+    diagram.className = 'pairing-diagram';
+    diagram.classList.toggle('pairing-stacked', operation === 'addition');
+    const connector = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    connector.classList.add('digit-pairing-connector');
+    connector.setAttribute('aria-hidden', 'true');
+    connector.setAttribute('focusable', 'false');
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('vector-effect', 'non-scaling-stroke');
+    connector.append(path);
+    diagram.append(expression, connector);
+    section.append(diagram);
+  } else section.append(expression);
 
   if (step.highlightedDigitRefs === null) {
     const pending = document.createElement('p');
@@ -148,13 +163,65 @@ export function renderInstructionStep(
     const entry = document.createElement('dd');
     entry.className = className;
     if (className === 'step-operation') renderCalculation(entry, step);
-    else entry.textContent = value;
+    else if (className === 'step-result-digits') {
+      entry.setAttribute('role', 'img');
+      entry.setAttribute('aria-label', value);
+      for (const character of value) {
+        const digit = document.createElement('span');
+        digit.className = character === '□' ? 'result-digit result-pending' : 'result-digit';
+        digit.textContent = character;
+        digit.setAttribute('aria-hidden', 'true');
+        entry.append(digit);
+      }
+    } else entry.textContent = value;
     details.append(name, entry);
   }
   if (details.childElementCount > 0) section.append(details);
   const carry = renderCarry(step);
   if (carry !== null) section.append(carry);
   return section;
+}
+
+/** A connector requires exactly one existing pair and its displayed operation.
+ * Carry sums and multi-product groups keep their authored highlights only. */
+function connectsAuthoredPair(step: InstructionStep, example: WorkedExample): boolean {
+  if (step.carryIn !== undefined || step.highlightedDigitRefs?.length !== 2) return false;
+  const left = step.highlightedDigitRefs.find(ref => ref.startsWith('left:'));
+  const right = step.highlightedDigitRefs.find(ref => ref.startsWith('right:'));
+  if (!left || !right) return false;
+  const first = example.operands[0][Number(left.split(':')[1])];
+  const second = example.operands[1][Number(right.split(':')[1])];
+  if (first === undefined || second === undefined) return false;
+  const calculation = step.operationDisplay?.split(';')[0]?.split('=')[0]?.trim();
+  return calculation === `${first} ${example.operation === 'addition' ? '+' : '×'} ${second}`;
+}
+
+/** Geometry follows only the references selected by connectsAuthoredPair. */
+export function updatePairingConnectors(root: HTMLElement): void {
+  for (const diagram of root.querySelectorAll<HTMLElement>('.pairing-diagram')) {
+    const svg = diagram.querySelector<SVGSVGElement>('svg');
+    const path = svg?.querySelector('path');
+    const expression = diagram.querySelector<HTMLElement>('.learn-expression');
+    const selected = [...diagram.querySelectorAll<HTMLElement>('.digit-highlight')];
+    if (!svg || !path || !expression || selected.length < 2) continue;
+    const box = diagram.getBoundingClientRect();
+    if (!box.width || !box.height) continue;
+    svg.setAttribute('viewBox', `0 0 ${box.width} ${box.height}`);
+    const positions = selected.map(digit => digit.getBoundingClientRect());
+    if (diagram.classList.contains('pairing-stacked')) {
+      const x = expression.getBoundingClientRect().right - box.left + 5;
+      const top = Math.min(...positions.map(p => p.top + p.height / 2)) - box.top;
+      const bottom = Math.max(...positions.map(p => p.top + p.height / 2)) - box.top;
+      path.setAttribute('d', `M ${x} ${top} H ${x + 9} V ${bottom} H ${x}`);
+      svg.dataset.pairingKind = 'stacked';
+    } else {
+      const left = Math.min(...positions.map(p => p.left + p.width / 2)) - box.left;
+      const right = Math.max(...positions.map(p => p.left + p.width / 2)) - box.left;
+      const top = expression.getBoundingClientRect().bottom - box.top + 2;
+      path.setAttribute('d', `M ${left} ${top} V ${top + 8} H ${right} V ${top}`);
+      svg.dataset.pairingKind = selected.length === 2 ? 'pair' : 'group';
+    }
+  }
 }
 
 /** Sum terms are stacked, including carry sums within a multiplication trace. */

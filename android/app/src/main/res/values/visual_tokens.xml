@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generated from design/visual-tokens.json. Run npm run design:tokens. -->
+<resources>
+    <color name="visual_paper">#FAF7F0</color>
+    <color name="visual_ink">#000000</color>
+    <color name="visual_field">#FFFFFF</color>
+</resources>

@@ -1,0 +1,76 @@
+{
+  "version": "1.2.0-preview.2",
+  "reviewedAt": "2026-11-03T15:24:12.997Z",
+  "assets": [
+    "./assets/index-DxIERzM0.js",
+    "./assets/index-1mzuqHi8.css"
+  ],
+  "buttons": [
+    {
+      "color": "rgb(18, 108, 112)",
+      "current": null,
+      "fill": "rgb(226, 241, 239)",
+      "stroke": "2px",
+      "text": "First",
+      "weight": "700"
+    },
+    {
+      "color": "rgb(117, 80, 147)",
+      "current": "step",
+      "fill": "rgb(238, 229, 244)",
+      "stroke": "2px",
+      "text": "Inside",
+      "weight": "700"
+    },
+    {
+      "color": "rgb(117, 80, 147)",
+      "current": null,
+      "fill": "rgb(238, 229, 244)",
+      "stroke": "2px",
+      "text": "Outside",
+      "weight": "700"
+    },
+    {
+      "color": "rgb(136, 90, 21)",
+      "current": null,
+      "fill": "rgb(246, 236, 216)",
+      "stroke": "2px",
+      "text": "Last",
+      "weight": "700"
+    },
+    {
+      "color": "rgb(0, 0, 0)",
+      "current": null,
+      "fill": "rgb(255, 255, 255)",
+      "stroke": "2px",
+      "text": "Final Answer: 324",
+      "weight": "700"
+    }
+  ],
+  "equals": "=",
+  "finalOutsideProduct": true,
+  "middleButtons": [
+    "Inside",
+    "Outside"
+  ],
+  "middleLabel": "Middle contribution: Inside plus Outside",
+  "paper": "rgb(250, 247, 240)",
+  "plus": "+",
+  "sequence": "First→Inside+Outside→Last=Final Answer: 324",
+  "title": "Mental Arithmetic Trainer",
+  "url": "http://127.0.0.1:5198/",
+  "manualActionsVerified": [
+    "Inside selects units × tens",
+    "Outside selects tens × units",
+    "Last Next shows carry 6 into16 and carry2 intoFirst",
+    "Final Answer shows324 at7/7",
+    "Back returns complete-the-answer at6/7"
+  ],
+  "screenshot": "grouped-stages-final-web-learn.jpeg",
+  "publicationPerformed": false,
+  "backgroundSurfaces": {
+    "body": "rgba(0, 0, 0, 0)",
+    "html": "rgb(250, 247, 240)",
+    "token": "#faf7f0"
+  }
+}

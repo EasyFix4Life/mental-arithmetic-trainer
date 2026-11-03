@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="sepia">#E8D7B5</color>
-    <color name="ink">#241E16</color>
+    <!-- Native accent resolves to the shared monochrome ink token. -->
+    <color name="ink">@color/visual_ink</color>
 </resources>

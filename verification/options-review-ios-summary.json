@@ -1,0 +1,159 @@
+{
+  "reviewEdition": "1.2.0-preview.4",
+  "nativeVersion": "1.2.0",
+  "build": "9",
+  "date": "2026-11-03",
+  "status": "local-availability-preview-not-published",
+  "baseline": {
+    "preview": "1.2.0-preview.3",
+    "commit": "e54135d691f37dfce8e38c60e59f0fd3d9525007",
+    "wholeFilesUnchanged": 11,
+    "compatibilityReport": "verification/options-review-ios-compatibility.json",
+    "preserved": "Arithmetic and instruction bodies are exact outside intended PracticeSettings/LessonCatalog availability blocks; historical catalog fixture array remains exact; eleven whole UI/core files unchanged"
+  },
+  "availability": {
+    "learn": [
+      "multiplication-1",
+      "multiplication-2"
+    ],
+    "learnDefault": "multiplication-1",
+    "practice": [
+      "addition-2",
+      "multiplication-1",
+      "multiplication-2"
+    ],
+    "practiceDefault": "addition-2",
+    "removedFromLearn": [
+      "addition-1",
+      "addition-2",
+      "addition-3",
+      "multiplication-3"
+    ],
+    "removedFromPractice": [
+      "addition-1",
+      "addition-3",
+      "multiplication-3"
+    ],
+    "invalidStaleSelection": "Selected operation first allowed choice: A2 or M1; valid selections retained",
+    "historicalEngineAndFixtures": "Three-digit arithmetic and original four-entry lesson data remain in source separately from visible app choices"
+  },
+  "toolchain": {
+    "application": "/Applications/Xcode-beta.app",
+    "version": "Xcode27.0 beta",
+    "build": "27A5228h"
+  },
+  "coreTests": {
+    "passed": 38,
+    "failed": 0,
+    "report": "verification/options-review-ios-core-tests.txt",
+    "coverage": "Separate Learn/Practice availability and defaults, invalid stale three-digit selection normalization, retained historical three-digit generators, supplied arithmetic, input/timing/scoring and corrected digit mapping"
+  },
+  "builds": {
+    "releaseSimulator": "passed",
+    "unsignedDeviceArchive": "passed",
+    "debugUnitAndUITestTargets": "build-for-testing passed; test service execution not claimed"
+  },
+  "actualPackagedReleaseAudits": {
+    "iphone": {
+      "version": "1.2.0",
+      "build": "9",
+      "passedChecks": 552,
+      "binaryUnchanged": true,
+      "report": "verification/options-review-ios-iphone-release.json"
+    },
+    "ipad": {
+      "version": "1.2.0",
+      "build": "9",
+      "passedChecks": 552,
+      "binaryUnchanged": true,
+      "report": "verification/options-review-ios-ipad-release.json"
+    }
+  },
+  "auditMethod": "Separate simulator-only external dylib drives final ZIP-extracted Release UIKit controls and text-field delegates. Delivered and installed executable hashes match; external library is not shipped.",
+  "currentCoverage": [
+    "Exactly M1/M2 in Learn, default M1, with no addition or M3 Learn controls",
+    "Practice offers A2 and M1/M2 only; operation switching normalizes the selected digit count",
+    "Forty automatic Practice answers: normal A2 round 9/10 with partial-entry, Return, unique-pair, operand-range and timing checks; M1/M2 rounds 10/10; largest-text A2 round 9/10",
+    "Random examples and correct final answers for both available lessons",
+    "Corrected Inside/Outside highlights, calculation and narration, with complete pair brackets",
+    "Direct named-stage/final actions, Next/Back and existing carry progression",
+    "Exactly two header ampersands; whole words; containment, equal styles, accessible order and Arial final digits",
+    "Largest accessibility stage wrapping and Practice problem/input/timer/feedback geometry",
+    "Privacy displays version 1.2.0 build 9"
+  ],
+  "releaseBinaries": [
+    {
+      "kind": "simulator",
+      "version": "1.2.0",
+      "build": "9",
+      "minimumOS": "17.0",
+      "families": [
+        1,
+        2
+      ],
+      "architectures": "Architectures in the fat file: /tmp/mental-arithmetic-ios-options-review/packaged-release/MentalArithmetic.app/MentalArithmetic are: x86_64 arm64",
+      "debugHarnessAbsent": true,
+      "externalAuditLibraryAbsent": true,
+      "oldRemovedAdditionTitlesAbsent": true,
+      "signatureDirectoryPresent": false
+    },
+    {
+      "kind": "device",
+      "version": "1.2.0",
+      "build": "9",
+      "minimumOS": "17.0",
+      "families": [
+        1,
+        2
+      ],
+      "architectures": "Non-fat file: /tmp/mental-arithmetic-ios-options-review/Mental-Arithmetic-1.2.0-preview.4-iOS-unsigned.xcarchive/Products/Applications/MentalArithmetic.app/MentalArithmetic is architecture: arm64",
+      "debugHarnessAbsent": true,
+      "externalAuditLibraryAbsent": true,
+      "oldRemovedAdditionTitlesAbsent": true,
+      "signatureDirectoryPresent": false
+    }
+  ],
+  "sourceFilesVerifiedAgainstMirror": 30,
+  "sourceManifest": "verification/options-review-ios-native-sources.json",
+  "screenshots": {
+    "raw": 18,
+    "opaqueReviewCopies": 18,
+    "directories": [
+      "ios/AppStore/Screenshots/1.2.0-preview.4-iPhone-27-beta",
+      "ios/AppStore/Screenshots/1.2.0-preview.4-iPad-26.5"
+    ],
+    "validation": "Actual native captures; PNG CRCs/decompression/dimensions valid; every RGB sample preserved while removing unused opaque alpha; no redraw/resize. Catalog, A2/M1M2 setup, A2score/timing and retainedLearn/AXvisuallyreviewed. Earlier galleries preserved."
+  },
+  "submissionFiles": 51,
+  "artifacts": [
+    {
+      "file": "Mental-Arithmetic-1.2.0-preview.4-iOS-Simulator-app.zip",
+      "bytes": 408577,
+      "sha256": "731d0d4a4ca98edae38224d32ff45c8a0246f6db4e120c9432cd008a4c45d67f",
+      "copiesIdentical": true
+    },
+    {
+      "file": "Mental-Arithmetic-1.2.0-preview.4-iOS-unsigned-archive.zip",
+      "bytes": 937077,
+      "sha256": "d5d24dda5f76a11da2efe2a63600dc96ae1ebc64864076ba7f3e710f6d02a031",
+      "copiesIdentical": true
+    },
+    {
+      "file": "Mental-Arithmetic-1.2.0-preview.4-iOS-submission-files.zip",
+      "bytes": 5105976,
+      "sha256": "4e3d27e6d8a89b6c05ef0c20fa068fb074bc6726813a6130393c58850ead3cf0",
+      "copiesIdentical": true
+    }
+  ],
+  "simulatorCleanup": {
+    "verifiedShutdown": 2,
+    "taskOwnedOnly": true,
+    "report": "verification/options-review-ios-simulator-cleanup.json"
+  },
+  "limitations": [
+    "UIKit control actions and text-field delegates are not physical input, external XCUITest or manual VoiceOver automation.",
+    "The 38 portable core tests and full current Release audit executed. Updated Debug/test targets compile; no new DEBUG suite, external XCUITest, rotation or physical-device execution is claimed.",
+    "Device archive is unsigned, not an installable IPA. No App Store/TestFlight upload, production deployment or GitHub release publication occurred."
+  ],
+  "allChecksPassed": true
+}

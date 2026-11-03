@@ -1,0 +1,372 @@
+{
+  "androidRelease": "17",
+  "sdkInt": 37,
+  "supportedAbis": [
+    "arm64-v8a"
+  ],
+  "model": "sdk_gphone64_arm64",
+  "package": "local.jeff.mentalarithmetic",
+  "version": "1.2.0-preview.2",
+  "webViewPackage": "com.google.android.webview",
+  "webViewVersion": "145.0.7632.218",
+  "scenario": "acceptance",
+  "passed": 7,
+  "failed": 1,
+  "error": "java.lang.AssertionError: Error: units carry names its source and destination Error: units carry names its source and destination\n    at assert (<anonymous>:1:77)\n    at <anonymous>:4:1\n    at <anonymous>:13:3\n    at <anonymous>:13:83",
+  "cases": [
+    {
+      "name": "offline release shell, presentation and browser security",
+      "status": "passed",
+      "durationMs": 280,
+      "details": {
+        "url": "https:\/\/appassets.androidplatform.net\/index.html",
+        "blockNetworkLoads": true,
+        "allowFileAccess": false,
+        "allowContentAccess": false,
+        "javascript": true,
+        "cacheMode": 2,
+        "nativePaper": -329744,
+        "lightStatusBar": true,
+        "lightNavigationBar": true
+      }
+    },
+    {
+      "name": "prominent learn button label, bounds and native tap",
+      "status": "passed",
+      "durationMs": 288,
+      "details": {
+        "label": "?\n            Click Here to Learn How!",
+        "accessibleLabel": "Click Here to Learn How!",
+        "width": 377.4285888671875,
+        "height": 64,
+        "viewportWidth": 411
+      }
+    },
+    {
+      "name": "four available random lessons, excluded addition lengths and complete instructions",
+      "status": "passed",
+      "durationMs": 14,
+      "details": {
+        "lessonCategories": 4,
+        "excludedLessons": [
+          "addition-1",
+          "addition-3"
+        ],
+        "randomRequestsPerCategory": 4,
+        "completeWalkthroughs": 4,
+        "verticalAdditionCategories": 1
+      }
+    },
+    {
+      "name": "vertical addition instructions, carries and final answers",
+      "status": "passed",
+      "durationMs": 265,
+      "details": {
+        "twoDigit": {
+          "operands": [
+            58,
+            67
+          ],
+          "sum": 125
+        },
+        "allAdditionVertical": true
+      }
+    },
+    {
+      "name": "Inside selects inner digits and Outside selects outer digits",
+      "status": "passed",
+      "durationMs": 529,
+      "details": {
+        "inside": {
+          "operands": [
+            82,
+            76
+          ],
+          "stage": "Inside",
+          "highlightedDigitRefs": [
+            "left:1",
+            "right:0"
+          ],
+          "calculation": "2 × 7",
+          "result": 14
+        },
+        "outside": {
+          "stage": "Outside",
+          "highlightedDigitRefs": [
+            "left:0",
+            "right:1"
+          ],
+          "calculation": "8 × 6",
+          "result": 48,
+          "insidePlusOutside": 62
+        },
+        "finalAnswer": 6232
+      }
+    },
+    {
+      "name": "random two-digit trace, confirmed carries and final answer",
+      "status": "passed",
+      "durationMs": 266,
+      "details": {
+        "randomProduct": 8526,
+        "confirmedProduct": 324,
+        "stages": [
+          "First",
+          "Inside",
+          "Outside",
+          "Last",
+          "Final Answer"
+        ]
+      }
+    },
+    {
+      "name": "grouped First middle Last expression, equal filled stages and separate Final Answer",
+      "status": "passed",
+      "durationMs": 761,
+      "details": {
+        "order": [
+          "First",
+          "Inside",
+          "Outside",
+          "Last",
+          "Final Answer"
+        ],
+        "initialStyles": [
+          {
+            "name": "First",
+            "color": "rgb(18, 108, 112)",
+            "fill": "rgb(226, 241, 239)",
+            "fontWeight": "700",
+            "borderWidth": "1.90476px"
+          },
+          {
+            "name": "Inside",
+            "color": "rgb(117, 80, 147)",
+            "fill": "rgb(238, 229, 244)",
+            "fontWeight": "700",
+            "borderWidth": "1.90476px"
+          },
+          {
+            "name": "Outside",
+            "color": "rgb(117, 80, 147)",
+            "fill": "rgb(238, 229, 244)",
+            "fontWeight": "700",
+            "borderWidth": "1.90476px"
+          },
+          {
+            "name": "Last",
+            "color": "rgb(136, 90, 21)",
+            "fill": "rgb(246, 236, 216)",
+            "fontWeight": "700",
+            "borderWidth": "1.90476px"
+          }
+        ],
+        "selectedStyles": [
+          {
+            "name": "First",
+            "color": "rgb(18, 108, 112)",
+            "fill": "rgb(226, 241, 239)",
+            "fontWeight": "700",
+            "borderWidth": "1.90476px"
+          },
+          {
+            "name": "Inside",
+            "color": "rgb(117, 80, 147)",
+            "fill": "rgb(238, 229, 244)",
+            "fontWeight": "700",
+            "borderWidth": "1.90476px"
+          },
+          {
+            "name": "Outside",
+            "color": "rgb(117, 80, 147)",
+            "fill": "rgb(238, 229, 244)",
+            "fontWeight": "700",
+            "borderWidth": "1.90476px"
+          },
+          {
+            "name": "Last",
+            "color": "rgb(136, 90, 21)",
+            "fill": "rgb(246, 236, 216)",
+            "fontWeight": "700",
+            "borderWidth": "1.90476px"
+          }
+        ],
+        "grouping": "[First → [Inside + Outside] → Last] = [Final Answer: 8526]",
+        "portrait": {
+          "width": 411,
+          "height": 838,
+          "bounds": {
+            "#stage-sequence": {
+              "x": 17,
+              "y": -0.065476194024086,
+              "width": 377.4285888671875,
+              "height": 282.952392578125,
+              "top": -0.065476194024086,
+              "right": 394.4285888671875,
+              "bottom": 282.8869163841009,
+              "left": 17
+            },
+            "#stage-product-group": {
+              "x": 17,
+              "y": -0.065476194024086,
+              "width": 213.59524536132812,
+              "height": 229.84524536132812,
+              "top": -0.065476194024086,
+              "right": 230.59524536132812,
+              "bottom": 229.77976916730404,
+              "left": 17
+            },
+            "#stage-middle-group": {
+              "x": 23.154762268066406,
+              "y": 86.39881134033203,
+              "width": 201.2857208251953,
+              "height": 56.91666793823242,
+              "top": 86.39881134033203,
+              "right": 224.44048309326172,
+              "bottom": 143.31547927856445,
+              "left": 23.154762268066406
+            },
+            "#stage-middle-plus": {
+              "x": 111.76786041259766,
+              "y": 105.50595092773438,
+              "width": 10.6130952835083,
+              "height": 18.702381134033203,
+              "top": 105.50595092773438,
+              "right": 122.38095569610596,
+              "bottom": 124.20833206176758,
+              "left": 111.76786041259766
+            },
+            "#stage-connection-first": {
+              "x": 114.44345092773438,
+              "y": 59.199405670166016,
+              "width": 18.702381134033203,
+              "height": 18.696428298950195,
+              "top": 59.199405670166016,
+              "right": 133.14583206176758,
+              "bottom": 77.89583396911621,
+              "left": 114.44345092773438
+            },
+            "#stage-connection-last": {
+              "x": 114.44345092773438,
+              "y": 151.81845092773438,
+              "width": 18.702381134033203,
+              "height": 18.696428298950195,
+              "top": 151.81845092773438,
+              "right": 133.14583206176758,
+              "bottom": 170.51487922668457,
+              "left": 114.44345092773438
+            },
+            "#stage-equals": {
+              "x": 17,
+              "y": 251.23214721679688,
+              "width": 10.2619047164917,
+              "height": 18.702381134033203,
+              "top": 251.23214721679688,
+              "right": 27.2619047164917,
+              "bottom": 269.9345283508301,
+              "left": 17
+            },
+            "#final-answer": {
+              "x": 35.761905670166016,
+              "y": 238.27976989746094,
+              "width": 191.90476989746094,
+              "height": 44.60714340209961,
+              "top": 238.27976989746094,
+              "right": 227.66667556762695,
+              "bottom": 282.88691329956055,
+              "left": 35.761905670166016
+            }
+          }
+        },
+        "landscape": {
+          "width": 862,
+          "height": 359,
+          "bounds": {
+            "#stage-sequence": {
+              "x": 25.869047164916992,
+              "y": 0.1190476194024086,
+              "width": 810.7380981445312,
+              "height": 69.22618865966797,
+              "top": 0.1190476194024086,
+              "right": 836.6071453094482,
+              "bottom": 69.34523627907038,
+              "left": 25.869047164916992
+            },
+            "#stage-product-group": {
+              "x": 25.869047164916992,
+              "y": 0.1190476194024086,
+              "width": 403.66668701171875,
+              "height": 69.22618865966797,
+              "top": 0.1190476194024086,
+              "right": 429.53573417663574,
+              "bottom": 69.34523627907038,
+              "left": 25.869047164916992
+            },
+            "#stage-middle-group": {
+              "x": 129.125,
+              "y": 6.273809432983398,
+              "width": 201.2857208251953,
+              "height": 56.91666793823242,
+              "top": 6.273809432983398,
+              "right": 330.4107208251953,
+              "bottom": 63.19047737121582,
+              "left": 129.125
+            },
+            "#stage-middle-plus": {
+              "x": 217.73809814453125,
+              "y": 25.380952835083008,
+              "width": 10.6130952835083,
+              "height": 18.702381134033203,
+              "top": 25.380952835083008,
+              "right": 228.35119342803955,
+              "bottom": 44.08333396911621,
+              "left": 217.73809814453125
+            },
+            "#stage-connection-first": {
+              "x": 101.92857360839844,
+              "y": 25.380952835083008,
+              "width": 18.696428298950195,
+              "height": 18.702381134033203,
+              "top": 25.380952835083008,
+              "right": 120.62500190734863,
+              "bottom": 44.08333396911621,
+              "left": 101.92857360839844
+            },
+            "#stage-connection-last": {
+              "x": 338.91070556640625,
+              "y": 25.380952835083008,
+              "width": 18.696428298950195,
+              "height": 18.702381134033203,
+              "top": 25.380952835083008,
+              "right": 357.60713386535645,
+              "bottom": 44.08333396911621,
+              "left": 338.91070556640625
+            },
+            "#stage-equals": {
+              "x": 438.0357360839844,
+              "y": 25.380952835083008,
+              "width": 10.2619047164917,
+              "height": 18.702381134033203,
+              "top": 25.380952835083008,
+              "right": 448.2976408004761,
+              "bottom": 44.08333396911621,
+              "left": 438.0357360839844
+            },
+            "#final-answer": {
+              "x": 456.7976379394531,
+              "y": 12.428571701049805,
+              "width": 191.90476989746094,
+              "height": 44.60714340209961,
+              "top": 12.428571701049805,
+              "right": 648.7024078369141,
+              "bottom": 57.035715103149414,
+              "left": 456.7976379394531
+            }
+          }
+        }
+      }
+    }
+  ],
+  "finishedAtEpochMs": 1793719136006,
+  "runtimeExecution": true
+}

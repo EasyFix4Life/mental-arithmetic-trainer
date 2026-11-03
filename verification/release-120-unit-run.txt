@@ -1,0 +1,5 @@
+
+> mental-arithmetic-trainer@1.2.0 test
+> vitest run --reporter=json --outputFile=verification/release-120-unit-results.json
+
+JSON report written to /private/tmp/mental-arithmetic-production-120/verification/release-120-unit-results.json

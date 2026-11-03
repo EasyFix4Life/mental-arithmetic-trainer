@@ -1,9 +1,9 @@
 import { expect, test, type Page } from '@playwright/test';
 
 const titles = [
-  'Single-digit multiplication', 'Two-digit addition', 'Two-digit multiplication', 'Three-digit multiplication',
+  'Single-digit multiplication', 'Two-digit multiplication',
 ];
-const lessonIds = ['multiplication-1', 'addition-2', 'multiplication-2', 'multiplication-3'];
+const lessonIds = ['multiplication-1', 'multiplication-2'];
 
 async function openLearn(page: Page, lessonId?: string) {
   await page.locator('#mode-learn').click();
@@ -23,7 +23,7 @@ test.beforeEach(async ({ page }) => {
   await page.goto('/');
 });
 
-test('both modes are accessible and four available lessons preserve their relative order', async ({ page }, testInfo) => {
+test('both modes are accessible and two available multiplication lessons preserve their relative order', async ({ page }, testInfo) => {
   await expect(page.locator('#mode-navigation')).toBeVisible();
   await expect(page.locator('#mode-learn')).toHaveAccessibleName('Learn');
   await expect(page.locator('#mode-practice')).toHaveAccessibleName('Practice');
@@ -36,7 +36,9 @@ test('both modes are accessible and four available lessons preserve their relati
   )).toEqual(lessonIds);
   await expect(page.locator('[data-lesson-id="addition-1"]')).toHaveCount(0);
   await expect(page.locator('[data-lesson-id="addition-3"]')).toHaveCount(0);
-  await expect(page.locator('#lesson-title')).toHaveText('Two-digit addition');
+  await expect(page.locator('#lesson-title')).toHaveText('Single-digit multiplication');
+  await expect(page.locator('[data-lesson-id="addition-2"]')).toHaveCount(0);
+  await expect(page.locator('[data-lesson-id="multiplication-3"]')).toHaveCount(0);
   await page.screenshot({ path: `verification/addition-options-${testInfo.project.name}-learn.png`, fullPage: true });
   await expect(page.locator('#learn-view')).not.toContainText(/children|age track/i);
   await page.locator('#mode-practice').click();
@@ -45,7 +47,7 @@ test('both modes are accessible and four available lessons preserve their relati
   await expect(page.locator('#setup')).toBeVisible();
 });
 
-test('addition is stacked and multiplication is horizontal, with large Arial operands on sepia', async ({ page }, testInfo) => {
+test('remaining multiplication lessons stay horizontal with large Arial operands on ivory', async ({ page }, testInfo) => {
   await openLearn(page);
   for (let index = 0; index < lessonIds.length; index += 1) {
     await page.locator(`[data-lesson-id="${lessonIds[index]}"]`).click();
@@ -83,7 +85,7 @@ test('addition is stacked and multiplication is horizontal, with large Arial ope
     await expect(expression.locator('[data-digit-ref]')).toHaveCount(Number(lessonIds[index]!.split('-')[1]) * 2);
     await expect(expression.locator('.digit-highlight')).toHaveCount(0);
   }
-  await expect(page.locator('html')).toHaveCSS('background-color', 'rgb(232, 215, 181)');
+  await expect(page.locator('html')).toHaveCSS('background-color', 'rgb(250, 247, 240)');
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
 
@@ -122,7 +124,7 @@ test('prominent Learn How button supports keyboard activation, named walkthrough
   await expect(help).toBeFocused();
 });
 
-test('Learn How button and operands stay separate and readable at narrow widths in all four lessons', async ({ page }, testInfo) => {
+test('Learn How button and operands stay separate and readable at narrow widths in both available multiplication lessons', async ({ page }, testInfo) => {
   await openLearn(page);
   for (const width of [280, 320, 390]) {
     await page.setViewportSize({ width, height: 844 });
@@ -157,7 +159,7 @@ test('Learn How button and operands stay separate and readable at narrow widths 
   }
 });
 
-test('all four lessons have complete instructions and a correct final answer', async ({ page }) => {
+test('both available multiplication lessons have complete instructions and a correct final answer', async ({ page }) => {
   await openLearn(page);
   for (const id of lessonIds) {
     await page.locator(`[data-lesson-id="${id}"]`).click();
@@ -175,7 +177,7 @@ test('all four lessons have complete instructions and a correct final answer', a
   }
 });
 
-test('all four lessons open with random in-range operands and can request another example without starting Practice', async ({ page }) => {
+test('both available multiplication lessons open with random in-range operands and can request another example without starting Practice', async ({ page }) => {
   // A constant RNG exercises the bounded immediate-repeat fallback as well as
   // ordinary generation; the UI must never hang or repeat a commuted pair.
   await page.evaluate(() => { Math.random = () => 0; });
@@ -306,7 +308,7 @@ test('a random asymmetric example applies First, Inside, Outside and Last with b
     await page.locator('#step-next').click();
   }
   await expect(page.locator('#stage-sequence button')).toHaveText([
-    'First', 'Inside', 'Outside', 'Last', 'Final answer: 8526',
+    'First', 'Inside', 'Outside', 'Last', 'Final Answer: 8526',
   ]);
   await expect(page.locator('#final-answer')).toHaveAttribute('aria-current', 'step');
   await expect(page.locator('#walkthrough .learn-expression')).toHaveAccessibleName('98 times 87 equals 8526');
@@ -367,11 +369,11 @@ test('confirmed 12 × 12 walkthrough uses exact digit pairs and resolves the mid
       await expect(page.locator('#step-next')).toBeFocused();
     }
   }
-  await expect(page.locator('#stage-sequence button')).toHaveText([...stages, 'Final answer: 144']);
+  await expect(page.locator('#stage-sequence button')).toHaveText([...stages, 'Final Answer: 144']);
   await expect(page.locator('#step-next')).toBeEnabled();
   await page.locator('#step-next').click();
   await expect(page.locator('#step-position')).toHaveText('5 / 5');
-  await expect(page.locator('#final-answer')).toHaveText('Final answer: 144');
+  await expect(page.locator('#final-answer')).toHaveText('Final Answer: 144');
   await expect(page.locator('#final-answer')).toHaveAttribute('aria-current', 'step');
   await expect(page.locator('#walkthrough [data-stage-name][aria-current]')).toHaveCount(0);
   await expect(page.locator('#walkthrough .final-answer-value')).toHaveText('144');
@@ -452,7 +454,7 @@ test('confirmed 18 × 18 trace carries 6 into 16, then 2 into First, to complete
     }
     if (index < 5) await page.locator('#step-next').click();
   }
-  await expect(page.locator('#stage-sequence button')).toHaveText(['First', 'Inside', 'Outside', 'Last', 'Final answer: 324']);
+  await expect(page.locator('#stage-sequence button')).toHaveText(['First', 'Inside', 'Outside', 'Last', 'Final Answer: 324']);
   await expect(page.locator('#step-next')).toBeEnabled();
   await page.locator('#step-next').click();
   await expect(page.locator('#step-position')).toHaveText('7 / 7');
@@ -501,7 +503,7 @@ test('changing confirmed examples resets the walkthrough and clears future digit
   await expect(page.locator('#walkthrough .learn-expression')).toHaveAccessibleName(/^12 times 12/);
   await expect(page.locator('#walkthrough .step-result-digits')).toHaveText('1□□');
   await expect(page.locator('#walkthrough .final-answer-value')).toHaveCount(0);
-  await expect(page.locator('#final-answer')).toHaveText('Final answer: 144');
+  await expect(page.locator('#final-answer')).toHaveText('Final Answer: 144');
   await expect(page.locator('#final-answer')).not.toHaveAttribute('aria-current');
   await expect(page.locator('#walkthrough .carry-visualizer')).toHaveCount(0);
   await expect(page.locator('#walkthrough .step-label')).toHaveCount(0);
@@ -551,7 +553,7 @@ test('Learn never starts a practice timer or score; completed scores survive Lea
       await expect(page.locator('#problem')).not.toHaveText(before ?? '');
       await expect(page.locator('#answer')).toHaveValue('');
       await expect(page.locator('#answer')).toBeFocused();
-      await expect(page.locator('#previous-time')).toHaveCSS('color', index === 0 ? 'rgb(176, 0, 0)' : 'rgb(0, 0, 0)');
+      await expect(page.locator('#previous-time')).toHaveCSS('color', index === 0 ? 'rgb(0, 0, 0)' : 'rgb(0, 0, 0)');
     }
   }
   await expect(page.locator('#score')).toHaveText('9 / 10');
@@ -667,49 +669,44 @@ test('addition uses the same renderer without forced multiplication stage names 
 });
 
 
-test('58 above 67 resolves carries to 125 using stacked sums', async ({ page }, testInfo) => {
-  await openLearn(page);
+test('Practice retains two-digit addition with vertical alignment, immediate submission and ten-answer timing', async ({ page }, testInfo) => {
   await page.evaluate(() => {
-    const draws = [(58 - 10 + 0.25) / 90, (67 - 10 + 0.25) / 90];
+    // Practice samples an unordered upper-triangle pair index, then its orientation.
+    // Index 3201 in the 10..99 triangle is 58/67; zero keeps that orientation.
+    const draws = [(3201 + 0.25) / 4095, 0];
     Math.random = () => draws.shift() ?? 0;
   });
-  await page.locator('[data-lesson-id="addition-2"]').click();
-  await expect(page.locator('#lesson-expression .learn-expression')).toHaveAccessibleName('58 plus 67');
-  await openWalkthrough(page);
-  for (const [index, operation] of ['5 + 6', '8 + 7', '11 + 1'].entries()) {
-    await expect(page.locator('#walkthrough .step-operation')).toHaveAccessibleName(operation);
-    await expect(page.locator('#walkthrough .vertical-calculation')).toBeVisible();
-    await expect(page.locator('#step-position')).toHaveText(`${index + 1} / 4`);
-    await page.locator('#step-next').click();
+  await expect(page.locator('#operation')).toHaveValue('addition');
+  await expect(page.locator('#digit-count option')).toHaveText(['2']);
+  await page.locator('#start').click();
+  await expect(page.locator('#left-operand')).toHaveText('58');
+  await expect(page.locator('#right-operand')).toHaveText('67');
+  const boxes = await page.locator('#problem').evaluate(root => [...root.querySelectorAll('#left-operand, #right-operand')].map(e => e.getBoundingClientRect().toJSON()));
+  expect(boxes[0]!.bottom).toBeLessThanOrEqual(boxes[1]!.top);
+  expect(Math.abs(boxes[0]!.right - boxes[1]!.right)).toBeLessThan(1);
+  await page.screenshot({ path: `verification/options-review-${testInfo.project.name}-addition-practice.png`, fullPage: false });
+  for (let index = 0; index < 10; index++) {
+    const answer = String(Number(await page.locator('#left-operand').textContent()) + Number(await page.locator('#right-operand').textContent()));
+    await page.keyboard.type(index === 1 ? '0'.repeat(answer.length) : answer);
+    if (index < 9) {
+      await expect(page.locator('#answer')).toHaveValue('');
+      await expect(page.locator('#answer')).toBeFocused();
+    }
   }
-  await expect(page.locator('.final-answer-value')).toHaveText('125');
-  const boxes = await page.locator('.final-answer-expression .learn-operand').evaluateAll(elements => elements.map(element => {
-    const b=element.getBoundingClientRect(); return {top:b.top,right:b.right};
-  }));
-  expect(boxes[0]!.top).toBeLessThan(boxes[1]!.top);
-  expect(Math.abs(boxes[0]!.right-boxes[1]!.right)).toBeLessThan(2);
-  const resultRight = await page.locator('.final-answer-value').evaluate(e => e.getBoundingClientRect().right);
-  expect(Math.abs(boxes[0]!.right-resultRight)).toBeLessThan(2);
-  await page.screenshot({ path: `verification/${testInfo.project.name}-addition-final.png`, fullPage: true });
+  await expect(page.locator('#score')).toHaveText('9 / 10');
+  for (const id of ['minimum-time', 'maximum-time', 'average-time']) await expect(page.locator(`#${id}`)).toHaveText(/^\d+\.\d s$/);
+  await expect(page.locator('#start')).toHaveText('Start Another Round');
 });
 
-test('three-digit multiplication preserves the nine terms and resolves 123 times 456 to 56088', async ({ page }, testInfo) => {
+test('all addition lessons and three-digit multiplication are absent while Practice keeps its three available settings', async ({ page }) => {
   await openLearn(page);
-  await page.evaluate(() => {
-    const draws = [(123 - 100 + 0.25) / 900, (456 - 100 + 0.25) / 900];
-    Math.random = () => draws.shift() ?? 0;
-  });
-  await page.locator('[data-lesson-id="multiplication-3"]').click();
-  await openWalkthrough(page);
-  const operations = ['1 × 4', '1 × 5 + 2 × 4', '1 × 6 + 3 × 4 + 2 × 5', '2 × 6 + 3 × 5', '3 × 6', '27 + 1', '28 + 2', '13 + 3', '4 + 1'];
-  const intermediates = ['4','13','28','27','18','28','30','16','5'];
-  for (const [index, operation] of operations.entries()) {
-    await expect(page.locator('#walkthrough .step-operation')).toHaveAccessibleName(operation);
-    await expect(page.locator('#walkthrough .step-intermediate-result')).toHaveText(intermediates[index]!);
-    await page.locator('#step-next').click();
-  }
-  await expect(page.locator('#stage-sequence button')).toHaveText(['Step 1','Step 2','Step 3','Step 4','Step 5','Final answer: 56088']);
-  await expect(page.locator('.final-answer-value')).toHaveText('56088');
-  await expect(page.locator('#step-next')).toBeDisabled();
-  await page.screenshot({ path: `verification/${testInfo.project.name}-three-digit-final.png`, fullPage: true });
+  await expect(page.locator('#lesson-catalog [data-lesson-id]')).toHaveText(['Single-digit multiplication', 'Two-digit multiplication']);
+  for (const id of ['addition-1', 'addition-2', 'addition-3', 'multiplication-3']) await expect(page.locator(`[data-lesson-id="${id}"]`)).toHaveCount(0);
+  await expect(page.locator('#lesson-title')).toHaveText('Single-digit multiplication');
+  await page.locator('#mode-practice').click();
+  await expect(page.locator('#operation')).toHaveValue('addition');
+  await expect(page.locator('#digit-count option')).toHaveText(['2']);
+  await page.locator('#operation').selectOption('multiplication');
+  await expect(page.locator('#digit-count option')).toHaveText(['1', '2']);
+  await expect(page.locator('#digit-count option[value="3"]')).toHaveCount(0);
 });

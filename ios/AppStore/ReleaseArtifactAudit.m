@@ -8,6 +8,8 @@ static UIWindow *AuditWindow;
 static NSMutableArray<NSString *> *Checks;
 static NSMutableSet<NSString *> *Pairs;
 static NSString *ExpectedVersion;
+static NSString *ExpectedBuild;
+static NSString *AuditScope;
 
 static NSArray<UIView *> *Descendants(UIView *view) {
     NSMutableArray *result = [NSMutableArray arrayWithObject:view];
@@ -19,6 +21,15 @@ static UIView *Find(NSString *identifier) {
     for (UIView *view in Descendants(AuditWindow))
         if ([view.accessibilityIdentifier isEqualToString:identifier]) return view;
     return nil;
+}
+
+static NSString *ColorCode(UIColor *color) {
+    CGFloat r,g,b,a; if (![color getRed:&r green:&g blue:&b alpha:&a]) return @"unknown";
+    return [NSString stringWithFormat:@"#%02X%02X%02X", (int)lround(r*255), (int)lround(g*255), (int)lround(b*255)];
+}
+
+static BOOL IsBlack(UIColor *color) {
+    CGFloat r,g,b,a; return [color getRed:&r green:&g blue:&b alpha:&a] && r==0 && g==0 && b==0 && a==1;
 }
 
 static void Require(BOOL condition, NSString *message) {
@@ -36,6 +47,7 @@ static void Report(NSString *error) {
     Write(@"qa-release-artifact-audit.json", @{
         @"status": error ? @"failed" : @"passed", @"error": error ?: (id)[NSNull null],
         @"kind": @"external-simulator-library-driving-packaged-release-controls",
+        @"scope": AuditScope ?: @"full",
         @"version": [NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleShortVersionString"] ?: @"unknown",
         @"build": [NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleVersion"] ?: @"unknown",
         @"systemVersion": UIDevice.currentDevice.systemVersion,
@@ -49,6 +61,66 @@ static void Later(double seconds, dispatch_block_t action) {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(seconds * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         @try { action(); } @catch (NSException *error) { Report(error.reason); }
     });
+}
+
+static BOOL CompletePairBracket(void) {
+    UIView *connector = Find(@"pair-connector");
+    for (CALayer *layer in connector.layer.sublayers) {
+        if ([layer isKindOfClass:CAShapeLayer.class]) {
+            CAShapeLayer *stroke = (CAShapeLayer *)layer;
+            CGRect box = CGPathGetBoundingBox(stroke.path);
+            if (box.size.width > 20 && box.size.height >= 10 &&
+                [ColorCode([UIColor colorWithCGColor:stroke.strokeColor]) isEqualToString:@"#755093"]) return YES;
+        }
+    }
+    return NO;
+}
+
+static void CheckLiteralHeader(void);
+
+static void CheckGroupedStages(NSString *answer) {
+    UIView *product = Find(@"stage-product-group");
+    UIView *middle = Find(@"stage-middle-group");
+    UIButton *final = (UIButton *)Find(@"final-answer");
+    UILabel *plus = (UILabel *)Find(@"stage-middle-plus");
+    UILabel *equals = (UILabel *)Find(@"stage-equals");
+    Require(product && middle && [middle isDescendantOfView:product], @"Named stages have an outer enclosure and nested middle section");
+    Require([plus.text isEqualToString:@"+"] && [plus isDescendantOfView:middle], @"Middle section contains the explicit plus sign");
+    Require([Find(@"stage-inside") isDescendantOfView:middle] && [Find(@"stage-outside") isDescendantOfView:middle], @"Inside and Outside remain discrete middle controls");
+    Require(![final isDescendantOfView:product] && ![equals isDescendantOfView:product] && [equals.text isEqualToString:@"="], @"Equals and Final Answer stay outside the stage enclosure");
+    for (UILabel *glyph in @[plus, equals])
+        Require(glyph.bounds.size.width >= [glyph.text sizeWithAttributes:@{NSFontAttributeName:glyph.font}].width-1, @"Plus and equals glyphs remain fully visible");
+    Require(!product.isAccessibilityElement && !middle.isAccessibilityElement, @"Group containers do not collapse accessible controls");
+    NSArray *outerActions = product.accessibilityElements;
+    Require([outerActions isEqualToArray:@[Find(@"stage-first"), middle, Find(@"stage-last")]] &&
+            [middle.accessibilityElements isEqualToArray:@[Find(@"stage-inside"), Find(@"stage-outside")]], @"Accessible order is First Inside Outside Last then separate Final Answer");
+    NSDictionary *fills = @{@"first": @"#E2F1EF", @"inside": @"#EEE5F4", @"outside": @"#EEE5F4", @"last": @"#F6ECD8"};
+    UIFont *firstFont = nil;
+    NSDirectionalEdgeInsets firstInsets = NSDirectionalEdgeInsetsZero;
+    for (NSString *stage in @[@"first", @"inside", @"outside", @"last"]) {
+        UIButton *button = (UIButton *)Find([@"stage-" stringByAppendingString:stage]);
+        Require(button.layer.borderWidth == 2 && button.bounds.size.height >= 44, @"Each named stage has equal two-point border and accessible target");
+        Require([ColorCode(button.backgroundColor) isEqualToString:fills[stage]], [@"Light matching stage fill: " stringByAppendingString:stage]);
+        UIFont *font = [button.titleLabel.attributedText attribute:NSFontAttributeName atIndex:0 effectiveRange:nil] ?: button.titleLabel.font;
+        Require([font.fontName containsString:@"Baskerville"] && [font.fontName containsString:@"Bold"], @"Every named stage uses bold scholarly text");
+        Require(button.titleLabel.attributedText.size.width <= button.titleLabel.bounds.size.width+1, @"Each named stage is a complete readable word in this layout");
+        if (!firstFont) { firstFont = font; firstInsets = button.configuration.contentInsets; }
+        else {
+            NSDirectionalEdgeInsets insets = button.configuration.contentInsets;
+            Require([font.fontName isEqualToString:firstFont.fontName] && fabs(font.pointSize-firstFont.pointSize)<0.1 &&
+                    insets.top==firstInsets.top && insets.leading==firstInsets.leading && insets.bottom==firstInsets.bottom && insets.trailing==firstInsets.trailing,
+                    @"Named stage font, size and padding have equal prominence");
+        }
+    }
+    Require([final.accessibilityLabel isEqualToString:[@"Final Answer: " stringByAppendingString:answer]], @"Final box preserves requested caption casing");
+    NSAttributedString *caption = final.titleLabel.attributedText;
+    NSRange digits = [caption.string rangeOfString:answer options:NSBackwardsSearch];
+    Require(digits.location != NSNotFound && [[(UIFont *)[caption attribute:NSFontAttributeName atIndex:digits.location effectiveRange:nil] fontName] containsString:@"Arial"], @"Final box digits preserve Arial");
+    for (NSString *identifier in @[@"stage-connection-first", @"stage-connection-last"]) {
+        UILabel *arrow = (UILabel *)Find(identifier);
+        Require([arrow.text isEqualToString:@"&"] && CGAffineTransformIsIdentity(arrow.transform) && !arrow.isAccessibilityElement, @"Literal upright ampersands visually connect the stages");
+    }
+    CheckLiteralHeader();
 }
 
 static NSString *Expression(void) { return Find(@"practice-problem").accessibilityLabel; }
@@ -91,9 +163,73 @@ static void Edit(NSString *inserted) {
     [AuditWindow layoutIfNeeded];
 }
 
+static void CheckPrivacy(void) {
+    Press(@"privacy-policy");
+    Later(0.3, ^{
+        NSString *policy = [(UITextView *)Find(@"privacy-policy-text") text];
+        Require([policy containsString:@"does not collect personal data"], @"Existing Privacy sheet opens");
+        Require([policy containsString:[NSString stringWithFormat:@"Version %@ (build %@)", ExpectedVersion, [NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleVersion"]]], @"Privacy displays the installed version and build");
+        Report(nil);
+    });
+}
+
+static void CheckEnlargedPractice(void) {
+    Select(@"operation-control", 0);
+    Press(@"practice-start");
+    AuditWindow.traitOverrides.preferredContentSizeCategory = UIContentSizeCategoryAccessibilityExtraExtraExtraLarge;
+    Later(0.4, ^{
+        NSString *answer = Answer(Expression());
+        Edit([@"" stringByPaddingToLength:answer.length withString:@"0" startingAtIndex:0]);
+        Later(0.4, ^{
+            UIView *problem = Find(@"practice-problem"), *field = Find(@"answer-field"), *timer = Find(@"live-time"), *previous = Find(@"previous-time");
+            CGRect mathRect = [problem convertRect:problem.bounds toView:AuditWindow];
+            CGRect fieldRect = [field convertRect:field.bounds toView:AuditWindow];
+            CGRect timerRect = [timer convertRect:timer.bounds toView:AuditWindow];
+            CGRect previousRect = [previous convertRect:previous.bounds toView:AuditWindow];
+            Require(CGRectGetMaxY(mathRect) <= CGRectGetMinY(fieldRect)+1 && CGRectGetMinY(mathRect) >= CGRectGetMaxY(previousRect)-1, @"Release largest-text Practice keeps mathematics between feedback and answer");
+            Require(CGRectGetMinX(fieldRect)>=0 && CGRectGetMaxX(timerRect)<=AuditWindow.bounds.size.width+1, @"Release largest-text answer and timer fit the viewport");
+            Require(IsBlack([(UILabel *)previous textColor]) && IsBlack([(UILabel *)Find(@"previous-incorrect-cue") textColor]), @"Release largest-text incorrect feedback stays monochrome");
+            Write(@"qa-release-artifact-audit-phase.json", @{@"phase": @"practice-accessibility"});
+            Later(2.0, ^{
+                for (NSInteger index=1; index<10; index++) Edit(Answer(Expression()));
+                Require([[(UILabel *)Find(@"round-score") text] isEqualToString:@"9 / 10"], @"Largest-text Practice still completes ten answers with unchanged scoring");
+                AuditWindow.traitOverrides.preferredContentSizeCategory = UIContentSizeCategoryLarge;
+                [AuditWindow layoutIfNeeded];
+                CheckPrivacy();
+            });
+        });
+    });
+}
+
+static void CheckEnlargedGroupedStages(NSString *answer, dispatch_block_t finished) {
+    AuditWindow.traitOverrides.preferredContentSizeCategory = UIContentSizeCategoryAccessibilityExtraExtraExtraLarge;
+    [AuditWindow layoutIfNeeded];
+    Later(0.4, ^{
+        CheckGroupedStages(answer);
+        Require([(UIStackView *)Find(@"stage-middle-group") axis] == UILayoutConstraintAxisVertical, @"Release largest-text middle pair stacks within its existing outline");
+        UILabel *heading = (UILabel *)Find(@"walkthrough-heading");
+        Require([@"Instructional" sizeWithAttributes:@{NSFontAttributeName: heading.font}].width <= heading.bounds.size.width+1, @"Release largest-text walkthrough heading preserves whole words");
+        for (NSString *identifier in @[@"stage-first", @"stage-inside", @"stage-outside", @"stage-last", @"final-answer"]) {
+            UIButton *button = (UIButton *)Find(identifier);
+            CGRect frame = [button convertRect:button.bounds toView:AuditWindow];
+            Require(CGRectGetMinX(frame)>=0 && CGRectGetMaxX(frame)<=AuditWindow.bounds.size.width+1, @"Release largest-text stage/final box stays within readable width");
+            CGSize needed = [button.titleLabel sizeThatFits:CGSizeMake(button.titleLabel.bounds.size.width, CGFLOAT_MAX)];
+            Require(button.titleLabel.bounds.size.height >= needed.height-1, @"Release largest-text stage/final caption is not clipped");
+            if (![identifier isEqualToString:@"final-answer"])
+                Require(button.titleLabel.attributedText.size.width <= button.titleLabel.bounds.size.width+1, @"Release largest-text stage label remains a whole word");
+        }
+        Write(@"qa-release-artifact-audit-phase.json", @{@"phase": @"grouped-accessibility"});
+        Later(2.0, ^{
+            AuditWindow.traitOverrides.preferredContentSizeCategory = UIContentSizeCategoryLarge;
+            [AuditWindow layoutIfNeeded];
+            finished();
+        });
+    });
+}
+
 static void CheckMultiplication(NSInteger digits) {
     Select(@"operation-control", 1);
-    Require([DigitTitles() isEqualToArray:@[@"1", @"2", @"3"]], @"All multiplication choices remain available after a completed round");
+    Require([DigitTitles() isEqualToArray:@[@"1", @"2"]], @"Only one- and two-digit multiplication choices remain available after a completed round");
     Select(@"digit-count-control", digits - 1);
     Press(@"practice-start");
     NSMutableSet *seen = [NSMutableSet new];
@@ -109,32 +245,33 @@ static void CheckMultiplication(NSInteger digits) {
         if (index < 9) Require(![Expression() isEqualToString:expression], @"Multiplication accepts the answer and advances immediately");
     }
     Require([[(UILabel *)Find(@"round-score") text] isEqualToString:@"10 / 10"], [NSString stringWithFormat:@"Multiplication %ld completes ten correct answers", (long)digits]);
-    if (digits < 3) { CheckMultiplication(digits + 1); return; }
-    Press(@"privacy-policy");
-    Later(0.3, ^{
-        NSString *policy = [(UITextView *)Find(@"privacy-policy-text") text];
-        Require([policy containsString:@"does not collect personal data"], @"Existing Privacy sheet opens");
-        Require([policy containsString:[NSString stringWithFormat:@"Version %@ (build %@)", ExpectedVersion, [NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleVersion"]]], @"Privacy displays the installed version and build");
-        Report(nil);
-    });
+    if (digits < 2) { CheckMultiplication(digits + 1); return; }
+    CheckEnlargedPractice();
 }
 
 static void CheckLessons(void) {
     NSString *score = [(UILabel *)Find(@"round-score") text];
     Require([score isEqualToString:@"9 / 10"], @"Ten-question score is nine correct and one incorrect");
+    Require([[(UILabel *)Find(@"round-score") font].fontName containsString:@"Arial"], @"Score numerals use Arial");
+    for (NSString *identifier in @[@"maximum-time", @"minimum-time", @"average-time"])
+        Require([[(UILabel *)Find(identifier) font].fontName containsString:@"Arial"] && IsBlack([(UILabel *)Find(identifier) textColor]), @"Timing statistics use black Arial numerals");
     double minimum = [(UILabel *)Find(@"minimum-time") text].doubleValue;
     double maximum = [(UILabel *)Find(@"maximum-time") text].doubleValue;
     double average = [(UILabel *)Find(@"average-time") text].doubleValue;
     Require(minimum >= 0.1 && minimum <= average && average <= maximum, @"Completed round retains minimum, maximum and average timing");
+    Write(@"qa-release-artifact-audit-phase.json", @{@"phase": @"addition-results"});
+    Later(2.0, ^{
     Select(@"mode-control", 0);
-    Require([[(UILabel *)Find(@"lesson-title") text] isEqualToString:@"Two-digit addition"], @"Learn defaults to two-digit addition");
+    Require([[(UILabel *)Find(@"lesson-title") text] isEqualToString:@"Single-digit multiplication"], @"Learn defaults to the first available single-digit multiplication lesson");
     Write(@"qa-release-artifact-audit-phase.json", @{@"phase": @"catalog"});
-    Later(0.8, ^{
+    Later(2.0, ^{
         NSMutableArray *catalog = [NSMutableArray new];
         for (UIView *view in Descendants(AuditWindow))
             if ([view isKindOfClass:UIButton.class] && [view.accessibilityIdentifier hasPrefix:@"lesson-"] && ![view.accessibilityIdentifier isEqualToString:@"lesson-help"])
                 [catalog addObject:view.accessibilityIdentifier];
-        Require([catalog isEqualToArray:@[@"lesson-multiplication-1", @"lesson-addition-2", @"lesson-multiplication-2", @"lesson-multiplication-3"]], @"Learn exposes exactly M1, A2, M2, M3; no A1 or A3");
+        Require([catalog isEqualToArray:@[@"lesson-multiplication-1", @"lesson-multiplication-2"]], @"Learn exposes exactly M1 and M2, with no addition or three-digit multiplication");
+        for (NSString *identifier in @[@"lesson-addition-1", @"lesson-addition-2", @"lesson-addition-3", @"lesson-multiplication-3"])
+            Require(Find(identifier)==nil, [@"Removed Learn option is absent: " stringByAppendingString:identifier]);
         for (NSString *identifier in catalog) {
             Press(identifier);
             NSString *original = Find(@"lesson-expression").accessibilityLabel;
@@ -146,6 +283,17 @@ static void CheckLessons(void) {
             Require(Find(@"step-operation") != nil, [@"Instructional calculation: " stringByAppendingString:identifier]);
             Press(@"final-answer");
             Require([Find(@"final-answer-expression").accessibilityLabel hasSuffix:[@"equals " stringByAppendingString:answer]], [@"Correct instructional final answer: " stringByAppendingString:identifier]);
+            if ([identifier isEqualToString:@"lesson-multiplication-2"]) {
+                CheckGroupedStages(answer);
+                for (NSString *stage in @[@"first", @"inside", @"outside", @"last"]) {
+                    Press([@"stage-" stringByAppendingString:stage]);
+                    CheckGroupedStages(answer);
+                }
+                for (NSInteger step=0; step<10 && !Find(@"final-answer-expression"); step++) Press(@"step-next");
+                Require(Find(@"final-answer-expression") != nil, @"Release Next follows the original carry screens to Final Answer");
+                Press(@"step-back"); Require(Find(@"step-intermediate-result") != nil, @"Release Back returns from Final Answer to the last existing instruction");
+                Press(@"step-next"); Require(Find(@"final-answer-expression") != nil, @"Release Next returns to the final answer");
+            } else Require(Find(@"stage-product-group") == nil, @"Numbered lessons retain their existing generic navigation");
         }
         Press(@"lesson-multiplication-2");
         NSArray<NSNumber *> *digits;
@@ -166,8 +314,17 @@ static void CheckLessons(void) {
                 [insideLabel containsString:[NSString stringWithFormat:@"right operand, position 1, digit %ld", (long)c]], @"Inside highlights the two inner digits");
         Require([[(UILabel *)Find(@"step-operation") text] isEqualToString:[NSString stringWithFormat:@"%ld × %ld", (long)b, (long)c]], @"Inside calculation multiplies left units by right tens");
         Require([[(UILabel *)Find(@"step-intermediate-result") text] integerValue] == b * c, @"Inside gives the inner-digit product");
+        UILabel *insideGlyphs;
+        for (UIView *view in Descendants(Find(@"instruction-expression")))
+            if ([view isKindOfClass:UILabel.class] && [(UILabel *)view attributedText]) insideGlyphs = (UILabel *)view;
+        Require([ColorCode([insideGlyphs.attributedText attribute:NSForegroundColorAttributeName atIndex:1 effectiveRange:nil]) isEqualToString:@"#755093"], @"Inside left inner digit uses canonical muted violet");
+        Require([ColorCode([insideGlyphs.attributedText attribute:NSForegroundColorAttributeName atIndex:5 effectiveRange:nil]) isEqualToString:@"#755093"], @"Inside right inner digit uses the same violet");
+        Require([[(UILabel *)Find(@"stage-heading") font].fontName containsString:@"Baskerville"], @"Instruction heading uses scholarly Baskerville");
+        Require([[(UIFont *)[insideGlyphs.attributedText attribute:NSFontAttributeName atIndex:0 effectiveRange:nil] fontName] containsString:@"Arial"], @"Equation numerals preserve Arial");
+        Require(CompletePairBracket(), @"Inside complete static violet pair bracket is packaged");
+        CheckGroupedStages(Answer(Find(@"lesson-expression").accessibilityLabel));
         Write(@"qa-release-artifact-audit-phase.json", @{@"phase": @"inside-corrected"});
-        Later(0.8, ^{
+        Later(2.0, ^{
             Press(@"stage-outside");
             NSString *outsideLabel = Find(@"instruction-expression").accessibilityLabel;
             Require([outsideLabel containsString:[NSString stringWithFormat:@"left operand, position 1, digit %ld", (long)a]] &&
@@ -175,13 +332,23 @@ static void CheckLessons(void) {
             Require([Find(@"step-operation").accessibilityLabel isEqualToString:[NSString stringWithFormat:@"%ld times %ld", (long)a, (long)d]], @"Outside calculation multiplies left tens by right units");
             Require([[(UILabel *)Find(@"step-intermediate-result") text] integerValue] == b * c + a * d, @"Outside combines the corrected Inside and Outside products");
             Require([[(UILabel *)Find(@"step-narration") text] isEqualToString:[NSString stringWithFormat:@"Combine Inside and Outside: %ld + %ld = %ld.", (long)(b * c), (long)(a * d), (long)(b * c + a * d)]], @"Narration follows Inside then Outside");
+            UILabel *outsideGlyphs;
+            for (UIView *view in Descendants(Find(@"instruction-expression")))
+                if ([view isKindOfClass:UILabel.class] && [(UILabel *)view attributedText]) outsideGlyphs = (UILabel *)view;
+            Require([ColorCode([outsideGlyphs.attributedText attribute:NSForegroundColorAttributeName atIndex:0 effectiveRange:nil]) isEqualToString:@"#755093"], @"Outside left outer digit uses canonical muted violet");
+            Require([ColorCode([outsideGlyphs.attributedText attribute:NSForegroundColorAttributeName atIndex:6 effectiveRange:nil]) isEqualToString:@"#755093"], @"Outside right outer digit uses the same violet");
+            Require(CompletePairBracket(), @"Outside complete static violet pair bracket is packaged");
+            CheckGroupedStages(Answer(Find(@"lesson-expression").accessibilityLabel));
             Write(@"qa-release-artifact-audit-phase.json", @{@"phase": @"outside-corrected"});
-            Later(0.8, ^{
-                Select(@"mode-control", 1);
-                Require([[(UILabel *)Find(@"round-score") text] isEqualToString:score], @"Practice results survive the Learn visit");
-                CheckMultiplication(1);
+            Later(2.0, ^{
+                CheckEnlargedGroupedStages(Answer(Find(@"lesson-expression").accessibilityLabel), ^{
+                    Select(@"mode-control", 1);
+                    Require([[(UILabel *)Find(@"round-score") text] isEqualToString:score], @"Practice results survive the Learn visit");
+                    CheckMultiplication(1);
+                });
             });
         });
+    });
     });
 }
 
@@ -204,28 +371,170 @@ static void AnswerNext(NSInteger index) {
     if (index < 9) {
         Require(![Expression() isEqualToString:expression], @"Submission immediately advances");
         UIColor *color = [(UILabel *)Find(@"previous-time") textColor];
-        if (index == 0) Require([color isEqual:UIColor.blackColor], @"Correct completion time is black");
-        if (index == 1) { CGFloat r,g,b,a; [color getRed:&r green:&g blue:&b alpha:&a]; Require(r > g && r > b, @"Incorrect completion time is red"); }
+        if (index == 0) {
+            Require(IsBlack(color), @"Correct completion time is black");
+            Require([ColorCode([(UITextField *)Find(@"answer-field") backgroundColor]) isEqualToString:@"#FFFFFF"], @"Answer field is white");
+            Require([[(UITextField *)Find(@"answer-field") font].fontName containsString:@"Arial"], @"Answer entry retains Arial");
+        }
+        if (index == 1) {
+            UILabel *cue = (UILabel *)Find(@"previous-incorrect-cue");
+            Require(IsBlack(color) && IsBlack(cue.textColor), @"Incorrect completion time and cue are black");
+            Require(!cue.hidden && [cue.text isEqualToString:@"×"] && Find(@"previous-time").superview.layer.borderWidth == 2, @"Incorrect feedback has a black cross and border");
+        }
         Later(0.16, ^{ AnswerNext(index + 1); });
     } else CheckLessons();
+}
+
+// Focused preview-3 regression: only the two decorative header connectors changed.
+// Carry routes and arithmetic continue to use their existing presentation.
+static void ScrollToHeaderPart(NSString *identifier) {
+    UIView *target = Find(identifier);
+    UIScrollView *scroll;
+    for (UIView *ancestor = target.superview; ancestor; ancestor = ancestor.superview)
+        if ([ancestor isKindOfClass:UIScrollView.class]) { scroll = (UIScrollView *)ancestor; break; }
+    Require(scroll != nil, @"Header remains in scrollable instructional content");
+    CGRect rect = [target convertRect:target.bounds toView:scroll];
+    CGFloat maximum = MAX(0, scroll.contentSize.height-scroll.bounds.size.height+scroll.adjustedContentInset.bottom);
+    [scroll setContentOffset:CGPointMake(0, MIN(maximum, MAX(0, rect.origin.y-16))) animated:NO];
+    [AuditWindow layoutIfNeeded];
+}
+
+static void CheckLiteralHeader(void) {
+    UIView *product = Find(@"stage-product-group");
+    NSInteger ampersands = 0, arrows = 0;
+    NSCharacterSet *arrowCharacters = [NSCharacterSet characterSetWithCharactersInString:@"→↓←↑"];
+    for (UIView *view in Descendants(product)) {
+        if (![view isKindOfClass:UILabel.class]) continue;
+        UILabel *label = (UILabel *)view;
+        if ([label.text isEqualToString:@"&"]) ampersands++;
+        if ([label.text rangeOfCharacterFromSet:arrowCharacters].location != NSNotFound) arrows++;
+    }
+    Require(ampersands == 2 && arrows == 0, @"Header contains exactly two literal ampersands and no connection arrows");
+    for (NSString *identifier in @[@"stage-connection-first", @"stage-connection-last"]) {
+        UILabel *label = (UILabel *)Find(identifier);
+        Require([label.text isEqualToString:@"&"] && CGAffineTransformIsIdentity(label.transform) && CATransform3DIsIdentity(label.layer.transform), @"Header ampersand is literal and upright without rotation or transforms");
+        Require(label.bounds.size.width >= [@"&" sizeWithAttributes:@{NSFontAttributeName:label.font}].width-1, @"Header ampersand has enough measured width for its actual font");
+    }
+    UIButton *final = (UIButton *)Find(@"final-answer");
+    CGSize needed = [final.titleLabel sizeThatFits:CGSizeMake(final.titleLabel.bounds.size.width, CGFLOAT_MAX)];
+    Require(final.titleLabel.bounds.size.height >= needed.height-1, @"Final Answer caption has sufficient height without clipping");
+}
+
+static void FinishAmpersandEnlarged(void) {
+    AuditWindow.traitOverrides.preferredContentSizeCategory = UIContentSizeCategoryAccessibilityExtraExtraExtraLarge;
+    [AuditWindow layoutIfNeeded];
+    Later(0.4, ^{
+        Press(@"stage-inside");
+        CheckGroupedStages(Answer(Find(@"lesson-expression").accessibilityLabel));
+        CheckLiteralHeader();
+        Require([(UIStackView *)Find(@"stage-product-group") axis] == UILayoutConstraintAxisVertical && [(UIStackView *)Find(@"stage-middle-group") axis] == UILayoutConstraintAxisVertical, @"Largest accessibility text stacks the outer and middle groups while preserving both ampersands");
+        for (NSString *identifier in @[@"stage-first", @"stage-inside", @"stage-outside", @"stage-last", @"final-answer"]) {
+            UIView *view = Find(identifier);
+            CGRect rect = [view convertRect:view.bounds toView:AuditWindow];
+            Require(CGRectGetMinX(rect)>=0 && CGRectGetMaxX(rect)<=AuditWindow.bounds.size.width+1, @"Largest-text stage and final controls fit the viewport width");
+        }
+        ScrollToHeaderPart(@"stage-middle-group");
+        Write(@"qa-release-artifact-audit-phase.json", @{@"phase": @"largest-middle"});
+        Later(2.0, ^{
+            Press(@"final-answer");
+            CheckGroupedStages(Answer(Find(@"lesson-expression").accessibilityLabel));
+            CheckLiteralHeader();
+            ScrollToHeaderPart(@"stage-last");
+            Write(@"qa-release-artifact-audit-phase.json", @{@"phase": @"largest-final"});
+            Later(2.0, ^{
+                AuditWindow.traitOverrides.preferredContentSizeCategory = UIContentSizeCategoryLarge;
+                [AuditWindow layoutIfNeeded];
+                CheckGroupedStages(Answer(Find(@"lesson-expression").accessibilityLabel));
+                CheckLiteralHeader();
+                Press(@"final-answer");
+                ScrollToHeaderPart(@"stage-product-group");
+                Write(@"qa-release-artifact-audit-phase.json", @{@"phase": @"normal-final"});
+                Later(2.0, ^{ Report(nil); });
+            });
+        });
+    });
+}
+
+static void CheckAmpersandCarry(void) {
+    NSArray<NSNumber *> *values = Numbers(Find(@"lesson-expression").accessibilityLabel);
+    NSInteger attempts=0;
+    while ((values[0].integerValue % 10)*(values[1].integerValue % 10)<10 && attempts++<100) {
+        Press(@"random-example");
+        values = Numbers(Find(@"lesson-expression").accessibilityLabel);
+    }
+    NSInteger carry = ((values[0].integerValue % 10)*(values[1].integerValue % 10))/10;
+    Require(carry>0, @"An actual random example supplies a Last-to-middle carry");
+    Press(@"stage-last");
+    Require(Find(@"carry-route") != nil, @"Existing carry route remains present on the actual Last step");
+    NSInteger matchingRoutes=0;
+    for (UIView *view in Descendants(Find(@"carry-route"))) {
+        if (![view isKindOfClass:UILabel.class] || ![view.accessibilityIdentifier isEqualToString:@"carry-route-value"]) continue;
+        UILabel *route=(UILabel *)view;
+        Require([route.text containsString:@"↓"] && ![route.text containsString:@"&"], @"Carry-route down arrows remain unchanged");
+        if ([route.text isEqualToString:[NSString stringWithFormat:@"↓  %ld  ↓", (long)carry]]) matchingRoutes++;
+    }
+    Require(matchingRoutes==1, @"Carry route preserves the whole actual carried value");
+    CheckGroupedStages(Answer(Find(@"lesson-expression").accessibilityLabel));
+    CheckLiteralHeader();
+    ScrollToHeaderPart(@"stage-product-group");
+    Write(@"qa-release-artifact-audit-phase.json", @{@"phase": @"carry-route"});
+    Later(2.0, ^{ FinishAmpersandEnlarged(); });
+}
+
+static void BeginAmpersandHeader(void) {
+    Checks=[NSMutableArray new]; Pairs=[NSMutableSet new];
+    ExpectedVersion=NSProcessInfo.processInfo.environment[@"RELEASE_AUDIT_EXPECT_VERSION"];
+    Require([[NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleShortVersionString"] isEqualToString:ExpectedVersion] && [[NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleVersion"] isEqualToString:ExpectedBuild], @"Running the expected packaged Release version and build");
+    Select(@"mode-control", 0);
+    Press(@"lesson-multiplication-2");
+    Press(@"lesson-help");
+    Press(@"stage-inside");
+    CheckGroupedStages(Answer(Find(@"lesson-expression").accessibilityLabel));
+    CheckLiteralHeader();
+    UIStackView *product=(UIStackView *)Find(@"stage-product-group");
+    Require(product.axis==(AuditWindow.bounds.size.width>=1000 ? UILayoutConstraintAxisHorizontal : UILayoutConstraintAxisVertical), @"Normal phone and wide tablet choose a feasible grouped header layout");
+    ScrollToHeaderPart(@"stage-product-group");
+    Write(@"qa-release-artifact-audit-phase.json", @{@"phase": @"normal-header"});
+    Later(2.0, ^{
+        for (NSString *stage in @[@"first", @"inside", @"outside", @"last"]) {
+            Press([@"stage-" stringByAppendingString:stage]);
+            Require([[(UILabel *)Find(@"stage-heading") text] caseInsensitiveCompare:stage]==NSOrderedSame, @"Each of the four stage buttons still opens its own instruction");
+            CheckLiteralHeader();
+        }
+        NSString *answer=Answer(Find(@"lesson-expression").accessibilityLabel);
+        Press(@"final-answer");
+        Require([Numbers(Find(@"final-answer-expression").accessibilityLabel).lastObject.stringValue isEqualToString:answer], @"Separate Final Answer action still shows the exact product");
+        CheckAmpersandCarry();
+    });
 }
 
 static void Begin(void) {
     Checks = [NSMutableArray new]; Pairs = [NSMutableSet new];
     ExpectedVersion = NSProcessInfo.processInfo.environment[@"RELEASE_AUDIT_EXPECT_VERSION"];
-    Require([[NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleShortVersionString"] isEqualToString:ExpectedVersion], @"Running the expected packaged Release version");
+    Require([[NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleShortVersionString"] isEqualToString:ExpectedVersion] && [[NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleVersion"] isEqualToString:ExpectedBuild], @"Running the expected packaged Release version and build");
     Require([DigitTitles() isEqualToArray:@[@"2"]], @"Addition starts with only digit choice 2");
+    Require([ColorCode(AuditWindow.rootViewController.view.backgroundColor) isEqualToString:@"#FAF7F0"], @"Exact ivory background is packaged");
+    UIButton *start = (UIButton *)Find(@"practice-start");
+    Require(start.configuration.cornerStyle == UIButtonConfigurationCornerStyleFixed && start.configuration.background.cornerRadius == 4, @"Neutral controls have fixed four-point corners");
+    Require(IsBlack(start.configuration.baseForegroundColor), @"Practice controls retain black foregrounds");
     Write(@"qa-release-artifact-audit-phase.json", @{@"phase": @"setup"});
-    Later(0.8, ^{
-        for (NSNumber *prior in @[@0, @2]) {
+    Later(2.0, ^{
+        for (NSNumber *prior in @[@0, @1]) {
             Select(@"operation-control", 1);
-            Require([DigitTitles() isEqualToArray:@[@"1", @"2", @"3"]], @"Multiplication retains all three digit choices");
+            Require([DigitTitles() isEqualToArray:@[@"1", @"2"]], @"Multiplication exposes exactly one and two digits, with no three-digit option");
             Select(@"digit-count-control", prior.integerValue);
             Select(@"operation-control", 0);
-            Require([DigitTitles() isEqualToArray:@[@"2"]] && [(UISegmentedControl *)Find(@"digit-count-control") selectedSegmentIndex] == 0, @"Switching M1 or M3 to addition selects only A2");
+            Require([DigitTitles() isEqualToArray:@[@"2"]] && [(UISegmentedControl *)Find(@"digit-count-control") selectedSegmentIndex] == 0, @"Switching M1 or M2 to addition selects only A2");
         }
-        Press(@"practice-start");
-        Later(0.16, ^{ AnswerNext(0); });
+        Select(@"operation-control", 1);
+        Require([DigitTitles() isEqualToArray:@[@"1", @"2"]], @"Multiplication setup visibly contains only M1 and M2");
+        Write(@"qa-release-artifact-audit-phase.json", @{@"phase": @"multiplication-settings"});
+        Later(2.0, ^{
+            Select(@"operation-control", 0);
+            Require([DigitTitles() isEqualToArray:@[@"2"]], @"Addition remains available as A2 before the full round");
+            Press(@"practice-start");
+            Later(0.16, ^{ AnswerNext(0); });
+        });
     });
 }
 
@@ -237,7 +546,9 @@ __attribute__((constructor)) static void LoadAudit(void) {
                     for (UIWindow *window in ((UIWindowScene *)scene).windows)
                         if (window.rootViewController && window.windowLevel == UIWindowLevelNormal) AuditWindow = window;
             Require(AuditWindow != nil, @"Native app window exists");
-            Begin();
+            ExpectedBuild = NSProcessInfo.processInfo.environment[@"RELEASE_AUDIT_EXPECT_BUILD"];
+            AuditScope = NSProcessInfo.processInfo.environment[@"RELEASE_AUDIT_SCOPE"] ?: @"full";
+            if ([AuditScope isEqualToString:@"ampersand-header"]) BeginAmpersandHeader(); else Begin();
         } @catch (NSException *error) { Report(error.reason); }
     });
 }

@@ -1,0 +1,156 @@
+{
+  "verifiedAt": "2026-11-03T14:48:06.468627+00:00",
+  "version": "1.2.0-preview.1",
+  "versionCode": 10200,
+  "fromVersion": "1.1.4",
+  "publicBaselineDownloaded": true,
+  "publicBaselineSha256": "82311c8fe23dc0628d568edc250025b6e7d46a50b8f4ee94e37080ddeb39b205",
+  "device": {
+    "serial": "emulator-5556",
+    "ownedDisposableEmulator": true,
+    "androidRelease": "17",
+    "sdkInt": 37,
+    "webViewVersion": "145.0.7632.218",
+    "physicalDevicesModified": false
+  },
+  "sameUidAcrossUpdate": true,
+  "packageUids": "package:local.jeff.mentalarithmetic.test uid:10232\npackage:local.jeff.mentalarithmetic uid:10236",
+  "storageMarkerPersistedAfterColdRelaunchAndUpdate": true,
+  "applicationDataClearedDuringMeasuredUpgrade": false,
+  "setupBeforeMeasuredBaseline": {
+    "supersededDevelopmentPreviewRemovedFromOwnedEmulator": true,
+    "freshPublic114BaselineInstalled": true
+  },
+  "visibleVersion": "Version 1.2.0-preview.1",
+  "additionOptions": [
+    "2"
+  ],
+  "multiplicationOptions": [
+    "1",
+    "2",
+    "3"
+  ],
+  "scriptUrls": [
+    "https://appassets.androidplatform.net/assets/index-BglQMeYT.js"
+  ],
+  "nativeAcceptancePassed": 12,
+  "nativeAcceptanceFailed": 0,
+  "insideOutsideRegression": {
+    "inside": {
+      "operands": [
+        82,
+        76
+      ],
+      "stage": "Inside",
+      "highlightedDigitRefs": [
+        "left:1",
+        "right:0"
+      ],
+      "calculation": "2 \u00d7 7",
+      "result": 14
+    },
+    "outside": {
+      "stage": "Outside",
+      "highlightedDigitRefs": [
+        "left:0",
+        "right:1"
+      ],
+      "calculation": "8 \u00d7 6",
+      "result": 48,
+      "insidePlusOutside": 62
+    },
+    "finalAnswer": 6232
+  },
+  "learnVisuals": {
+    "palette": [
+      {
+        "stage": "First",
+        "color": "rgb(45, 101, 103)",
+        "borderWidth": "1.90476px",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "refs": [
+          "left:0",
+          "right:0"
+        ]
+      },
+      {
+        "stage": "Inside",
+        "color": "rgb(108, 84, 131)",
+        "borderWidth": "1.90476px",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "refs": [
+          "left:1",
+          "right:0"
+        ]
+      },
+      {
+        "stage": "Outside",
+        "color": "rgb(108, 84, 131)",
+        "borderWidth": "1.90476px",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "refs": [
+          "left:0",
+          "right:1"
+        ]
+      },
+      {
+        "stage": "Last",
+        "color": "rgb(125, 87, 35)",
+        "borderWidth": "1.90476px",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "refs": [
+          "left:1",
+          "right:1"
+        ]
+      }
+    ],
+    "equalHighlightBorder": "1.90476px",
+    "carries": {
+      "last": {
+        "kind": "out",
+        "from": "Last",
+        "value": "5",
+        "to": "Inside + Outside (127)",
+        "text": "FromLast\u2192Carry out5\u2192ToInside + Outside (127)"
+      },
+      "middle": [
+        {
+          "kind": "in",
+          "from": "Last (56)",
+          "value": "5",
+          "to": "Carry to the middle",
+          "text": "FromLast (56)\u2192Carry in5\u2192ToCarry to the middle"
+        },
+        {
+          "kind": "out",
+          "from": "Carry to the middle",
+          "value": "13",
+          "to": "First (72)",
+          "text": "FromCarry to the middle\u2192Carry out13\u2192ToFirst (72)"
+        }
+      ]
+    }
+  },
+  "practiceVisuals": {
+    "incorrectCue": "\u00d7",
+    "numericTime": "0.0",
+    "feedbackBorder": "1.90476px",
+    "foreground": "rgb(0, 0, 0)",
+    "answerBackground": "rgb(255, 255, 255)",
+    "visibleElementsChecked": 10
+  },
+  "actualReleaseApk": {
+    "path": "/tmp/mental-arithmetic-visual-review-android/release/Mental-Arithmetic-1.2.0-preview.1-Android.apk",
+    "bytes": 669409,
+    "sha256": "bcf168b0e9cf286be99e807d7fc2c95e104925614c3b26030cc330b489e8b198"
+  },
+  "finalShortLandscapeFix": true,
+  "developmentEvidenceRetained": true,
+  "localReviewOnly": true,
+  "published": false,
+  "allChecksPassed": true,
+  "ownedEmulatorStoppedAfterVerification": true,
+  "ownedEmulatorProcessExited": true,
+  "manualReviewFinalScreenshotsPassed": true,
+  "packageVerification": "visual-review-android-artifacts.json"
+}

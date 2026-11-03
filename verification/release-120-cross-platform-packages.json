@@ -1,0 +1,130 @@
+{
+  "verifiedAt": "2026-11-03T16:44:07.063Z",
+  "version": "1.2.0",
+  "scope": "Independent read-only package presence, archive integrity and actual frontend bytes; iOS native app evidence is recorded separately and is not part of this shared-frontend package comparison.",
+  "artifacts": [
+    {
+      "file": "Mental-Arithmetic-1.2.0-macOS-arm64.dmg",
+      "bytes": 119213044,
+      "sha256": "bc8f6132348108aede4f10a5aec15e6bd2392b68a164ccae1f2858d8811f2f42"
+    },
+    {
+      "file": "Mental-Arithmetic-1.2.0-macOS-arm64.zip",
+      "bytes": 115786667,
+      "sha256": "873bcdba55fa9e3ecc9745e6045f5bbfa109fb96bf4cf1a2b4b4cae546187855"
+    },
+    {
+      "file": "Mental-Arithmetic-1.2.0-Windows-x64-Setup.exe",
+      "bytes": 121278033,
+      "sha256": "fa249c66e977c1590bd26929010abf1b043c2133a91dfcb05c54a28dccb4178a"
+    },
+    {
+      "file": "Mental-Arithmetic-1.2.0-Windows-x64.zip",
+      "bytes": 153165912,
+      "sha256": "a3fe0143d4df5601b0d13038a8fb1f78293e394103e147b24cbaeedc1c7dbdd8"
+    },
+    {
+      "file": "Mental-Arithmetic-1.2.0-Android.apk",
+      "bytes": 670045,
+      "sha256": "aff97c650ccbbcd9d6e430915effe616c9dc03612b9b0a3f26fd59e73f96ba50"
+    },
+    {
+      "file": "Mental-Arithmetic-1.2.0-Web.zip",
+      "bytes": 18181,
+      "sha256": "45c2a7aac135e973d5386ca64a4aee3b8cd946064c751482ff47fb9ac513d3bb"
+    }
+  ],
+  "integrity": {
+    "macOS-arm64.zip": true,
+    "Windows-x64.zip": true,
+    "Windows-x64-Setup.exe": true,
+    "Android.apk": true,
+    "Web.zip": true,
+    "macOS-arm64.dmg": true,
+    "Windows-installer-payload": true
+  },
+  "bundleDigests": [
+    {
+      "file": "_headers",
+      "bytes": 123,
+      "sha256": "3fdc8f8e6af5ff2d1a5424f8cff40a3c11c7deefec052bc2f377ea0fd7ca8ff1",
+      "matches": {
+        "sourceDist": true,
+        "frozenRunner": true,
+        "WebZip": true,
+        "macOSZip": true,
+        "WindowsZip": true,
+        "WindowsInstaller": true,
+        "macOSDmg": true
+      }
+    },
+    {
+      "file": "assets/index-BhBrPgXA.js",
+      "bytes": 44744,
+      "sha256": "e1687c512e782611bb53d9b4a27ae1b465381c40f6f3ec882dc7a249609cf613",
+      "matches": {
+        "sourceDist": true,
+        "frozenRunner": true,
+        "WebZip": true,
+        "macOSZip": true,
+        "WindowsZip": true,
+        "WindowsInstaller": true,
+        "macOSDmg": true
+      }
+    },
+    {
+      "file": "assets/index-W3-ZKpMk.css",
+      "bytes": 19132,
+      "sha256": "e7343db31e3dabc91abcd536bb5ce88fa6527e17a5e61bb3ae095b7c0fc7788e",
+      "matches": {
+        "sourceDist": true,
+        "frozenRunner": true,
+        "WebZip": true,
+        "macOSZip": true,
+        "WindowsZip": true,
+        "WindowsInstaller": true,
+        "macOSDmg": true
+      }
+    },
+    {
+      "file": "index.html",
+      "bytes": 594,
+      "sha256": "156c5dd857c6cf0a02b3ca504ef52b7704cdcaa05d6432890893fa94d0edd7ef",
+      "matches": {
+        "sourceDist": true,
+        "frozenRunner": true,
+        "WebZip": true,
+        "macOSZip": true,
+        "WindowsZip": true,
+        "WindowsInstaller": true,
+        "macOSDmg": true
+      }
+    }
+  ],
+  "packageFlags": {
+    "macOSZip": {
+      "version": "1.2.0",
+      "downloadVersion": "1.2.0",
+      "reviewBuild": false,
+      "androidVersionCode": 10204
+    },
+    "WindowsZip": {
+      "version": "1.2.0",
+      "downloadVersion": "1.2.0",
+      "reviewBuild": false,
+      "androidVersionCode": 10204
+    },
+    "WindowsInstaller": {
+      "version": "1.2.0",
+      "downloadVersion": "1.2.0",
+      "reviewBuild": false,
+      "androidVersionCode": 10204
+    }
+  },
+  "macDmgAsarMatchesZip": true,
+  "macDmgAsarSHA256": "af38a189395da2062e726ba3ccfe2655ea5fa1ee9f9694fa371ddf4601f98670",
+  "ownedDmgMountDetached": true,
+  "WindowsRuntimeExecuted": false,
+  "productChangesPerformed": false,
+  "allChecksPassed": true
+}

@@ -1,5 +1,13 @@
 import UIKit
 
+private final class PracticeExerciseSurface: UIView {
+    var onLayout: (() -> Void)?
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        onLayout?()
+    }
+}
+
 final class PracticeViewController: UIViewController, UITextFieldDelegate {
     var onActiveChange: ((Bool) -> Void)?
 
@@ -7,22 +15,24 @@ final class PracticeViewController: UIViewController, UITextFieldDelegate {
     private let setupScroll = UIScrollView()
     private let setup = AppTheme.stack(spacing: 28, alignment: .center)
     private let titleLabel = AppTheme.label("Mental Arithmetic", size: 32)
-    private let scoreLabel = AppTheme.label(size: 76, identifier: "round-score")
+    private let scoreLabel = AppTheme.label(size: 76, identifier: "round-score", mathematics: true)
     private let summary = AppTheme.stack(axis: .horizontal, spacing: 12)
-    private let maximum = AppTheme.label(size: 24, identifier: "maximum-time")
-    private let minimum = AppTheme.label(size: 24, identifier: "minimum-time")
-    private let average = AppTheme.label(size: 24, identifier: "average-time")
-    private let operation = UISegmentedControl(items: ["Addition", "Multiplication"])
-    private let digits = UISegmentedControl(items: ["2"])
+    private let maximum = AppTheme.label(size: 24, identifier: "maximum-time", mathematics: true)
+    private let minimum = AppTheme.label(size: 24, identifier: "minimum-time", mathematics: true)
+    private let average = AppTheme.label(size: 24, identifier: "average-time", mathematics: true)
+    private let operation = ScholarlySegmentedControl(items: ["Addition", "Multiplication"])
+    private let digits = ScholarlySegmentedControl(items: ["2"])
     private var digitChoices = PracticeSettings.availableDigits(for: .addition)
     private lazy var startButton = AppTheme.button("Start", identifier: "practice-start") { [weak self] in
         self?.startRound()
     }
-    private let exercise = UIView()
-    private let previous = AppTheme.label(size: 30, identifier: "previous-time")
+    private let exercise = PracticeExerciseSurface()
+    private let previous = AppTheme.label(size: 30, identifier: "previous-time", mathematics: true)
+    private let previousCue = AppTheme.label("×", size: 30, bold: true, identifier: "previous-incorrect-cue", mathematics: true)
+    private let previousRow = AppTheme.stack(axis: .horizontal, spacing: 8, alignment: .center)
     private let problem = ArithmeticExpressionView(fontSize: 72, identifier: "practice-problem")
     private let answer = UITextField()
-    private let live = AppTheme.label("0.0", size: 30, identifier: "live-time")
+    private let live = AppTheme.label("0.0", size: 30, identifier: "live-time", mathematics: true)
     private let answerRow = AppTheme.stack(axis: .horizontal, spacing: 16, alignment: .center)
     private var timer: Timer?
     private var previousTop: NSLayoutConstraint!
@@ -43,20 +53,40 @@ final class PracticeViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        updateExerciseLayout()
+    }
+
+    private func updateExerciseLayout() {
         let compact = view.bounds.height < 400
-        let size: CGFloat = compact ? (controller.snapshot.problem?.operation == .addition ? 26 : 40) : 72
-        if problem.fontSize != size, let current = controller.snapshot.problem {
+        let base: CGFloat = compact ? (controller.snapshot.problem?.operation == .addition ? 26 : 40) : 72
+        let room = answerRow.frame.minY - previousRow.frame.maxY - 24
+        let metricsTraits = view.window?.traitCollection ?? traitCollection
+        let scale = AppTheme.mathFont(72, compatibleWith: metricsTraits).pointSize / 72
+        let rows: CGFloat = controller.snapshot.problem?.operation == .addition ? 2.8 : 1.35
+        let size = room > 0 ? min(base, max(12, room / rows / scale)) : 12
+        if abs(problem.fontSize - size) > 0.25, let current = controller.snapshot.problem {
             problem.fontSize = size
             problem.configure(left: String(current.left), right: String(current.right), operation: current.operation)
         }
-        previous.font = AppTheme.font(compact ? 20 : 30)
-        answer.font = AppTheme.font(compact ? 32 : 46)
-        live.font = AppTheme.font(compact ? 24 : 30)
+        previous.font = AppTheme.mathFont(compact ? 20 : 30, compatibleWith: metricsTraits, maximumPointSize: compact ? 24 : nil)
+        previousCue.font = AppTheme.mathFont(compact ? 20 : 30, bold: true, compatibleWith: metricsTraits, maximumPointSize: compact ? 24 : nil)
+        answer.font = AppTheme.mathFont(compact ? 32 : 46, compatibleWith: metricsTraits, maximumPointSize: compact ? 36 : nil)
+        live.font = AppTheme.mathFont(compact ? 24 : 30, compatibleWith: metricsTraits, maximumPointSize: compact ? 26 : nil)
         previousTop.constant = compact ? 4 : 16
         answerBottom.constant = compact ? -8 : -16
         answerMinimumHeight.constant = compact ? 44 : 60
         availableTop.constant = compact ? 4 : 12
         availableBottom.constant = compact ? -4 : -12
+    }
+
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if previousTraitCollection?.preferredContentSizeCategory != traitCollection.preferredContentSizeCategory {
+            summary.axis = traitCollection.preferredContentSizeCategory.isAccessibilityCategory ? .vertical : .horizontal
+            AppTheme.styleSegments(operation)
+            AppTheme.styleSegments(digits, mathematics: true)
+            view.setNeedsLayout()
+        }
     }
 
     private func buildSetup() {
@@ -86,6 +116,7 @@ final class PracticeViewController: UIViewController, UITextFieldDelegate {
         scoreLabel.accessibilityLabel = "Round score"
         setup.addArrangedSubview(titleLabel)
         setup.addArrangedSubview(scoreLabel)
+        summary.axis = traitCollection.preferredContentSizeCategory.isAccessibilityCategory ? .vertical : .horizontal
         summary.distribution = .fillEqually
         for (heading, value) in [("Maximum time", maximum), ("Minimum time", minimum), ("Average time", average)] {
             let column = AppTheme.stack(spacing: 8, alignment: .center)
@@ -107,8 +138,7 @@ final class PracticeViewController: UIViewController, UITextFieldDelegate {
             field.addArrangedSubview(AppTheme.label(label))
             control.selectedSegmentIndex = 0
             control.translatesAutoresizingMaskIntoConstraints = false
-            control.selectedSegmentTintColor = AppTheme.highlight
-            control.setTitleTextAttributes([.font: AppTheme.font(18), .foregroundColor: AppTheme.ink], for: .normal)
+            AppTheme.styleSegments(control, mathematics: control === digits)
             control.heightAnchor.constraint(equalToConstant: 48).isActive = true
             field.addArrangedSubview(control)
             settings.addArrangedSubview(field)
@@ -129,6 +159,7 @@ final class PracticeViewController: UIViewController, UITextFieldDelegate {
     }
 
     private func buildExercise() {
+        exercise.onLayout = { [weak self] in self?.updateExerciseLayout() }
         exercise.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(exercise)
         let answerWidth = answer.widthAnchor.constraint(equalTo: exercise.widthAnchor, multiplier: 0.56)
@@ -139,7 +170,12 @@ final class PracticeViewController: UIViewController, UITextFieldDelegate {
             exercise.topAnchor.constraint(equalTo: view.topAnchor),
             exercise.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-        exercise.addSubview(previous)
+        previousRow.addArrangedSubview(previousCue)
+        previousRow.addArrangedSubview(previous)
+        previousRow.layer.cornerRadius = VisualTokens.cornerRadius
+        previousRow.isLayoutMarginsRelativeArrangement = true
+        previousRow.layoutMargins = UIEdgeInsets(top: 4, left: 8, bottom: 4, right: 8)
+        exercise.addSubview(previousRow)
         exercise.addSubview(problem)
         answer.delegate = self
         answer.keyboardType = .numberPad
@@ -151,7 +187,14 @@ final class PracticeViewController: UIViewController, UITextFieldDelegate {
         answer.smartDashesType = .no
         answer.smartInsertDeleteType = .no
         answer.textContentType = nil
-        answer.font = AppTheme.font(46)
+        answer.font = AppTheme.mathFont(46)
+        answer.backgroundColor = VisualTokens.field
+        answer.layer.borderColor = AppTheme.ink.cgColor
+        answer.layer.borderWidth = VisualTokens.controlBorder
+        answer.layer.cornerRadius = VisualTokens.cornerRadius
+        answer.adjustsFontForContentSizeCategory = true
+        answer.adjustsFontSizeToFitWidth = true
+        answer.minimumFontSize = 20
         answer.textColor = AppTheme.ink
         answer.tintColor = AppTheme.ink
         answer.textAlignment = .right
@@ -177,15 +220,15 @@ final class PracticeViewController: UIViewController, UITextFieldDelegate {
         exercise.addSubview(answerRow)
         let available = UILayoutGuide()
         exercise.addLayoutGuide(available)
-        previousTop = previous.topAnchor.constraint(equalTo: exercise.safeAreaLayoutGuide.topAnchor, constant: 16)
+        previousTop = previousRow.topAnchor.constraint(equalTo: exercise.safeAreaLayoutGuide.topAnchor, constant: 16)
         answerBottom = answerRow.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: -16)
         answerMinimumHeight = answer.heightAnchor.constraint(greaterThanOrEqualToConstant: 60)
-        availableTop = available.topAnchor.constraint(equalTo: previous.bottomAnchor, constant: 12)
+        availableTop = available.topAnchor.constraint(equalTo: previousRow.bottomAnchor, constant: 12)
         availableBottom = available.bottomAnchor.constraint(equalTo: answerRow.topAnchor, constant: -12)
         NSLayoutConstraint.activate([
             previousTop,
-            previous.leadingAnchor.constraint(equalTo: exercise.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            previous.trailingAnchor.constraint(lessThanOrEqualTo: exercise.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            previousRow.leadingAnchor.constraint(equalTo: exercise.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            previousRow.trailingAnchor.constraint(lessThanOrEqualTo: exercise.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             answerRow.trailingAnchor.constraint(equalTo: exercise.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             answerRow.leadingAnchor.constraint(greaterThanOrEqualTo: exercise.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             answerBottom,
@@ -244,7 +287,9 @@ final class PracticeViewController: UIViewController, UITextFieldDelegate {
         answer.text = ""
         live.text = "0.0"
         live.accessibilityValue = "0.0"
-        previous.isHidden = !active || state.previous == nil
+        previousRow.isHidden = !active || state.previous == nil
+        previous.isHidden = previousRow.isHidden
+        previousCue.isHidden = state.previous?.correct != false
         onActiveChange?(active)
         if active, let current = state.problem {
             problem.configure(left: String(current.left), right: String(current.right), operation: current.operation)
@@ -252,7 +297,9 @@ final class PracticeViewController: UIViewController, UITextFieldDelegate {
             if let last = state.previous {
                 let time = Timing.formatTenths(last.elapsedMs)
                 previous.text = time
-                previous.textColor = last.correct ? .black : AppTheme.incorrect
+                previous.textColor = .black
+                previousRow.layer.borderColor = AppTheme.ink.cgColor
+                previousRow.layer.borderWidth = last.correct ? 0 : VisualTokens.emphasisBorder
                 previous.accessibilityLabel = "Previous answer \(last.correct ? "correct" : "incorrect"), \(time) seconds"
             }
             let timer = Timer(timeInterval: 0.05, repeats: true) { [weak self] _ in

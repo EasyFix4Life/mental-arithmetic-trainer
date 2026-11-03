@@ -1,0 +1,268 @@
+{
+  "version": "1.2.0-preview.4",
+  "baselineCommit": "e54135d691f37dfce8e38c60e59f0fd3d9525007",
+  "verifiedAtUTC": "2026-11-03T16:29:31.083840+00:00",
+  "status": "passed",
+  "sourceMatchingFileCount": 46,
+  "sourceMatchingFiles": [
+    {
+      "path": "src/answerPolicy.ts",
+      "sha256": "9a98d597b0f7baa7264b387f52ef8a1f5e80892e5c69446d2dda602f77dd89c1"
+    },
+    {
+      "path": "src/availableOptions.ts",
+      "sha256": "f84b3176d3d1441781227e6959d3576008b23da2a4120d3cd824e4973724cf4e"
+    },
+    {
+      "path": "src/designTokens.css",
+      "sha256": "8516544a0b49a81985f6a9cab0524aab2886f772bd56114930a8b93ed9a0bb23"
+    },
+    {
+      "path": "src/downloadsView.ts",
+      "sha256": "a38e45fedf3add1b56e0a7b5c76a0ecad6091376021c68a6596e054b7deb433a"
+    },
+    {
+      "path": "src/generateRound.ts",
+      "sha256": "7b8b13e15b58e870f27468e538181423c1fa38f73bd5cceb66eb17a3ca8a52cf"
+    },
+    {
+      "path": "src/inputPolicy.ts",
+      "sha256": "1c46093bcaf0345926a460bcf7663bc985d1f77ba1b0b0049cd5046428dda8e8"
+    },
+    {
+      "path": "src/learn/carryVisualizer.ts",
+      "sha256": "4d092ae458ad1663806badccdf459b4334196a9ff0cc370cd25bd5c7a329362d"
+    },
+    {
+      "path": "src/learn/confirmedMultiplicationExamples.ts",
+      "sha256": "3411c4e1e4daaf173d7f5ce047e9e103f89b849933352b58a448a869a5fa800c"
+    },
+    {
+      "path": "src/learn/instructionStepRenderer.ts",
+      "sha256": "cccb71e72d4b96329d54a4538d52d0ac1454bd0a0ab3f96fdfec3d65c92dfc80"
+    },
+    {
+      "path": "src/learn/learnView.ts",
+      "sha256": "42a5fd5db1bef89fd4f7c8d2d180885fd5a4b101ee1a09158820f30974b20f1f"
+    },
+    {
+      "path": "src/learn/lessonCatalog.ts",
+      "sha256": "1f0099ef75fcc546c98ab32ea6aa492ecf0fd3d9ad575196ac750cbf4e9fefcb"
+    },
+    {
+      "path": "src/learn/lessonTypes.ts",
+      "sha256": "4a473acf63bc53140d517547db4f27821f26bc16ad6d054015806571018a1f99"
+    },
+    {
+      "path": "src/learn/positionalInstructions.ts",
+      "sha256": "f1392466307d8f0aed130cbc9abf6146a90ce973f6184057881c58901d3a848f"
+    },
+    {
+      "path": "src/learn/randomExample.ts",
+      "sha256": "03e5b67986bacb5626b1903e85d4c8b7f2518f06e6807859feeba8adfeb3dcd5"
+    },
+    {
+      "path": "src/main.ts",
+      "sha256": "c13ffd799c096737fe002924b377369aed35dfe77f5f83f3053e752ecb5bf3d2"
+    },
+    {
+      "path": "src/practiceView.ts",
+      "sha256": "ce63b28229713f95826516785a780a55cf28e59c237f945db586ccf0fa0fb15a"
+    },
+    {
+      "path": "src/release.ts",
+      "sha256": "09a4a8afa5d5519ea60e1eb181071fce7466ab6738d74f6a534671724794050c"
+    },
+    {
+      "path": "src/roundController.ts",
+      "sha256": "ad3de8085d727fa44a120b7e545d1e07a823e9bd10ec5294c365070cd9efdf7c"
+    },
+    {
+      "path": "src/style.css",
+      "sha256": "712a8ebd969257ff7472872cf46d771c01d3910db6f6961f5765f55620b2453f"
+    },
+    {
+      "path": "src/timer.ts",
+      "sha256": "bfaeaa1c0497565f6d3ceeba0064d903f4559d5b70cb192f86556bb79e0d4b04"
+    },
+    {
+      "path": "src/types.ts",
+      "sha256": "f458432070b282817ece06654683477a9dfefee0201f64fd6f53cd14f2976b21"
+    },
+    {
+      "path": "src/view.ts",
+      "sha256": "860f5b14cf7e85a4b055d90a4e7cea025681012d311815519fa10bb5df7ea9d0"
+    },
+    {
+      "path": "tests/unit/answerPolicy.test.ts",
+      "sha256": "801639d8fc6a372e4ccbfa5b79711b5b355bdf5547f19adcae23816b440a96d7"
+    },
+    {
+      "path": "tests/unit/availableOptions.test.ts",
+      "sha256": "ab4450442d4b8197c8699844fc721d940253bdaf789d37addb53420546a9fb4c"
+    },
+    {
+      "path": "tests/unit/generateRound.test.ts",
+      "sha256": "259a7249b786af942bbb6dad7e704a532b83c32f2c4e7656bfb24f7017697164"
+    },
+    {
+      "path": "tests/unit/lessons.test.ts",
+      "sha256": "1c056cb9409d9c6831027c776599dd72746fa0b109f223b971cb398bef5e06f3"
+    },
+    {
+      "path": "tests/unit/positionalInstructions.test.ts",
+      "sha256": "6e470832d45170a6ed2427e9768eded7bf5b76156eb70675445d992b3e48154f"
+    },
+    {
+      "path": "tests/unit/randomExample.test.ts",
+      "sha256": "031365dab704831f77f8cad34027402ab08a55c28b3a6715c08d28905a2d37f1"
+    },
+    {
+      "path": "tests/unit/release.test.ts",
+      "sha256": "42f3a523bfa272bb3eca8366b70e086c5f2a6a43e1d2ad4580c70a5b9b88df90"
+    },
+    {
+      "path": "tests/unit/requirements.ts",
+      "sha256": "228ca3c0e2297f72e6ba974463c3a2e33ee005d2f1040b6e81a633dacf998da9"
+    },
+    {
+      "path": "tests/unit/roundController.test.ts",
+      "sha256": "868363cc4696ac4182ff678e36b524ade46fa3e07a6eea8153a4b764a4920444"
+    },
+    {
+      "path": "tests/unit/roundTiming.test.ts",
+      "sha256": "30470d873bc7d4ac85167358b39f0de725bcf79f5b4d067bad993560da7f1df4"
+    },
+    {
+      "path": "tests/unit/timer.test.ts",
+      "sha256": "3d5098d8f768b5ca649cef00f657fbbfd939f6a4be1e1f2d095c1204c0df6f7f"
+    },
+    {
+      "path": "tests/unit/visualTokens.test.ts",
+      "sha256": "e39fac4a5752b7229d02d2698c0c4c2091fd7dde91fa77e2edbb3a884ee4d1c7"
+    },
+    {
+      "path": "tests/browser/downloads.spec.ts",
+      "sha256": "041a8b0b7f4fd3890dd0023785c90396448f0b4a8811d80282deb3c304bebcfc"
+    },
+    {
+      "path": "tests/browser/grouped-stages.spec.ts",
+      "sha256": "ee733cedadd840f73f0a4c69e8992a9a552415bda8f7837b01c7a3f1c68c932a"
+    },
+    {
+      "path": "tests/browser/learn.spec.ts",
+      "sha256": "e5a3aea67f4ae19673437dba944b56c36a7e8c3148496a0604cd3e6cfbbedf8d"
+    },
+    {
+      "path": "tests/browser/scholarly-visuals.spec.ts",
+      "sha256": "d15d91b1cc52b56c63537303980874c040db8c9be3f0d43e7ced50b556eb3f4f"
+    },
+    {
+      "path": "tests/browser/trainer.spec.ts",
+      "sha256": "99b362aa452640b0eb3a63fb8bfc4950a4aa5260366b734c1983cfb1aa775ce1"
+    },
+    {
+      "path": "public/_headers",
+      "sha256": "3fdc8f8e6af5ff2d1a5424f8cff40a3c11c7deefec052bc2f377ea0fd7ca8ff1"
+    },
+    {
+      "path": "package.json",
+      "sha256": "a85691ed0ee62ffa9302bf236ace0e80cfaec7ab1f6f4cb7951517cf8622589c"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "ff6d1e3d88822b28e6e61cf24e82d4d65c0810ba61c568a27f0c8664a4017a63"
+    },
+    {
+      "path": "design/visual-tokens.json",
+      "sha256": "6b5600c20400284a391f146a07fd4ca093de03870e237344d63f988d4b51b9bd"
+    },
+    {
+      "path": "scripts/generate-visual-tokens.mjs",
+      "sha256": "4a0d988e0712fae71829f1a92200711a9de92016e1cc8aeb5cbff80f15ad871b"
+    },
+    {
+      "path": "ios/MentalArithmetic/UI/VisualTokens.generated.swift",
+      "sha256": "29525c5d667d5059f49af29e593f326f80a059bf90250c3f4197d541d5d97346"
+    },
+    {
+      "path": "android/app/src/main/res/values/visual_tokens.xml",
+      "sha256": "9f423f4be68f1e6f927de078b10f013f33f729b934a628369bfaa43add7123f5"
+    }
+  ],
+  "unit": {
+    "success": true,
+    "numTotalTests": 221,
+    "numPassedTests": 221,
+    "numFailedTests": 0,
+    "numPendingTests": 0
+  },
+  "browser": {
+    "startTime": "2026-11-03T16:26:23.207Z",
+    "duration": 25046.7,
+    "expected": 82,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "build": {
+    "designTokenResourcesVerified": 3,
+    "strictTypecheckPassed": true,
+    "viteProductionBuildPassed": true,
+    "assets": [
+      {
+        "path": "_headers",
+        "bytes": 123,
+        "sha256": "3fdc8f8e6af5ff2d1a5424f8cff40a3c11c7deefec052bc2f377ea0fd7ca8ff1"
+      },
+      {
+        "path": "assets/index-O0K00jXj.js",
+        "bytes": 44754,
+        "sha256": "774c58f12463c4df19cec4c9104fc368cb9f4e7776c767ef0cb5fadd000e2659"
+      },
+      {
+        "path": "assets/index-W3-ZKpMk.css",
+        "bytes": 19132,
+        "sha256": "e7343db31e3dabc91abcd536bb5ce88fa6527e17a5e61bb3ae095b7c0fc7788e"
+      },
+      {
+        "path": "index.html",
+        "bytes": 594,
+        "sha256": "1f31c92fa40c0972c678e4348fd8ebadc204de3585fe6808a88bb55eb6b0a7c7"
+      }
+    ],
+    "sourceDistIdentical": true
+  },
+  "offerings": {
+    "learn": [
+      "multiplication-1",
+      "multiplication-2"
+    ],
+    "learnDefault": "multiplication-1",
+    "practice": [
+      "addition-2",
+      "multiplication-1",
+      "multiplication-2"
+    ],
+    "practiceDefault": "addition-2"
+  },
+  "coverage": [
+    "All removed Learn options absent, including all addition and three-digit multiplication",
+    "Practice exactly A2/M1/M2; three-digit multiplication absent",
+    "58 + 67 Practice vertical expression, incomplete prefix, automatic submission and ten-problem 9/10 score with timing statistics",
+    "Remaining random Learn examples, unequal Inside/Outside mapping, whole carries and literal header ampersands",
+    "Desktop/mobile 280/390/768/1280 widths, 200% text, short-keyboard layout and monochrome Practice retained"
+  ],
+  "validationScope": "Installed desktop Google Chrome plus Chromium mobile emulation; native platform runtime evidence is supplied separately.",
+  "fixtureCorrection": {
+    "initialRun": {
+      "passed": 80,
+      "failed": 2,
+      "cause": "New Practice-only 58+67 test initially used the Learn generator seed; corrected test-only to Practice unordered-pair index3201/4095 plus orientation draw0. No product change."
+    },
+    "targetedRetestPassed": 2,
+    "finalCoherentRunPassed": 82,
+    "developmentEvidence": "options-review-fixture-development-results.json"
+  },
+  "allChecksPassed": true
+}

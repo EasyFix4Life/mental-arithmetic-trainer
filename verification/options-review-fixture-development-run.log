@@ -1,0 +1,183 @@
+
+> mental-arithmetic-trainer@1.2.0-preview.4 test:browser
+> playwright test --workers=3
+
+[WebServer] (node:16879) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 82 tests using 3 workers
+
+(node:16882) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:16880) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:16881) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [desktop] › tests/browser/downloads.spec.ts:10:1 › website offers clearly named, platform-specific public release downloads (1.1s)
+  ✓   1 [desktop] › tests/browser/downloads.spec.ts:76:1 › Download Apps is keyboard reachable and scrolls to a named section from either mode (1.2s)
+  ✓   3 [desktop] › tests/browser/downloads.spec.ts:100:1 › platform cards and navigation fit desktop and 390/280-pixel phones without overlap (1.4s)
+  ✓   5 [desktop] › tests/browser/downloads.spec.ts:206:1 › production view excludes download controls from native app origins and the default mount (448ms)
+  ✓   6 [desktop] › tests/browser/grouped-stages.spec.ts:16:1 › named stages form one enclosed product with a distinct middle sum and a separate final answer (823ms)
+  ✓   8 [desktop] › tests/browser/grouped-stages.spec.ts:117:1 › numbered lessons retain their own navigation and Practice remains outside the instructional palette (526ms)
+  ✓   9 [desktop] › tests/browser/learn.spec.ts:26:1 › both modes are accessible and two available multiplication lessons preserve their relative order (339ms)
+  ✓  10 [desktop] › tests/browser/learn.spec.ts:50:1 › remaining multiplication lessons stay horizontal with large Arial operands on ivory (362ms)
+  ✓  11 [desktop] › tests/browser/learn.spec.ts:92:1 › prominent Learn How button supports keyboard activation, named walkthrough and focus return (462ms)
+  ✓   4 [desktop] › tests/browser/downloads.spec.ts:142:1 › downloads hide throughout a ten-answer round and return with correct score and timing (3.1s)
+  ✓   7 [desktop] › tests/browser/grouped-stages.spec.ts:65:1 › grouped equation reflows as intact units at narrow, tablet and desktop widths with doubled text (2.6s)
+  ✓  12 [desktop] › tests/browser/learn.spec.ts:127:1 › Learn How button and operands stay separate and readable at narrow widths in both available multiplication lessons (730ms)
+  ✓  13 [desktop] › tests/browser/learn.spec.ts:162:1 › both available multiplication lessons have complete instructions and a correct final answer (693ms)
+  ✓  15 [desktop] › tests/browser/learn.spec.ts:238:3 › Inside selects inner digits and Outside selects outer digits for 82 × 76 (643ms)
+  ✓  16 [desktop] › tests/browser/learn.spec.ts:238:3 › Inside selects inner digits and Outside selects outer digits for 20 × 15 (511ms)
+  ✓  14 [desktop] › tests/browser/learn.spec.ts:180:1 › both available multiplication lessons open with random in-range operands and can request another example without starting Practice (1.5s)
+  ✓  18 [desktop] › tests/browser/learn.spec.ts:337:1 › confirmed 12 × 12 walkthrough uses exact digit pairs and resolves the middle sum to 144 (892ms)
+  ✓  17 [desktop] › tests/browser/learn.spec.ts:271:1 › a random asymmetric example applies First, Inside, Outside and Last with both carries and its final answer (1.2s)
+  ✓  20 [desktop] › tests/browser/learn.spec.ts:490:1 › changing confirmed examples resets the walkthrough and clears future digits and carries (587ms)
+  ✓  19 [desktop] › tests/browser/learn.spec.ts:407:1 › confirmed 18 × 18 trace carries 6 into 16, then 2 into First, to complete 324 (1.2s)
+  ✓  23 [desktop] › tests/browser/learn.spec.ts:632:1 › addition uses the same renderer without forced multiplication stage names or implied carries (341ms)
+  ✓  22 [desktop] › tests/browser/learn.spec.ts:572:1 › generic renderer highlights only supplied references and displays verified products, sums, carries and progressive digits (494ms)
+  ✓  21 [desktop] › tests/browser/learn.spec.ts:525:1 › Learn never starts a practice timer or score; completed scores survive Learn and practice keeps immediate no-review progression (1.1s)
+  ✓  25 [desktop] › tests/browser/learn.spec.ts:699:1 › all addition lessons and three-digit multiplication are absent while Practice keeps its three available settings (333ms)
+  ✓  26 [desktop] › tests/browser/scholarly-visuals.spec.ts:15:1 › scholarly text and Arial mathematics accompany equal Learn stage treatments and authored pair brackets (971ms)
+  ✓  27 [desktop] › tests/browser/scholarly-visuals.spec.ts:41:1 › carry routes expose whole authored values, origins and destinations without reconnecting operand digits (895ms)
+  ✓  29 [desktop] › tests/browser/scholarly-visuals.spec.ts:89:1 › Practice uses only monochrome controls and feedback with a separate wrong-answer symbol and unchanged numeric time (266ms)
+  ✓  30 [desktop] › tests/browser/scholarly-visuals.spec.ts:113:1 › a short landscape keyboard viewport keeps the full problem, input, timers and previous feedback separate (387ms)
+  ✓  31 [desktop] › tests/browser/trainer.spec.ts:76:1 › setup contains only the specified choices and waits for manual Start (158ms)
+  ✓  28 [desktop] › tests/browser/scholarly-visuals.spec.ts:63:1 › narrow, tablet and doubled text layouts preserve the remaining lesson bracket geometry and result boxes (1.3s)
+  ✓  33 [desktop] › tests/browser/trainer.spec.ts:133:5 › addition, 2 digit operands: ten unique problems, automatic scoring and manual restart (410ms)
+  ✓  34 [desktop] › tests/browser/trainer.spec.ts:133:5 › multiplication, 1 digit operands: ten unique problems, automatic scoring and manual restart (405ms)
+  ✓  35 [desktop] › tests/browser/trainer.spec.ts:133:5 › multiplication, 2 digit operands: ten unique problems, automatic scoring and manual restart (417ms)
+  ✓  32 [desktop] › tests/browser/trainer.spec.ts:97:1 › multiplication lengths normalize to two-digit addition and its ten-answer round preserves timing (1.8s)
+  ✓  37 [desktop] › tests/browser/trainer.spec.ts:262:1 › invalid characters are rejected as a transaction rather than stripped into an answer (347ms)
+  ✓  38 [desktop] › tests/browser/trainer.spec.ts:285:1 › leading zeros and atomic overlong input are each wrong and advance exactly once (329ms)
+  ✓  39 [desktop] › tests/browser/trainer.spec.ts:306:1 › a separate physical key after auto-submit starts the next answer under the provisional policy (343ms)
+  ✘  24 [desktop] › tests/browser/learn.spec.ts:672:1 › Practice retains two-digit addition with vertical alignment, immediate submission and ten-answer timing (5.3s)
+(node:17203) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  40 [desktop] › tests/browser/trainer.spec.ts:319:1 › ten incorrect entries produce zero and Enter cannot submit a completed round (1.4s)
+(node:17234) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  41 [desktop] › tests/browser/trainer.spec.ts:329:1 › specified font, ivory, timer positions and no overflow at the configured viewport (625ms)
+(node:17272) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  42 [mobile] › tests/browser/downloads.spec.ts:10:1 › website offers clearly named, platform-specific public release downloads (765ms)
+  ✓  43 [mobile] › tests/browser/downloads.spec.ts:76:1 › Download Apps is keyboard reachable and scrolls to a named section from either mode (718ms)
+  ✓  36 [desktop] › tests/browser/trainer.spec.ts:180:1 › partial entry, Enter, Backspace, timers and completed-round minimum, maximum and raw-duration average (5.5s)
+  ✓  44 [mobile] › tests/browser/downloads.spec.ts:100:1 › platform cards and navigation fit desktop and 390/280-pixel phones without overlap (1.3s)
+(node:17345) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  46 [mobile] › tests/browser/grouped-stages.spec.ts:16:1 › named stages form one enclosed product with a distinct middle sum and a separate final answer (1.1s)
+  ✓  47 [mobile] › tests/browser/downloads.spec.ts:206:1 › production view excludes download controls from native app origins and the default mount (473ms)
+  ✓  49 [mobile] › tests/browser/grouped-stages.spec.ts:117:1 › numbered lessons retain their own navigation and Practice remains outside the instructional palette (556ms)
+  ✓  50 [mobile] › tests/browser/learn.spec.ts:26:1 › both modes are accessible and two available multiplication lessons preserve their relative order (451ms)
+  ✓  51 [mobile] › tests/browser/learn.spec.ts:50:1 › remaining multiplication lessons stay horizontal with large Arial operands on ivory (336ms)
+  ✓  45 [mobile] › tests/browser/downloads.spec.ts:142:1 › downloads hide throughout a ten-answer round and return with correct score and timing (3.0s)
+  ✓  52 [mobile] › tests/browser/learn.spec.ts:92:1 › prominent Learn How button supports keyboard activation, named walkthrough and focus return (343ms)
+  ✓  53 [mobile] › tests/browser/learn.spec.ts:127:1 › Learn How button and operands stay separate and readable at narrow widths in both available multiplication lessons (671ms)
+  ✓  54 [mobile] › tests/browser/learn.spec.ts:162:1 › both available multiplication lessons have complete instructions and a correct final answer (534ms)
+  ✓  48 [mobile] › tests/browser/grouped-stages.spec.ts:65:1 › grouped equation reflows as intact units at narrow, tablet and desktop widths with doubled text (2.7s)
+  ✓  57 [mobile] › tests/browser/learn.spec.ts:238:3 › Inside selects inner digits and Outside selects outer digits for 20 × 15 (546ms)
+  ✓  56 [mobile] › tests/browser/learn.spec.ts:238:3 › Inside selects inner digits and Outside selects outer digits for 82 × 76 (1.0s)
+  ✓  55 [mobile] › tests/browser/learn.spec.ts:180:1 › both available multiplication lessons open with random in-range operands and can request another example without starting Practice (1.3s)
+  ✓  59 [mobile] › tests/browser/learn.spec.ts:337:1 › confirmed 12 × 12 walkthrough uses exact digit pairs and resolves the middle sum to 144 (819ms)
+  ✓  58 [mobile] › tests/browser/learn.spec.ts:271:1 › a random asymmetric example applies First, Inside, Outside and Last with both carries and its final answer (1.2s)
+  ✓  61 [mobile] › tests/browser/learn.spec.ts:490:1 › changing confirmed examples resets the walkthrough and clears future digits and carries (477ms)
+  ✓  60 [mobile] › tests/browser/learn.spec.ts:407:1 › confirmed 18 × 18 trace carries 6 into 16, then 2 into First, to complete 324 (1.2s)
+  ✓  63 [mobile] › tests/browser/learn.spec.ts:572:1 › generic renderer highlights only supplied references and displays verified products, sums, carries and progressive digits (388ms)
+  ✓  64 [mobile] › tests/browser/learn.spec.ts:632:1 › addition uses the same renderer without forced multiplication stage names or implied carries (269ms)
+  ✓  62 [mobile] › tests/browser/learn.spec.ts:525:1 › Learn never starts a practice timer or score; completed scores survive Learn and practice keeps immediate no-review progression (899ms)
+  ✓  66 [mobile] › tests/browser/learn.spec.ts:699:1 › all addition lessons and three-digit multiplication are absent while Practice keeps its three available settings (357ms)
+  ✓  67 [mobile] › tests/browser/scholarly-visuals.spec.ts:15:1 › scholarly text and Arial mathematics accompany equal Learn stage treatments and authored pair brackets (734ms)
+  ✓  68 [mobile] › tests/browser/scholarly-visuals.spec.ts:41:1 › carry routes expose whole authored values, origins and destinations without reconnecting operand digits (662ms)
+  ✓  70 [mobile] › tests/browser/scholarly-visuals.spec.ts:89:1 › Practice uses only monochrome controls and feedback with a separate wrong-answer symbol and unchanged numeric time (329ms)
+  ✓  71 [mobile] › tests/browser/scholarly-visuals.spec.ts:113:1 › a short landscape keyboard viewport keeps the full problem, input, timers and previous feedback separate (606ms)
+  ✓  72 [mobile] › tests/browser/trainer.spec.ts:76:1 › setup contains only the specified choices and waits for manual Start (308ms)
+  ✓  69 [mobile] › tests/browser/scholarly-visuals.spec.ts:63:1 › narrow, tablet and doubled text layouts preserve the remaining lesson bracket geometry and result boxes (2.1s)
+  ✓  74 [mobile] › tests/browser/trainer.spec.ts:133:5 › addition, 2 digit operands: ten unique problems, automatic scoring and manual restart (544ms)
+  ✓  75 [mobile] › tests/browser/trainer.spec.ts:133:5 › multiplication, 1 digit operands: ten unique problems, automatic scoring and manual restart (441ms)
+  ✓  73 [mobile] › tests/browser/trainer.spec.ts:97:1 › multiplication lengths normalize to two-digit addition and its ten-answer round preserves timing (1.9s)
+  ✓  76 [mobile] › tests/browser/trainer.spec.ts:133:5 › multiplication, 2 digit operands: ten unique problems, automatic scoring and manual restart (489ms)
+  ✓  78 [mobile] › tests/browser/trainer.spec.ts:262:1 › invalid characters are rejected as a transaction rather than stripped into an answer (298ms)
+  ✓  79 [mobile] › tests/browser/trainer.spec.ts:285:1 › leading zeros and atomic overlong input are each wrong and advance exactly once (332ms)
+  ✓  80 [mobile] › tests/browser/trainer.spec.ts:306:1 › a separate physical key after auto-submit starts the next answer under the provisional policy (271ms)
+  ✘  65 [mobile] › tests/browser/learn.spec.ts:672:1 › Practice retains two-digit addition with vertical alignment, immediate submission and ten-answer timing (5.2s)
+(node:17615) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  81 [mobile] › tests/browser/trainer.spec.ts:319:1 › ten incorrect entries produce zero and Enter cannot submit a completed round (433ms)
+  ✓  82 [mobile] › tests/browser/trainer.spec.ts:329:1 › specified font, ivory, timer positions and no overflow at the configured viewport (326ms)
+  ✓  77 [mobile] › tests/browser/trainer.spec.ts:180:1 › partial entry, Enter, Backspace, timers and completed-round minimum, maximum and raw-duration average (4.0s)
+
+
+  1) [desktop] › tests/browser/learn.spec.ts:672:1 › Practice retains two-digit addition with vertical alignment, immediate submission and ten-answer timing 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  locator('#left-operand')
+    Expected: "58"
+    Received: "91"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" locator('#left-operand') with timeout 5000ms
+      - waiting for locator('#left-operand')
+        14 × locator resolved to <span id="left-operand">91</span>
+           - unexpected value "91"
+
+
+      678 |   await expect(page.locator('#digit-count option')).toHaveText(['2']);
+      679 |   await page.locator('#start').click();
+    > 680 |   await expect(page.locator('#left-operand')).toHaveText('58');
+          |                                               ^
+      681 |   await expect(page.locator('#right-operand')).toHaveText('67');
+      682 |   const boxes = await page.locator('#problem').evaluate(root => [...root.querySelectorAll('#left-operand, #right-operand')].map(e => e.getBoundingClientRect().toJSON()));
+      683 |   expect(boxes[0]!.bottom).toBeLessThanOrEqual(boxes[1]!.top);
+        at /private/tmp/mental-arithmetic-options-preview/tests/browser/learn.spec.ts:680:47
+
+    Error Context: test-results/learn-Practice-retains-two-2a8df-ssion-and-ten-answer-timing-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/learn-Practice-retains-two-2a8df-ssion-and-ten-answer-timing-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/learn-Practice-retains-two-2a8df-ssion-and-ten-answer-timing-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile] › tests/browser/learn.spec.ts:672:1 › Practice retains two-digit addition with vertical alignment, immediate submission and ten-answer timing 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  locator('#left-operand')
+    Expected: "58"
+    Received: "91"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" locator('#left-operand') with timeout 5000ms
+      - waiting for locator('#left-operand')
+        14 × locator resolved to <span id="left-operand">91</span>
+           - unexpected value "91"
+
+
+      678 |   await expect(page.locator('#digit-count option')).toHaveText(['2']);
+      679 |   await page.locator('#start').click();
+    > 680 |   await expect(page.locator('#left-operand')).toHaveText('58');
+          |                                               ^
+      681 |   await expect(page.locator('#right-operand')).toHaveText('67');
+      682 |   const boxes = await page.locator('#problem').evaluate(root => [...root.querySelectorAll('#left-operand, #right-operand')].map(e => e.getBoundingClientRect().toJSON()));
+      683 |   expect(boxes[0]!.bottom).toBeLessThanOrEqual(boxes[1]!.top);
+        at /private/tmp/mental-arithmetic-options-preview/tests/browser/learn.spec.ts:680:47
+
+    Error Context: test-results/learn-Practice-retains-two-2a8df-ssion-and-ten-answer-timing-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/learn-Practice-retains-two-2a8df-ssion-and-ten-answer-timing-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/learn-Practice-retains-two-2a8df-ssion-and-ten-answer-timing-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [desktop] › tests/browser/learn.spec.ts:672:1 › Practice retains two-digit addition with vertical alignment, immediate submission and ten-answer timing 
+    [mobile] › tests/browser/learn.spec.ts:672:1 › Practice retains two-digit addition with vertical alignment, immediate submission and ten-answer timing 
+  80 passed (37.5s)

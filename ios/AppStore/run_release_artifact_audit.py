@@ -28,6 +28,8 @@ def main() -> None:
     parser.add_argument("--device", required=True)
     parser.add_argument("--app", required=True, type=Path)
     parser.add_argument("--expected-version", required=True)
+    parser.add_argument("--expected-build")
+    parser.add_argument("--scope", choices=["full", "ampersand-header"], default="full")
     parser.add_argument("--report", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
     args = parser.parse_args()
@@ -53,15 +55,18 @@ def main() -> None:
         sdk = command("xcrun", "--sdk", "iphonesimulator", "--show-sdk-path")
         command("xcrun", "clang", "-dynamiclib", "-target", "arm64-apple-ios17.0-simulator", "-isysroot", sdk,
                 "-fobjc-arc", "-framework", "UIKit", "-framework", "Foundation",
+                "-framework", "CoreGraphics", "-framework", "QuartzCore",
                 str(Path(__file__).with_name("ReleaseArtifactAudit.m")), "-o", str(library))
         environment = os.environ.copy()
         environment["SIMCTL_CHILD_DYLD_INSERT_LIBRARIES"] = str(library)
         environment["SIMCTL_CHILD_RELEASE_AUDIT_EXPECT_VERSION"] = args.expected_version
+        environment["SIMCTL_CHILD_RELEASE_AUDIT_EXPECT_BUILD"] = args.expected_build or info["CFBundleVersion"]
+        environment["SIMCTL_CHILD_RELEASE_AUDIT_SCOPE"] = args.scope
         launch = subprocess.run(["xcrun", "simctl", "launch", "--terminate-running-process", args.device,
                                  info["CFBundleIdentifier"]], env=environment, text=True, capture_output=True)
         if launch.returncode:
             raise RuntimeError(launch.stderr or launch.stdout)
-        deadline = time.monotonic() + 30
+        deadline = time.monotonic() + 50
         seen = set()
         while not result_path.exists():
             if time.monotonic() > deadline:
@@ -78,11 +83,13 @@ def main() -> None:
     report["installedBinarySHA256"] = hashlib.sha256((installed / info["CFBundleExecutable"]).read_bytes()).hexdigest()
     report["appBinaryUnchanged"] = hashlib.sha256(binary.read_bytes()).hexdigest() == before == report["installedBinarySHA256"]
     report["expectedVersion"] = args.expected_version
+    report["expectedBuild"] = args.expected_build or info["CFBundleVersion"]
+    report["requestedScope"] = args.scope
     report["sourceApp"] = str(args.app.resolve())
     args.report.write_text(json.dumps(report, indent=2) + "\n")
     if report["status"] != "passed" or not report["appBinaryUnchanged"]:
         raise RuntimeError(json.dumps(report, indent=2))
-    command("xcrun", "simctl", "io", args.device, "screenshot", str((args.output / "privacy.png").resolve()))
+    command("xcrun", "simctl", "io", args.device, "screenshot", str((args.output / ("final.png" if args.scope == "ampersand-header" else "privacy.png")).resolve()))
     print(f"Packaged Release {report['version']} ({report['build']}): {report['passedChecks']} checks passed; executable unchanged", flush=True)
 
 

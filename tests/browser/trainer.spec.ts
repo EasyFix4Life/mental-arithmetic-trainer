@@ -86,17 +86,18 @@ test('setup contains only the specified choices and waits for manual Start', asy
   await expect(page.locator('#start')).toHaveText('Start');
   await expect(page.locator('label[for=operation]')).toContainText('Operation');
   await page.getByLabel('Operation', { exact: true }).selectOption('multiplication');
-  await expect(page.locator('#digit-count option')).toHaveText(['1', '2', '3']);
+  await expect(page.locator('#digit-count option')).toHaveText(['1', '2']);
+  await expect(page.locator('#digit-count option[value="3"]')).toHaveCount(0);
   await expect(page.locator('label[for=digit-count]')).toContainText('Digits per operand');
-  await page.getByLabel('Digits per operand', { exact: true }).selectOption('3');
+  await page.getByLabel('Digits per operand', { exact: true }).selectOption('2');
   await expect(page.locator('#exercise')).toBeHidden();
   await expect(page.locator('form')).toHaveCount(0);
 });
 
 test('multiplication lengths normalize to two-digit addition and its ten-answer round preserves timing', async ({ page }, testInfo) => {
-  for (const digits of ['1', '2', '3']) {
+  for (const digits of ['1', '2']) {
     await page.locator('#operation').selectOption('multiplication');
-    await expect(page.locator('#digit-count option')).toHaveText(['1', '2', '3']);
+    await expect(page.locator('#digit-count option')).toHaveText(['1', '2']);
     await page.locator('#digit-count').selectOption(digits);
     await page.locator('#operation').selectOption('addition');
     await expect(page.locator('#digit-count option')).toHaveText(['2']);
@@ -119,7 +120,7 @@ test('multiplication lengths normalize to two-digit addition and its ten-answer 
   await expect(page.locator('#maximum-time')).toHaveText('1.0 s');
   await expect(page.locator('#average-time')).toHaveText('0.5 s');
   await page.locator('#operation').selectOption('multiplication');
-  await page.locator('#digit-count').selectOption('3');
+  await page.locator('#digit-count').selectOption('2');
   await page.locator('#operation').selectOption('addition');
   await expect(page.locator('#digit-count')).toHaveValue('2');
   await expectFinished(page, 8);
@@ -128,7 +129,7 @@ test('multiplication lengths normalize to two-digit addition and its ten-answer 
 });
 
 for (const operation of ['addition', 'multiplication'] as const) {
-  for (const digits of operation === 'addition' ? [2] as const : [1, 2, 3] as const) {
+  for (const digits of operation === 'addition' ? [2] as const : [1, 2] as const) {
     test(`${operation}, ${digits} digit operands: ten unique problems, automatic scoring and manual restart`, async ({ page }) => {
       await startRound(page, operation, digits);
       const seen = new Set<string>();
@@ -164,7 +165,7 @@ for (const operation of ['addition', 'multiplication'] as const) {
       await expectFinished(page, 10);
       // Waiting or changing either setting must leave the completed score in place.
       await page.locator('#operation').selectOption(operation === 'addition' ? 'multiplication' : 'addition');
-      await page.locator('#digit-count').selectOption(operation === 'addition' ? '3' : '2');
+      await page.locator('#digit-count').selectOption('2');
       await expectFinished(page, 10);
       await page.locator('#start').click();
       await expect(page.locator('#score')).toBeHidden();
@@ -182,7 +183,7 @@ test('partial entry, Enter, Backspace, timers and completed-round minimum, maxim
   const instant = new Date('2026-10-24T16:00:00Z');
   await page.clock.install({ time: instant });
   await page.clock.pauseAt(new Date(instant.getTime() + 1_000));
-  await startRound(page, 'multiplication', 3);
+  await startRound(page, 'multiplication', 2);
   const first = await currentProblem(page, 'multiplication');
   const answerField = page.locator('#answer');
 
@@ -216,7 +217,7 @@ test('partial entry, Enter, Backspace, timers and completed-round minimum, maxim
   await page.keyboard.type('0'.repeat(second.answer.length));
   await expect(page.locator('#problem')).not.toHaveText(second.text ?? '');
   await expect(page.locator('#previous-time')).toHaveText('0.5');
-  await expect(page.locator('#previous-time')).toHaveCSS('color', 'rgb(176, 0, 0)');
+  await expect(page.locator('#previous-time')).toHaveCSS('color', 'rgb(0, 0, 0)');
   await expect(page.locator('#previous-time')).toHaveAttribute('aria-label', /incorrect/i);
   await expect(page.locator('#live-time')).toHaveText('0.0');
   await expect(answerField).toBeFocused();
@@ -259,7 +260,7 @@ test('partial entry, Enter, Backspace, timers and completed-round minimum, maxim
 });
 
 test('invalid characters are rejected as a transaction rather than stripped into an answer', async ({ page }) => {
-  await startRound(page, 'multiplication', 3);
+  await startRound(page, 'multiplication', 2);
   const first = await currentProblem(page, 'multiplication');
   const answerField = page.locator('#answer');
   await page.keyboard.type('1');
@@ -282,19 +283,19 @@ test('invalid characters are rejected as a transaction rather than stripped into
 });
 
 test('leading zeros and atomic overlong input are each wrong and advance exactly once', async ({ page }) => {
-  await startRound(page, 'multiplication', 3);
+  await startRound(page, 'multiplication', 2);
   const first = await currentProblem(page, 'multiplication');
   const answerField = page.locator('#answer');
 
   await answerField.fill(`0${first.answer.slice(1)}`);
   await expect(page.locator('#problem')).not.toHaveText(first.text ?? '');
-  await expect(page.locator('#previous-time')).toHaveCSS('color', 'rgb(176, 0, 0)');
+  await expect(page.locator('#previous-time')).toHaveCSS('color', 'rgb(0, 0, 0)');
   await expect(answerField).toHaveValue('');
   const second = await currentProblem(page, 'multiplication');
   // A paste is one transaction, with a correct prefix that must not be accepted.
   await pasteText(page, `${second.answer}9`);
   await expect(page.locator('#problem')).not.toHaveText(second.text ?? '');
-  await expect(page.locator('#previous-time')).toHaveCSS('color', 'rgb(176, 0, 0)');
+  await expect(page.locator('#previous-time')).toHaveCSS('color', 'rgb(0, 0, 0)');
   await expect(answerField).toHaveValue('');
   await expect(answerField).toBeFocused();
   await answerRemaining(page, 'multiplication', 8, 8);
@@ -303,7 +304,7 @@ test('leading zeros and atomic overlong input are each wrong and advance exactly
 });
 
 test('a separate physical key after auto-submit starts the next answer under the provisional policy', async ({ page }) => {
-  await startRound(page, 'multiplication', 3);
+  await startRound(page, 'multiplication', 2);
   const first = await currentProblem(page, 'multiplication');
   await page.keyboard.type(first.answer);
   const second = await currentProblem(page, 'multiplication');
@@ -325,12 +326,12 @@ test('ten incorrect entries produce zero and Enter cannot submit a completed rou
   await expectFinished(page, 0);
 });
 
-test('specified font, sepia, timer positions and no overflow at the configured viewport', async ({ page }, testInfo) => {
-  await startRound(page, 'multiplication', 3);
+test('specified font, ivory, timer positions and no overflow at the configured viewport', async ({ page }, testInfo) => {
+  await startRound(page, 'multiplication', 2);
   const first = await currentProblem(page, 'multiplication');
   await page.keyboard.type(first.answer);
 
-  await expect(page.locator('html')).toHaveCSS('background-color', 'rgb(232, 215, 181)');
+  await expect(page.locator('html')).toHaveCSS('background-color', 'rgb(250, 247, 240)');
   const layout = await page.evaluate(() => {
     const rect = (selector: string) => {
       const box = document.querySelector(selector)!.getBoundingClientRect();

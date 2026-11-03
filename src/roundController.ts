@@ -81,7 +81,7 @@ export class RoundController {
     }
     operandRange(settings.digitCount);
     if (!isAvailableSettings(settings)) {
-      throw new RangeError('Addition practice supports two-digit operands only.');
+      throw new RangeError('Practice supports two-digit addition and one- or two-digit multiplication.');
     }
     const generated = this.generate(settings.operation, settings.digitCount);
     validateRound(generated, settings);

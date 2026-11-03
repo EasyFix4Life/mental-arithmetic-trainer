@@ -1,0 +1,65 @@
+[
+  {
+    "file": "ios/MentalArithmetic/Core/ConfirmedExamples.swift",
+    "baselineCommit": "0db325764a191e8e07d130e52efebcbb467d3239",
+    "baselineSHA256": "bd157c428cbb7a618b6cbea656507a0861b50e61944e12f78ce44b66c68ae6de",
+    "currentSHA256": "bd157c428cbb7a618b6cbea656507a0861b50e61944e12f78ce44b66c68ae6de",
+    "byteIdentical": true
+  },
+  {
+    "file": "ios/MentalArithmetic/Core/Lessons.swift",
+    "baselineCommit": "0db325764a191e8e07d130e52efebcbb467d3239",
+    "baselineSHA256": "fe3fef37a2c5a88440f164ed1bb9b089cfeb81feed42a90ae2cf8d5f377d3653",
+    "currentSHA256": "fe3fef37a2c5a88440f164ed1bb9b089cfeb81feed42a90ae2cf8d5f377d3653",
+    "byteIdentical": true
+  },
+  {
+    "file": "ios/MentalArithmetic/Core/PositionalInstructions.swift",
+    "baselineCommit": "0db325764a191e8e07d130e52efebcbb467d3239",
+    "baselineSHA256": "67407f4519d0c0d5bdc566a3ba246d83cf50d5657974d969c75ca922a343f5c0",
+    "currentSHA256": "67407f4519d0c0d5bdc566a3ba246d83cf50d5657974d969c75ca922a343f5c0",
+    "byteIdentical": true
+  },
+  {
+    "file": "ios/MentalArithmetic/Core/PracticeEngine.swift",
+    "baselineCommit": "0db325764a191e8e07d130e52efebcbb467d3239",
+    "baselineSHA256": "2e79e484425f18dd8cb3eae03e497d9d8e679e67769d79c1c7d4fa230c184956",
+    "currentSHA256": "2e79e484425f18dd8cb3eae03e497d9d8e679e67769d79c1c7d4fa230c184956",
+    "byteIdentical": true
+  },
+  {
+    "file": "ios/MentalArithmetic/UI/PracticeViewController.swift",
+    "baselineCommit": "0db325764a191e8e07d130e52efebcbb467d3239",
+    "baselineSHA256": "470b85192c60ff7a0f06d55143581ff192b5699f268cb5592a65497ebe48006a",
+    "currentSHA256": "470b85192c60ff7a0f06d55143581ff192b5699f268cb5592a65497ebe48006a",
+    "byteIdentical": true
+  },
+  {
+    "file": "ios/MentalArithmetic/UI/CarryRouteView.swift",
+    "baselineCommit": "0db325764a191e8e07d130e52efebcbb467d3239",
+    "baselineSHA256": "d7efa5c1cf2d024315927da63373188a6c7487207a2871d2f6153d84f8410a35",
+    "currentSHA256": "d7efa5c1cf2d024315927da63373188a6c7487207a2871d2f6153d84f8410a35",
+    "byteIdentical": true
+  },
+  {
+    "file": "ios/MentalArithmetic/UI/ArithmeticExpressionView.swift",
+    "baselineCommit": "0db325764a191e8e07d130e52efebcbb467d3239",
+    "baselineSHA256": "0ec25208aed8d3745479ad15f481d28bfcf19ec1c9e6455197d7e4d05351b510",
+    "currentSHA256": "0ec25208aed8d3745479ad15f481d28bfcf19ec1c9e6455197d7e4d05351b510",
+    "byteIdentical": true
+  },
+  {
+    "file": "ios/MentalArithmetic/UI/AppTheme.swift",
+    "baselineCommit": "0db325764a191e8e07d130e52efebcbb467d3239",
+    "baselineSHA256": "08a42ecb071e36ced4374a6f9e2ac33792a6fb542884401711703584f3cd85ab",
+    "currentSHA256": "08a42ecb071e36ced4374a6f9e2ac33792a6fb542884401711703584f3cd85ab",
+    "byteIdentical": true
+  },
+  {
+    "file": "ios/MentalArithmetic/UI/VisualTokens.generated.swift",
+    "baselineCommit": "0db325764a191e8e07d130e52efebcbb467d3239",
+    "baselineSHA256": "29525c5d667d5059f49af29e593f326f80a059bf90250c3f4197d541d5d97346",
+    "currentSHA256": "29525c5d667d5059f49af29e593f326f80a059bf90250c3f4197d541d5d97346",
+    "byteIdentical": true
+  }
+]

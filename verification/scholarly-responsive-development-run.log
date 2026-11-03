@@ -1,0 +1,44 @@
+
+> mental-arithmetic-trainer@1.2.0-preview.1 test:browser
+> playwright test tests/browser/scholarly-visuals.spec.ts --grep narrow, tablet --project=desktop --workers=1
+
+[WebServer] (node:61150) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:61151) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [desktop] › tests/browser/scholarly-visuals.spec.ts:62:1 › narrow, tablet and doubled text layouts preserve aligned addition, bracket geometry and result boxes (1.6s)
+
+
+  1) [desktop] › tests/browser/scholarly-visuals.spec.ts:62:1 › narrow, tablet and doubled text layouts preserve aligned addition, bracket geometry and result boxes 
+
+    Error: {"width":1024,"stage":"Inside","fits":false,"overflowing":["HTML.#","BODY.#","MAIN.#app","DIV.learn-view#learn-view","DIV.learn-shell#","SECTION.lesson-detail#","SECTION.walkthrough#walkthrough","DIV.#step-content","SECTION.instruction-step#","DL.step-calculations#","DD.step-result-digits#"]}
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      69 |       const fit = await page.evaluate(() => ({ fits: document.documentElement.scrollWidth <= innerWidth,
+      70 |         overflowing: [...document.querySelectorAll<HTMLElement>('*')].filter(e => e.getClientRects().length && e.scrollWidth > e.clientWidth + 2 && getComputedStyle(e).overflowX === 'visible').map(e => `${e.tagName}.${e.className}#${e.id}`).slice(0, 12) }));
+    > 71 |       expect(fit.fits, JSON.stringify({ width, stage, ...fit })).toBe(true);
+         |                                                                  ^
+      72 |       const bounds = await page.locator('.digit-pairing-connector').evaluate(e => ({ box: e.getBoundingClientRect().toJSON(), path: e.querySelector('path')!.getBoundingClientRect().toJSON() }));
+      73 |       expect(bounds.path.left).toBeGreaterThanOrEqual(bounds.box.left - 1);
+      74 |       expect(bounds.path.right).toBeLessThanOrEqual(bounds.box.right + 1);
+        at /private/tmp/mental-arithmetic-scholarly-preview/tests/browser/scholarly-visuals.spec.ts:71:66
+
+    Error Context: test-results/scholarly-visuals-narrow-t-68220-t-geometry-and-result-boxes-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/scholarly-visuals-narrow-t-68220-t-geometry-and-result-boxes-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/scholarly-visuals-narrow-t-68220-t-geometry-and-result-boxes-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [desktop] › tests/browser/scholarly-visuals.spec.ts:62:1 › narrow, tablet and doubled text layouts preserve aligned addition, bracket geometry and result boxes 
