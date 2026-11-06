@@ -6,16 +6,18 @@ Release 1.2.0 offers **one- and two-digit multiplication in Learn**, and **two-d
 
 Build the release using `npm run build:windows`. Current package filenames use `1.2.0`; the 1.1.4 download references below describe the preserved published release.
 
+To install version 1.2.0, run the installer or extract the ZIP and open **Mental Arithmetic.exe** from the extracted folder. [Windows 1.2.0 installer](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.2.0/Mental-Arithmetic-1.2.0-Windows-x64-Setup.exe) · [Windows 1.2.0 ZIP](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.2.0/Mental-Arithmetic-1.2.0-Windows-x64.zip)
+
 ## Published 1.1.4 reference
 
 
-**1.1.4 Inside/Outside correction:** Two-digit multiplication now uses **Inside = top units × bottom tens** and **Outside = top tens × bottom units**, including their highlighted digits, calculations and intermediate results. For **82 × 76**, these are **2 × 7 = 14** and **8 × 6 = 48**. Learn and Practice retain **two-digit addition** and **one-, two- and three-digit multiplication**. Use the [current release](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/tag/v1.1.4) or [website downloads](https://whoami.school/#app-downloads). See [the correction report](verification/INSIDE_OUTSIDE_CORRECTION.md).
+**1.1.4 Inside/Outside correction:** Two-digit multiplication now uses **Inside = top units × bottom tens** and **Outside = top tens × bottom units**, including their highlighted digits, calculations and intermediate results. For **82 × 76**, these are **2 × 7 = 14** and **8 × 6 = 48**. Version 1.1.4 offered **two-digit addition** and **one-, two- and three-digit multiplication** in both modes. [Historical 1.1.4 release](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/tag/v1.1.4). See [the correction report](verification/INSIDE_OUTSIDE_CORRECTION.md).
 
 Version **1.1.4** packages the same Learn and Practice frontend as the macOS version with a Windows desktop runtime. The target is **Windows 10 or Windows 11 on a 64-bit Intel/AMD PC (x64)**. Electron 45.0.0 lists Windows 10 and later among its supported platforms and provides x64 binaries; see its [version-specific platform support statement](https://raw.githubusercontent.com/electron/electron/v45.0.0/README.md). This delivery does not include a 32-bit Windows or native Windows ARM64 package.
 
 The app runs offline. A user installing the finished app does not need Node.js, npm, a browser tab, an account or a local web server.
 
-## Download and install
+### Installing version 1.1.4
 
 Choose one of these two files:
 
@@ -75,7 +77,7 @@ An additional read-only check evaluated unchanged `desktop/security.cjs` using W
 
 **The application and installer have not been executed on Windows 10 or Windows 11.** The build host is an Apple silicon Mac with no available Windows runtime or virtual machine. Native Windows launching, installation/uninstallation, display scaling and physical Windows keyboard behavior therefore remain unverified. Successful cross-platform packaging and exact payload comparisons do not replace those checks.
 
-## Exact paths for the macOS downloads
+## Historical macOS 1.1.4 files on the build machine
 
 The corresponding updated Mac delivery is version **1.1.4**, for **Apple silicon with macOS 13 or later**. Its ad hoc signature and lack of Apple notarization are described in [MACOS_APP.md](./MACOS_APP.md). These are the exact saved files on this Mac:
 

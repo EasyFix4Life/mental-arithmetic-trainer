@@ -9,7 +9,7 @@ Version **1.2.0**, Android code **10204**, contains the approved preview4 offeri
 
 No addition lesson or three-digit multiplication choice appears in the active interface. Two-digit addition Practice retains vertically aligned two-digit operands and ten unique questions. The lessons, corrected Inside/Outside pairings, upright **&** header connectors, carry routes, random examples, automatic answer submission and minimum/maximum/average timings match the approved preview.
 
-- APK: [Mental-Arithmetic-1.2.0-Android.apk](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.2.0-Android.apk).
+- Download the APK and open it in **Files** on your Android device to install it. [Android 1.2.0 APK](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.2.0/Mental-Arithmetic-1.2.0-Android.apk)
 - Verification: [RELEASE_120_ANDROID_TEST_RESULTS.md](verification/RELEASE_120_ANDROID_TEST_RESULTS.md).
 - Application ID: **local.jeff.mentalarithmetic**, with the original signing identity.
 - Supported minimum: **Android 8.0 / API 26**; compile/target API **37**. The universal APK uses the device's installed System WebView.
@@ -130,7 +130,7 @@ The minimum declared Android version is **Android 8.0 / API 26**. This is a univ
 
 The installed app works offline. It needs no account, Node.js, browser tab or local server, and requests no Android permissions, including Internet access.
 
-## Download and install
+### Installing version 1.1.4
 
 - [Mental-Arithmetic-1.1.4-Android.apk](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.4-Android.apk) — the signed Android application.
 - [Complete source code for all platforms](/Users/pussieromatic/Documents/Codex/2026-10-24/build-my-mental-arithmetic-training-website/outputs/Mental-Arithmetic-1.1.4-all-platforms-source.zip) — the shared frontend, Android project, desktop wrappers, build scripts, requirements, tests and documentation.
@@ -151,7 +151,7 @@ adb install -r Mental-Arithmetic-1.1.4-Android.apk
 
 That command installs or updates this app only. No physical phone was connected during development; emulator and package-verification evidence is recorded separately below.
 
-## Lessons, examples and Practice
+### Lessons, examples and Practice in version 1.1.4
 
 The cache safeguard introduced in version 1.1.3 is preserved in 1.1.4. The app shows its release identity in the interface and clears only the app's WebView resource cache when the installed app version changes. The offline container already disables HTTP caching and sends `Cache-Control: no-store`; the version-change clear is an additional upgrade safeguard and preserves stored application/DOM data.
 

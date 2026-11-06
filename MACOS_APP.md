@@ -6,14 +6,16 @@ Release 1.2.0 offers **one- and two-digit multiplication in Learn**, and **two-d
 
 Build the release using `npm run build:mac`. Current package filenames use `1.2.0`; the 1.1.4 download references below describe the preserved published release.
 
+To install version 1.2.0, open the DMG and drag **Mental Arithmetic.app** to **Applications**. [macOS 1.2.0 DMG](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/download/v1.2.0/Mental-Arithmetic-1.2.0-macOS-arm64.dmg)
+
 ## Published 1.1.4 reference
 
 
-**1.1.4 Inside/Outside correction:** Two-digit multiplication now uses **Inside = top units × bottom tens** and **Outside = top tens × bottom units**, including their highlighted digits, calculations and intermediate results. For **82 × 76**, these are **2 × 7 = 14** and **8 × 6 = 48**. Learn and Practice retain **two-digit addition** and **one-, two- and three-digit multiplication**. Use the [current release](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/tag/v1.1.4) or [website downloads](https://whoami.school/#app-downloads). See [the correction report](verification/INSIDE_OUTSIDE_CORRECTION.md).
+**1.1.4 Inside/Outside correction:** Two-digit multiplication now uses **Inside = top units × bottom tens** and **Outside = top tens × bottom units**, including their highlighted digits, calculations and intermediate results. For **82 × 76**, these are **2 × 7 = 14** and **8 × 6 = 48**. Version 1.1.4 offered **two-digit addition** and **one-, two- and three-digit multiplication** in both modes. [Historical 1.1.4 release](https://github.com/EasyFix4Life/mental-arithmetic-trainer/releases/tag/v1.1.4). See [the correction report](verification/INSIDE_OUTSIDE_CORRECTION.md).
 
 This desktop build contains the same Learn and Practice application as the website, packaged with its own runtime. It runs offline, without Node.js, npm, a browser tab or a local HTTP server on the user's computer.
 
-## Open or install
+### Installing version 1.1.4
 
 Use **Mental-Arithmetic-1.1.4-macOS-arm64.dmg**. Open the disk image and drag **Mental Arithmetic.app** to **Applications**, then open it there. The alternative ZIP contains the same standalone app bundle.
 

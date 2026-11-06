@@ -1,11 +1,11 @@
 # Instructional implementation handoff — 1.1.0
 
-**Current version 1.1.4 scope:** Learn and Practice offer two-digit addition and one-, two- and three-digit multiplication. The owner subsequently removed one-digit and three-digit addition. Earlier all-length statements below describe the instructional history; the original supplied documents are preserved. See [the current scope record](requirements/instruction/OWNER_ADDITION_OPTIONS_2026-11-02.md).
+In **version 1.2.0**, Learn offers single-digit and two-digit multiplication. Practice offers two-digit addition and both multiplication choices. The all-length examples below document the earlier instructional implementation. [Current release and download guide](RELEASE_1_2_0.md)
 
 **Current Inside/Outside correction:** For horizontal `ab × cd`, Inside uses `b × c` (inner digits) and Outside uses `a × d` (outer digits). The correction applies to highlights, arithmetic and narration in random and fixed examples on every platform. For 82 × 76, Inside is 2 × 7 = 14 and Outside is 8 × 6 = 48. See [the owner correction](requirements/instruction/OWNER_INSIDE_OUTSIDE_CORRECTION_2026-11-02.md); it supersedes the earlier mapping while preserving the original intake.
 
 
-The current app implements the owner's later request: **all versions have instructions for addition and multiplication with one-, two- and three-digit operands**. All six Learn categories open with a random example and have complete walkthroughs. The latest layout correction places addition operands above and below one another, aligned by place value, throughout Learn, calculations, final answers and Practice. Multiplication stays horizontal.
+Version 1.1.0 offered addition and multiplication lessons with one-, two- and three-digit operands. All six Learn categories in that version opened with a random example and had complete walkthroughs. Addition operands appeared above and below one another, aligned by place value, in Learn and Practice. Multiplication stayed horizontal.
 
 ## Source hierarchy
 
