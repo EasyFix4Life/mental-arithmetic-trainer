@@ -3,7 +3,7 @@ import { renderDownloadsSection } from './downloadsView';
 import { mountPracticeView } from './practiceView';
 import { RoundController } from './roundController';
 import { APP_VERSION } from './release';
-import { renderHomepageVideo } from './homepageVideo';
+import { mountHomepageVideo, renderHomepageVideo } from './homepageVideo';
 
 interface ViewOptions {
   showDownloads?: boolean;
@@ -12,7 +12,7 @@ interface ViewOptions {
 /** Modes share presentation only. Learn never submits to the practice controller. */
 export function mountView(root: HTMLElement, controller: RoundController, viewOptions: ViewOptions = {}): () => void {
   root.innerHTML = `
-    ${viewOptions.showDownloads ? renderHomepageVideo(window.location.hash === '') : ''}
+    ${viewOptions.showDownloads ? renderHomepageVideo() : ''}
     <div id="practice" tabindex="-1">
     <nav id="mode-navigation" class="mode-navigation" aria-label="Modes">
       <button id="mode-learn" type="button" aria-pressed="false">Learn</button>
@@ -33,16 +33,10 @@ export function mountView(root: HTMLElement, controller: RoundController, viewOp
   const practiceButton = root.querySelector<HTMLButtonElement>('#mode-practice')!;
   const trainer = root.querySelector<HTMLElement>('#practice')!;
   const intro = root.querySelector<HTMLElement>('#homepage-video');
-  const video = root.querySelector<HTMLVideoElement>('#soroban-video');
   const listeners = new AbortController();
   const options = { signal: listeners.signal };
+  const pauseIntro = intro && mountHomepageVideo(intro, window.location.hash === '', listeners.signal);
   let mode: 'learn' | 'practice' = 'practice';
-
-  function pauseIntro(): void {
-    if (!video) return;
-    video.autoplay = false;
-    video.pause();
-  }
 
   function renderMode(): void {
     const active = controller.snapshot.phase === 'active';
@@ -50,7 +44,7 @@ export function mountView(root: HTMLElement, controller: RoundController, viewOp
     if (downloads) downloads.hidden = active;
     if (intro && intro.hidden !== active) {
       intro.hidden = active;
-      if (active) pauseIntro();
+      if (active) pauseIntro?.();
       else trainer.scrollIntoView();
     }
     learn.hidden = mode !== 'learn';
@@ -63,7 +57,7 @@ export function mountView(root: HTMLElement, controller: RoundController, viewOp
   function selectMode(next: typeof mode): void {
     // There is no Learn/hint detour or timer pause inside an active round.
     if (controller.snapshot.phase === 'active') return;
-    pauseIntro();
+    pauseIntro?.();
     mode = next;
     renderMode();
   }
@@ -74,10 +68,7 @@ export function mountView(root: HTMLElement, controller: RoundController, viewOp
   const unmountPractice = mountPracticeView(practice, controller, renderMode);
   renderMode();
 
-  if (intro && video) {
-    const endLink = intro.querySelector<HTMLAnchorElement>('#soroban-end-link')!;
-    video.addEventListener('ended', () => { endLink.hidden = false; }, options);
-    video.addEventListener('play', () => { endLink.hidden = true; }, options);
+  if (intro) {
     function showPractice(): void {
       selectMode('practice');
     }
@@ -86,13 +77,14 @@ export function mountView(root: HTMLElement, controller: RoundController, viewOp
     }
     window.addEventListener('hashchange', () => {
       if (window.location.hash === '#practice') showPractice();
-      else if (window.location.hash === '#app-downloads') pauseIntro();
+      else if (window.location.hash === '#app-downloads') pauseIntro?.();
     }, options);
     if (window.location.hash === '#practice') trainer.scrollIntoView();
   }
 
   return () => {
     listeners.abort();
+    pauseIntro?.();
     unmountLearn();
     unmountPractice();
     root.replaceChildren();

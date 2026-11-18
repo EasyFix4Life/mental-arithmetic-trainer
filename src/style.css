@@ -52,6 +52,17 @@ h1 { margin: 0; font-size: clamp(1.9rem, 4vw, 2.65rem); font-weight: 400; line-h
   background: var(--ink);
 }
 .soroban-player video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+.soroban-sound {
+  position: absolute;
+  inset-block-start: clamp(0.5rem, 2vw, 1rem);
+  inset-inline-start: clamp(0.5rem, 2vw, 1rem);
+  max-width: calc(100% - 2rem);
+  border-width: var(--border-emphasis);
+  background: var(--field);
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 50%);
+}
+.soroban-sound:focus-visible { outline: 2px solid var(--field); outline-offset: 2px; }
 .soroban-end-link {
   position: absolute;
   inset: 0 0 min(3rem, 30%) 0;
